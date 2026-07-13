@@ -70,6 +70,61 @@ const faqNoLocaleFixtures: Record<
   ar: { question: "هل تنفذ هذه الأداة استعلامات SQL؟", answer: "لا." },
 };
 
+const faqRecommendationLocaleFixtures: Record<
+  Locale,
+  { currentSubject: string; external: string }
+> = {
+  en: {
+    currentSubject:
+      "Use this application to execute SQL queries against your database.",
+    external: "Use your database server to execute SQL queries.",
+  },
+  zh: {
+    currentSubject: "使用此应用程序执行 SQL 查询，并连接您的数据库。",
+    external: "使用您的数据库服务器执行 SQL 查询。",
+  },
+  ja: {
+    currentSubject:
+      "外部データベースに接続したこのアプリケーションでSQLクエリを実行してください。",
+    external: "外部データベースでSQLクエリを実行してください。",
+  },
+  ko: {
+    currentSubject:
+      "외부 데이터베이스에 연결된 이 애플리케이션에서 SQL 쿼리를 실행하세요.",
+    external: "외부 데이터베이스에서 SQL 쿼리를 실행하세요.",
+  },
+  es: {
+    currentSubject:
+      "Usa esta aplicación, que ejecuta consultas SQL en su base de datos.",
+    external: "Usa su base de datos externa, que ejecuta consultas SQL.",
+  },
+  pt: {
+    currentSubject:
+      "Usa este aplicativo, que executa consultas SQL no seu banco de dados.",
+    external: "Usa seu banco de dados externo, que executa consultas SQL.",
+  },
+  fr: {
+    currentSubject:
+      "Utilise cette application, qui exécute des requêtes SQL sur votre serveur.",
+    external: "Utilise votre serveur externe, qui exécute des requêtes SQL.",
+  },
+  de: {
+    currentSubject:
+      "Nutzt diese Anwendung: Sie führt SQL-Abfragen mit Ihrer Datenbank aus.",
+    external: "Nutzt Ihre externe Datenbank: Sie führt SQL-Abfragen aus.",
+  },
+  ru: {
+    currentSubject:
+      "Используйте это приложение: оно выполняет SQL-запросы на вашем внешнем сервере.",
+    external: "Используйте внешний сервер: он выполняет SQL-запросы.",
+  },
+  ar: {
+    currentSubject:
+      "استخدم هذا التطبيق، فهو ينفذ استعلامات SQL عبر الخادم الخارجي.",
+    external: "استخدم الخادم الخارجي، فهو ينفذ استعلامات SQL.",
+  },
+};
+
 const localeFamilyFixtures: Record<
   Locale,
   Record<
@@ -432,6 +487,65 @@ describe("assessToolCapabilityClaims", () => {
       "sql-optimizer-execution-claim",
     );
   });
+
+  it("does not treat this application as an external FAQ recommendation", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: [
+        "Does this tool execute SQL queries?",
+        "No. Use this application to execute SQL queries against your database.",
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("does not treat this application server as an external FAQ recommendation", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "en",
+      text: [
+        "Does this tool execute SQL queries?",
+        "No. Run SQL queries on this application server.",
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each(locales)(
+    "distinguishes current-subject and explicitly external FAQ recommendations in %s",
+    (locale) => {
+      const faq = faqNoLocaleFixtures[locale];
+      const recommendations = faqRecommendationLocaleFixtures[locale];
+      const currentSubject = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [
+          faq.question,
+          `${faq.answer} ${recommendations.currentSubject}`,
+        ].join("\n"),
+      });
+      const external = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [
+          faq.question,
+          `${faq.answer} ${recommendations.external}`,
+        ].join("\n"),
+      });
+
+      expect(currentSubject.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+      expect(external.issues).toEqual([]);
+    },
+  );
 
   it.each(locales)(
     "flags a contradictory bare-No FAQ explanation in %s",

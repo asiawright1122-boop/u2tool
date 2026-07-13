@@ -68,8 +68,34 @@ const FAQ_RECOMMENDATION_BY_LOCALE: Record<Locale, RegExp> = {
   pt: /^(?:usa|use|utiliza|utilize|consulta|consulte|executa|execute)\b.{0,80}\b(?:banco de dados|serviço|provedor|aplicativo|navegador|servidor)\b/iu,
   fr: /^(?:utilise|utilisez|consulte|consultez|exécute|exécutez)\b.{0,80}\b(?:base de données|service|fournisseur|application|navigateur|serveur)\b/iu,
   de: /^(?:verwende|verwenden|verwendet|nutze|nutzen|nutzt|prüfe|prüfen|prüft)\b.{0,80}\b(?:Datenbank|Dienst|Anbieter|Anwendung|Browser|Server)\b/iu,
-  ru: /^(?:используй|используйте|запусти|запустите|проверь|проверьте)\b.{0,80}\b(?:базу данных|сервис|провайдера|приложение|браузер|сервер)\b/iu,
+  ru: /^(?:используй|используйте|запусти|запустите|проверь|проверьте)(?:\s|[,:;]).{0,80}(?:базу данных|сервис|провайдера|приложение|браузер|сервер)/iu,
   ar: /^(?:استخدم|استخدمي|استخدموا|شغّل|شغلي|شغّلوا|تحقق).{0,80}(?:قاعدة البيانات|الخدمة|المزود|التطبيق|المتصفح|الخادم)/u,
+};
+
+const FAQ_EXTERNAL_OWNERSHIP_BY_LOCALE: Record<Locale, RegExp> = {
+  en: /\b(?:your|external|third-party|another|provider-owned|vendor-owned)\s+(?:database|service|provider|application|browser|server|system)(?:'s)?\b|\b(?:provider|vendor)(?:'s)?\s+(?:service|application|server|system)\b/iu,
+  zh: /(?:您的|你的|外部|第三方|其他|提供商的|供应商的)(?:数据库|服务|提供商|应用|浏览器|服务器|系统)/u,
+  ja: /(?:あなたの|外部|サードパーティー|別の|プロバイダーの|ベンダーの)(?:データベース|サービス|プロバイダー|アプリ|ブラウザー|サーバー|システム)/u,
+  ko: /(?:사용자의|외부|서드파티|다른|공급자의|벤더의)\s*(?:데이터베이스|서비스|공급자|애플리케이션|브라우저|서버|시스템)/u,
+  es: /\b(?:su|extern\p{L}*|de terceros?|otr\p{L}*|del proveedor|del vendedor)\s+(?:base de datos|servicio|proveedor|aplicación|navegador|servidor|sistema)\b/iu,
+  pt: /\b(?:seu|sua|extern\p{L}*|de terceiros?|outr\p{L}*|do provedor|do fornecedor)\s+(?:banco de dados|serviço|provedor|aplicativo|aplicação|navegador|servidor|sistema)\b/iu,
+  fr: /\b(?:votre|externe|tierce|autre|du fournisseur|du prestataire)\s+(?:base de données|service|fournisseur|application|navigateur|serveur|système)\b/iu,
+  de: /\b(?:Ihr\p{L}*|extern\p{L}*|Drittanbieter|ander\p{L}*|des Anbieters|des Herstellers)\s+(?:Datenbank|Dienst|Anbieter|Anwendung|Browser|Server|System)\b/iu,
+  ru: /(?:ваш\p{L}*|внешн\p{L}*|сторонн\p{L}*|друг\p{L}*|провайдера|поставщика)\s+(?:баз\p{L}* данных|сервис\p{L}*|провайдер\p{L}*|приложени\p{L}*|браузер\p{L}*|сервер\p{L}*|систем\p{L}*)/iu,
+  ar: /(?:قاعدة البيانات|الخدمة|المزود|التطبيق|المتصفح|الخادم|النظام).{0,20}(?:الخارجية|الخارجي|لديك|الخاصة بك|لطرف ثالث|لمزود|لمورّد)|(?:خارجي|خارجية|طرف ثالث|مزود|مورّد).{0,20}(?:قاعدة البيانات|الخدمة|التطبيق|المتصفح|الخادم|النظام)/u,
+};
+
+const FAQ_CURRENT_SUBJECT_BY_LOCALE: Record<Locale, RegExp> = {
+  en: /\b(?:this|the current)\s+(?:tool|application|app|server|service|system)\b/iu,
+  zh: /(?:此|这个|本|当前)(?:工具|应用程序?|服务器|服务|系统)/u,
+  ja: /(?:この|本|現在の)(?:ツール|アプリ(?:ケーション)?|サーバー|サービス|システム)/u,
+  ko: /(?:이|현재의?)\s*(?:도구|애플리케이션|앱|서버|서비스|시스템)/u,
+  es: /\b(?:este|esta|el actual|la actual)\s+(?:herramienta|aplicación|servidor|servicio|sistema)\b/iu,
+  pt: /\b(?:este|esta|o atual|a atual)\s+(?:ferramenta|aplicativo|aplicação|servidor|serviço|sistema)\b/iu,
+  fr: /\b(?:cet|cette|l’actuel|l'actuel|l’actuelle|l'actuelle)\s+(?:outil|application|serveur|service|système)\b/iu,
+  de: /\b(?:dieses|diese|dieser|das aktuelle|die aktuelle|der aktuelle)\s+(?:Tool|Werkzeug|Anwendung|App|Server|Dienst|System)\b/iu,
+  ru: /(?:этот|эта|это|текущ\p{L}*)\s+(?:инструмент|приложение|сервер|сервис|система)/iu,
+  ar: /(?:هذه|هذا)\s+(?:الأداة|التطبيق|الخادم|الخدمة|النظام)/u,
 };
 
 const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
@@ -352,7 +378,9 @@ export function matchesLocalizedCapabilityClaim(
       faqQuestion &&
       /[?？؟]\s*$/u.test(faqQuestion) &&
       test(BARE_NEGATIVE_BY_LOCALE[resolvedLocale], previous) &&
-      test(FAQ_RECOMMENDATION_BY_LOCALE[resolvedLocale], segment)
+      test(FAQ_RECOMMENDATION_BY_LOCALE[resolvedLocale], segment) &&
+      test(FAQ_EXTERNAL_OWNERSHIP_BY_LOCALE[resolvedLocale], segment) &&
+      !test(FAQ_CURRENT_SUBJECT_BY_LOCALE[resolvedLocale], segment)
     ) {
       return false;
     }
