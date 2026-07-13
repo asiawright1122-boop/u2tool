@@ -769,6 +769,63 @@ describe("assessToolCapabilityClaims", () => {
     },
   );
 
+  it("uses the final Japanese location when an external source generates the query", () => {
+    const faq = faqNoLocaleFixtures.ja;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: [
+        faq.question,
+        `${faq.answer} 外部データベースで生成したSQLクエリをこのアプリケーションで実行してください。`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it("uses the final Korean location when an external source generates the query", () => {
+    const faq = faqNoLocaleFixtures.ko;
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ko",
+      text: [
+        faq.question,
+        `${faq.answer} 외부 데이터베이스에서 생성한 SQL 쿼리를 이 애플리케이션에서 실행하세요.`,
+      ].join("\n"),
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    [
+      "ja",
+      "別のアプリケーションで生成したSQLクエリをこのアプリケーションで実行してください。",
+    ],
+    [
+      "ko",
+      "다른 애플리케이션에서 생성한 SQL 쿼리를 이 애플리케이션에서 실행하세요.",
+    ],
+  ] as const)(
+    "does not let an earlier external generator location authorize current execution in %s",
+    (locale, explanation) => {
+      const faq = faqNoLocaleFixtures[locale];
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text: [faq.question, `${faq.answer} ${explanation}`].join("\n"),
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
   it.each([
     [
       "ja",

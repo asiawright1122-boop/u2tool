@@ -73,14 +73,17 @@ previous-negation suppression remains. Tests exercise every governed claim
 code in every UI locale with 320 affirmative and 320 limitation cases, plus
 ten-locale contradictory, honest-limitation, anchored-external, and
 delayed-external-noun FAQ matrices. Japanese and Korean modifier-first forms
-bind ownership to the execution-location phrase itself: the external/another
-object must be immediately attached to Japanese `で`/`上で`/`にて` or Korean
-`에서`/`상에서` before the use/execute predicate. An external database earlier
-in the modifier cannot legitimize execution in our/current/formal application,
-while an explicitly different external application remains honest even when
-the current tool is mentioned later only as the query generator. Mixed-clause,
-adjacent-sentence, honest two-sentence limitation, and current-message
-regressions remain covered.
+bind ownership to the deterministic final relevant execution-location phrase
+before the final use/execute predicate. Only a Japanese `で`/`上で`/`にて` or
+Korean `에서`/`상에서` location that explicitly names external, another,
+third-party, provider, or vendor ownership suppresses the claim. An earlier
+external generation or source location cannot legitimize later execution in
+our/current/formal application. The reverse order remains honest when the
+current tool only generates the query and the final execution location is an
+explicitly external or different application. The Japanese and Korean SQL
+target windows cover the natural intervening execution-location phrase.
+Mixed-clause, adjacent-sentence, honest two-sentence limitation, and
+current-message regressions remain covered.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -124,7 +127,12 @@ single evidence invocation has a documented 30-second production timeout,
 runs in a one-worker thread pool, and receives `SIGKILL` on timeout. Timeout or
 termination maps to the existing cannot-run readiness failure. A real hanging
 evidence regression uses an injected 250-millisecond bound and terminates
-without leaving temporary fixture directories.
+without leaving temporary fixture directories. The real-subprocess regression
+tests use an explicit 15-second parent Vitest timeout while preserving that
+250-millisecond child timeout and the existing `ETIMEDOUT`/cannot-run
+assertions. Three repeated runner-group checks completed stably in about
+1.95-1.97 seconds, with ordinary subprocess cases completing in about
+333-359 milliseconds.
 
 ## Fresh Verification
 
@@ -134,7 +142,7 @@ without leaving temporary fixture directories.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 329/329 tests passed.
+Result: exit `0`; 7/7 files and 333/333 tests passed.
 
 ### Default claims validator
 
