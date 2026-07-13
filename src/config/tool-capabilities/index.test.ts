@@ -34,6 +34,12 @@ describe("pilot tool capability registry", () => {
     expect(getToolCapabilityProfile("json-formatter")).toBeUndefined();
   });
 
+  it("does not resolve inherited object keys as tool profiles", () => {
+    for (const slug of ["toString", "constructor", "__proto__"]) {
+      expect(getToolCapabilityProfile(slug)).toBeUndefined();
+    }
+  });
+
   it("keeps visible capability fields as localized message keys", () => {
     for (const profile of getPilotToolCapabilityProfiles()) {
       const visibleFields = [
@@ -209,6 +215,200 @@ describe("pilot tool capability registry", () => {
       "hex-editor-unsupported-encoding-claim",
       "hex-editor-file-export-claim",
     ]);
+  });
+
+  it("flags affirmative Gantt capability claims without flagging honest limits", () => {
+    const profile = getToolCapabilityProfile("gantt-chart-generator")!;
+    const examples = {
+      "gantt-generator-dependencies-claim": {
+        positive: "Supports task dependencies between rows.",
+        negative: "No task dependencies are supported.",
+      },
+      "gantt-generator-milestones-claim": {
+        positive: "Adds project milestones to the chart.",
+        negative: "No milestones are available.",
+      },
+      "gantt-generator-critical-path-claim": {
+        positive: "Calculates the critical path automatically.",
+        negative: "Does not calculate a critical path.",
+      },
+      "gantt-generator-persistence-claim": {
+        positive: "Automatically saves your charts.",
+        negative: "Charts are not saved.",
+      },
+      "gantt-generator-data-transfer-claim": {
+        positive: "Imports project data from another tool.",
+        negative: "Does not import or export project data.",
+      },
+      "gantt-generator-collaboration-claim": {
+        positive: "Supports real-time collaboration.",
+        negative: "No collaboration is available.",
+      },
+    } as const;
+
+    for (const claim of profile.forbiddenClaims) {
+      const example = examples[claim.code as keyof typeof examples];
+      expect(example, claim.code).toBeDefined();
+      expect(claim.pattern.test(example.positive), claim.code).toBe(true);
+      expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
+  });
+
+  it("flags affirmative grammar capability claims without flagging honest limits", () => {
+    const profile = getToolCapabilityProfile("grammar-checker")!;
+    const examples = {
+      "grammar-checker-multilingual-claim": {
+        positive: "Checks grammar in all languages.",
+        negative: "No multilingual checking is available.",
+      },
+      "grammar-checker-ai-claim": {
+        positive: "Uses AI-powered grammar checking.",
+        negative: "Not AI-powered.",
+      },
+      "grammar-checker-server-processing-claim": {
+        positive: "Uses cloud-based processing for grammar checks.",
+        negative: "No server-side processing is used.",
+      },
+    } as const;
+
+    for (const claim of profile.forbiddenClaims) {
+      const example = examples[claim.code as keyof typeof examples];
+      expect(example, claim.code).toBeDefined();
+      expect(claim.pattern.test(example.positive), claim.code).toBe(true);
+      expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
+  });
+
+  it("flags affirmative Hex capability claims without flagging honest limits", () => {
+    const profile = getToolCapabilityProfile("hex-editor")!;
+    const examples = {
+      "hex-editor-grid-claim": {
+        positive: "Opens local files and shows an offset grid.",
+        negative: "No file upload or offset grid is available.",
+      },
+      "hex-editor-byte-edit-claim": {
+        positive: "Edits individual bytes directly.",
+        negative: "No direct byte editing is available.",
+      },
+      "hex-editor-unsupported-encoding-claim": {
+        positive: "Supports UTF-16 encoding.",
+        negative: "Does not support UTF-16 encoding.",
+      },
+      "hex-editor-file-export-claim": {
+        positive: "Exports edited files.",
+        negative: "Does not export files.",
+      },
+    } as const;
+
+    for (const claim of profile.forbiddenClaims) {
+      const example = examples[claim.code as keyof typeof examples];
+      expect(example, claim.code).toBeDefined();
+      expect(claim.pattern.test(example.positive), claim.code).toBe(true);
+      expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
+  });
+
+  it("flags affirmative SQL capability claims without flagging honest limits", () => {
+    const profile = getToolCapabilityProfile("sql-query-optimizer")!;
+    const examples = {
+      "sql-optimizer-database-selector-claim": {
+        positive: "Includes a database selector.",
+        negative: "No database selector is available.",
+      },
+      "sql-optimizer-explain-claim": {
+        positive: "Parses EXPLAIN output.",
+        negative: "Does not parse EXPLAIN output.",
+      },
+      "sql-optimizer-connection-claim": {
+        positive: "Connects to a live database.",
+        negative: "Does not connect to a database.",
+      },
+      "sql-optimizer-execution-claim": {
+        positive: "Runs SQL queries.",
+        negative: "Does not run SQL queries.",
+      },
+      "sql-optimizer-speed-guarantee-claim": {
+        positive: "Guarantees faster query performance.",
+        negative: "Does not guarantee faster query performance.",
+      },
+    } as const;
+
+    for (const claim of profile.forbiddenClaims) {
+      const example = examples[claim.code as keyof typeof examples];
+      expect(example, claim.code).toBeDefined();
+      expect(claim.pattern.test(example.positive), claim.code).toBe(true);
+      expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
+  });
+
+  it("flags affirmative Excel capability claims without flagging honest limits", () => {
+    const profile = getToolCapabilityProfile("excel-viewer")!;
+    const examples = {
+      "excel-viewer-macro-claim": {
+        positive: "Supports Excel macros.",
+        negative: "Does not support Excel macros.",
+      },
+      "excel-viewer-formula-recalculation-claim": {
+        positive: "Recalculates Excel formulas.",
+        negative: "Does not recalculate Excel formulas.",
+      },
+      "excel-viewer-chart-claim": {
+        positive: "Displays Excel charts.",
+        negative: "Does not display Excel charts.",
+      },
+      "excel-viewer-formatting-fidelity-claim": {
+        positive: "Preserves full formatting fidelity.",
+        negative: "Does not preserve full formatting fidelity.",
+      },
+      "excel-viewer-export-claim": {
+        positive: "Exports the workbook.",
+        negative: "Does not export the workbook.",
+      },
+    } as const;
+
+    for (const claim of profile.forbiddenClaims) {
+      const example = examples[claim.code as keyof typeof examples];
+      expect(example, claim.code).toBeDefined();
+      expect(claim.pattern.test(example.positive), claim.code).toBe(true);
+      expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
+  });
+
+  it("flags affirmative Typing capability claims without flagging honest limits", () => {
+    const profile = getToolCapabilityProfile("typing-speed-test")!;
+    const examples = {
+      "typing-speed-test-fixed-timer-claim": {
+        positive: "Offers a fixed timer.",
+        negative: "No fixed timer is available.",
+      },
+      "typing-speed-test-cpm-claim": {
+        positive: "Reports CPM at completion.",
+        negative: "Does not report CPM.",
+      },
+      "typing-speed-test-consistency-claim": {
+        positive: "Tracks a consistency score.",
+        negative: "Does not track a consistency score.",
+      },
+      "typing-speed-test-history-claim": {
+        positive: "Saves typing history.",
+        negative: "Does not save typing history.",
+      },
+      "typing-speed-test-account-claim": {
+        positive: "Supports user accounts.",
+        negative: "Does not support user accounts.",
+      },
+      "typing-speed-test-ranking-claim": {
+        positive: "Publishes a leaderboard.",
+        negative: "No leaderboard is available.",
+      },
+    } as const;
+
+    for (const claim of profile.forbiddenClaims) {
+      const example = examples[claim.code as keyof typeof examples];
+      expect(example, claim.code).toBeDefined();
+      expect(claim.pattern.test(example.positive), claim.code).toBe(true);
+      expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
   });
 });
 

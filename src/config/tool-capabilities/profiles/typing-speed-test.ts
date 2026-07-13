@@ -104,33 +104,39 @@ export const typingSpeedTestCapabilityProfile = defineToolCapabilityProfile({
   forbiddenClaims: [
     {
       code: "typing-speed-test-fixed-timer-claim",
-      pattern: /\b(?:fixed|selectable|custom) (?:time|timer|duration)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:offers?|uses?|provides?) (?:a )?(?:fixed|selectable|custom) (?:time|timer|duration)\b|(?<!not )(?<!n't )\blets? you (?:choose|set) (?:a )?(?:time|timer|duration)\b/i,
       reason:
         "The test ends when the prompt is completed, not after a fixed timer.",
     },
     {
       code: "typing-speed-test-cpm-claim",
-      pattern: /\b(?:CPM|characters per minute)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:reports?|calculates?|shows?|tracks?) (?:CPM|characters per minute)\b/i,
       reason: "The completion summary does not calculate CPM.",
     },
     {
       code: "typing-speed-test-consistency-claim",
-      pattern: /\bconsistency (?:metric|score|tracking)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:reports?|calculates?|shows?|tracks?) (?:a )?consistency (?:metric|score)\b/i,
       reason: "The completion summary does not calculate typing consistency.",
     },
     {
       code: "typing-speed-test-history-claim",
-      pattern: /\b(?:test|result|typing) history\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:saves?|stores?|tracks?|shows?) (?:test|result|typing) history\b/i,
       reason: "The tool does not persist previous results.",
     },
     {
       code: "typing-speed-test-account-claim",
-      pattern: /\b(?:user )?accounts?|sign[- ]in|profiles?\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:offers?|supports?|requires?) (?:user )?(?:accounts?|sign[- ]in|profiles?)\b/i,
       reason: "The tool has no account or profile system.",
     },
     {
       code: "typing-speed-test-ranking-claim",
-      pattern: /\b(?:leaderboards?|global ranking|ranked results?)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:offers?|shows?|publishes?|tracks?) (?:a )?(?:leaderboards?|global ranking|ranked results?)\b/i,
       reason: "The tool does not rank users or publish a leaderboard.",
     },
   ],

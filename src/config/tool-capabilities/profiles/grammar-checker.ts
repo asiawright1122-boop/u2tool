@@ -76,18 +76,20 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
   forbiddenClaims: [
     {
       code: "grammar-checker-multilingual-claim",
-      pattern: /\b(?:multilingual|non-English grammar|all languages)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:checks?|corrects?|supports?) grammar (?:in|for) (?:multiple|non-English|all) languages?\b|(?<!not )(?<!n't )\b(?:offers?|provides?|supports?) multilingual (?:grammar )?checking\b/i,
       reason: "The local grammar engine only checks English text.",
     },
     {
       code: "grammar-checker-ai-claim",
       pattern:
-        /\b(?:AI[- ]powered|artificial intelligence|large language model|LLM)\b/i,
+        /(?<!not )(?<!n't )\b(?:uses?|offers?|provides?) (?:AI[- ]powered|artificial intelligence|a large language model|an LLM)(?: grammar)? checking\b|\bis AI[- ]powered\b/i,
       reason: "The browser checker uses local static rules, not AI.",
     },
     {
       code: "grammar-checker-server-processing-claim",
-      pattern: /\b(?:server[- ]side|cloud[- ]based|remote processing)\b/i,
+      pattern:
+        /(?<!not )(?<!n't )\b(?:uses?|offers?|provides?) (?:server[- ]side|cloud[- ]based|remote) (?:processing|checking)\b/i,
       reason: "The current tool has no server-processing mode.",
     },
   ],
