@@ -59,6 +59,19 @@ const BARE_NEGATIVE_BY_LOCALE: Record<Locale, RegExp> = {
   ar: /^(?:لا|كلا)[.]?$/u,
 };
 
+const FAQ_RECOMMENDATION_BY_LOCALE: Record<Locale, RegExp> = {
+  en: /^(?:use|consult|run|check|verify)\b.{0,80}\b(?:database|service|provider|application|browser|server)\b/iu,
+  zh: /^(?:请)?(?:使用|改用|查看|检查|运行).{0,40}(?:数据库|服务|提供商|应用|浏览器|服务器)/u,
+  ja: /(?:データベース|サービス|プロバイダー|アプリ|ブラウザー|サーバー).{0,40}(?:使用|利用|確認|実行)してください/u,
+  ko: /(?:데이터베이스|서비스|공급자|애플리케이션|브라우저|서버).{0,40}(?:사용|이용|확인|실행)하세요/u,
+  es: /^(?:usa|use|utiliza|utilice|consulta|consulte|ejecuta|ejecute)\b.{0,80}\b(?:base de datos|servicio|proveedor|aplicación|navegador|servidor)\b/iu,
+  pt: /^(?:usa|use|utiliza|utilize|consulta|consulte|executa|execute)\b.{0,80}\b(?:banco de dados|serviço|provedor|aplicativo|navegador|servidor)\b/iu,
+  fr: /^(?:utilise|utilisez|consulte|consultez|exécute|exécutez)\b.{0,80}\b(?:base de données|service|fournisseur|application|navigateur|serveur)\b/iu,
+  de: /^(?:verwende|verwenden|verwendet|nutze|nutzen|nutzt|prüfe|prüfen|prüft)\b.{0,80}\b(?:Datenbank|Dienst|Anbieter|Anwendung|Browser|Server)\b/iu,
+  ru: /^(?:используй|используйте|запусти|запустите|проверь|проверьте)\b.{0,80}\b(?:базу данных|сервис|провайдера|приложение|браузер|сервер)\b/iu,
+  ar: /^(?:استخدم|استخدمي|استخدموا|شغّل|شغلي|شغّلوا|تحقق).{0,80}(?:قاعدة البيانات|الخدمة|المزود|التطبيق|المتصفح|الخادم)/u,
+};
+
 const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
   en: /\b(?:opens?|uploads?|loads?|analy[sz]es?)\b.{0,40}\b(?:local |binary )?files?\b|\b(?:shows?|provides?|includes?|displays?)\b.{0,40}\b(?:offset|byte|hex) (?:grid|table|view)\b/iu,
   zh: /(?:打开|上传|载入|加载|分析).{0,20}(?:本地|二进制)?文件|(?:显示|提供|包含).{0,20}(?:偏移|字节|十六进制).{0,8}(?:网格|表格|视图)/u,
@@ -338,7 +351,8 @@ export function matchesLocalizedCapabilityClaim(
       previous &&
       faqQuestion &&
       /[?？؟]\s*$/u.test(faqQuestion) &&
-      test(BARE_NEGATIVE_BY_LOCALE[resolvedLocale], previous)
+      test(BARE_NEGATIVE_BY_LOCALE[resolvedLocale], previous) &&
+      test(FAQ_RECOMMENDATION_BY_LOCALE[resolvedLocale], segment)
     ) {
       return false;
     }

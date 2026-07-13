@@ -3,9 +3,9 @@
 ## Decision
 
 Capability governance was re-verified on 2026-07-14 in `Asia/Shanghai` after
-the third and final targeted review wave. This document records the verified
-working-tree state; the final implementation commit is recorded in the local
-SDD report and repository history.
+the final targeted FAQ correction. This document records the verified
+working-tree state; the implementation commits are recorded in the local SDD
+report and repository history.
 
 This remains an inventory baseline, not production release approval. All six
 pilot profiles remain `inventory`, contain no behavior evidence, and render no
@@ -62,11 +62,14 @@ The claim detector now selects deterministic taxonomy rules by locale, splits
 mixed statements at localized contrast clauses, and evaluates adjacent
 assertions independently. Negation in one assertion cannot mask the next.
 Explicit FAQ questions remain associated with a following localized bare
-`Yes` or `No`; a bare negative answer can also govern its immediate FAQ
-explanation. No generic previous-negation suppression remains. Tests exercise
-every governed claim code in every UI locale with 320 affirmative and 320
-limitation cases, plus mixed-clause, FAQ, adjacent-sentence, honest two-sentence
-limitation, and current-message regressions.
+`Yes` or `No`, but every following explanation is evaluated independently for
+affirmative governed claims. Localized negative limitations remain honest, as
+do explicit recommendations to use an external database, service, provider,
+application, browser, or server. No generic previous-negation suppression
+remains. Tests exercise every governed claim code in every UI locale with 320
+affirmative and 320 limitation cases, plus ten-locale contradictory and honest
+FAQ matrices, mixed-clause, adjacent-sentence, honest two-sentence limitation,
+and current-message regressions.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
 found by both review waves was rewritten to match current production behavior.
@@ -120,7 +123,7 @@ without leaving temporary fixture directories.
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 270/270 tests passed.
+Result: exit `0`; 7/7 files and 291/291 tests passed.
 
 ### Default claims validator
 
