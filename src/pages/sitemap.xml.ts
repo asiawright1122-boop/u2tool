@@ -1,19 +1,25 @@
-/**
- * sitemap.xml.ts
- *
- * Generates a sitemap index that fans out to the priority, page, and tool sitemaps.
- */
-
 import type { APIRoute } from 'astro';
-import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
-import { buildSitemapIndexEntry, generateSitemapIndexResponse } from '@/lib/sitemap-utils';
+import {
+  buildPagesSitemapEntries,
+  buildPrioritySitemapEntries,
+  buildToolsSitemapEntries,
+} from '@/lib/sitemap-entry-builders';
+import {
+  buildSitemapIndexEntry,
+  generateSitemapIndexResponse,
+  newestEntryLastmod,
+} from '@/lib/sitemap-utils';
 
 export const prerender = true;
 
 export const GET: APIRoute = () => {
+  const priorityEntries = buildPrioritySitemapEntries();
+  const pageEntries = buildPagesSitemapEntries();
+  const toolEntries = buildToolsSitemapEntries();
+
   return generateSitemapIndexResponse([
-    buildSitemapIndexEntry('/sitemap-priority.xml', sitemapLastmodManifest.site),
-    buildSitemapIndexEntry('/sitemap-pages.xml', sitemapLastmodManifest.pages),
-    buildSitemapIndexEntry('/sitemap-tools.xml', sitemapLastmodManifest.tools),
+    buildSitemapIndexEntry('/sitemap-priority.xml', newestEntryLastmod(priorityEntries)),
+    buildSitemapIndexEntry('/sitemap-pages.xml', newestEntryLastmod(pageEntries)),
+    buildSitemapIndexEntry('/sitemap-tools.xml', newestEntryLastmod(toolEntries)),
   ]);
 };

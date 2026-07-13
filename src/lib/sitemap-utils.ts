@@ -1,57 +1,39 @@
 /**
- * sitemap-utils.ts
- *
- * 共享的 sitemap 生成工具函数，避免代码重复
+ * Shared sitemap XML builders.
  */
 
-import { sitemapLastmodManifest } from '@/generated/sitemap-lastmod';
 import { locales as allLocales, type Locale } from '@/lib/i18n';
+import {
+  maxLastmod,
+  normalizeSitemapPath,
+  resolveSitemapLastmod,
+  type SitemapLastmodBucket,
+} from '@/lib/sitemap-lastmod';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl, getHreflang, withPageUrlTrailingSlash } from '@/lib/seo';
 
 const BASE_URL = getPublicSiteUrl();
-export const SITEMAP_LASTMOD = sitemapLastmodManifest.site;
 
-/**
- * 构建单个 URL 条目，包含 hreflang 标签
- */
-export function buildUrl(path: string, priority: string, changefreq: string, lastmod = SITEMAP_LASTMOD): string {
-  const loc = esc(withPageUrlTrailingSlash(`${BASE_URL}${path}`));
-  // Extract the path part after locale for hreflang alternates
-  const parts = path.split('/');
-  const pathSegmentsAfterLocale = parts.slice(2).filter(Boolean);
-  const pathAfterLocale = pathSegmentsAfterLocale.length > 0 ? `/${pathSegmentsAfterLocale.join('/')}` : '';
-
-  // Generate hreflang tags with language-region codes
-  const alternates = allLocales.map(l => {
-    const hreflang = getHreflang(l);
-    return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(buildLocalizedPageUrl(BASE_URL, l, pathAfterLocale || '/'))}" />`;
-  }).join('\n');
-
-  return `  <url>
-    <loc>${loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-${alternates}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(buildLocalizedPageUrl(BASE_URL, 'en', pathAfterLocale || '/'))}" />
-  </url>`;
+export interface SitemapUrlEntry {
+  path: string;
+  lastmod: string;
+  xml: string;
 }
 
-/**
- * 构建只发布到部分语言的 URL 条目，避免 sitemap 指向不存在的翻译页面
- */
-export function buildUrlForLocales(
+function renderUrlXml(
   path: string,
   priority: string,
   changefreq: string,
-  publishedLocales: readonly Locale[],
-  lastmod = SITEMAP_LASTMOD
+  lastmod: string,
+  publishedLocales: readonly Locale[]
 ): string {
   const loc = esc(withPageUrlTrailingSlash(`${BASE_URL}${path}`));
   const parts = path.split('/');
   const pathSegmentsAfterLocale = parts.slice(2).filter(Boolean);
-  const pathAfterLocale = pathSegmentsAfterLocale.length > 0 ? `/${pathSegmentsAfterLocale.join('/')}` : '';
+  const pathAfterLocale = pathSegmentsAfterLocale.length > 0
+    ? `/${pathSegmentsAfterLocale.join('/')}`
+    : '';
+
   const alternates = publishedLocales.map((locale) => {
     const hreflang = getHreflang(locale);
     return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(buildLocalizedPageUrl(BASE_URL, locale, pathAfterLocale || '/'))}" />`;
@@ -67,24 +49,53 @@ ${alternates}
   </url>`;
 }
 
-/**
- * 构建 sitemap index 中的单个子 sitemap 条目
- */
-export function buildSitemapIndexEntry(path: string, lastmod = SITEMAP_LASTMOD): string {
+export function buildUrl(
+  path: string,
+  priority: string,
+  changefreq: string,
+  bucket: SitemapLastmodBucket
+): SitemapUrlEntry {
+  const normalizedPath = normalizeSitemapPath(path);
+  const lastmod = resolveSitemapLastmod(normalizedPath, bucket);
+  return {
+    path: normalizedPath,
+    lastmod,
+    xml: renderUrlXml(normalizedPath, priority, changefreq, lastmod, allLocales),
+  };
+}
+
+export function buildUrlForLocales(
+  path: string,
+  priority: string,
+  changefreq: string,
+  publishedLocales: readonly Locale[],
+  bucket: SitemapLastmodBucket
+): SitemapUrlEntry {
+  const normalizedPath = normalizeSitemapPath(path);
+  const lastmod = resolveSitemapLastmod(normalizedPath, bucket);
+  return {
+    path: normalizedPath,
+    lastmod,
+    xml: renderUrlXml(normalizedPath, priority, changefreq, lastmod, publishedLocales),
+  };
+}
+
+export function newestEntryLastmod(entries: readonly SitemapUrlEntry[]): string {
+  return maxLastmod(entries.map((entry) => entry.lastmod));
+}
+
+export function buildSitemapIndexEntry(path: string, lastmod: string): string {
   return `  <sitemap>
     <loc>${esc(`${BASE_URL}${path}`)}</loc>
     <lastmod>${lastmod}</lastmod>
   </sitemap>`;
 }
 
-/**
- * 生成 sitemap XML 响应
- */
-export function generateSitemapResponse(urls: string[]): Response {
+export function generateSitemapResponse(entries: SitemapUrlEntry[]): Response {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls.join('\n')}
+${entries.map((entry) => entry.xml).join('\n')}
 </urlset>`;
 
   return new Response(sitemap, {
@@ -95,9 +106,6 @@ ${urls.join('\n')}
   });
 }
 
-/**
- * 生成 sitemap index XML 响应
- */
 export function generateSitemapIndexResponse(entries: string[]): Response {
   const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -112,9 +120,10 @@ ${entries.join('\n')}
   });
 }
 
-/**
- * XML 转义函数
- */
-function esc(s: string): string {
-  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+function esc(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }

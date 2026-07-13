@@ -15,7 +15,7 @@ contract while preserving the historical work.
 | `fix-defensive-programming.ts` | Codemod-style fixer; one-off historical helper. The matching `validate-defensive-programming.ts` now lives as a `validate-historical-fixes.ts` helper. |
 | `fix-missing-translations.ts` | Earlier i18n filler; replaced by `scripts/maintenance/fill-missing-translation-keys.ts`. |
 | `fill-missing-translation-keys.ts` | Duplicate of `scripts/maintenance/fill-missing-translation-keys.ts`; the maintenance copy is the one wired into `i18n:check-missing-keys`. |
-| `generate-sitemap-lastmod.ts` | Legacy sitemap timestamp generator; replaced by build-time `src/generated/sitemap-lastmod.ts`. |
+| `generate-sitemap-lastmod.ts` | Legacy Git-date generator; replaced by the source-controlled `src/config/sitemap-lastmod.json` release manifest and `src/lib/sitemap-lastmod.ts` resolver. |
 | `rendered-seo-audit.ts` | Pre-SSR audit that read built HTML files; replaced by `validate-rendered-seo.ts` which fetches the live worker. |
 | `technical-seo-audit.ts` | Earlier non-blocking technical SEO survey; replaced by `validate-technical-seo.ts`. |
 | `validate-runtime-placeholder-regressions.ts` | Earlier placeholder-leak detector; covered by `src/messages/seo-governance.test.ts` and `validate-rendered-seo.ts`. |
