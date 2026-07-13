@@ -87,12 +87,16 @@ guides, or instructions are excluded locally without masking a separate
 affirmative execute action. SQL-object state is carried across adjacent actions
 within the same sentence, including meta/how-to clauses, so a later execute
 action may safely elide `SQLクエリ`/`SQL 쿼리` while retaining action-local
-location ownership. Japanese `した後`/`してから` and Korean `한 후`/`한 다음`/
-`하고 나서` temporal forms create action boundaries without treating
-attributive `生成したSQLクエリ`/`생성한 SQL 쿼리` as boundaries. Negation is
-anchored to the execute predicate; a later unrelated negative save/display
-action cannot suppress an affirmative execution claim, while direct negative
-execution forms remain clean. Mixed-clause, adjacent-sentence, honest
+location ownership. Before each execute predicate, an explicit Japanese `を`
+or Korean `을`/`를` direct object overrides inherited state: SQL/query objects
+remain governed, while test/process/task objects clear the SQL context for
+that action and later elision. Japanese `した後`/`してから`/`したあと` and
+Korean `한 후`/`한 다음`/`한 뒤`/`하고 나서` temporal forms create action
+boundaries without treating attributive `生成したSQLクエリ`/
+`생성한 SQL 쿼리` as boundaries. Negation is anchored to the execute
+predicate and covers direct, nominalized, unsupported, cannot, and unable
+morphology; a later unrelated negative save/display action cannot suppress an
+affirmative execution claim. Mixed-clause, adjacent-sentence, honest
 two-sentence limitation, and current-message regressions remain covered.
 
 The repository audit scans all six pilots in all ten locales (60 pages). Copy
@@ -152,7 +156,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 365/365 tests passed.
+Result: exit `0`; 7/7 files and 395/395 tests passed.
 
 ### Default claims validator
 

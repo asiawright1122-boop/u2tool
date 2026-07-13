@@ -1153,6 +1153,194 @@ describe("assessToolCapabilityClaims", () => {
     },
   );
 
+  it("lets a Japanese non-SQL direct object override carried SQL context", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "SQLクエリを分析し、このアプリケーションでテストを実行します。",
+    });
+
+    expect(report.issues).toEqual([]);
+  });
+
+  it("recognizes a Japanese nominalized cannot-execute predicate", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "このアプリケーションではSQLクエリを実行することはできません。",
+    });
+
+    expect(report.issues).toEqual([]);
+  });
+
+  it("separates a Japanese hiragana-after clause from execution", () => {
+    const report = assessToolCapabilityClaims({
+      slug: "sql-query-optimizer",
+      locale: "ja",
+      text: "外部データベースでSQLクエリを分析したあと、実行します。",
+    });
+
+    expect(report.issues.map((issue) => issue.code)).toContain(
+      "sql-optimizer-execution-claim",
+    );
+  });
+
+  it.each([
+    ["ko", "SQL 쿼리를 분석하고 이 애플리케이션에서 테스트를 실행합니다."],
+    ["ja", "SQLクエリを分析し、このアプリケーションで処理を実行します。"],
+    ["ja", "SQLクエリを分析し、このアプリケーションでタスクを実行します。"],
+    [
+      "ja",
+      "SQLクエリを分析し、このアプリケーションでSQLクエリのテストを実行します。",
+    ],
+    ["ko", "SQL 쿼리를 분석하고 이 애플리케이션에서 프로세스를 실행합니다."],
+    ["ko", "SQL 쿼리를 분석하고 이 애플리케이션에서 작업을 실행합니다."],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 이 애플리케이션에서 SQL 쿼리 테스트를 실행합니다.",
+    ],
+  ] as const)(
+    "lets an explicit non-SQL execution object override carried context in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリを分析し、テストを実行し、このアプリケーションで実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 테스트를 실행하고 이 애플리케이션에서 실행합니다.",
+    ],
+  ] as const)(
+    "keeps SQL context cleared after a non-SQL execution object in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "SQLクエリを分析し、テストを実行し、このアプリケーションでSQLクエリを実行します。",
+    ],
+    [
+      "ko",
+      "SQL 쿼리를 분석하고 테스트를 실행하고 이 애플리케이션에서 SQL 쿼리를 실행합니다.",
+    ],
+  ] as const)(
+    "restores governed context for a later explicit SQL object in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    ["ja", "このアプリケーションではSQLクエリを実行できない。"],
+    ["ja", "このアプリケーションではSQLクエリの実行には対応していません。"],
+    ["ja", "このアプリケーションではSQLクエリを実行することができない。"],
+    ["ja", "このアプリケーションではSQLクエリの実行には対応していない。"],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리를 실행할 수 없어요."],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리를 실행할 수 없다."],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리를 실행하지 못합니다."],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리를 실행하지 못해요."],
+    ["ko", "이 애플리케이션에서는 SQL 쿼리를 실행하지 못한다."],
+  ] as const)(
+    "keeps execute-predicate-local negative morphology clean in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "外部データベースでSQLクエリを分析したあとに、実行します。",
+    ],
+    [
+      "ja",
+      "外部データベースでSQLクエリを分析したあとで、実行します。",
+    ],
+    [
+      "ja",
+      "外部データベースでSQLクエリを分析したあとから、実行します。",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에서 SQL 쿼리를 분석한 뒤 실행합니다.",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에서 SQL 쿼리를 분석한 뒤에 실행합니다.",
+    ],
+  ] as const)(
+    "separates added temporal synonyms from execution in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
+    [
+      "ja",
+      "外部データベースで生成したSQLクエリをこのアプリケーションで実行します。",
+    ],
+    [
+      "ko",
+      "외부 데이터베이스에서 생성한 SQL 쿼리를 이 애플리케이션에서 실행합니다.",
+    ],
+  ] as const)(
+    "preserves generated-query attributive forms in %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
   it.each(locales)(
     "flags a contradictory bare-No FAQ explanation in %s",
     (locale) => {
