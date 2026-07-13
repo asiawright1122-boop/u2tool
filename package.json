@@ -15,7 +15,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "report:content-trust": "node scripts/validation/content-trust-audit.mjs",
+    "report:content-trust": "node --import tsx/esm scripts/validation/content-trust-audit.mjs",
     "report:gsc-coverage": "node --import tsx/esm scripts/seo/gsc-coverage-report.ts",
     "report:gsc-daily-cliff": "node --import tsx/esm scripts/seo/gsc-daily-cliff-report.ts",
     "gsc:generate-mappings": "node --import tsx/esm scripts/gsc-recovery/generate-mappings.ts",
