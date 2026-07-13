@@ -510,6 +510,9 @@ git commit -m "ci: validate tool capability claims"
 
 ## Task 5: Verify Governance As A Foundation Gate
 
+**Files:**
+- Create: `docs/CAPABILITY_GOVERNANCE_BASELINE_2026-07-13.md`
+
 - [ ] **Step 1: Run the complete focused suite**
 
 ```bash
@@ -537,4 +540,11 @@ Verify:
 
 - [ ] **Step 3: Record the profile baseline**
 
-Create a short evidence section in the implementation PR description listing all six `1.0.0` inventory profiles and stating that they are not production-release-ready. Each product pilot later records its real behavior-test paths when it promotes its profile. Do not deploy before the master checkpoint allows it.
+Create `docs/CAPABILITY_GOVERNANCE_BASELINE_2026-07-13.md` with the exact verification commands and results, all six `1.0.0` inventory profiles, their engine-support kind, zero current evidence paths, the default validator result, the intentional `--require-release-ready grammar-checker` failure, the inventory-page no-disclosure evidence, the remaining non-blocking warnings, and the explicit statement that none is production-release-ready. Each product pilot later records its real behavior-test paths when it promotes its profile. Do not deploy before the master checkpoint allows it.
+
+- [ ] **Step 4: Commit the verified baseline**
+
+```bash
+git add docs/CAPABILITY_GOVERNANCE_BASELINE_2026-07-13.md
+git commit -m "docs: record capability governance baseline"
+```
