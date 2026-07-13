@@ -448,7 +448,8 @@ export function validateCapabilityMessageMatrix(
 ): CapabilityValidationIssue[];
 export function validateReleaseReadyProfiles(
   profiles: readonly ToolCapabilityProfile[],
-  fileExists: (path: string) => boolean
+  fileExists: (path: string) => boolean,
+  labelResolves: (profile: ToolCapabilityProfile, locale: Locale, labelKey: string) => boolean
 ): CapabilityValidationIssue[];
 ```
 
