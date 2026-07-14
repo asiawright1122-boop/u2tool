@@ -2,8 +2,10 @@ import { describe, expect, it } from 'vitest';
 import {
   createCorruptExcelWorkbookFixture,
   createEmptyExcelWorkbookFixture,
+  createExcelWorkbookDisplayFixture,
   createExcelWorkbookFixture,
   createExcelWorkbookMetadataFixture,
+  createExcelWorkbookOrphanMetadataFixture,
 } from './excel-data-viewer.fixture';
 import {
   filterExcelRows,
@@ -68,6 +70,18 @@ describe('Excel data viewer model', () => {
       .rejects.toThrow('Invalid Excel workbook.');
   });
 
+  it('uses error display text while keeping formatted numeric cells raw and sortable', async () => {
+    const workbook = await parseExcelWorkbook(createExcelWorkbookDisplayFixture());
+    const [row] = workbook.sheets[0].rows;
+
+    expect(row.map((cell) => cell.value)).toEqual(['#DIV/0!', 1234.5, 0.25, 2]);
+    expect(row[0].formula).toBe('1/0');
+    expect(workbook.warnings).toEqual([
+      'Complex formatting may not be fully reproduced.',
+      "Formulas are displayed but not recalculated; values are the workbook's cached results.",
+    ]);
+  });
+
   it('filters rows case-insensitively using displayed scalar values', async () => {
     const { sheets: [sheet] } = await parseExcelWorkbook(createExcelWorkbookFixture());
 
@@ -107,5 +121,11 @@ describe('Excel data viewer model', () => {
       'Charts are present but are not reproduced.',
       'Complex formatting may not be fully reproduced.',
     ]);
+  });
+
+  it('does not report orphan macro or chart ZIP entries as workbook features', async () => {
+    const workbook = await parseExcelWorkbook(await createExcelWorkbookOrphanMetadataFixture());
+
+    expect(workbook.warnings).toEqual([]);
   });
 });

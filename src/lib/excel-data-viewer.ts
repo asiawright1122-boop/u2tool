@@ -28,12 +28,28 @@ type WorkbookStyleMetadata = {
 
 type WorkbookWithMetadata = XLSX.WorkBook & {
   keys?: string[];
+  files?: Record<string, { content?: string | Uint8Array | ArrayBuffer }>;
   Styles?: WorkbookStyleMetadata;
+};
+
+type PackageRelationship = {
+  id: string;
+  owner: string;
+  target: string;
+  type: string;
+};
+
+type PackageContentTypes = {
+  defaults: Map<string, string>;
+  overrides: Map<string, string>;
 };
 
 function cellValue(cell: XLSX.CellObject | undefined): ExcelCellView['value'] {
   if (!cell || cell.v === undefined || cell.v === null) {
     return null;
+  }
+  if (cell.t === 'e') {
+    return cell.w || String(cell.v);
   }
   if (cell.v instanceof Date) {
     return cell.w || cell.v.toISOString();
@@ -113,6 +129,205 @@ function workbookHasFormula(workbook: XLSX.WorkBook): boolean {
   ));
 }
 
+function decodeXmlAttribute(value: string): string {
+  return value
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+}
+
+function xmlAttribute(tag: string, name: string): string | null {
+  const match = new RegExp(`\\b${name}\\s*=\\s*(["'])(.*?)\\1`, 'i').exec(tag);
+  return match ? decodeXmlAttribute(match[2]) : null;
+}
+
+function normalizePackagePart(path: string): string {
+  const parts: string[] = [];
+  for (const part of path.replace(/\\/g, '/').replace(/^\/+/, '').split('/')) {
+    if (!part || part === '.') {
+      continue;
+    }
+    if (part === '..') {
+      parts.pop();
+    } else {
+      parts.push(part);
+    }
+  }
+  return parts.join('/');
+}
+
+function packageFiles(workbook: WorkbookWithMetadata): Map<string, { content?: string | Uint8Array | ArrayBuffer }> {
+  return new Map(Object.entries(workbook.files || {}).map(
+    ([path, file]) => [normalizePackagePart(path), file],
+  ));
+}
+
+function packagePartText(
+  files: Map<string, { content?: string | Uint8Array | ArrayBuffer }>,
+  path: string,
+): string | null {
+  const content = files.get(normalizePackagePart(path))?.content;
+  if (typeof content === 'string') {
+    return content;
+  }
+  if (content instanceof Uint8Array) {
+    return new TextDecoder().decode(content);
+  }
+  if (content instanceof ArrayBuffer) {
+    return new TextDecoder().decode(new Uint8Array(content));
+  }
+  return null;
+}
+
+function relationshipOwner(path: string): string | null {
+  if (path === '_rels/.rels') {
+    return '';
+  }
+  const match = /^(.*\/)?_rels\/([^/]+)\.rels$/i.exec(path);
+  return match ? normalizePackagePart(`${match[1] || ''}${match[2]}`) : null;
+}
+
+function resolveRelationshipTarget(owner: string, target: string): string {
+  if (target.startsWith('/')) {
+    return normalizePackagePart(target);
+  }
+  const slash = owner.lastIndexOf('/');
+  const directory = slash >= 0 ? owner.slice(0, slash + 1) : '';
+  return normalizePackagePart(`${directory}${target}`);
+}
+
+function parsePackageRelationships(
+  files: Map<string, { content?: string | Uint8Array | ArrayBuffer }>,
+): Map<string, PackageRelationship[]> {
+  const byOwner = new Map<string, PackageRelationship[]>();
+  for (const path of files.keys()) {
+    const owner = relationshipOwner(path);
+    const xml = owner === null ? null : packagePartText(files, path);
+    if (owner === null || !xml) {
+      continue;
+    }
+    const relationships: PackageRelationship[] = [];
+    for (const tag of xml.match(/<(?:[A-Za-z][\w.-]*:)?Relationship\b[^>]*>/gi) || []) {
+      const id = xmlAttribute(tag, 'Id');
+      const target = xmlAttribute(tag, 'Target');
+      const type = xmlAttribute(tag, 'Type');
+      const targetMode = xmlAttribute(tag, 'TargetMode');
+      if (id && target && type && targetMode?.toLowerCase() !== 'external') {
+        relationships.push({ id, owner, target: resolveRelationshipTarget(owner, target), type });
+      }
+    }
+    byOwner.set(owner, relationships);
+  }
+  return byOwner;
+}
+
+function parsePackageContentTypes(
+  files: Map<string, { content?: string | Uint8Array | ArrayBuffer }>,
+): PackageContentTypes | null {
+  const xml = packagePartText(files, '[Content_Types].xml');
+  if (!xml) {
+    return null;
+  }
+  const result: PackageContentTypes = { defaults: new Map(), overrides: new Map() };
+  for (const tag of xml.match(/<(?:[A-Za-z][\w.-]*:)?(?:Default|Override)\b[^>]*>/gi) || []) {
+    const contentType = xmlAttribute(tag, 'ContentType');
+    const extension = xmlAttribute(tag, 'Extension');
+    const partName = xmlAttribute(tag, 'PartName');
+    if (contentType && extension) {
+      result.defaults.set(extension.toLowerCase(), contentType);
+    } else if (contentType && partName) {
+      result.overrides.set(normalizePackagePart(partName), contentType);
+    }
+  }
+  return result;
+}
+
+function packageContentType(contentTypes: PackageContentTypes, part: string): string | null {
+  const normalized = normalizePackagePart(part);
+  const override = contentTypes.overrides.get(normalized);
+  if (override) {
+    return override;
+  }
+  const extension = normalized.includes('.') ? normalized.split('.').pop()?.toLowerCase() : undefined;
+  return extension ? contentTypes.defaults.get(extension) || null : null;
+}
+
+function relationshipIsReferenced(
+  files: Map<string, { content?: string | Uint8Array | ArrayBuffer }>,
+  relationship: PackageRelationship,
+): boolean {
+  if (!/(?:\/worksheet|\/drawing|\/chart)$/i.test(relationship.type)) {
+    return true;
+  }
+  const source = packagePartText(files, relationship.owner);
+  if (!source) {
+    return false;
+  }
+  const escapedId = relationship.id.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return new RegExp(`(?:[A-Za-z][\\w.-]*:)?id\\s*=\\s*(["'])${escapedId}\\1`, 'i').test(source);
+}
+
+function workbookPackageFeatures(workbook: WorkbookWithMetadata): { charts: boolean; macros: boolean } {
+  const files = packageFiles(workbook);
+  const contentTypes = parsePackageContentTypes(files);
+  if (!contentTypes) {
+    return { charts: false, macros: Boolean(workbook.vbaraw) };
+  }
+
+  const relationships = parsePackageRelationships(files);
+  const reachable = new Set<string>(['']);
+  const queue = [''];
+  let charts = false;
+  let macros = false;
+
+  while (queue.length > 0) {
+    const owner = queue.shift() || '';
+    for (const relationship of relationships.get(owner) || []) {
+      if (!files.has(relationship.target) || !relationshipIsReferenced(files, relationship)) {
+        continue;
+      }
+      const targetContentType = packageContentType(contentTypes, relationship.target);
+      if (
+        owner === 'xl/workbook.xml'
+        && /\/vbaProject$/i.test(relationship.type)
+        && targetContentType === 'application/vnd.ms-office.vbaProject'
+        && packageContentType(contentTypes, owner)?.includes('macroEnabled')
+      ) {
+        macros = true;
+      }
+      if (
+        /^xl\/drawings\//i.test(owner)
+        && /\/chart$/i.test(relationship.type)
+        && targetContentType === 'application/vnd.openxmlformats-officedocument.drawingml.chart+xml'
+      ) {
+        charts = true;
+      }
+      if (!reachable.has(relationship.target)) {
+        reachable.add(relationship.target);
+        queue.push(relationship.target);
+      }
+    }
+  }
+
+  return { charts, macros };
+}
+
+function workbookHasUnsupportedNumberFormat(workbook: XLSX.WorkBook): boolean {
+  return workbook.SheetNames.some((name) => Object.entries(workbook.Sheets[name]).some(
+    ([key, cell]) => {
+      if (key.startsWith('!') || typeof cell !== 'object' || cell === null) {
+        return false;
+      }
+      const format = (cell as XLSX.CellObject).z;
+      return typeof format === 'string'
+        && format !== 'General'
+        && !XLSX.SSF.is_date(format);
+    },
+  ));
+}
+
 function workbookHasComplexFormatting(workbook: WorkbookWithMetadata): boolean {
   const styles = workbook.Styles;
   const hasNonDefaultStyles = Boolean(
@@ -139,16 +354,18 @@ function workbookHasComplexFormatting(workbook: WorkbookWithMetadata): boolean {
       || worksheet['!margins'],
     );
   });
-  return hasNonDefaultStyles || hasSheetLayoutFormatting;
+  return hasNonDefaultStyles
+    || hasSheetLayoutFormatting
+    || workbookHasUnsupportedNumberFormat(workbook);
 }
 
 function workbookWarnings(workbook: WorkbookWithMetadata): string[] {
-  const fileKeys = workbook.keys || [];
+  const features = workbookPackageFeatures(workbook);
   const warnings: string[] = [];
-  if (workbook.vbaraw || fileKeys.some((key) => /(^|\/)vbaProject\.bin$/i.test(key))) {
+  if (features.macros) {
     warnings.push('Macros are present but are not executed.');
   }
-  if (fileKeys.some((key) => /(^|\/)charts\/[^/]+\.xml$/i.test(key))) {
+  if (features.charts) {
     warnings.push('Charts are present but are not reproduced.');
   }
   if (workbookHasComplexFormatting(workbook)) {
