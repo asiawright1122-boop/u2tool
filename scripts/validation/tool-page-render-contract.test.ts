@@ -63,6 +63,17 @@ const enforcedCapabilityHtml = sampleHtml.replace(
     >Localized capability disclosure</section>`,
 );
 
+const grammarNoticeHtml = enforcedCapabilityHtml.replace(
+  '<h1 class="text-4xl">YouTube Tags Generator</h1>',
+  `<h1 class="text-4xl">YouTube Tags Generator</h1>
+    <p
+      id="grammar-checker-language-notice"
+      role="note"
+      data-grammar-language-notice
+      data-input-language="en"
+    >This local checker is designed for English text.</p>`,
+);
+
 function resolveMessage(
   messages: Record<string, unknown>,
   labelKey: string,
@@ -199,6 +210,9 @@ describe('extractToolPageRenderContract', () => {
       capabilityVersion: undefined,
       localProcessing: undefined,
       capabilityDisclosureCount: 0,
+      grammarLanguageNoticeCount: 0,
+      grammarLanguageNoticeInputLanguage: undefined,
+      grammarLanguageNoticeText: undefined,
     });
   });
 
@@ -210,6 +224,16 @@ describe('extractToolPageRenderContract', () => {
       capabilityVersion: '2.3.0',
       localProcessing: true,
       capabilityDisclosureCount: 1,
+    });
+  });
+
+  it('extracts one semantic Grammar language notice with exact text and input language', () => {
+    const contract = extractToolPageRenderContract(grammarNoticeHtml);
+
+    expect(contract).toMatchObject({
+      grammarLanguageNoticeCount: 1,
+      grammarLanguageNoticeInputLanguage: 'en',
+      grammarLanguageNoticeText: 'This local checker is designed for English text.',
     });
   });
 });
@@ -260,6 +284,96 @@ describe('compareToolPageRenderContract', () => {
     );
 
     expect(failures).toEqual([]);
+  });
+
+  it('rejects Grammar notice copy that appears only inside client JavaScript', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'release-ready-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'release-ready-tool',
+      expectedCapabilityVersion: '2.3.0',
+      expectedLocalProcessing: true,
+      expectedGrammarLanguageNotice: {
+        inputLanguage: 'en',
+        text: 'This local checker is designed for English text.',
+      },
+    };
+    const scriptOnlyHtml = enforcedCapabilityHtml.replace(
+      '</body>',
+      `<script>window.__grammarNotice = '<p data-grammar-language-notice data-input-language="en">This local checker is designed for English text.</p>';</script></body>`,
+    );
+
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(scriptOnlyHtml),
+        scriptOnlyHtml,
+      ),
+    ).toContain(
+      'en/release-ready-tool grammar language notice: expected 1 semantic element but found 0',
+    );
+  });
+
+  it('requires exactly one Grammar notice with the expected attribute and localized text', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'release-ready-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'release-ready-tool',
+      expectedCapabilityVersion: '2.3.0',
+      expectedLocalProcessing: true,
+      expectedGrammarLanguageNotice: {
+        inputLanguage: 'en',
+        text: 'This local checker is designed for English text.',
+      },
+    };
+
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(grammarNoticeHtml),
+        grammarNoticeHtml,
+      ),
+    ).toEqual([]);
+
+    const duplicateWrongNoticeHtml = grammarNoticeHtml.replace(
+      '</body>',
+      `<p data-grammar-language-notice data-input-language="ru">Неверный текст</p></body>`,
+    );
+    const failures = compareToolPageRenderContract(
+      expectation,
+      extractToolPageRenderContract(duplicateWrongNoticeHtml),
+      duplicateWrongNoticeHtml,
+    );
+
+    expect(failures).toContain(
+      'en/release-ready-tool grammar language notice: expected 1 semantic element but found 2',
+    );
+
+    const wrongNoticeHtml = grammarNoticeHtml
+      .replace('data-input-language="en"', 'data-input-language="ru"')
+      .replace(
+        'This local checker is designed for English text.',
+        'Неверный текст',
+      );
+    const wrongFailures = compareToolPageRenderContract(
+      expectation,
+      extractToolPageRenderContract(wrongNoticeHtml),
+      wrongNoticeHtml,
+    );
+    expect(wrongFailures).toContain(
+      'en/release-ready-tool grammar language notice: expected data-input-language="en" but found "ru"',
+    );
+    expect(wrongFailures).toContain(
+      'en/release-ready-tool grammar language notice: expected localized text "This local checker is designed for English text." but found "Неверный текст"',
+    );
   });
 
   it('reports capability identity, version, and processing drift', () => {

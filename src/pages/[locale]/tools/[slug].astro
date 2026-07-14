@@ -32,6 +32,7 @@ import StructuredData from '@/components/seo/StructuredData.astro';
 // --- Tools ---
 import ToolWrapper from '@/components/tools/ToolWrapper.svelte';
 import ToolCapabilityDisclosure from '@/components/tools/ToolCapabilityDisclosure.astro';
+import GrammarLanguageNotice from '@/components/tools/GrammarLanguageNotice.astro';
 import RelatedTools from '@/components/tools/RelatedTools.astro';
 import ToolFAQ from '@/components/tools/ToolFAQ.astro';
 import AiTokenCalculatorSeoContent from '@/components/tools/AiTokenCalculatorSeoContent.astro';
@@ -660,6 +661,11 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
 
       {/* Tool Component — Island Architecture: hydrate only when visible */}
       <div class="glass-card p-6 md:p-10 shadow-2xl mb-10 transition-all hover:shadow-amber-500/10 ring-1 ring-white/5">
+        {tool.slug === 'grammar-checker' && typeof messages.languageNotice === 'string' && (
+          <div class="mb-4">
+            <GrammarLanguageNotice locale={locale} text={messages.languageNotice} />
+          </div>
+        )}
         <ToolWrapper
           client:visible
           slug={tool.slug}

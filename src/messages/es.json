@@ -11948,15 +11948,14 @@
     },
     "grammar-checker": {
       "name": "Revisión de Gramática",
-      "description": "Revisa el texto en busca de errores gramaticales y recibe sugerencias de corrección",
-      "seo_title": "Revisa tu gramática en línea gratis - Herramienta de corrección JSON",
-      "seo_description": "Corrige errores gramaticales en español con nuestra herramienta gratuita en línea. Obtén sugerencias de corrección en JSON. ¡Prueba ahora!",
-
-
-
-      "inputPlaceholder": "Ingrese texto para verificar...",
+      "description": "Revisa texto en inglés con reglas locales para detectar problemas comunes de gramática, ortografía y puntuación",
+      "seo_title": "Corrector gratuito de gramática inglesa - Reglas locales",
+      "seo_description": "Usa la interfaz en español para revisar texto en inglés. Las reglas estáticas se ejecutan en el navegador, resaltan coincidencias y ofrecen correcciones sin IA ni procesamiento en servidor.",
+      "inputPlaceholder": "Ingrese texto en inglés para revisar...",
+      "languageNotice": "La interfaz está localizada en español, pero el corrector evalúa texto en inglés.",
       "foundErrors": "Errores Encontrados",
       "noErrors": "Sin errores",
+      "noSupportedRuleMatches": "No se encontraron coincidencias con las reglas de inglés compatibles.",
       "fix": "Corregir",
       "fixAll": "Corregir Todo",
       "suggestion": "Sugerencia",

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { getGrammarLanguageSupport } from '@/lib/grammar-language-support';
   import type { Locale } from '@/lib/i18n';
   import {
     applyCorrections,
@@ -14,7 +13,6 @@
   }
 
   let { locale, translations }: Props = $props();
-  const languageSupport = $derived(getGrammarLanguageSupport(locale));
 
   // Translation helpers
   function t(key: string): string {
@@ -69,19 +67,12 @@
 
 
     <div class="space-y-4">
-      <p
-        class="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100"
-        data-grammar-language-notice
-        data-input-language={languageSupport.localInputLanguage}
-      >
-        {t('languageNotice')}
-      </p>
-
       <div class="flex flex-wrap gap-2">
         <button 
           onclick={applyAllFixes} 
           disabled={errors.length === 0}
           class="btn-primary"
+          data-grammar-fix-all
         >
           {t('fixAll')} ({errors.length})
         </button>
@@ -96,15 +87,32 @@
           <textarea
             bind:value={input}
             class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-amber-500 focus:outline-none resize-none"
-            placeholder={t('inputPlaceholder')} id="grammar-checker-field-3"></textarea>
+            placeholder={t('inputPlaceholder')}
+            id="grammar-checker-field-3"
+            aria-describedby="grammar-checker-language-notice"
+            lang="en"
+          ></textarea>
         </div>
 
         <div>
           <div class="block text-sm text-gray-600 dark:text-gray-300 mb-2">{t('preview')}</div>
           <div 
-            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white overflow-auto">{@html getHighlightedText() || escapeHtmlAttribute(t('noErrors'))}</div>
+            class="w-full h-64 bg-gray-100 dark:bg-gray-700 rounded-lg px-4 py-3 text-gray-900 dark:text-white overflow-auto"
+            data-grammar-preview
+            lang={input ? 'en' : locale}
+          >{@html getHighlightedText() || escapeHtmlAttribute(t('noErrors'))}</div>
         </div>
       </div>
+
+      {#if input.trim() && errors.length === 0}
+        <p
+          class="text-sm text-gray-600 dark:text-gray-300"
+          data-grammar-match-status
+          role="status"
+        >
+          {t('noSupportedRuleMatches')}
+        </p>
+      {/if}
 
       {#if errors.length > 0}
 <div class="space-y-2">
@@ -130,6 +138,7 @@
                   <button
                     onclick={() => applyFix(error)}
                     class="text-xs px-2 py-1 bg-amber-600 text-white rounded hover:bg-amber-700"
+                    data-grammar-fix
                   >
                     {t('fix')}
                   </button>
