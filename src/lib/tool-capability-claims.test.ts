@@ -8,49 +8,49 @@ import { hasLocalizedCapabilityClaimDetector } from "./tool-capability-claim-tax
 import { locales, type Locale } from "./i18n";
 import { assessToolCapabilityClaims } from "./tool-capability-claims";
 
-const hexGridLocaleFixtures: Record<
+const hexDisassemblyLocaleFixtures: Record<
   Locale,
   { affirmative: string; limitation: string }
 > = {
   en: {
-    affirmative: "Opens local files and displays an offset grid.",
-    limitation: "It does not open files or display an offset grid.",
+    affirmative: "Supports binary disassembly.",
+    limitation: "It does not support binary disassembly.",
   },
   zh: {
-    affirmative: "可以打开本地文件并显示偏移网格。",
-    limitation: "不能打开文件，也不显示偏移网格。",
+    affirmative: "支持二进制反汇编。",
+    limitation: "不支持二进制反汇编。",
   },
   ja: {
-    affirmative: "ローカルファイルを開き、オフセットグリッドを表示できます。",
-    limitation: "ファイルは開けず、オフセットグリッドも表示しません。",
+    affirmative: "バイナリ逆アセンブルに対応します。",
+    limitation: "バイナリ逆アセンブルには対応しません。",
   },
   ko: {
-    affirmative: "로컬 파일을 열고 오프셋 그리드를 표시합니다.",
-    limitation: "파일을 열 수 없고 오프셋 그리드도 표시하지 않습니다.",
+    affirmative: "바이너리 디스어셈블을 지원합니다.",
+    limitation: "바이너리 디스어셈블을 지원하지 않습니다.",
   },
   es: {
-    affirmative: "Abre archivos locales y muestra una cuadrícula de offsets.",
-    limitation: "No abre archivos ni muestra una cuadrícula de offsets.",
+    affirmative: "Admite desensamblado binario.",
+    limitation: "No admite desensamblado binario.",
   },
   pt: {
-    affirmative: "Abre arquivos locais e mostra uma grade de offsets.",
-    limitation: "Não abre arquivos nem mostra uma grade de offsets.",
+    affirmative: "Suporta desmontagem binária.",
+    limitation: "Não suporta desmontagem binária.",
   },
   fr: {
-    affirmative: "Ouvre les fichiers locaux et affiche une grille d’offsets.",
-    limitation: "N’ouvre pas de fichiers et n’affiche pas de grille d’offsets.",
+    affirmative: "Prend en charge le désassemblage binaire.",
+    limitation: "Ne prend pas en charge le désassemblage binaire.",
   },
   de: {
-    affirmative: "Öffnet lokale Dateien und zeigt ein Offset-Raster an.",
-    limitation: "Öffnet keine Dateien und zeigt kein Offset-Raster an.",
+    affirmative: "Unterstützt einen Binär-Disassembler.",
+    limitation: "Unterstützt keinen Binär-Disassembler.",
   },
   ru: {
-    affirmative: "Открывает локальные файлы и показывает сетку смещений.",
-    limitation: "Не открывает файлы и не показывает сетку смещений.",
+    affirmative: "Поддерживает дизассемблирование бинарных файлов.",
+    limitation: "Не поддерживает дизассемблирование бинарных файлов.",
   },
   ar: {
-    affirmative: "يفتح الملفات المحلية ويعرض شبكة الإزاحات.",
-    limitation: "لا يفتح الملفات ولا يعرض شبكة الإزاحات.",
+    affirmative: "يدعم فك تجميع الملفات الثنائية.",
+    limitation: "لا يدعم فك تجميع الملفات الثنائية.",
   },
 };
 
@@ -258,8 +258,8 @@ const localeFamilyFixtures: Record<
 };
 
 describe("assessToolCapabilityClaims", () => {
-  it.each(Object.entries(hexGridLocaleFixtures))(
-    "enforces Hex file/grid claims in %s without blocking truthful limitations",
+  it.each(Object.entries(hexDisassemblyLocaleFixtures))(
+    "enforces Hex disassembly claims in %s without blocking truthful limitations",
     (locale, fixture) => {
       const affirmative = assessToolCapabilityClaims({
         slug: "hex-editor",
@@ -273,7 +273,7 @@ describe("assessToolCapabilityClaims", () => {
       });
 
       expect(affirmative.issues.map((issue) => issue.code)).toContain(
-        "hex-editor-grid-claim",
+        "hex-editor-disassembly-claim",
       );
       expect(limitation.issues).toEqual([]);
     },
@@ -367,24 +367,24 @@ describe("assessToolCapabilityClaims", () => {
     );
   });
 
-  it("blocks the concrete Arabic Hex overclaim set from the 60-page audit", () => {
+  it("blocks the concrete Arabic Hex overclaim set outside the pilot scope", () => {
     const report = assessToolCapabilityClaims({
       slug: "hex-editor",
       locale: "ar",
       text: [
-        "يسمح بتحليل البيانات الثنائية على مستوى البايت ويعرضها في جداول.",
-        "اختر نوع التشفير من القائمة المنسدلة وحدد ترتيب البايت.",
-        "تتيح الأداة التعديل المباشر على القيم السداسية.",
-        "انقر على زر تصدير لحفظ النتيجة في ملف نصي.",
+        "يدعم فك تجميع الملفات الثنائية.",
+        "يدعم فتح ملفات بعيدة من رابط.",
+        "يدعم تحليل البرمجيات الضارة.",
+        "يدعم حزمة احترافية للهندسة العكسية.",
       ].join("\n"),
     });
 
     expect(report.issues.map((issue) => issue.code)).toEqual(
       expect.arrayContaining([
-        "hex-editor-grid-claim",
-        "hex-editor-byte-edit-claim",
-        "hex-editor-unsupported-encoding-claim",
-        "hex-editor-file-export-claim",
+        "hex-editor-disassembly-claim",
+        "hex-editor-remote-file-claim",
+        "hex-editor-executable-analysis-claim",
+        "hex-editor-professional-reverse-engineering-claim",
       ]),
     );
   });
@@ -1944,14 +1944,14 @@ describe("assessToolCapabilityClaims", () => {
     const report = assessToolCapabilityClaims({
       slug: "hex-editor",
       locale: "en",
-      text: "It does not open files, but it edits individual bytes directly.",
+      text: "It does not open remote files from a URL, but it includes a disassembler.",
     });
 
     expect(report.issues.map((issue) => issue.code)).toContain(
-      "hex-editor-byte-edit-claim",
+      "hex-editor-disassembly-claim",
     );
     expect(report.issues.map((issue) => issue.code)).not.toContain(
-      "hex-editor-grid-claim",
+      "hex-editor-remote-file-claim",
     );
   });
 
@@ -1959,20 +1959,20 @@ describe("assessToolCapabilityClaims", () => {
     const report = assessToolCapabilityClaims({
       slug: "hex-editor",
       locale: "en",
-      text: "No file export. Edits individual bytes directly.",
+      text: "No remote file loading. Supports executable analysis.",
     });
 
     expect(report.issues.map((issue) => issue.code)).toContain(
-      "hex-editor-byte-edit-claim",
+      "hex-editor-executable-analysis-claim",
     );
     expect(report.issues.map((issue) => issue.code)).not.toContain(
-      "hex-editor-file-export-claim",
+      "hex-editor-remote-file-claim",
     );
   });
 
   it.each([
-    ["de", "Kein Dateiexport. Ermöglicht, einzelne Bytes direkt zu bearbeiten."],
-    ["zh", "不导出文件。可以直接编辑字节。"],
+    ["de", "Keine Remote-Dateien von einer URL. Unterstützt einen Disassembler."],
+    ["zh", "不支持从 URL 打开远程文件。支持二进制反汇编。"],
   ] as const)(
     "evaluates the assertion after an unrelated %s limitation independently",
     (locale, text) => {
@@ -1983,17 +1983,17 @@ describe("assessToolCapabilityClaims", () => {
       });
 
       expect(report.issues.map((issue) => issue.code)).toContain(
-        "hex-editor-byte-edit-claim",
+        "hex-editor-disassembly-claim",
       );
       expect(report.issues.map((issue) => issue.code)).not.toContain(
-        "hex-editor-file-export-claim",
+        "hex-editor-remote-file-claim",
       );
     },
   );
 
   it.each([
-    ["en", "No file export. It does not edit individual bytes directly."],
-    ["zh", "不导出文件。不能直接编辑字节。"],
+    ["en", "No remote file loading. It does not include a disassembler."],
+    ["zh", "不支持从 URL 打开远程文件。不支持二进制反汇编。"],
   ] as const)(
     "allows an honest two-sentence limitation in %s",
     (locale, text) => {

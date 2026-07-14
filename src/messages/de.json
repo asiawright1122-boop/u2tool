@@ -2623,21 +2623,38 @@
     },
     "hex-editor": {
       "name": "Hex-Editor",
-      "description": "Konvertieren Sie zwischen Text und hexadezimalen Bytes.",
-      "seo_title": "Kostenloses Online-Hex-Editor-Tool",
-      "seo_description": "Konvertieren Sie Text online kostenlos in UTF-8-Hex-Bytes und dekodieren Sie Hex wieder zu Text. Praktisch für Logs, Tests und Debugging.",
-
-
-
-      "inputPlaceholder": "Hier den Text eingeben...",
-      "hexEditor": {
-        "text": "hexEditor.text",
-        "toHex": "hexEditor.toHex",
-        "hex": "hexEditor.hex",
-        "toText": "hexEditor.toText"
-      },
-      "copied": "Kopiert!",
-      "copy": "Kopieren"
+      "description": "Lokale Binärdateien bis 2 MiB öffnen und bearbeiten oder UTF-8-Text und Hexadezimalwerte umwandeln.",
+      "seo_title": "Online Hex-Editor - Lokale Binärdateien bearbeiten",
+      "seo_description": "Dateien bis 2 MiB im Browser öffnen, Bytes und ASCII bearbeiten, suchen, zurücksetzen und eine geänderte Kopie lokal herunterladen.",
+      "fileEditor": "Datei-Editor",
+      "textConverter": "Textkonverter",
+      "chooseFile": "Lokale Datei auswählen",
+      "fileLimit": "Maximale Dateigröße: 2 MiB.",
+      "fileTooLarge": "Diese Datei überschreitet das Browserlimit von 2 MiB.",
+      "offset": "Offset",
+      "bytes": "Bytes",
+      "ascii": "ASCII",
+      "hexSearch": "Hex-Suche",
+      "asciiSearch": "ASCII-Suche",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "Vollständige hexadezimale Bytepaare eingeben.",
+      "noMatches": "Keine Treffer",
+      "matchStatus": "Treffer {current} von {total}",
+      "previousMatch": "Vorheriger Treffer",
+      "nextMatch": "Nächster Treffer",
+      "previousPage": "Vorherige Seite",
+      "nextPage": "Nächste Seite",
+      "pageStatus": "Bytes {start}–{end} von {total}",
+      "modifiedCount": "{count} Bytes geändert",
+      "reset": "Änderungen zurücksetzen",
+      "download": "Geänderte Datei herunterladen",
+      "text": "Text",
+      "hex": "Hexadezimal",
+      "toHex": "In Hex",
+      "toText": "In Text",
+      "inputPlaceholder": "Text eingeben...",
+      "invalidHex": "Vollständige hexadezimale Bytepaare eingeben."
     },
     "color-palette": {
       "name": "Farbpalette-Generator",
@@ -16272,9 +16289,9 @@
     },
     "hex-editor": {
       "name": "Hex-Editor",
-      "description": "Konvertieren Sie zwischen Text und hexadezimalen Bytes.",
-      "seo_title": "Kostenloser Hex-Editor online",
-      "seo_description": "Konvertieren Sie Text online kostenlos in UTF-8-Hex-Bytes und dekodieren Sie Hex wieder zu Text. Schnell im Browser für Debugging, Logs und Testdaten."
+      "description": "Lokale Binärdateien bis 2 MiB öffnen und bearbeiten oder UTF-8-Text und Hexadezimalwerte umwandeln.",
+      "seo_title": "Online Hex-Editor - Lokale Binärdateien bearbeiten",
+      "seo_description": "Dateien bis 2 MiB im Browser öffnen, Bytes und ASCII bearbeiten, suchen, zurücksetzen und eine geänderte Kopie lokal herunterladen."
     },
     "color-palette": {
       "name": "Farbpaletten-Generator",

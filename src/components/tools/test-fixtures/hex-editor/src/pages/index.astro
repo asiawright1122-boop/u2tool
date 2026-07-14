@@ -1,0 +1,49 @@
+---
+import HexEditor from '@/components/tools/HexEditor.svelte';
+
+const translations = {
+  tools: {
+    copy: 'Copy',
+    copied: 'Copied!',
+    'hex-editor': {
+      fileEditor: 'File Editor',
+      textConverter: 'Text Converter',
+      chooseFile: 'Choose a local file',
+      fileLimit: 'Maximum file size: 2 MiB.',
+      fileTooLarge: 'This file is larger than the 2 MiB browser limit.',
+      offset: 'Offset',
+      bytes: 'Bytes',
+      ascii: 'ASCII',
+      hexSearch: 'Hex search',
+      asciiSearch: 'ASCII search',
+      searchPlaceholderHex: 'e.g. 48 65 6C 6C 6F',
+      searchPlaceholderAscii: 'e.g. Hello',
+      searchInvalid: 'Enter complete hexadecimal byte pairs.',
+      noMatches: 'No matches',
+      matchStatus: 'Match {current} of {total}',
+      previousMatch: 'Previous match',
+      nextMatch: 'Next match',
+      previousPage: 'Previous page',
+      nextPage: 'Next page',
+      pageStatus: 'Bytes {start}–{end} of {total}',
+      modifiedCount: '{count} modified bytes',
+      reset: 'Reset changes',
+      download: 'Download modified file',
+      text: 'Text',
+      hex: 'Hexadecimal',
+      toHex: 'To Hex',
+      toText: 'To Text',
+      inputPlaceholder: 'Enter text here...',
+      invalidHex: 'Enter complete hexadecimal byte pairs.',
+    },
+  },
+};
+---
+
+<html lang="en">
+  <body>
+    <main>
+      <HexEditor client:load locale="en" {translations} />
+    </main>
+  </body>
+</html>

@@ -1277,17 +1277,17 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
-  it('blocks Hex Editor UI overclaims that are not implemented', () => {
+  it('blocks Hex Editor workflows outside the local byte-editor pilot', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',
       locale: 'en',
       name: 'Hex Editor',
       description: '',
       detailedDescription:
-        'The interface displays data in a hexadecimal grid with offset addresses and lets users directly modify byte values.',
+        'Includes a disassembler and analyzes ELF executable headers for malware.',
       usageSteps: [
-        'Select UTF-16LE/BE and adjust endianness.',
-        'Export modified data using Download as Hex File.',
+        'Open remote files from a URL.',
+        'Use the professional reverse-engineering suite as an alternative to IDA.',
       ],
       usageExamples: [],
       faqs: [],
@@ -1296,10 +1296,10 @@ describe('assessSupportContentTrust', () => {
     expect(report.blockSupportContent).toBe(true);
     expect(report.issues.map((issue) => issue.code)).toEqual(
       expect.arrayContaining([
-        'hex-editor-grid-claim',
-        'hex-editor-byte-edit-claim',
-        'hex-editor-unsupported-encoding-claim',
-        'hex-editor-file-export-claim',
+        'hex-editor-disassembly-claim',
+        'hex-editor-remote-file-claim',
+        'hex-editor-executable-analysis-claim',
+        'hex-editor-professional-reverse-engineering-claim',
       ])
     );
   });
@@ -3850,13 +3850,13 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
-  it('deduplicates profile findings against existing static Hex rules by field', () => {
+  it('reports one scoped profile finding for a Hex disassembly overclaim', () => {
     const report = assessSupportContentTrust({
       slug: 'hex-editor',
       locale: 'en',
       name: 'Hex Editor',
       description: '',
-      detailedDescription: 'Shows an offset grid with offset addresses.',
+      detailedDescription: 'Includes a disassembler for machine code.',
       usageSteps: [],
       usageExamples: [],
       faqs: [],
@@ -3865,17 +3865,17 @@ describe('assessSupportContentTrust', () => {
     expect(
       report.issues.filter(
         (issue) =>
-          issue.code === 'hex-editor-grid-claim' &&
+          issue.code === 'hex-editor-disassembly-claim' &&
           issue.field === 'detailed_description'
       )
     ).toHaveLength(1);
     expect(report.issues).toContainEqual(
       expect.objectContaining({
         severity: 'high',
-        code: 'hex-editor-grid-claim',
+        code: 'hex-editor-disassembly-claim',
         field: 'detailed_description',
         message:
-          'Claims a hex grid or dump view, but the current Hex Editor exposes two text areas and conversion buttons.',
+          'The browser editor does not disassemble or decompile code.',
       })
     );
   });

@@ -36,6 +36,26 @@ export const localizedClaimTerms: Record<string, LocalizedTerms> = {
     "Grammatikverarbeitung in der Cloud", "облачную обработку грамматики",
     "معالجة القواعد في السحابة",
   ),
+  "hex-editor-disassembly-claim": terms(
+    "binary disassembly", "二进制反汇编", "バイナリ逆アセンブル", "바이너리 디스어셈블",
+    "desensamblado binario", "desmontagem binária", "désassemblage binaire",
+    "Binär-Disassembler", "дизассемблирование бинарных файлов", "فك تجميع الملفات الثنائية",
+  ),
+  "hex-editor-remote-file-claim": terms(
+    "remote files from a URL", "从 URL 打开远程文件", "URL からリモートファイル", "URL 원격 파일",
+    "archivos remotos desde una URL", "arquivos remotos de uma URL", "fichiers distants depuis une URL",
+    "Remote-Dateien von einer URL", "удалённые файлы по URL", "ملفات بعيدة من رابط",
+  ),
+  "hex-editor-executable-analysis-claim": terms(
+    "executable analysis", "可执行文件分析", "実行ファイル解析", "실행 파일 분석",
+    "análisis de ejecutables", "análise de executáveis", "analyse des exécutables",
+    "Analyse ausführbarer Dateien", "анализ исполняемых файлов", "تحليل الملفات التنفيذية",
+  ),
+  "hex-editor-professional-reverse-engineering-claim": terms(
+    "a professional reverse-engineering suite", "专业逆向工程套件", "プロ向けリバースエンジニアリング", "전문 리버스 엔지니어링",
+    "una suite profesional de ingeniería inversa", "uma suíte profissional de engenharia reversa", "une suite professionnelle de rétro-ingénierie",
+    "eine professionelle Reverse-Engineering-Suite", "профессиональный комплекс реверс-инжиниринга", "حزمة احترافية للهندسة العكسية",
+  ),
   "hex-editor-grid-claim": terms(
     "open local files and display an offset grid", "打开本地文件并显示偏移网格",
     "ローカルファイルを開いてオフセットグリッドを表示",

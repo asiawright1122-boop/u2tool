@@ -1,60 +1,61 @@
 {
   "capabilities": {
     "modes": {
-      "textToHex": "Text in UTF-8-Hexadezimal",
-      "hexToText": "UTF-8-Hexadezimal in Text"
+      "fileEditor": "Editor für lokale Binärdateien",
+      "textConverter": "UTF-8-Textkonverter"
     },
     "inputs": {
+      "localBinaryFile": "Lokale Binärdatei bis 2 MiB",
       "text": "Text",
       "utf8Hex": "UTF-8-Hexadezimaltext"
     },
     "outputs": {
+      "modifiedBinaryFile": "Geänderte Binärdatei",
       "utf8Hex": "UTF-8-Hexadezimalbytes",
       "decodedText": "Dekodierter Text"
     },
     "features": {
-      "textToHex": "Text als UTF-8-Hexadezimalwert kodieren",
-      "hexToText": "UTF-8-Hexadezimalwert in Text dekodieren",
-      "clipboardCopy": "Ergebnisse in die Zwischenablage kopieren"
+      "editableByteGrid": "Bearbeitbares 16-Byte-Offset-Raster",
+      "byteEditing": "Hex- und ASCII-Bytebearbeitung",
+      "hexAsciiSearch": "Navigation in Hex- und ASCII-Suchergebnissen",
+      "resetChanges": "Alle Byteänderungen zurücksetzen",
+      "download": "Geänderte lokale Kopie herunterladen",
+      "textConversion": "UTF-8-Text- und Hex-Konvertierung"
     },
     "limits": {
-      "noFileOpen": "Öffnet keine Dateien",
-      "noOffsetGrid": "Kein Offset- oder Byte-Raster",
-      "noDirectByteEditing": "Keine direkte Byte-Bearbeitung",
-      "utf8Only": "Nur UTF-8",
-      "noFileExport": "Kein Dateiexport"
+      "twoMibFiles": "Maximale Dateigröße 2 MiB",
+      "localFilesOnly": "Nur lokale Dateien; kein Netzwerk-Upload",
+      "utf8TextConverter": "Textkonvertierung verwendet UTF-8"
     }
   },
-  "detailed_description": "Der Hex Editor ist ein browserbasierter Text- und Hexadezimal-Konverter für schnelle Prüfungen auf Byte-Ebene. Geben Sie Text ein, um ihn als großgeschriebene UTF-8-Hex-Bytes auszugeben, oder fügen Sie eine Hex-Sequenz ein, um sie wieder in lesbaren Text zu dekodieren. Der Ablauf bleibt bewusst einfach: zwei editierbare Textfelder, klare Umwandlungsbuttons und Kopierfunktionen für beide Seiten. Das Tool hilft beim Prüfen von API-Payloads, Logwerten, Teststrings und Lernbeispielen, bei denen sichtbar werden soll, wie Zeichen als hexadezimale Bytes dargestellt werden. Alle Umwandlungen laufen im Browser über Standard-APIs für Text-Encoding und -Decoding, sodass eingegebene Werte auf dem Gerät bleiben.",
+  "detailed_description": "Öffnen Sie eine lokale Binärdatei bis 2 MiB in einem seitenweisen 16-Byte-Raster mit nullaufgefüllten Offsets. Bearbeiten Sie Hex-Bytes oder druckbares ASCII, durchsuchen Sie die gesamte Datei, setzen Sie Änderungen zurück und laden Sie eine geänderte Kopie herunter. Die Verarbeitung bleibt im Browser.",
   "usage_steps": [
-    "1. Text in das Feld Text eingeben oder einfügen.",
-    "2. Auf In Hex klicken, um den Text als großgeschriebene Hex-Bytes mit Leerzeichen auszugeben.",
-    "3. Eine Hex-Sequenz in das Feld Hexadezimal einfügen, wenn vorhandene Daten dekodiert werden sollen.",
-    "4. Auf In Text klicken, um die Hex-Bytes wieder in Text umzuwandeln.",
-    "5. Kopieren neben einem Feld verwenden, um Text oder Hex-Ergebnis zu übernehmen."
+    "1. Wählen Sie eine lokale Datei bis 2 MiB.",
+    "2. Bearbeiten Sie ein zweistelliges Hex-Byte oder ein druckbares ASCII-Zeichen.",
+    "3. Suchen Sie nach Hex-Paaren oder ASCII-Text und wechseln Sie zwischen Treffern.",
+    "4. Prüfen Sie die Zahl geänderter Bytes oder setzen Sie alle Änderungen zurück.",
+    "5. Laden Sie die geänderte Kopie herunter oder verwenden Sie den UTF-8-Textkonverter."
   ],
   "usage_examples": [
-    "Beispiel 1: Einen kurzen API-Token oder Logwert für eine Debugging-Notiz in Hex-Bytes umwandeln.",
-    "Beispiel 2: Prüfen, ob eine Sequenz wie 48 65 6C 6C 6F als lesbarer Text dekodiert wird.",
-    "Beispiel 3: Vergleichen, wie Satzzeichen, Leerzeichen und Nicht-ASCII-Zeichen in UTF-8-Hex erscheinen.",
-    "Beispiel 4: Eine hexadezimale Zeichenfolge für Dokumentation oder Testdaten kopieren, ohne den Browser zu verlassen."
+    "Ändern Sie ein bekanntes Byte in einer kleinen Binär-Testdatei.",
+    "Suchen Sie einen wiederholten ASCII-Header und speichern Sie eine geänderte Kopie."
   ],
   "faqs": [
     {
+      "question": "Werden Dateien hochgeladen?",
+      "answer": "Nein. Lesen, Bearbeiten, Suchen, Zurücksetzen und Herunterladen erfolgen lokal im Browser."
+    },
+    {
+      "question": "Wie groß ist das Limit?",
+      "answer": "Lokale Dateien bis einschließlich 2 MiB werden akzeptiert."
+    },
+    {
+      "question": "Kann eine Änderung die Datei beschädigen?",
+      "answer": "Ja. Bewahren Sie das Original auf und prüfen Sie die geänderte Kopie mit der Anwendung, der das Format gehört."
+    },
+    {
       "question": "Welche Textkodierung wird verwendet?",
-      "answer": "Text wird mit UTF-8 in Bytes umgewandelt und anschließend als großgeschriebene Hex-Werte angezeigt."
-    },
-    {
-      "question": "Kann ich Hex wieder in Text umwandeln?",
-      "answer": "Ja. Fügen Sie eine Hex-Sequenz ein und klicken Sie auf In Text, um sie mit dem Browser-Decoder zurück in Text zu wandeln."
-    },
-    {
-      "question": "Werden Dateien als Hex geöffnet?",
-      "answer": "Nein. Diese Oberfläche arbeitet mit eingegebenem Text und eingegebenen Hex-Sequenzen, nicht mit Datei-Uploads."
-    },
-    {
-      "question": "Kann ich die Ergebnisse kopieren?",
-      "answer": "Ja. Es gibt Kopierbuttons für das Textfeld und das Hex-Feld."
+      "answer": "Der Textkonverter verwendet UTF-8."
     }
   ]
 }

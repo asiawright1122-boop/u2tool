@@ -711,9 +711,9 @@
     },
     "hex-editor": {
       "name": "Éditeur hexadécimal",
-      "description": "Convertissez du texte en octets hexadécimaux et inversement.",
-      "seo_title": "Éditeur hexadécimal gratuit en ligne",
-      "seo_description": "Convertissez du texte en octets hexadécimaux UTF-8 et décodez l'hexadécimal en texte dans le navigateur. Pratique pour les logs, tests et notes de débogage."
+      "description": "Ouvrez et modifiez des fichiers binaires locaux jusqu’à 2 MiB, ou convertissez du texte UTF-8 et de l’hexadécimal.",
+      "seo_title": "Éditeur hexadécimal en ligne - Édition binaire locale",
+      "seo_description": "Ouvrez des fichiers jusqu’à 2 MiB, modifiez les octets et l’ASCII, recherchez, réinitialisez et téléchargez une copie modifiée localement dans le navigateur."
     },
     "color-palette": {
       "name": "Générateur de palettes de couleurs",
@@ -4633,11 +4633,39 @@
       "seo_description": "Analysez gratuitement les statistiques de texte en ligne. Comptage de mots, de caractères, de phrases, temps de lecture et scores de lisibilité. Parfait pour les écrivains et les rédacteurs."
     },
     "hex-editor": {
-      "name": "Éditeur Hexadécimal",
-      "description": "Convertissez du texte en octets hexadécimaux et inversement.",
-      "seo_title": "Éditeur Hexadécimal Gratuit en Ligne",
-      "seo_description": "Convertissez du texte en octets hexadécimaux UTF-8 et décodez l'hexadécimal en texte dans le navigateur. Pratique pour les logs, tests et notes de débogage.",
-      "inputPlaceholder": "Entrez le texte ici..."
+      "name": "Éditeur hexadécimal",
+      "description": "Ouvrez et modifiez des fichiers binaires locaux jusqu’à 2 MiB, ou convertissez du texte UTF-8 et de l’hexadécimal.",
+      "seo_title": "Éditeur hexadécimal en ligne - Édition binaire locale",
+      "seo_description": "Ouvrez des fichiers jusqu’à 2 MiB, modifiez les octets et l’ASCII, recherchez, réinitialisez et téléchargez une copie modifiée localement dans le navigateur.",
+      "fileEditor": "Éditeur de fichier",
+      "textConverter": "Convertisseur de texte",
+      "chooseFile": "Choisir un fichier local",
+      "fileLimit": "Taille maximale du fichier : 2 MiB.",
+      "fileTooLarge": "Ce fichier dépasse la limite de 2 MiB du navigateur.",
+      "offset": "Décalage",
+      "bytes": "Octets",
+      "ascii": "ASCII",
+      "hexSearch": "Recherche hexadécimale",
+      "asciiSearch": "Recherche ASCII",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "Saisissez des paires complètes d’octets hexadécimaux.",
+      "noMatches": "Aucune correspondance",
+      "matchStatus": "Correspondance {current} sur {total}",
+      "previousMatch": "Correspondance précédente",
+      "nextMatch": "Correspondance suivante",
+      "previousPage": "Page précédente",
+      "nextPage": "Page suivante",
+      "pageStatus": "Octets {start}–{end} sur {total}",
+      "modifiedCount": "{count} octets modifiés",
+      "reset": "Réinitialiser les modifications",
+      "download": "Télécharger le fichier modifié",
+      "text": "Texte",
+      "hex": "Hexadécimal",
+      "toHex": "Vers hexadécimal",
+      "toText": "Vers texte",
+      "inputPlaceholder": "Saisissez du texte...",
+      "invalidHex": "Saisissez des paires complètes d’octets hexadécimaux."
     },
     "color-palette": {
       "name": "Générateur de Palette de Couleurs",

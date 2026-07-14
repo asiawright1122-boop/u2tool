@@ -2686,22 +2686,38 @@
     },
     "hex-editor": {
       "name": "十六进制编辑器",
-      "description": "在浏览器中转换 UTF-8 文本和十六进制字符串。",
-      "seo_title": "免费在线文本与十六进制转换器",
-      "seo_description": "在浏览器本地把文本转换为 UTF-8 十六进制字节，或把十六进制序列解码为文本，并复制结果。当前工具不打开或导出文件，也不提供字节网格、直接字节编辑或字节序选择。",
-
-
-
-
+      "description": "在 16 字节十六进制网格中打开并编辑本地二进制文件，或转换 UTF-8 文本与十六进制。",
+      "seo_title": "在线十六进制编辑器 - 本地二进制文件编辑",
+      "seo_description": "在浏览器本地打开最大 2 MiB 的二进制文件，编辑字节与 ASCII、搜索、重置并下载修改后的副本。",
+      "fileEditor": "文件编辑器",
+      "textConverter": "文本转换器",
+      "chooseFile": "选择本地文件",
+      "fileLimit": "最大文件大小：2 MiB。",
+      "fileTooLarge": "该文件超过浏览器 2 MiB 限制。",
+      "offset": "偏移量",
+      "bytes": "字节",
+      "ascii": "ASCII",
+      "hexSearch": "十六进制搜索",
+      "asciiSearch": "ASCII 搜索",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "请输入完整的十六进制字节对。",
+      "noMatches": "无匹配项",
+      "matchStatus": "第 {current} 个，共 {total} 个",
+      "previousMatch": "上一个匹配",
+      "nextMatch": "下一个匹配",
+      "previousPage": "上一页",
+      "nextPage": "下一页",
+      "pageStatus": "第 {start}–{end} 字节，共 {total} 字节",
+      "modifiedCount": "已修改 {count} 个字节",
+      "reset": "重置修改",
+      "download": "下载修改后的文件",
+      "text": "文本",
+      "hex": "十六进制",
+      "toHex": "转为十六进制",
+      "toText": "转为文本",
       "inputPlaceholder": "在此输入文本...",
-      "hexEditor": {
-        "text": "text",
-        "toHex": "tohex",
-        "hex": "hex",
-        "toText": "totext"
-      },
-      "copied": "已复制！",
-      "copy": "复制"
+      "invalidHex": "请输入完整的十六进制字节对。"
     },
     "color-palette": {
       "name": "颜色调色板生成器",
@@ -16561,9 +16577,9 @@
     },
     "hex-editor": {
       "name": "十六进制编辑器",
-      "description": "在文本和十六进制之间转换，查看字节数据。",
-      "seo_title": "免费在线十六进制编辑器",
-      "seo_description": "使用这款免费在线十六进制编辑器快速查看和编辑字节数据，适合协议调试、二进制分析和文本编码检查。"
+      "description": "在 16 字节十六进制网格中打开并编辑本地二进制文件，或转换 UTF-8 文本与十六进制。",
+      "seo_title": "在线十六进制编辑器 - 本地二进制文件编辑",
+      "seo_description": "在浏览器本地打开最大 2 MiB 的二进制文件，编辑字节与 ASCII、搜索、重置并下载修改后的副本。"
     },
     "color-palette": {
       "name": "调色板生成器",

@@ -2622,22 +2622,39 @@
       }
     },
     "hex-editor": {
-      "name": "16進エディタ",
-      "description": "テキストと16進数を相互変換し、バイトデータを表示します。",
-      "seo_title": "無料オンライン16進エディタ - テキストと16進数変換",
-      "seo_description": "無料オンラインの16進エディタ。ブラウザ上で 16進エディタは、テキストと16進数を相互変換し、バイトデータを確認できる無料ツールです を迅速かつ安全に行うことができます。ダウンロードや面倒な会員登録は一切不要で100%ローカル実行。プライバシーを完全に保護しながら、作業効率を大幅に向上させる優れたツールです。",
-
-
-
-      "inputPlaceholder": "ここにテキストを入力...",
-      "hexEditor": {
-        "text": "hexEditor.text",
-        "toHex": "hexEditor.toHex",
-        "hex": "hexEditor.hex",
-        "toText": "hexEditor.toText"
-      },
-      "copied": "コピーしました！",
-      "copy": "コピー"
+      "name": "16進エディター",
+      "description": "ローカルのバイナリファイルを16バイトの16進グリッドで開いて編集し、UTF-8テキストも変換できます。",
+      "seo_title": "オンライン16進エディター - ローカルバイナリ編集",
+      "seo_description": "ブラウザー内で最大2 MiBのファイルを開き、バイトとASCIIの編集、検索、リセット、変更コピーのダウンロードを行えます。",
+      "fileEditor": "ファイルエディター",
+      "textConverter": "テキスト変換",
+      "chooseFile": "ローカルファイルを選択",
+      "fileLimit": "最大ファイルサイズ：2 MiB。",
+      "fileTooLarge": "このファイルはブラウザーの2 MiB制限を超えています。",
+      "offset": "オフセット",
+      "bytes": "バイト",
+      "ascii": "ASCII",
+      "hexSearch": "16進検索",
+      "asciiSearch": "ASCII検索",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "完全な16進バイトペアを入力してください。",
+      "noMatches": "一致なし",
+      "matchStatus": "{total}件中{current}件目",
+      "previousMatch": "前の一致",
+      "nextMatch": "次の一致",
+      "previousPage": "前のページ",
+      "nextPage": "次のページ",
+      "pageStatus": "{total}バイト中 {start}–{end}",
+      "modifiedCount": "{count}バイト変更済み",
+      "reset": "変更をリセット",
+      "download": "変更ファイルをダウンロード",
+      "text": "テキスト",
+      "hex": "16進数",
+      "toHex": "16進数へ",
+      "toText": "テキストへ",
+      "inputPlaceholder": "テキストを入力...",
+      "invalidHex": "完全な16進バイトペアを入力してください。"
     },
     "color-palette": {
       "name": "カラーパレット生成",
@@ -16258,10 +16275,10 @@
       "seo_description": "オンラインでテキスト統計を無料で分析します。単語数、文字数、文章数、読書時間、読みやすさのスコアを取得します。ライターや編集者に最適です。"
     },
     "hex-editor": {
-      "name": "16進エディタ",
-      "description": "テキストと 16 進数の間で変換し、バイト データを表示します。",
-      "seo_title": "無料のオンライン Hex エディター",
-      "seo_description": "テキストを 16 進数に、16 進数をテキストにオンラインで無料で変換します。 ASCII プレビューで 16 進データを表示および編集します。デバッグとバイナリ データ分析に不可欠です。"
+      "name": "16進エディター",
+      "description": "ローカルのバイナリファイルを16バイトの16進グリッドで開いて編集し、UTF-8テキストも変換できます。",
+      "seo_title": "オンライン16進エディター - ローカルバイナリ編集",
+      "seo_description": "ブラウザー内で最大2 MiBのファイルを開き、バイトとASCIIの編集、検索、リセット、変更コピーのダウンロードを行えます。"
     },
     "color-palette": {
       "name": "カラーパレット生成",

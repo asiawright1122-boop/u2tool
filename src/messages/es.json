@@ -2625,21 +2625,38 @@
     },
     "hex-editor": {
       "name": "Editor hexadecimal",
-      "description": "Convierta entre texto y hexadecimal, vea datos en bytes.",
-      "seo_title": "Editor hexadecimal online gratis - U2Tool",
-      "seo_description": "Convierte texto UTF-8 a hexadecimal y decodifica secuencias hexadecimales cortas en el navegador, con botones de conversión y copia.",
-
-
-
-      "inputPlaceholder": "Ingrese texto aquí...",
-      "hexEditor": {
-        "text": "hexEditor.text",
-        "toHex": "hexEditor.toHex",
-        "hex": "hexEditor.hex",
-        "toText": "hexEditor.toText"
-      },
-      "copied": "¡Copiado!",
-      "copy": "Copiar"
+      "description": "Abre y edita archivos binarios locales de hasta 2 MiB, o convierte texto UTF-8 y hexadecimal.",
+      "seo_title": "Editor hexadecimal online - Editor binario local",
+      "seo_description": "Abre archivos binarios de hasta 2 MiB, edita bytes y ASCII, busca, restablece y descarga una copia modificada localmente en el navegador.",
+      "fileEditor": "Editor de archivos",
+      "textConverter": "Convertidor de texto",
+      "chooseFile": "Seleccionar un archivo local",
+      "fileLimit": "Tamaño máximo del archivo: 2 MiB.",
+      "fileTooLarge": "El archivo supera el límite de 2 MiB del navegador.",
+      "offset": "Desplazamiento",
+      "bytes": "Bytes",
+      "ascii": "ASCII",
+      "hexSearch": "Búsqueda hexadecimal",
+      "asciiSearch": "Búsqueda ASCII",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "Introduce pares completos de bytes hexadecimales.",
+      "noMatches": "Sin coincidencias",
+      "matchStatus": "Coincidencia {current} de {total}",
+      "previousMatch": "Coincidencia anterior",
+      "nextMatch": "Coincidencia siguiente",
+      "previousPage": "Página anterior",
+      "nextPage": "Página siguiente",
+      "pageStatus": "Bytes {start}–{end} de {total}",
+      "modifiedCount": "{count} bytes modificados",
+      "reset": "Restablecer cambios",
+      "download": "Descargar archivo modificado",
+      "text": "Texto",
+      "hex": "Hexadecimal",
+      "toHex": "A hexadecimal",
+      "toText": "A texto",
+      "inputPlaceholder": "Introduce texto aquí...",
+      "invalidHex": "Introduce pares completos de bytes hexadecimales."
     },
     "color-palette": {
       "name": "Generador de Paletas de Colores",
@@ -16307,9 +16324,9 @@
     },
     "hex-editor": {
       "name": "Editor hexadecimal",
-      "description": "Convierta entre texto y hexadecimal, vea datos en bytes.",
-      "seo_title": "Editor hexadecimal online gratis - U2Tool",
-      "seo_description": "Convierte texto UTF-8 a hexadecimal y decodifica secuencias hexadecimales cortas en el navegador, con botones de conversión y copia."
+      "description": "Abre y edita archivos binarios locales de hasta 2 MiB, o convierte texto UTF-8 y hexadecimal.",
+      "seo_title": "Editor hexadecimal online - Editor binario local",
+      "seo_description": "Abre archivos binarios de hasta 2 MiB, edita bytes y ASCII, busca, restablece y descarga una copia modificada localmente en el navegador."
     },
     "color-palette": {
       "name": "Generador de paleta de colores",

@@ -2623,21 +2623,38 @@
     },
     "hex-editor": {
       "name": "Hex Editor",
-      "description": "Convert text to UTF-8 hexadecimal bytes and decode hex back to text.",
-      "seo_title": "Hex Editor Online - Text to Hex and Hex to Text",
-      "seo_description": "Convert text to UTF-8 hex bytes and decode hex to text in your browser. Inspect payloads, logs, and small strings without upload.",
-
-
-
+      "description": "Open and edit local binary files in a 16-byte hex grid, or convert UTF-8 text and hex.",
+      "seo_title": "Hex Editor Online - Local Binary File Editor",
+      "seo_description": "Open binary files up to 2 MiB, edit bytes and ASCII, search, reset, and download a modified copy locally in your browser.",
+      "fileEditor": "File Editor",
+      "textConverter": "Text Converter",
+      "chooseFile": "Choose a local file",
+      "fileLimit": "Maximum file size: 2 MiB.",
+      "fileTooLarge": "This file is larger than the 2 MiB browser limit.",
+      "offset": "Offset",
+      "bytes": "Bytes",
+      "ascii": "ASCII",
+      "hexSearch": "Hex search",
+      "asciiSearch": "ASCII search",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "Enter complete hexadecimal byte pairs.",
+      "noMatches": "No matches",
+      "matchStatus": "Match {current} of {total}",
+      "previousMatch": "Previous match",
+      "nextMatch": "Next match",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "pageStatus": "Bytes {start}–{end} of {total}",
+      "modifiedCount": "{count} modified bytes",
+      "reset": "Reset changes",
+      "download": "Download modified file",
+      "text": "Text",
+      "hex": "Hexadecimal",
+      "toHex": "To Hex",
+      "toText": "To Text",
       "inputPlaceholder": "Enter text here...",
-      "hexEditor": {
-        "text": "Text",
-        "toHex": "To Hex",
-        "hex": "Hex",
-        "toText": "To Text"
-      },
-      "copied": "Copied!",
-      "copy": "Copy"
+      "invalidHex": "Enter complete hexadecimal byte pairs."
     },
     "color-palette": {
       "name": "Color Palette Generator",
@@ -16224,9 +16241,9 @@
     },
     "hex-editor": {
       "name": "Hex Editor",
-      "description": "Convert between text and hexadecimal bytes.",
-      "seo_title": "Hex Editor Online - Text to Hex and Hex to Text",
-      "seo_description": "Convert text to UTF-8 hex bytes and decode hex to text in your browser. Inspect payloads, logs, and small strings without upload."
+      "description": "Open and edit local binary files in a 16-byte hex grid, or convert UTF-8 text and hex.",
+      "seo_title": "Hex Editor Online - Local Binary File Editor",
+      "seo_description": "Open binary files up to 2 MiB, edit bytes and ASCII, search, reset, and download a modified copy locally in your browser."
     },
     "color-palette": {
       "name": "Color Palette Generator",

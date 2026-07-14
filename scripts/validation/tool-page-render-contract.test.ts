@@ -180,6 +180,7 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/word-counter',
       'en/markdown-editor',
       'en/grammar-checker',
+      'en/hex-editor',
       'ru/grammar-checker',
       'ja/json-formatter',
       'ar/password-generator',
@@ -466,7 +467,7 @@ describe('compareToolPageRenderContract', () => {
   it('keeps an inventory pilot route free of public capability attributes', () => {
     const expectation = {
       locale: 'en',
-      slug: 'hex-editor',
+      slug: 'excel-viewer',
       expectedTitleIncludes: 'YouTube Tags Generator',
       expectedDescriptionIncludes: 'YouTube tags',
       expectedH1Includes: 'YouTube Tags Generator',
@@ -486,7 +487,7 @@ describe('compareToolPageRenderContract', () => {
   it('rejects empty capability attributes on an inventory route', () => {
     const expectation = {
       locale: 'en',
-      slug: 'hex-editor',
+      slug: 'excel-viewer',
       expectedTitleIncludes: 'YouTube Tags Generator',
       expectedDescriptionIncludes: 'YouTube tags',
       expectedH1Includes: 'YouTube Tags Generator',
@@ -505,7 +506,7 @@ describe('compareToolPageRenderContract', () => {
         htmlWithEmptyDisclosure,
       ),
     ).toContain(
-      'en/hex-editor capability disclosure: expected 0 disclosure elements but found 1',
+      'en/excel-viewer capability disclosure: expected 0 disclosure elements but found 1',
     );
   });
 

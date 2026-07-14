@@ -20,7 +20,7 @@ describe("pilot tool capability registry", () => {
 
     const expectedStates = {
       "grammar-checker": { version: "1.1.0", enforcement: "release-blocking" },
-      "hex-editor": { version: "1.0.0", enforcement: "inventory" },
+      "hex-editor": { version: "2.0.0", enforcement: "release-blocking" },
       "sql-query-optimizer": { version: "1.0.0", enforcement: "inventory" },
       "excel-viewer": { version: "1.0.0", enforcement: "inventory" },
       "typing-speed-test": { version: "1.0.0", enforcement: "inventory" },
@@ -70,15 +70,22 @@ describe("pilot tool capability registry", () => {
   });
 
   it("declares engine locales only for language-dependent tools", () => {
-    for (const slug of [
-      "hex-editor",
-      "excel-viewer",
-      "gantt-chart-generator",
-    ]) {
+    for (const slug of ["excel-viewer", "gantt-chart-generator"]) {
       expect(getToolCapabilityProfile(slug)?.supportedLocales.engine).toEqual({
         kind: "language-neutral",
       });
     }
+
+    expect(
+      getToolCapabilityProfile("hex-editor")?.supportedLocales.engine,
+    ).toEqual({
+      kind: "language-neutral",
+      evidence: {
+        file: "src/lib/hex-editor.test.ts",
+        testName:
+          "round-trips Unicode text through UTF-8 bytes without locale-specific processing [capability:hex-editor:engine:language-support]",
+      },
+    });
 
     expect(
       getToolCapabilityProfile("grammar-checker")?.supportedLocales.engine,
@@ -108,14 +115,17 @@ describe("pilot tool capability registry", () => {
     });
   });
 
-  it("promotes only Grammar after matching behavior evidence exists", () => {
+  it("promotes Grammar and Hex only after matching behavior evidence exists", () => {
     const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
+    const hexProfile = getToolCapabilityProfile("hex-editor")!;
     expect(grammarProfile.enforcement).toBe("release-blocking");
     expect(grammarProfile.evidenceTests).toHaveLength(2);
+    expect(hexProfile.enforcement).toBe("release-blocking");
+    expect(hexProfile.evidenceTests).toHaveLength(1);
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
 
     for (const profile of getPilotToolCapabilityProfiles()) {
-      if (profile.slug !== "grammar-checker") {
+      if (!["grammar-checker", "hex-editor"].includes(profile.slug)) {
         expect(profile.enforcement).toBe("inventory");
         expect(profile.evidenceTests).toEqual([]);
       }
@@ -156,13 +166,18 @@ describe("pilot tool capability registry", () => {
         limits: ["english-only-engine", "no-ai", "no-server-processing"],
       },
       "hex-editor": {
-        features: ["text-to-hex", "hex-to-text", "clipboard-copy"],
+        features: [
+          "editable-byte-grid",
+          "byte-editing",
+          "hex-ascii-search",
+          "reset-changes",
+          "download",
+          "text-conversion",
+        ],
         limits: [
-          "no-file-open",
-          "no-offset-grid",
-          "no-direct-byte-editing",
-          "utf8-only",
-          "no-file-export",
+          "two-mib-files",
+          "local-files-only",
+          "utf8-text-converter",
         ],
       },
       "sql-query-optimizer": {
@@ -245,10 +260,10 @@ describe("pilot tool capability registry", () => {
         (claim) => claim.code,
       ),
     ).toEqual([
-      "hex-editor-grid-claim",
-      "hex-editor-byte-edit-claim",
-      "hex-editor-unsupported-encoding-claim",
-      "hex-editor-file-export-claim",
+      "hex-editor-disassembly-claim",
+      "hex-editor-remote-file-claim",
+      "hex-editor-executable-analysis-claim",
+      "hex-editor-professional-reverse-engineering-claim",
     ]);
   });
 
@@ -318,21 +333,21 @@ describe("pilot tool capability registry", () => {
   it("flags affirmative Hex capability claims without flagging honest limits", () => {
     const profile = getToolCapabilityProfile("hex-editor")!;
     const examples = {
-      "hex-editor-grid-claim": {
-        positive: "Opens local files and shows an offset grid.",
-        negative: "No file upload or offset grid is available.",
+      "hex-editor-disassembly-claim": {
+        positive: "Includes a disassembler for binary code.",
+        negative: "Does not include a disassembler.",
       },
-      "hex-editor-byte-edit-claim": {
-        positive: "Edits individual bytes directly.",
-        negative: "No direct byte editing is available.",
+      "hex-editor-remote-file-claim": {
+        positive: "Opens remote files from a URL.",
+        negative: "Does not open remote files from a URL.",
       },
-      "hex-editor-unsupported-encoding-claim": {
-        positive: "Supports UTF-16 encoding.",
-        negative: "Does not support UTF-16 encoding.",
+      "hex-editor-executable-analysis-claim": {
+        positive: "Analyzes ELF executable headers.",
+        negative: "Does not analyze ELF executable headers.",
       },
-      "hex-editor-file-export-claim": {
-        positive: "Exports edited files.",
-        negative: "Does not export files.",
+      "hex-editor-professional-reverse-engineering-claim": {
+        positive: "Provides a professional reverse-engineering suite.",
+        negative: "Not a professional reverse-engineering suite.",
       },
     } as const;
 

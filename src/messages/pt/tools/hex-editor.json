@@ -1,42 +1,61 @@
 {
   "capabilities": {
     "modes": {
-      "textToHex": "Texto para hexadecimal UTF-8",
-      "hexToText": "Hexadecimal UTF-8 para texto"
+      "fileEditor": "Editor de arquivo binário local",
+      "textConverter": "Conversor de texto UTF-8"
     },
     "inputs": {
+      "localBinaryFile": "Arquivo binário local de até 2 MiB",
       "text": "Texto",
       "utf8Hex": "Texto hexadecimal UTF-8"
     },
     "outputs": {
+      "modifiedBinaryFile": "Arquivo binário modificado",
       "utf8Hex": "Bytes hexadecimais UTF-8",
       "decodedText": "Texto decodificado"
     },
     "features": {
-      "textToHex": "Codificar texto como hexadecimal UTF-8",
-      "hexToText": "Decodificar hexadecimal UTF-8 como texto",
-      "clipboardCopy": "Copiar resultados para a área de transferência"
+      "editableByteGrid": "Grade editável de 16 bytes com deslocamentos",
+      "byteEditing": "Edição de bytes hexadecimais e ASCII",
+      "hexAsciiSearch": "Navegação de pesquisa hexadecimal e ASCII",
+      "resetChanges": "Redefinir todas as alterações de bytes",
+      "download": "Baixar uma cópia local modificada",
+      "textConversion": "Conversão entre texto UTF-8 e hexadecimal"
     },
     "limits": {
-      "noFileOpen": "Não abre arquivos",
-      "noOffsetGrid": "Sem grade de deslocamentos ou bytes",
-      "noDirectByteEditing": "Sem edição direta de bytes",
-      "utf8Only": "Somente UTF-8",
-      "noFileExport": "Sem exportação de arquivos"
+      "twoMibFiles": "Tamanho máximo de arquivo de 2 MiB",
+      "localFilesOnly": "Somente arquivos locais; sem envio pela rede",
+      "utf8TextConverter": "A conversão de texto usa UTF-8"
     }
   },
-  "detailed_description": "O Hex Editor é um conversor de texto e hexadecimal executado no navegador para inspeções rápidas em nível de byte. Digite um texto para codificá-lo como bytes hexadecimais UTF-8 em maiúsculas, ou cole uma sequência hexadecimal para decodificá-la de volta para texto legível. O fluxo foi mantido simples de propósito: duas áreas de texto editáveis, botões claros de conversão e controles de cópia para cada lado. A ferramenta é útil para conferir payloads de API, valores em logs, strings de teste e exemplos de aprendizado sobre como caracteres aparecem como bytes hexadecimais. Todas as conversões rodam no navegador com APIs padrão de codificação e decodificação de texto, então os valores inseridos permanecem no dispositivo.",
+  "detailed_description": "Abra um arquivo binário local de até 2 MiB em uma grade paginada de 16 bytes com deslocamentos preenchidos com zeros. Edite bytes hexadecimais ou ASCII imprimível, pesquise o arquivo inteiro, redefina alterações e baixe uma cópia modificada. Todo o processamento permanece no navegador; o conversor de texto usa UTF-8.",
   "usage_steps": [
-    "1. Digite ou cole texto no campo Texto.",
-    "2. Clique em Para Hex para codificar o texto como bytes hexadecimais em maiúsculas separados por espaços.",
-    "3. Cole uma sequência hexadecimal no campo Hexadecimal quando quiser decodificar um valor existente.",
-    "4. Clique em Para Texto para decodificar os bytes hexadecimais de volta para texto.",
-    "5. Use Copiar ao lado do campo desejado para copiar o texto ou o resultado hexadecimal."
+    "1. Selecione um arquivo local de até 2 MiB.",
+    "2. Edite um byte hexadecimal de dois dígitos ou um caractere ASCII imprimível.",
+    "3. Pesquise pares hexadecimais ou texto ASCII e navegue pelas correspondências.",
+    "4. Confira a contagem de bytes modificados ou redefina todas as alterações.",
+    "5. Baixe a cópia modificada ou use o conversor de texto UTF-8."
   ],
   "usage_examples": [
-    "Exemplo 1: converter um token curto de API ou valor de log em bytes hexadecimais para uma nota de depuração.",
-    "Exemplo 2: confirmar que uma sequência como 48 65 6C 6C 6F representa texto legível.",
-    "Exemplo 3: comparar como pontuação, espaços e caracteres não ASCII aparecem em forma hexadecimal UTF-8.",
-    "Exemplo 4: copiar uma string codificada em hexadecimal para documentação ou fixtures de teste sem sair do navegador."
+    "Altere um byte conhecido em um pequeno arquivo binário de teste.",
+    "Encontre um cabeçalho ASCII repetido e salve uma cópia modificada."
+  ],
+  "faqs": [
+    {
+      "question": "Os arquivos são enviados?",
+      "answer": "Não. Leitura, edição, pesquisa, redefinição e download ocorrem localmente no navegador."
+    },
+    {
+      "question": "Qual é o limite?",
+      "answer": "São aceitos arquivos locais de até 2 MiB, inclusive."
+    },
+    {
+      "question": "Uma edição pode danificar o arquivo?",
+      "answer": "Sim. Mantenha o original e valide a cópia modificada no aplicativo responsável pelo formato."
+    },
+    {
+      "question": "Qual codificação é usada?",
+      "answer": "O conversor de texto usa UTF-8."
+    }
   ]
 }

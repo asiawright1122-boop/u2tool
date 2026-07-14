@@ -711,9 +711,9 @@
     },
     "hex-editor": {
       "name": "Editor hexadecimal",
-      "description": "Converta texto em bytes hexadecimais e de volta para texto.",
-      "seo_title": "Editor hexadecimal gratuito on-line",
-      "seo_description": "Converta texto em bytes hexadecimais UTF-8 e decodifique hexadecimal de volta para texto no navegador. Prático para logs, testes e depuração."
+      "description": "Abra e edite arquivos binários locais de até 2 MiB ou converta texto UTF-8 e hexadecimal.",
+      "seo_title": "Editor hexadecimal online - Editor binário local",
+      "seo_description": "Abra arquivos de até 2 MiB, edite bytes e ASCII, pesquise, redefina e baixe uma cópia modificada localmente no navegador."
     },
     "color-palette": {
       "name": "Gerador de Paleta de Cores",
@@ -4633,11 +4633,39 @@
       "seo_description": "Gerencie estatísticas detalhadas de caracteres, palavras, parágrafos e mais. Análise rápida e gratuita. Tente nossa ferramenta agora!"
     },
     "hex-editor": {
-      "name": "Editor de Hexadecimal",
-      "description": "Converta texto em bytes hexadecimais e de volta para texto.",
-      "seo_title": "Editor de Hexadecimal Grátis Online",
-      "seo_description": "Converta texto em bytes hexadecimais UTF-8 e decodifique hexadecimal de volta para texto no navegador. Prático para logs, testes e depuração.",
-      "inputPlaceholder": "Insira o texto aqui..."
+      "name": "Editor hexadecimal",
+      "description": "Abra e edite arquivos binários locais de até 2 MiB ou converta texto UTF-8 e hexadecimal.",
+      "seo_title": "Editor hexadecimal online - Editor binário local",
+      "seo_description": "Abra arquivos de até 2 MiB, edite bytes e ASCII, pesquise, redefina e baixe uma cópia modificada localmente no navegador.",
+      "fileEditor": "Editor de arquivos",
+      "textConverter": "Conversor de texto",
+      "chooseFile": "Selecionar um arquivo local",
+      "fileLimit": "Tamanho máximo do arquivo: 2 MiB.",
+      "fileTooLarge": "O arquivo excede o limite de 2 MiB do navegador.",
+      "offset": "Deslocamento",
+      "bytes": "Bytes",
+      "ascii": "ASCII",
+      "hexSearch": "Pesquisa hexadecimal",
+      "asciiSearch": "Pesquisa ASCII",
+      "searchPlaceholderHex": "48 65 6C 6C 6F",
+      "searchPlaceholderAscii": "Hello",
+      "searchInvalid": "Insira pares completos de bytes hexadecimais.",
+      "noMatches": "Nenhuma correspondência",
+      "matchStatus": "Correspondência {current} de {total}",
+      "previousMatch": "Correspondência anterior",
+      "nextMatch": "Próxima correspondência",
+      "previousPage": "Página anterior",
+      "nextPage": "Próxima página",
+      "pageStatus": "Bytes {start}–{end} de {total}",
+      "modifiedCount": "{count} bytes modificados",
+      "reset": "Redefinir alterações",
+      "download": "Baixar arquivo modificado",
+      "text": "Texto",
+      "hex": "Hexadecimal",
+      "toHex": "Para hexadecimal",
+      "toText": "Para texto",
+      "inputPlaceholder": "Digite o texto aqui...",
+      "invalidHex": "Insira pares completos de bytes hexadecimais."
     },
     "color-palette": {
       "name": "Gerador de Paleta de Cores",

@@ -1,64 +1,61 @@
 {
   "capabilities": {
     "modes": {
-      "textToHex": "Texto a hexadecimal UTF-8",
-      "hexToText": "Hexadecimal UTF-8 a texto"
+      "fileEditor": "Editor de archivos binarios locales",
+      "textConverter": "Convertidor de texto UTF-8"
     },
     "inputs": {
+      "localBinaryFile": "Archivo binario local de hasta 2 MiB",
       "text": "Texto",
       "utf8Hex": "Texto hexadecimal UTF-8"
     },
     "outputs": {
+      "modifiedBinaryFile": "Archivo binario modificado",
       "utf8Hex": "Bytes hexadecimales UTF-8",
       "decodedText": "Texto decodificado"
     },
     "features": {
-      "textToHex": "Codificar texto como hexadecimal UTF-8",
-      "hexToText": "Decodificar hexadecimal UTF-8 como texto",
-      "clipboardCopy": "Copiar resultados al portapapeles"
+      "editableByteGrid": "Cuadrícula editable de 16 bytes con desplazamientos",
+      "byteEditing": "Edición de bytes hexadecimales y ASCII",
+      "hexAsciiSearch": "Navegación de búsqueda hexadecimal y ASCII",
+      "resetChanges": "Restablecer todos los cambios de bytes",
+      "download": "Descargar una copia local modificada",
+      "textConversion": "Conversión entre texto UTF-8 y hexadecimal"
     },
     "limits": {
-      "noFileOpen": "No abre archivos",
-      "noOffsetGrid": "Sin cuadrícula de desplazamientos o bytes",
-      "noDirectByteEditing": "Sin edición directa de bytes",
-      "utf8Only": "Solo UTF-8",
-      "noFileExport": "Sin exportación de archivos"
+      "twoMibFiles": "Tamaño máximo de archivo de 2 MiB",
+      "localFilesOnly": "Solo archivos locales; sin carga de red",
+      "utf8TextConverter": "La conversión de texto usa UTF-8"
     }
   },
-  "detailed_description": "El Editor hexadecimal convierte texto en bytes hexadecimales UTF-8 y decodifica secuencias hexadecimales de vuelta a texto desde el navegador. La interfaz se centra en dos áreas de texto, botones explícitos para convertir en ambas direcciones y acciones de copia para cada resultado. Es una herramienta práctica para revisar valores de logs, preparar ejemplos de API, entender cómo se representan caracteres no ASCII o comprobar una cadena corta antes de incluirla en documentación o pruebas. No es un editor binario de archivos: trabaja con el texto pegado en la página y con pares hexadecimales legibles.",
+  "detailed_description": "Abre un archivo binario local de hasta 2 MiB en una cuadrícula paginada de 16 bytes con desplazamientos rellenados con ceros. Edita bytes hexadecimales o ASCII imprimible, busca en todo el archivo, restablece cambios y descarga una copia modificada. Todo el procesamiento permanece en el navegador; el convertidor de texto usa UTF-8.",
   "usage_steps": [
-    "Pega texto en el campo Texto si necesitas ver sus bytes UTF-8 en hexadecimal.",
-    "Pulsa el botón para convertir a hexadecimal y revisa la salida separada por espacios.",
-    "Pega una secuencia como 48 65 6C 6C 6F en el campo Hexadecimal cuando quieras decodificarla.",
-    "Pulsa el botón para convertir a texto y comprueba si el resultado coincide con lo esperado.",
-    "Copia el texto o la salida hexadecimal solo después de revisar la codificación y el contexto."
+    "1. Selecciona un archivo local de hasta 2 MiB.",
+    "2. Edita un byte hexadecimal de dos dígitos o un carácter ASCII imprimible.",
+    "3. Busca pares hexadecimales o texto ASCII y navega entre coincidencias.",
+    "4. Revisa el número de bytes modificados o restablece todos los cambios.",
+    "5. Descarga la copia modificada o usa el convertidor de texto UTF-8."
   ],
   "usage_examples": [
-    "Convertir una palabra o un token de prueba a hexadecimal para una nota de depuración.",
-    "Comprobar cómo se codifica en UTF-8 una letra acentuada o un símbolo usado en una API.",
-    "Decodificar una secuencia hexadecimal corta recibida en documentación técnica.",
-    "Comparar dos cadenas simples observando sus bytes hexadecimales."
+    "Cambia un byte conocido en un pequeño archivo binario de prueba.",
+    "Busca una cabecera ASCII repetida y guarda una copia modificada."
   ],
   "faqs": [
     {
-      "question": "Puedo editar bytes dentro de una cuadrícula hexadecimal?",
-      "answer": "No. La página ofrece conversión entre texto y una secuencia hexadecimal en áreas de texto. No incluye cuadrícula de bytes ni edición binaria por offset."
+      "question": "¿Se suben los archivos?",
+      "answer": "No. La lectura, edición, búsqueda, restauración y descarga ocurren localmente en el navegador."
     },
     {
-      "question": "Qué codificación usa la conversión de texto?",
-      "answer": "Usa UTF-8 mediante las APIs del navegador. Por eso algunos caracteres pueden generar varios bytes hexadecimales."
+      "question": "¿Cuál es el límite?",
+      "answer": "Se aceptan archivos locales de hasta 2 MiB inclusive."
     },
     {
-      "question": "La entrada hexadecimal puede tener espacios?",
-      "answer": "Sí. Puedes usar espacios para separar los bytes. La herramienta elimina los espacios antes de agrupar la secuencia en pares hexadecimales."
+      "question": "¿Una edición puede dañar el archivo?",
+      "answer": "Sí. Conserva el original y valida la copia modificada con la aplicación propietaria del formato."
     },
     {
-      "question": "Por qué veo caracteres raros al decodificar?",
-      "answer": "Puede ocurrir si la secuencia no representa texto UTF-8 válido, si falta un byte o si se pegó un valor que pertenece a otro formato."
-    },
-    {
-      "question": "La herramienta sube mis datos a un servidor?",
-      "answer": "No. El procesamiento se realiza en el navegador y el resultado solo sale de la página si decides copiarlo."
+      "question": "¿Qué codificación usa el texto?",
+      "answer": "El convertidor de texto usa UTF-8."
     }
   ]
 }

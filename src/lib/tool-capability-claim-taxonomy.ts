@@ -194,6 +194,26 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
     ru: /(?:серверн\p{L}*|облачн\p{L}*|удалённ\p{L}*).{0,20}(?:обработк\p{L}*|проверк\p{L}*)/iu,
     ar: /(?:الخادم|السحابة|عن بُعد).{0,20}(?:معالجة|تدقيق|فحص)|(?:معالجة|تدقيق|فحص).{0,20}(?:الخادم|السحابة|عن بُعد)/u,
   },
+  "hex-editor-disassembly-claim": localeTargets(
+    /disassembl(?:y|er)|decompil(?:e|er|ation)/iu, /反汇编|反编译/u, /逆アセンブル|逆コンパイル/u, /디스어셈블|디컴파일/u,
+    /desensamblad(?:or|o)|descompilación/iu, /desmonta(?:dor|gem)|descompilação/iu, /désassemblage|décompilation/iu,
+    /Disassembler|Dekompilierung/iu, /дизассемблирован|декомпиляц/iu, /فك (?:التجميع|تجميع)|فك الترجمة/u,
+  ),
+  "hex-editor-remote-file-claim": localeTargets(
+    /remote files? from (?:a )?URL|URL file loading|cloud file upload/iu, /从 URL 打开远程文件|云端文件上传/u, /URL からリモートファイル|クラウドアップロード/u, /URL 원격 파일|클라우드 파일 업로드/u,
+    /archivos? remot[^ ]* desde una URL|carga en la nube/iu, /arquivos? remot[^ ]* de uma URL|envio para a nuvem/iu, /fichiers? distants? depuis une URL|téléversement cloud/iu,
+    /Remote-Dateien von einer URL|Cloud-Dateiupload/iu, /удалённ.{0,12}файл.{0,12}по URL|облачн.{0,12}загрузк/iu, /ملفات بعيدة من رابط|رفع الملفات إلى السحابة/u,
+  ),
+  "hex-editor-executable-analysis-claim": localeTargets(
+    /executable analysis|malware analysis|PE or ELF analysis/iu, /可执行文件分析|恶意软件分析|PE 或 ELF 分析/u, /実行ファイル解析|マルウェア解析|PE・ELF解析/u, /실행 파일 분석|악성코드 분석|PE 또는 ELF 분석/u,
+    /análisis de ejecutables|análisis de malware|análisis PE o ELF/iu, /análise de executáveis|análise de malware|análise de PE ou ELF/iu, /analyse des exécutables|analyse de malware|analyse PE ou ELF/iu,
+    /Analyse ausführbarer Dateien|Malware-Analyse|PE- oder ELF-Analyse/iu, /анализ.{0,12}исполняем.{0,12}файлов|анализ.{0,12}вредоносн.{0,12}ПО|анализ.{0,12}PE или ELF/iu, /تحليل الملفات التنفيذية|تحليل البرمجيات الضارة|تحليل PE أو ELF/u,
+  ),
+  "hex-editor-professional-reverse-engineering-claim": localeTargets(
+    /professional reverse[- ]engineering (?:suite|workflow|platform|tool)|IDA or Ghidra replacement/iu, /专业逆向工程套件|替代 IDA 或 Ghidra/u, /プロ向けリバースエンジニアリング|IDA・Ghidra の代替/u, /전문 리버스 엔지니어링|IDA 또는 Ghidra 대체/u,
+    /suite profesional de ingeniería inversa|sustituto de IDA o Ghidra/iu, /suíte profissional de engenharia reversa|substituto do IDA ou Ghidra/iu, /suite professionnelle de rétro-ingénierie|remplacement d’IDA ou Ghidra/iu,
+    /professionelle Reverse-Engineering-Suite|Ersatz für IDA oder Ghidra/iu, /профессиональн.{0,12}комплекс.{0,12}реверс-инжиниринга|замен.{0,12}IDA или Ghidra/iu, /حزمة احترافية للهندسة العكسية|بديل IDA أو Ghidra/u,
+  ),
   "hex-editor-byte-edit-claim": {
     en: /(?:direct|individual).{0,12}byte edit|edit.{0,12}(?:individual )?bytes?/iu,
     zh: /(?:直接|逐个|单独).{0,8}(?:编辑|修改).{0,8}字节|字节.{0,8}(?:直接|逐个).{0,8}(?:编辑|修改)/u,
