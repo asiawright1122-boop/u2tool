@@ -3,11 +3,13 @@
 
   import {
     bytesToRows,
-    findAsciiMatches,
-    findByteMatches,
+    findNextByteMatch,
+    findPreviousByteMatch,
     formatHexOffset,
     hexToText as decodeHexText,
+    InvalidUtf8Error,
     isHexFileSizeSupported,
+    parseAsciiSearch,
     parseHexSearch,
     textToHex as encodeTextHex,
     updateByte,
@@ -54,9 +56,12 @@
   let hexSearch = $state('');
   let asciiSearch = $state('');
   let searchKind = $state<SearchKind>('hex');
-  let searchMatches = $state<HexSearchMatch[]>([]);
-  let searchIndex = $state(-1);
+  let searchNeedle = $state(new Uint8Array());
+  let searchMatch = $state<HexSearchMatch | null>(null);
+  let searchAttempted = $state(false);
   let searchError = $state('');
+  let invalidByteOffset = $state<number | null>(null);
+  let invalidByteValue = $state('');
   let text = $state('');
   let hex = $state('');
   let conversionError = $state('');
@@ -103,6 +108,7 @@
     fileName = file.name;
     fileError = '';
     pageStart = 0;
+    clearByteError();
     clearSearch();
   }
 
@@ -110,75 +116,72 @@
     const input = event.currentTarget as HTMLInputElement;
     try {
       bytes = updateByte(bytes, offset, input.value.trim());
-      input.value = byteHex(bytes[offset]);
+      clearByteError();
       refreshSearch();
     } catch {
-      input.value = byteHex(bytes[offset]);
+      invalidByteOffset = offset;
+      invalidByteValue = input.value;
     }
   }
 
-  function editAscii(rowOffset: number, rowLength: number, event: Event): void {
-    const input = event.currentTarget as HTMLInputElement;
-    const value = input.value;
-    const printableAscii = [...value].every((character) => {
-      const code = character.charCodeAt(0);
-      return code >= 0x20 && code <= 0x7e;
-    });
-    if (value.length !== rowLength || !printableAscii) {
-      input.value = bytesToRows(bytes.slice(rowOffset, rowOffset + rowLength), rowLength)[0]?.ascii ?? '';
-      return;
-    }
-
-    const updated = bytes.slice();
-    for (let index = 0; index < rowLength; index += 1) {
-      updated[rowOffset + index] = value.charCodeAt(index);
-    }
-    bytes = updated;
-    refreshSearch();
+  function clearByteError(): void {
+    invalidByteOffset = null;
+    invalidByteValue = '';
   }
 
   function runSearch(kind: SearchKind, value: string): void {
     searchKind = kind;
     if (kind === 'hex') hexSearch = value;
     else asciiSearch = value;
-    refreshSearch();
+    searchMatch = null;
+    searchAttempted = false;
+    searchError = '';
+    try {
+      searchNeedle = kind === 'hex'
+        ? parseHexSearch(value)
+        : parseAsciiSearch(value);
+    } catch {
+      searchNeedle = new Uint8Array();
+      searchError = t(
+        kind === 'hex'
+          ? 'hex-editor.searchInvalid'
+          : 'hex-editor.asciiSearchInvalid',
+      );
+    }
   }
 
   function refreshSearch(): void {
-    searchError = '';
-    try {
-      searchMatches = searchKind === 'hex'
-        ? findByteMatches(bytes, parseHexSearch(hexSearch))
-        : findAsciiMatches(bytes, asciiSearch);
-      searchIndex = searchMatches.length > 0 ? 0 : -1;
-      revealCurrentMatch();
-    } catch {
-      searchMatches = [];
-      searchIndex = -1;
-      searchError = t('hex-editor.searchInvalid');
-    }
+    runSearch(searchKind, searchKind === 'hex' ? hexSearch : asciiSearch);
   }
 
   function clearSearch(): void {
     hexSearch = '';
     asciiSearch = '';
-    searchMatches = [];
-    searchIndex = -1;
+    searchNeedle = new Uint8Array();
+    searchMatch = null;
+    searchAttempted = false;
     searchError = '';
   }
 
   function moveSearch(direction: 1 | -1): void {
-    if (searchMatches.length === 0) return;
-    searchIndex = (
-      searchIndex + direction + searchMatches.length
-    ) % searchMatches.length;
+    if (searchNeedle.length === 0 || searchError) return;
+    const lastStart = bytes.length - searchNeedle.length;
+    let nextMatch = direction === 1
+      ? findNextByteMatch(bytes, searchNeedle, searchMatch ? searchMatch.start + 1 : 0)
+      : findPreviousByteMatch(bytes, searchNeedle, searchMatch ? searchMatch.start - 1 : lastStart);
+    if (!nextMatch && searchMatch) {
+      nextMatch = direction === 1
+        ? findNextByteMatch(bytes, searchNeedle, 0)
+        : findPreviousByteMatch(bytes, searchNeedle, lastStart);
+    }
+    searchMatch = nextMatch;
+    searchAttempted = true;
     revealCurrentMatch();
   }
 
   function revealCurrentMatch(): void {
-    const match = searchMatches[searchIndex];
-    if (match) {
-      pageStart = Math.floor(match.start / BYTES_PER_PAGE) * BYTES_PER_PAGE;
+    if (searchMatch) {
+      pageStart = Math.floor(searchMatch.start / BYTES_PER_PAGE) * BYTES_PER_PAGE;
     }
   }
 
@@ -191,13 +194,17 @@
   }
 
   function isActiveMatch(offset: number): boolean {
-    const match = searchMatches[searchIndex];
-    return Boolean(match && offset >= match.start && offset < match.end);
+    return Boolean(
+      searchMatch &&
+      offset >= searchMatch.start &&
+      offset < searchMatch.end
+    );
   }
 
   function resetChanges(): void {
     if (!originalBytes) return;
     bytes = originalBytes.slice();
+    clearByteError();
     refreshSearch();
   }
 
@@ -221,8 +228,12 @@
     try {
       text = decodeHexText(hex);
       conversionError = '';
-    } catch {
-      conversionError = t('hex-editor.invalidHex');
+    } catch (error) {
+      conversionError = t(
+        error instanceof InvalidUtf8Error
+          ? 'hex-editor.invalidUtf8'
+          : 'hex-editor.invalidHex',
+      );
     }
   }
 
@@ -244,6 +255,31 @@
     if (extensionIndex <= 0) return `${name}.modified`;
     return `${name.slice(0, extensionIndex)}.modified${name.slice(extensionIndex)}`;
   }
+
+  function selectMode(nextMode: Mode, focusTab = false): void {
+    mode = nextMode;
+    if (focusTab) {
+      queueMicrotask(() => {
+        document.getElementById(`hex-${nextMode}-tab`)?.focus();
+      });
+    }
+  }
+
+  function handleTabKeydown(event: KeyboardEvent, currentMode: Mode): void {
+    let nextMode: Mode | null = null;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      nextMode = currentMode === 'file-editor'
+        ? 'text-converter'
+        : 'file-editor';
+    } else if (event.key === 'Home') {
+      nextMode = 'file-editor';
+    } else if (event.key === 'End') {
+      nextMode = 'text-converter';
+    }
+    if (!nextMode) return;
+    event.preventDefault();
+    selectMode(nextMode, true);
+  }
 </script>
 
 <div class="space-y-4">
@@ -251,29 +287,37 @@
     <button
       type="button"
       role="tab"
+      id="hex-file-editor-tab"
       data-hex-mode-tab="file-editor"
+      aria-controls="hex-file-editor-panel"
       aria-selected={mode === 'file-editor'}
+      tabindex={mode === 'file-editor' ? 0 : -1}
       class:active-tab={mode === 'file-editor'}
       class="rounded-t-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200"
-      onclick={() => mode = 'file-editor'}
+      onclick={() => selectMode('file-editor')}
+      onkeydown={(event) => handleTabKeydown(event, 'file-editor')}
     >
       {t('hex-editor.fileEditor')}
     </button>
     <button
       type="button"
       role="tab"
+      id="hex-text-converter-tab"
       data-hex-mode-tab="text-converter"
+      aria-controls="hex-text-converter-panel"
       aria-selected={mode === 'text-converter'}
+      tabindex={mode === 'text-converter' ? 0 : -1}
       class:active-tab={mode === 'text-converter'}
       class="rounded-t-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200"
-      onclick={() => mode = 'text-converter'}
+      onclick={() => selectMode('text-converter')}
+      onkeydown={(event) => handleTabKeydown(event, 'text-converter')}
     >
       {t('hex-editor.textConverter')}
     </button>
   </div>
 
   {#if mode === 'file-editor'}
-    <section role="tabpanel" data-hex-file-editor class="space-y-4">
+    <section role="tabpanel" id="hex-file-editor-panel" aria-labelledby="hex-file-editor-tab" data-hex-file-editor class="space-y-4">
       <div class="rounded-lg border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-800/60">
         <label for="hex-local-file" class="block text-sm font-medium text-gray-900 dark:text-white">
           {t('hex-editor.chooseFile')}
@@ -320,17 +364,19 @@
           </label>
         </div>
         <div class="flex items-center gap-2">
-          <button type="button" data-search-previous onclick={() => moveSearch(-1)} disabled={searchMatches.length === 0} class="rounded bg-gray-600 px-3 py-2 text-sm text-white disabled:opacity-50">{t('hex-editor.previousMatch')}</button>
-          <p data-hex-search-status class="text-sm text-gray-700 dark:text-gray-200">
+          <button type="button" data-search-previous onclick={() => moveSearch(-1)} disabled={searchNeedle.length === 0 || Boolean(searchError)} class="rounded bg-gray-600 px-3 py-2 text-sm text-white disabled:opacity-50">{t('hex-editor.previousMatch')}</button>
+          <p data-hex-search-status aria-live="polite" class="text-sm text-gray-700 dark:text-gray-200">
             {#if searchError}
               {searchError}
-            {:else if searchMatches.length === 0}
+            {:else if searchMatch}
+              {t('hex-editor.matchOffset', { offset: formatHexOffset(searchMatch.start) })}
+            {:else if searchAttempted || searchNeedle.length === 0}
               {t('hex-editor.noMatches')}
             {:else}
-              {t('hex-editor.matchStatus', { current: searchIndex + 1, total: searchMatches.length })}
+              {t('hex-editor.searchReady')}
             {/if}
           </p>
-          <button type="button" data-search-next onclick={() => moveSearch(1)} disabled={searchMatches.length === 0} class="rounded bg-gray-600 px-3 py-2 text-sm text-white disabled:opacity-50">{t('hex-editor.nextMatch')}</button>
+          <button type="button" data-search-next onclick={() => moveSearch(1)} disabled={searchNeedle.length === 0 || Boolean(searchError)} class="rounded bg-gray-600 px-3 py-2 text-sm text-white disabled:opacity-50">{t('hex-editor.nextMatch')}</button>
         </div>
 
         {#if bytes.length > 0}
@@ -362,31 +408,37 @@
                       data-byte-offset={row.offset + byteIndex}
                       data-active-match={isActiveMatch(row.offset + byteIndex)}
                       aria-label={`${t('hex-editor.offset')} ${formatHexOffset(row.offset + byteIndex)}`}
-                      value={byteHex(byte)}
+                      value={invalidByteOffset === row.offset + byteIndex ? invalidByteValue : byteHex(byte)}
                       maxlength="2"
                       spellcheck="false"
+                      aria-invalid={invalidByteOffset === row.offset + byteIndex}
+                      aria-describedby={invalidByteOffset === row.offset + byteIndex ? `hex-byte-error-${row.offset + byteIndex}` : undefined}
                       onchange={(event) => editByte(row.offset + byteIndex, event)}
                       class="w-10 rounded border border-gray-300 bg-white px-1 py-1 text-center uppercase text-gray-900 data-[active-match=true]:border-amber-500 data-[active-match=true]:bg-amber-100 dark:border-gray-700 dark:bg-gray-900 dark:text-white dark:data-[active-match=true]:bg-amber-950"
                     />
                   {/each}
                 </div>
-                <input
+                <code
                   data-hex-ascii
                   aria-label={`${t('hex-editor.ascii')} ${formatHexOffset(row.offset)}`}
-                  value={row.ascii}
-                  maxlength={row.bytes.length}
-                  spellcheck="false"
-                  onchange={(event) => editAscii(row.offset, row.bytes.length, event)}
-                  class="w-72 rounded border border-gray-300 bg-white px-2 py-1 text-gray-900 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-                />
+                  class="block w-72 whitespace-pre rounded bg-gray-50 px-2 py-1 text-gray-900 dark:bg-gray-800 dark:text-white"
+                >{row.ascii}</code>
               </div>
             {/each}
           </div>
+          {#if invalidByteOffset !== null}
+            <p
+              id={`hex-byte-error-${invalidByteOffset}`}
+              data-hex-byte-error
+              role="alert"
+              class="mt-2 text-sm text-red-600 dark:text-red-400"
+            >{t('hex-editor.invalidByte')}</p>
+          {/if}
         {/if}
       {/if}
     </section>
   {:else}
-    <section role="tabpanel" data-hex-text-converter class="space-y-4">
+    <section role="tabpanel" id="hex-text-converter-panel" aria-labelledby="hex-text-converter-tab" data-hex-text-converter class="space-y-4">
       <div class="grid gap-4 md:grid-cols-2">
         <div>
           <label for="hex-editor-text" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">{t('hex-editor.text')}</label>

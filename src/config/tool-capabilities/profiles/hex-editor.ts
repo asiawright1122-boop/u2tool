@@ -10,7 +10,13 @@ const fileEditorEvidence = {
 const editingEvidence = {
   file: "src/components/tools/HexEditor.test.ts",
   testName:
-    "edits byte and ASCII cells, navigates hex and ASCII matches, and resets every change [capability:hex-editor:browser-feature:byte-editing] [capability:hex-editor:browser-feature:hex-ascii-search] [capability:hex-editor:browser-feature:reset-changes]",
+    "navigates hex and ASCII matches and resets hex byte changes [capability:hex-editor:browser-feature:hex-ascii-search] [capability:hex-editor:browser-feature:reset-changes]",
+};
+
+const byteEditingEvidence = {
+  file: "src/components/tools/HexEditor.test.ts",
+  testName:
+    "keeps non-printable ASCII placeholders read-only and changes only the intended hex byte [capability:hex-editor:browser-feature:byte-editing]",
 };
 
 const downloadEvidence = {
@@ -22,7 +28,7 @@ const downloadEvidence = {
 const fileLimitEvidence = {
   file: "src/components/tools/HexEditor.test.ts",
   testName:
-    "rejects a local file above 2 MiB with the visible pilot-limit message [capability:hex-editor:limit:two-mib-files]",
+    "accepts exactly 2 MiB and rejects 2 MiB plus one byte with the visible pilot-limit message [capability:hex-editor:limit:two-mib-files]",
 };
 
 const textConverterEvidence = {
@@ -105,7 +111,7 @@ export const hexEditorCapabilityProfile = defineToolCapabilityProfile({
     {
       id: "byte-editing",
       labelKey: "tools.hex-editor.capabilities.features.byteEditing",
-      evidence: editingEvidence,
+      evidence: byteEditingEvidence,
     },
     {
       id: "hex-ascii-search",
@@ -150,25 +156,25 @@ export const hexEditorCapabilityProfile = defineToolCapabilityProfile({
     {
       code: "hex-editor-disassembly-claim",
       pattern:
-        /(?<!not )(?<!n't )\b(?:disassembles?|decompiles?) (?:binary|machine|executable )?(?:code|files?)\b|(?<!not )(?<!n't )\b(?:includes?|provides?|offers?) (?:a )?(?:disassembler|decompiler)\b/i,
+        /(?<!not )(?<!n't )\b(?:disassembles?|decompiles?) (?:binary|machine|executable )?(?:code|files?)\b|(?<!not )(?<!n't )\b(?:includes?|provides?|offers?) (?:a )?(?:disassembler|decompiler)\b|(?<!not )(?<!n't )\bprovides? assembly instructions? from executable files?\b/i,
       reason: "The browser editor does not disassemble or decompile code.",
     },
     {
       code: "hex-editor-remote-file-claim",
       pattern:
-        /(?<!not )(?<!n't )\b(?:opens?|fetches?|loads?) (?:remote )?files? from (?:a )?URL\b|(?<!not )(?<!n't )\buploads? files? to (?:a )?(?:server|cloud)\b/i,
+        /(?<!not )(?<!n't )\b(?:opens?|fetches?|loads?) (?:remote )?files? from (?:a )?URL\b|(?<!not )(?<!n't )\buploads? files? to (?:a )?(?:server|cloud)\b|(?<!not )(?<!n't )\buploaded to (?:our|a|the|any)? ?servers?\b/i,
       reason: "The editor opens local files in the browser and has no remote URL workflow.",
     },
     {
       code: "hex-editor-executable-analysis-claim",
       pattern:
-        /(?<!not )(?<!n't )\b(?:analy[sz]es?|inspects?|parses?) (?:(?:PE|ELF|Mach-O)(?: executable)?|executable|malware) (?:files?|headers?|binaries?|samples?)\b|(?<!not )(?<!n't )\bmalware analysis\b/i,
+        /(?<!not )(?<!n't )\b(?:analy[sz]es?|inspects?|parses?) (?:(?:PE|ELF|Mach-O)(?: executable)?|executable|malware) (?:files?|headers?|binaries?|samples?)\b|(?<!not )(?<!n't )\bmalware analysis\b|(?<!not )(?<!n't )\b(?:scans?|scanning) malware samples?\b/i,
       reason: "The editor exposes raw bytes and does not analyze executables or malware.",
     },
     {
       code: "hex-editor-professional-reverse-engineering-claim",
       pattern:
-        /(?<!not a )(?<!not an )(?<!not )(?<!n't )\b(?:professional|advanced) reverse[- ]engineering (?:suite|workflow|platform|tool)\b|(?<!not )(?<!n't )\b(?:replaces?|alternative to) (?:IDA|Ghidra|Binary Ninja)\b/i,
+        /(?<!not a )(?<!not an )(?<!not )(?<!n't )\b(?:professional|advanced) reverse[- ]engineering (?:suite|workflow|platform|tool)\b|(?<!not )(?<!n't )\b(?:replaces?|alternative to) (?:IDA|Ghidra|Binary Ninja)\b|(?<!not )(?<!n't )\bprovides? (?:daily )?workflows? for professional reverse engineers?\b/i,
       reason: "The pilot editor is not a professional reverse-engineering workflow.",
     },
   ],

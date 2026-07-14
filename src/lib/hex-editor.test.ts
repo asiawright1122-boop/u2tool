@@ -4,10 +4,13 @@ import {
   bytesToRows,
   findAsciiMatches,
   findByteMatches,
+  findNextByteMatch,
+  findPreviousByteMatch,
   formatHexOffset,
   hexToText,
   isHexFileSizeSupported,
   MAX_HEX_FILE_BYTES,
+  parseAsciiSearch,
   parseHexSearch,
   textToHex,
   updateByte,
@@ -61,7 +64,7 @@ describe('hex editor byte model', () => {
       { start: 0, end: 2 },
       { start: 1, end: 3 },
     ]);
-    expect(findAsciiMatches(bytes, '猫')).toEqual([{ start: 4, end: 7 }]);
+    expect(() => findAsciiMatches(bytes, '猫')).toThrow(TypeError);
     expect(findByteMatches(bytes, new Uint8Array())).toEqual([]);
     expect(findAsciiMatches(bytes, '')).toEqual([]);
     expect(() => parseHexSearch('4')).toThrow(TypeError);
@@ -77,11 +80,72 @@ describe('hex editor byte model', () => {
     expect(() => hexToText('ABC')).toThrow(TypeError);
   });
 
+  it('searches direct ASCII bytes and rejects every non-ASCII code point', () => {
+    const bytes = Uint8Array.from([0x41, 0x7f, 0xc3, 0xa9]);
+
+    expect(parseAsciiSearch('A\x7F')).toEqual(Uint8Array.from([0x41, 0x7f]));
+    expect(findAsciiMatches(bytes, '\x7F')).toEqual([{ start: 1, end: 2 }]);
+    expect(() => parseAsciiSearch('é')).toThrow(TypeError);
+    expect(() => findAsciiMatches(bytes, '猫')).toThrow(TypeError);
+    expect(() => findAsciiMatches(bytes, '😀')).toThrow(TypeError);
+  });
+
+  it('rejects malformed and incomplete UTF-8 byte sequences during hex decoding', () => {
+    expect(() => hexToText('FF')).toThrow(TypeError);
+    expect(() => hexToText('C3')).toThrow(TypeError);
+    expect(() => hexToText('E2 82')).toThrow(TypeError);
+    expect(() => hexToText('F0 9F 98')).toThrow(TypeError);
+  });
+
   it('accepts the 2 MiB boundary and rejects a file one byte larger', () => {
     const boundaryFixture = new Uint8Array(MAX_HEX_FILE_BYTES);
 
     expect(boundaryFixture.byteLength).toBe(2 * 1024 * 1024);
     expect(isHexFileSizeSupported(boundaryFixture.byteLength)).toBe(true);
     expect(isHexFileSizeSupported(boundaryFixture.byteLength + 1)).toBe(false);
+  });
+
+  it('finds a long repeated-byte query in linear time at the 2 MiB boundary', () => {
+    const bytes = new Uint8Array(MAX_HEX_FILE_BYTES).fill(0x41);
+    const needle = new Uint8Array(1024).fill(0x41);
+    needle[needle.length - 1] = 0x42;
+
+    const startedAt = performance.now();
+    const matches = findByteMatches(bytes, needle);
+    const elapsedMs = performance.now() - startedAt;
+
+    expect(matches).toEqual([]);
+    expect(elapsedMs).toBeLessThan(1_000);
+  });
+
+  it('preserves all-match semantics for a one-byte query across a 2 MiB high-match file', () => {
+    const bytes = new Uint8Array(MAX_HEX_FILE_BYTES).fill(0x41);
+
+    const startedAt = performance.now();
+    const matches = findByteMatches(bytes, Uint8Array.of(0x41));
+    const elapsedMs = performance.now() - startedAt;
+
+    expect(matches).toHaveLength(MAX_HEX_FILE_BYTES);
+    expect(matches[0]).toEqual({ start: 0, end: 1 });
+    expect(matches.at(-1)).toEqual({
+      start: MAX_HEX_FILE_BYTES - 1,
+      end: MAX_HEX_FILE_BYTES,
+    });
+    expect(elapsedMs).toBeLessThan(1_000);
+  });
+
+  it('navigates one overlapping match at a time without materializing the match set', () => {
+    const bytes = new Uint8Array(MAX_HEX_FILE_BYTES).fill(0x41);
+    const pair = Uint8Array.of(0x41, 0x41);
+
+    expect(findNextByteMatch(bytes, pair, 0)).toEqual({ start: 0, end: 2 });
+    expect(findNextByteMatch(bytes, pair, 1)).toEqual({ start: 1, end: 3 });
+    expect(findNextByteMatch(bytes, pair, bytes.length - 1)).toBeNull();
+    expect(findPreviousByteMatch(bytes, pair, bytes.length - 2)).toEqual({
+      start: bytes.length - 2,
+      end: bytes.length,
+    });
+    expect(findPreviousByteMatch(bytes, pair, 0)).toEqual({ start: 0, end: 2 });
+    expect(findPreviousByteMatch(bytes, pair, -1)).toBeNull();
   });
 });

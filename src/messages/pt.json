@@ -2625,7 +2625,7 @@
       "name": "Editor hexadecimal",
       "description": "Abra e edite arquivos binários locais de até 2 MiB ou converta texto UTF-8 e hexadecimal.",
       "seo_title": "Editor hexadecimal online - Editor binário local",
-      "seo_description": "Abra arquivos de até 2 MiB, edite bytes e ASCII, pesquise, redefina e baixe uma cópia modificada localmente no navegador.",
+      "seo_description": "Abra arquivos de até 2 MiB, edite bytes hexadecimais, consulte a prévia ASCII somente leitura, pesquise, redefina e baixe uma cópia modificada localmente no navegador.",
       "fileEditor": "Editor de arquivos",
       "textConverter": "Conversor de texto",
       "chooseFile": "Selecionar um arquivo local",
@@ -2639,7 +2639,10 @@
       "searchPlaceholderHex": "48 65 6C 6C 6F",
       "searchPlaceholderAscii": "Hello",
       "searchInvalid": "Insira pares completos de bytes hexadecimais.",
+      "asciiSearchInvalid": "A pesquisa ASCII aceita apenas caracteres ASCII.",
       "noMatches": "Nenhuma correspondência",
+      "searchReady": "Pesquisa pronta",
+      "matchOffset": "Correspondência no deslocamento {offset}",
       "matchStatus": "Correspondência {current} de {total}",
       "previousMatch": "Correspondência anterior",
       "nextMatch": "Próxima correspondência",
@@ -2654,7 +2657,9 @@
       "toHex": "Para hexadecimal",
       "toText": "Para texto",
       "inputPlaceholder": "Digite o texto aqui...",
-      "invalidHex": "Insira pares completos de bytes hexadecimais."
+      "invalidHex": "Insira pares completos de bytes hexadecimais.",
+      "invalidUtf8": "Os bytes hexadecimais não formam UTF-8 válido.",
+      "invalidByte": "Insira exatamente dois dígitos hexadecimais."
     },
     "color-palette": {
       "name": "Gerador de Paleta de Cores",
@@ -16320,7 +16325,7 @@
       "name": "Editor hexadecimal",
       "description": "Abra e edite arquivos binários locais de até 2 MiB ou converta texto UTF-8 e hexadecimal.",
       "seo_title": "Editor hexadecimal online - Editor binário local",
-      "seo_description": "Abra arquivos de até 2 MiB, edite bytes e ASCII, pesquise, redefina e baixe uma cópia modificada localmente no navegador."
+      "seo_description": "Abra arquivos de até 2 MiB, edite bytes hexadecimais, consulte a prévia ASCII somente leitura, pesquise, redefina e baixe uma cópia modificada localmente no navegador."
     },
     "color-palette": {
       "name": "Gerador de Paleta de Cores",

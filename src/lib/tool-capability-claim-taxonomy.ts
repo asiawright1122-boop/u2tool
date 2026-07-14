@@ -141,7 +141,7 @@ const HEX_GRID_BY_LOCALE: Record<Locale, RegExp> = {
 };
 
 const ASSERTION_BY_LOCALE: Record<Locale, RegExp> = {
-  en: /\b(?:supports?|provides?|offers?|includes?|uses?|runs?|executes?|renders?|displays?|preserves?|exports?|downloads?|saves?|opens?|uploads?|loads?|edits?|modifies?|selects?|chooses?|analy[sz]es?|parses?|connects?|queries?|calculates?|shows?|tracks?|stores?|publishes?|issues?|generates?|awards?|identifies?|adds?|creates?|highlights?|enables?|allows?|guarantees?|promises?|powered)\b/iu,
+  en: /\b(?:supports?|provides?|offers?|includes?|uses?|runs?|executes?|renders?|displays?|preserves?|exports?|downloads?|saves?|opens?|uploads?|uploaded|loads?|edits?|modifies?|selects?|chooses?|analy[sz]es?|parses?|connects?|queries?|calculates?|shows?|tracks?|stores?|publishes?|issues?|generates?|awards?|identifies?|adds?|creates?|highlights?|enables?|allows?|guarantees?|promises?|powered)\b/iu,
   zh: /(?:支持|提供|具备|包含|使用|采用|运行|执行|渲染|显示|保留|导出|下载|保存|打开|上传|加载|编辑|修改|选择|分析|解析|连接|查询|计算|跟踪|存储|发布|颁发|生成|识别|添加|创建|突出|启用|允许|保证|驱动|可以|能够)/u,
   ja: /(?:対応|サポート|提供|搭載|含む|使用|実行|表示|保持|エクスポート|ダウンロード|保存|開く|アップロード|読み込|編集|変更|選択|解析|接続|クエリ|計算|追跡|記録|公開|発行|生成|識別|特定|役立|追加|作成|強調|有効|可能|保証|搭載)/u,
   ko: /(?:지원|제공|포함|사용|실행|렌더링|표시|보존|내보내기|다운로드|저장|열기|업로드|불러오기|편집|수정|선택|분석|파싱|연결|쿼리|계산|추적|기록|게시|발급|생성|식별|추가|만들기|강조|활성화|허용|보장|구동|할 수 있)/u,
@@ -195,24 +195,24 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
     ar: /(?:الخادم|السحابة|عن بُعد).{0,20}(?:معالجة|تدقيق|فحص)|(?:معالجة|تدقيق|فحص).{0,20}(?:الخادم|السحابة|عن بُعد)/u,
   },
   "hex-editor-disassembly-claim": localeTargets(
-    /disassembl(?:y|er)|decompil(?:e|er|ation)/iu, /反汇编|反编译/u, /逆アセンブル|逆コンパイル/u, /디스어셈블|디컴파일/u,
-    /desensamblad(?:or|o)|descompilación/iu, /desmonta(?:dor|gem)|descompilação/iu, /désassemblage|décompilation/iu,
-    /Disassembler|Dekompilierung/iu, /дизассемблирован|декомпиляц/iu, /فك (?:التجميع|تجميع)|فك الترجمة/u,
+    /disassembl(?:y|er)|decompil(?:e|er|ation)|assembly instructions?.{0,24}executables?|executables?.{0,24}assembly instructions?/iu, /反汇编|反编译|汇编指令.{0,16}可执行文件|可执行文件.{0,16}汇编指令/u, /逆アセンブル|逆コンパイル|アセンブリ命令.{0,16}実行ファイル|実行ファイル.{0,16}アセンブリ命令/u, /디스어셈블|디컴파일|어셈블리 명령.{0,16}실행 파일|실행 파일.{0,16}어셈블리 명령/u,
+    /desensamblad(?:or|o)|descompilación|instrucciones? ensamblador.{0,24}archivos? ejecutables?|archivos? ejecutables?.{0,24}instrucciones? ensamblador/iu, /desmonta(?:dor|gem)|descompilação|instruções? assembly.{0,24}arquivos? executáveis?|arquivos? executáveis?.{0,24}instruções? assembly/iu, /désassemblage|décompilation|instructions? assembleur.{0,24}fichiers? exécutables?|fichiers? exécutables?.{0,24}instructions? assembleur/iu,
+    /Disassembler|Dekompilierung|Assembler-Anweisungen.{0,24}ausführbar|ausführbar.{0,24}Assembler-Anweisungen/iu, /дизассемблирован|декомпиляц|инструкц\p{L}*.{0,12}ассембл\p{L}*.{0,24}исполняем\p{L}*|исполняем\p{L}*.{0,24}инструкц\p{L}*.{0,12}ассембл\p{L}*/iu, /فك (?:التجميع|تجميع)|فك الترجمة|تعليمات التجميع.{0,24}الملفات التنفيذية|الملفات التنفيذية.{0,24}تعليمات التجميع/u,
   ),
   "hex-editor-remote-file-claim": localeTargets(
-    /remote files? from (?:a )?URL|URL file loading|cloud file upload/iu, /从 URL 打开远程文件|云端文件上传/u, /URL からリモートファイル|クラウドアップロード/u, /URL 원격 파일|클라우드 파일 업로드/u,
-    /archivos? remot[^ ]* desde una URL|carga en la nube/iu, /arquivos? remot[^ ]* de uma URL|envio para a nuvem/iu, /fichiers? distants? depuis une URL|téléversement cloud/iu,
-    /Remote-Dateien von einer URL|Cloud-Dateiupload/iu, /удалённ.{0,12}файл.{0,12}по URL|облачн.{0,12}загрузк/iu, /ملفات بعيدة من رابط|رفع الملفات إلى السحابة/u,
+    /remote files? from (?:a )?URL|URL file loading|cloud file upload|files?.{0,40}(?:servers?|cloud)|(?:servers?|cloud).{0,40}files?/iu, /从 URL 打开远程文件|云端文件上传|文件.{0,24}(?:服务器|云端)|(?:服务器|云端).{0,24}文件/u, /URL からリモートファイル|クラウドアップロード|ファイル.{0,24}(?:サーバー|クラウド)|(?:サーバー|クラウド).{0,24}ファイル/u, /URL 원격 파일|클라우드 파일 업로드|파일.{0,24}(?:서버|클라우드)|(?:서버|클라우드).{0,24}파일/u,
+    /archivos? remot[^ ]* desde una URL|carga en la nube|archivos?.{0,40}(?:servidor|nube)|(?:servidor|nube).{0,40}archivos?/iu, /arquivos? remot[^ ]* de uma URL|envio para a nuvem|arquivos?.{0,40}(?:servidor|nuvem)|(?:servidor|nuvem).{0,40}arquivos?/iu, /fichiers? distants? depuis une URL|téléversement cloud|fichiers?.{0,40}(?:serveur|cloud)|(?:serveur|cloud).{0,40}fichiers?/iu,
+    /Remote-Dateien von einer URL|Cloud-Dateiupload|Datei(?:en)?.{0,40}(?:Server|Cloud)|(?:Server|Cloud).{0,40}Datei(?:en)?/iu, /удалённ.{0,12}файл.{0,12}по URL|облачн.{0,12}загрузк|файл\p{L}*.{0,40}(?:сервер\p{L}*|облак\p{L}*)|(?:сервер\p{L}*|облак\p{L}*).{0,40}файл\p{L}*/iu, /ملفات بعيدة من رابط|رفع الملفات إلى السحابة|(?:الملف|الملفات).{0,30}(?:الخادم|خادم|السحابة)|(?:الخادم|خادم|السحابة).{0,30}(?:الملف|الملفات)/u,
   ),
   "hex-editor-executable-analysis-claim": localeTargets(
-    /executable analysis|malware analysis|PE or ELF analysis/iu, /可执行文件分析|恶意软件分析|PE 或 ELF 分析/u, /実行ファイル解析|マルウェア解析|PE・ELF解析/u, /실행 파일 분석|악성코드 분석|PE 또는 ELF 분석/u,
-    /análisis de ejecutables|análisis de malware|análisis PE o ELF/iu, /análise de executáveis|análise de malware|análise de PE ou ELF/iu, /analyse des exécutables|analyse de malware|analyse PE ou ELF/iu,
-    /Analyse ausführbarer Dateien|Malware-Analyse|PE- oder ELF-Analyse/iu, /анализ.{0,12}исполняем.{0,12}файлов|анализ.{0,12}вредоносн.{0,12}ПО|анализ.{0,12}PE или ELF/iu, /تحليل الملفات التنفيذية|تحليل البرمجيات الضارة|تحليل PE أو ELF/u,
+    /executable analysis|malware analysis|PE or ELF analysis|scann?ing.{0,20}malware samples?|malware samples?.{0,20}scann?ing/iu, /可执行文件分析|恶意软件分析|PE 或 ELF 分析|扫描.{0,12}恶意软件样本|恶意软件样本.{0,12}扫描/u, /実行ファイル解析|マルウェア解析|PE・ELF解析|マルウェアサンプル.{0,12}スキャン|スキャン.{0,12}マルウェアサンプル/u, /실행 파일 분석|악성코드 분석|PE 또는 ELF 분석|악성코드 샘플.{0,12}스캔|스캔.{0,12}악성코드 샘플/u,
+    /análisis de ejecutables|análisis de malware|análisis PE o ELF|escaneo.{0,20}muestras? de malware|muestras? de malware.{0,20}escaneo/iu, /análise de executáveis|análise de malware|análise de PE ou ELF|varredura.{0,20}amostras? de malware|amostras? de malware.{0,20}varredura/iu, /analyse des exécutables|analyse de malware|analyse PE ou ELF|analyse antivirus.{0,24}échantillons? de malware|échantillons? de malware.{0,24}analyse antivirus/iu,
+    /Analyse ausführbarer Dateien|Malware-Analyse|PE- oder ELF-Analyse|Scannen.{0,20}Malware-Beispielen|Malware-Beispiele.{0,20}Scannen/iu, /анализ.{0,12}исполняем.{0,12}файлов|анализ.{0,12}вредоносн.{0,12}ПО|анализ.{0,12}PE или ELF|сканирован\p{L}*.{0,20}образц\p{L}*.{0,20}вредоносн\p{L}* ПО|образц\p{L}*.{0,20}вредоносн\p{L}* ПО.{0,20}сканирован\p{L}*/iu, /تحليل الملفات التنفيذية|تحليل البرمجيات الضارة|تحليل PE أو ELF|فحص.{0,20}عينات البرمجيات الضارة|عينات البرمجيات الضارة.{0,20}فحص/u,
   ),
   "hex-editor-professional-reverse-engineering-claim": localeTargets(
-    /professional reverse[- ]engineering (?:suite|workflow|platform|tool)|IDA or Ghidra replacement/iu, /专业逆向工程套件|替代 IDA 或 Ghidra/u, /プロ向けリバースエンジニアリング|IDA・Ghidra の代替/u, /전문 리버스 엔지니어링|IDA 또는 Ghidra 대체/u,
-    /suite profesional de ingeniería inversa|sustituto de IDA o Ghidra/iu, /suíte profissional de engenharia reversa|substituto do IDA ou Ghidra/iu, /suite professionnelle de rétro-ingénierie|remplacement d’IDA ou Ghidra/iu,
-    /professionelle Reverse-Engineering-Suite|Ersatz für IDA oder Ghidra/iu, /профессиональн.{0,12}комплекс.{0,12}реверс-инжиниринга|замен.{0,12}IDA или Ghidra/iu, /حزمة احترافية للهندسة العكسية|بديل IDA أو Ghidra/u,
+    /professional reverse[- ]engineering (?:suite|workflow|platform|tool)|IDA or Ghidra replacement|workflows?.{0,24}professional reverse engineers?|professional reverse engineers?.{0,24}workflows?/iu, /专业逆向工程套件|替代 IDA 或 Ghidra|专业逆向工程师.{0,16}工作流程|工作流程.{0,16}专业逆向工程师/u, /プロ向けリバースエンジニアリング|IDA・Ghidra の代替|プロのリバースエンジニア.{0,16}作業フロー|作業フロー.{0,16}プロのリバースエンジニア/u, /전문 리버스 엔지니어링|IDA 또는 Ghidra 대체|전문 리버스 엔지니어.{0,16}작업 흐름|작업 흐름.{0,16}전문 리버스 엔지니어/u,
+    /suite profesional de ingeniería inversa|sustituto de IDA o Ghidra|flujos? de trabajo.{0,24}profesionales? de ingeniería inversa|profesionales? de ingeniería inversa.{0,24}flujos? de trabajo/iu, /suíte profissional de engenharia reversa|substituto do IDA ou Ghidra|fluxos? de trabalho.{0,24}profissionais? de engenharia reversa|profissionais? de engenharia reversa.{0,24}fluxos? de trabalho/iu, /suite professionnelle de rétro-ingénierie|remplacement d’IDA ou Ghidra|flux de travail.{0,24}professionnels? de la rétro-ingénierie|professionnels? de la rétro-ingénierie.{0,24}flux de travail/iu,
+    /professionelle Reverse-Engineering-Suite|Ersatz für IDA oder Ghidra|Arbeitsabläufe.{0,24}professionelle Reverse Engineers|professionelle Reverse Engineers.{0,24}Arbeitsabläufe/iu, /профессиональн.{0,12}комплекс.{0,12}реверс-инжиниринга|замен.{0,12}IDA или Ghidra|рабочи\p{L}* процесс\p{L}*.{0,24}профессиональн\p{L}* реверс-инженер\p{L}*|профессиональн\p{L}* реверс-инженер\p{L}*.{0,24}рабочи\p{L}* процесс\p{L}*/iu, /حزمة احترافية للهندسة العكسية|بديل IDA أو Ghidra|تدفقات عمل.{0,20}محترفي الهندسة العكسية|محترفي الهندسة العكسية.{0,20}تدفقات عمل/u,
   ),
   "hex-editor-byte-edit-claim": {
     en: /(?:direct|individual).{0,12}byte edit|edit.{0,12}(?:individual )?bytes?/iu,

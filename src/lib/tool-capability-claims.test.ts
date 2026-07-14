@@ -54,6 +54,72 @@ const hexDisassemblyLocaleFixtures: Record<
   },
 };
 
+const hexNaturalClaimFixtures: Record<
+  Locale,
+  { code: string; affirmative: string; limitation: string }[]
+> = {
+  en: [
+    { code: "hex-editor-remote-file-claim", affirmative: "Your file is uploaded to our server for processing.", limitation: "Your file is not uploaded to any server." },
+    { code: "hex-editor-disassembly-claim", affirmative: "Provides assembly instructions from executable files.", limitation: "Does not provide assembly instructions from executable files." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "Supports scanning malware samples.", limitation: "Does not scan malware samples." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "Provides daily workflows for professional reverse engineers.", limitation: "Does not provide workflows for professional reverse engineers." },
+  ],
+  zh: [
+    { code: "hex-editor-remote-file-claim", affirmative: "文件会上传到我们的服务器进行处理。", limitation: "文件不会上传到任何服务器。" },
+    { code: "hex-editor-disassembly-claim", affirmative: "提供从可执行文件生成的汇编指令。", limitation: "不提供从可执行文件生成的汇编指令。" },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "支持扫描恶意软件样本。", limitation: "不扫描恶意软件样本。" },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "为专业逆向工程师提供日常工作流程。", limitation: "不为专业逆向工程师提供工作流程。" },
+  ],
+  ja: [
+    { code: "hex-editor-remote-file-claim", affirmative: "ファイルを当社のサーバーへアップロードして処理します。", limitation: "ファイルをサーバーへアップロードしません。" },
+    { code: "hex-editor-disassembly-claim", affirmative: "実行ファイルからアセンブリ命令を提供します。", limitation: "実行ファイルからアセンブリ命令を提供しません。" },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "マルウェアサンプルのスキャンに対応します。", limitation: "マルウェアサンプルのスキャンには対応しません。" },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "プロのリバースエンジニア向け作業フローを提供します。", limitation: "プロのリバースエンジニア向け作業フローは提供しません。" },
+  ],
+  ko: [
+    { code: "hex-editor-remote-file-claim", affirmative: "처리를 위해 파일을 당사 서버에 업로드합니다.", limitation: "파일을 서버에 업로드하지 않습니다." },
+    { code: "hex-editor-disassembly-claim", affirmative: "실행 파일에서 어셈블리 명령을 제공합니다.", limitation: "실행 파일에서 어셈블리 명령을 제공하지 않습니다." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "악성코드 샘플 스캔을 지원합니다.", limitation: "악성코드 샘플 스캔을 지원하지 않습니다." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "전문 리버스 엔지니어를 위한 작업 흐름을 제공합니다.", limitation: "전문 리버스 엔지니어를 위한 작업 흐름을 제공하지 않습니다." },
+  ],
+  es: [
+    { code: "hex-editor-remote-file-claim", affirmative: "Carga el archivo en nuestro servidor para procesarlo.", limitation: "No carga el archivo en ningún servidor." },
+    { code: "hex-editor-disassembly-claim", affirmative: "Proporciona instrucciones ensamblador desde archivos ejecutables.", limitation: "No proporciona instrucciones ensamblador desde archivos ejecutables." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "Admite el escaneo de muestras de malware.", limitation: "No admite el escaneo de muestras de malware." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "Ofrece flujos de trabajo para profesionales de ingeniería inversa.", limitation: "No ofrece flujos de trabajo para profesionales de ingeniería inversa." },
+  ],
+  pt: [
+    { code: "hex-editor-remote-file-claim", affirmative: "Envia o arquivo ao nosso servidor para processamento.", limitation: "Não envia o arquivo a nenhum servidor." },
+    { code: "hex-editor-disassembly-claim", affirmative: "Fornece instruções assembly de arquivos executáveis.", limitation: "Não fornece instruções assembly de arquivos executáveis." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "Suporta a varredura de amostras de malware.", limitation: "Não suporta a varredura de amostras de malware." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "Oferece fluxos de trabalho para profissionais de engenharia reversa.", limitation: "Não oferece fluxos de trabalho para profissionais de engenharia reversa." },
+  ],
+  fr: [
+    { code: "hex-editor-remote-file-claim", affirmative: "Téléverse le fichier vers notre serveur pour traitement.", limitation: "Ne téléverse le fichier vers aucun serveur." },
+    { code: "hex-editor-disassembly-claim", affirmative: "Fournit des instructions assembleur à partir de fichiers exécutables.", limitation: "Ne fournit pas d’instructions assembleur à partir de fichiers exécutables." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "Prend en charge l’analyse antivirus d’échantillons de malware.", limitation: "Ne prend pas en charge l’analyse antivirus d’échantillons de malware." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "Offre des flux de travail aux professionnels de la rétro-ingénierie.", limitation: "N’offre pas de flux de travail aux professionnels de la rétro-ingénierie." },
+  ],
+  de: [
+    { code: "hex-editor-remote-file-claim", affirmative: "Lädt die Datei zur Verarbeitung auf unseren Server hoch.", limitation: "Lädt die Datei auf keinen Server hoch." },
+    { code: "hex-editor-disassembly-claim", affirmative: "Bietet Assembler-Anweisungen aus ausführbaren Dateien.", limitation: "Bietet keine Assembler-Anweisungen aus ausführbaren Dateien." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "Unterstützt das Scannen von Malware-Beispielen.", limitation: "Unterstützt kein Scannen von Malware-Beispielen." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "Bietet Arbeitsabläufe für professionelle Reverse Engineers.", limitation: "Bietet keine Arbeitsabläufe für professionelle Reverse Engineers." },
+  ],
+  ru: [
+    { code: "hex-editor-remote-file-claim", affirmative: "Загружает файл на наш сервер для обработки.", limitation: "Не загружает файл ни на какой сервер." },
+    { code: "hex-editor-disassembly-claim", affirmative: "Предоставляет инструкции ассемблера из исполняемых файлов.", limitation: "Не предоставляет инструкции ассемблера из исполняемых файлов." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "Поддерживает сканирование образцов вредоносного ПО.", limitation: "Не поддерживает сканирование образцов вредоносного ПО." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "Предлагает рабочие процессы для профессиональных реверс-инженеров.", limitation: "Не предлагает рабочие процессы для профессиональных реверс-инженеров." },
+  ],
+  ar: [
+    { code: "hex-editor-remote-file-claim", affirmative: "يرفع الملف إلى خادمنا للمعالجة.", limitation: "لا يرفع الملف إلى أي خادم." },
+    { code: "hex-editor-disassembly-claim", affirmative: "يوفر تعليمات التجميع من الملفات التنفيذية.", limitation: "لا يوفر تعليمات التجميع من الملفات التنفيذية." },
+    { code: "hex-editor-executable-analysis-claim", affirmative: "يدعم فحص عينات البرمجيات الضارة.", limitation: "لا يدعم فحص عينات البرمجيات الضارة." },
+    { code: "hex-editor-professional-reverse-engineering-claim", affirmative: "يوفر تدفقات عمل لمحترفي الهندسة العكسية.", limitation: "لا يوفر تدفقات عمل لمحترفي الهندسة العكسية." },
+  ],
+};
+
 const faqNoLocaleFixtures: Record<
   Locale,
   { question: string; answer: string }
@@ -258,6 +324,33 @@ const localeFamilyFixtures: Record<
 };
 
 describe("assessToolCapabilityClaims", () => {
+  it.each(locales)(
+    "flags natural Hex overclaim paraphrases in %s and permits truthful negatives",
+    (locale) => {
+      for (const fixture of hexNaturalClaimFixtures[locale]) {
+        const affirmative = assessToolCapabilityClaims({
+          slug: "hex-editor",
+          locale,
+          text: fixture.affirmative,
+        });
+        const limitation = assessToolCapabilityClaims({
+          slug: "hex-editor",
+          locale,
+          text: fixture.limitation,
+        });
+
+        expect(
+          affirmative.issues.map((issue) => issue.code),
+          `${locale}/${fixture.code}/affirmative`,
+        ).toContain(fixture.code);
+        expect(
+          limitation.issues,
+          `${locale}/${fixture.code}/limitation`,
+        ).toEqual([]);
+      }
+    },
+  );
+
   it.each(Object.entries(hexDisassemblyLocaleFixtures))(
     "enforces Hex disassembly claims in %s without blocking truthful limitations",
     (locale, fixture) => {

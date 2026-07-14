@@ -21,6 +21,19 @@ const browserLocalPatterns: Record<Locale, RegExp> = {
   ar: /المتصفح|محلي/u,
 };
 
+const readOnlyAsciiPatterns: Record<Locale, RegExp> = {
+  en: /read-only ASCII/i,
+  zh: /只读.{0,12}ASCII|ASCII.{0,12}只读/u,
+  ja: /読み取り専用.{0,12}ASCII/u,
+  ko: /읽기 전용.{0,12}ASCII/u,
+  es: /ASCII.{0,16}solo lectura/iu,
+  pt: /ASCII.{0,16}somente leitura/iu,
+  fr: /ASCII.{0,16}lecture seule/iu,
+  de: /schreibgeschützte.{0,16}ASCII/iu,
+  ru: /ASCII.{0,16}только для чтения/iu,
+  ar: /ASCII.{0,16}للقراءة فقط/u,
+};
+
 function readCatalog(relativePath: string): Record<string, unknown> {
   return JSON.parse(
     readFileSync(`${messagesRoot}/${relativePath}`, 'utf8'),
@@ -59,6 +72,35 @@ describe('Hex editor message catalogs', () => {
         expect(copy, `${locale} catalog ${index} unsupported scope`).not.toMatch(
           /UTF-16|UTF-32|disassembl|decompil|malware|unlimited|Ghidra|Binary Ninja/iu,
         );
+      }
+    }
+  });
+
+  it('localizes safe editor feedback and the read-only ASCII preview contract', () => {
+    const feedbackKeys = [
+      'asciiSearchInvalid',
+      'searchReady',
+      'matchOffset',
+      'invalidUtf8',
+      'invalidByte',
+    ];
+
+    for (const locale of locales) {
+      const aggregate = hexEntry(readCatalog(`${locale}.json`));
+      const base = hexEntry(readCatalog(`${locale}/base.json`));
+      const split = readCatalog(`${locale}/tools/${HEX_SLUG}.json`);
+
+      for (const key of feedbackKeys) {
+        expect(aggregate[key], `${locale} aggregate ${key}`).toEqual(
+          expect.any(String),
+        );
+        expect(base[key], `${locale} base ${key}`).toBe(aggregate[key]);
+      }
+      for (const [name, catalog] of Object.entries({ aggregate, base, split })) {
+        expect(
+          JSON.stringify(catalog),
+          `${locale} ${name} read-only ASCII preview`,
+        ).toMatch(readOnlyAsciiPatterns[locale]);
       }
     }
   });

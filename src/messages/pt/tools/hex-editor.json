@@ -16,7 +16,7 @@
     },
     "features": {
       "editableByteGrid": "Grade editável de 16 bytes com deslocamentos",
-      "byteEditing": "Edição de bytes hexadecimais e ASCII",
+      "byteEditing": "Edição de bytes hexadecimais com prévia ASCII somente leitura",
       "hexAsciiSearch": "Navegação de pesquisa hexadecimal e ASCII",
       "resetChanges": "Redefinir todas as alterações de bytes",
       "download": "Baixar uma cópia local modificada",
@@ -28,10 +28,10 @@
       "utf8TextConverter": "A conversão de texto usa UTF-8"
     }
   },
-  "detailed_description": "Abra um arquivo binário local de até 2 MiB em uma grade paginada de 16 bytes com deslocamentos preenchidos com zeros. Edite bytes hexadecimais ou ASCII imprimível, pesquise o arquivo inteiro, redefina alterações e baixe uma cópia modificada. Todo o processamento permanece no navegador; o conversor de texto usa UTF-8.",
+  "detailed_description": "Abra um arquivo binário local de até 2 MiB em uma grade paginada de 16 bytes com deslocamentos preenchidos com zeros. Edite bytes hexadecimais, consulte a prévia de ASCII imprimível somente leitura, pesquise o arquivo inteiro, redefina alterações e baixe uma cópia modificada. Todo o processamento permanece no navegador; o conversor de texto usa UTF-8.",
   "usage_steps": [
     "1. Selecione um arquivo local de até 2 MiB.",
-    "2. Edite um byte hexadecimal de dois dígitos ou um caractere ASCII imprimível.",
+    "2. Edite um byte hexadecimal de dois dígitos e confira a prévia ASCII derivada.",
     "3. Pesquise pares hexadecimais ou texto ASCII e navegue pelas correspondências.",
     "4. Confira a contagem de bytes modificados ou redefina todas as alterações.",
     "5. Baixe a cópia modificada ou use o conversor de texto UTF-8."

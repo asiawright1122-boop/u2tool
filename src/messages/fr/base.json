@@ -713,7 +713,7 @@
       "name": "Éditeur hexadécimal",
       "description": "Ouvrez et modifiez des fichiers binaires locaux jusqu’à 2 MiB, ou convertissez du texte UTF-8 et de l’hexadécimal.",
       "seo_title": "Éditeur hexadécimal en ligne - Édition binaire locale",
-      "seo_description": "Ouvrez des fichiers jusqu’à 2 MiB, modifiez les octets et l’ASCII, recherchez, réinitialisez et téléchargez une copie modifiée localement dans le navigateur."
+      "seo_description": "Ouvrez des fichiers jusqu’à 2 MiB, modifiez les octets hexadécimaux, consultez l’aperçu ASCII en lecture seule, recherchez, réinitialisez et téléchargez une copie modifiée localement dans le navigateur."
     },
     "color-palette": {
       "name": "Générateur de palettes de couleurs",
@@ -4636,7 +4636,7 @@
       "name": "Éditeur hexadécimal",
       "description": "Ouvrez et modifiez des fichiers binaires locaux jusqu’à 2 MiB, ou convertissez du texte UTF-8 et de l’hexadécimal.",
       "seo_title": "Éditeur hexadécimal en ligne - Édition binaire locale",
-      "seo_description": "Ouvrez des fichiers jusqu’à 2 MiB, modifiez les octets et l’ASCII, recherchez, réinitialisez et téléchargez une copie modifiée localement dans le navigateur.",
+      "seo_description": "Ouvrez des fichiers jusqu’à 2 MiB, modifiez les octets hexadécimaux, consultez l’aperçu ASCII en lecture seule, recherchez, réinitialisez et téléchargez une copie modifiée localement dans le navigateur.",
       "fileEditor": "Éditeur de fichier",
       "textConverter": "Convertisseur de texte",
       "chooseFile": "Choisir un fichier local",
@@ -4650,7 +4650,10 @@
       "searchPlaceholderHex": "48 65 6C 6C 6F",
       "searchPlaceholderAscii": "Hello",
       "searchInvalid": "Saisissez des paires complètes d’octets hexadécimaux.",
+      "asciiSearchInvalid": "La recherche ASCII accepte uniquement les caractères ASCII.",
       "noMatches": "Aucune correspondance",
+      "searchReady": "Recherche prête",
+      "matchOffset": "Correspondance au décalage {offset}",
       "matchStatus": "Correspondance {current} sur {total}",
       "previousMatch": "Correspondance précédente",
       "nextMatch": "Correspondance suivante",
@@ -4665,7 +4668,9 @@
       "toHex": "Vers hexadécimal",
       "toText": "Vers texte",
       "inputPlaceholder": "Saisissez du texte...",
-      "invalidHex": "Saisissez des paires complètes d’octets hexadécimaux."
+      "invalidHex": "Saisissez des paires complètes d’octets hexadécimaux.",
+      "invalidUtf8": "Les octets hexadécimaux ne forment pas un UTF-8 valide.",
+      "invalidByte": "Saisissez exactement deux chiffres hexadécimaux."
     },
     "color-palette": {
       "name": "Générateur de Palette de Couleurs",

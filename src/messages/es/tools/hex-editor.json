@@ -16,7 +16,7 @@
     },
     "features": {
       "editableByteGrid": "Cuadrícula editable de 16 bytes con desplazamientos",
-      "byteEditing": "Edición de bytes hexadecimales y ASCII",
+      "byteEditing": "Edición de bytes hexadecimales con vista ASCII de solo lectura",
       "hexAsciiSearch": "Navegación de búsqueda hexadecimal y ASCII",
       "resetChanges": "Restablecer todos los cambios de bytes",
       "download": "Descargar una copia local modificada",
@@ -28,10 +28,10 @@
       "utf8TextConverter": "La conversión de texto usa UTF-8"
     }
   },
-  "detailed_description": "Abre un archivo binario local de hasta 2 MiB en una cuadrícula paginada de 16 bytes con desplazamientos rellenados con ceros. Edita bytes hexadecimales o ASCII imprimible, busca en todo el archivo, restablece cambios y descarga una copia modificada. Todo el procesamiento permanece en el navegador; el convertidor de texto usa UTF-8.",
+  "detailed_description": "Abre un archivo binario local de hasta 2 MiB en una cuadrícula paginada de 16 bytes con desplazamientos rellenados con ceros. Edita bytes hexadecimales, consulta la vista previa ASCII imprimible de solo lectura, busca en todo el archivo, restablece cambios y descarga una copia modificada. Todo el procesamiento permanece en el navegador; el convertidor de texto usa UTF-8.",
   "usage_steps": [
     "1. Selecciona un archivo local de hasta 2 MiB.",
-    "2. Edita un byte hexadecimal de dos dígitos o un carácter ASCII imprimible.",
+    "2. Edita un byte hexadecimal de dos dígitos y revisa la vista previa ASCII derivada.",
     "3. Busca pares hexadecimales o texto ASCII y navega entre coincidencias.",
     "4. Revisa el número de bytes modificados o restablece todos los cambios.",
     "5. Descarga la copia modificada o usa el convertidor de texto UTF-8."

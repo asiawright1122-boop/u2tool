@@ -16,7 +16,7 @@
     },
     "features": {
       "editableByteGrid": "Editable 16-byte offset grid",
-      "byteEditing": "Hex and ASCII byte editing",
+      "byteEditing": "Hex byte editing with a read-only ASCII preview",
       "hexAsciiSearch": "Hex and ASCII search navigation",
       "resetChanges": "Reset all byte changes",
       "download": "Download a modified local copy",
@@ -28,10 +28,10 @@
       "utf8TextConverter": "Text conversion uses UTF-8"
     }
   },
-  "detailed_description": "Open a local binary file up to 2 MiB and inspect it in a paged 16-byte grid with zero-padded offsets. Edit hex bytes or printable ASCII, search the full file, reset changes, and download a modified copy; all file processing stays in the browser. The separate text converter encodes and decodes UTF-8 text and hexadecimal byte pairs.",
+  "detailed_description": "Open a local binary file up to 2 MiB and inspect it in a paged 16-byte grid with zero-padded offsets. Edit hex bytes, inspect the read-only printable-ASCII preview, search the full file, reset changes, and download a modified copy; all file processing stays in the browser. The separate text converter encodes and decodes UTF-8 text and hexadecimal byte pairs.",
   "usage_steps": [
     "1. Choose a local file no larger than 2 MiB.",
-    "2. Edit a two-digit hex byte or a printable ASCII character.",
+    "2. Edit a two-digit hex byte and review the derived ASCII preview.",
     "3. Search with hex byte pairs or ASCII text and use Previous or Next.",
     "4. Check the modified-byte count or reset all changes.",
     "5. Download the modified copy, or switch to Text Converter for UTF-8 conversion."

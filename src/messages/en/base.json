@@ -718,7 +718,7 @@
       "name": "Hex Editor",
       "description": "Open and edit local binary files in a 16-byte hex grid, or convert UTF-8 text and hex.",
       "seo_title": "Hex Editor Online - Local Binary File Editor",
-      "seo_description": "Open binary files up to 2 MiB, edit bytes and ASCII, search, reset, and download a modified copy locally in your browser."
+      "seo_description": "Open binary files up to 2 MiB, edit hex bytes, inspect the read-only ASCII preview, search, reset, and download a modified copy locally in your browser."
     },
     "color-palette": {
       "name": "Color Palette Generator",
@@ -4464,7 +4464,7 @@
       "name": "Hex Editor",
       "description": "Open and edit local binary files in a 16-byte hex grid, or convert UTF-8 text and hex.",
       "seo_title": "Hex Editor Online - Local Binary File Editor",
-      "seo_description": "Open binary files up to 2 MiB, edit bytes and ASCII, search, reset, and download a modified copy locally in your browser.",
+      "seo_description": "Open binary files up to 2 MiB, edit hex bytes, inspect the read-only ASCII preview, search, reset, and download a modified copy locally in your browser.",
       "fileEditor": "File Editor",
       "textConverter": "Text Converter",
       "chooseFile": "Choose a local file",
@@ -4478,7 +4478,10 @@
       "searchPlaceholderHex": "48 65 6C 6C 6F",
       "searchPlaceholderAscii": "Hello",
       "searchInvalid": "Enter complete hexadecimal byte pairs.",
+      "asciiSearchInvalid": "ASCII search accepts only ASCII characters.",
       "noMatches": "No matches",
+      "searchReady": "Search ready",
+      "matchOffset": "Match at offset {offset}",
       "matchStatus": "Match {current} of {total}",
       "previousMatch": "Previous match",
       "nextMatch": "Next match",
@@ -4493,7 +4496,9 @@
       "toHex": "To Hex",
       "toText": "To Text",
       "inputPlaceholder": "Enter text here...",
-      "invalidHex": "Enter complete hexadecimal byte pairs."
+      "invalidHex": "Enter complete hexadecimal byte pairs.",
+      "invalidUtf8": "The hexadecimal bytes are not valid UTF-8.",
+      "invalidByte": "Enter exactly two hexadecimal digits."
     },
     "color-palette": {
       "name": "Color Palette Generator",

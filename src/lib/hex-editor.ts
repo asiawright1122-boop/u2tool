@@ -9,6 +9,13 @@ export interface HexSearchMatch {
   end: number;
 }
 
+export class InvalidUtf8Error extends TypeError {
+  constructor() {
+    super('Hexadecimal bytes are not valid UTF-8.');
+    this.name = 'InvalidUtf8Error';
+  }
+}
+
 const DEFAULT_ROW_WIDTH = 16;
 
 export const MAX_HEX_FILE_BYTES = 2 * 1024 * 1024;
@@ -90,26 +97,123 @@ export function findByteMatches(
   }
 
   const matches: HexSearchMatch[] = [];
-  for (let start = 0; start <= bytes.length - needle.length; start += 1) {
-    let matched = true;
-    for (let offset = 0; offset < needle.length; offset += 1) {
-      if (bytes[start + offset] !== needle[offset]) {
-        matched = false;
-        break;
-      }
-    }
-    if (matched) {
-      matches.push({ start, end: start + needle.length });
-    }
-  }
+  scanByteMatches(
+    bytes,
+    needle,
+    0,
+    bytes.length - needle.length,
+    (match) => {
+      matches.push(match);
+      return true;
+    },
+  );
   return matches;
+}
+
+export function findNextByteMatch(
+  bytes: Uint8Array,
+  needle: Uint8Array,
+  fromStart = 0,
+): HexSearchMatch | null {
+  if (needle.length === 0 || needle.length > bytes.length) return null;
+  const lastStart = bytes.length - needle.length;
+  const minimumStart = Math.max(0, Math.trunc(fromStart));
+  if (minimumStart > lastStart) return null;
+
+  let result: HexSearchMatch | null = null;
+  scanByteMatches(bytes, needle, minimumStart, lastStart, (match) => {
+    result = match;
+    return false;
+  });
+  return result;
+}
+
+export function findPreviousByteMatch(
+  bytes: Uint8Array,
+  needle: Uint8Array,
+  fromStart = bytes.length - needle.length,
+): HexSearchMatch | null {
+  if (needle.length === 0 || needle.length > bytes.length) return null;
+  const maximumStart = Math.min(
+    bytes.length - needle.length,
+    Math.trunc(fromStart),
+  );
+  if (maximumStart < 0) return null;
+
+  let result: HexSearchMatch | null = null;
+  scanByteMatches(bytes, needle, 0, maximumStart, (match) => {
+    result = match;
+    return true;
+  });
+  return result;
+}
+
+function scanByteMatches(
+  bytes: Uint8Array,
+  needle: Uint8Array,
+  minimumStart: number,
+  maximumStart: number,
+  visit: (match: HexSearchMatch) => boolean,
+): void {
+  const prefix = buildPrefixTable(needle);
+  const scanEnd = Math.min(bytes.length, maximumStart + needle.length);
+  let matchedLength = 0;
+
+  for (let index = minimumStart; index < scanEnd; index += 1) {
+    while (
+      matchedLength > 0 &&
+      bytes[index] !== needle[matchedLength]
+    ) {
+      matchedLength = prefix[matchedLength - 1];
+    }
+    if (bytes[index] === needle[matchedLength]) {
+      matchedLength += 1;
+    }
+    if (matchedLength !== needle.length) continue;
+
+    const start = index - needle.length + 1;
+    if (!visit({ start, end: start + needle.length })) return;
+    matchedLength = prefix[matchedLength - 1];
+  }
+}
+
+function buildPrefixTable(needle: Uint8Array): Uint32Array {
+  const prefix = new Uint32Array(needle.length);
+  let matchedLength = 0;
+
+  for (let index = 1; index < needle.length; index += 1) {
+    while (
+      matchedLength > 0 &&
+      needle[index] !== needle[matchedLength]
+    ) {
+      matchedLength = prefix[matchedLength - 1];
+    }
+    if (needle[index] === needle[matchedLength]) {
+      matchedLength += 1;
+    }
+    prefix[index] = matchedLength;
+  }
+
+  return prefix;
 }
 
 export function findAsciiMatches(
   bytes: Uint8Array,
   query: string,
 ): HexSearchMatch[] {
-  return findByteMatches(bytes, new TextEncoder().encode(query));
+  return findByteMatches(bytes, parseAsciiSearch(query));
+}
+
+export function parseAsciiSearch(query: string): Uint8Array {
+  const ascii = new Uint8Array(query.length);
+  for (let index = 0; index < query.length; index += 1) {
+    const codePoint = query.charCodeAt(index);
+    if (codePoint > 0x7f) {
+      throw new TypeError('ASCII search accepts code points from U+0000 to U+007F only.');
+    }
+    ascii[index] = codePoint;
+  }
+  return ascii;
 }
 
 export function textToHex(text: string): string {
@@ -119,5 +223,10 @@ export function textToHex(text: string): string {
 }
 
 export function hexToText(hex: string): string {
-  return new TextDecoder().decode(parseHexSearch(hex));
+  const bytes = parseHexSearch(hex);
+  try {
+    return new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+  } catch {
+    throw new InvalidUtf8Error();
+  }
 }

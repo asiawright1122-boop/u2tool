@@ -16,7 +16,7 @@
     },
     "features": {
       "editableByteGrid": "Bearbeitbares 16-Byte-Offset-Raster",
-      "byteEditing": "Hex- und ASCII-Bytebearbeitung",
+      "byteEditing": "Hex-Bytebearbeitung mit schreibgeschützter ASCII-Vorschau",
       "hexAsciiSearch": "Navigation in Hex- und ASCII-Suchergebnissen",
       "resetChanges": "Alle Byteänderungen zurücksetzen",
       "download": "Geänderte lokale Kopie herunterladen",
@@ -28,10 +28,10 @@
       "utf8TextConverter": "Textkonvertierung verwendet UTF-8"
     }
   },
-  "detailed_description": "Öffnen Sie eine lokale Binärdatei bis 2 MiB in einem seitenweisen 16-Byte-Raster mit nullaufgefüllten Offsets. Bearbeiten Sie Hex-Bytes oder druckbares ASCII, durchsuchen Sie die gesamte Datei, setzen Sie Änderungen zurück und laden Sie eine geänderte Kopie herunter. Die Verarbeitung bleibt im Browser.",
+  "detailed_description": "Öffnen Sie eine lokale Binärdatei bis 2 MiB in einem seitenweisen 16-Byte-Raster mit nullaufgefüllten Offsets. Bearbeiten Sie Hex-Bytes, prüfen Sie die schreibgeschützte Vorschau für druckbares ASCII, durchsuchen Sie die gesamte Datei, setzen Sie Änderungen zurück und laden Sie eine geänderte Kopie herunter. Die Verarbeitung bleibt im Browser.",
   "usage_steps": [
     "1. Wählen Sie eine lokale Datei bis 2 MiB.",
-    "2. Bearbeiten Sie ein zweistelliges Hex-Byte oder ein druckbares ASCII-Zeichen.",
+    "2. Bearbeiten Sie ein zweistelliges Hex-Byte und prüfen Sie die abgeleitete ASCII-Vorschau.",
     "3. Suchen Sie nach Hex-Paaren oder ASCII-Text und wechseln Sie zwischen Treffern.",
     "4. Prüfen Sie die Zahl geänderter Bytes oder setzen Sie alle Änderungen zurück.",
     "5. Laden Sie die geänderte Kopie herunter oder verwenden Sie den UTF-8-Textkonverter."

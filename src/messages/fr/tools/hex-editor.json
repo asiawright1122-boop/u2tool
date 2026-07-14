@@ -16,7 +16,7 @@
     },
     "features": {
       "editableByteGrid": "Grille modifiable de 16 octets avec décalages",
-      "byteEditing": "Modification des octets hexadécimaux et ASCII",
+      "byteEditing": "Modification des octets hexadécimaux avec aperçu ASCII en lecture seule",
       "hexAsciiSearch": "Navigation de recherche hexadécimale et ASCII",
       "resetChanges": "Réinitialiser toutes les modifications d’octets",
       "download": "Télécharger une copie locale modifiée",
@@ -28,10 +28,10 @@
       "utf8TextConverter": "La conversion de texte utilise UTF-8"
     }
   },
-  "detailed_description": "Ouvrez un fichier binaire local jusqu’à 2 MiB dans une grille paginée de 16 octets avec des décalages complétés par des zéros. Modifiez les octets hexadécimaux ou l’ASCII imprimable, recherchez dans tout le fichier, réinitialisez les changements et téléchargez une copie modifiée. Tout le traitement reste dans le navigateur.",
+  "detailed_description": "Ouvrez un fichier binaire local jusqu’à 2 MiB dans une grille paginée de 16 octets avec des décalages complétés par des zéros. Modifiez les octets hexadécimaux, consultez l’aperçu ASCII imprimable en lecture seule, recherchez dans tout le fichier, réinitialisez les changements et téléchargez une copie modifiée. Tout le traitement reste dans le navigateur.",
   "usage_steps": [
     "1. Choisissez un fichier local de 2 MiB au maximum.",
-    "2. Modifiez un octet hexadécimal à deux chiffres ou un caractère ASCII imprimable.",
+    "2. Modifiez un octet hexadécimal à deux chiffres et vérifiez l’aperçu ASCII dérivé.",
     "3. Recherchez des paires hexadécimales ou du texte ASCII et parcourez les résultats.",
     "4. Consultez le nombre d’octets modifiés ou réinitialisez tous les changements.",
     "5. Téléchargez la copie modifiée ou utilisez le convertisseur UTF-8."

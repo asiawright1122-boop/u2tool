@@ -722,7 +722,7 @@
       "name": "十六进制编辑器",
       "description": "在 16 字节十六进制网格中打开并编辑本地二进制文件，或转换 UTF-8 文本与十六进制。",
       "seo_title": "在线十六进制编辑器 - 本地二进制文件编辑",
-      "seo_description": "在浏览器本地打开最大 2 MiB 的二进制文件，编辑字节与 ASCII、搜索、重置并下载修改后的副本。"
+      "seo_description": "在浏览器本地打开最大 2 MiB 的二进制文件，编辑十六进制字节、查看只读 ASCII 预览、搜索、重置并下载修改后的副本。"
     },
     "color-palette": {
       "name": "调色板生成器",
@@ -4468,7 +4468,7 @@
       "name": "十六进制编辑器",
       "description": "在 16 字节十六进制网格中打开并编辑本地二进制文件，或转换 UTF-8 文本与十六进制。",
       "seo_title": "在线十六进制编辑器 - 本地二进制文件编辑",
-      "seo_description": "在浏览器本地打开最大 2 MiB 的二进制文件，编辑字节与 ASCII、搜索、重置并下载修改后的副本。",
+      "seo_description": "在浏览器本地打开最大 2 MiB 的二进制文件，编辑十六进制字节、查看只读 ASCII 预览、搜索、重置并下载修改后的副本。",
       "fileEditor": "文件编辑器",
       "textConverter": "文本转换器",
       "chooseFile": "选择本地文件",
@@ -4482,7 +4482,10 @@
       "searchPlaceholderHex": "48 65 6C 6C 6F",
       "searchPlaceholderAscii": "Hello",
       "searchInvalid": "请输入完整的十六进制字节对。",
+      "asciiSearchInvalid": "ASCII 搜索仅接受 ASCII 字符。",
       "noMatches": "无匹配项",
+      "searchReady": "搜索已就绪",
+      "matchOffset": "匹配位置：{offset}",
       "matchStatus": "第 {current} 个，共 {total} 个",
       "previousMatch": "上一个匹配",
       "nextMatch": "下一个匹配",
@@ -4497,7 +4500,9 @@
       "toHex": "转为十六进制",
       "toText": "转为文本",
       "inputPlaceholder": "在此输入文本...",
-      "invalidHex": "请输入完整的十六进制字节对。"
+      "invalidHex": "请输入完整的十六进制字节对。",
+      "invalidUtf8": "十六进制字节不是有效的 UTF-8。",
+      "invalidByte": "请输入恰好两位十六进制数字。"
     },
     "color-palette": {
       "name": "颜色调色板生成器",

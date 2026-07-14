@@ -713,7 +713,7 @@
       "name": "16進エディター",
       "description": "ローカルのバイナリファイルを16バイトの16進グリッドで開いて編集し、UTF-8テキストも変換できます。",
       "seo_title": "オンライン16進エディター - ローカルバイナリ編集",
-      "seo_description": "ブラウザー内で最大2 MiBのファイルを開き、バイトとASCIIの編集、検索、リセット、変更コピーのダウンロードを行えます。"
+      "seo_description": "ブラウザー内で最大2 MiBのファイルを開き、16進バイトを編集し、読み取り専用ASCIIプレビューを確認して、検索、リセット、変更コピーのダウンロードを行えます。"
     },
     "color-palette": {
       "name": "カラーパレット生成",
@@ -4456,7 +4456,7 @@
       "name": "16進エディター",
       "description": "ローカルのバイナリファイルを16バイトの16進グリッドで開いて編集し、UTF-8テキストも変換できます。",
       "seo_title": "オンライン16進エディター - ローカルバイナリ編集",
-      "seo_description": "ブラウザー内で最大2 MiBのファイルを開き、バイトとASCIIの編集、検索、リセット、変更コピーのダウンロードを行えます。",
+      "seo_description": "ブラウザー内で最大2 MiBのファイルを開き、16進バイトを編集し、読み取り専用ASCIIプレビューを確認して、検索、リセット、変更コピーのダウンロードを行えます。",
       "fileEditor": "ファイルエディター",
       "textConverter": "テキスト変換",
       "chooseFile": "ローカルファイルを選択",
@@ -4470,7 +4470,10 @@
       "searchPlaceholderHex": "48 65 6C 6C 6F",
       "searchPlaceholderAscii": "Hello",
       "searchInvalid": "完全な16進バイトペアを入力してください。",
+      "asciiSearchInvalid": "ASCII検索にはASCII文字のみ入力できます。",
       "noMatches": "一致なし",
+      "searchReady": "検索準備完了",
+      "matchOffset": "一致オフセット：{offset}",
       "matchStatus": "{total}件中{current}件目",
       "previousMatch": "前の一致",
       "nextMatch": "次の一致",
@@ -4485,7 +4488,9 @@
       "toHex": "16進数へ",
       "toText": "テキストへ",
       "inputPlaceholder": "テキストを入力...",
-      "invalidHex": "完全な16進バイトペアを入力してください。"
+      "invalidHex": "完全な16進バイトペアを入力してください。",
+      "invalidUtf8": "16進バイトは有効なUTF-8ではありません。",
+      "invalidByte": "16進数字を2桁で入力してください。"
     },
     "color-palette": {
       "name": "色パレット生成器",

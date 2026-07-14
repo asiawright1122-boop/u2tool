@@ -334,20 +334,20 @@ describe("pilot tool capability registry", () => {
     const profile = getToolCapabilityProfile("hex-editor")!;
     const examples = {
       "hex-editor-disassembly-claim": {
-        positive: "Includes a disassembler for binary code.",
-        negative: "Does not include a disassembler.",
+        positive: "Provides assembly instructions from executable files.",
+        negative: "Does not provide assembly instructions from executable files.",
       },
       "hex-editor-remote-file-claim": {
-        positive: "Opens remote files from a URL.",
-        negative: "Does not open remote files from a URL.",
+        positive: "Your file is uploaded to our server for processing.",
+        negative: "Your file is not uploaded to any server.",
       },
       "hex-editor-executable-analysis-claim": {
-        positive: "Analyzes ELF executable headers.",
-        negative: "Does not analyze ELF executable headers.",
+        positive: "Supports scanning malware samples.",
+        negative: "Does not scan malware samples.",
       },
       "hex-editor-professional-reverse-engineering-claim": {
-        positive: "Provides a professional reverse-engineering suite.",
-        negative: "Not a professional reverse-engineering suite.",
+        positive: "Provides daily workflows for professional reverse engineers.",
+        negative: "Does not provide workflows for professional reverse engineers.",
       },
     } as const;
 

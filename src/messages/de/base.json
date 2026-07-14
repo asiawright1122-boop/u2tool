@@ -727,7 +727,7 @@
       "name": "Hex-Editor",
       "description": "Lokale Binärdateien bis 2 MiB öffnen und bearbeiten oder UTF-8-Text und Hexadezimalwerte umwandeln.",
       "seo_title": "Online Hex-Editor - Lokale Binärdateien bearbeiten",
-      "seo_description": "Dateien bis 2 MiB im Browser öffnen, Bytes und ASCII bearbeiten, suchen, zurücksetzen und eine geänderte Kopie lokal herunterladen."
+      "seo_description": "Dateien bis 2 MiB im Browser öffnen, Hex-Bytes bearbeiten, die schreibgeschützte ASCII-Vorschau prüfen, suchen, zurücksetzen und eine geänderte Kopie lokal herunterladen."
     },
     "color-palette": {
       "name": "Farbpaletten-Generator",
@@ -4692,7 +4692,7 @@
       "name": "Hex-Editor",
       "description": "Lokale Binärdateien bis 2 MiB öffnen und bearbeiten oder UTF-8-Text und Hexadezimalwerte umwandeln.",
       "seo_title": "Online Hex-Editor - Lokale Binärdateien bearbeiten",
-      "seo_description": "Dateien bis 2 MiB im Browser öffnen, Bytes und ASCII bearbeiten, suchen, zurücksetzen und eine geänderte Kopie lokal herunterladen.",
+      "seo_description": "Dateien bis 2 MiB im Browser öffnen, Hex-Bytes bearbeiten, die schreibgeschützte ASCII-Vorschau prüfen, suchen, zurücksetzen und eine geänderte Kopie lokal herunterladen.",
       "fileEditor": "Datei-Editor",
       "textConverter": "Textkonverter",
       "chooseFile": "Lokale Datei auswählen",
@@ -4706,7 +4706,10 @@
       "searchPlaceholderHex": "48 65 6C 6C 6F",
       "searchPlaceholderAscii": "Hello",
       "searchInvalid": "Vollständige hexadezimale Bytepaare eingeben.",
+      "asciiSearchInvalid": "Die ASCII-Suche akzeptiert nur ASCII-Zeichen.",
       "noMatches": "Keine Treffer",
+      "searchReady": "Suche bereit",
+      "matchOffset": "Treffer bei Offset {offset}",
       "matchStatus": "Treffer {current} von {total}",
       "previousMatch": "Vorheriger Treffer",
       "nextMatch": "Nächster Treffer",
@@ -4721,7 +4724,9 @@
       "toHex": "In Hex",
       "toText": "In Text",
       "inputPlaceholder": "Text eingeben...",
-      "invalidHex": "Vollständige hexadezimale Bytepaare eingeben."
+      "invalidHex": "Vollständige hexadezimale Bytepaare eingeben.",
+      "invalidUtf8": "Die Hex-Bytes sind kein gültiges UTF-8.",
+      "invalidByte": "Geben Sie genau zwei Hexadezimalziffern ein."
     },
     "color-palette": {
       "name": "Farbpalette-Generator",

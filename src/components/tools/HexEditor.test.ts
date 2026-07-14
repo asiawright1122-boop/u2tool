@@ -110,6 +110,64 @@ afterAll(async () => {
 });
 
 describe('HexEditor public UI', () => {
+  it('links tabs to panels and supports arrow-key tab navigation', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(baseUrl, { waitUntil: 'networkidle0' });
+
+      expect(
+        await page.$$eval('[data-hex-mode-tab]', (tabs) => tabs.map((tab) => ({
+          id: tab.id,
+          controls: tab.getAttribute('aria-controls'),
+          selected: tab.getAttribute('aria-selected'),
+          tabIndex: (tab as HTMLButtonElement).tabIndex,
+        }))),
+      ).toEqual([
+        {
+          id: 'hex-file-editor-tab',
+          controls: 'hex-file-editor-panel',
+          selected: 'true',
+          tabIndex: 0,
+        },
+        {
+          id: 'hex-text-converter-tab',
+          controls: 'hex-text-converter-panel',
+          selected: 'false',
+          tabIndex: -1,
+        },
+      ]);
+      expect(
+        await page.$eval('[data-hex-file-editor]', (panel) => ({
+          id: panel.id,
+          labelledBy: panel.getAttribute('aria-labelledby'),
+        })),
+      ).toEqual({
+        id: 'hex-file-editor-panel',
+        labelledBy: 'hex-file-editor-tab',
+      });
+
+      await page.focus('[data-hex-mode-tab="file-editor"]');
+      await page.keyboard.press('ArrowRight');
+      await page.waitForSelector('[data-hex-text-converter]');
+      expect(await page.evaluate(() => document.activeElement?.id)).toBe('hex-text-converter-tab');
+      expect(
+        await page.$eval('[data-hex-text-converter]', (panel) => ({
+          id: panel.id,
+          labelledBy: panel.getAttribute('aria-labelledby'),
+        })),
+      ).toEqual({
+        id: 'hex-text-converter-panel',
+        labelledBy: 'hex-text-converter-tab',
+      });
+
+      await page.keyboard.press('ArrowLeft');
+      await page.waitForSelector('[data-hex-file-editor]');
+      expect(await page.evaluate(() => document.activeElement?.id)).toBe('hex-file-editor-tab');
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
   it('opens a local binary file into zero-padded 16-byte rows without a network request [capability:hex-editor:mode:file-editor] [capability:hex-editor:accepted-input:local-binary-file] [capability:hex-editor:browser-feature:editable-byte-grid] [capability:hex-editor:limit:local-files-only]', async () => {
     const page = await browser!.newPage();
     try {
@@ -146,8 +204,8 @@ describe('HexEditor public UI', () => {
       expect(await page.$$eval('[data-hex-row="0"] [data-hex-byte]', (cells) => cells.length)).toBe(16);
       expect(await page.$$eval('[data-hex-row="1"] [data-hex-byte]', (cells) => cells.length)).toBe(1);
       expect(
-        await page.$eval('[data-hex-row="0"] [data-hex-ascii]', (input) =>
-          (input as HTMLInputElement).value,
+        await page.$eval('[data-hex-row="0"] [data-hex-ascii]', (preview) =>
+          preview.textContent,
         ),
       ).toBe('A.BCDEFGHIJKLMNO');
     } finally {
@@ -155,7 +213,101 @@ describe('HexEditor public UI', () => {
     }
   }, 15_000);
 
-  it('edits byte and ASCII cells, navigates hex and ASCII matches, and resets every change [capability:hex-editor:browser-feature:byte-editing] [capability:hex-editor:browser-feature:hex-ascii-search] [capability:hex-editor:browser-feature:reset-changes]', async () => {
+  it('keeps non-printable ASCII placeholders read-only and changes only the intended hex byte [capability:hex-editor:browser-feature:byte-editing]', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(baseUrl, { waitUntil: 'networkidle0' });
+      const filePath = path.join(tempRoot, 'non-printable.bin');
+      writeFileSync(filePath, Uint8Array.from([0x00, 0x1f, 0x7f]));
+      const fileInput = await page.$('[data-hex-file-input]') as ElementHandle<HTMLInputElement> | null;
+      await fileInput!.uploadFile(filePath);
+      await page.waitForSelector('[data-byte-offset="2"]');
+
+      expect(
+        await page.$eval('[data-hex-ascii]', (preview) => ({
+          tagName: preview.tagName,
+          text: preview.textContent,
+          editable: preview.matches('input, textarea, [contenteditable="true"]'),
+        })),
+      ).toEqual({ tagName: 'CODE', text: '...', editable: false });
+
+      await page.$eval('[data-byte-offset="1"]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = '20';
+        field.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      expect(await page.$eval('[data-hex-ascii]', (preview) => preview.textContent)).toBe('. .');
+
+      await page.evaluate(() => {
+        const capture = { blob: null as Blob | null };
+        (window as unknown as { __hexDownload: typeof capture }).__hexDownload = capture;
+        URL.createObjectURL = (blob: Blob) => {
+          capture.blob = blob;
+          return 'blob:hex-editor-test';
+        };
+        URL.revokeObjectURL = () => {};
+        HTMLAnchorElement.prototype.click = () => {};
+      });
+      await page.click('[data-hex-download]');
+
+      expect(
+        await page.evaluate(async () => {
+          const capture = (window as unknown as {
+            __hexDownload: { blob: Blob };
+          }).__hexDownload;
+          return Array.from(new Uint8Array(await capture.blob.arrayBuffer()));
+        }),
+      ).toEqual([0x00, 0x20, 0x7f]);
+      expect(await page.$eval('[data-hex-modified-count]', (node) => node.textContent?.trim())).toBe('1 modified bytes');
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('marks an invalid byte cell and exposes a localized error until the value is corrected', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(baseUrl, { waitUntil: 'networkidle0' });
+      const filePath = path.join(tempRoot, 'invalid-byte.bin');
+      writeFileSync(filePath, Uint8Array.from([0x41]));
+      const fileInput = await page.$('[data-hex-file-input]') as ElementHandle<HTMLInputElement> | null;
+      await fileInput!.uploadFile(filePath);
+      await page.waitForSelector('[data-byte-offset="0"]');
+
+      await page.$eval('[data-byte-offset="0"]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = 'G1';
+        field.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+
+      expect(
+        await page.$eval('[data-byte-offset="0"]', (input) => ({
+          value: (input as HTMLInputElement).value,
+          invalid: input.getAttribute('aria-invalid'),
+          describedBy: input.getAttribute('aria-describedby'),
+        })),
+      ).toEqual({
+        value: 'G1',
+        invalid: 'true',
+        describedBy: 'hex-byte-error-0',
+      });
+      expect(await page.$eval('[data-hex-byte-error]', (node) => node.textContent?.trim())).toBe(
+        'Enter exactly two hexadecimal digits.',
+      );
+
+      await page.$eval('[data-byte-offset="0"]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = '42';
+        field.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+      expect(await page.$eval('[data-byte-offset="0"]', (input) => input.getAttribute('aria-invalid'))).toBe('false');
+      expect(await page.$$eval('[data-hex-byte-error]', (nodes) => nodes.length)).toBe(0);
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('navigates hex and ASCII matches and resets hex byte changes [capability:hex-editor:browser-feature:hex-ascii-search] [capability:hex-editor:browser-feature:reset-changes]', async () => {
     const page = await browser!.newPage();
     try {
       await page.goto(baseUrl, { waitUntil: 'networkidle0' });
@@ -171,14 +323,12 @@ describe('HexEditor public UI', () => {
         field.dispatchEvent(new Event('change', { bubbles: true }));
       });
       expect(
-        await page.$eval('[data-hex-ascii]', (input) =>
-          (input as HTMLInputElement).value,
-        ),
+        await page.$eval('[data-hex-ascii]', (preview) => preview.textContent),
       ).toBe('CBABA');
 
-      await page.$eval('[data-hex-ascii]', (input) => {
+      await page.$eval('[data-byte-offset="2"]', (input) => {
         const field = input as HTMLInputElement;
-        field.value = 'CBXBA';
+        field.value = '58';
         field.dispatchEvent(new Event('change', { bubbles: true }));
       });
       expect(
@@ -193,7 +343,8 @@ describe('HexEditor public UI', () => {
         field.value = '42';
         field.dispatchEvent(new Event('input', { bubbles: true }));
       });
-      expect(await page.$eval('[data-hex-search-status]', (node) => node.textContent?.trim())).toBe('Match 1 of 2');
+      expect(await page.$eval('[data-hex-search-status]', (node) => node.textContent?.trim())).toBe('Search ready');
+      await page.click('[data-search-next]');
       expect(await activeMatchOffsets(page)).toEqual(['1']);
       await page.click('[data-search-next]');
       expect(await activeMatchOffsets(page)).toEqual(['3']);
@@ -205,6 +356,7 @@ describe('HexEditor public UI', () => {
         field.value = 'BX';
         field.dispatchEvent(new Event('input', { bubbles: true }));
       });
+      await page.click('[data-search-next]');
       expect(await activeMatchOffsets(page)).toEqual(['1', '2']);
 
       await page.click('[data-hex-reset]');
@@ -214,6 +366,76 @@ describe('HexEditor public UI', () => {
         ),
       ).toEqual(['41', '42', '41', '42', '41']);
       expect(await page.$eval('[data-hex-modified-count]', (node) => node.textContent?.trim())).toBe('0 modified bytes');
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('keeps one-byte search input responsive and navigates one match at a time in a 2 MiB high-match file', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(baseUrl, { waitUntil: 'networkidle0' });
+      const filePath = path.join(tempRoot, 'high-match.bin');
+      writeFileSync(filePath, new Uint8Array(2 * 1024 * 1024).fill(0x41));
+      const fileInput = await page.$('[data-hex-file-input]') as ElementHandle<HTMLInputElement> | null;
+      await fileInput!.uploadFile(filePath);
+      await page.waitForSelector('[data-byte-offset="0"]');
+
+      const inputElapsedMs = await page.$eval('[data-hex-search]', (input) => {
+        const field = input as HTMLInputElement;
+        const startedAt = performance.now();
+        field.value = '41';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+        return performance.now() - startedAt;
+      });
+
+      expect(inputElapsedMs).toBeLessThan(250);
+      expect(await page.$eval('[data-hex-search-status]', (node) => node.textContent?.trim())).toBe('Search ready');
+      await page.click('[data-search-next]');
+      expect(await activeMatchOffsets(page)).toEqual(['0']);
+      expect(await page.$eval('[data-hex-search-status]', (node) => node.textContent?.trim())).toBe(
+        'Match at offset 00000000',
+      );
+      await page.click('[data-search-next]');
+      expect(await activeMatchOffsets(page)).toEqual(['1']);
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('rejects non-ASCII search text and announces search state changes', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(baseUrl, { waitUntil: 'networkidle0' });
+      const filePath = path.join(tempRoot, 'ascii-search.bin');
+      writeFileSync(filePath, Uint8Array.from([0xc3, 0xa9, 0x41]));
+      const fileInput = await page.$('[data-hex-file-input]') as ElementHandle<HTMLInputElement> | null;
+      await fileInput!.uploadFile(filePath);
+      await page.waitForSelector('[data-byte-offset="2"]');
+
+      await page.$eval('[data-ascii-search]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = 'é';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      expect(
+        await page.$eval('[data-hex-search-status]', (node) => ({
+          text: node.textContent?.trim(),
+          live: node.getAttribute('aria-live'),
+        })),
+      ).toEqual({
+        text: 'ASCII search accepts only ASCII characters.',
+        live: 'polite',
+      });
+      expect(await page.$eval('[data-search-next]', (button) => (button as HTMLButtonElement).disabled)).toBe(true);
+
+      await page.$eval('[data-ascii-search]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = 'A';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await page.click('[data-search-next]');
+      expect(await activeMatchOffsets(page)).toEqual(['2']);
     } finally {
       await page.close();
     }
@@ -274,14 +496,24 @@ describe('HexEditor public UI', () => {
     }
   }, 15_000);
 
-  it('rejects a local file above 2 MiB with the visible pilot-limit message [capability:hex-editor:limit:two-mib-files]', async () => {
+  it('accepts exactly 2 MiB and rejects 2 MiB plus one byte with the visible pilot-limit message [capability:hex-editor:limit:two-mib-files]', async () => {
     const page = await browser!.newPage();
     try {
       await page.goto(baseUrl, { waitUntil: 'networkidle0' });
-      const filePath = path.join(tempRoot, 'too-large.bin');
-      writeFileSync(filePath, new Uint8Array((2 * 1024 * 1024) + 1));
+      const exactLimitPath = path.join(tempRoot, 'exact-limit.bin');
+      writeFileSync(exactLimitPath, new Uint8Array(2 * 1024 * 1024));
       const fileInput = await page.$('[data-hex-file-input]') as ElementHandle<HTMLInputElement> | null;
-      await fileInput!.uploadFile(filePath);
+      await fileInput!.uploadFile(exactLimitPath);
+      await page.waitForSelector('[data-byte-offset="255"]');
+      expect(await page.$eval('[data-hex-filename]', (node) => node.textContent?.trim())).toBe(
+        'exact-limit.bin',
+      );
+      expect(await page.$$eval('[data-hex-row]', (rows) => rows.length)).toBe(16);
+      expect(await page.$$eval('[data-hex-file-error]', (errors) => errors.length)).toBe(0);
+
+      const tooLargePath = path.join(tempRoot, 'too-large.bin');
+      writeFileSync(tooLargePath, new Uint8Array((2 * 1024 * 1024) + 1));
+      await fileInput!.uploadFile(tooLargePath);
       await page.waitForSelector('[data-hex-file-error]');
 
       expect(await page.$eval('[data-hex-file-error]', (node) => node.textContent?.trim())).toBe(
@@ -334,6 +566,18 @@ describe('HexEditor public UI', () => {
       expect(await page.$eval('[data-hex-conversion-error]', (node) => node.textContent?.trim())).toBe(
         'Enter complete hexadecimal byte pairs.',
       );
+
+      for (const malformedUtf8 of ['FF', 'C3', 'E2 82']) {
+        await page.$eval('[data-hex-text-output]', (textarea, value) => {
+          const field = textarea as HTMLTextAreaElement;
+          field.value = value;
+          field.dispatchEvent(new Event('input', { bubbles: true }));
+        }, malformedUtf8);
+        await page.click('[data-hex-to-text]');
+        expect(await page.$eval('[data-hex-conversion-error]', (node) => node.textContent?.trim())).toBe(
+          'The hexadecimal bytes are not valid UTF-8.',
+        );
+      }
     } finally {
       await page.close();
     }
