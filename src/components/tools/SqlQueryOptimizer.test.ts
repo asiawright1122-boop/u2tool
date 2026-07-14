@@ -15,7 +15,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import puppeteer, { type Browser } from 'puppeteer';
+import puppeteer, { type Browser, type Page } from 'puppeteer';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
 const repoRoot = fileURLToPath(new URL('../../..', import.meta.url));
@@ -147,7 +147,7 @@ LIMIT 50;`;
       page.on('request', () => {
         requestsAfterAnalyze += 1;
       });
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-analysis]');
 
       expect(requestsAfterAnalyze).toBe(0);
@@ -189,7 +189,7 @@ LIMIT 50;`;
         field.value = 'table: orders\ntype: ALL\nrows: 10000';
         field.dispatchEvent(new Event('input', { bubbles: true }));
       });
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-explain-finding="mysql-full-scan"]');
 
       expect(
@@ -225,10 +225,10 @@ LIMIT 50;`;
         field.value = 'SELECT * FROM users;';
         field.dispatchEvent(new Event('input', { bubbles: true }));
       });
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-copy-formatted]');
-      await page.click('[data-sql-copy-formatted]');
-      await page.click('[data-sql-copy-findings]');
+      await clickElement(page, '[data-sql-copy-formatted]');
+      await clickElement(page, '[data-sql-copy-findings]');
 
       const copies = await page.evaluate(
         () => (window as unknown as { __sqlCopies: string[] }).__sqlCopies,
@@ -258,7 +258,7 @@ LIMIT 50;`;
         field.value = 'Seq Scan on users  (cost=0.00..1.00 rows=1 width=4)';
         field.dispatchEvent(new Event('input', { bubbles: true }));
       });
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-finding="select-star"]');
       await page.waitForSelector('[data-sql-explain-finding="postgresql-sequential-scan"]');
 
@@ -270,7 +270,7 @@ LIMIT 50;`;
       await page.waitForFunction(
         () => !document.querySelector('[data-sql-analysis]'),
       );
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-analysis]');
       expect(
         await page.$$eval('[data-sql-finding="select-star"]', (nodes) => nodes.length),
@@ -280,7 +280,7 @@ LIMIT 50;`;
       await page.waitForFunction(
         () => !document.querySelector('[data-sql-analysis]'),
       );
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-analysis]');
       expect(
         await page.$$eval('[data-sql-explain-finding]', (nodes) => nodes.length),
@@ -318,9 +318,9 @@ LIMIT 50;`;
         field.value = 'SELECT * FROM users;';
         field.dispatchEvent(new Event('input', { bubbles: true }));
       });
-      await page.click('[data-sql-analyze]');
+      await clickElement(page, '[data-sql-analyze]');
       await page.waitForSelector('[data-sql-copy-formatted]');
-      await page.click('[data-sql-copy-formatted]');
+      await clickElement(page, '[data-sql-copy-formatted]');
       await page.waitForSelector('[data-sql-copy-error]');
       expect(
         await page.$eval('[data-sql-copy-error]', (node) => ({
@@ -340,7 +340,7 @@ LIMIT 50;`;
           value: undefined,
         });
       });
-      await page.click('[data-sql-copy-findings]');
+      await clickElement(page, '[data-sql-copy-findings]');
       expect(
         await page.$eval('[data-sql-copy-error]', (node) => node.textContent?.trim()),
       ).toBe('Не удалось скопировать. Проверьте разрешение буфера обмена и попробуйте снова.');
@@ -377,4 +377,8 @@ function contentType(filePath: string): string {
   }
   if (filePath.endsWith('.css')) return 'text/css; charset=utf-8';
   return 'application/octet-stream';
+}
+
+async function clickElement(page: Page, selector: string): Promise<void> {
+  await page.$eval(selector, (element) => (element as HTMLElement).click());
 }

@@ -163,6 +163,46 @@ LIMIT 50;`,
     }
   });
 
+  it('interprets PostgreSQL ANALYZE boolean option forms exactly', () => {
+    const plannedMessage =
+      'The pasted PostgreSQL plan contains a planned Seq Scan node without execution evidence, which may indicate a broad table read; review row estimates, selectivity, and available indexes in the database.';
+    const executedMessage =
+      'The pasted PostgreSQL plan contains an executed Seq Scan node, which may indicate a broad table read; review actual rows, loops, selectivity, and available indexes in the database.';
+    const costOnlyNode =
+      'Seq Scan on orders  (cost=0.00..431.00 rows=10000 width=32)';
+    const executedNode = `${costOnlyNode} (actual time=0.01..0.20 rows=12 loops=1)`;
+    const cases = [
+      { option: 'ANALYZE', node: costOnlyNode, expected: executedMessage },
+      { option: 'ANALYZE TRUE', node: costOnlyNode, expected: executedMessage },
+      { option: 'analyze true', node: costOnlyNode, expected: executedMessage },
+      { option: 'ANALYZE ON', node: costOnlyNode, expected: executedMessage },
+      { option: 'analyze on', node: costOnlyNode, expected: executedMessage },
+      { option: 'ANALYZE 1', node: costOnlyNode, expected: executedMessage },
+      { option: 'analyze 1', node: costOnlyNode, expected: executedMessage },
+      { option: 'ANALYZE FALSE', node: costOnlyNode, expected: plannedMessage },
+      { option: 'analyze false', node: costOnlyNode, expected: plannedMessage },
+      { option: 'ANALYZE OFF', node: costOnlyNode, expected: plannedMessage },
+      { option: 'analyze off', node: costOnlyNode, expected: plannedMessage },
+      { option: 'ANALYZE 0', node: costOnlyNode, expected: plannedMessage },
+      { option: 'analyze 0', node: costOnlyNode, expected: plannedMessage },
+      { option: 'ANALYZE FALSE', node: executedNode, expected: executedMessage },
+      { option: 'ANALYZE OFF', node: executedNode, expected: executedMessage },
+      { option: 'ANALYZE 0', node: executedNode, expected: executedMessage },
+    ];
+
+    for (const fixture of cases) {
+      const finding = analyzeSql({
+        sql: 'SELECT id FROM orders LIMIT 1;',
+        dialect: 'postgresql',
+        explainText: `EXPLAIN (${fixture.option}, FORMAT TEXT)\n${fixture.node}`,
+      }).explainFindings.find(
+        ({ code }) => code === 'postgresql-sequential-scan',
+      );
+
+      expect(finding?.message, fixture.option).toBe(fixture.expected);
+    }
+  });
+
   it('ignores clause-like text inside comments and string literals', () => {
     const result = analyzeSql({
       sql: `/* SELECT * FROM users; DELETE FROM users; */

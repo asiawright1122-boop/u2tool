@@ -885,10 +885,14 @@ function postgresqlHasExecutionEvidence(
     /^\s*EXPLAIN\s*\(([^)]*)\)/i,
   )?.[1];
   const analyzeOption = parenthesizedOptions?.match(
-    /(?:^|,)\s*ANALYZE(?:\s+(TRUE|FALSE))?\s*(?=,|$)/i,
+    /(?:^|,)\s*ANALYZE(?:\s+(TRUE|FALSE|ON|OFF|1|0))?\s*(?=,|$)/i,
   );
+  const analyzeValue = analyzeOption?.[1]?.toUpperCase();
   const explainRequestsExecution = parenthesizedOptions !== undefined
-    ? Boolean(analyzeOption) && analyzeOption?.[1]?.toUpperCase() !== 'FALSE'
+    ? Boolean(analyzeOption) &&
+      analyzeValue !== 'FALSE' &&
+      analyzeValue !== 'OFF' &&
+      analyzeValue !== '0'
     : /^\s*EXPLAIN\s+ANALYZE\b/i.test(explainHeader ?? '');
   return (
     (/\bactual\s+(?:time|rows)\s*=/i.test(matchedLine) &&
