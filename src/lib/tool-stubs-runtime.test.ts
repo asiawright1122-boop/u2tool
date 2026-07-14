@@ -466,6 +466,38 @@ X-Trace-Id: abc123
     });
   });
 
+  it('preserves the pre-2.0 leading-wildcard LIKE suggestion for double-quoted legacy patterns', () => {
+    expect(
+      optimizeSQL(
+        'SELECT id FROM users WHERE display_name LIKE "%admin" LIMIT 10;',
+      ).suggestions,
+    ).toContainEqual({
+      type: 'warning',
+      message:
+        'Leading-wildcard LIKE patterns usually cannot use a normal B-tree index.',
+      fix:
+        'Prefer prefix search, full-text search, or a trigram index if substring search is required.',
+    });
+  });
+
+  it('preserves pre-2.0 range and IN fields in legacy index-review suggestions', () => {
+    expect(
+      optimizeSQL(
+        "SELECT id FROM orders WHERE created_at >= '2026-01-01' AND status IN ('paid', 'shipped') LIMIT 20;",
+      ),
+    ).toMatchObject({
+      suggestions: [
+        {
+          type: 'info',
+          message: 'Review indexes for: created_at, status.',
+          fix:
+            'Align composite indexes with WHERE equality columns first, then range and ORDER BY columns.',
+        },
+      ],
+      score: 95,
+    });
+  });
+
   it('builds simplified query execution plan steps for SQL text', () => {
     const plan = analyzeQuery(EXAMPLE_SQL);
 

@@ -677,8 +677,29 @@ function formatSqlPreservingTokens(sql: string, tokens: ProtectedToken[]): strin
       replacement.placeholder +
       protectedSql.slice(replacement.token.end);
   }
-  let formatted = formatSql(protectedSql);
+  let formatted = formatSql(protectedSql).replace(/[ \t]+$/gm, '');
   for (const replacement of replacements) {
+    const isTerminatedLineComment =
+      replacement.token.kind === 'comment' &&
+      /^(?:--|#)/.test(replacement.token.raw) &&
+      sql[replacement.token.end] === '\n';
+    if (isTerminatedLineComment) {
+      const placeholderIndex = formatted.indexOf(replacement.placeholder);
+      if (placeholderIndex !== -1) {
+        const lineStart = formatted.lastIndexOf('\n', placeholderIndex - 1) + 1;
+        const linePrefix = formatted.slice(lineStart, placeholderIndex);
+        const indentation = /^[ \t]*$/.test(linePrefix) ? linePrefix : '';
+        const followingIndex = placeholderIndex + replacement.placeholder.length;
+        const followingText = formatted.slice(followingIndex).replace(/^[ \t]*/, '');
+        formatted =
+          formatted.slice(0, placeholderIndex) +
+          replacement.token.raw +
+          '\n' +
+          indentation +
+          followingText;
+        continue;
+      }
+    }
     formatted = formatted.replace(
       replacement.placeholder,
       () => replacement.token.raw,
@@ -731,6 +752,29 @@ function jsonPlanHasNode(
     return true;
   }
   return Object.values(record).some((item) => jsonPlanHasNode(item, key, expected));
+}
+
+function jsonPlanHasExecutedNode(
+  value: unknown,
+  key: string,
+  expected: string,
+): boolean {
+  if (Array.isArray(value)) {
+    return value.some((item) => jsonPlanHasExecutedNode(item, key, expected));
+  }
+  if (!value || typeof value !== 'object') return false;
+  const record = value as Record<string, unknown>;
+  const actualLoops = record['Actual Loops'] ?? record.actual_loops;
+  if (
+    String(record[key] ?? '').toUpperCase() === expected.toUpperCase() &&
+    actualLoops !== undefined &&
+    Number(actualLoops) > 0
+  ) {
+    return true;
+  }
+  return Object.values(record).some((item) =>
+    jsonPlanHasExecutedNode(item, key, expected),
+  );
 }
 
 function jsonFindingRange(
@@ -810,6 +854,37 @@ function explainScanRange(
     });
   }
   return undefined;
+}
+
+function postgresqlHasExecutionEvidence(
+  explainText: string,
+  range: EvidenceRange,
+): boolean {
+  try {
+    if (
+      jsonPlanHasExecutedNode(
+        JSON.parse(explainText),
+        'Node Type',
+        'Seq Scan',
+      )
+    ) {
+      return true;
+    }
+  } catch {
+    // Plain-text EXPLAIN output is handled below.
+  }
+
+  const lineStart = explainText.lastIndexOf('\n', range.start - 1) + 1;
+  const nextLineBreak = explainText.indexOf('\n', range.end);
+  const lineEnd = nextLineBreak === -1 ? explainText.length : nextLineBreak;
+  const matchedLine = explainText.slice(lineStart, lineEnd);
+  return (
+    (/\bactual\s+(?:time|rows)\s*=/i.test(matchedLine) &&
+      /\bloops\s*=\s*[1-9]\d*/i.test(matchedLine)) ||
+    /\bEXPLAIN\s+(?:\([^)]*\bANALYZE\b[^)]*\)|ANALYZE\b)/i.test(
+      explainText,
+    )
+  );
 }
 
 export function analyzeSql(input: AnalyzeSqlInput): SqlAnalysisResult {
@@ -972,10 +1047,15 @@ export function analyzeSql(input: AnalyzeSqlInput): SqlAnalysisResult {
     ? explainScanRange(explainText, input.dialect)
     : undefined;
   if (explainRange) {
+    const postgresqlExecutionEvidence =
+      input.dialect === 'postgresql' &&
+      postgresqlHasExecutionEvidence(explainText, explainRange);
     const explainCopy: Partial<Record<SqlDialect, [string, string]>> = {
       postgresql: [
         'postgresql-sequential-scan',
-        'The pasted PostgreSQL plan contains an executed Seq Scan node, which may indicate a broad table read; review row estimates, selectivity, and available indexes in the database.',
+        postgresqlExecutionEvidence
+          ? 'The pasted PostgreSQL plan contains an executed Seq Scan node, which may indicate a broad table read; review actual rows, loops, selectivity, and available indexes in the database.'
+          : 'The pasted PostgreSQL plan contains a planned Seq Scan node without execution evidence, which may indicate a broad table read; review row estimates, selectivity, and available indexes in the database.',
       ],
       mysql: [
         'mysql-full-scan',

@@ -120,6 +120,47 @@ LIMIT 50;`,
     }
   });
 
+  it('does not describe PostgreSQL planned-only text or JSON scans as executed', () => {
+    const plannedOnly = [
+      'Seq Scan on orders  (cost=0.00..431.00 rows=10000 width=32)',
+      JSON.stringify({ Plan: { 'Node Type': 'Seq Scan' } }),
+    ];
+
+    for (const explainText of plannedOnly) {
+      const finding = analyzeSql({
+        sql: 'SELECT id FROM orders LIMIT 1;',
+        dialect: 'postgresql',
+        explainText,
+      }).explainFindings.find(
+        ({ code }) => code === 'postgresql-sequential-scan',
+      );
+
+      expect(finding?.message).toMatch(/planned/i);
+      expect(finding?.message).not.toMatch(/executed/i);
+    }
+  });
+
+  it('may describe PostgreSQL scans as executed when ANALYZE evidence is present', () => {
+    const executedPlans = [
+      'Seq Scan on orders  (cost=0.00..431.00 rows=10000 width=32) (actual time=0.01..0.20 rows=12 loops=1)',
+      JSON.stringify({
+        Plan: { 'Node Type': 'Seq Scan', 'Actual Loops': 1 },
+      }),
+    ];
+
+    for (const explainText of executedPlans) {
+      const finding = analyzeSql({
+        sql: 'SELECT id FROM orders LIMIT 1;',
+        dialect: 'postgresql',
+        explainText,
+      }).explainFindings.find(
+        ({ code }) => code === 'postgresql-sequential-scan',
+      );
+
+      expect(finding?.message).toMatch(/executed/i);
+    }
+  });
+
   it('ignores clause-like text inside comments and string literals', () => {
     const result = analyzeSql({
       sql: `/* SELECT * FROM users; DELETE FROM users; */
@@ -169,6 +210,14 @@ LIMIT 10; -- UPDATE users SET active = false`,
     expect(sql).toBe('select * from users where active = true limit 10;');
     expect(result.suggestions[0]?.message).toContain(
       'SELECT * may read columns the caller does not need',
+    );
+  });
+
+  it('preserves the newline that terminates a line comment while formatting', () => {
+    const sql = 'SELECT -- comment\nid FROM users LIMIT 1;';
+
+    expect(analyzeSql({ sql, dialect: 'postgresql' }).formattedSql).toBe(
+      'SELECT\n  -- comment\n  id\nFROM users\nLIMIT 1;',
     );
   });
 

@@ -4274,6 +4274,55 @@ export function normalizePrefix(prefix = '') {
 export function optimizeSQL(sql = '') {
   const original = String(sql || '').trim();
   const analysis = runtimeAnalyzeSql({ sql: original, dialect: 'generic' });
+  const compatibilitySuggestions = [...analysis.suggestions];
+
+  if (
+    /\blike\s+['"]%/i.test(original) &&
+    !compatibilitySuggestions.some(
+      (suggestion) => suggestion.code === 'leading-wildcard-like',
+    )
+  ) {
+    compatibilitySuggestions.push({
+      code: 'leading-wildcard-like',
+      severity: 'warning',
+      message: '',
+      evidence: '',
+      indexCandidates: [],
+    });
+  }
+
+  const whereText =
+    original.match(
+      /\bwhere\b([\s\S]*?)(?:\border\s+by\b|\bgroup\s+by\b|\blimit\b|$)/i,
+    )?.[1] || '';
+  const orderText = getSqlClause(original, 'order by', ['limit', 'offset']);
+  const legacyIndexFields = new Set();
+  for (const condition of splitSqlConditions(whereText)) {
+    const field = condition.match(
+      /^(.+?)\s*(?:=|!=|<>|>=|<=|>|<|\bin\b|\blike\b|\bis\b)/i,
+    )?.[1];
+    if (field) legacyIndexFields.add(unquoteSqlIdentifier(field));
+  }
+  for (const field of Object.keys(parseSqlOrder(orderText))) {
+    legacyIndexFields.add(field);
+  }
+  if (legacyIndexFields.size > 0) {
+    for (let index = compatibilitySuggestions.length - 1; index >= 0; index -= 1) {
+      if (
+        compatibilitySuggestions[index].code === 'index-review-candidate' ||
+        compatibilitySuggestions[index].code === 'composite-index-candidate'
+      ) {
+        compatibilitySuggestions.splice(index, 1);
+      }
+    }
+    compatibilitySuggestions.push({
+      code: 'index-review-candidate',
+      severity: 'info',
+      message: '',
+      evidence: '',
+      indexCandidates: [`legacy (${[...legacyIndexFields].join(', ')})`],
+    });
+  }
 
   const legacyOrder = {
     'select-star': 0,
@@ -4316,7 +4365,7 @@ export function optimizeSQL(sql = '') {
       fix: 'Consider UNION ALL or separate indexed predicates for hot paths.',
     },
   };
-  const suggestions = analysis.suggestions
+  const suggestions = compatibilitySuggestions
     .filter((suggestion) => suggestion.code in legacyOrder)
     .sort(
       (left, right) =>
