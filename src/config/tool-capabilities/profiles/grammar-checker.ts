@@ -11,9 +11,9 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       labelKey: "tools.grammar-checker.capabilities.modes.localEnglishRules",
       runtime: "browser",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "checks English text with local static rules [capability:grammar-checker:mode:local-english-rules]",
+          "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
       },
     },
   ],
@@ -22,9 +22,9 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       id: "plain-text",
       labelKey: "tools.grammar-checker.capabilities.inputs.plainText",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "accepts empty and boundary-length plain-text input [capability:grammar-checker:accepted-input:plain-text]",
+          "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
       },
     },
   ],
@@ -33,18 +33,18 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       id: "highlighted-issues",
       labelKey: "tools.grammar-checker.capabilities.outputs.highlightedIssues",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "returns issue details for highlighted output [capability:grammar-checker:produced-output:highlighted-issues]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
     {
       id: "corrected-text",
       labelKey: "tools.grammar-checker.capabilities.outputs.correctedText",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "produces corrected text from public suggestions [capability:grammar-checker:produced-output:corrected-text]",
+          "applies all visible fixes without position drift and keeps the notice [capability:grammar-checker:produced-output:corrected-text] [capability:grammar-checker:browser-feature:all-fixes]",
       },
     },
   ],
@@ -66,36 +66,36 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       id: "english-local-rules",
       labelKey: "tools.grammar-checker.capabilities.features.englishLocalRules",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "detects representative English spelling, grammar, and punctuation rules [capability:grammar-checker:browser-feature:english-local-rules]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
     {
       id: "issue-highlights",
       labelKey: "tools.grammar-checker.capabilities.features.issueHighlights",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "returns sorted source ranges that identify each issue [capability:grammar-checker:browser-feature:issue-highlights]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
     {
       id: "individual-fixes",
       labelKey: "tools.grammar-checker.capabilities.features.individualFixes",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "applies one selected suggestion without changing other issues [capability:grammar-checker:browser-feature:individual-fixes]",
+          "applies an individual visible fix while preserving the remaining issue and notice [capability:grammar-checker:browser-feature:individual-fixes]",
       },
     },
     {
       id: "all-fixes",
       labelKey: "tools.grammar-checker.capabilities.features.allFixes",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "applies all available suggestions without position drift [capability:grammar-checker:browser-feature:all-fixes]",
+          "applies all visible fixes without position drift and keeps the notice [capability:grammar-checker:produced-output:corrected-text] [capability:grammar-checker:browser-feature:all-fixes]",
       },
     },
   ],
@@ -105,9 +105,9 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       id: "english-only-engine",
       labelKey: "tools.grammar-checker.capabilities.limits.englishOnlyEngine",
       evidence: {
-        file: "src/lib/grammar-rules.test.ts",
+        file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "does not present Cyrillic input as native Russian checking [capability:grammar-checker:limit:english-only-engine]",
+          "presents Cyrillic input as zero supported English-rule matches without a native-language success claim [capability:grammar-checker:limit:english-only-engine]",
       },
     },
     {
@@ -152,14 +152,14 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
   targetSearchIntents: ["grammar-checker.local-english-review"],
   evidenceTests: [
     {
-      file: "src/lib/grammar-language-support.test.ts",
+      file: "src/components/tools/GrammarChecker.test.ts",
       testName:
-        "keeps every localized interface on the English checker [capability:grammar-checker:profile:release-readiness]",
+        "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
     },
     {
-      file: "src/lib/grammar-rules.test.ts",
+      file: "src/messages/grammar-checker-catalog.test.ts",
       testName:
-        "covers the shipped English checker behavior and non-target boundary [capability:grammar-checker:profile:release-readiness]",
+        "keeps every root aggregate Grammar entry identical to its truthful base entry [capability:grammar-checker:profile:release-readiness]",
     },
   ],
 });

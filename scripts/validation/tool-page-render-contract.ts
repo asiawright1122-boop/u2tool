@@ -1,3 +1,5 @@
+import * as cheerio from 'cheerio';
+
 import { extractJsonLdBlocks, getTagContent } from '../../src/lib/seo-probe';
 
 export interface ToolPageRenderCliOptions {
@@ -25,6 +27,10 @@ export interface ToolPageRenderExpectation {
   expectedCapabilitySlug?: string;
   expectedCapabilityVersion?: string;
   expectedLocalProcessing?: boolean;
+  expectedGrammarLanguageNotice?: {
+    inputLanguage: string;
+    text: string;
+  };
 }
 
 export interface ToolPageRenderContract {
@@ -43,6 +49,9 @@ export interface ToolPageRenderContract {
   capabilityVersion?: string;
   localProcessing?: boolean;
   capabilityDisclosureCount: number;
+  grammarLanguageNoticeCount: number;
+  grammarLanguageNoticeInputLanguage?: string;
+  grammarLanguageNoticeText?: string;
 }
 
 export interface ToolPageRenderResult {
@@ -190,10 +199,13 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     expectedH1Includes: 'Grammar Checker',
     expectedCanonicalPath: '/en/tools/grammar-checker/',
     expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: ['This local checker is designed for English text.'],
     expectedCapabilitySlug: 'grammar-checker',
     expectedCapabilityVersion: '1.1.0',
     expectedLocalProcessing: true,
+    expectedGrammarLanguageNotice: {
+      inputLanguage: 'en',
+      text: 'This local checker is designed for English text.',
+    },
   },
   {
     locale: 'ru',
@@ -204,10 +216,13 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     expectedH1Includes: 'Проверка грамматики',
     expectedCanonicalPath: '/ru/tools/grammar-checker/',
     expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: ['Интерфейс локализован на русский язык, но инструмент проверяет английский текст.'],
     expectedCapabilitySlug: 'grammar-checker',
     expectedCapabilityVersion: '1.1.0',
     expectedLocalProcessing: true,
+    expectedGrammarLanguageNotice: {
+      inputLanguage: 'en',
+      text: 'Интерфейс локализован на русский язык, но инструмент проверяет английский текст.',
+    },
   },
   {
     locale: 'ja',
@@ -243,6 +258,8 @@ export function extractToolPageRenderContract(
   const capabilityDisclosures = extractCapabilityDisclosureElements(html);
   const capabilityDisclosure = capabilityDisclosures[0];
   const localProcessingAttribute = capabilityDisclosure?.localProcessing;
+  const grammarLanguageNotices = extractGrammarLanguageNoticeElements(html);
+  const grammarLanguageNotice = grammarLanguageNotices[0];
 
   return {
     status,
@@ -267,6 +284,9 @@ export function extractToolPageRenderContract(
             ? false
             : undefined,
     capabilityDisclosureCount: capabilityDisclosures.length,
+    grammarLanguageNoticeCount: grammarLanguageNotices.length,
+    grammarLanguageNoticeInputLanguage: grammarLanguageNotice?.inputLanguage,
+    grammarLanguageNoticeText: grammarLanguageNotice?.text,
   };
 }
 
@@ -362,6 +382,33 @@ export function compareToolPageRenderContract(
     contract.localProcessing,
     expectation.expectedLocalProcessing,
   );
+
+  const expectedGrammarLanguageNoticeCount = expectation.expectedGrammarLanguageNotice
+    ? 1
+    : 0;
+  if (contract.grammarLanguageNoticeCount !== expectedGrammarLanguageNoticeCount) {
+    failures.push(
+      `${route} grammar language notice: expected ${expectedGrammarLanguageNoticeCount} semantic element${expectedGrammarLanguageNoticeCount === 1 ? '' : 's'} but found ${contract.grammarLanguageNoticeCount}`,
+    );
+  }
+  if (expectation.expectedGrammarLanguageNotice) {
+    if (
+      contract.grammarLanguageNoticeInputLanguage !==
+      expectation.expectedGrammarLanguageNotice.inputLanguage
+    ) {
+      failures.push(
+        `${route} grammar language notice: expected data-input-language=${JSON.stringify(expectation.expectedGrammarLanguageNotice.inputLanguage)} but found ${JSON.stringify(contract.grammarLanguageNoticeInputLanguage)}`,
+      );
+    }
+    if (
+      contract.grammarLanguageNoticeText !==
+      expectation.expectedGrammarLanguageNotice.text
+    ) {
+      failures.push(
+        `${route} grammar language notice: expected localized text ${JSON.stringify(expectation.expectedGrammarLanguageNotice.text)} but found ${JSON.stringify(contract.grammarLanguageNoticeText)}`,
+      );
+    }
+  }
 
   return failures;
 }
@@ -535,6 +582,27 @@ interface ExtractedCapabilityDisclosure {
   slug?: string;
   version?: string;
   localProcessing?: string;
+}
+
+interface ExtractedGrammarLanguageNotice {
+  inputLanguage?: string;
+  text: string;
+}
+
+function extractGrammarLanguageNoticeElements(
+  html: string,
+): ExtractedGrammarLanguageNotice[] {
+  const $ = cheerio.load(html);
+
+  return $('[data-grammar-language-notice]')
+    .toArray()
+    .map((element) => {
+      const notice = $(element);
+      return {
+        inputLanguage: notice.attr('data-input-language')?.trim(),
+        text: notice.text().trim(),
+      };
+    });
 }
 
 function extractCapabilityDisclosureElements(

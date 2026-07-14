@@ -1,0 +1,55 @@
+---
+import GrammarChecker from '@/components/tools/GrammarChecker.svelte';
+import GrammarLanguageNotice from '@/components/tools/GrammarLanguageNotice.astro';
+import type { Locale } from '@/lib/i18n';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'ru' } }];
+}
+
+const locale = Astro.params.locale as Locale;
+const copy = locale === 'ru'
+  ? {
+      clear: 'Очистить',
+      input: 'Ввод',
+      inputPlaceholder: 'Введите английский текст для проверки...',
+      languageNotice: 'Интерфейс локализован на русский язык, но инструмент проверяет английский текст.',
+      foundErrors: 'Найдено ошибок',
+      noErrors: 'Ошибок нет',
+      noSupportedRuleMatches: 'Совпадений с поддерживаемыми правилами английского языка не найдено.',
+      fix: 'Исправить',
+      fixAll: 'Исправить все',
+      suggestion: 'Предложение',
+      preview: 'Предпросмотр',
+    }
+  : {
+      clear: 'Clear',
+      input: 'Input',
+      inputPlaceholder: 'Enter English text to check...',
+      languageNotice: 'This local checker is designed for English text.',
+      foundErrors: 'Errors found',
+      noErrors: 'No errors found',
+      noSupportedRuleMatches: 'No supported English rule matches were found.',
+      fix: 'Fix',
+      fixAll: 'Fix all',
+      suggestion: 'Suggestion',
+      preview: 'Preview',
+    };
+
+const translations = {
+  tools: {
+    clear: copy.clear,
+    input: copy.input,
+    'grammar-checker': copy,
+  },
+};
+---
+
+<html lang={locale}>
+  <body>
+    <main>
+      <GrammarLanguageNotice {locale} text={copy.languageNotice} />
+      <GrammarChecker client:load {locale} {translations} />
+    </main>
+  </body>
+</html>

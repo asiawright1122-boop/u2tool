@@ -1,7 +1,7 @@
 import { describe, expect, it, vi } from 'vitest';
 
 import {
-  GRAMMAR_CHECKER_INPUT_BOUNDARY,
+  GRAMMAR_CHECKER_LARGE_INPUT_LENGTH,
   grammarCheckerEnglishFixtures,
 } from './fixtures/grammar-checker/en';
 import { getGrammarLanguageSupport } from './grammar-language-support';
@@ -20,12 +20,12 @@ describe('grammar checker rules', () => {
     ]);
   });
 
-  it('accepts empty and boundary-length plain-text input [capability:grammar-checker:accepted-input:plain-text]', () => {
+  it('accepts empty and large plain-text fixtures', () => {
     expect(checkGrammar(grammarCheckerEnglishFixtures.empty)).toEqual([]);
-    expect(grammarCheckerEnglishFixtures.boundaryLength).toHaveLength(
-      GRAMMAR_CHECKER_INPUT_BOUNDARY,
+    expect(grammarCheckerEnglishFixtures.largeInput).toHaveLength(
+      GRAMMAR_CHECKER_LARGE_INPUT_LENGTH,
     );
-    expect(checkGrammar(grammarCheckerEnglishFixtures.boundaryLength)).toEqual(
+    expect(checkGrammar(grammarCheckerEnglishFixtures.largeInput)).toEqual(
       [],
     );
   });
@@ -130,7 +130,7 @@ describe('grammar checker rules', () => {
       [grammarCheckerEnglishFixtures.subjectVerbAgreement, 1],
       [grammarCheckerEnglishFixtures.empty, 0],
       [grammarCheckerEnglishFixtures.punctuation, 1],
-      [grammarCheckerEnglishFixtures.boundaryLength, 0],
+      [grammarCheckerEnglishFixtures.largeInput, 0],
       [grammarCheckerEnglishFixtures.cyrillicNonTarget, 0],
     ]);
 

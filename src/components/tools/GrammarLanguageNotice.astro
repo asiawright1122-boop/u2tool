@@ -1,0 +1,22 @@
+---
+import { getGrammarLanguageSupport } from '@/lib/grammar-language-support';
+import type { Locale } from '@/lib/i18n';
+
+interface Props {
+  locale: Locale;
+  text: string;
+}
+
+const { locale, text } = Astro.props;
+const languageSupport = getGrammarLanguageSupport(locale);
+---
+
+<p
+  id="grammar-checker-language-notice"
+  role="note"
+  class="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100"
+  data-grammar-language-notice
+  data-input-language={languageSupport.localInputLanguage}
+>
+  {text}
+</p>

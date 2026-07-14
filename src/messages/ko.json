@@ -11899,15 +11899,14 @@
     },
     "grammar-checker": {
       "name": "문법 체커",
-      "description": "문법 오류를 확인하고 교정 제안을 받으세요",
-      "seo_title": "문법 체커 온라인 - U2Tool",
-      "seo_description": "문법 체커를 브라우저에서 열어 입력, 출력, 결과를 빠르게 확인하세요. 가입이나 설치 없이 사용할 수 있습니다.",
-
-
-
-      "inputPlaceholder": "문법 검사할 텍스트 입력...",
+      "description": "브라우저의 정적 규칙으로 영어 텍스트의 일반적인 문법, 철자, 문장부호 문제를 확인하세요",
+      "seo_title": "무료 영어 문법 체커 - 브라우저 로컬 규칙",
+      "seo_description": "한국어로 번역된 화면에서 영어 텍스트를 검토하세요. 영어용 정적 규칙이 브라우저에서 문제를 강조하고 수정 제안을 표시하며 AI나 서버 처리를 사용하지 않습니다.",
+      "inputPlaceholder": "검사할 영어 텍스트 입력...",
+      "languageNotice": "인터페이스는 한국어로 번역되어 있지만 체커는 영어 텍스트를 평가합니다.",
       "foundErrors": "오류 발견",
       "noErrors": "오류 없음",
+      "noSupportedRuleMatches": "지원되는 영어 규칙과 일치하는 항목을 찾지 못했습니다.",
       "fix": "수정",
       "fixAll": "모두 수정",
       "suggestion": "제안",
