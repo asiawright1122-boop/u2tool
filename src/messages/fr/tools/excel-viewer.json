@@ -11,7 +11,7 @@
     "uploadFile": "Choisir un classeur Excel",
     "supportedFormats": "XLS, XLSX ou XLSM · traitement local",
     "localNotice": "Le classeur reste dans votre navigateur et n’est pas téléversé.",
-    "fileLimit": "Taille maximale : 10 MiB. Les macros ne sont jamais exécutées.",
+    "fileLimit": "Taille maximale : 10 MiB. Chaque feuille accepte au plus 10,000 lignes, 256 colonnes ou 250,000 cellules. Les macros ne sont jamais exécutées.",
     "loading": "Lecture locale du classeur…",
     "fileLoaded": "Classeur chargé",
     "workbookWarnings": "Limites d’affichage",
@@ -26,7 +26,7 @@
     "displayFormulas": "Formules",
     "mergedRanges": "Plages fusionnées",
     "blankHeader": "Colonne {column}",
-    "showingRows": "{visible} lignes sur {total}",
+    "showingRows": "Lignes {start}–{end} sur {matching} correspondantes ({total} au total)",
     "noResults": "Aucune ligne ne correspond à ce filtre.",
     "emptySheet": "Cette feuille ne contient aucune cellule utilisée.",
     "downloadCsv": "Télécharger le CSV de la feuille choisie",
@@ -34,7 +34,12 @@
     "warningMacros": "Des macros sont présentes, mais ne sont pas exécutées.",
     "warningCharts": "Des graphiques sont présents, mais ne sont pas reproduits.",
     "warningFormatting": "La mise en forme complexe peut ne pas être entièrement reproduite.",
-    "warningFormulas": "Les formules sont affichées, mais ne sont pas recalculées ; les valeurs proviennent du cache du classeur."
+    "warningFormulas": "Les formules sont affichées, mais ne sont pas recalculées ; les valeurs proviennent du cache du classeur.",
+    "workbookLimitError": "Une feuille dépasse la limite de la visionneuse : {rows} lignes, {columns} colonnes ou {cells} cellules.",
+    "pagination": "Pages de lignes de la feuille",
+    "pageSummary": "Page {current} sur {total}",
+    "previousPage": "Page précédente",
+    "nextPage": "Page suivante"
   },
   "capabilities": {
     "modes": {
@@ -56,7 +61,8 @@
       "mergedRanges": "Avis de plages fusionnées",
       "singleColumnSort": "Tri stable sur une colonne",
       "singleColumnFilter": "Filtre texte sur une colonne",
-      "csvDownload": "Téléchargement CSV de la feuille choisie"
+      "csvDownload": "Téléchargement CSV de la feuille choisie",
+      "rowPagination": "Pagination de 100 lignes par page"
     },
     "limits": {
       "tenMibFiles": "Classeur de 10 MiB maximum",
@@ -64,7 +70,8 @@
       "noMacroExecution": "Les macros ne sont pas exécutées",
       "noFormulaRecalculation": "Les formules ne sont pas recalculées",
       "noChartRendering": "Les graphiques ne sont pas reproduits",
-      "limitedFormattingFidelity": "La mise en forme complexe peut ne pas être entièrement reproduite"
+      "limitedFormattingFidelity": "La mise en forme complexe peut ne pas être entièrement reproduite",
+      "worksheetDataLimits": "Au plus 10,000 lignes, 256 colonnes ou 250,000 cellules par feuille"
     }
   },
   "detailed_description": "La Visionneuse Excel ouvre localement les données XLS, XLSX et XLSM jusqu’à 10 MiB. Changez de feuille, consultez les adresses et valeurs en cache, affichez le texte des formules, voyez les plages fusionnées, triez ou filtrez une colonne et téléchargez la feuille choisie en CSV. Le fichier n’est pas téléversé. Les macros ne sont pas exécutées, les formules ne sont pas recalculées, les graphiques ne sont pas reproduits et la mise en forme complexe peut ne pas être entièrement reproduite.",

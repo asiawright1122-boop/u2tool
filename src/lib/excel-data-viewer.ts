@@ -19,6 +19,35 @@ export interface ExcelWorkbookView {
   warnings: string[];
 }
 
+export const EXCEL_MAX_ROWS_PER_SHEET = 10_000;
+export const EXCEL_MAX_COLUMNS_PER_SHEET = 256;
+export const EXCEL_MAX_CELLS_PER_SHEET = 250_000;
+
+export type ExcelWorkbookLimitDimension = 'rows' | 'columns' | 'cells';
+
+export class ExcelWorkbookLimitError extends Error {
+  readonly sheetName: string;
+  readonly dimension: ExcelWorkbookLimitDimension;
+  readonly actual: number;
+  readonly limit: number;
+
+  constructor(input: {
+    sheetName: string;
+    dimension: ExcelWorkbookLimitDimension;
+    actual: number;
+    limit: number;
+  }) {
+    super(
+      `Worksheet ${JSON.stringify(input.sheetName)} exceeds the ${input.dimension} limit (${input.actual} > ${input.limit}).`,
+    );
+    this.name = 'ExcelWorkbookLimitError';
+    this.sheetName = input.sheetName;
+    this.dimension = input.dimension;
+    this.actual = input.actual;
+    this.limit = input.limit;
+  }
+}
+
 type WorkbookStyleMetadata = {
   Fonts?: unknown[];
   Fills?: unknown[];
@@ -69,13 +98,59 @@ function cellView(worksheet: XLSX.WorkSheet, address: string): ExcelCellView {
   };
 }
 
-function sheetView(name: string, worksheet: XLSX.WorkSheet): ExcelSheetView {
-  const range = worksheet['!ref'] || '';
-  if (!range) {
-    return { name, range, headers: [], rows: [], merges: [] };
+function actualWorksheetBounds(worksheet: XLSX.WorkSheet): XLSX.Range | null {
+  let startRow = Number.POSITIVE_INFINITY;
+  let startColumn = Number.POSITIVE_INFINITY;
+  let endRow = -1;
+  let endColumn = -1;
+
+  for (const address of Object.keys(worksheet)) {
+    if (!/^[A-Z]{1,3}[1-9]\d*$/.test(address)) {
+      continue;
+    }
+    const cell = XLSX.utils.decode_cell(address);
+    startRow = Math.min(startRow, cell.r);
+    startColumn = Math.min(startColumn, cell.c);
+    endRow = Math.max(endRow, cell.r);
+    endColumn = Math.max(endColumn, cell.c);
   }
 
-  const bounds = XLSX.utils.decode_range(range);
+  if (endRow < 0 || endColumn < 0) {
+    return null;
+  }
+  return {
+    s: { r: startRow, c: startColumn },
+    e: { r: endRow, c: endColumn },
+  };
+}
+
+function assertWorksheetLimits(name: string, bounds: XLSX.Range): void {
+  const rows = bounds.e.r - bounds.s.r + 1;
+  const columns = bounds.e.c - bounds.s.c + 1;
+  const cells = rows * columns;
+  const checks: Array<{
+    dimension: ExcelWorkbookLimitDimension;
+    actual: number;
+    limit: number;
+  }> = [
+    { dimension: 'rows', actual: rows, limit: EXCEL_MAX_ROWS_PER_SHEET },
+    { dimension: 'columns', actual: columns, limit: EXCEL_MAX_COLUMNS_PER_SHEET },
+    { dimension: 'cells', actual: cells, limit: EXCEL_MAX_CELLS_PER_SHEET },
+  ];
+  const exceeded = checks.find(({ actual, limit }) => actual > limit);
+  if (exceeded) {
+    throw new ExcelWorkbookLimitError({ sheetName: name, ...exceeded });
+  }
+}
+
+function sheetView(name: string, worksheet: XLSX.WorkSheet): ExcelSheetView {
+  const bounds = actualWorksheetBounds(worksheet);
+  if (!bounds) {
+    return { name, range: '', headers: [], rows: [], merges: [] };
+  }
+  assertWorksheetLimits(name, bounds);
+
+  const range = XLSX.utils.encode_range(bounds);
   const headers: string[] = [];
   for (let column = bounds.s.c; column <= bounds.e.c; column += 1) {
     const address = XLSX.utils.encode_cell({ r: bounds.s.r, c: column });

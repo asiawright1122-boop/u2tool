@@ -515,6 +515,55 @@ describe("assessToolCapabilityClaims", () => {
   });
 
   it.each([
+    ["en", "Exports selected sheet as XLSX.", "Exports selected spreadsheet data as CSV."],
+    ["zh", "将所选工作表导出为 XLSX 文件。", "将所选工作表数据导出为 CSV。"],
+    ["ja", "選択したシートをXLSXファイルとしてエクスポートします。", "選択したシートのデータをCSVでエクスポートします。"],
+    ["ko", "선택한 시트를 XLSX 파일로 내보냅니다.", "선택한 시트 데이터를 CSV로 내보냅니다."],
+    ["es", "Exporta la hoja seleccionada como archivo XLSX.", "Exporta los datos de la hoja seleccionada como CSV."],
+    ["pt", "Exporta a planilha selecionada como arquivo XLSX.", "Exporta os dados da planilha selecionada em CSV."],
+    ["fr", "Exporte la feuille sélectionnée dans un fichier XLSX.", "Exporte les données de la feuille sélectionnée en CSV."],
+    ["de", "Exportiert das ausgewählte Blatt als XLSX-Datei.", "Exportiert die Daten des ausgewählten Blatts als CSV."],
+    ["ru", "Экспортирует выбранный лист как файл XLSX.", "Экспортирует данные выбранного листа в CSV."],
+    ["ar", "يصدر الورقة المحددة كملف XLSX.", "يصدر بيانات الورقة المحددة بصيغة CSV."],
+  ] as const)(
+    "blocks Excel-workbook export but permits selected-sheet CSV data in %s",
+    (locale, workbookExport, csvExport) => {
+      const blocked = assessToolCapabilityClaims({
+        slug: "excel-viewer",
+        locale,
+        text: workbookExport,
+      });
+      const allowed = assessToolCapabilityClaims({
+        slug: "excel-viewer",
+        locale,
+        text: csvExport,
+      });
+
+      expect(blocked.issues.map((issue) => issue.code)).toContain(
+        "excel-viewer-export-claim",
+      );
+      expect(allowed.issues).toEqual([]);
+    },
+  );
+
+  it("blocks an XLSX result download without treating spreadsheet CSV data as workbook export", () => {
+    expect(
+      assessToolCapabilityClaims({
+        slug: "excel-viewer",
+        locale: "en",
+        text: "Downloads result as an XLSX file.",
+      }).issues.map((issue) => issue.code),
+    ).toContain("excel-viewer-export-claim");
+    expect(
+      assessToolCapabilityClaims({
+        slug: "excel-viewer",
+        locale: "en",
+        text: "Exports spreadsheet data as CSV.",
+      }).issues,
+    ).toEqual([]);
+  });
+
+  it.each([
     [
       "de",
       "Der visuelle Zeitplan hilft, Abhängigkeiten zu identifizieren. Planen Sie ein Bauvorhaben mit Meilensteinen.",

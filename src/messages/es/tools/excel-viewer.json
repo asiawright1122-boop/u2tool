@@ -11,7 +11,7 @@
     "uploadFile": "Elegir un libro de Excel",
     "supportedFormats": "XLS, XLSX o XLSM · procesamiento local",
     "localNotice": "El libro permanece en tu navegador y no se sube.",
-    "fileLimit": "Tamaño máximo: 10 MiB. Las macros nunca se ejecutan.",
+    "fileLimit": "Tamaño máximo: 10 MiB. Cada hoja admite hasta 10,000 filas, 256 columnas o 250,000 celdas. Las macros nunca se ejecutan.",
     "loading": "Leyendo el libro localmente…",
     "fileLoaded": "Libro cargado",
     "workbookWarnings": "Límites de visualización",
@@ -26,7 +26,7 @@
     "displayFormulas": "Fórmulas",
     "mergedRanges": "Rangos combinados",
     "blankHeader": "Columna {column}",
-    "showingRows": "Mostrando {visible} de {total} filas",
+    "showingRows": "Filas {start}–{end} de {matching} coincidentes ({total} en total)",
     "noResults": "Ninguna fila coincide con este filtro.",
     "emptySheet": "Esta hoja no tiene celdas usadas.",
     "downloadCsv": "Descargar CSV de la hoja seleccionada",
@@ -34,7 +34,12 @@
     "warningMacros": "Hay macros, pero no se ejecutan.",
     "warningCharts": "Hay gráficos, pero no se reproducen.",
     "warningFormatting": "El formato complejo puede no reproducirse por completo.",
-    "warningFormulas": "Las fórmulas se muestran, pero no se vuelven a calcular; los valores son resultados en caché del libro."
+    "warningFormulas": "Las fórmulas se muestran, pero no se vuelven a calcular; los valores son resultados en caché del libro.",
+    "workbookLimitError": "Una hoja supera el límite del visor de {rows} filas, {columns} columnas o {cells} celdas.",
+    "pagination": "Páginas de filas de la hoja",
+    "pageSummary": "Página {current} de {total}",
+    "previousPage": "Página anterior",
+    "nextPage": "Página siguiente"
   },
   "capabilities": {
     "modes": {
@@ -56,7 +61,8 @@
       "mergedRanges": "Avisos de rangos combinados",
       "singleColumnSort": "Ordenación estable de una columna",
       "singleColumnFilter": "Filtro de texto de una columna",
-      "csvDownload": "Descarga CSV de la hoja seleccionada"
+      "csvDownload": "Descarga CSV de la hoja seleccionada",
+      "rowPagination": "Paginación de 100 filas por página"
     },
     "limits": {
       "tenMibFiles": "Libro de hasta 10 MiB",
@@ -64,7 +70,8 @@
       "noMacroExecution": "Las macros no se ejecutan",
       "noFormulaRecalculation": "Las fórmulas no se recalculan",
       "noChartRendering": "Los gráficos no se reproducen",
-      "limitedFormattingFidelity": "El formato complejo puede no reproducirse por completo"
+      "limitedFormattingFidelity": "El formato complejo puede no reproducirse por completo",
+      "worksheetDataLimits": "Hasta 10,000 filas, 256 columnas o 250,000 celdas por hoja"
     }
   },
   "detailed_description": "El Visor de Excel abre localmente libros XLS, XLSX y XLSM de hasta 10 MiB. Permite cambiar de hoja, revisar direcciones y valores en caché, alternar el texto de fórmulas, ver rangos combinados, ordenar o filtrar una columna y descargar la hoja elegida como CSV. El archivo no se sube. Las macros no se ejecutan, las fórmulas no se recalculan, los gráficos no se reproducen y el formato complejo puede no reproducirse por completo.",

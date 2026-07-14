@@ -11,7 +11,7 @@
     "uploadFile": "选择 Excel 工作簿",
     "supportedFormats": "XLS、XLSX 或 XLSM · 本地处理",
     "localNotice": "工作簿只在浏览器中处理，不会上传。",
-    "fileLimit": "最大文件大小：10 MiB。宏不会被执行。",
+    "fileLimit": "最大文件大小：10 MiB。每个工作表最多 10,000 行、256 列或 250,000 个单元格。宏不会被执行。",
     "loading": "正在本地读取工作簿…",
     "fileLoaded": "已加载工作簿",
     "workbookWarnings": "工作簿显示限制",
@@ -26,7 +26,7 @@
     "displayFormulas": "公式",
     "mergedRanges": "合并区域",
     "blankHeader": "第 {column} 列",
-    "showingRows": "显示 {visible} / {total} 行",
+    "showingRows": "第 {start}–{end} 行，共 {matching} 个匹配行（总计 {total} 行）",
     "noResults": "没有符合此筛选条件的行。",
     "emptySheet": "此工作表没有已使用的单元格。",
     "downloadCsv": "下载所选工作表 CSV",
@@ -34,7 +34,12 @@
     "warningMacros": "检测到宏，但不会执行。",
     "warningCharts": "检测到图表，但不会重现。",
     "warningFormatting": "复杂格式可能无法完整重现。",
-    "warningFormulas": "显示公式但不重新计算；所示值来自工作簿的缓存结果。"
+    "warningFormulas": "显示公式但不重新计算；所示值来自工作簿的缓存结果。",
+    "workbookLimitError": "工作表超过查看器限制：{rows} 行、{columns} 列或 {cells} 个单元格。",
+    "pagination": "工作表行分页",
+    "pageSummary": "第 {current} / {total} 页",
+    "previousPage": "上一页",
+    "nextPage": "下一页"
   },
   "capabilities": {
     "modes": {
@@ -56,7 +61,8 @@
       "mergedRanges": "合并区域提示",
       "singleColumnSort": "稳定的单列排序",
       "singleColumnFilter": "单列文本筛选",
-      "csvDownload": "所选工作表 CSV 下载"
+      "csvDownload": "所选工作表 CSV 下载",
+      "rowPagination": "每页 100 行的工作表分页"
     },
     "limits": {
       "tenMibFiles": "工作簿最大 10 MiB",
@@ -64,7 +70,8 @@
       "noMacroExecution": "宏不会执行",
       "noFormulaRecalculation": "显示公式但不重新计算",
       "noChartRendering": "不重现图表",
-      "limitedFormattingFidelity": "复杂格式可能无法完整重现"
+      "limitedFormattingFidelity": "复杂格式可能无法完整重现",
+      "worksheetDataLimits": "每个工作表最多 10,000 行、256 列或 250,000 个单元格"
     }
   },
   "detailed_description": "Excel 查看器可在浏览器本地打开最大 10 MiB 的 XLS、XLSX 和 XLSM 工作簿数据。可切换工作表、查看单元格地址和缓存值、切换公式文本、检查合并区域、按单列排序或筛选，并将所选工作表下载为 CSV。文件不会上传；宏不会执行，公式不会重新计算，图表不会重现，复杂格式可能无法完整重现。",

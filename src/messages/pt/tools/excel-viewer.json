@@ -11,7 +11,7 @@
     "uploadFile": "Escolher uma pasta de trabalho do Excel",
     "supportedFormats": "XLS, XLSX ou XLSM · processamento local",
     "localNotice": "A pasta de trabalho fica no navegador e não é enviada.",
-    "fileLimit": "Tamanho máximo: 10 MiB. Macros nunca são executadas.",
+    "fileLimit": "Tamanho máximo: 10 MiB. Cada planilha aceita até 10,000 linhas, 256 colunas ou 250,000 células. Macros nunca são executadas.",
     "loading": "Lendo a pasta de trabalho localmente…",
     "fileLoaded": "Pasta de trabalho carregada",
     "workbookWarnings": "Limites de exibição",
@@ -26,7 +26,7 @@
     "displayFormulas": "Fórmulas",
     "mergedRanges": "Intervalos mesclados",
     "blankHeader": "Coluna {column}",
-    "showingRows": "Mostrando {visible} de {total} linhas",
+    "showingRows": "Linhas {start}–{end} de {matching} correspondentes ({total} no total)",
     "noResults": "Nenhuma linha corresponde ao filtro.",
     "emptySheet": "Esta planilha não tem células usadas.",
     "downloadCsv": "Baixar CSV da planilha selecionada",
@@ -34,7 +34,12 @@
     "warningMacros": "Há macros, mas não são executadas.",
     "warningCharts": "Há gráficos, mas não são reproduzidos.",
     "warningFormatting": "A formatação complexa pode não ser totalmente reproduzida.",
-    "warningFormulas": "As fórmulas são exibidas, mas não são recalculadas; os valores são resultados em cache da pasta de trabalho."
+    "warningFormulas": "As fórmulas são exibidas, mas não são recalculadas; os valores são resultados em cache da pasta de trabalho.",
+    "workbookLimitError": "Uma planilha excede o limite do visualizador de {rows} linhas, {columns} colunas ou {cells} células.",
+    "pagination": "Páginas de linhas da planilha",
+    "pageSummary": "Página {current} de {total}",
+    "previousPage": "Página anterior",
+    "nextPage": "Próxima página"
   },
   "capabilities": {
     "modes": {
@@ -56,7 +61,8 @@
       "mergedRanges": "Avisos de intervalos mesclados",
       "singleColumnSort": "Ordenação estável de uma coluna",
       "singleColumnFilter": "Filtro de texto de uma coluna",
-      "csvDownload": "Download CSV da planilha selecionada"
+      "csvDownload": "Download CSV da planilha selecionada",
+      "rowPagination": "Paginação de 100 linhas por página"
     },
     "limits": {
       "tenMibFiles": "Pasta de até 10 MiB",
@@ -64,7 +70,8 @@
       "noMacroExecution": "As macros não são executadas",
       "noFormulaRecalculation": "As fórmulas não são recalculadas",
       "noChartRendering": "Os gráficos não são reproduzidos",
-      "limitedFormattingFidelity": "A formatação complexa pode não ser totalmente reproduzida"
+      "limitedFormattingFidelity": "A formatação complexa pode não ser totalmente reproduzida",
+      "worksheetDataLimits": "Até 10,000 linhas, 256 colunas ou 250,000 células por planilha"
     }
   },
   "detailed_description": "O Visualizador de Excel abre localmente dados XLS, XLSX e XLSM de até 10 MiB. Alterne planilhas, veja endereços e valores em cache, mostre o texto das fórmulas, confira intervalos mesclados, ordene ou filtre uma coluna e baixe a planilha selecionada em CSV. O arquivo não é enviado. Macros não são executadas, fórmulas não são recalculadas, gráficos não são reproduzidos e a formatação complexa pode não ser totalmente reproduzida.",

@@ -54,7 +54,7 @@ describe('Excel viewer message catalogs', () => {
     }
   });
 
-  it('states the 10 MiB local-only and non-executing workbook boundary in every aggregate, base, and split catalog [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:limit:ten-mib-files] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-macro-execution] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:limit:no-chart-rendering] [capability:excel-viewer:limit:limited-formatting-fidelity]', () => {
+  it('states the file, worksheet-data, local-only, and non-executing workbook boundaries in every aggregate, base, and split catalog [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:limit:ten-mib-files] [capability:excel-viewer:limit:worksheet-data-limits] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-macro-execution] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:limit:no-chart-rendering] [capability:excel-viewer:limit:limited-formatting-fidelity]', () => {
     for (const locale of locales) {
       const catalogs = {
         aggregate: excelEntry(readCatalog(`${locale}.json`)),
@@ -65,6 +65,9 @@ describe('Excel viewer message catalogs', () => {
       for (const [name, catalog] of Object.entries(catalogs)) {
         const copy = JSON.stringify(catalog);
         expect(copy, `${locale} ${name} 10 MiB`).toMatch(/10\s*MiB/iu);
+        expect(copy, `${locale} ${name} 10,000 worksheet rows`).toMatch(/10,000/u);
+        expect(copy, `${locale} ${name} 256 worksheet columns`).toMatch(/256/u);
+        expect(copy, `${locale} ${name} 250,000 worksheet cells`).toMatch(/250,000/u);
         expect(copy, `${locale} ${name} local privacy`).toMatch(localPrivacyPatterns[locale]);
         for (const pattern of warningPatterns[locale]) {
           expect(copy, `${locale} ${name} warning ${pattern}`).toMatch(pattern);
@@ -81,12 +84,18 @@ describe('Excel viewer message catalogs', () => {
       'invalidFileType',
       'fileTooLarge',
       'parseError',
+      'workbookLimitError',
       'readError',
       'localNotice',
       'fileLimit',
       'displayValues',
       'displayFormulas',
       'mergedRanges',
+      'showingRows',
+      'pagination',
+      'pageSummary',
+      'previousPage',
+      'nextPage',
       'downloadCsv',
       'downloadError',
       'warningMacros',
@@ -107,8 +116,10 @@ describe('Excel viewer message catalogs', () => {
       ['features', 'mergedRanges'],
       ['features', 'singleColumnSort'],
       ['features', 'singleColumnFilter'],
+      ['features', 'rowPagination'],
       ['features', 'csvDownload'],
       ['limits', 'tenMibFiles'],
+      ['limits', 'worksheetDataLimits'],
       ['limits', 'localFilesOnly'],
       ['limits', 'noMacroExecution'],
       ['limits', 'noFormulaRecalculation'],

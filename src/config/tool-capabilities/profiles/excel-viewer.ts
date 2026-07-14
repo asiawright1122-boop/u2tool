@@ -4,7 +4,31 @@ import { defineToolCapabilityProfile } from '../define-profile';
 const workbookViewEvidence = {
   file: 'src/components/tools/ExcelViewer.test.ts',
   testName:
-    'opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:sheet-tabs] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]',
+    'opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]',
+};
+
+const modelBoundsEvidence = {
+  file: 'src/lib/excel-data-viewer.test.ts',
+  testName:
+    'derives worksheet bounds from actual cells instead of a hostile declared range [capability:excel-viewer:profile:release-readiness]',
+};
+
+const worksheetLimitEvidence = {
+  file: 'src/lib/excel-data-viewer.test.ts',
+  testName:
+    'rejects actual worksheet spans beyond row, column, or cell limits before allocation [capability:excel-viewer:limit:worksheet-data-limits]',
+};
+
+const sheetTabEvidence = {
+  file: 'src/components/tools/ExcelViewer.test.ts',
+  testName:
+    'supports a focus-visible file picker and roving locale-aware sheet tabs [capability:excel-viewer:browser-feature:sheet-tabs]',
+};
+
+const paginationEvidence = {
+  file: 'src/components/tools/ExcelViewer.test.ts',
+  testName:
+    'paginates accepted rows while sort, filter, and sheet changes reset to the first page and CSV remains complete [capability:excel-viewer:browser-feature:row-pagination]',
 };
 
 const csvEvidence = {
@@ -34,7 +58,7 @@ const catalogParityEvidence = {
 const catalogSafetyEvidence = {
   file: 'src/messages/excel-viewer-catalog.test.ts',
   testName:
-    'states the 10 MiB local-only and non-executing workbook boundary in every aggregate, base, and split catalog [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:limit:ten-mib-files] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-macro-execution] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:limit:no-chart-rendering] [capability:excel-viewer:limit:limited-formatting-fidelity]',
+    'states the file, worksheet-data, local-only, and non-executing workbook boundaries in every aggregate, base, and split catalog [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:limit:ten-mib-files] [capability:excel-viewer:limit:worksheet-data-limits] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-macro-execution] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:limit:no-chart-rendering] [capability:excel-viewer:limit:limited-formatting-fidelity]',
 };
 
 export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
@@ -89,7 +113,7 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
     {
       id: 'sheet-tabs',
       labelKey: 'tools.excel-viewer.capabilities.features.sheetTabs',
-      evidence: workbookViewEvidence,
+      evidence: sheetTabEvidence,
     },
     {
       id: 'cell-addresses',
@@ -117,6 +141,11 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
       evidence: csvEvidence,
     },
     {
+      id: 'row-pagination',
+      labelKey: 'tools.excel-viewer.capabilities.features.rowPagination',
+      evidence: paginationEvidence,
+    },
+    {
       id: 'csv-download',
       labelKey: 'tools.excel-viewer.capabilities.features.csvDownload',
       evidence: csvEvidence,
@@ -128,6 +157,11 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
       id: 'ten-mib-files',
       labelKey: 'tools.excel-viewer.capabilities.limits.tenMibFiles',
       evidence: fileLimitEvidence,
+    },
+    {
+      id: 'worksheet-data-limits',
+      labelKey: 'tools.excel-viewer.capabilities.limits.worksheetDataLimits',
+      evidence: worksheetLimitEvidence,
     },
     {
       id: 'local-files-only',
@@ -183,7 +217,7 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
     {
       code: 'excel-viewer-export-claim',
       pattern:
-        /(?<!not )(?<!n't )\b(?:exports?|downloads?|saves?) (?:the )?(?:edited |converted )?(?:workbook|spreadsheet|Excel file)\b/i,
+        /(?<!not )(?<!n't )\b(?:exports?|downloads?|saves?)\s+(?:(?:(?:the|an?|selected|edited|converted)\s+)*(?:(?:Excel\s+)?workbooks?|Excel\s+spreadsheets?|(?:Excel|XLSX?|XLSM)\s+files?)|(?:(?:the|an?)\s+)?(?:selected\s+(?:sheet|worksheet|spreadsheet)|result|output)\s+as\s+(?:an?\s+)?(?:XLSX?|XLSM)(?:\s+file)?)\b/i,
       reason: 'The viewer exports selected-sheet CSV data, not an Excel workbook.',
     },
     {
@@ -205,6 +239,7 @@ export const excelViewerCapabilityProfile = defineToolCapabilityProfile({
   ],
   evidenceTests: [
     workbookViewEvidence,
+    modelBoundsEvidence,
     catalogParityEvidence,
     catalogSafetyEvidence,
   ],

@@ -11,7 +11,7 @@
     "uploadFile": "Excel 통합 문서 선택",
     "supportedFormats": "XLS, XLSX 또는 XLSM · 로컬 처리",
     "localNotice": "통합 문서는 브라우저에만 머물며 업로드되지 않습니다.",
-    "fileLimit": "최대 파일 크기: 10 MiB. 매크로는 실행되지 않습니다.",
+    "fileLimit": "최대 파일 크기: 10 MiB. 워크시트당 최대 10,000행, 256열 또는 250,000셀입니다. 매크로는 실행되지 않습니다.",
     "loading": "통합 문서를 로컬에서 읽는 중…",
     "fileLoaded": "불러온 통합 문서",
     "workbookWarnings": "통합 문서 표시 제한",
@@ -26,7 +26,7 @@
     "displayFormulas": "수식",
     "mergedRanges": "병합 범위",
     "blankHeader": "열 {column}",
-    "showingRows": "전체 {total}행 중 {visible}행 표시",
+    "showingRows": "일치하는 {matching}행(전체 {total}행) 중 {start}–{end}행",
     "noResults": "이 필터와 일치하는 행이 없습니다.",
     "emptySheet": "이 시트에는 사용된 셀이 없습니다.",
     "downloadCsv": "선택한 시트 CSV 다운로드",
@@ -34,7 +34,12 @@
     "warningMacros": "매크로가 있지만 실행되지 않습니다.",
     "warningCharts": "차트가 있지만 재현되지 않습니다.",
     "warningFormatting": "복잡한 서식은 완전히 재현되지 않을 수 있습니다.",
-    "warningFormulas": "수식은 표시되지만 다시 계산되지 않습니다. 값은 통합 문서의 캐시된 결과입니다."
+    "warningFormulas": "수식은 표시되지만 다시 계산되지 않습니다. 값은 통합 문서의 캐시된 결과입니다.",
+    "workbookLimitError": "워크시트가 뷰어 제한인 {rows}행, {columns}열 또는 {cells}셀을 초과합니다.",
+    "pagination": "워크시트 행 페이지",
+    "pageSummary": "{current} / {total}페이지",
+    "previousPage": "이전 페이지",
+    "nextPage": "다음 페이지"
   },
   "capabilities": {
     "modes": {
@@ -56,7 +61,8 @@
       "mergedRanges": "병합 범위 알림",
       "singleColumnSort": "안정적인 단일 열 정렬",
       "singleColumnFilter": "단일 열 텍스트 필터",
-      "csvDownload": "선택한 시트 CSV 다운로드"
+      "csvDownload": "선택한 시트 CSV 다운로드",
+      "rowPagination": "페이지당 100행 워크시트 페이지"
     },
     "limits": {
       "tenMibFiles": "최대 통합 문서 크기 10 MiB",
@@ -64,7 +70,8 @@
       "noMacroExecution": "매크로를 실행하지 않음",
       "noFormulaRecalculation": "수식을 표시하지만 다시 계산하지 않음",
       "noChartRendering": "차트를 재현하지 않음",
-      "limitedFormattingFidelity": "복잡한 서식이 완전히 재현되지 않을 수 있음"
+      "limitedFormattingFidelity": "복잡한 서식이 완전히 재현되지 않을 수 있음",
+      "worksheetDataLimits": "워크시트당 최대 10,000행, 256열 또는 250,000셀"
     }
   },
   "detailed_description": "Excel 뷰어는 최대 10 MiB의 XLS, XLSX, XLSM 통합 문서 데이터를 브라우저에서 로컬로 엽니다. 시트 전환, 셀 주소와 캐시 값, 수식 텍스트, 병합 범위, 단일 열 정렬·필터, 선택 시트 CSV 다운로드를 제공합니다. 파일은 업로드되지 않습니다. 매크로는 실행되지 않고, 수식은 다시 계산되지 않으며, 차트는 재현되지 않고, 복잡한 서식은 완전히 재현되지 않을 수 있습니다.",

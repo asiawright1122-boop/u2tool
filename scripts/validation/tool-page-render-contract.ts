@@ -257,7 +257,7 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     expectedLocalProcessing: true,
     bodyMustInclude: [
       'Your workbook stays in your browser and is never uploaded.',
-      'Maximum file size: 10 MiB. Macros are never executed.',
+      'Maximum file size: 10 MiB. Each worksheet is limited to 10,000 rows, 256 columns, or 250,000 cells. Macros are never executed.',
       'Download selected sheet CSV',
     ],
   },

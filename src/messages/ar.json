@@ -8703,7 +8703,7 @@
         "uploadFile": "اختيار مصنف Excel",
         "supportedFormats": "XLS أو XLSX أو XLSM · معالجة محلية",
         "localNotice": "يبقى المصنف في المتصفح ولا يتم رفعه.",
-        "fileLimit": "الحد الأقصى للحجم: 10 MiB. لا يتم تنفيذ وحدات الماكرو أبدًا.",
+        "fileLimit": "الحد الأقصى للحجم: 10 MiB. الحد لكل ورقة هو 10,000 صف و256 عمودًا أو 250,000 خلية. لا يتم تنفيذ وحدات الماكرو أبدًا.",
         "loading": "جارٍ قراءة المصنف محليًا…",
         "fileLoaded": "المصنف المحمّل",
         "workbookWarnings": "حدود عرض المصنف",
@@ -8718,7 +8718,7 @@
         "displayFormulas": "الصيغ",
         "mergedRanges": "النطاقات المدمجة",
         "blankHeader": "العمود {column}",
-        "showingRows": "عرض {visible} من {total} صفوف",
+        "showingRows": "الصفوف {start}–{end} من {matching} صفًا مطابقًا ({total} إجمالًا)",
         "noResults": "لا توجد صفوف مطابقة لهذه التصفية.",
         "emptySheet": "لا تحتوي هذه الورقة على خلايا مستخدمة.",
         "downloadCsv": "تنزيل CSV للورقة المحددة",
@@ -8726,7 +8726,12 @@
         "warningMacros": "وحدات الماكرو موجودة، لكن لا يتم تنفيذها.",
         "warningCharts": "المخططات موجودة، لكن لا يتم عرضها.",
         "warningFormatting": "قد لا يتم عرض التنسيق المعقد بالكامل.",
-        "warningFormulas": "يتم عرض الصيغ ولكن لا تتم إعادة حسابها؛ القيم هي نتائج مخزنة مؤقتًا في المصنف."
+        "warningFormulas": "يتم عرض الصيغ ولكن لا تتم إعادة حسابها؛ القيم هي نتائج مخزنة مؤقتًا في المصنف.",
+        "workbookLimitError": "تتجاوز إحدى الأوراق حد العارض البالغ {rows} صفًا أو {columns} عمودًا أو {cells} خلية.",
+        "pagination": "صفحات صفوف الورقة",
+        "pageSummary": "الصفحة {current} من {total}",
+        "previousPage": "الصفحة السابقة",
+        "nextPage": "الصفحة التالية"
       }
     },
     "excel-merger": {

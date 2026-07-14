@@ -8694,7 +8694,7 @@
         "uploadFile": "Elegir un libro de Excel",
         "supportedFormats": "XLS, XLSX o XLSM · procesamiento local",
         "localNotice": "El libro permanece en tu navegador y no se sube.",
-        "fileLimit": "Tamaño máximo: 10 MiB. Las macros nunca se ejecutan.",
+        "fileLimit": "Tamaño máximo: 10 MiB. Cada hoja admite hasta 10,000 filas, 256 columnas o 250,000 celdas. Las macros nunca se ejecutan.",
         "loading": "Leyendo el libro localmente…",
         "fileLoaded": "Libro cargado",
         "workbookWarnings": "Límites de visualización",
@@ -8709,7 +8709,7 @@
         "displayFormulas": "Fórmulas",
         "mergedRanges": "Rangos combinados",
         "blankHeader": "Columna {column}",
-        "showingRows": "Mostrando {visible} de {total} filas",
+        "showingRows": "Filas {start}–{end} de {matching} coincidentes ({total} en total)",
         "noResults": "Ninguna fila coincide con este filtro.",
         "emptySheet": "Esta hoja no tiene celdas usadas.",
         "downloadCsv": "Descargar CSV de la hoja seleccionada",
@@ -8717,7 +8717,12 @@
         "warningMacros": "Hay macros, pero no se ejecutan.",
         "warningCharts": "Hay gráficos, pero no se reproducen.",
         "warningFormatting": "El formato complejo puede no reproducirse por completo.",
-        "warningFormulas": "Las fórmulas se muestran, pero no se vuelven a calcular; los valores son resultados en caché del libro."
+        "warningFormulas": "Las fórmulas se muestran, pero no se vuelven a calcular; los valores son resultados en caché del libro.",
+        "workbookLimitError": "Una hoja supera el límite del visor de {rows} filas, {columns} columnas o {cells} celdas.",
+        "pagination": "Páginas de filas de la hoja",
+        "pageSummary": "Página {current} de {total}",
+        "previousPage": "Página anterior",
+        "nextPage": "Página siguiente"
       }
     },
     "excel-merger": {

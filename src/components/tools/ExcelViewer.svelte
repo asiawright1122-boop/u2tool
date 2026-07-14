@@ -1,5 +1,11 @@
 <script lang="ts">
+  import { onDestroy } from 'svelte';
+
   import {
+    EXCEL_MAX_CELLS_PER_SHEET,
+    EXCEL_MAX_COLUMNS_PER_SHEET,
+    EXCEL_MAX_ROWS_PER_SHEET,
+    ExcelWorkbookLimitError,
     filterExcelRows,
     parseExcelWorkbook,
     sheetToCsv,
@@ -18,6 +24,7 @@
 
   const EXCEL_FILE_LIMIT = 10 * 1024 * 1024;
   const EXCEL_FILE_PATTERN = /\.(?:xls|xlsx|xlsm)$/i;
+  const ROWS_PER_PAGE = 100;
 
   let { locale, translations }: Props = $props();
 
@@ -32,6 +39,11 @@
   let sortDirection = $state<SortDirection>('asc');
   let filterColumn = $state(-1);
   let filterQuery = $state('');
+  let currentPage = $state(0);
+  let readGeneration = 0;
+  let activeReader: FileReader | null = null;
+  const pendingObjectUrls = new Set<string>();
+  const objectUrlTimers = new Map<string, ReturnType<typeof setTimeout>>();
 
   let currentSheet = $derived(workbook?.sheets[selectedSheetIndex] ?? null);
   let visibleRows = $derived.by(() => {
@@ -48,6 +60,17 @@
   });
   let visibleWarnings = $derived(
     workbook?.warnings.map(localizeWorkbookWarning) ?? [],
+  );
+  let pageCount = $derived(Math.max(1, Math.ceil(visibleRows.length / ROWS_PER_PAGE)));
+  let pagedRows = $derived(
+    visibleRows.slice(
+      currentPage * ROWS_PER_PAGE,
+      (currentPage + 1) * ROWS_PER_PAGE,
+    ),
+  );
+  let firstVisibleRow = $derived(visibleRows.length === 0 ? 0 : currentPage * ROWS_PER_PAGE + 1);
+  let lastVisibleRow = $derived(
+    Math.min((currentPage + 1) * ROWS_PER_PAGE, visibleRows.length),
   );
 
   function t(
@@ -86,7 +109,26 @@
     sortDirection = 'asc';
     filterColumn = -1;
     filterQuery = '';
+    currentPage = 0;
     downloadError = '';
+  }
+
+  function invalidateActiveReader(): number {
+    readGeneration += 1;
+    const reader = activeReader;
+    activeReader = null;
+    if (reader?.readyState === 1) {
+      try {
+        reader.abort();
+      } catch {
+        // A browser may complete the read between readyState and abort().
+      }
+    }
+    return readGeneration;
+  }
+
+  function isCurrentRead(generation: number, reader: FileReader): boolean {
+    return generation === readGeneration && reader === activeReader;
   }
 
   function handleFileUpload(event: Event): void {
@@ -94,6 +136,9 @@
     const file = input.files?.[0];
     if (!file) return;
 
+    const generation = invalidateActiveReader();
+
+    loading = false;
     fileError = '';
     downloadError = '';
 
@@ -113,32 +158,59 @@
     clearWorkbook();
     loading = true;
     const reader = new FileReader();
+    activeReader = reader;
     reader.onerror = () => {
+      if (!isCurrentRead(generation, reader)) return;
       loading = false;
       clearWorkbook();
       fileError = t('excelViewer.readError');
       input.value = '';
+      activeReader = null;
     };
     reader.onload = async () => {
+      if (!isCurrentRead(generation, reader)) return;
       try {
         if (!(reader.result instanceof ArrayBuffer)) {
           throw new Error('Workbook reader returned no bytes');
         }
         const parsed = await parseExcelWorkbook(new Uint8Array(reader.result));
+        if (!isCurrentRead(generation, reader)) return;
         workbook = parsed;
         selectedSheetIndex = 0;
         fileName = file.name;
         fileError = '';
-      } catch {
+      } catch (error) {
+        if (!isCurrentRead(generation, reader)) return;
         clearWorkbook();
-        fileError = t('excelViewer.parseError');
+        fileError = error instanceof ExcelWorkbookLimitError
+          ? t('excelViewer.workbookLimitError', {
+              rows: EXCEL_MAX_ROWS_PER_SHEET.toLocaleString(locale),
+              columns: EXCEL_MAX_COLUMNS_PER_SHEET.toLocaleString(locale),
+              cells: EXCEL_MAX_CELLS_PER_SHEET.toLocaleString(locale),
+            })
+          : t('excelViewer.parseError');
       } finally {
-        loading = false;
-        input.value = '';
+        if (isCurrentRead(generation, reader)) {
+          loading = false;
+          input.value = '';
+          activeReader = null;
+        }
       }
     };
     reader.readAsArrayBuffer(file);
   }
+
+  onDestroy(() => {
+    invalidateActiveReader();
+    for (const timer of objectUrlTimers.values()) {
+      clearTimeout(timer);
+    }
+    for (const url of pendingObjectUrls) {
+      URL.revokeObjectURL(url);
+    }
+    objectUrlTimers.clear();
+    pendingObjectUrls.clear();
+  });
 
   function selectSheet(index: number): void {
     selectedSheetIndex = index;
@@ -146,7 +218,32 @@
     resetTableControls();
   }
 
+  function handleSheetTabKeydown(event: KeyboardEvent, index: number): void {
+    const tabList = (event.currentTarget as HTMLElement).closest('[role="tablist"]');
+    const tabs = Array.from(
+      tabList?.querySelectorAll<HTMLButtonElement>('[data-excel-sheet-tab]') ?? [],
+    );
+    if (tabs.length === 0) return;
+
+    let targetIndex: number | null = null;
+    if (event.key === 'Home') {
+      targetIndex = 0;
+    } else if (event.key === 'End') {
+      targetIndex = tabs.length - 1;
+    } else if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+      const rtl = locale === 'ar';
+      const forward = event.key === (rtl ? 'ArrowLeft' : 'ArrowRight');
+      targetIndex = (index + (forward ? 1 : -1) + tabs.length) % tabs.length;
+    }
+
+    if (targetIndex === null) return;
+    event.preventDefault();
+    selectSheet(targetIndex);
+    tabs[targetIndex]?.focus();
+  }
+
   function handleSort(column: number): void {
+    currentPage = 0;
     if (sortColumn !== column) {
       sortColumn = column;
       sortDirection = 'asc';
@@ -162,6 +259,20 @@
 
   function handleFilterColumn(event: Event): void {
     filterColumn = Number((event.currentTarget as HTMLSelectElement).value);
+    currentPage = 0;
+  }
+
+  function handleFilterQuery(event: Event): void {
+    filterQuery = (event.currentTarget as HTMLInputElement).value;
+    currentPage = 0;
+  }
+
+  function previousPage(): void {
+    currentPage = Math.max(0, currentPage - 1);
+  }
+
+  function nextPage(): void {
+    currentPage = Math.min(pageCount - 1, currentPage + 1);
   }
 
   function displayCellValue(cell: ExcelSheetView['rows'][number][number]): string {
@@ -186,25 +297,39 @@
     return `${workbookName}-${sheetName}.csv`;
   }
 
+  function revokeObjectUrl(url: string): void {
+    URL.revokeObjectURL(url);
+    pendingObjectUrls.delete(url);
+    objectUrlTimers.delete(url);
+  }
+
+  function scheduleObjectUrlRevoke(url: string): void {
+    pendingObjectUrls.add(url);
+    const timer = setTimeout(() => revokeObjectUrl(url), 0);
+    objectUrlTimers.set(url, timer);
+  }
+
   function downloadSelectedSheetCsv(): void {
     if (!currentSheet) return;
     downloadError = '';
     let objectUrl = '';
+    let anchor: HTMLAnchorElement | null = null;
     try {
       const blob = new Blob([sheetToCsv(currentSheet)], {
         type: 'text/csv;charset=utf-8',
       });
       objectUrl = URL.createObjectURL(blob);
-      const anchor = document.createElement('a');
+      anchor = document.createElement('a');
       anchor.href = objectUrl;
       anchor.download = csvFileName(currentSheet);
       document.body.append(anchor);
       anchor.click();
-      anchor.remove();
+      scheduleObjectUrlRevoke(objectUrl);
     } catch {
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
       downloadError = t('excelViewer.downloadError');
     } finally {
-      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      anchor?.remove();
     }
   }
 </script>
@@ -219,18 +344,17 @@
   </div>
 
   <div class="tool-dropzone">
-    <input
-      id="excel-viewer-upload"
-      class="sr-only"
-      type="file"
-      accept=".xls,.xlsx,.xlsm"
-      onchange={handleFileUpload}
-      data-excel-file-input
-    />
     <label
-      for="excel-viewer-upload"
-      class="flex cursor-pointer flex-col items-center gap-2 text-center focus-within:outline-none"
+      class="flex cursor-pointer flex-col items-center gap-2 rounded-lg text-center focus-within:outline-none focus-within:ring-2 focus-within:ring-amber-500 focus-within:ring-offset-2"
     >
+      <input
+        id="excel-viewer-upload"
+        class="sr-only"
+        type="file"
+        accept=".xls,.xlsx,.xlsm"
+        onchange={handleFileUpload}
+        data-excel-file-input
+      />
       <svg aria-hidden="true" viewBox="0 0 24 24" class="h-9 w-9 text-amber-700 dark:text-amber-300" fill="none" stroke="currentColor" stroke-width="1.8">
         <path d="M4 4.75A1.75 1.75 0 0 1 5.75 3h8.5L20 8.75v10.5A1.75 1.75 0 0 1 18.25 21H5.75A1.75 1.75 0 0 1 4 19.25z" />
         <path d="M14 3v6h6M8 13h8M8 17h5" />
@@ -314,10 +438,12 @@
             role="tab"
             aria-selected={selectedSheetIndex === index}
             aria-controls="excel-sheet-panel"
+            tabindex={selectedSheetIndex === index ? 0 : -1}
             class={`shrink-0 border-b-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 ${selectedSheetIndex === index
               ? 'border-amber-600 text-amber-800 dark:border-amber-400 dark:text-amber-200'
               : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-950 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-white'}`}
             onclick={() => selectSheet(index)}
+            onkeydown={(event) => handleSheetTabKeydown(event, index)}
             data-excel-sheet-tab={sheet.name}
           >
             {sheet.name}
@@ -358,7 +484,8 @@
                 id="excel-filter-query"
                 class="tool-input"
                 type="search"
-                bind:value={filterQuery}
+                value={filterQuery}
+                oninput={handleFilterQuery}
                 placeholder={t('excelViewer.enterValue')}
                 disabled={filterColumn < 0}
                 data-excel-filter-query
@@ -371,6 +498,7 @@
                 onclick={() => {
                   filterColumn = -1;
                   filterQuery = '';
+                  currentPage = 0;
                 }}
               >
                 {t('excelViewer.clearFilter')}
@@ -418,10 +546,41 @@
         {:else}
           <p class="text-sm text-gray-600 dark:text-gray-300" data-excel-row-count>
             {t('excelViewer.showingRows', {
-              visible: visibleRows.length,
+              start: firstVisibleRow,
+              end: lastVisibleRow,
+              matching: visibleRows.length,
               total: currentSheet.rows.length,
             })}
           </p>
+
+          <div class="flex flex-wrap items-center justify-between gap-3" aria-label={t('excelViewer.pagination')}>
+            <p class="text-sm font-medium text-gray-800 dark:text-gray-200" data-excel-page-summary>
+              {t('excelViewer.pageSummary', {
+                current: currentPage + 1,
+                total: pageCount,
+              })}
+            </p>
+            <div class="flex gap-2">
+              <button
+                type="button"
+                class="tool-btn-secondary"
+                disabled={currentPage === 0}
+                onclick={previousPage}
+                data-excel-previous-page
+              >
+                {t('excelViewer.previousPage')}
+              </button>
+              <button
+                type="button"
+                class="tool-btn-secondary"
+                disabled={currentPage >= pageCount - 1}
+                onclick={nextPage}
+                data-excel-next-page
+              >
+                {t('excelViewer.nextPage')}
+              </button>
+            </div>
+          </div>
 
           <div class="max-h-[32rem] overflow-auto rounded-lg border border-gray-300 dark:border-gray-700">
             <table class="min-w-full border-collapse text-sm">
@@ -451,7 +610,7 @@
                 </tr>
               </thead>
               <tbody class="divide-y divide-gray-200 bg-white dark:divide-gray-800 dark:bg-gray-950">
-                {#each visibleRows as row (row.map((cell) => cell.address).join('|'))}
+                {#each pagedRows as row (row.map((cell) => cell.address).join('|'))}
                   <tr class="hover:bg-gray-50 dark:hover:bg-gray-900" data-excel-row>
                     {#each row as cell, column (cell.address)}
                       <td

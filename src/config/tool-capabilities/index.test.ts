@@ -94,7 +94,7 @@ describe("pilot tool capability registry", () => {
       evidence: {
         file: "src/components/tools/ExcelViewer.test.ts",
         testName:
-          "opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:sheet-tabs] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]",
+          "opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]",
       },
     });
 
@@ -143,7 +143,12 @@ describe("pilot tool capability registry", () => {
     expect(sqlProfile.enforcement).toBe("release-blocking");
     expect(sqlProfile.evidenceTests).toHaveLength(4);
     expect(excelProfile.enforcement).toBe("release-blocking");
-    expect(excelProfile.evidenceTests).toHaveLength(3);
+    expect(excelProfile.evidenceTests).toHaveLength(4);
+    expect(excelProfile.evidenceTests).toContainEqual({
+      file: "src/lib/excel-data-viewer.test.ts",
+      testName:
+        "derives worksheet bounds from actual cells instead of a hostile declared range [capability:excel-viewer:profile:release-readiness]",
+    });
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
     expect(sqlProfile.optionalServerFeatures).toEqual([]);
 
@@ -229,10 +234,12 @@ describe("pilot tool capability registry", () => {
           "merged-ranges",
           "single-column-sort",
           "single-column-filter",
+          "row-pagination",
           "csv-download",
         ],
         limits: [
           "ten-mib-files",
+          "worksheet-data-limits",
           "local-files-only",
           "no-macro-execution",
           "no-formula-recalculation",

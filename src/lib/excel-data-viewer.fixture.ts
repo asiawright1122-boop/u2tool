@@ -56,6 +56,33 @@ export function createCorruptExcelWorkbookFixture(): Uint8Array {
   return new TextEncoder().encode('this is not a workbook');
 }
 
+export async function createExcelWorkbookDeclaredRangeFixture(
+  declaredRange = 'A1:XFD1048576',
+): Promise<Uint8Array> {
+  const workbook = XLSX.utils.book_new();
+  const worksheet = XLSX.utils.aoa_to_sheet([['Only actual cell']]);
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Sparse');
+  const archive = await JSZip.loadAsync(writeWorkbook(workbook));
+  const worksheetXml = (await archiveText(archive, 'xl/worksheets/sheet1.xml'))
+    .replace(/<dimension ref="[^"]+"\/>/, `<dimension ref="${declaredRange}"/>`);
+  archive.file('xl/worksheets/sheet1.xml', worksheetXml);
+  return archive.generateAsync({ type: 'uint8array' });
+}
+
+export function createExcelWorkbookSpanFixture(
+  end: XLSX.CellAddress,
+): Uint8Array {
+  const workbook = XLSX.utils.book_new();
+  const endAddress = XLSX.utils.encode_cell(end);
+  const worksheet: XLSX.WorkSheet = {
+    A1: { t: 's', v: 'Header' },
+    [endAddress]: { t: 's', v: 'Last cell' },
+    '!ref': `A1:${endAddress}`,
+  };
+  XLSX.utils.book_append_sheet(workbook, worksheet, 'Limit');
+  return writeWorkbook(workbook);
+}
+
 export function createExcelWorkbookDisplayFixture(): Uint8Array {
   const workbook = XLSX.utils.book_new();
   const worksheet = XLSX.utils.aoa_to_sheet([

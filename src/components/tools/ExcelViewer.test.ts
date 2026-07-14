@@ -6,6 +6,7 @@ import {
   existsSync,
   mkdirSync,
   mkdtempSync,
+  readFileSync,
   rmSync,
   statSync,
   symlinkSync,
@@ -24,7 +25,9 @@ import * as XLSX from 'xlsx';
 import {
   createExcelWorkbookFixture,
   createExcelWorkbookMetadataFixture,
+  createExcelWorkbookSpanFixture,
 } from '../../lib/excel-data-viewer.fixture';
+import { EXCEL_MAX_ROWS_PER_SHEET } from '../../lib/excel-data-viewer';
 
 const repoRoot = fileURLToPath(new URL('../../..', import.meta.url));
 const fixtureRoot = path.join(
@@ -45,6 +48,8 @@ let metadataWorkbookPath = '';
 let exactLimitWorkbookPath = '';
 let oversizedWorkbookPath = '';
 let invalidWorkbookPath = '';
+let largeWorkbookPath = '';
+let limitWorkbookPath = '';
 
 beforeAll(async () => {
   tempRoot = mkdtempSync(path.join(tmpdir(), 'u2tool-excel-viewer-'));
@@ -94,6 +99,27 @@ beforeAll(async () => {
   );
   invalidWorkbookPath = path.join(tempRoot, 'broken.xlsx');
   writeFileSync(invalidWorkbookPath, new TextEncoder().encode('not a workbook'));
+
+  const largeWorkbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(largeWorkbook, XLSX.utils.aoa_to_sheet([
+    ['Index', 'Label'],
+    ...Array.from({ length: 205 }, (_, index) => [index + 1, `Row ${index + 1}`]),
+  ]), 'Large');
+  XLSX.utils.book_append_sheet(largeWorkbook, XLSX.utils.aoa_to_sheet([
+    ['Status'],
+    ['Ready'],
+  ]), 'Other');
+  largeWorkbookPath = path.join(tempRoot, 'large.xlsx');
+  writeFileSync(
+    largeWorkbookPath,
+    XLSX.write(largeWorkbook, { type: 'buffer', bookType: 'xlsx' }),
+  );
+
+  limitWorkbookPath = path.join(tempRoot, 'row-limit.xlsx');
+  writeFileSync(
+    limitWorkbookPath,
+    createExcelWorkbookSpanFixture({ r: EXCEL_MAX_ROWS_PER_SHEET, c: 0 }),
+  );
 
   execFileSync(astroBin, ['build'], {
     cwd: projectRoot,
@@ -154,7 +180,7 @@ afterAll(async () => {
 });
 
 describe('ExcelViewer public UI', () => {
-  it('opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:sheet-tabs] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]', async () => {
+  it('opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]', async () => {
     const page = await openFixturePage();
     try {
       expect(
@@ -213,7 +239,7 @@ describe('ExcelViewer public UI', () => {
     const page = await openFixturePage();
     try {
       await page.evaluate(() => {
-        const state = { name: '', text: '' };
+        const state = { name: '', text: '', revoked: [] as string[] };
         (window as unknown as { __excelDownload: typeof state }).__excelDownload = state;
         URL.createObjectURL = (blob: Blob) => {
           void blob.text().then((text) => {
@@ -221,7 +247,9 @@ describe('ExcelViewer public UI', () => {
           });
           return 'blob:excel-viewer-test';
         };
-        URL.revokeObjectURL = () => {};
+        URL.revokeObjectURL = (url) => {
+          state.revoked.push(url);
+        };
         HTMLAnchorElement.prototype.click = function click() {
           state.name = this.download;
         };
@@ -243,9 +271,18 @@ describe('ExcelViewer public UI', () => {
       expect(await visibleFirstColumn(page)).toEqual(['Alice', 'Cara', 'Summary']);
 
       await clickElement(page, '[data-excel-sheet-tab="Inventory"]');
-      await clickElement(page, '[data-excel-download-csv]');
+      const synchronousRevokes = await page.$eval('[data-excel-download-csv]', (element) => {
+        (element as HTMLElement).click();
+        return (window as unknown as { __excelDownload: { revoked: string[] } }).__excelDownload.revoked;
+      });
+      expect(synchronousRevokes).toEqual([]);
       await page.waitForFunction(
-        () => (window as unknown as { __excelDownload: { text: string } }).__excelDownload.text.length > 0,
+        () => {
+          const state = (window as unknown as {
+            __excelDownload: { text: string; revoked: string[] };
+          }).__excelDownload;
+          return state.text.length > 0 && state.revoked.length === 1;
+        },
       );
       expect(
         await page.evaluate(
@@ -254,6 +291,7 @@ describe('ExcelViewer public UI', () => {
       ).toEqual({
         name: 'people-Inventory.csv',
         text: 'Item,Quantity\r\nPencil,3\r\nNotebook,1',
+        revoked: ['blob:excel-viewer-test'],
       });
     } finally {
       await page.close();
@@ -278,6 +316,261 @@ describe('ExcelViewer public UI', () => {
       expect(await page.$$eval('[data-excel-file-name]', (nodes) => nodes.length)).toBe(0);
     } finally {
       await page.close();
+    }
+  }, 15_000);
+
+  it('paginates accepted rows while sort, filter, and sheet changes reset to the first page and CSV remains complete [capability:excel-viewer:browser-feature:row-pagination]', async () => {
+    const page = await openFixturePage();
+    try {
+      await page.evaluate(() => {
+        const state = { text: '' };
+        (window as unknown as { __excelPaginationDownload: typeof state }).__excelPaginationDownload = state;
+        URL.createObjectURL = (blob: Blob) => {
+          void blob.text().then((text) => {
+            state.text = text;
+          });
+          return 'blob:excel-pagination-test';
+        };
+        URL.revokeObjectURL = () => {};
+        HTMLAnchorElement.prototype.click = () => {};
+      });
+      await uploadFile(page, largeWorkbookPath);
+      await page.waitForSelector('[data-excel-page-summary]');
+
+      expect(await page.$$eval('[data-excel-row]', (rows) => rows.length)).toBe(100);
+      expect(
+        await page.$eval('[data-excel-page-summary]', (node) => node.textContent?.trim()),
+      ).toBe('Page 1 of 3');
+      expect(
+        await page.$eval('[data-excel-row-count]', (node) => node.textContent?.trim()),
+      ).toBe('Rows 1–100 of 205 matching rows (205 total)');
+
+      await clickElement(page, '[data-excel-next-page]');
+      expect(
+        await page.$eval('[data-excel-row] [data-excel-cell-column="0"] [data-excel-cell-content]', (node) => node.textContent?.trim()),
+      ).toBe('101');
+      await clickElement(page, '[data-excel-sort-column="0"]');
+      expect(
+        await page.$eval('[data-excel-page-summary]', (node) => node.textContent?.trim()),
+      ).toBe('Page 1 of 3');
+
+      await clickElement(page, '[data-excel-next-page]');
+      await page.select('[data-excel-filter-column]', '0');
+      await page.$eval('[data-excel-filter-query]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = '205';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      expect(
+        await page.$eval('[data-excel-page-summary]', (node) => node.textContent?.trim()),
+      ).toBe('Page 1 of 1');
+      expect(await page.$$eval('[data-excel-row]', (rows) => rows.length)).toBe(1);
+
+      await page.select('[data-excel-filter-column]', '-1');
+      await page.$eval('[data-excel-filter-query]', (input) => {
+        const field = input as HTMLInputElement;
+        field.value = '';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await clickElement(page, '[data-excel-next-page]');
+      await clickElement(page, '[data-excel-sheet-tab="Other"]');
+      expect(
+        await page.$eval('[data-excel-page-summary]', (node) => node.textContent?.trim()),
+      ).toBe('Page 1 of 1');
+
+      await clickElement(page, '[data-excel-sheet-tab="Large"]');
+      await clickElement(page, '[data-excel-download-csv]');
+      await page.waitForFunction(
+        () => (window as unknown as { __excelPaginationDownload: { text: string } }).__excelPaginationDownload.text.length > 0,
+      );
+      const csv = await page.evaluate(
+        () => (window as unknown as { __excelPaginationDownload: { text: string } }).__excelPaginationDownload.text,
+      );
+      expect(csv.split('\r\n')).toHaveLength(206);
+      expect(csv).toContain('205,Row 205');
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('shows a localized worksheet-data limit error without rendering a dense table', async () => {
+    const page = await openFixturePage();
+    try {
+      await uploadFile(page, limitWorkbookPath);
+      await page.waitForSelector('[data-excel-error]');
+
+      expect(
+        await page.$eval('[data-excel-error]', (node) => node.textContent?.trim()),
+      ).toBe('A worksheet exceeds the viewer limit of 10,000 rows, 256 columns, or 250,000 cells.');
+      expect(await page.$$eval('[data-excel-row]', (rows) => rows.length)).toBe(0);
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('keeps the newest selected workbook when an aborted older FileReader completes late', async () => {
+    const page = await openFixturePage();
+    try {
+      const firstBytes = Array.from(readFileSync(workbookPath));
+      const secondBytes = Array.from(readFileSync(metadataWorkbookPath));
+      await page.evaluate((first, second) => {
+        type ControlledReader = {
+          aborted: boolean;
+          readyState: number;
+          result: ArrayBuffer | null;
+          onload: ((event: ProgressEvent<FileReader>) => unknown) | null;
+          onerror: ((event: ProgressEvent<FileReader>) => unknown) | null;
+          onabort: ((event: ProgressEvent<FileReader>) => unknown) | null;
+          readAsArrayBuffer(file: Blob): void;
+          abort(): void;
+        };
+        const readers: ControlledReader[] = [];
+        class ControlledFileReader implements ControlledReader {
+          aborted = false;
+          readyState = 0;
+          result: ArrayBuffer | null = null;
+          onload: ControlledReader['onload'] = null;
+          onerror: ControlledReader['onerror'] = null;
+          onabort: ControlledReader['onabort'] = null;
+          readAsArrayBuffer(): void {
+            this.readyState = 1;
+            readers.push(this);
+          }
+          abort(): void {
+            this.aborted = true;
+            this.readyState = 2;
+            this.onabort?.(new ProgressEvent('abort') as ProgressEvent<FileReader>);
+          }
+        }
+        Object.defineProperty(window, 'FileReader', {
+          configurable: true,
+          value: ControlledFileReader,
+        });
+        (window as unknown as { __excelControlledReaders: ControlledReader[] }).__excelControlledReaders = readers;
+
+        const input = document.querySelector('[data-excel-file-input]') as HTMLInputElement;
+        const select = (name: string, bytes: number[]) => {
+          const transfer = new DataTransfer();
+          transfer.items.add(new File([new Uint8Array(bytes)], name));
+          input.files = transfer.files;
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+        };
+        select('older.xlsx', first);
+        select('newest.xlsm', second);
+      }, firstBytes, secondBytes);
+
+      expect(
+        await page.evaluate(
+          () => (window as unknown as { __excelControlledReaders: Array<{ aborted: boolean }> }).__excelControlledReaders.map((reader) => reader.aborted),
+        ),
+      ).toEqual([true, false]);
+
+      await page.evaluate(async (bytes) => {
+        const reader = (window as unknown as {
+          __excelControlledReaders: Array<{
+            readyState: number;
+            result: ArrayBuffer | null;
+            onload: ((event: ProgressEvent<FileReader>) => unknown) | null;
+          }>;
+        }).__excelControlledReaders[1];
+        reader.result = new Uint8Array(bytes).buffer;
+        reader.readyState = 2;
+        await reader.onload?.(new ProgressEvent('load') as ProgressEvent<FileReader>);
+      }, secondBytes);
+      await page.waitForSelector('[data-excel-file-name]');
+      expect(
+        await page.$eval('[data-excel-file-name]', (node) => node.textContent?.trim()),
+      ).toContain('newest.xlsm');
+
+      await page.evaluate(async (bytes) => {
+        const reader = (window as unknown as {
+          __excelControlledReaders: Array<{
+            readyState: number;
+            result: ArrayBuffer | null;
+            onload: ((event: ProgressEvent<FileReader>) => unknown) | null;
+            onerror: ((event: ProgressEvent<FileReader>) => unknown) | null;
+          }>;
+        }).__excelControlledReaders[0];
+        reader.result = new Uint8Array(bytes).buffer;
+        reader.readyState = 2;
+        await reader.onload?.(new ProgressEvent('load') as ProgressEvent<FileReader>);
+        await reader.onerror?.(new ProgressEvent('error') as ProgressEvent<FileReader>);
+      }, firstBytes);
+
+      expect(
+        await page.$eval('[data-excel-file-name]', (node) => node.textContent?.trim()),
+      ).toContain('newest.xlsm');
+      expect(await page.$$eval('[data-excel-error]', (nodes) => nodes.length)).toBe(0);
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('supports a focus-visible file picker and roving locale-aware sheet tabs [capability:excel-viewer:browser-feature:sheet-tabs]', async () => {
+    const page = await openFixturePage();
+    try {
+      expect(
+        await page.$eval('[data-excel-file-input]', (input) => ({
+          label: input.closest('label')?.tagName,
+          focusRing: input.closest('label')?.className.includes('focus-within:ring-2'),
+        })),
+      ).toEqual({ label: 'LABEL', focusRing: true });
+
+      await uploadFile(page, workbookPath);
+      await page.waitForSelector('[data-excel-sheet-tab="People"]');
+      expect(
+        await page.$$eval('[data-excel-sheet-tab]', (tabs) => tabs.map((tab) => ({
+          text: tab.textContent?.trim(),
+          tabIndex: (tab as HTMLButtonElement).tabIndex,
+        }))),
+      ).toEqual([
+        { text: 'People', tabIndex: 0 },
+        { text: 'Inventory', tabIndex: -1 },
+      ]);
+
+      await page.$eval('[data-excel-sheet-tab="People"]', (tab) => {
+        (tab as HTMLElement).focus();
+        tab.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight', bubbles: true }));
+      });
+      await page.waitForFunction(
+        () => document.activeElement?.textContent?.trim() === 'Inventory',
+      );
+      expect(
+        await page.$eval('[data-excel-sheet-tab="Inventory"]', (tab) => tab.getAttribute('aria-selected')),
+      ).toBe('true');
+
+      await page.$eval('[data-excel-sheet-tab="Inventory"]', (tab) => {
+        tab.dispatchEvent(new KeyboardEvent('keydown', { key: 'Home', bubbles: true }));
+      });
+      await page.waitForFunction(
+        () => document.activeElement?.textContent?.trim() === 'People',
+      );
+      await page.$eval('[data-excel-sheet-tab="People"]', (tab) => {
+        tab.dispatchEvent(new KeyboardEvent('keydown', { key: 'End', bubbles: true }));
+      });
+      await page.waitForFunction(
+        () => document.activeElement?.textContent?.trim() === 'Inventory',
+      );
+    } finally {
+      await page.close();
+    }
+
+    const rtlPage = await openFixturePage('/ar/');
+    try {
+      await uploadFile(rtlPage, workbookPath);
+      await rtlPage.waitForSelector('[data-excel-sheet-tab="People"]');
+      await rtlPage.$eval('[data-excel-sheet-tab="People"]', (tab) => {
+        (tab as HTMLElement).focus();
+        tab.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowLeft', bubbles: true }));
+      });
+      await rtlPage.waitForFunction(
+        () => document.activeElement?.textContent?.trim() === 'Inventory',
+      );
+      expect(
+        await rtlPage.$eval('[data-excel-sheet-tab="Inventory"]', (tab) => tab.getAttribute('aria-selected')),
+      ).toBe('true');
+    } finally {
+      await rtlPage.close();
     }
   }, 15_000);
 
@@ -384,9 +677,9 @@ async function padWorkbookZip(bytes: Uint8Array, targetSize: number): Promise<Ui
   return output;
 }
 
-async function openFixturePage(): Promise<Page> {
+async function openFixturePage(pathname = '/'): Promise<Page> {
   const page = await browser!.newPage();
-  await page.goto(baseUrl, { waitUntil: 'networkidle0' });
+  await page.goto(`${baseUrl}${pathname}`, { waitUntil: 'networkidle0' });
   await page.waitForSelector('[data-excel-file-input]');
   return page;
 }

@@ -3,12 +3,18 @@ import {
   createCorruptExcelWorkbookFixture,
   createEmptyExcelWorkbookFixture,
   createExcelWorkbookCustomPathMetadataFixture,
+  createExcelWorkbookDeclaredRangeFixture,
   createExcelWorkbookDisplayFixture,
   createExcelWorkbookFixture,
   createExcelWorkbookMetadataFixture,
   createExcelWorkbookOrphanMetadataFixture,
+  createExcelWorkbookSpanFixture,
 } from './excel-data-viewer.fixture';
 import {
+  EXCEL_MAX_CELLS_PER_SHEET,
+  EXCEL_MAX_COLUMNS_PER_SHEET,
+  EXCEL_MAX_ROWS_PER_SHEET,
+  ExcelWorkbookLimitError,
   filterExcelRows,
   parseExcelWorkbook,
   sheetToCsv,
@@ -64,6 +70,59 @@ describe('Excel data viewer model', () => {
       rows: [],
       merges: [],
     }]);
+  });
+
+  it('derives worksheet bounds from actual cells instead of a hostile declared range [capability:excel-viewer:profile:release-readiness]', async () => {
+    const workbook = await parseExcelWorkbook(
+      await createExcelWorkbookDeclaredRangeFixture(),
+    );
+
+    expect(workbook.sheets[0]).toEqual({
+      name: 'Sparse',
+      range: 'A1',
+      headers: ['Only actual cell'],
+      rows: [],
+      merges: [],
+    });
+  });
+
+  it('rejects actual worksheet spans beyond row, column, or cell limits before allocation [capability:excel-viewer:limit:worksheet-data-limits]', async () => {
+    const cases = [
+      {
+        bytes: createExcelWorkbookSpanFixture({
+          r: EXCEL_MAX_ROWS_PER_SHEET,
+          c: 0,
+        }),
+        dimension: 'rows',
+        actual: EXCEL_MAX_ROWS_PER_SHEET + 1,
+        limit: EXCEL_MAX_ROWS_PER_SHEET,
+      },
+      {
+        bytes: createExcelWorkbookSpanFixture({
+          r: 0,
+          c: EXCEL_MAX_COLUMNS_PER_SHEET,
+        }),
+        dimension: 'columns',
+        actual: EXCEL_MAX_COLUMNS_PER_SHEET + 1,
+        limit: EXCEL_MAX_COLUMNS_PER_SHEET,
+      },
+      {
+        bytes: createExcelWorkbookSpanFixture({ r: 999, c: 250 }),
+        dimension: 'cells',
+        actual: 251_000,
+        limit: EXCEL_MAX_CELLS_PER_SHEET,
+      },
+    ] as const;
+
+    for (const testCase of cases) {
+      await expect(parseExcelWorkbook(testCase.bytes)).rejects.toMatchObject({
+        name: 'ExcelWorkbookLimitError',
+        sheetName: 'Limit',
+        dimension: testCase.dimension,
+        actual: testCase.actual,
+        limit: testCase.limit,
+      } satisfies Partial<ExcelWorkbookLimitError>);
+    }
   });
 
   it('rejects bytes that are not an XLS or XLSX workbook', async () => {

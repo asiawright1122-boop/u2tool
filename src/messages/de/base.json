@@ -9467,7 +9467,7 @@
         "uploadFile": "Excel-Arbeitsmappe auswählen",
         "supportedFormats": "XLS, XLSX oder XLSM · lokale Verarbeitung",
         "localNotice": "Die Arbeitsmappe bleibt im Browser und wird nicht hochgeladen.",
-        "fileLimit": "Maximale Dateigröße: 10 MiB. Makros werden nie ausgeführt.",
+        "fileLimit": "Maximale Dateigröße: 10 MiB. Pro Tabellenblatt sind höchstens 10,000 Zeilen, 256 Spalten oder 250,000 Zellen zulässig. Makros werden nie ausgeführt.",
         "loading": "Arbeitsmappe wird lokal gelesen…",
         "fileLoaded": "Geladene Arbeitsmappe",
         "workbookWarnings": "Darstellungsgrenzen",
@@ -9482,7 +9482,7 @@
         "displayFormulas": "Formeln",
         "mergedRanges": "Verbundene Bereiche",
         "blankHeader": "Spalte {column}",
-        "showingRows": "{visible} von {total} Zeilen",
+        "showingRows": "Zeilen {start}–{end} von {matching} Treffern ({total} insgesamt)",
         "noResults": "Keine Zeile entspricht diesem Filter.",
         "emptySheet": "Dieses Blatt enthält keine verwendeten Zellen.",
         "downloadCsv": "Ausgewähltes Blatt als CSV laden",
@@ -9490,7 +9490,12 @@
         "warningMacros": "Makros sind vorhanden, werden aber nicht ausgeführt.",
         "warningCharts": "Diagramme sind vorhanden, werden aber nicht wiedergegeben.",
         "warningFormatting": "Komplexe Formatierung wird möglicherweise nicht vollständig wiedergegeben.",
-        "warningFormulas": "Formeln werden angezeigt, aber nicht neu berechnet; die Werte sind zwischengespeicherte Ergebnisse der Arbeitsmappe."
+        "warningFormulas": "Formeln werden angezeigt, aber nicht neu berechnet; die Werte sind zwischengespeicherte Ergebnisse der Arbeitsmappe.",
+        "workbookLimitError": "Ein Tabellenblatt überschreitet das Betrachterlimit von {rows} Zeilen, {columns} Spalten oder {cells} Zellen.",
+        "pagination": "Zeilenseiten des Tabellenblatts",
+        "pageSummary": "Seite {current} von {total}",
+        "previousPage": "Vorherige Seite",
+        "nextPage": "Nächste Seite"
       }
     },
     "excel-merger": {

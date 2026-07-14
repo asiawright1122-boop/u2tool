@@ -11,7 +11,7 @@
     "uploadFile": "Excel ワークブックを選択",
     "supportedFormats": "XLS、XLSX、XLSM · ローカル処理",
     "localNotice": "ワークブックはブラウザー内に留まり、アップロードされません。",
-    "fileLimit": "最大ファイルサイズ：10 MiB。マクロは実行されません。",
+    "fileLimit": "最大ファイルサイズ：10 MiB。各ワークシートは最大 10,000 行、256 列、250,000 セルです。マクロは実行されません。",
     "loading": "ワークブックをローカルで読み込み中…",
     "fileLoaded": "読み込んだワークブック",
     "workbookWarnings": "ワークブック表示の制限",
@@ -26,7 +26,7 @@
     "displayFormulas": "数式",
     "mergedRanges": "結合範囲",
     "blankHeader": "列 {column}",
-    "showingRows": "{total} 行中 {visible} 行を表示",
+    "showingRows": "一致する {matching} 行（全 {total} 行）のうち {start}～{end} 行",
     "noResults": "この条件に一致する行はありません。",
     "emptySheet": "このシートに使用済みセルはありません。",
     "downloadCsv": "選択シートを CSV でダウンロード",
@@ -34,7 +34,12 @@
     "warningMacros": "マクロが含まれていますが、実行されません。",
     "warningCharts": "グラフが含まれていますが、再現されません。",
     "warningFormatting": "複雑な書式は完全には再現されない場合があります。",
-    "warningFormulas": "数式は表示されますが再計算されません。値はワークブックのキャッシュ結果です。"
+    "warningFormulas": "数式は表示されますが再計算されません。値はワークブックのキャッシュ結果です。",
+    "workbookLimitError": "ワークシートがビューアーの上限（{rows} 行、{columns} 列、または {cells} セル）を超えています。",
+    "pagination": "ワークシートの行ページ",
+    "pageSummary": "{current} / {total} ページ",
+    "previousPage": "前のページ",
+    "nextPage": "次のページ"
   },
   "capabilities": {
     "modes": {
@@ -56,7 +61,8 @@
       "mergedRanges": "結合範囲の通知",
       "singleColumnSort": "安定した単一列並べ替え",
       "singleColumnFilter": "単一列のテキスト絞り込み",
-      "csvDownload": "選択シートの CSV ダウンロード"
+      "csvDownload": "選択シートの CSV ダウンロード",
+      "rowPagination": "1 ページ 100 行のワークシートページ"
     },
     "limits": {
       "tenMibFiles": "最大ワークブックサイズ 10 MiB",
@@ -64,7 +70,8 @@
       "noMacroExecution": "マクロを実行しない",
       "noFormulaRecalculation": "数式を表示するが再計算しない",
       "noChartRendering": "グラフを再現しない",
-      "limitedFormattingFidelity": "複雑な書式は完全に再現されない場合がある"
+      "limitedFormattingFidelity": "複雑な書式は完全に再現されない場合がある",
+      "worksheetDataLimits": "各ワークシートは最大 10,000 行、256 列、250,000 セル"
     }
   },
   "detailed_description": "Excel ビューアーは、最大 10 MiB の XLS、XLSX、XLSM ワークブックデータをブラウザー内で開きます。シート切替、セル番地とキャッシュ値の確認、数式テキストの切替、結合範囲、単一列の並べ替え・絞り込み、選択シートの CSV 出力が可能です。ファイルはアップロードされません。マクロは実行されず、数式は再計算されず、グラフは再現されず、複雑な書式は完全に再現されない場合があります。",
