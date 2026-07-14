@@ -98,9 +98,9 @@ const SQL_EXECUTION_ACTION_BY_LOCALE = {
       /((?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?|テスト|試験|処理|プロセス|タスク|作業|ジョブ|コード|バッチ|プログラム))(?:は|も)(?=[^、。！？,]{0,80}$)/u,
       /((?:SQL\s*(?:クエリ\s*)?(?:文|ステートメント)?|クエリ\s*(?:文|ステートメント)?|テスト|試験|処理|プロセス|タスク|作業|ジョブ|コード|バッチ|プログラム))\s*$/u,
     ],
-    directObjectHead: /((?:(?:NoSQL|非SQL|SQL|クエリ)?(?:コード|スクリプト|バッチ|プログラム|ジョブ)|(?:NoSQL|非SQL|SQL)(?:クエリ)?(?:文|ステートメント)?|クエリ(?:文|ステートメント)?))$/iu,
+    directObjectHead: /((?:(?:NoSQL|non-?SQL|非-?SQL|SQL|クエリ)?(?:コード|スクリプト|バッチ|プログラム|ジョブ)|(?:NoSQL|non-?SQL|非-?SQL|SQL)(?:クエリ)?(?:文|ステートメント)?|クエリ(?:文|ステートメント)?))$/iu,
     locationObject: /(?:で|にて)$/u,
-    nonSqlDirectObject: /^(?:NoSQL|非SQL)/iu,
+    nonSqlDirectObject: /^(?:(?:NoSQL|non-?SQL|非-?SQL)(?:(?:コード|スクリプト|バッチ|プログラム|ジョブ)|(?:クエリ)?(?:文|ステートメント)?))$/iu,
     predicate: /実行/gu,
     sqlDirectObject: /^(?:(?:SQL|クエリ)(?:コード|スクリプト|バッチ|プログラム|ジョブ)|SQL(?:クエリ)?(?:文|ステートメント)?|クエリ(?:文|ステートメント)?)$/iu,
     sqlObject: /(?:SQL|クエリ)/u,
@@ -116,9 +116,9 @@ const SQL_EXECUTION_ACTION_BY_LOCALE = {
       /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크|잡|코드|배치|프로그램))(?:은|는|도)(?=[^,.!?。！？]{0,80}$)/u,
       /((?:SQL\s*(?:쿼리\s*)?문?|쿼리\s*문?|테스트|시험|프로세스|처리|작업|태스크|잡|코드|배치|프로그램))\s*$/u,
     ],
-    directObjectHead: /((?:(?:NoSQL|비SQL|SQL|쿼리)?(?:코드|스크립트|배치|프로그램|잡|작업)|(?:NoSQL|비SQL|SQL)(?:쿼리)?문?|쿼리문?))$/iu,
+    directObjectHead: /((?:(?:NoSQL|non-?SQL|비-?SQL|SQL|쿼리)?(?:코드|스크립트|배치|프로그램|잡|작업)|(?:NoSQL|non-?SQL|비-?SQL|SQL)(?:쿼리)?문?|쿼리문?))$/iu,
     locationObject: /(?:에서|상에서)$/u,
-    nonSqlDirectObject: /^(?:NoSQL|비SQL)/iu,
+    nonSqlDirectObject: /^(?:(?:NoSQL|non-?SQL|비-?SQL)(?:(?:코드|스크립트|배치|프로그램|잡|작업)|(?:쿼리)?문?))$/iu,
     predicate: /실행/gu,
     sqlDirectObject: /^(?:(?:SQL|쿼리)(?:코드|스크립트|배치|프로그램|잡|작업)|SQL(?:쿼리)?문?|쿼리문?)$/iu,
     sqlObject: /(?:SQL|쿼리)/u,
@@ -404,7 +404,10 @@ function matchesJaKoSqlExecutionAction(
     return false;
   }
   const isSqlDirectObject = (candidate: string): boolean => {
-    const normalizedCandidate = candidate.normalize("NFKC").replace(/\s+/gu, "");
+    const normalizedCandidate = candidate
+      .normalize("NFKC")
+      .replace(/[\p{Dash_Punctuation}\u2212]/gu, "-")
+      .replace(/\s+/gu, "");
     const objectHead = normalizedCandidate.match(action.directObjectHead)?.[1];
     return Boolean(
       objectHead &&
