@@ -13,6 +13,15 @@ async function archiveText(archive: JSZip, path: string): Promise<string> {
   return file.async('string');
 }
 
+async function moveArchivePart(archive: JSZip, from: string, to: string): Promise<void> {
+  const file = archive.file(from);
+  if (!file) {
+    throw new Error(`Missing fixture package part: ${from}`);
+  }
+  archive.file(to, await file.async('uint8array'));
+  archive.remove(from);
+}
+
 export function createExcelWorkbookFixture(): Uint8Array {
   const workbook = XLSX.utils.book_new();
   const people = XLSX.utils.aoa_to_sheet([
@@ -143,5 +152,45 @@ export async function createExcelWorkbookOrphanMetadataFixture(): Promise<Uint8A
     'xl/charts/chart1.xml',
     '<?xml version="1.0"?><c:chartSpace xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart"/>',
   );
+  return archive.generateAsync({ type: 'uint8array' });
+}
+
+export async function createExcelWorkbookCustomPathMetadataFixture(): Promise<Uint8Array> {
+  const archive = await JSZip.loadAsync(await createExcelWorkbookMetadataFixture());
+
+  const contentTypes = (await archiveText(archive, '[Content_Types].xml'))
+    .replace('/xl/workbook.xml', '/custom/workbook-main.xml')
+    .replace('/xl/vbaProject.bin', '/custom/vbaProject.bin')
+    .replace('/xl/drawings/drawing1.xml', '/custom/visuals/canvas.xml')
+    .replace('/xl/charts/chart1.xml', '/custom/visuals/chart-data.xml');
+  archive.file('[Content_Types].xml', contentTypes);
+
+  const rootRelationships = (await archiveText(archive, '_rels/.rels'))
+    .replace('Target="xl/workbook.xml"', 'Target="custom/workbook-main.xml"');
+  archive.file('_rels/.rels', rootRelationships);
+
+  const workbookRelationships = (await archiveText(archive, 'xl/_rels/workbook.xml.rels'))
+    .replace('Target="worksheets/sheet1.xml"', 'Target="/xl/worksheets/sheet1.xml"')
+    .replace('Target="theme/theme1.xml"', 'Target="/xl/theme/theme1.xml"')
+    .replace('Target="styles.xml"', 'Target="/xl/styles.xml"')
+    .replace('Target="metadata.xml"', 'Target="/xl/metadata.xml"')
+    .replace('Target="vbaProject.bin"', 'Target="/custom/vbaProject.bin"');
+  archive.file('custom/_rels/workbook-main.xml.rels', workbookRelationships);
+
+  const worksheetRelationships = (await archiveText(archive, 'xl/worksheets/_rels/sheet1.xml.rels'))
+    .replace('Target="../drawings/drawing1.xml"', 'Target="/custom/visuals/canvas.xml"');
+  archive.file('xl/worksheets/_rels/sheet1.xml.rels', worksheetRelationships);
+
+  const drawingRelationships = (await archiveText(archive, 'xl/drawings/_rels/drawing1.xml.rels'))
+    .replace('Target="../charts/chart1.xml"', 'Target="chart-data.xml"');
+  archive.file('custom/visuals/_rels/canvas.xml.rels', drawingRelationships);
+
+  await moveArchivePart(archive, 'xl/workbook.xml', 'custom/workbook-main.xml');
+  archive.remove('xl/_rels/workbook.xml.rels');
+  await moveArchivePart(archive, 'xl/vbaProject.bin', 'custom/vbaProject.bin');
+  await moveArchivePart(archive, 'xl/drawings/drawing1.xml', 'custom/visuals/canvas.xml');
+  archive.remove('xl/drawings/_rels/drawing1.xml.rels');
+  await moveArchivePart(archive, 'xl/charts/chart1.xml', 'custom/visuals/chart-data.xml');
+
   return archive.generateAsync({ type: 'uint8array' });
 }

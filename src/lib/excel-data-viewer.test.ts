@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import {
   createCorruptExcelWorkbookFixture,
   createEmptyExcelWorkbookFixture,
+  createExcelWorkbookCustomPathMetadataFixture,
   createExcelWorkbookDisplayFixture,
   createExcelWorkbookFixture,
   createExcelWorkbookMetadataFixture,
@@ -127,5 +128,15 @@ describe('Excel data viewer model', () => {
     const workbook = await parseExcelWorkbook(await createExcelWorkbookOrphanMetadataFixture());
 
     expect(workbook.warnings).toEqual([]);
+  });
+
+  it('detects reachable macro and chart parts at non-standard package paths', async () => {
+    const workbook = await parseExcelWorkbook(await createExcelWorkbookCustomPathMetadataFixture());
+
+    expect(workbook.warnings).toEqual([
+      'Macros are present but are not executed.',
+      'Charts are present but are not reproduced.',
+      'Complex formatting may not be fully reproduced.',
+    ]);
   });
 });

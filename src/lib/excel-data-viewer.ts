@@ -288,18 +288,18 @@ function workbookPackageFeatures(workbook: WorkbookWithMetadata): { charts: bool
       if (!files.has(relationship.target) || !relationshipIsReferenced(files, relationship)) {
         continue;
       }
+      const ownerContentType = packageContentType(contentTypes, owner);
       const targetContentType = packageContentType(contentTypes, relationship.target);
       if (
-        owner === 'xl/workbook.xml'
-        && /\/vbaProject$/i.test(relationship.type)
+        /\/vbaProject$/i.test(relationship.type)
         && targetContentType === 'application/vnd.ms-office.vbaProject'
-        && packageContentType(contentTypes, owner)?.includes('macroEnabled')
+        && ownerContentType?.includes('.macroEnabled.main')
       ) {
         macros = true;
       }
       if (
-        /^xl\/drawings\//i.test(owner)
-        && /\/chart$/i.test(relationship.type)
+        /\/chart$/i.test(relationship.type)
+        && ownerContentType === 'application/vnd.openxmlformats-officedocument.drawing+xml'
         && targetContentType === 'application/vnd.openxmlformats-officedocument.drawingml.chart+xml'
       ) {
         charts = true;
