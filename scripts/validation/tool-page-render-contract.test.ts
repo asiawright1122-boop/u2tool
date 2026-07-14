@@ -169,6 +169,7 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/word-counter',
       'en/markdown-editor',
       'en/grammar-checker',
+      'ru/grammar-checker',
       'ja/json-formatter',
       'ar/password-generator',
     ]);
@@ -294,7 +295,7 @@ describe('compareToolPageRenderContract', () => {
   it('keeps an inventory pilot route free of public capability attributes', () => {
     const expectation = {
       locale: 'en',
-      slug: 'grammar-checker',
+      slug: 'hex-editor',
       expectedTitleIncludes: 'YouTube Tags Generator',
       expectedDescriptionIncludes: 'YouTube tags',
       expectedH1Includes: 'YouTube Tags Generator',
@@ -314,7 +315,7 @@ describe('compareToolPageRenderContract', () => {
   it('rejects empty capability attributes on an inventory route', () => {
     const expectation = {
       locale: 'en',
-      slug: 'grammar-checker',
+      slug: 'hex-editor',
       expectedTitleIncludes: 'YouTube Tags Generator',
       expectedDescriptionIncludes: 'YouTube tags',
       expectedH1Includes: 'YouTube Tags Generator',
@@ -333,7 +334,7 @@ describe('compareToolPageRenderContract', () => {
         htmlWithEmptyDisclosure,
       ),
     ).toContain(
-      'en/grammar-checker capability disclosure: expected 0 disclosure elements but found 1',
+      'en/hex-editor capability disclosure: expected 0 disclosure elements but found 1',
     );
   });
 

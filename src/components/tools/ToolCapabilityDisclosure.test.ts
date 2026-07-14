@@ -68,7 +68,7 @@ describe('ToolCapabilityDisclosure', () => {
   it('renders an engine-limited profile with localized attributes, language, and privacy copy', () => {
     const disclosure = disclosureHtml('grammar-checker');
 
-    expect(disclosure).toContain('data-capability-version="1.0.0"');
+    expect(disclosure).toContain('data-capability-version="1.1.0"');
     expect(disclosure).toContain('data-local-processing="true"');
     expect(disclosure).toContain('此工具的功能');
     expect(disclosure).toContain('英语');

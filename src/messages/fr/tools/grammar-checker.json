@@ -18,16 +18,16 @@
       "noServerProcessing": "Aucun traitement sur le serveur"
     }
   },
-  "detailed_description": "Le vérificateur de grammaire analyse le texte pour les erreurs de grammaire courantes et suggère des corrections.",
+  "detailed_description": "L’interface en français vérifie un texte anglais avec des règles statiques locales pour les fautes fréquentes, les mots répétés, des accords simples et la ponctuation. Les règles s’exécutent dans le navigateur, surlignent les correspondances et permettent d’appliquer des suggestions. Elles n’utilisent ni IA ni traitement serveur ; relisez le texte anglais corrigé selon son contexte.",
   "usage_steps": [
-    "Collez le texte",
-    "Voyez les erreurs mises en évidence",
-    "Appliquez les suggestions",
-    "Copiez le texte corrigé"
+    "Collez un texte anglais dans le champ de saisie",
+    "Examinez les correspondances de règles surlignées dans l’aperçu",
+    "Appliquez une suggestion ou toutes les corrections disponibles",
+    "Relisez le texte anglais corrigé avant de le copier"
   ],
   "usage_examples": [
-    "Relisez vos courriels",
-    "Vérifiez vos dissertations",
-    "Améliorez vos billets de blog"
+    "Repérer un mot répété dans un courriel anglais",
+    "Détecter des fautes anglaises fréquentes comme teh ou recieve",
+    "Vérifier des accords simples et la ponctuation dans un brouillon anglais"
   ]
 }

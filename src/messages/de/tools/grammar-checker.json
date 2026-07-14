@@ -18,40 +18,38 @@
       "noServerProcessing": "Keine Serververarbeitung"
     }
   },
-  "detailed_description": "Der Grammatikprüfer analysiert Ihren Text auf häufige Grammatikfehler und schlägt Korrekturen vor. Grammatikprüfer ist für eine schnelle Vorprüfung von Eingaben, Einstellungen und Ergebnissen gedacht. Nutze das Ergebnis als Entwurf, prüfe Format, Zahlen, Zeichen und Kontext, und bestätige wichtige Ausgaben in deinem eigenen Arbeitsablauf, bevor du sie teilst, veröffentlichst oder in einem Projekt verwendest.",
+  "detailed_description": "Die deutsche Oberfläche prüft englischen Text mit lokalen statischen Regeln auf häufige Tippfehler, Wortwiederholungen, einfache Übereinstimmung und Zeichensetzung. Die Regeln laufen im Browser, markieren Treffer und lassen Vorschläge anwenden. Sie verwenden keine KI und keine Serververarbeitung; lesen Sie den korrigierten englischen Text im Kontext nach.",
   "usage_steps": [
-    "Fügen Sie Ihren Text ein",
-    "Betrachten Sie die markierten Fehler",
-    "Wenden Sie die Vorschläge an",
-    "Kopieren Sie den korrigierten Text",
-    "Prüfe das Ergebnis und gleiche es mit deinem Ziel ab."
+    "Fügen Sie englischen Text in das Eingabefeld ein",
+    "Prüfen Sie die im Vorschaubereich markierten Regeltreffer",
+    "Wenden Sie einzelne Vorschläge oder alle verfügbaren Korrekturen an",
+    "Lesen Sie den korrigierten englischen Text vor dem Kopieren"
   ],
   "usage_examples": [
-    "Überprüfen Sie E-Mails",
-    "Überprüfen Sie Essays",
-    "Verbessern Sie Blog-Beiträge",
-    "Eine kurze Eingabe prüfen, bevor der vollständige Inhalt verarbeitet wird."
+    "Ein wiederholtes Wort in einer englischen E-Mail finden",
+    "Häufige englische Tippfehler wie teh oder recieve erkennen",
+    "Einfache Übereinstimmung und Zeichensetzung in einem englischen Entwurf prüfen"
   ],
   "faqs": [
     {
-      "question": "Was sollte ich vor der Nutzung von Grammatikprüfer prüfen?",
-      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+      "question": "Prüft das Werkzeug deutsche Grammatik?",
+      "answer": "Nein. Die Oberfläche ist deutsch, aber die aktuellen statischen Regeln bewerten nur englischen Text."
     },
     {
       "question": "Kann ich das Ergebnis nachträglich ändern?",
-      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+      "answer": "Ja. Ändern Sie die englische Eingabe oder wenden Sie einen Vorschlag an und prüfen Sie danach das aktualisierte Ergebnis."
     },
     {
       "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
-      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+      "answer": "Dieser Prüfer nutzt einen begrenzten Satz statischer Regeln für Englisch. Andere Werkzeuge können andere Regeln und Abdeckungen haben; vergleichen Sie mit derselben englischen Eingabe."
     },
     {
       "question": "Kann ich mit einer kurzen Eingabe beginnen?",
-      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+      "answer": "Ja. Beginnen Sie mit einer kurzen englischen Eingabe, um Treffer und Vorschläge zu prüfen, bevor Sie einen echten Entwurf verwenden."
     },
     {
       "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
-      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+      "answer": "Nein. Es sind begrenzte statische Regeln und keine KI; wichtige englische Texte müssen manuell auf Genauigkeit und Kontext geprüft werden."
     }
   ]
 }
