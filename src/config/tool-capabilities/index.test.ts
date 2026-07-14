@@ -130,6 +130,20 @@ describe("pilot tool capability registry", () => {
     }
   });
 
+  it("ties the local English rules mode to exact-highlight browser evidence", () => {
+    const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
+    const exactHighlightEvidence = {
+      file: "src/components/tools/GrammarChecker.test.ts",
+      testName:
+        "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
+    };
+
+    expect(
+      grammarProfile.modes.find(({ id }) => id === "local-english-rules")
+        ?.evidence,
+    ).toEqual(exactHighlightEvidence);
+  });
+
   it("records the approved current browser features and limits", () => {
     const expectedInventory = {
       "grammar-checker": {

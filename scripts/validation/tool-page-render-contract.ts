@@ -50,6 +50,8 @@ export interface ToolPageRenderContract {
   localProcessing?: boolean;
   capabilityDisclosureCount: number;
   grammarLanguageNoticeCount: number;
+  grammarLanguageNoticeTagName?: string;
+  grammarLanguageNoticeRole?: string;
   grammarLanguageNoticeInputLanguage?: string;
   grammarLanguageNoticeText?: string;
 }
@@ -285,6 +287,8 @@ export function extractToolPageRenderContract(
             : undefined,
     capabilityDisclosureCount: capabilityDisclosures.length,
     grammarLanguageNoticeCount: grammarLanguageNotices.length,
+    grammarLanguageNoticeTagName: grammarLanguageNotice?.tagName,
+    grammarLanguageNoticeRole: grammarLanguageNotice?.role,
     grammarLanguageNoticeInputLanguage: grammarLanguageNotice?.inputLanguage,
     grammarLanguageNoticeText: grammarLanguageNotice?.text,
   };
@@ -392,6 +396,16 @@ export function compareToolPageRenderContract(
     );
   }
   if (expectation.expectedGrammarLanguageNotice) {
+    if (contract.grammarLanguageNoticeTagName !== 'p') {
+      failures.push(
+        `${route} grammar language notice: expected tag <p> but found <${contract.grammarLanguageNoticeTagName}>`,
+      );
+    }
+    if (contract.grammarLanguageNoticeRole !== 'note') {
+      failures.push(
+        `${route} grammar language notice: expected role="note" but found ${JSON.stringify(contract.grammarLanguageNoticeRole)}`,
+      );
+    }
     if (
       contract.grammarLanguageNoticeInputLanguage !==
       expectation.expectedGrammarLanguageNotice.inputLanguage
@@ -585,6 +599,8 @@ interface ExtractedCapabilityDisclosure {
 }
 
 interface ExtractedGrammarLanguageNotice {
+  tagName: string;
+  role?: string;
   inputLanguage?: string;
   text: string;
 }
@@ -599,6 +615,8 @@ function extractGrammarLanguageNoticeElements(
     .map((element) => {
       const notice = $(element);
       return {
+        tagName: element.tagName.toLowerCase(),
+        role: notice.attr('role')?.trim(),
         inputLanguage: notice.attr('data-input-language')?.trim(),
         text: notice.text().trim(),
       };

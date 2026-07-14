@@ -211,6 +211,8 @@ describe('extractToolPageRenderContract', () => {
       localProcessing: undefined,
       capabilityDisclosureCount: 0,
       grammarLanguageNoticeCount: 0,
+      grammarLanguageNoticeTagName: undefined,
+      grammarLanguageNoticeRole: undefined,
       grammarLanguageNoticeInputLanguage: undefined,
       grammarLanguageNoticeText: undefined,
     });
@@ -232,6 +234,8 @@ describe('extractToolPageRenderContract', () => {
 
     expect(contract).toMatchObject({
       grammarLanguageNoticeCount: 1,
+      grammarLanguageNoticeTagName: 'p',
+      grammarLanguageNoticeRole: 'note',
       grammarLanguageNoticeInputLanguage: 'en',
       grammarLanguageNoticeText: 'This local checker is designed for English text.',
     });
@@ -374,6 +378,59 @@ describe('compareToolPageRenderContract', () => {
     expect(wrongFailures).toContain(
       'en/release-ready-tool grammar language notice: expected localized text "This local checker is designed for English text." but found "Неверный текст"',
     );
+  });
+
+  it('requires the Grammar notice marker to be on a p element with role="note"', () => {
+    const expectation = {
+      locale: 'en',
+      slug: 'release-ready-tool',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication'],
+      expectedCapabilitySlug: 'release-ready-tool',
+      expectedCapabilityVersion: '2.3.0',
+      expectedLocalProcessing: true,
+      expectedGrammarLanguageNotice: {
+        inputLanguage: 'en',
+        text: 'This local checker is designed for English text.',
+      },
+    };
+    const replacements = [
+      {
+        html: grammarNoticeHtml.replace('<p\n', '<div\n').replace('</p>', '</div>'),
+        failure:
+          'en/release-ready-tool grammar language notice: expected tag <p> but found <div>',
+      },
+      {
+        html: grammarNoticeHtml.replace('      role="note"\n', ''),
+        failure:
+          'en/release-ready-tool grammar language notice: expected role="note" but found undefined',
+      },
+      {
+        html: grammarNoticeHtml.replace('role="note"', 'role="alert"'),
+        failure:
+          'en/release-ready-tool grammar language notice: expected role="note" but found "alert"',
+      },
+      {
+        html: grammarNoticeHtml.replace(
+          /<p([\s\S]*?data-grammar-language-notice[\s\S]*?)<\/p>/,
+          '<script$1</script>',
+        ),
+        failure:
+          'en/release-ready-tool grammar language notice: expected tag <p> but found <script>',
+      },
+    ];
+
+    for (const { html, failure } of replacements) {
+      expect(
+        compareToolPageRenderContract(
+          expectation,
+          extractToolPageRenderContract(html),
+          html,
+        ),
+      ).toContain(failure);
+    }
   });
 
   it('reports capability identity, version, and processing drift', () => {

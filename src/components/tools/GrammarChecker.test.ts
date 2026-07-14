@@ -18,6 +18,11 @@ import { fileURLToPath } from 'node:url';
 import puppeteer, { type Browser } from 'puppeteer';
 import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 
+import {
+  cleanupGrammarBrowserFixture,
+  withPuppeteerPage,
+} from './grammar-checker-fixture-lifecycle';
+
 const repoRoot = fileURLToPath(new URL('../../..', import.meta.url));
 const fixtureRoot = path.join(
   repoRoot,
@@ -95,164 +100,165 @@ beforeAll(async () => {
 }, 60_000);
 
 afterAll(async () => {
-  await browser?.close();
-  await new Promise<void>((resolve, reject) => {
-    if (!server) {
-      resolve();
-      return;
-    }
-    server.close((error) => (error ? reject(error) : resolve()));
+  await cleanupGrammarBrowserFixture({
+    closeBrowser: async () => {
+      await browser?.close();
+    },
+    closeServer: () => new Promise<void>((resolve, reject) => {
+      if (!server) {
+        resolve();
+        return;
+      }
+      server.close((error) => (error ? reject(error) : resolve()));
+    }),
+    removeTempTree: () => {
+      if (tempRoot) {
+        rmSync(tempRoot, { recursive: true, force: true });
+      }
+    },
   });
-  if (tempRoot) {
-    rmSync(tempRoot, { recursive: true, force: true });
-  }
 });
 
 describe('GrammarChecker public UI', () => {
-  it('renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]', async () => {
-    const page = await browser!.newPage();
-    await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForSelector('textarea');
+  it('renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]', async () => {
+    await withPuppeteerPage(() => browser!.newPage(), async (page) => {
+      await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('textarea');
 
-    expect(
-      await page.$$eval('[data-grammar-language-notice]', (elements) =>
-        elements.map((element) => ({
-          id: element.id,
-          inputLanguage: element.getAttribute('data-input-language'),
-          text: element.textContent?.trim(),
+      expect(
+        await page.$$eval('[data-grammar-language-notice]', (elements) =>
+          elements.map((element) => ({
+            id: element.id,
+            inputLanguage: element.getAttribute('data-input-language'),
+            text: element.textContent?.trim(),
+          })),
+        ),
+      ).toEqual([
+        {
+          id: 'grammar-checker-language-notice',
+          inputLanguage: 'en',
+          text: 'This local checker is designed for English text.',
+        },
+      ]);
+      expect(
+        await page.$eval('textarea', (textarea) => ({
+          describedBy: textarea.getAttribute('aria-describedby'),
+          lang: textarea.getAttribute('lang'),
         })),
-      ),
-    ).toEqual([
-      {
-        id: 'grammar-checker-language-notice',
-        inputLanguage: 'en',
-        text: 'This local checker is designed for English text.',
-      },
-    ]);
-    expect(
-      await page.$eval('textarea', (textarea) => ({
-        describedBy: textarea.getAttribute('aria-describedby'),
-        lang: textarea.getAttribute('lang'),
-      })),
-    ).toEqual({
-      describedBy: 'grammar-checker-language-notice',
-      lang: 'en',
+      ).toEqual({
+        describedBy: 'grammar-checker-language-notice',
+        lang: 'en',
+      });
+
+      await page.type('textarea', 'The editor reviews the draft carefully.');
+      expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
     });
-
-    await page.type('textarea', 'The editor reviews the draft carefully.');
-    expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
-
-    await page.close();
   });
 
-  it('renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]', async () => {
-    const page = await browser!.newPage();
-    await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForSelector('textarea');
-    await page.type('textarea', 'Teh editor reviews reviews the draft.');
+  it('renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]', async () => {
+    await withPuppeteerPage(() => browser!.newPage(), async (page) => {
+      await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('textarea');
+      await page.type('textarea', 'Teh editor reviews reviews the draft.');
 
-    await page.waitForFunction(
-      () => document.querySelectorAll('[data-grammar-preview] mark').length === 2,
-    );
-    expect(
-      await page.$eval('[data-grammar-preview]', (preview) => {
-        let offset = 0;
-        const ranges: Array<{ start: number; end: number; text: string }> = [];
-        for (const node of preview.childNodes) {
-          const text = node.textContent ?? '';
-          if (node instanceof HTMLElement && node.tagName === 'MARK') {
-            ranges.push({ start: offset, end: offset + text.length, text });
+      await page.waitForFunction(
+        () => document.querySelectorAll('[data-grammar-preview] mark').length === 2,
+      );
+      expect(
+        await page.$eval('[data-grammar-preview]', (preview) => {
+          let offset = 0;
+          const ranges: Array<{ start: number; end: number; text: string }> = [];
+          for (const node of preview.childNodes) {
+            const text = node.textContent ?? '';
+            if (node instanceof HTMLElement && node.tagName === 'MARK') {
+              ranges.push({ start: offset, end: offset + text.length, text });
+            }
+            offset += text.length;
           }
-          offset += text.length;
-        }
-        return ranges;
-      }),
-    ).toEqual([
-      { start: 0, end: 3, text: 'Teh' },
-      { start: 11, end: 26, text: 'reviews reviews' },
-    ]);
-    expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
-
-    await page.close();
+          return ranges;
+        }),
+      ).toEqual([
+        { start: 0, end: 3, text: 'Teh' },
+        { start: 11, end: 26, text: 'reviews reviews' },
+      ]);
+      expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
+    });
   });
 
   it('applies an individual visible fix while preserving the remaining issue and notice [capability:grammar-checker:browser-feature:individual-fixes]', async () => {
-    const page = await browser!.newPage();
-    await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForSelector('textarea');
-    await page.type('textarea', 'Teh editor reviews reviews the draft.');
-    await page.waitForFunction(
-      () => document.querySelectorAll('[data-grammar-preview] mark').length === 2,
-    );
+    await withPuppeteerPage(() => browser!.newPage(), async (page) => {
+      await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('textarea');
+      await page.type('textarea', 'Teh editor reviews reviews the draft.');
+      await page.waitForFunction(
+        () => document.querySelectorAll('[data-grammar-preview] mark').length === 2,
+      );
 
-    await page.$eval('[data-grammar-fix]', (button) =>
-      (button as HTMLButtonElement).click(),
-    );
+      await page.$eval('[data-grammar-fix]', (button) =>
+        (button as HTMLButtonElement).click(),
+      );
 
-    expect(await page.$eval('textarea', (textarea) => textarea.value)).toBe(
-      'the editor reviews reviews the draft.',
-    );
-    expect(
-      await page.$$eval('[data-grammar-preview] mark', (marks) =>
-        marks.map((mark) => mark.textContent),
-      ),
-    ).toEqual(['reviews reviews']);
-    expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
-
-    await page.close();
+      expect(await page.$eval('textarea', (textarea) => textarea.value)).toBe(
+        'the editor reviews reviews the draft.',
+      );
+      expect(
+        await page.$$eval('[data-grammar-preview] mark', (marks) =>
+          marks.map((mark) => mark.textContent),
+        ),
+      ).toEqual(['reviews reviews']);
+      expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
+    });
   });
 
   it('applies all visible fixes without position drift and keeps the notice [capability:grammar-checker:produced-output:corrected-text] [capability:grammar-checker:browser-feature:all-fixes]', async () => {
-    const page = await browser!.newPage();
-    await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForSelector('textarea');
-    await page.type('textarea', 'Teh editor reviews reviews the draft.');
-    await page.waitForFunction(
-      () => document.querySelectorAll('[data-grammar-preview] mark').length === 2,
-    );
+    await withPuppeteerPage(() => browser!.newPage(), async (page) => {
+      await page.goto(`${baseUrl}/en/`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('textarea');
+      await page.type('textarea', 'Teh editor reviews reviews the draft.');
+      await page.waitForFunction(
+        () => document.querySelectorAll('[data-grammar-preview] mark').length === 2,
+      );
 
-    await page.$eval('[data-grammar-fix-all]', (button) =>
-      (button as HTMLButtonElement).click(),
-    );
+      await page.$eval('[data-grammar-fix-all]', (button) =>
+        (button as HTMLButtonElement).click(),
+      );
 
-    expect(await page.$eval('textarea', (textarea) => textarea.value)).toBe(
-      'the editor reviews the draft.',
-    );
-    expect(await page.$$eval('[data-grammar-preview] mark', (marks) => marks.length)).toBe(0);
-    expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
-
-    await page.close();
+      expect(await page.$eval('textarea', (textarea) => textarea.value)).toBe(
+        'the editor reviews the draft.',
+      );
+      expect(await page.$$eval('[data-grammar-preview] mark', (marks) => marks.length)).toBe(0);
+      expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
+    });
   });
 
   it('presents Cyrillic input as zero supported English-rule matches without a native-language success claim [capability:grammar-checker:limit:english-only-engine]', async () => {
-    const page = await browser!.newPage();
-    await page.goto(`${baseUrl}/ru/`, { waitUntil: 'domcontentloaded' });
-    await page.waitForSelector('textarea');
+    await withPuppeteerPage(() => browser!.newPage(), async (page) => {
+      await page.goto(`${baseUrl}/ru/`, { waitUntil: 'domcontentloaded' });
+      await page.waitForSelector('textarea');
 
-    expect(
-      await page.$eval('[data-grammar-language-notice]', (notice) => ({
-        inputLanguage: notice.getAttribute('data-input-language'),
-        text: notice.textContent?.trim(),
-      })),
-    ).toEqual({
-      inputLanguage: 'en',
-      text: 'Интерфейс локализован на русский язык, но инструмент проверяет английский текст.',
+      expect(
+        await page.$eval('[data-grammar-language-notice]', (notice) => ({
+          inputLanguage: notice.getAttribute('data-input-language'),
+          text: notice.textContent?.trim(),
+        })),
+      ).toEqual({
+        inputLanguage: 'en',
+        text: 'Интерфейс локализован на русский язык, но инструмент проверяет английский текст.',
+      });
+      await page.type('textarea', 'Она пишет короткий русский текст.');
+      await page.waitForSelector('[data-grammar-match-status]');
+
+      expect(
+        await page.$eval('[data-grammar-match-status]', (status) =>
+          status.textContent?.trim(),
+        ),
+      ).toBe('Совпадений с поддерживаемыми правилами английского языка не найдено.');
+      expect(await page.$$eval('[data-grammar-preview] mark', (marks) => marks.length)).toBe(0);
+      expect(
+        await page.$eval('[data-grammar-preview]', (preview) => preview.textContent),
+      ).toBe('Она пишет короткий русский текст.');
+      expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
     });
-    await page.type('textarea', 'Она пишет короткий русский текст.');
-    await page.waitForSelector('[data-grammar-match-status]');
-
-    expect(
-      await page.$eval('[data-grammar-match-status]', (status) =>
-        status.textContent?.trim(),
-      ),
-    ).toBe('Совпадений с поддерживаемыми правилами английского языка не найдено.');
-    expect(await page.$$eval('[data-grammar-preview] mark', (marks) => marks.length)).toBe(0);
-    expect(
-      await page.$eval('[data-grammar-preview]', (preview) => preview.textContent),
-    ).toBe('Она пишет короткий русский текст.');
-    expect(await page.$$eval('[data-grammar-language-notice]', (elements) => elements.length)).toBe(1);
-
-    await page.close();
   });
 
   it('leaves the tracked fixture free of generated build artifacts', () => {
