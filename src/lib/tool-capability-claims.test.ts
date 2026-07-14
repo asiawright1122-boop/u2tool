@@ -1707,6 +1707,7 @@ describe("assessToolCapabilityClaims", () => {
     ["ja", "このアプリケーションでSQL プログラムを実行します。"],
     ["ja", "このアプリケーションでクエリ ジョブを実行します。"],
     ["ja", "このアプリケーションでクエリコードを実行します。"],
+    ["ja", "このアプリケーションでＳＱＬコードを実行します。"],
     ["ko", "이 애플리케이션에서 SQL 코드를 실행합니다."],
     ["ko", "이 애플리케이션에서 SQL 스크립트를 실행합니다."],
     ["ko", "SQL 배치를 로컬 환경에서 자동으로 실행합니다."],
@@ -1716,6 +1717,7 @@ describe("assessToolCapabilityClaims", () => {
     ["ko", "이 애플리케이션에서 SQL 프로그램을 실행합니다."],
     ["ko", "이 애플리케이션에서 쿼리잡을 실행합니다."],
     ["ko", "이 애플리케이션에서 쿼리 작업을 실행합니다."],
+    ["ko", "이 애플리케이션에서 ＳＱＬ 코드를 실행합니다."],
   ] as const)(
     "classifies a SQL-prefixed executable object as governed in %s: %s",
     (locale, text) => {
@@ -1744,6 +1746,28 @@ describe("assessToolCapabilityClaims", () => {
     ["ko", "SQL 쿼리를 분석하고 잡을 로컬 환경에서 자동으로 실행합니다."],
   ] as const)(
     "keeps a plain executable object non-SQL in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    ["ja", "このアプリケーションでNoSQLコードを実行します。"],
+    ["ja", "このアプリケーションで非SQLコードを実行します。"],
+    ["ja", "このアプリケーションで非ＳＱＬコードを実行します。"],
+    ["ja", "このアプリケーションで非 ＳＱＬ スクリプトを実行します。"],
+    ["ko", "이 애플리케이션에서 NoSQL 코드를 실행합니다."],
+    ["ko", "이 애플리케이션에서 비SQL 코드를 실행합니다."],
+    ["ko", "이 애플리케이션에서 비 SQL 스크립트를 실행합니다."],
+    ["ko", "이 애플리케이션에서 비ＳＱＬ배치를 실행합니다."],
+  ] as const)(
+    "keeps a non-SQL-prefixed executable object non-SQL in %s: %s",
     (locale, text) => {
       const report = assessToolCapabilityClaims({
         slug: "sql-query-optimizer",
