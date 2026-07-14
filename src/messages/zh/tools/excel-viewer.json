@@ -1,56 +1,102 @@
 {
+  "name": "Excel 查看器",
+  "description": "在本地打开 XLS、XLSX 和 XLSM 工作簿数据，支持工作表标签、公式文本、排序、筛选和 CSV 导出。",
+  "seo_title": "本地 Excel 查看器：XLS、XLSX 与 XLSM | U2Tool",
+  "seo_description": "在浏览器本地查看 Excel 工作簿数据。切换工作表、查看单元格地址和公式缓存结果、按单列排序或筛选，并将所选工作表导出为 CSV；文件不会上传。",
+  "excelViewer": {
+    "invalidFileType": "请选择 XLS、XLSX 或 XLSM 工作簿。",
+    "fileTooLarge": "此文件超过浏览器的 10 MiB 限制。",
+    "parseError": "无法读取此工作簿。请检查文件后重试。",
+    "readError": "无法在本地读取该文件。请重新选择。",
+    "uploadFile": "选择 Excel 工作簿",
+    "supportedFormats": "XLS、XLSX 或 XLSM · 本地处理",
+    "localNotice": "工作簿只在浏览器中处理，不会上传。",
+    "fileLimit": "最大文件大小：10 MiB。宏不会被执行。",
+    "loading": "正在本地读取工作簿…",
+    "fileLoaded": "已加载工作簿",
+    "workbookWarnings": "工作簿显示限制",
+    "sheetTabs": "工作簿工作表",
+    "filterColumn": "筛选列",
+    "selectColumn": "选择一列",
+    "filterValue": "筛选文本",
+    "enterValue": "输入要匹配的文本",
+    "clearFilter": "清除筛选",
+    "cellDisplay": "单元格显示",
+    "displayValues": "值",
+    "displayFormulas": "公式",
+    "mergedRanges": "合并区域",
+    "blankHeader": "第 {column} 列",
+    "showingRows": "显示 {visible} / {total} 行",
+    "noResults": "没有符合此筛选条件的行。",
+    "emptySheet": "此工作表没有已使用的单元格。",
+    "downloadCsv": "下载所选工作表 CSV",
+    "downloadError": "CSV 下载失败，请重试。",
+    "warningMacros": "检测到宏，但不会执行。",
+    "warningCharts": "检测到图表，但不会重现。",
+    "warningFormatting": "复杂格式可能无法完整重现。",
+    "warningFormulas": "显示公式但不重新计算；所示值来自工作簿的缓存结果。"
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "本地查看工作簿" },
-    "inputs": {
-      "xlsWorkbook": "XLS 工作簿",
-      "xlsxWorkbook": "XLSX 工作簿"
+    "modes": {
+      "localWorkbookViewing": "本地工作簿数据查看"
     },
-    "outputs": { "sheetTable": "工作表表格视图" },
+    "inputs": {
+      "xlsWorkbook": "本地 XLS 工作簿",
+      "xlsxWorkbook": "本地 XLSX 工作簿",
+      "xlsmWorkbook": "本地 XLSM 工作簿"
+    },
+    "outputs": {
+      "worksheetDataView": "带单元格地址的工作表数据视图",
+      "selectedSheetCsv": "所选工作表 CSV 文件"
+    },
     "features": {
-      "xlsXlsxOpen": "打开 XLS 和 XLSX 工作簿",
       "sheetTabs": "工作表标签导航",
-      "rowTable": "行列式表格视图",
-      "sort": "对行排序",
-      "filter": "筛选行"
+      "cellAddresses": "显示单元格地址和缓存值",
+      "formulaToggle": "值与公式文本切换",
+      "mergedRanges": "合并区域提示",
+      "singleColumnSort": "稳定的单列排序",
+      "singleColumnFilter": "单列文本筛选",
+      "csvDownload": "所选工作表 CSV 下载"
     },
     "limits": {
-      "noMacros": "不运行宏",
-      "noFormulaRecalculation": "不重新计算公式",
-      "noCharts": "不呈现工作簿图表",
-      "noFullFormattingFidelity": "不保留工作簿的完整格式",
-      "noExport": "不支持导出工作簿"
+      "tenMibFiles": "工作簿最大 10 MiB",
+      "localFilesOnly": "文件保留在本地且不会上传",
+      "noMacroExecution": "宏不会执行",
+      "noFormulaRecalculation": "显示公式但不重新计算",
+      "noChartRendering": "不重现图表",
+      "limitedFormattingFidelity": "复杂格式可能无法完整重现"
     }
   },
-  "detailed_description": "Excel Viewer 在浏览器中打开 XLSX 或 XLS 文件，并在表格中渲染工作表值以供快速检查。你可以在工作表之间切换，按文本筛选某一列，以及点击列标题对可见数据排序。适合在不打开 Microsoft Excel 的情况下检查简单电子表格。查看器专注于表格单元格值，不保留工作簿样式、图表、公式、宏、多列排序、正则筛选或导出控件。",
+  "detailed_description": "Excel 查看器可在浏览器本地打开最大 10 MiB 的 XLS、XLSX 和 XLSM 工作簿数据。可切换工作表、查看单元格地址和缓存值、切换公式文本、检查合并区域、按单列排序或筛选，并将所选工作表下载为 CSV。文件不会上传；宏不会执行，公式不会重新计算，图表不会重现，复杂格式可能无法完整重现。",
   "usage_steps": [
-    "从设备上传 XLSX 或 XLS 文件。",
-    "存在多个工作表时使用工作表标签切换。",
-    "选择筛选列并输入文本缩小显示行。",
-    "点击列标题进行升序、降序排序或清除排序。",
-    "直接在页面中查看解析的表格。"
+    "从设备选择最大 10 MiB 的 XLS、XLSX 或 XLSM 工作簿。",
+    "使用工作表标签选择要查看的工作表。",
+    "查看单元格地址和缓存值，或切换到公式文本。",
+    "按一列排序或筛选可见行。",
+    "需要纯表格数据时，下载所选工作表 CSV。"
   ],
   "usage_examples": [
-    "查看客户电子表格并对某个收入列排序检查最大值。",
-    "准备快速更新时按某个状态列筛选简单的任务列表。",
-    "在工作簿中切换工作表检查解析的表格值。",
-    "在没有安装桌面办公应用的设备上打开电子表格。"
+    "无需上传文件即可查看双工作表工作簿。",
+    "对照原始公式文本检查缓存的公式结果。",
+    "按状态列筛选任务表，并稳定排序数值列。",
+    "将一个工作表导出为正确转义的 CSV。"
   ],
   "faqs": [
     {
-      "question": "Excel Viewer 是免费的吗？",
-      "answer": "是的，Excel Viewer 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "工作簿会上传吗？",
+      "answer": "不会。工作簿仅在浏览器本地读取，不会上传。"
     },
     {
-      "question": "使用 Excel Viewer 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "查看器会运行宏或重新计算公式吗？",
+      "answer": "不会。宏绝不会执行；可显示公式文本和缓存值，但不会重新计算公式。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Excel Viewer 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+      "question": "图表和格式会与 Excel 完全一致吗？",
+      "answer": "不会。图表不会重现，复杂格式在数据表中可能无法完整重现。"
     },
     {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Excel Viewer 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "CSV 导出包含什么？",
+      "answer": "CSV 包含所选工作表的表头和标量值，不会导出或修改原始工作簿。"
     }
   ]
 }

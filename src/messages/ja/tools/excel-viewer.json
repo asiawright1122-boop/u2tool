@@ -1,37 +1,102 @@
 {
+  "name": "Excel ビューアー",
+  "description": "XLS、XLSX、XLSM のワークブックデータをローカルで開き、シート、数式テキスト、並べ替え、絞り込み、CSV 出力を確認できます。",
+  "seo_title": "ローカル Excel ビューアー（XLS・XLSX・XLSM）| U2Tool",
+  "seo_description": "Excel ワークブックをブラウザー内だけで確認。シート切替、セル番地、数式のキャッシュ値、単一列の並べ替え・絞り込み、選択シートの CSV 出力に対応し、ファイルはアップロードされません。",
+  "excelViewer": {
+    "invalidFileType": "XLS、XLSX、または XLSM ワークブックを選択してください。",
+    "fileTooLarge": "このファイルはブラウザーの 10 MiB 上限を超えています。",
+    "parseError": "このワークブックを読み取れませんでした。ファイルを確認して再試行してください。",
+    "readError": "ローカルファイルを読み取れませんでした。もう一度選択してください。",
+    "uploadFile": "Excel ワークブックを選択",
+    "supportedFormats": "XLS、XLSX、XLSM · ローカル処理",
+    "localNotice": "ワークブックはブラウザー内に留まり、アップロードされません。",
+    "fileLimit": "最大ファイルサイズ：10 MiB。マクロは実行されません。",
+    "loading": "ワークブックをローカルで読み込み中…",
+    "fileLoaded": "読み込んだワークブック",
+    "workbookWarnings": "ワークブック表示の制限",
+    "sheetTabs": "ワークブックのシート",
+    "filterColumn": "絞り込み列",
+    "selectColumn": "列を選択",
+    "filterValue": "絞り込みテキスト",
+    "enterValue": "一致するテキストを入力",
+    "clearFilter": "絞り込みを解除",
+    "cellDisplay": "セル表示",
+    "displayValues": "値",
+    "displayFormulas": "数式",
+    "mergedRanges": "結合範囲",
+    "blankHeader": "列 {column}",
+    "showingRows": "{total} 行中 {visible} 行を表示",
+    "noResults": "この条件に一致する行はありません。",
+    "emptySheet": "このシートに使用済みセルはありません。",
+    "downloadCsv": "選択シートを CSV でダウンロード",
+    "downloadError": "CSV のダウンロードに失敗しました。再試行してください。",
+    "warningMacros": "マクロが含まれていますが、実行されません。",
+    "warningCharts": "グラフが含まれていますが、再現されません。",
+    "warningFormatting": "複雑な書式は完全には再現されない場合があります。",
+    "warningFormulas": "数式は表示されますが再計算されません。値はワークブックのキャッシュ結果です。"
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "ローカルでワークブックを表示" },
-    "inputs": {
-      "xlsWorkbook": "XLS ワークブック",
-      "xlsxWorkbook": "XLSX ワークブック"
+    "modes": {
+      "localWorkbookViewing": "ローカルのワークブックデータ表示"
     },
-    "outputs": { "sheetTable": "ワークシートの表形式ビュー" },
+    "inputs": {
+      "xlsWorkbook": "ローカル XLS ワークブック",
+      "xlsxWorkbook": "ローカル XLSX ワークブック",
+      "xlsmWorkbook": "ローカル XLSM ワークブック"
+    },
+    "outputs": {
+      "worksheetDataView": "セル番地付きワークシートデータ表示",
+      "selectedSheetCsv": "選択シートの CSV ファイル"
+    },
     "features": {
-      "xlsXlsxOpen": "XLS と XLSX ワークブックを開く",
-      "sheetTabs": "シートタブで移動",
-      "rowTable": "行と列の表形式ビュー",
-      "sort": "行を並べ替え",
-      "filter": "行を絞り込み"
+      "sheetTabs": "シートタブ移動",
+      "cellAddresses": "セル番地とキャッシュ値の表示",
+      "formulaToggle": "値と数式テキストの切替",
+      "mergedRanges": "結合範囲の通知",
+      "singleColumnSort": "安定した単一列並べ替え",
+      "singleColumnFilter": "単一列のテキスト絞り込み",
+      "csvDownload": "選択シートの CSV ダウンロード"
     },
     "limits": {
-      "noMacros": "マクロは実行しません",
-      "noFormulaRecalculation": "数式は再計算しません",
-      "noCharts": "ワークブックのグラフは表示しません",
-      "noFullFormattingFidelity": "ワークブックの書式を完全には保持しません",
-      "noExport": "ワークブックはエクスポートできません"
+      "tenMibFiles": "最大ワークブックサイズ 10 MiB",
+      "localFilesOnly": "ファイルはローカルに留まりアップロードされない",
+      "noMacroExecution": "マクロを実行しない",
+      "noFormulaRecalculation": "数式を表示するが再計算しない",
+      "noChartRendering": "グラフを再現しない",
+      "limitedFormattingFidelity": "複雑な書式は完全に再現されない場合がある"
     }
   },
-  "detailed_description": "Excel Viewer は XLS または XLSX ファイルをブラウザ内で開き、ワークシートの値を表として表示します。シートタブの切り替え、1列のテキスト絞り込み、列見出しによる並べ替えを利用できます。マクロの実行、数式の再計算、グラフや完全な書式の再現、正規表現や複数条件のフィルター、複数列の並べ替え、ワークブックの出力には対応していません。",
+  "detailed_description": "Excel ビューアーは、最大 10 MiB の XLS、XLSX、XLSM ワークブックデータをブラウザー内で開きます。シート切替、セル番地とキャッシュ値の確認、数式テキストの切替、結合範囲、単一列の並べ替え・絞り込み、選択シートの CSV 出力が可能です。ファイルはアップロードされません。マクロは実行されず、数式は再計算されず、グラフは再現されず、複雑な書式は完全に再現されない場合があります。",
   "usage_steps": [
-    "端末から XLS または XLSX ファイルを選択します。",
-    "複数のワークシートがある場合はシートタブで切り替えます。",
-    "列を1つ選び、文字列を入力して表示行を絞り込みます。",
-    "列見出しをクリックして表示行を昇順または降順に並べ替えます。",
-    "ブラウザ内の表で値を確認します。"
+    "端末から最大 10 MiB の XLS、XLSX、または XLSM を選択します。",
+    "シートタブで確認するワークシートを選びます。",
+    "セル番地とキャッシュ値を確認し、必要なら数式テキストへ切り替えます。",
+    "1 列を並べ替えまたは絞り込みます。",
+    "必要な場合は選択シートを CSV でダウンロードします。"
   ],
   "usage_examples": [
-    "Office ソフトを起動せずに簡単なワークブックの値を確認する。",
-    "シートタブを切り替えて複数のワークシートを読む。",
-    "1列の絞り込みや並べ替えで表示行を確認する。"
+    "ファイルをアップロードせずに 2 シートのワークブックを確認する。",
+    "キャッシュされた数式結果と元の数式テキストを比較する。",
+    "ステータス列で絞り込み、数値列を安定して並べ替える。",
+    "1 つのシートを適切にエスケープされた CSV で出力する。"
+  ],
+  "faqs": [
+    {
+      "question": "ワークブックはアップロードされますか？",
+      "answer": "いいえ。ブラウザー内でローカルに読み取られ、アップロードされません。"
+    },
+    {
+      "question": "マクロの実行や数式の再計算を行いますか？",
+      "answer": "いいえ。マクロは実行されず、数式テキストとキャッシュ値は表示できますが再計算はしません。"
+    },
+    {
+      "question": "グラフと書式は Excel と同じように表示されますか？",
+      "answer": "いいえ。グラフは再現されず、複雑な書式はデータ表で完全に再現されない場合があります。"
+    },
+    {
+      "question": "CSV には何が含まれますか？",
+      "answer": "選択シートの見出しとスカラー値が含まれます。元のワークブックは変更されません。"
+    }
   ]
 }

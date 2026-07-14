@@ -1,0 +1,12 @@
+---
+import ExcelViewer from '@/components/tools/ExcelViewer.svelte';
+import translations from '@/messages/en.json';
+---
+
+<html lang="en">
+  <body>
+    <main>
+      <ExcelViewer client:load locale="en" {translations} />
+    </main>
+  </body>
+</html>

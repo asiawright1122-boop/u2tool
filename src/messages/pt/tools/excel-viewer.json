@@ -1,61 +1,102 @@
 {
+  "name": "Visualizador de Excel",
+  "description": "Abra dados XLS, XLSX e XLSM localmente com abas, texto de fórmulas, ordenação, filtros e exportação CSV.",
+  "seo_title": "Visualizador local de Excel para XLS, XLSX e XLSM | U2Tool",
+  "seo_description": "Inspecione dados do Excel localmente no navegador. Alterne planilhas, veja endereços e resultados em cache, ordene ou filtre uma coluna e exporte a planilha selecionada em CSV sem enviar o arquivo.",
+  "excelViewer": {
+    "invalidFileType": "Escolha uma pasta de trabalho XLS, XLSX ou XLSM.",
+    "fileTooLarge": "Este arquivo excede o limite de 10 MiB do navegador.",
+    "parseError": "Não foi possível ler esta pasta de trabalho. Verifique o arquivo e tente novamente.",
+    "readError": "Não foi possível ler o arquivo local. Escolha-o novamente.",
+    "uploadFile": "Escolher uma pasta de trabalho do Excel",
+    "supportedFormats": "XLS, XLSX ou XLSM · processamento local",
+    "localNotice": "A pasta de trabalho fica no navegador e não é enviada.",
+    "fileLimit": "Tamanho máximo: 10 MiB. Macros nunca são executadas.",
+    "loading": "Lendo a pasta de trabalho localmente…",
+    "fileLoaded": "Pasta de trabalho carregada",
+    "workbookWarnings": "Limites de exibição",
+    "sheetTabs": "Planilhas da pasta",
+    "filterColumn": "Coluna do filtro",
+    "selectColumn": "Selecione uma coluna",
+    "filterValue": "Texto do filtro",
+    "enterValue": "Digite o texto a corresponder",
+    "clearFilter": "Limpar filtro",
+    "cellDisplay": "Exibição da célula",
+    "displayValues": "Valores",
+    "displayFormulas": "Fórmulas",
+    "mergedRanges": "Intervalos mesclados",
+    "blankHeader": "Coluna {column}",
+    "showingRows": "Mostrando {visible} de {total} linhas",
+    "noResults": "Nenhuma linha corresponde ao filtro.",
+    "emptySheet": "Esta planilha não tem células usadas.",
+    "downloadCsv": "Baixar CSV da planilha selecionada",
+    "downloadError": "Falha ao baixar o CSV. Tente novamente.",
+    "warningMacros": "Há macros, mas não são executadas.",
+    "warningCharts": "Há gráficos, mas não são reproduzidos.",
+    "warningFormatting": "A formatação complexa pode não ser totalmente reproduzida.",
+    "warningFormulas": "As fórmulas são exibidas, mas não são recalculadas; os valores são resultados em cache da pasta de trabalho."
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "Visualização local de pastas de trabalho" },
-    "inputs": {
-      "xlsWorkbook": "Pasta de trabalho XLS",
-      "xlsxWorkbook": "Pasta de trabalho XLSX"
+    "modes": {
+      "localWorkbookViewing": "Visualização local de dados da pasta"
     },
-    "outputs": { "sheetTable": "Visualização da planilha em tabela" },
+    "inputs": {
+      "xlsWorkbook": "Pasta XLS local",
+      "xlsxWorkbook": "Pasta XLSX local",
+      "xlsmWorkbook": "Pasta XLSM local"
+    },
+    "outputs": {
+      "worksheetDataView": "Dados da planilha com endereços de células",
+      "selectedSheetCsv": "CSV da planilha selecionada"
+    },
     "features": {
-      "xlsXlsxOpen": "Abrir pastas de trabalho XLS e XLSX",
-      "sheetTabs": "Navegação pelas abas das planilhas",
-      "rowTable": "Visualização de linhas e colunas em tabela",
-      "sort": "Ordenar linhas",
-      "filter": "Filtrar linhas"
+      "sheetTabs": "Navegação por abas",
+      "cellAddresses": "Endereços e valores em cache",
+      "formulaToggle": "Alternância entre valores e texto de fórmulas",
+      "mergedRanges": "Avisos de intervalos mesclados",
+      "singleColumnSort": "Ordenação estável de uma coluna",
+      "singleColumnFilter": "Filtro de texto de uma coluna",
+      "csvDownload": "Download CSV da planilha selecionada"
     },
     "limits": {
-      "noMacros": "Não executa macros",
-      "noFormulaRecalculation": "Não recalcula fórmulas",
-      "noCharts": "Não exibe gráficos da pasta de trabalho",
-      "noFullFormattingFidelity": "Não preserva toda a formatação da pasta de trabalho",
-      "noExport": "Sem exportação da pasta de trabalho"
+      "tenMibFiles": "Pasta de até 10 MiB",
+      "localFilesOnly": "Os arquivos ficam locais e não são enviados",
+      "noMacroExecution": "As macros não são executadas",
+      "noFormulaRecalculation": "As fórmulas não são recalculadas",
+      "noChartRendering": "Os gráficos não são reproduzidos",
+      "limitedFormattingFidelity": "A formatação complexa pode não ser totalmente reproduzida"
     }
   },
-  "detailed_description": "O Excel Viewer abre arquivos .xlsx e .xls no navegador, lê as abas disponíveis e mostra os dados em uma tabela simples. Depois do upload, você pode alternar entre planilhas, escolher uma coluna para filtrar por texto, clicar no cabeçalho para alternar ordenação crescente ou decrescente e ver quantas linhas estão sendo exibidas em relação ao total da aba. A ferramenta é útil para uma conferência rápida sem abrir o Microsoft Office, especialmente quando você precisa verificar linhas, colunas e valores de uma planilha recebida. Ela não edita o arquivo, não preserva todos os estilos visuais como uma suíte de planilhas completa e não exporta os dados filtrados.",
+  "detailed_description": "O Visualizador de Excel abre localmente dados XLS, XLSX e XLSM de até 10 MiB. Alterne planilhas, veja endereços e valores em cache, mostre o texto das fórmulas, confira intervalos mesclados, ordene ou filtre uma coluna e baixe a planilha selecionada em CSV. O arquivo não é enviado. Macros não são executadas, fórmulas não são recalculadas, gráficos não são reproduzidos e a formatação complexa pode não ser totalmente reproduzida.",
   "usage_steps": [
-    "Clique na área de upload e selecione um arquivo .xlsx ou .xls do dispositivo.",
-    "Aguarde o nome do arquivo carregado aparecer na tela.",
-    "Se houver mais de uma aba, use as guias para escolher a planilha que deseja visualizar.",
-    "Escolha uma coluna e digite um valor para filtrar as linhas por texto.",
-    "Clique no cabeçalho de uma coluna para alternar entre ordem crescente, decrescente e sem ordenação.",
-    "Use a contagem exibida acima da tabela para saber quantas linhas continuam visíveis após o filtro."
+    "Escolha um arquivo XLS, XLSX ou XLSM de até 10 MiB.",
+    "Use as abas para selecionar a planilha.",
+    "Revise endereços e valores em cache ou mostre o texto das fórmulas.",
+    "Ordene ou filtre uma coluna.",
+    "Baixe a planilha selecionada em CSV quando precisar dos dados tabulares."
   ],
   "usage_examples": [
-    "Conferir rapidamente uma planilha de vendas recebida por e-mail sem abrir um aplicativo de escritório.",
-    "Filtrar uma coluna de status para encontrar linhas que contêm um texto específico.",
-    "Alternar entre abas de um arquivo XLSX para verificar se os dados esperados estão presentes.",
-    "Ordenar uma coluna de nomes ou valores para revisar a tabela em outra sequência."
+    "Revisar uma pasta com duas planilhas sem enviá-la.",
+    "Comparar resultados em cache com o texto original das fórmulas.",
+    "Filtrar uma lista por status e ordenar uma coluna numérica.",
+    "Exportar uma planilha como CSV com escape correto."
   ],
   "faqs": [
     {
-      "question": "O que devo revisar antes de usar o resultado de Visualizador do Excel?",
-      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+      "question": "Minha pasta de trabalho é enviada?",
+      "answer": "Não. Ela é lida localmente no navegador e não é enviada."
     },
     {
-      "question": "Posso alterar o resultado depois de gerar?",
-      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+      "question": "O visualizador executa macros ou recalcula fórmulas?",
+      "answer": "Não. As macros nunca são executadas; fórmulas e valores em cache são exibidos sem recálculo."
     },
     {
-      "question": "Por que o resultado pode diferir de outra ferramenta?",
-      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+      "question": "Gráficos e formatação ficam iguais ao Excel?",
+      "answer": "Não. Os gráficos não são reproduzidos e a formatação complexa pode não aparecer por completo."
     },
     {
-      "question": "Posso começar com uma entrada curta?",
-      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
-    },
-    {
-      "question": "A ferramenta substitui uma revisão manual?",
-      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+      "question": "O que o CSV inclui?",
+      "answer": "Inclui cabeçalhos e valores escalares da planilha selecionada sem modificar a pasta original."
     }
   ]
 }

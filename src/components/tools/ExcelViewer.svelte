@@ -1,262 +1,485 @@
 <script lang="ts">
+  import {
+    filterExcelRows,
+    parseExcelWorkbook,
+    sheetToCsv,
+    sortExcelRows,
+    type ExcelSheetView,
+    type ExcelWorkbookView,
+  } from '@/lib/excel-data-viewer';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
   }
 
+  type SortDirection = 'asc' | 'desc';
+  type DisplayMode = 'values' | 'formulas';
+
+  const EXCEL_FILE_LIMIT = 10 * 1024 * 1024;
+  const EXCEL_FILE_PATTERN = /\.(?:xls|xlsx|xlsm)$/i;
+
   let { locale, translations }: Props = $props();
 
-  // Translation helpers
-  function t(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
-    const keys = key.split('.');
+  let workbook = $state<ExcelWorkbookView | null>(null);
+  let selectedSheetIndex = $state(0);
+  let fileName = $state('');
+  let fileError = $state('');
+  let downloadError = $state('');
+  let loading = $state(false);
+  let displayMode = $state<DisplayMode>('values');
+  let sortColumn = $state(-1);
+  let sortDirection = $state<SortDirection>('asc');
+  let filterColumn = $state(-1);
+  let filterQuery = $state('');
+
+  let currentSheet = $derived(workbook?.sheets[selectedSheetIndex] ?? null);
+  let visibleRows = $derived.by(() => {
+    if (!currentSheet) return [];
+    const filteredRows = filterColumn >= 0 && filterQuery
+      ? filterExcelRows(currentSheet, filterColumn, filterQuery)
+      : currentSheet.rows;
+    if (sortColumn < 0) return filteredRows;
+    return sortExcelRows(
+      { ...currentSheet, rows: filteredRows },
+      sortColumn,
+      sortDirection,
+    );
+  });
+  let visibleWarnings = $derived(
+    workbook?.warnings.map(localizeWorkbookWarning) ?? [],
+  );
+
+  function t(
+    key: string,
+    variables: Record<string, string | number> = {},
+  ): string {
+    const tools = translations.tools as Record<string, unknown> | undefined;
+    const scope = tools?.['excel-viewer'] as Record<string, unknown> | undefined;
     let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.${key}`;
+    for (const segment of key.split('.')) {
+      if (typeof value !== 'object' || value === null || Array.isArray(value)) {
+        return `MISSING: tools.excel-viewer.${key}`;
+      }
+      value = (value as Record<string, unknown>)[segment];
+    }
+    if (typeof value !== 'string') {
+      return `MISSING: tools.excel-viewer.${key}`;
+    }
+    return Object.entries(variables).reduce(
+      (result, [name, replacement]) =>
+        result.replaceAll(`{${name}}`, String(replacement)),
+      value,
+    );
   }
 
-  // Types
-  type SortDirection = 'asc' | 'desc' | null;
-  interface SheetData {
-  name: string;
-  data: Record<string, unknown>[];
-  headers: string[];
-}
+  function clearWorkbook(): void {
+    workbook = null;
+    selectedSheetIndex = 0;
+    fileName = '';
+    displayMode = 'values';
+    resetTableControls();
+  }
 
-  let sheets = $state([]);
+  function resetTableControls(): void {
+    sortColumn = -1;
+    sortDirection = 'asc';
+    filterColumn = -1;
+    filterQuery = '';
+    downloadError = '';
+  }
 
-  let selectedSheet = $state('');
-
-  let fileName = $state('');
-
-  let error = $state('');
-
-  let sortColumn = $state('');
-
-  let sortDirection = $state(null);
-
-  let filterColumn = $state('');
-
-  let filterValue = $state('');
-
-  function handleFileUpload(e: Event) {
-    const file = e.target.files?.[0];
+  function handleFileUpload(event: Event): void {
+    const input = event.currentTarget as HTMLInputElement;
+    const file = input.files?.[0];
     if (!file) return;
 
-    const isValidType = file.name.endsWith('.xlsx') || file.name.endsWith('.xls');
-    if (!isValidType) {
-      error = t('excelViewer.invalidFileType');
+    fileError = '';
+    downloadError = '';
+
+    if (file.size > EXCEL_FILE_LIMIT) {
+      clearWorkbook();
+      fileError = t('excelViewer.fileTooLarge');
+      input.value = '';
+      return;
+    }
+    if (!EXCEL_FILE_PATTERN.test(file.name)) {
+      clearWorkbook();
+      fileError = t('excelViewer.invalidFileType');
+      input.value = '';
       return;
     }
 
-    error = '';
-    fileName = file.name;
-    sortColumn = '';
-    sortDirection = null;
-    filterColumn = '';
-    filterValue = '';
-
+    clearWorkbook();
+    loading = true;
     const reader = new FileReader();
-    reader.onload = async (event) => {
+    reader.onerror = () => {
+      loading = false;
+      clearWorkbook();
+      fileError = t('excelViewer.readError');
+      input.value = '';
+    };
+    reader.onload = async () => {
       try {
-        const XLSX = await import('xlsx');
-        let data = new Uint8Array(event.target?.result as ArrayBuffer);
-        const workbook = XLSX.read(data, { type: 'array' });
-
-        const parsedSheets: SheetData[] = workbook.SheetNames.map(name => {
-          const worksheet = workbook.Sheets[name];
-          const jsonData = XLSX.utils.sheet_to_json<Record<string, unknown>>(worksheet);
-          const headers = jsonData.length > 0 ? Object.keys(jsonData[0]) : [];
-          return { name, data: jsonData, headers };
-        });
-
-        sheets = parsedSheets;
-        if (parsedSheets.length > 0) {
-          selectedSheet = parsedSheets[0].name;
+        if (!(reader.result instanceof ArrayBuffer)) {
+          throw new Error('Workbook reader returned no bytes');
         }
+        const parsed = await parseExcelWorkbook(new Uint8Array(reader.result));
+        workbook = parsed;
+        selectedSheetIndex = 0;
+        fileName = file.name;
+        fileError = '';
       } catch {
-        error = t('excelViewer.parseError');
+        clearWorkbook();
+        fileError = t('excelViewer.parseError');
+      } finally {
+        loading = false;
+        input.value = '';
       }
     };
     reader.readAsArrayBuffer(file);
   }
 
-  let processedData = $derived.by(() => {
-    if (!currentSheet) return [];
-
-    let data = [...currentSheet.data];
-
-    // Filter
-    if (filterColumn && filterValue) {
-      data = data.filter(row => {
-        const cellValue = String(row[filterColumn] ?? '').toLowerCase();
-        return cellValue.includes(filterValue.toLowerCase());
-      });
-    }
-
-    // Sort
-    if (sortColumn && sortDirection) {
-      data.sort((a, b) => {
-        const aVal = a[sortColumn];
-        const bVal = b[sortColumn];
-
-        if (aVal === bVal) return 0;
-        if (aVal === null || aVal === undefined) return 1;
-        if (bVal === null || bVal === undefined) return -1;
-
-        const comparison = String(aVal).localeCompare(String(bVal), undefined, { numeric: true });
-        return sortDirection === 'asc' ? comparison : -comparison;
-      });
-    }
-
-    return data;
-  });
-
-  // Functions
-  const currentSheet = sheets.find(s => s.name === selectedSheet);
-  function handleSort(column: string) {
-    if (sortColumn === column) {
-      if (sortDirection === 'asc') sortDirection = 'desc';
-      else if (sortDirection === 'desc') { sortColumn = ''; sortDirection = null; }
-      else sortDirection = 'asc';
-    } else {
-      sortColumn = column;
-      sortDirection = 'asc';
-    }
+  function selectSheet(index: number): void {
+    selectedSheetIndex = index;
+    displayMode = 'values';
+    resetTableControls();
   }
 
+  function handleSort(column: number): void {
+    if (sortColumn !== column) {
+      sortColumn = column;
+      sortDirection = 'asc';
+      return;
+    }
+    if (sortDirection === 'asc') {
+      sortDirection = 'desc';
+      return;
+    }
+    sortColumn = -1;
+    sortDirection = 'asc';
+  }
+
+  function handleFilterColumn(event: Event): void {
+    filterColumn = Number((event.currentTarget as HTMLSelectElement).value);
+  }
+
+  function displayCellValue(cell: ExcelSheetView['rows'][number][number]): string {
+    if (displayMode === 'formulas' && cell.formula) {
+      return `=${cell.formula}`;
+    }
+    if (cell.value === null) return '';
+    return String(cell.value);
+  }
+
+  function localizeWorkbookWarning(warning: string): string {
+    if (warning.startsWith('Macros are present')) return t('excelViewer.warningMacros');
+    if (warning.startsWith('Charts are present')) return t('excelViewer.warningCharts');
+    if (warning.startsWith('Complex formatting')) return t('excelViewer.warningFormatting');
+    if (warning.startsWith('Formulas are displayed')) return t('excelViewer.warningFormulas');
+    return warning;
+  }
+
+  function csvFileName(sheet: ExcelSheetView): string {
+    const workbookName = fileName.replace(/\.(?:xls|xlsx|xlsm)$/i, '') || 'workbook';
+    const sheetName = sheet.name.replace(/[\\/:*?"<>|]+/g, '-').trim() || 'sheet';
+    return `${workbookName}-${sheetName}.csv`;
+  }
+
+  function downloadSelectedSheetCsv(): void {
+    if (!currentSheet) return;
+    downloadError = '';
+    let objectUrl = '';
+    try {
+      const blob = new Blob([sheetToCsv(currentSheet)], {
+        type: 'text/csv;charset=utf-8',
+      });
+      objectUrl = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = objectUrl;
+      anchor.download = csvFileName(currentSheet);
+      document.body.append(anchor);
+      anchor.click();
+      anchor.remove();
+    } catch {
+      downloadError = t('excelViewer.downloadError');
+    } finally {
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+    }
+  }
 </script>
 
+<section class="space-y-5" data-excel-viewer data-locale={locale}>
+  <div
+    class="rounded-lg border border-sky-200 bg-sky-50 px-4 py-3 text-sm text-sky-950 dark:border-sky-900 dark:bg-sky-950/40 dark:text-sky-100"
+    data-excel-local-notice
+  >
+    <p class="font-medium">{t('excelViewer.localNotice')}</p>
+    <p class="mt-1 text-sky-800 dark:text-sky-200">{t('excelViewer.fileLimit')}</p>
+  </div>
 
-    <div class="space-y-6">
-      <!-- File Upload -->
-      <div class="tool-dropzone">
-        <input type="file" accept=".xlsx,.xls" onchange={handleFileUpload} class="hidden" id="excel-viewer-upload" />
-        <label for="excel-viewer-upload" class="cursor-pointer flex flex-col items-center">
-          <span class="text-4xl mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></span>
-          <span class="text-lg font-medium text-gray-700 dark:text-gray-300">{t('excelViewer.uploadFile')}</span>
-          <span class="text-sm text-gray-500 dark:text-gray-400 mt-1">{t('excelViewer.supportedFormats')}</span>
-        </label>
+  <div class="tool-dropzone">
+    <input
+      id="excel-viewer-upload"
+      class="sr-only"
+      type="file"
+      accept=".xls,.xlsx,.xlsm"
+      onchange={handleFileUpload}
+      data-excel-file-input
+    />
+    <label
+      for="excel-viewer-upload"
+      class="flex cursor-pointer flex-col items-center gap-2 text-center focus-within:outline-none"
+    >
+      <svg aria-hidden="true" viewBox="0 0 24 24" class="h-9 w-9 text-amber-700 dark:text-amber-300" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M4 4.75A1.75 1.75 0 0 1 5.75 3h8.5L20 8.75v10.5A1.75 1.75 0 0 1 18.25 21H5.75A1.75 1.75 0 0 1 4 19.25z" />
+        <path d="M14 3v6h6M8 13h8M8 17h5" />
+      </svg>
+      <span class="text-base font-semibold text-gray-900 dark:text-gray-100">
+        {t('excelViewer.uploadFile')}
+      </span>
+      <span class="text-sm text-gray-600 dark:text-gray-300">
+        {t('excelViewer.supportedFormats')}
+      </span>
+    </label>
+  </div>
+
+  {#if loading}
+    <p class="text-sm text-gray-700 dark:text-gray-200" role="status" aria-live="polite">
+      {t('excelViewer.loading')}
+    </p>
+  {/if}
+
+  {#if fileError}
+    <div
+      class="rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950/40 dark:text-red-200"
+      role="alert"
+      aria-live="assertive"
+      data-excel-error
+    >
+      {fileError}
+    </div>
+  {/if}
+
+  {#if workbook && currentSheet}
+    <div class="space-y-5">
+      <div class="flex flex-wrap items-start justify-between gap-3 border-b border-gray-200 pb-4 dark:border-gray-700">
+        <div>
+          <p class="text-sm text-gray-600 dark:text-gray-300">{t('excelViewer.fileLoaded')}</p>
+          <p class="font-semibold text-gray-950 dark:text-white" data-excel-file-name>{fileName}</p>
+        </div>
+        <button
+          type="button"
+          class="tool-btn-secondary"
+          onclick={downloadSelectedSheetCsv}
+          data-excel-download-csv
+        >
+          {t('excelViewer.downloadCsv')}
+        </button>
       </div>
 
-      {#if error}
-<div class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-600 dark:text-red-400">
-          {error}
-        </div>
-{/if}
+      {#if downloadError}
+        <p
+          class="text-sm text-red-700 dark:text-red-300"
+          role="alert"
+          aria-live="assertive"
+          data-excel-download-error
+        >
+          {downloadError}
+        </p>
+      {/if}
 
-      {#if fileName}
-<div class="p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg text-green-600 dark:text-green-400">
-          {t('excelViewer.fileLoaded')}: {fileName}
-        </div>
-{/if}
-
-      <!-- Sheet Tabs -->
-      {#if sheets.length > 1}
-<div class="flex flex-wrap gap-2 border-b border-gray-200 dark:border-gray-700 pb-2">
-          {#each sheets as sheet (sheet.name)}
-<button 
-              onclick={() => { selectedSheet = sheet.name; filterColumn = ''; filterValue = ''; }}
-              class={`px-4 py-2 rounded-t-lg text-sm font-medium transition-colors ${selectedSheet === sheet.name
-                  ? 'bg-amber-600 text-white'
-                  : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                }`}
-            >
-              {sheet.name}
-            </button>
-{/each}
-        </div>
-{/if}
-
-      <!-- Filter -->
-      {#if currentSheet}
-{#if currentSheet.headers.length > 0}
-        <div class="flex flex-wrap gap-4 items-end">
-          <div>
-            <label for="excel-viewer-field-4" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              {t('excelViewer.filterColumn')}
-            </label>
-            <select
-              bind:value={filterColumn}
-              class="tool-select" id="excel-viewer-field-4">
-              <option value="">{t('excelViewer.selectColumn')}</option>
-              {#each currentSheet.headers as h (h)}
-<option  value={h}>{h}</option>
-{/each}
-            </select>
-          </div>
-          <div>
-            <label for="excel-viewer-field-3" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-              {t('excelViewer.filterValue')}
-            </label>
-            <input
-              type="text"
-              bind:value={filterValue}
-              placeholder={t('excelViewer.enterValue')}
-              class="tool-input"
-              disabled={!filterColumn} id="excel-viewer-field-3" />
-          </div>
-          {#if filterColumn || filterValue}
-<button
-              onclick={() => { filterColumn = ''; filterValue = ''; }}
-              class="px-3 py-2 text-sm text-red-600 hover:text-red-800"
-            >
-              {t('excelViewer.clearFilter')}
-            </button>
-{/if}
+      {#if visibleWarnings.length > 0}
+        <div class="rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 dark:border-amber-900 dark:bg-amber-950/35">
+          <h2 class="font-semibold text-amber-950 dark:text-amber-100">
+            {t('excelViewer.workbookWarnings')}
+          </h2>
+          <ul class="mt-2 list-disc space-y-1 ps-5 text-sm text-amber-900 dark:text-amber-200">
+            {#each visibleWarnings as warning}
+              <li data-excel-warning>{warning}</li>
+            {/each}
+          </ul>
         </div>
       {/if}
-{/if}
 
-      <!-- Data Table -->
-      {#if currentSheet}
-{#if processedData.length > 0}
-        <div>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">
-            {t('excelViewer.showing')} {processedData.length} / {currentSheet.data.length} {t('excelViewer.rows')}
+      <div
+        class="flex gap-1 overflow-x-auto border-b border-gray-300 dark:border-gray-700"
+        role="tablist"
+        aria-label={t('excelViewer.sheetTabs')}
+      >
+        {#each workbook.sheets as sheet, index (sheet.name)}
+          <button
+            id={`excel-sheet-tab-${index}`}
+            type="button"
+            role="tab"
+            aria-selected={selectedSheetIndex === index}
+            aria-controls="excel-sheet-panel"
+            class={`shrink-0 border-b-2 px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 ${selectedSheetIndex === index
+              ? 'border-amber-600 text-amber-800 dark:border-amber-400 dark:text-amber-200'
+              : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-950 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-white'}`}
+            onclick={() => selectSheet(index)}
+            data-excel-sheet-tab={sheet.name}
+          >
+            {sheet.name}
+          </button>
+        {/each}
+      </div>
+
+      <div
+        id="excel-sheet-panel"
+        role="tabpanel"
+        aria-labelledby={`excel-sheet-tab-${selectedSheetIndex}`}
+        class="space-y-4"
+      >
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div class="flex flex-wrap items-end gap-3">
+            <div>
+              <label for="excel-filter-column" class="mb-1 block text-sm font-medium text-gray-800 dark:text-gray-200">
+                {t('excelViewer.filterColumn')}
+              </label>
+              <select
+                id="excel-filter-column"
+                class="tool-select"
+                value={filterColumn}
+                onchange={handleFilterColumn}
+                data-excel-filter-column
+              >
+                <option value="-1">{t('excelViewer.selectColumn')}</option>
+                {#each currentSheet.headers as header, index}
+                  <option value={index}>{header || t('excelViewer.blankHeader', { column: index + 1 })}</option>
+                {/each}
+              </select>
+            </div>
+            <div>
+              <label for="excel-filter-query" class="mb-1 block text-sm font-medium text-gray-800 dark:text-gray-200">
+                {t('excelViewer.filterValue')}
+              </label>
+              <input
+                id="excel-filter-query"
+                class="tool-input"
+                type="search"
+                bind:value={filterQuery}
+                placeholder={t('excelViewer.enterValue')}
+                disabled={filterColumn < 0}
+                data-excel-filter-query
+              />
+            </div>
+            {#if filterColumn >= 0 || filterQuery}
+              <button
+                type="button"
+                class="tool-btn-secondary"
+                onclick={() => {
+                  filterColumn = -1;
+                  filterQuery = '';
+                }}
+              >
+                {t('excelViewer.clearFilter')}
+              </button>
+            {/if}
+          </div>
+
+          <div class="inline-flex rounded-lg border border-gray-300 p-1 dark:border-gray-700" role="group" aria-label={t('excelViewer.cellDisplay')}>
+            <button
+              type="button"
+              aria-pressed={displayMode === 'values'}
+              class={`rounded-md px-3 py-1.5 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${displayMode === 'values'
+                ? 'bg-amber-600 text-white'
+                : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800'}`}
+              onclick={() => (displayMode = 'values')}
+              data-excel-display-values
+            >
+              {t('excelViewer.displayValues')}
+            </button>
+            <button
+              type="button"
+              aria-pressed={displayMode === 'formulas'}
+              class={`rounded-md px-3 py-1.5 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${displayMode === 'formulas'
+                ? 'bg-amber-600 text-white'
+                : 'text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800'}`}
+              onclick={() => (displayMode = 'formulas')}
+              data-excel-display-formulas
+            >
+              {t('excelViewer.displayFormulas')}
+            </button>
+          </div>
+        </div>
+
+        {#if currentSheet.merges.length > 0}
+          <p class="text-sm text-gray-700 dark:text-gray-200" data-excel-merges>
+            <span class="font-medium">{t('excelViewer.mergedRanges')}:</span>
+            {currentSheet.merges.join(', ')}
           </p>
-          <div class="overflow-x-auto border border-gray-200 dark:border-gray-700 rounded-lg max-h-96">
-            <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-              <thead class="bg-gray-50 dark:bg-gray-800 sticky top-0">
+        {/if}
+
+        {#if currentSheet.headers.length === 0}
+          <div class="rounded-lg border border-dashed border-gray-300 px-4 py-10 text-center text-gray-600 dark:border-gray-700 dark:text-gray-300">
+            {t('excelViewer.emptySheet')}
+          </div>
+        {:else}
+          <p class="text-sm text-gray-600 dark:text-gray-300" data-excel-row-count>
+            {t('excelViewer.showingRows', {
+              visible: visibleRows.length,
+              total: currentSheet.rows.length,
+            })}
+          </p>
+
+          <div class="max-h-[32rem] overflow-auto rounded-lg border border-gray-300 dark:border-gray-700">
+            <table class="min-w-full border-collapse text-sm">
+              <thead class="sticky top-0 z-10 bg-gray-100 dark:bg-gray-900">
                 <tr>
-                  {#each currentSheet.headers as header (header)}
-<th 
-                      onclick={() => handleSort(header)}
-                      class="px-4 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
+                  {#each currentSheet.headers as header, column}
+                    <th
+                      scope="col"
+                      class="border-b border-gray-300 px-3 py-2 text-start font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100"
+                      aria-sort={sortColumn === column
+                        ? sortDirection === 'asc' ? 'ascending' : 'descending'
+                        : 'none'}
                     >
-                      <div class="flex items-center gap-1">
-                        {header}
-                        {#if sortColumn === header}
-<span>{sortDirection === 'asc' ? '↑' : '↓'}</span>
-{/if}
-                      </div>
+                      <button
+                        type="button"
+                        class="flex w-full items-center justify-between gap-3 rounded px-1 py-1 text-start hover:bg-gray-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 dark:hover:bg-gray-800"
+                        onclick={() => handleSort(column)}
+                        data-excel-sort-column={column}
+                      >
+                        <span>{header || t('excelViewer.blankHeader', { column: column + 1 })}</span>
+                        {#if sortColumn === column}
+                          <span aria-hidden="true">{sortDirection === 'asc' ? '↑' : '↓'}</span>
+                        {/if}
+                      </button>
                     </th>
-{/each}
+                  {/each}
                 </tr>
               </thead>
-              <tbody class="bg-white dark:bg-gray-900 divide-y divide-gray-200 dark:divide-gray-700">
-                {#each processedData as row, idx (idx)}
-<tr  class="hover:bg-gray-50 dark:hover:bg-gray-800">
-                    {#each currentSheet.headers as header (header)}
-<td  class="px-4 py-2 text-sm text-gray-900 dark:text-gray-100 whitespace-nowrap">
-                        {String(row[header] ?? '')}
+              <tbody class="divide-y divide-gray-200 bg-white dark:divide-gray-800 dark:bg-gray-950">
+                {#each visibleRows as row (row.map((cell) => cell.address).join('|'))}
+                  <tr class="hover:bg-gray-50 dark:hover:bg-gray-900" data-excel-row>
+                    {#each row as cell, column (cell.address)}
+                      <td
+                        class="min-w-32 px-3 py-2 align-top text-gray-900 dark:text-gray-100"
+                        data-excel-cell={cell.address}
+                        data-excel-cell-column={column}
+                      >
+                        <span class="block font-mono text-[0.6875rem] text-gray-500 dark:text-gray-400" data-excel-cell-address>
+                          {cell.address}
+                        </span>
+                        <span class="mt-0.5 block whitespace-pre-wrap break-words" data-excel-cell-content>
+                          {displayCellValue(cell)}
+                        </span>
                       </td>
-{/each}
+                    {/each}
                   </tr>
-{/each}
+                {/each}
               </tbody>
             </table>
           </div>
-        </div>
-      {/if}
-{/if}
 
-      {#if currentSheet}
-{#if processedData.length === 0}
-        <div class="text-center py-8 text-gray-500 dark:text-gray-400">
-          {filterValue ? t('excelViewer.noResults') : t('excelViewer.emptySheet')}
-        </div>
-      {/if}
-{/if}
+          {#if visibleRows.length === 0}
+            <p class="text-center text-sm text-gray-600 dark:text-gray-300">
+              {t('excelViewer.noResults')}
+            </p>
+          {/if}
+        {/if}
+      </div>
     </div>
-  
+  {/if}
+</section>

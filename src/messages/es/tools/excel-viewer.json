@@ -1,39 +1,102 @@
 {
+  "name": "Visor de Excel",
+  "description": "Abre datos XLS, XLSX y XLSM localmente con pestañas de hojas, texto de fórmulas, ordenación, filtros y exportación CSV.",
+  "seo_title": "Visor local de Excel para XLS, XLSX y XLSM | U2Tool",
+  "seo_description": "Inspecciona datos de Excel localmente en el navegador. Cambia de hoja, revisa direcciones y valores de fórmulas en caché, ordena o filtra una columna y exporta la hoja seleccionada a CSV sin subir el archivo.",
+  "excelViewer": {
+    "invalidFileType": "Elige un libro XLS, XLSX o XLSM.",
+    "fileTooLarge": "Este archivo supera el límite de 10 MiB del navegador.",
+    "parseError": "No se pudo leer este libro. Comprueba el archivo e inténtalo de nuevo.",
+    "readError": "No se pudo leer el archivo local. Vuelve a elegirlo.",
+    "uploadFile": "Elegir un libro de Excel",
+    "supportedFormats": "XLS, XLSX o XLSM · procesamiento local",
+    "localNotice": "El libro permanece en tu navegador y no se sube.",
+    "fileLimit": "Tamaño máximo: 10 MiB. Las macros nunca se ejecutan.",
+    "loading": "Leyendo el libro localmente…",
+    "fileLoaded": "Libro cargado",
+    "workbookWarnings": "Límites de visualización",
+    "sheetTabs": "Hojas del libro",
+    "filterColumn": "Columna de filtro",
+    "selectColumn": "Selecciona una columna",
+    "filterValue": "Texto del filtro",
+    "enterValue": "Escribe el texto que debe coincidir",
+    "clearFilter": "Borrar filtro",
+    "cellDisplay": "Vista de celda",
+    "displayValues": "Valores",
+    "displayFormulas": "Fórmulas",
+    "mergedRanges": "Rangos combinados",
+    "blankHeader": "Columna {column}",
+    "showingRows": "Mostrando {visible} de {total} filas",
+    "noResults": "Ninguna fila coincide con este filtro.",
+    "emptySheet": "Esta hoja no tiene celdas usadas.",
+    "downloadCsv": "Descargar CSV de la hoja seleccionada",
+    "downloadError": "No se pudo descargar el CSV. Inténtalo de nuevo.",
+    "warningMacros": "Hay macros, pero no se ejecutan.",
+    "warningCharts": "Hay gráficos, pero no se reproducen.",
+    "warningFormatting": "El formato complejo puede no reproducirse por completo.",
+    "warningFormulas": "Las fórmulas se muestran, pero no se vuelven a calcular; los valores son resultados en caché del libro."
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "Visualización local de libros" },
-    "inputs": {
-      "xlsWorkbook": "Libro XLS",
-      "xlsxWorkbook": "Libro XLSX"
+    "modes": {
+      "localWorkbookViewing": "Vista local de datos del libro"
     },
-    "outputs": { "sheetTable": "Vista tabular de la hoja" },
+    "inputs": {
+      "xlsWorkbook": "Libro XLS local",
+      "xlsxWorkbook": "Libro XLSX local",
+      "xlsmWorkbook": "Libro XLSM local"
+    },
+    "outputs": {
+      "worksheetDataView": "Vista de datos con direcciones de celda",
+      "selectedSheetCsv": "CSV de la hoja seleccionada"
+    },
     "features": {
-      "xlsXlsxOpen": "Abrir libros XLS y XLSX",
       "sheetTabs": "Navegación por pestañas de hojas",
-      "rowTable": "Vista tabular de filas y columnas",
-      "sort": "Ordenar filas",
-      "filter": "Filtrar filas"
+      "cellAddresses": "Direcciones de celda y valores en caché",
+      "formulaToggle": "Alternancia entre valores y texto de fórmula",
+      "mergedRanges": "Avisos de rangos combinados",
+      "singleColumnSort": "Ordenación estable de una columna",
+      "singleColumnFilter": "Filtro de texto de una columna",
+      "csvDownload": "Descarga CSV de la hoja seleccionada"
     },
     "limits": {
-      "noMacros": "No ejecuta macros",
-      "noFormulaRecalculation": "No recalcula fórmulas",
-      "noCharts": "No muestra gráficos del libro",
-      "noFullFormattingFidelity": "No conserva todo el formato del libro",
-      "noExport": "Sin exportación de libros"
+      "tenMibFiles": "Libro de hasta 10 MiB",
+      "localFilesOnly": "Los archivos permanecen locales y no se suben",
+      "noMacroExecution": "Las macros no se ejecutan",
+      "noFormulaRecalculation": "Las fórmulas no se recalculan",
+      "noChartRendering": "Los gráficos no se reproducen",
+      "limitedFormattingFidelity": "El formato complejo puede no reproducirse por completo"
     }
   },
-  "detailed_description": "El Excel Viewer es una aplicación web basada en tecnologías HTML5 y JavaScript que permite procesar y visualizar archivos Excel (formatos XLSX, XLSM, XLS) sin dependencia de software de escritorio. Utiliza una biblioteca de análisis binario para interpretar la estructura del archivo y renderiza el contenido en una cuadrícula interactiva con soporte para múltiples hojas. Los usuarios pueden aplicar filtros avanzados mediante operadores lógicos (AND/OR), ordenar columnas mediante clics en encabezados y navegar entre hojas con un selector de pestañas dinámico. Esta herramienta es ideal para profesionales que necesitan revisar datos críticos en dispositivos móviles sin acceso a Microsoft Excel, analizar datasets grandes sin sobrecargar el navegador, o compartir resultados con equipos no técnicos mediante enlaces de acceso. El motor de renderizado optimiza la memoria mediante paginación virtual, permitiendo archivos de hasta 50MB con celdas que contienen fórmulas, gráficos incrustados y estilos condicionales. No requiere instalación ni transfiere datos a servidores externos, garantizando privacidad en entornos corporativos.",
+  "detailed_description": "El Visor de Excel abre localmente libros XLS, XLSX y XLSM de hasta 10 MiB. Permite cambiar de hoja, revisar direcciones y valores en caché, alternar el texto de fórmulas, ver rangos combinados, ordenar o filtrar una columna y descargar la hoja elegida como CSV. El archivo no se sube. Las macros no se ejecutan, las fórmulas no se recalculan, los gráficos no se reproducen y el formato complejo puede no reproducirse por completo.",
   "usage_steps": [
-    "Haz clic en el botón 'Cargar Archivo' y selecciona tu documento Excel desde el dispositivo local",
-    "Utiliza el menú desplegable 'Hoja Activa' para cambiar entre diferentes pestañas del libro",
-    "Haz clic en cualquier encabezado de columna mientras mantienes presionada la tecla Shift para ordenar ascendentemente o Ctrl para ordenar descendente",
-    "Activa el modo filtro pulsando el icono de lupa en la barra de herramientas y configura condiciones múltiples en la ventana emergente",
-    "Navega mediante teclado usando las flechas direcccionales para inspeccionar celdas individuales",
-    "Haz clic derecho sobre una fila filtrada para copiar valores específicos al portapapeles o exportar selecciones a CSV"
+    "Elige un libro XLS, XLSX o XLSM de hasta 10 MiB.",
+    "Selecciona la hoja con sus pestañas.",
+    "Revisa direcciones y valores en caché o cambia al texto de fórmulas.",
+    "Ordena o filtra una columna.",
+    "Descarga la hoja seleccionada como CSV cuando necesites datos tabulares."
   ],
   "usage_examples": [
-    "Un analista financiero revisa un informe de transacciones bancarias para identificar movimientos fuera de rango aplicando filtros por rango de fechas y montos superiores a 10,000 USD",
-    "Un gerente de proyectos utiliza el ordenamiento por prioridad y el filtro de estado 'Pendiente' para reasignar tareas en un cronograma compartido",
-    "Un profesor carga una planilla de calificaciones y ordena por promedio para identificar estudiantes que requieren apoyo académico",
-    "Un equipo remoto colabora en tiempo real analizando datos de ventas filtrando por región y usando la función de comparación de hojas para validar consistencia"
+    "Revisar un libro de dos hojas sin subirlo.",
+    "Comparar resultados de fórmulas en caché con su texto original.",
+    "Filtrar una hoja por estado y ordenar una columna numérica.",
+    "Exportar una hoja como CSV correctamente escapado."
+  ],
+  "faqs": [
+    {
+      "question": "¿Se sube mi libro?",
+      "answer": "No. Se lee localmente en el navegador y no se sube."
+    },
+    {
+      "question": "¿Ejecuta macros o recalcula fórmulas?",
+      "answer": "No. Las macros nunca se ejecutan; se muestran fórmulas y valores en caché sin recalcular."
+    },
+    {
+      "question": "¿Los gráficos y el formato se verán como en Excel?",
+      "answer": "No. Los gráficos no se reproducen y el formato complejo puede no verse por completo en la tabla."
+    },
+    {
+      "question": "¿Qué incluye la exportación CSV?",
+      "answer": "Incluye encabezados y valores escalares de la hoja seleccionada; no modifica el libro original."
+    }
   ]
 }

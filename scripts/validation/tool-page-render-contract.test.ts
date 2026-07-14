@@ -182,6 +182,7 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/grammar-checker',
       'en/hex-editor',
       'en/sql-query-optimizer',
+      'en/excel-viewer',
       'ru/grammar-checker',
       'ja/json-formatter',
       'ar/password-generator',

@@ -1,38 +1,102 @@
 {
+  "name": "Excel Viewer",
+  "description": "Open XLS, XLSX, and XLSM workbook data locally with sheet tabs, formula text, sorting, filtering, and CSV export.",
+  "seo_title": "Local Excel Viewer for XLS, XLSX and XLSM | U2Tool",
+  "seo_description": "Inspect Excel workbook data locally in your browser. Switch sheets, view cell addresses and cached formula results, sort or filter one column, and export the selected sheet as CSV. Files are never uploaded.",
+  "excelViewer": {
+    "invalidFileType": "Choose an XLS, XLSX, or XLSM workbook.",
+    "fileTooLarge": "This file is larger than the 10 MiB browser limit.",
+    "parseError": "This workbook could not be read. Check the file and try again.",
+    "readError": "The local file could not be read. Try choosing it again.",
+    "uploadFile": "Choose an Excel workbook",
+    "supportedFormats": "XLS, XLSX, or XLSM · processed locally",
+    "localNotice": "Your workbook stays in your browser and is never uploaded.",
+    "fileLimit": "Maximum file size: 10 MiB. Macros are never executed.",
+    "loading": "Reading workbook locally…",
+    "fileLoaded": "Loaded workbook",
+    "workbookWarnings": "Workbook display limits",
+    "sheetTabs": "Workbook sheets",
+    "filterColumn": "Filter column",
+    "selectColumn": "Select a column",
+    "filterValue": "Filter text",
+    "enterValue": "Enter text to match",
+    "clearFilter": "Clear filter",
+    "cellDisplay": "Cell display",
+    "displayValues": "Values",
+    "displayFormulas": "Formulas",
+    "mergedRanges": "Merged ranges",
+    "blankHeader": "Column {column}",
+    "showingRows": "Showing {visible} of {total} rows",
+    "noResults": "No rows match this filter.",
+    "emptySheet": "This sheet has no used cells.",
+    "downloadCsv": "Download selected sheet CSV",
+    "downloadError": "CSV download failed. Try again.",
+    "warningMacros": "Macros are present but are not executed.",
+    "warningCharts": "Charts are present but are not reproduced.",
+    "warningFormatting": "Complex formatting may not be fully reproduced.",
+    "warningFormulas": "Formulas are displayed but not recalculated; values are the workbook's cached results."
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "Local workbook viewing" },
-    "inputs": {
-      "xlsWorkbook": "XLS workbook",
-      "xlsxWorkbook": "XLSX workbook"
+    "modes": {
+      "localWorkbookViewing": "Local workbook data viewing"
     },
-    "outputs": { "sheetTable": "Worksheet table view" },
+    "inputs": {
+      "xlsWorkbook": "Local XLS workbook",
+      "xlsxWorkbook": "Local XLSX workbook",
+      "xlsmWorkbook": "Local XLSM workbook"
+    },
+    "outputs": {
+      "worksheetDataView": "Worksheet data view with cell addresses",
+      "selectedSheetCsv": "Selected-sheet CSV file"
+    },
     "features": {
-      "xlsXlsxOpen": "Open XLS and XLSX workbooks",
       "sheetTabs": "Sheet tab navigation",
-      "rowTable": "Row-and-column table view",
-      "sort": "Sort rows",
-      "filter": "Filter rows"
+      "cellAddresses": "Visible cell addresses and cached values",
+      "formulaToggle": "Value and formula-text toggle",
+      "mergedRanges": "Merged-range notices",
+      "singleColumnSort": "Stable single-column sorting",
+      "singleColumnFilter": "Single-column text filtering",
+      "csvDownload": "Selected-sheet CSV download"
     },
     "limits": {
-      "noMacros": "Does not run macros",
-      "noFormulaRecalculation": "Does not recalculate formulas",
-      "noCharts": "Does not render workbook charts",
-      "noFullFormattingFidelity": "Does not preserve full workbook formatting",
-      "noExport": "No workbook export"
+      "tenMibFiles": "Maximum workbook size: 10 MiB",
+      "localFilesOnly": "Files stay local and are never uploaded",
+      "noMacroExecution": "Macros are never executed",
+      "noFormulaRecalculation": "Formulas are displayed but not recalculated",
+      "noChartRendering": "Charts are not reproduced",
+      "limitedFormattingFidelity": "Complex formatting may not be fully reproduced"
     }
   },
-  "detailed_description": "The Excel Viewer opens XLSX or XLS files in the browser and renders worksheet values in a table for quick inspection. You can switch between sheets, filter one column by text, and click column headers to sort the visible data. It is useful for checking simple spreadsheets without opening Microsoft Excel. The viewer focuses on tabular cell values and does not preserve workbook styling, charts, formulas, macros, multi-column sorting, regex filters, or export controls.",
+  "detailed_description": "Excel Viewer opens XLS, XLSX, and XLSM workbook data locally in the browser up to 10 MiB. Switch between sheets, inspect cell addresses and cached values, toggle formula text, review merged ranges, sort or filter one column, and download the selected sheet as CSV. The file is never uploaded. Macros are never executed, formulas are never recalculated, charts are not reproduced, and complex formatting may not be fully reproduced.",
   "usage_steps": [
-    "Upload an XLSX or XLS file from your device.",
-    "Use the sheet tabs to switch between worksheets when multiple sheets exist.",
-    "Choose a filter column and enter text to narrow the displayed rows.",
-    "Click a column header to sort ascending, descending, or clear the sort.",
-    "Review the parsed table directly in the page."
+    "Choose an XLS, XLSX, or XLSM workbook up to 10 MiB from your device.",
+    "Use the sheet tabs to select the worksheet you want to inspect.",
+    "Review cell addresses and cached values, or switch to formula text where formulas exist.",
+    "Sort or filter one column to narrow the visible rows.",
+    "Download the selected sheet as CSV when you need plain tabular data."
   ],
   "usage_examples": [
-    "Review a client spreadsheet and sort one revenue column to inspect the largest values.",
-    "Filter a simple task list by one status column while preparing a quick update.",
-    "Switch between sheets in a workbook to check parsed table values.",
-    "Open a spreadsheet on a device that does not have a desktop office app installed."
+    "Inspect a two-sheet workbook without uploading it or opening a desktop office app.",
+    "Review cached formula results while checking the original formula text.",
+    "Filter a task sheet by one status column and sort a numeric column stably.",
+    "Export one selected worksheet as correctly escaped CSV."
+  ],
+  "faqs": [
+    {
+      "question": "Is my workbook uploaded?",
+      "answer": "No. The workbook is read locally in your browser and is never uploaded."
+    },
+    {
+      "question": "Does the viewer run macros or recalculate formulas?",
+      "answer": "No. Macros are never executed. Formula text and cached workbook values can be displayed, but formulas are not recalculated."
+    },
+    {
+      "question": "Will charts and formatting look like Excel?",
+      "answer": "No. Charts are not reproduced, and complex workbook formatting may not be fully reproduced in the data table."
+    },
+    {
+      "question": "What does CSV export include?",
+      "answer": "CSV export includes the headers and displayed scalar values from the selected sheet. It does not export or modify the original workbook."
+    }
   ]
 }

@@ -482,7 +482,7 @@ describe("assessToolCapabilityClaims", () => {
     );
   });
 
-  it("blocks the concrete Arabic Excel and German Gantt overclaims", () => {
+  it("blocks the concrete Arabic Excel and German Gantt overclaims while permitting selected-sheet CSV", () => {
     const excel = assessToolCapabilityClaims({
       slug: "excel-viewer",
       locale: "ar",
@@ -490,7 +490,7 @@ describe("assessToolCapabilityClaims", () => {
         "تنشئ تمثيلاً بصرياً باستخدام HTML5 Canvas مع دعم التنسيق الشرطي.",
         "تستخدم فلترة متعددة الشروط مع تعبيرات REGEX.",
         "توفر فرزاً هرمياً عبر أعمدة متعددة.",
-        "اضغط على تصدير البيانات لحفظ النتائج كملف CSV.",
+        "نزّل الورقة المحددة بصيغة CSV.",
       ].join("\n"),
     });
     const gantt = assessToolCapabilityClaims({
@@ -504,8 +504,10 @@ describe("assessToolCapabilityClaims", () => {
         "excel-viewer-formatting-fidelity-claim",
         "excel-viewer-advanced-filter-claim",
         "excel-viewer-multi-sort-claim",
-        "excel-viewer-export-claim",
       ]),
+    );
+    expect(excel.issues.map((issue) => issue.code)).not.toContain(
+      "excel-viewer-export-claim",
     );
     expect(gantt.issues.map((issue) => issue.code)).toContain(
       "gantt-generator-dependencies-claim",

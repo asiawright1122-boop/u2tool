@@ -1,37 +1,102 @@
 {
+  "name": "Excel 뷰어",
+  "description": "XLS, XLSX, XLSM 통합 문서 데이터를 로컬에서 열고 시트, 수식 텍스트, 정렬, 필터, CSV 내보내기를 확인합니다.",
+  "seo_title": "로컬 Excel 뷰어: XLS, XLSX, XLSM | U2Tool",
+  "seo_description": "Excel 통합 문서 데이터를 브라우저에서 로컬로 확인하세요. 시트 전환, 셀 주소와 캐시된 수식 결과, 단일 열 정렬·필터, 선택한 시트 CSV 다운로드를 지원하며 파일은 업로드되지 않습니다.",
+  "excelViewer": {
+    "invalidFileType": "XLS, XLSX 또는 XLSM 통합 문서를 선택하세요.",
+    "fileTooLarge": "이 파일은 브라우저의 10 MiB 제한을 초과합니다.",
+    "parseError": "이 통합 문서를 읽을 수 없습니다. 파일을 확인하고 다시 시도하세요.",
+    "readError": "로컬 파일을 읽을 수 없습니다. 다시 선택하세요.",
+    "uploadFile": "Excel 통합 문서 선택",
+    "supportedFormats": "XLS, XLSX 또는 XLSM · 로컬 처리",
+    "localNotice": "통합 문서는 브라우저에만 머물며 업로드되지 않습니다.",
+    "fileLimit": "최대 파일 크기: 10 MiB. 매크로는 실행되지 않습니다.",
+    "loading": "통합 문서를 로컬에서 읽는 중…",
+    "fileLoaded": "불러온 통합 문서",
+    "workbookWarnings": "통합 문서 표시 제한",
+    "sheetTabs": "통합 문서 시트",
+    "filterColumn": "필터 열",
+    "selectColumn": "열 선택",
+    "filterValue": "필터 텍스트",
+    "enterValue": "일치할 텍스트 입력",
+    "clearFilter": "필터 지우기",
+    "cellDisplay": "셀 표시",
+    "displayValues": "값",
+    "displayFormulas": "수식",
+    "mergedRanges": "병합 범위",
+    "blankHeader": "열 {column}",
+    "showingRows": "전체 {total}행 중 {visible}행 표시",
+    "noResults": "이 필터와 일치하는 행이 없습니다.",
+    "emptySheet": "이 시트에는 사용된 셀이 없습니다.",
+    "downloadCsv": "선택한 시트 CSV 다운로드",
+    "downloadError": "CSV 다운로드에 실패했습니다. 다시 시도하세요.",
+    "warningMacros": "매크로가 있지만 실행되지 않습니다.",
+    "warningCharts": "차트가 있지만 재현되지 않습니다.",
+    "warningFormatting": "복잡한 서식은 완전히 재현되지 않을 수 있습니다.",
+    "warningFormulas": "수식은 표시되지만 다시 계산되지 않습니다. 값은 통합 문서의 캐시된 결과입니다."
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "로컬 통합 문서 보기" },
-    "inputs": {
-      "xlsWorkbook": "XLS 통합 문서",
-      "xlsxWorkbook": "XLSX 통합 문서"
+    "modes": {
+      "localWorkbookViewing": "로컬 통합 문서 데이터 보기"
     },
-    "outputs": { "sheetTable": "워크시트 표 보기" },
+    "inputs": {
+      "xlsWorkbook": "로컬 XLS 통합 문서",
+      "xlsxWorkbook": "로컬 XLSX 통합 문서",
+      "xlsmWorkbook": "로컬 XLSM 통합 문서"
+    },
+    "outputs": {
+      "worksheetDataView": "셀 주소가 포함된 워크시트 데이터 보기",
+      "selectedSheetCsv": "선택한 시트 CSV 파일"
+    },
     "features": {
-      "xlsXlsxOpen": "XLS 및 XLSX 통합 문서 열기",
       "sheetTabs": "시트 탭 탐색",
-      "rowTable": "행과 열로 구성된 표 보기",
-      "sort": "행 정렬",
-      "filter": "행 필터링"
+      "cellAddresses": "셀 주소 및 캐시 값 표시",
+      "formulaToggle": "값과 수식 텍스트 전환",
+      "mergedRanges": "병합 범위 알림",
+      "singleColumnSort": "안정적인 단일 열 정렬",
+      "singleColumnFilter": "단일 열 텍스트 필터",
+      "csvDownload": "선택한 시트 CSV 다운로드"
     },
     "limits": {
-      "noMacros": "매크로를 실행하지 않음",
-      "noFormulaRecalculation": "수식을 다시 계산하지 않음",
-      "noCharts": "통합 문서 차트를 렌더링하지 않음",
-      "noFullFormattingFidelity": "통합 문서의 전체 서식을 보존하지 않음",
-      "noExport": "통합 문서 내보내기 없음"
+      "tenMibFiles": "최대 통합 문서 크기 10 MiB",
+      "localFilesOnly": "파일은 로컬에만 있고 업로드되지 않음",
+      "noMacroExecution": "매크로를 실행하지 않음",
+      "noFormulaRecalculation": "수식을 표시하지만 다시 계산하지 않음",
+      "noChartRendering": "차트를 재현하지 않음",
+      "limitedFormattingFidelity": "복잡한 서식이 완전히 재현되지 않을 수 있음"
     }
   },
-  "detailed_description": "Excel Viewer는 XLS 또는 XLSX 파일을 브라우저에서 열고 워크시트 값을 표로 표시합니다. 시트 탭 이동, 한 열의 텍스트 필터, 열 머리글을 이용한 정렬을 사용할 수 있습니다. 매크로 실행, 수식 재계산, 차트나 전체 서식 재현, 정규식 또는 다중 조건 필터, 다중 열 정렬, 통합 문서 내보내기는 지원하지 않습니다.",
+  "detailed_description": "Excel 뷰어는 최대 10 MiB의 XLS, XLSX, XLSM 통합 문서 데이터를 브라우저에서 로컬로 엽니다. 시트 전환, 셀 주소와 캐시 값, 수식 텍스트, 병합 범위, 단일 열 정렬·필터, 선택 시트 CSV 다운로드를 제공합니다. 파일은 업로드되지 않습니다. 매크로는 실행되지 않고, 수식은 다시 계산되지 않으며, 차트는 재현되지 않고, 복잡한 서식은 완전히 재현되지 않을 수 있습니다.",
   "usage_steps": [
-    "장치에서 XLS 또는 XLSX 파일을 선택합니다.",
-    "워크시트가 여러 개이면 시트 탭으로 이동합니다.",
-    "열 하나를 선택하고 텍스트를 입력해 표시 행을 필터링합니다.",
-    "열 머리글을 클릭해 표시 행을 정렬합니다.",
-    "브라우저 표에서 값을 확인합니다."
+    "기기에서 최대 10 MiB의 XLS, XLSX 또는 XLSM 파일을 선택합니다.",
+    "시트 탭으로 확인할 워크시트를 선택합니다.",
+    "셀 주소와 캐시 값을 확인하거나 수식 텍스트로 전환합니다.",
+    "한 열을 정렬하거나 필터링합니다.",
+    "필요하면 선택한 시트를 CSV로 다운로드합니다."
   ],
   "usage_examples": [
-    "Office 프로그램을 열지 않고 간단한 워크북 값을 확인합니다.",
-    "시트 탭을 이동하며 여러 워크시트를 읽습니다.",
-    "한 열의 필터나 정렬로 표시 행을 확인합니다."
+    "업로드 없이 두 시트 통합 문서를 확인합니다.",
+    "캐시된 수식 결과와 원래 수식 텍스트를 비교합니다.",
+    "상태 열을 필터링하고 숫자 열을 안정적으로 정렬합니다.",
+    "한 시트를 올바르게 이스케이프된 CSV로 내보냅니다."
+  ],
+  "faqs": [
+    {
+      "question": "통합 문서가 업로드되나요?",
+      "answer": "아니요. 브라우저에서 로컬로 읽으며 업로드되지 않습니다."
+    },
+    {
+      "question": "매크로를 실행하거나 수식을 다시 계산하나요?",
+      "answer": "아니요. 매크로는 실행하지 않으며 수식 텍스트와 캐시 값만 표시하고 다시 계산하지 않습니다."
+    },
+    {
+      "question": "차트와 서식이 Excel과 같나요?",
+      "answer": "아니요. 차트는 재현하지 않고 복잡한 서식은 데이터 표에서 완전히 재현되지 않을 수 있습니다."
+    },
+    {
+      "question": "CSV에는 무엇이 포함되나요?",
+      "answer": "선택한 시트의 머리글과 스칼라 값이 포함되며 원본 통합 문서는 변경하지 않습니다."
+    }
   ]
 }

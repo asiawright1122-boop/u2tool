@@ -319,9 +319,9 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
     /vollständige Formatierung|Formatierungstreue|bedingte Formatierung|Canvas-Formatierung/iu, /полн\p{L}* форматирован\p{L}*|условн\p{L}* форматирован\p{L}*|Canvas.{0,8}форматирован\p{L}*/iu, /التنسيق الكامل|دقة التنسيق|التنسيق الشرطي|تنسيق Canvas/u,
   ),
   "excel-viewer-export-claim": localeTargets(
-    /export.{0,16}(?:workbook|spreadsheet|Excel|CSV)/iu, /导出.{0,12}(?:工作簿|电子表格|Excel|CSV)/u, /(?:ブック|スプレッドシート|Excel|CSV).{0,12}エクスポート|エクスポート.{0,12}(?:ブック|Excel|CSV)/u, /(?:통합 문서|스프레드시트|Excel|CSV).{0,12}내보내기|내보내기.{0,12}(?:통합 문서|Excel|CSV)/u,
-    /exporta.{0,16}(?:libro|hoja de cálculo|Excel|CSV)/iu, /exporta.{0,16}(?:pasta|planilha|Excel|CSV)/iu, /exporte.{0,16}(?:classeur|feuille de calcul|Excel|CSV)/iu,
-    /exportiert.{0,16}(?:Arbeitsmappe|Tabelle|Excel|CSV)/iu, /экспортирует.{0,16}(?:книг\p{L}*|таблиц\p{L}*|Excel|CSV)/iu, /(?:يصدر|تصدر|تصدير|حفظ).{0,24}(?:المصنف|جدول البيانات|البيانات|النتائج|Excel|CSV)|(?:البيانات|النتائج).{0,20}(?:CSV|تصدير)/u,
+    /export.{0,16}(?:workbook|spreadsheet|Excel file)/iu, /导出.{0,12}(?:工作簿|电子表格|Excel 文件)/u, /(?:ブック|スプレッドシート|Excelファイル).{0,12}エクスポート|エクスポート.{0,12}(?:ブック|Excelファイル)/u, /(?:통합 문서|스프레드시트|Excel 파일).{0,12}내보내기|내보내기.{0,12}(?:통합 문서|Excel 파일)/u,
+    /exporta.{0,16}(?:libro|hoja de cálculo|archivo de Excel)/iu, /exporta.{0,16}(?:pasta(?: de trabalho)?|arquivo do Excel)/iu, /exporte.{0,16}(?:classeur|fichier Excel)/iu,
+    /exportiert.{0,16}(?:Arbeitsmappe|Excel-Datei)/iu, /экспортирует.{0,16}(?:книг\p{L}*|файл\p{L}* Excel)/iu, /(?:يصدر|تصدر|تصدير|حفظ).{0,24}(?:المصنف|مصنف|ملف Excel)/u,
   ),
   "excel-viewer-advanced-filter-claim": localeTargets(
     /(?:regex|regular expression|multi[- ]condition|advanced).{0,16}filter/iu, /(?:正则|多条件|高级).{0,12}筛选/u, /(?:正規表現|複数条件|高度な).{0,12}フィルター/u, /(?:정규식|다중 조건|고급).{0,12}필터/u,

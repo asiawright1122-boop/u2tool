@@ -22,7 +22,7 @@ describe("pilot tool capability registry", () => {
       "grammar-checker": { version: "1.1.0", enforcement: "release-blocking" },
       "hex-editor": { version: "2.0.0", enforcement: "release-blocking" },
       "sql-query-optimizer": { version: "2.0.0", enforcement: "release-blocking" },
-      "excel-viewer": { version: "1.0.0", enforcement: "inventory" },
+      "excel-viewer": { version: "2.0.0", enforcement: "release-blocking" },
       "typing-speed-test": { version: "1.0.0", enforcement: "inventory" },
       "gantt-chart-generator": { version: "1.0.0", enforcement: "inventory" },
     } as const;
@@ -70,7 +70,7 @@ describe("pilot tool capability registry", () => {
   });
 
   it("declares engine locales only for language-dependent tools", () => {
-    for (const slug of ["excel-viewer", "gantt-chart-generator"]) {
+    for (const slug of ["gantt-chart-generator"]) {
       expect(getToolCapabilityProfile(slug)?.supportedLocales.engine).toEqual({
         kind: "language-neutral",
       });
@@ -84,6 +84,17 @@ describe("pilot tool capability registry", () => {
         file: "src/lib/hex-editor.test.ts",
         testName:
           "round-trips Unicode text through UTF-8 bytes without locale-specific processing [capability:hex-editor:engine:language-support]",
+      },
+    });
+
+    expect(
+      getToolCapabilityProfile("excel-viewer")?.supportedLocales.engine,
+    ).toEqual({
+      kind: "language-neutral",
+      evidence: {
+        file: "src/components/tools/ExcelViewer.test.ts",
+        testName:
+          "opens a local two-sheet workbook with addresses, cached values, formulas, merges, and no network request [capability:excel-viewer:profile:release-readiness] [capability:excel-viewer:mode:local-workbook-viewing] [capability:excel-viewer:accepted-input:xlsx-workbook] [capability:excel-viewer:produced-output:worksheet-data-view] [capability:excel-viewer:browser-feature:sheet-tabs] [capability:excel-viewer:browser-feature:cell-addresses] [capability:excel-viewer:browser-feature:formula-toggle] [capability:excel-viewer:browser-feature:merged-ranges] [capability:excel-viewer:limit:local-files-only] [capability:excel-viewer:limit:no-formula-recalculation] [capability:excel-viewer:engine:language-support]",
       },
     });
 
@@ -120,21 +131,24 @@ describe("pilot tool capability registry", () => {
     });
   });
 
-  it("promotes Grammar, Hex, and SQL only after matching behavior evidence exists", () => {
+  it("promotes Grammar, Hex, SQL, and Excel only after matching behavior evidence exists", () => {
     const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
     const hexProfile = getToolCapabilityProfile("hex-editor")!;
     const sqlProfile = getToolCapabilityProfile("sql-query-optimizer")!;
+    const excelProfile = getToolCapabilityProfile("excel-viewer")!;
     expect(grammarProfile.enforcement).toBe("release-blocking");
     expect(grammarProfile.evidenceTests).toHaveLength(2);
     expect(hexProfile.enforcement).toBe("release-blocking");
     expect(hexProfile.evidenceTests).toHaveLength(1);
     expect(sqlProfile.enforcement).toBe("release-blocking");
     expect(sqlProfile.evidenceTests).toHaveLength(4);
+    expect(excelProfile.enforcement).toBe("release-blocking");
+    expect(excelProfile.evidenceTests).toHaveLength(3);
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
     expect(sqlProfile.optionalServerFeatures).toEqual([]);
 
     for (const profile of getPilotToolCapabilityProfiles()) {
-      if (!["grammar-checker", "hex-editor", "sql-query-optimizer"].includes(profile.slug)) {
+      if (!["grammar-checker", "hex-editor", "sql-query-optimizer", "excel-viewer"].includes(profile.slug)) {
         expect(profile.enforcement).toBe("inventory");
         expect(profile.evidenceTests).toEqual([]);
       }
@@ -209,18 +223,21 @@ describe("pilot tool capability registry", () => {
       },
       "excel-viewer": {
         features: [
-          "xls-xlsx-open",
           "sheet-tabs",
-          "row-table",
-          "sort",
-          "filter",
+          "cell-addresses",
+          "formula-toggle",
+          "merged-ranges",
+          "single-column-sort",
+          "single-column-filter",
+          "csv-download",
         ],
         limits: [
-          "no-macros",
+          "ten-mib-files",
+          "local-files-only",
+          "no-macro-execution",
           "no-formula-recalculation",
-          "no-charts",
-          "no-full-formatting-fidelity",
-          "no-export",
+          "no-chart-rendering",
+          "limited-formatting-fidelity",
         ],
       },
       "typing-speed-test": {

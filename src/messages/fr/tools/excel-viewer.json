@@ -1,39 +1,102 @@
 {
+  "name": "Visionneuse Excel",
+  "description": "Ouvrez localement les données XLS, XLSX et XLSM avec onglets, formules, tri, filtre et export CSV.",
+  "seo_title": "Visionneuse Excel locale pour XLS, XLSX et XLSM | U2Tool",
+  "seo_description": "Consultez les données Excel localement dans le navigateur. Changez de feuille, voyez les adresses et valeurs en cache, triez ou filtrez une colonne et exportez la feuille choisie en CSV sans téléverser le fichier.",
+  "excelViewer": {
+    "invalidFileType": "Choisissez un classeur XLS, XLSX ou XLSM.",
+    "fileTooLarge": "Ce fichier dépasse la limite de 10 MiB du navigateur.",
+    "parseError": "Impossible de lire ce classeur. Vérifiez le fichier et réessayez.",
+    "readError": "Impossible de lire le fichier local. Sélectionnez-le de nouveau.",
+    "uploadFile": "Choisir un classeur Excel",
+    "supportedFormats": "XLS, XLSX ou XLSM · traitement local",
+    "localNotice": "Le classeur reste dans votre navigateur et n’est pas téléversé.",
+    "fileLimit": "Taille maximale : 10 MiB. Les macros ne sont jamais exécutées.",
+    "loading": "Lecture locale du classeur…",
+    "fileLoaded": "Classeur chargé",
+    "workbookWarnings": "Limites d’affichage",
+    "sheetTabs": "Feuilles du classeur",
+    "filterColumn": "Colonne à filtrer",
+    "selectColumn": "Choisir une colonne",
+    "filterValue": "Texte du filtre",
+    "enterValue": "Saisir le texte à rechercher",
+    "clearFilter": "Effacer le filtre",
+    "cellDisplay": "Affichage des cellules",
+    "displayValues": "Valeurs",
+    "displayFormulas": "Formules",
+    "mergedRanges": "Plages fusionnées",
+    "blankHeader": "Colonne {column}",
+    "showingRows": "{visible} lignes sur {total}",
+    "noResults": "Aucune ligne ne correspond à ce filtre.",
+    "emptySheet": "Cette feuille ne contient aucune cellule utilisée.",
+    "downloadCsv": "Télécharger le CSV de la feuille choisie",
+    "downloadError": "Échec du téléchargement CSV. Réessayez.",
+    "warningMacros": "Des macros sont présentes, mais ne sont pas exécutées.",
+    "warningCharts": "Des graphiques sont présents, mais ne sont pas reproduits.",
+    "warningFormatting": "La mise en forme complexe peut ne pas être entièrement reproduite.",
+    "warningFormulas": "Les formules sont affichées, mais ne sont pas recalculées ; les valeurs proviennent du cache du classeur."
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "Affichage local du classeur" },
-    "inputs": {
-      "xlsWorkbook": "Classeur XLS",
-      "xlsxWorkbook": "Classeur XLSX"
+    "modes": {
+      "localWorkbookViewing": "Consultation locale des données du classeur"
     },
-    "outputs": { "sheetTable": "Vue tabulaire de la feuille" },
+    "inputs": {
+      "xlsWorkbook": "Classeur XLS local",
+      "xlsxWorkbook": "Classeur XLSX local",
+      "xlsmWorkbook": "Classeur XLSM local"
+    },
+    "outputs": {
+      "worksheetDataView": "Données de feuille avec adresses de cellules",
+      "selectedSheetCsv": "CSV de la feuille sélectionnée"
+    },
     "features": {
-      "xlsXlsxOpen": "Ouvrir les classeurs XLS et XLSX",
-      "sheetTabs": "Navigation par onglets de feuilles",
-      "rowTable": "Vue tabulaire en lignes et colonnes",
-      "sort": "Trier les lignes",
-      "filter": "Filtrer les lignes"
+      "sheetTabs": "Navigation par onglets",
+      "cellAddresses": "Adresses et valeurs en cache",
+      "formulaToggle": "Bascule valeurs/texte des formules",
+      "mergedRanges": "Avis de plages fusionnées",
+      "singleColumnSort": "Tri stable sur une colonne",
+      "singleColumnFilter": "Filtre texte sur une colonne",
+      "csvDownload": "Téléchargement CSV de la feuille choisie"
     },
     "limits": {
-      "noMacros": "N’exécute pas les macros",
-      "noFormulaRecalculation": "Ne recalcule pas les formules",
-      "noCharts": "N’affiche pas les graphiques du classeur",
-      "noFullFormattingFidelity": "Ne conserve pas toute la mise en forme du classeur",
-      "noExport": "Aucun export de classeur"
+      "tenMibFiles": "Classeur de 10 MiB maximum",
+      "localFilesOnly": "Les fichiers restent locaux et ne sont pas téléversés",
+      "noMacroExecution": "Les macros ne sont pas exécutées",
+      "noFormulaRecalculation": "Les formules ne sont pas recalculées",
+      "noChartRendering": "Les graphiques ne sont pas reproduits",
+      "limitedFormattingFidelity": "La mise en forme complexe peut ne pas être entièrement reproduite"
     }
   },
-  "detailed_description": "Le visualiseur Excel est un outil web permettant d'ouvrir, d'analyser et de manipuler des fichiers Excel (XLSX, XLS, CSV) sans logiciel local. Conçu avec des bibliothèques JavaScript comme SheetJS et une architecture basée sur le DOM, il convertit les structures binaires (BIFF) ou XML des fichiers Excel en une grille interactive. Les utilisateurs peuvent trier les colonnes via des algorithmes de comparaison personnalisés, appliquer des filtres avancés (y compris des critères multiples) et naviguer entre les feuilles de calcul avec un sélecteur dynamique. Le traitement s'effectue entièrement côté client, garantissant confidentialité des données et compatibilité avec les fichiers volumineux grâce à une pagination virtuelle. Cet outil est indispensable pour les professionnels souhaitant auditer des rapports financiers, analyser des jeux de données de vente ou collaborer sur des tableaux sans dépendre de logiciels propriétaires. Il intègre également une API de rendu permettant de personnaliser l'affichage des cellules (formatage conditionnel, masquage de données).",
+  "detailed_description": "La Visionneuse Excel ouvre localement les données XLS, XLSX et XLSM jusqu’à 10 MiB. Changez de feuille, consultez les adresses et valeurs en cache, affichez le texte des formules, voyez les plages fusionnées, triez ou filtrez une colonne et téléchargez la feuille choisie en CSV. Le fichier n’est pas téléversé. Les macros ne sont pas exécutées, les formules ne sont pas recalculées, les graphiques ne sont pas reproduits et la mise en forme complexe peut ne pas être entièrement reproduite.",
   "usage_steps": [
-    "Cliquez sur le bouton 'Importer' pour charger votre fichier Excel (formats XLSX, XLS, CSV).",
-    "Utilisez le menu déroulant 'Feuilles' pour basculer entre les onglets du classeur.",
-    "Cliquez sur l'en-tête d'une colonne pour activer le tri ascendant/descendant.",
-    "Accédez à 'Filtres avancés' pour configurer des règles multiples via des expressions régulières.",
-    "Sélectionnez des cellules et utilisez l'option 'Exporter vers CSV' pour extraire des sous-ensembles de données.",
-    "Activez 'Mode lecture seule' pour verrouiller les cellules et éviter les modifications accidentelles."
+    "Choisissez un classeur XLS, XLSX ou XLSM de 10 MiB maximum.",
+    "Sélectionnez la feuille avec les onglets.",
+    "Consultez les adresses et valeurs en cache ou affichez le texte des formules.",
+    "Triez ou filtrez une colonne.",
+    "Téléchargez la feuille choisie en CSV pour obtenir les données tabulaires."
   ],
   "usage_examples": [
-    "Un comptable vérifie des transactions bancaires en filtrant les montants supérieurs à 10 000 € et en triant par date d'opération.",
-    "Un chef de projet analyse un tableau Gantt en appliquant un filtre par équipe et en comparant les jalons via le tri chronologique.",
-    "Un enseignant évalue les résultats scolaires en masquant les colonnes sensibles et en exportant les statistiques moyennes.",
-    "Un data scientist prépare un dataset en supprimant les doublons via des filtres conditionnels avant l'import dans Python."
+    "Consulter un classeur à deux feuilles sans le téléverser.",
+    "Comparer les résultats en cache au texte original des formules.",
+    "Filtrer une liste par statut et trier une colonne numérique.",
+    "Exporter une feuille dans un CSV correctement échappé."
+  ],
+  "faqs": [
+    {
+      "question": "Mon classeur est-il téléversé ?",
+      "answer": "Non. Il est lu localement dans le navigateur et n’est pas téléversé."
+    },
+    {
+      "question": "Les macros sont-elles exécutées ou les formules recalculées ?",
+      "answer": "Non. Les macros ne sont jamais exécutées et les formules sont affichées avec leurs valeurs en cache sans recalcul."
+    },
+    {
+      "question": "Les graphiques et la mise en forme seront-ils identiques à Excel ?",
+      "answer": "Non. Les graphiques ne sont pas reproduits et la mise en forme complexe peut être partielle."
+    },
+    {
+      "question": "Que contient le CSV ?",
+      "answer": "Les en-têtes et valeurs scalaires de la feuille sélectionnée, sans modifier le classeur original."
+    }
   ]
 }

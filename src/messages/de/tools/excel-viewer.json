@@ -1,55 +1,102 @@
 {
+  "name": "Excel-Betrachter",
+  "description": "Öffnen Sie XLS-, XLSX- und XLSM-Daten lokal mit Blättern, Formeltext, Sortierung, Filter und CSV-Export.",
+  "seo_title": "Lokaler Excel-Betrachter für XLS, XLSX und XLSM | U2Tool",
+  "seo_description": "Prüfen Sie Excel-Daten lokal im Browser. Wechseln Sie Tabellenblätter, sehen Sie Zelladressen und zwischengespeicherte Formelwerte, sortieren oder filtern Sie eine Spalte und exportieren Sie das gewählte Blatt als CSV – ohne Upload.",
+  "excelViewer": {
+    "invalidFileType": "Wählen Sie eine XLS-, XLSX- oder XLSM-Arbeitsmappe.",
+    "fileTooLarge": "Diese Datei überschreitet das Browserlimit von 10 MiB.",
+    "parseError": "Diese Arbeitsmappe konnte nicht gelesen werden. Prüfen Sie die Datei und versuchen Sie es erneut.",
+    "readError": "Die lokale Datei konnte nicht gelesen werden. Wählen Sie sie erneut.",
+    "uploadFile": "Excel-Arbeitsmappe auswählen",
+    "supportedFormats": "XLS, XLSX oder XLSM · lokale Verarbeitung",
+    "localNotice": "Die Arbeitsmappe bleibt im Browser und wird nicht hochgeladen.",
+    "fileLimit": "Maximale Dateigröße: 10 MiB. Makros werden nie ausgeführt.",
+    "loading": "Arbeitsmappe wird lokal gelesen…",
+    "fileLoaded": "Geladene Arbeitsmappe",
+    "workbookWarnings": "Darstellungsgrenzen",
+    "sheetTabs": "Tabellenblätter",
+    "filterColumn": "Filterspalte",
+    "selectColumn": "Spalte auswählen",
+    "filterValue": "Filtertext",
+    "enterValue": "Abzugleichenden Text eingeben",
+    "clearFilter": "Filter löschen",
+    "cellDisplay": "Zellanzeige",
+    "displayValues": "Werte",
+    "displayFormulas": "Formeln",
+    "mergedRanges": "Verbundene Bereiche",
+    "blankHeader": "Spalte {column}",
+    "showingRows": "{visible} von {total} Zeilen",
+    "noResults": "Keine Zeile entspricht diesem Filter.",
+    "emptySheet": "Dieses Blatt enthält keine verwendeten Zellen.",
+    "downloadCsv": "Ausgewähltes Blatt als CSV laden",
+    "downloadError": "CSV-Download fehlgeschlagen. Erneut versuchen.",
+    "warningMacros": "Makros sind vorhanden, werden aber nicht ausgeführt.",
+    "warningCharts": "Diagramme sind vorhanden, werden aber nicht wiedergegeben.",
+    "warningFormatting": "Komplexe Formatierung wird möglicherweise nicht vollständig wiedergegeben.",
+    "warningFormulas": "Formeln werden angezeigt, aber nicht neu berechnet; die Werte sind zwischengespeicherte Ergebnisse der Arbeitsmappe."
+  },
   "capabilities": {
-    "modes": { "localWorkbookViewing": "Lokale Anzeige von Arbeitsmappen" },
-    "inputs": {
-      "xlsWorkbook": "XLS-Arbeitsmappe",
-      "xlsxWorkbook": "XLSX-Arbeitsmappe"
+    "modes": {
+      "localWorkbookViewing": "Lokale Ansicht der Arbeitsmappendaten"
     },
-    "outputs": { "sheetTable": "Tabellenansicht des Arbeitsblatts" },
+    "inputs": {
+      "xlsWorkbook": "Lokale XLS-Arbeitsmappe",
+      "xlsxWorkbook": "Lokale XLSX-Arbeitsmappe",
+      "xlsmWorkbook": "Lokale XLSM-Arbeitsmappe"
+    },
+    "outputs": {
+      "worksheetDataView": "Tabellendaten mit Zelladressen",
+      "selectedSheetCsv": "CSV des ausgewählten Blatts"
+    },
     "features": {
-      "xlsXlsxOpen": "XLS- und XLSX-Arbeitsmappen öffnen",
       "sheetTabs": "Navigation über Blattregister",
-      "rowTable": "Tabellenansicht mit Zeilen und Spalten",
-      "sort": "Zeilen sortieren",
-      "filter": "Zeilen filtern"
+      "cellAddresses": "Zelladressen und Cachewerte",
+      "formulaToggle": "Umschaltung Werte/Formeltext",
+      "mergedRanges": "Hinweise auf verbundene Bereiche",
+      "singleColumnSort": "Stabile Sortierung einer Spalte",
+      "singleColumnFilter": "Textfilter für eine Spalte",
+      "csvDownload": "CSV-Download des ausgewählten Blatts"
     },
     "limits": {
-      "noMacros": "Führt keine Makros aus",
-      "noFormulaRecalculation": "Berechnet Formeln nicht neu",
-      "noCharts": "Zeigt keine Diagramme aus der Arbeitsmappe an",
-      "noFullFormattingFidelity": "Bewahrt nicht die vollständige Formatierung der Arbeitsmappe",
-      "noExport": "Kein Export von Arbeitsmappen"
+      "tenMibFiles": "Arbeitsmappe bis 10 MiB",
+      "localFilesOnly": "Dateien bleiben lokal und werden nicht hochgeladen",
+      "noMacroExecution": "Makros werden nicht ausgeführt",
+      "noFormulaRecalculation": "Formeln werden nicht neu berechnet",
+      "noChartRendering": "Diagramme werden nicht wiedergegeben",
+      "limitedFormattingFidelity": "Komplexe Formatierung wird möglicherweise nicht vollständig wiedergegeben"
     }
   },
-  "detailed_description": "Der Excel Viewer öffnet .xlsx- und .xls-Dateien direkt im Browser, damit Tabellen schnell geprüft werden können, ohne ein Office-Programm zu starten. Nach dem Hochladen liest die Seite die Arbeitsblätter aus, zeigt verfügbare Blatt-Tabs an und rendert die Zeilen in einer scrollbaren Tabelle. Für die schnelle Kontrolle lassen sich einzelne Spalten per Texteingabe filtern und Spaltenüberschriften zwischen aufsteigender, absteigender und neutraler Sortierung umschalten. Die Datei wird über den Browser eingelesen; die Seite bietet eine Ansicht, Filterung und Sortierung, aber keine Bearbeitung der Originaldatei und keinen Export gespeicherter Änderungen.",
+  "detailed_description": "Der Excel-Betrachter öffnet XLS-, XLSX- und XLSM-Daten bis 10 MiB lokal im Browser. Wechseln Sie Blätter, prüfen Sie Zelladressen und Cachewerte, zeigen Sie Formeltext, verbundene Bereiche, sortieren oder filtern Sie eine Spalte und laden Sie das gewählte Blatt als CSV. Die Datei wird nicht hochgeladen. Makros werden nicht ausgeführt, Formeln nicht neu berechnet, Diagramme nicht wiedergegeben und komplexe Formatierung möglicherweise nicht vollständig dargestellt.",
   "usage_steps": [
-    "Wählen Sie eine .xlsx- oder .xls-Datei von Ihrem Gerät aus.",
-    "Wechseln Sie bei Arbeitsmappen mit mehreren Blättern über die sichtbaren Blatt-Tabs.",
-    "Wählen Sie eine Spalte aus und geben Sie einen Suchtext ein, um passende Zeilen zu filtern.",
-    "Klicken Sie auf eine Spaltenüberschrift, um die angezeigten Zeilen aufsteigend oder absteigend zu sortieren.",
-    "Nutzen Sie Filter zurücksetzen, wenn Sie wieder alle Zeilen des ausgewählten Blatts sehen möchten."
+    "Wählen Sie eine XLS-, XLSX- oder XLSM-Arbeitsmappe bis 10 MiB.",
+    "Wählen Sie das gewünschte Blatt über die Register.",
+    "Prüfen Sie Zelladressen und Cachewerte oder wechseln Sie zum Formeltext.",
+    "Sortieren oder filtern Sie eine Spalte.",
+    "Laden Sie das ausgewählte Blatt bei Bedarf als CSV herunter."
   ],
   "usage_examples": [
-    "Eine Finanzdatei kurz öffnen und die Umsatztabelle nach einer Region filtern.",
-    "Ein Projekt-Sheet prüfen und Aufgaben nach Status oder verantwortlicher Person sortieren.",
-    "Eine erhaltene .xls-Datei auf einem Gerät ohne Tabellenkalkulation ansehen."
+    "Eine Arbeitsmappe mit zwei Blättern ohne Upload prüfen.",
+    "Cacheergebnisse mit dem ursprünglichen Formeltext vergleichen.",
+    "Eine Statusspalte filtern und eine Zahlenspalte stabil sortieren.",
+    "Ein Blatt als korrekt maskierte CSV exportieren."
   ],
   "faqs": [
     {
-      "question": "Ist der Excel Viewer kostenlos?",
-      "answer": "Ja. Der Viewer funktioniert kostenlos im Browser und benötigt kein Konto."
+      "question": "Wird meine Arbeitsmappe hochgeladen?",
+      "answer": "Nein. Sie wird lokal im Browser gelesen und nicht hochgeladen."
     },
     {
-      "question": "Welche Dateien werden unterstützt?",
-      "answer": "Der Upload akzeptiert .xlsx- und .xls-Dateien."
+      "question": "Werden Makros ausgeführt oder Formeln neu berechnet?",
+      "answer": "Nein. Makros werden nie ausgeführt; Formeltext und Cachewerte werden ohne Neuberechnung angezeigt."
     },
     {
-      "question": "Kann ich die Datei bearbeiten?",
-      "answer": "Nein. Die Seite ist zum Anzeigen, Filtern und Sortieren gedacht; sie speichert keine Änderungen an der Originaldatei."
+      "question": "Sehen Diagramme und Formatierung wie in Excel aus?",
+      "answer": "Nein. Diagramme werden nicht wiedergegeben und komplexe Formatierung kann unvollständig sein."
     },
     {
-      "question": "Wie funktioniert der Filter?",
-      "answer": "Sie wählen eine Spalte aus und geben Text ein. Angezeigt werden Zeilen, deren Zellwert in dieser Spalte den Text enthält."
+      "question": "Was enthält der CSV-Export?",
+      "answer": "Kopfzeilen und skalare Werte des ausgewählten Blatts; die Originalmappe wird nicht verändert."
     }
   ]
 }
