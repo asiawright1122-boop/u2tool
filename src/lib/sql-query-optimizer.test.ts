@@ -123,6 +123,7 @@ LIMIT 50;`,
   it('does not describe PostgreSQL planned-only text or JSON scans as executed', () => {
     const plannedOnly = [
       'Seq Scan on orders  (cost=0.00..431.00 rows=10000 width=32)',
+      'EXPLAIN (ANALYZE FALSE, FORMAT TEXT)\nSeq Scan on orders  (cost=0.00..431.00 rows=10000 width=32)',
       JSON.stringify({ Plan: { 'Node Type': 'Seq Scan' } }),
     ];
 
@@ -142,6 +143,7 @@ LIMIT 50;`,
 
   it('may describe PostgreSQL scans as executed when ANALYZE evidence is present', () => {
     const executedPlans = [
+      'EXPLAIN (ANALYZE TRUE, FORMAT TEXT)\nSeq Scan on orders  (cost=0.00..431.00 rows=10000 width=32)',
       'Seq Scan on orders  (cost=0.00..431.00 rows=10000 width=32) (actual time=0.01..0.20 rows=12 loops=1)',
       JSON.stringify({
         Plan: { 'Node Type': 'Seq Scan', 'Actual Loops': 1 },
@@ -219,6 +221,12 @@ LIMIT 10; -- UPDATE users SET active = false`,
     expect(analyzeSql({ sql, dialect: 'postgresql' }).formattedSql).toBe(
       'SELECT\n  -- comment\n  id\nFROM users\nLIMIT 1;',
     );
+    expect(
+      analyzeSql({
+        sql: 'SELECT id\n-- comment\nFROM users LIMIT 1;',
+        dialect: 'postgresql',
+      }).formattedSql,
+    ).toBe('SELECT\n  id -- comment\nFROM users\nLIMIT 1;');
   });
 
   it('respects standard LIMIT and SQL Server TOP row bounds', () => {

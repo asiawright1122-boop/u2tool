@@ -690,7 +690,9 @@ function formatSqlPreservingTokens(sql: string, tokens: ProtectedToken[]): strin
         const linePrefix = formatted.slice(lineStart, placeholderIndex);
         const indentation = /^[ \t]*$/.test(linePrefix) ? linePrefix : '';
         const followingIndex = placeholderIndex + replacement.placeholder.length;
-        const followingText = formatted.slice(followingIndex).replace(/^[ \t]*/, '');
+        const followingText = formatted
+          .slice(followingIndex)
+          .replace(/^[ \t]*(?:\r?\n)?[ \t]*/, '');
         formatted =
           formatted.slice(0, placeholderIndex) +
           replacement.token.raw +
@@ -878,12 +880,20 @@ function postgresqlHasExecutionEvidence(
   const nextLineBreak = explainText.indexOf('\n', range.end);
   const lineEnd = nextLineBreak === -1 ? explainText.length : nextLineBreak;
   const matchedLine = explainText.slice(lineStart, lineEnd);
+  const explainHeader = explainText.match(/^\s*EXPLAIN\b[^\r\n]*/im)?.[0];
+  const parenthesizedOptions = explainHeader?.match(
+    /^\s*EXPLAIN\s*\(([^)]*)\)/i,
+  )?.[1];
+  const analyzeOption = parenthesizedOptions?.match(
+    /(?:^|,)\s*ANALYZE(?:\s+(TRUE|FALSE))?\s*(?=,|$)/i,
+  );
+  const explainRequestsExecution = parenthesizedOptions !== undefined
+    ? Boolean(analyzeOption) && analyzeOption?.[1]?.toUpperCase() !== 'FALSE'
+    : /^\s*EXPLAIN\s+ANALYZE\b/i.test(explainHeader ?? '');
   return (
     (/\bactual\s+(?:time|rows)\s*=/i.test(matchedLine) &&
       /\bloops\s*=\s*[1-9]\d*/i.test(matchedLine)) ||
-    /\bEXPLAIN\s+(?:\([^)]*\bANALYZE\b[^)]*\)|ANALYZE\b)/i.test(
-      explainText,
-    )
+    explainRequestsExecution
   );
 }
 
