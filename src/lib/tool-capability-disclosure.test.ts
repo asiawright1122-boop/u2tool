@@ -63,7 +63,7 @@ describe('buildToolCapabilityDisclosure', () => {
     expect(() =>
       buildToolCapabilityDisclosure(profile!, 'en', messages),
     ).toThrow(
-      '[ToolCapabilityDisclosure] Unresolved label "tools.grammar-checker.capabilities.features.issueHighlights" for grammar-checker@1.0.0 (en)',
+      '[ToolCapabilityDisclosure] Unresolved label "tools.grammar-checker.capabilities.features.issueHighlights" for grammar-checker@1.1.0 (en)',
     );
   });
 

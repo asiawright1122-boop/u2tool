@@ -18,12 +18,21 @@ describe("pilot tool capability registry", () => {
       "gantt-chart-generator",
     ]);
 
+    const expectedStates = {
+      "grammar-checker": { version: "1.1.0", enforcement: "release-blocking" },
+      "hex-editor": { version: "1.0.0", enforcement: "inventory" },
+      "sql-query-optimizer": { version: "1.0.0", enforcement: "inventory" },
+      "excel-viewer": { version: "1.0.0", enforcement: "inventory" },
+      "typing-speed-test": { version: "1.0.0", enforcement: "inventory" },
+      "gantt-chart-generator": { version: "1.0.0", enforcement: "inventory" },
+    } as const;
+
     for (const slug of PILOT_TOOL_SLUGS) {
       const profile = getToolCapabilityProfile(slug);
       expect(profile?.slug).toBe(slug);
-      expect(profile?.version).toBe("1.0.0");
+      expect(profile?.version).toBe(expectedStates[slug].version);
       expect(profile?.version).toMatch(/^\d+\.\d+\.\d+$/);
-      expect(profile?.enforcement).toBe("inventory");
+      expect(profile?.enforcement).toBe(expectedStates[slug].enforcement);
       expect(profile?.forbiddenClaims.length).toBeGreaterThan(0);
       expect(profile?.supportedLocales.ui).toEqual(locales);
       expect(Object.isFrozen(profile)).toBe(true);
@@ -77,6 +86,11 @@ describe("pilot tool capability registry", () => {
       kind: "engine-limited",
       local: ["en"],
       optionalServer: [],
+      evidence: {
+        file: "src/lib/grammar-language-support.test.ts",
+        testName:
+          "declares English as the only local checking language [capability:grammar-checker:engine:language-support]",
+      },
     });
     expect(
       getToolCapabilityProfile("sql-query-optimizer")?.supportedLocales.engine,
@@ -94,10 +108,17 @@ describe("pilot tool capability registry", () => {
     });
   });
 
-  it("keeps every pilot as browser-only inventory until behavior evidence exists", () => {
+  it("promotes only Grammar after matching behavior evidence exists", () => {
+    const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
+    expect(grammarProfile.enforcement).toBe("release-blocking");
+    expect(grammarProfile.evidenceTests).toHaveLength(2);
+    expect(grammarProfile.optionalServerFeatures).toEqual([]);
+
     for (const profile of getPilotToolCapabilityProfiles()) {
-      expect(profile.enforcement).toBe("inventory");
-      expect(profile.evidenceTests).toEqual([]);
+      if (profile.slug !== "grammar-checker") {
+        expect(profile.enforcement).toBe("inventory");
+        expect(profile.evidenceTests).toEqual([]);
+      }
       expect(profile.optionalServerFeatures).toEqual([]);
       expect(profile.modes.every((mode) => mode.runtime === "browser")).toBe(
         true,
@@ -426,12 +447,12 @@ describe("pilot tool capability registry", () => {
 });
 
 describe("capability profile definition", () => {
-  const inventoryProfile = getToolCapabilityProfile("grammar-checker")!;
+  const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
 
   it("rejects a missing slug or non-semantic version", () => {
     expect(() =>
       defineToolCapabilityProfile({
-        ...inventoryProfile,
+        ...grammarProfile,
         slug: "",
         version: "1.0",
       }),
@@ -441,7 +462,7 @@ describe("capability profile definition", () => {
   it("rejects release blocking without behavior evidence", () => {
     expect(() =>
       defineToolCapabilityProfile({
-        ...inventoryProfile,
+        ...grammarProfile,
         enforcement: "release-blocking",
         evidenceTests: [],
       }),
@@ -452,7 +473,7 @@ describe("capability profile definition", () => {
 
   it("rejects profiles that cannot constrain unsupported claims", () => {
     expect(() =>
-      defineToolCapabilityProfile({ ...inventoryProfile, forbiddenClaims: [] }),
+      defineToolCapabilityProfile({ ...grammarProfile, forbiddenClaims: [] }),
     ).toThrow("grammar-checker: at least one forbidden claim is required");
   });
 });

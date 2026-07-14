@@ -1,10 +1,20 @@
 <script lang="ts">
+  import { getGrammarLanguageSupport } from '@/lib/grammar-language-support';
+  import type { Locale } from '@/lib/i18n';
+  import {
+    applyCorrections,
+    checkGrammar,
+    type GrammarError,
+  } from '@/lib/grammar-rules';
+  import { escapeHtmlAttribute } from '@/lib/sanitize';
+
   interface Props {
-    locale: string;
+    locale: Locale;
     translations: Record<string, unknown>;
   }
 
   let { locale, translations }: Props = $props();
+  const languageSupport = $derived(getGrammarLanguageSupport(locale));
 
   // Translation helpers
   function t(key: string): string {
@@ -21,10 +31,6 @@
     for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
-
-  // Imports
-  import { checkGrammar, type GrammarError } from '@/lib/grammar-rules';
-  import { escapeHtmlAttribute } from '@/lib/sanitize';
 
   let input = $state('');
 
@@ -53,25 +59,24 @@
   }
   function applyFix(error: GrammarError) {
     if (!error.suggestions || error.suggestions.length === 0) return;
-    let newText = input.slice(0, error.position.start) + error.suggestions[0] + input.slice(error.position.end);
-    input = newText;
+    input = applyCorrections(input, [error]);
   }
   function applyAllFixes() {
-    let newText = input;
-    // 从后往前应用修复
-    const sortedErrors = [...errors].sort((a, b) => b.position.start - a.position.start);
-    sortedErrors.forEach(error => {
-      if (error.suggestions && error.suggestions.length > 0) {
-        newText = newText.slice(0, error.position.start) + error.suggestions[0] + newText.slice(error.position.end);
-      }
-    });
-    input = newText;
+    input = applyCorrections(input, errors);
   }
 
 </script>
 
 
     <div class="space-y-4">
+      <p
+        class="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-950 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-100"
+        data-grammar-language-notice
+        data-input-language={languageSupport.localInputLanguage}
+      >
+        {t('languageNotice')}
+      </p>
+
       <div class="flex flex-wrap gap-2">
         <button 
           onclick={applyAllFixes} 

@@ -18,40 +18,38 @@
       "noServerProcessing": "Sem processamento no servidor"
     }
   },
-  "detailed_description": "O Verificador de Gramática analisa o texto para erros de gramática comuns e sugere correções.",
+  "detailed_description": "A interface em português revisa textos em inglês com regras estáticas locais para erros ortográficos comuns, palavras repetidas, concordância simples e pontuação. As regras rodam no navegador, destacam ocorrências e permitem aplicar sugestões. Não utiliza IA nem processamento no servidor; revise o texto inglês corrigido de acordo com o contexto.",
   "usage_steps": [
-    "Cole o texto",
-    "Veja os erros destacados",
-    "Aplique as sugestões",
-    "Copie o texto corrigido",
-    "Revise o resultado e confirme se ele combina com seu objetivo."
+    "Cole um texto em inglês no campo de entrada",
+    "Revise as ocorrências de regras destacadas na pré-visualização",
+    "Aplique sugestões individuais ou todas as correções disponíveis",
+    "Leia o texto inglês corrigido antes de copiar"
   ],
   "usage_examples": [
-    "Revisar e-mails",
-    "Verificar redações",
-    "Melhorar posts de blog",
-    "Verificar uma entrada curta antes de processar o conteúdo completo."
+    "Encontrar uma palavra repetida em um e-mail em inglês",
+    "Detectar erros comuns em inglês, como teh ou recieve",
+    "Revisar concordância simples e pontuação em um rascunho em inglês"
   ],
   "faqs": [
     {
-      "question": "O que devo revisar antes de usar o resultado de Verificador de Gramática?",
-      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+      "question": "A ferramenta verifica gramática em português?",
+      "answer": "Não. A interface está em português, mas as regras estáticas atuais avaliam somente textos em inglês."
     },
     {
       "question": "Posso alterar o resultado depois de gerar?",
-      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+      "answer": "Sim. Altere a entrada em inglês ou aplique uma sugestão e revise o resultado atualizado."
     },
     {
       "question": "Por que o resultado pode diferir de outra ferramenta?",
-      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+      "answer": "Este verificador usa um conjunto limitado de regras estáticas para inglês. Outras ferramentas podem ter regras e coberturas diferentes; compare com a mesma entrada em inglês."
     },
     {
       "question": "Posso começar com uma entrada curta?",
-      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+      "answer": "Sim. Comece com uma entrada curta em inglês para revisar ocorrências e sugestões antes de usar um rascunho real."
     },
     {
       "question": "A ferramenta substitui uma revisão manual?",
-      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+      "answer": "Não. São regras estáticas limitadas, não IA; revise manualmente a precisão e o contexto de qualquer texto inglês importante."
     }
   ]
 }

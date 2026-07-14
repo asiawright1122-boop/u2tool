@@ -229,7 +229,7 @@ describe('validateCapabilityMessageMatrix', () => {
 
 describe('validateReleaseReadyProfiles', () => {
   it('allows inventory profiles to omit behavior evidence', () => {
-    const inventoryProfile = getToolCapabilityProfile('grammar-checker');
+    const inventoryProfile = getToolCapabilityProfile('hex-editor');
     expect(inventoryProfile).toBeDefined();
 
     expect(
@@ -908,16 +908,16 @@ describe('runToolCapabilityClaimValidation', () => {
   });
 
   it('keeps the default inventory validation non-blocking when copy is truthful', async () => {
-    const grammarProfile = getToolCapabilityProfile('grammar-checker');
-    expect(grammarProfile).toBeDefined();
+    const hexProfile = getToolCapabilityProfile('hex-editor');
+    expect(hexProfile).toBeDefined();
 
     const report = await runToolCapabilityClaimValidation(
       {},
       {
-        profiles: [grammarProfile!],
+        profiles: [hexProfile!],
         locales: ['en'],
         loadToolMessages: async () => ({
-          description: 'Checks English text with local static rules.',
+          description: 'Converts text and hexadecimal locally in the browser.',
         }),
         loadLocalizedBaseMessages: async () => ({ tools: {} }),
         loadLocalizedToolMessages: async () => ({}),
@@ -961,9 +961,14 @@ describe('runToolCapabilityClaimValidation', () => {
     });
   });
 
-  it('fails deterministically when Grammar is required but remains inventory', async () => {
+  it('fails deterministically when Grammar is required but forced back to inventory', async () => {
     const grammarProfile = getToolCapabilityProfile('grammar-checker');
     expect(grammarProfile).toBeDefined();
+    const inventoryGrammarProfile: ToolCapabilityProfile = {
+      ...grammarProfile!,
+      enforcement: 'inventory',
+      evidenceTests: [],
+    };
 
     const report = await runToolCapabilityClaimValidation(
       parseToolCapabilityClaimArgs([
@@ -971,7 +976,7 @@ describe('runToolCapabilityClaimValidation', () => {
         'grammar-checker',
       ]),
       {
-        profiles: [grammarProfile!],
+        profiles: [inventoryGrammarProfile],
         locales: ['en'],
         loadToolMessages: async () => ({
           description: 'Checks English text with local static rules.',
