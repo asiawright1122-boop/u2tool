@@ -13,7 +13,7 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       evidence: {
         file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
   ],
@@ -24,7 +24,7 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       evidence: {
         file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
+          "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
       },
     },
   ],
@@ -35,7 +35,7 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       evidence: {
         file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
     {
@@ -68,7 +68,7 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       evidence: {
         file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
     {
@@ -77,7 +77,7 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       evidence: {
         file: "src/components/tools/GrammarChecker.test.ts",
         testName:
-          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
+          "renders exact highlighted issue ranges from the visible English preview [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:produced-output:highlighted-issues] [capability:grammar-checker:browser-feature:english-local-rules] [capability:grammar-checker:browser-feature:issue-highlights]",
       },
     },
     {
@@ -154,7 +154,7 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
     {
       file: "src/components/tools/GrammarChecker.test.ts",
       testName:
-        "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:mode:local-english-rules] [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
+        "renders one persistent English-input notice associated with the plain-text field [capability:grammar-checker:accepted-input:plain-text] [capability:grammar-checker:profile:release-readiness]",
     },
     {
       file: "src/messages/grammar-checker-catalog.test.ts",
