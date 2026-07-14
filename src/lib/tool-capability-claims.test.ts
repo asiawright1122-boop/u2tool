@@ -1661,6 +1661,46 @@ describe("assessToolCapabilityClaims", () => {
   );
 
   it.each([
+    ["ja", "SQLクエリを分析し、ワークフローをこのアプリケーションで自動的に実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 워크플로를 이 애플리케이션에서 자동으로 실행합니다."],
+    ["ja", "SQLクエリを分析し、ワークフローをローカル環境で実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 워크플로를 로컬 환경에서 실행합니다."],
+    ["ja", "SQLクエリを分析し、ワークフローをワンクリックで実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 워크플로를 한 번의 클릭으로 실행합니다."],
+    ["ja", "SQLクエリを分析し、ワークフローをボタンを押すことで実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 워크플로를 버튼을 눌러 실행합니다."],
+  ] as const)(
+    "uses an executable object as positive ownership evidence in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues).toEqual([]);
+    },
+  );
+
+  it.each([
+    ["ja", "SQLクエリを分析し、SQL文をローカル環境で自動的に実行します。"],
+    ["ko", "SQL 쿼리를 분석하고 SQL 문을 로컬 환경에서 자동으로 실행합니다."],
+  ] as const)(
+    "uses a SQL object as positive ownership evidence in %s: %s",
+    (locale, text) => {
+      const report = assessToolCapabilityClaims({
+        slug: "sql-query-optimizer",
+        locale,
+        text,
+      });
+
+      expect(report.issues.map((issue) => issue.code)).toContain(
+        "sql-optimizer-execution-claim",
+      );
+    },
+  );
+
+  it.each([
     [
       "ja",
       "SQLクエリを分析し、ワークフローをこのアプリケーションでSQL文を安全に実行します。",
