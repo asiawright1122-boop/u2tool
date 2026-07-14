@@ -4275,15 +4275,91 @@ export function optimizeSQL(sql = '') {
   const original = String(sql || '').trim();
   const analysis = runtimeAnalyzeSql({ sql: original, dialect: 'generic' });
 
+  const legacyOrder = {
+    'select-star': 0,
+    'unbounded-read': 1,
+    'write-without-where': 2,
+    'leading-wildcard-like': 3,
+    'filtered-column-function': 4,
+    'order-without-limit': 5,
+    'or-filter': 6,
+    'index-review-candidate': 7,
+    'composite-index-candidate': 7,
+  };
+  const legacyCopy = {
+    'select-star': {
+      message: 'Avoid SELECT * in production queries.',
+      fix: 'Select only the columns needed by the caller.',
+    },
+    'unbounded-read': {
+      message: 'Large SELECT queries should usually include a LIMIT.',
+      fix: 'Add a LIMIT when the UI or API only needs a bounded result set.',
+    },
+    'write-without-where': {
+      message: 'UPDATE or DELETE without a WHERE clause can affect the whole table.',
+      fix: 'Add a restrictive WHERE clause or run the statement inside a reviewed migration.',
+    },
+    'leading-wildcard-like': {
+      message: 'Leading-wildcard LIKE patterns usually cannot use a normal B-tree index.',
+      fix: 'Prefer prefix search, full-text search, or a trigram index if substring search is required.',
+    },
+    'filtered-column-function': {
+      message: 'Functions applied to filtered columns can prevent index usage.',
+      fix: 'Compare normalized stored values or add a matching functional index.',
+    },
+    'order-without-limit': {
+      message: 'ORDER BY without LIMIT may sort more rows than needed.',
+      fix: 'Add LIMIT/OFFSET for paginated reads.',
+    },
+    'or-filter': {
+      message: 'OR-heavy filters can make index selection harder.',
+      fix: 'Consider UNION ALL or separate indexed predicates for hot paths.',
+    },
+  };
+  const suggestions = analysis.suggestions
+    .filter((suggestion) => suggestion.code in legacyOrder)
+    .sort(
+      (left, right) =>
+        legacyOrder[left.code] - legacyOrder[right.code],
+    )
+    .map((suggestion) => {
+      if (
+        suggestion.code === 'index-review-candidate' ||
+        suggestion.code === 'composite-index-candidate'
+      ) {
+        const fields = suggestion.indexCandidates
+          .flatMap((candidate) => candidate.match(/\(([^)]+)\)/)?.[1]?.split(',') || [])
+          .map((field) => field.trim())
+          .filter(Boolean);
+        return {
+          type: suggestion.severity,
+          message: `Review indexes for: ${[...new Set(fields)].join(', ')}.`,
+          fix: 'Align composite indexes with WHERE equality columns first, then range and ORDER BY columns.',
+        };
+      }
+      const copy = legacyCopy[suggestion.code];
+      return {
+        type: suggestion.severity,
+        message: copy.message,
+        fix: copy.fix,
+      };
+    });
+  const score = suggestions.reduce(
+    (current, suggestion) =>
+      current -
+      (suggestion.type === 'warning'
+        ? 20
+        : suggestion.type === 'improvement'
+          ? 12
+          : 5),
+    100,
+  );
+
   return {
     original,
     optimized: analysis.formattedSql,
-    suggestions: analysis.suggestions.map((suggestion) => ({
-      type: suggestion.severity,
-      message: suggestion.message,
-      fix: suggestion.evidence,
-    })),
-    score: analysis.score,
+    suggestions,
+    score: Math.max(0, Math.min(100, score)),
   };
 }
 export const paperStyles = {};

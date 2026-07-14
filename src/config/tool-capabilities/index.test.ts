@@ -129,7 +129,7 @@ describe("pilot tool capability registry", () => {
     expect(hexProfile.enforcement).toBe("release-blocking");
     expect(hexProfile.evidenceTests).toHaveLength(1);
     expect(sqlProfile.enforcement).toBe("release-blocking");
-    expect(sqlProfile.evidenceTests).toHaveLength(2);
+    expect(sqlProfile.evidenceTests).toHaveLength(4);
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
     expect(sqlProfile.optionalServerFeatures).toEqual([]);
 

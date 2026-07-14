@@ -37,6 +37,18 @@ const engineEvidence = {
     'formats SQL without changing the submitted text and keeps local diagnostics in English [capability:sql-query-optimizer:produced-output:formatted-sql] [capability:sql-query-optimizer:browser-feature:sql-formatting] [capability:sql-query-optimizer:engine:language-support]',
 };
 
+const catalogLanguageEvidence = {
+  file: 'src/messages/sql-query-optimizer-catalog.test.ts',
+  testName:
+    'states the English-diagnostic boundary in every aggregate, base, and split SQL catalog [capability:sql-query-optimizer:profile:release-readiness] [capability:sql-query-optimizer:engine:language-support] [capability:sql-query-optimizer:limit:english-diagnostics]',
+};
+
+const catalogSafetyEvidence = {
+  file: 'src/messages/sql-query-optimizer-catalog.test.ts',
+  testName:
+    'keeps local-only safety copy and the full release-blocking capability vocabulary in all catalogs [capability:sql-query-optimizer:profile:release-readiness] [capability:sql-query-optimizer:limit:no-database-connection] [capability:sql-query-optimizer:limit:no-query-execution] [capability:sql-query-optimizer:limit:no-automatic-rewrite] [capability:sql-query-optimizer:limit:unverified-indexes] [capability:sql-query-optimizer:limit:no-speed-guarantee]',
+};
+
 export const sqlQueryOptimizerCapabilityProfile = defineToolCapabilityProfile({
   slug: 'sql-query-optimizer',
   version: '2.0.0',
@@ -232,5 +244,7 @@ export const sqlQueryOptimizerCapabilityProfile = defineToolCapabilityProfile({
       testName:
         'keeps every root aggregate SQL entry identical to its truthful base entry [capability:sql-query-optimizer:profile:release-readiness]',
     },
+    catalogLanguageEvidence,
+    catalogSafetyEvidence,
   ],
 });

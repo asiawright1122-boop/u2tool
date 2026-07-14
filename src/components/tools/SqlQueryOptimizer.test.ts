@@ -243,6 +243,112 @@ LIMIT 50;`;
     }
   }, 15_000);
 
+  it('clears analyzed findings whenever SQL, dialect, or pasted EXPLAIN changes', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(`${baseUrl}/en/`, { waitUntil: 'networkidle0' });
+      await page.select('[data-sql-dialect]', 'postgresql');
+      await page.$eval('[data-sql-input]', (textarea) => {
+        const field = textarea as HTMLTextAreaElement;
+        field.value = 'SELECT * FROM users;';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await page.$eval('[data-sql-explain-input]', (textarea) => {
+        const field = textarea as HTMLTextAreaElement;
+        field.value = 'Seq Scan on users  (cost=0.00..1.00 rows=1 width=4)';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await page.click('[data-sql-analyze]');
+      await page.waitForSelector('[data-sql-finding="select-star"]');
+      await page.waitForSelector('[data-sql-explain-finding="postgresql-sequential-scan"]');
+
+      await page.$eval('[data-sql-input]', (textarea) => {
+        const field = textarea as HTMLTextAreaElement;
+        field.value = 'SELECT id FROM users LIMIT 1;';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await page.waitForFunction(
+        () => !document.querySelector('[data-sql-analysis]'),
+      );
+      await page.click('[data-sql-analyze]');
+      await page.waitForSelector('[data-sql-analysis]');
+      expect(
+        await page.$$eval('[data-sql-finding="select-star"]', (nodes) => nodes.length),
+      ).toBe(0);
+
+      await page.select('[data-sql-dialect]', 'mysql');
+      await page.waitForFunction(
+        () => !document.querySelector('[data-sql-analysis]'),
+      );
+      await page.click('[data-sql-analyze]');
+      await page.waitForSelector('[data-sql-analysis]');
+      expect(
+        await page.$$eval('[data-sql-explain-finding]', (nodes) => nodes.length),
+      ).toBe(0);
+
+      await page.$eval('[data-sql-explain-input]', (textarea) => {
+        const field = textarea as HTMLTextAreaElement;
+        field.value = 'type: ALL';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await page.waitForFunction(
+        () => !document.querySelector('[data-sql-analysis]'),
+      );
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('announces a localized accessible error when clipboard access is rejected or unavailable', async () => {
+    const page = await browser!.newPage();
+    try {
+      await page.goto(`${baseUrl}/ru/`, { waitUntil: 'networkidle0' });
+      await page.evaluate(() => {
+        Object.defineProperty(navigator, 'clipboard', {
+          configurable: true,
+          value: {
+            writeText: async () => {
+              throw new Error('permission denied');
+            },
+          },
+        });
+      });
+      await page.$eval('[data-sql-input]', (textarea) => {
+        const field = textarea as HTMLTextAreaElement;
+        field.value = 'SELECT * FROM users;';
+        field.dispatchEvent(new Event('input', { bubbles: true }));
+      });
+      await page.click('[data-sql-analyze]');
+      await page.waitForSelector('[data-sql-copy-formatted]');
+      await page.click('[data-sql-copy-formatted]');
+      await page.waitForSelector('[data-sql-copy-error]');
+      expect(
+        await page.$eval('[data-sql-copy-error]', (node) => ({
+          role: node.getAttribute('role'),
+          live: node.getAttribute('aria-live'),
+          text: node.textContent?.trim(),
+        })),
+      ).toEqual({
+        role: 'alert',
+        live: 'assertive',
+        text: 'Не удалось скопировать. Проверьте разрешение буфера обмена и попробуйте снова.',
+      });
+
+      await page.evaluate(() => {
+        Object.defineProperty(navigator, 'clipboard', {
+          configurable: true,
+          value: undefined,
+        });
+      });
+      await page.click('[data-sql-copy-findings]');
+      expect(
+        await page.$eval('[data-sql-copy-error]', (node) => node.textContent?.trim()),
+      ).toBe('Не удалось скопировать. Проверьте разрешение буфера обмена и попробуйте снова.');
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
   it('discloses English local diagnostics on a non-English page [capability:sql-query-optimizer:limit:english-diagnostics]', async () => {
     const page = await browser!.newPage();
     try {

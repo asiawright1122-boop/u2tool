@@ -384,9 +384,86 @@ X-Trace-Id: abc123
     expect(optimized.optimized).toBe(analyzed.formattedSql);
     expect(optimized.score).toBeLessThan(100);
     expect(optimized.suggestions.map((suggestion) => suggestion.type)).toContain('warning');
-    expect(optimized.suggestions.map((suggestion) => suggestion.type)).toEqual(
-      analyzed.suggestions.map((suggestion) => suggestion.severity),
+    expect(
+      optimized.suggestions.map((suggestion) => suggestion.type).sort(),
+    ).toEqual(
+      analyzed.suggestions.map((suggestion) => suggestion.severity).sort(),
     );
+  });
+
+  it('preserves the representative pre-2.0 optimizeSQL messages, actionable fixes, scores, and output shape', () => {
+    expect(optimizeSQL('SELECT * FROM users;')).toEqual({
+      original: 'SELECT * FROM users;',
+      optimized: expect.stringContaining('SELECT'),
+      suggestions: [
+        {
+          type: 'improvement',
+          message: 'Avoid SELECT * in production queries.',
+          fix: 'Select only the columns needed by the caller.',
+        },
+        {
+          type: 'improvement',
+          message: 'Large SELECT queries should usually include a LIMIT.',
+          fix: 'Add a LIMIT when the UI or API only needs a bounded result set.',
+        },
+      ],
+      score: 76,
+    });
+
+    expect(optimizeSQL('UPDATE users SET active = false;')).toMatchObject({
+      suggestions: [
+        {
+          type: 'warning',
+          message:
+            'UPDATE or DELETE without a WHERE clause can affect the whole table.',
+          fix:
+            'Add a restrictive WHERE clause or run the statement inside a reviewed migration.',
+        },
+      ],
+      score: 80,
+    });
+
+    expect(
+      optimizeSQL(
+        "SELECT id FROM users WHERE status = 'active' ORDER BY created_at DESC;",
+      ),
+    ).toMatchObject({
+      suggestions: [
+        {
+          type: 'improvement',
+          message: 'Large SELECT queries should usually include a LIMIT.',
+          fix: 'Add a LIMIT when the UI or API only needs a bounded result set.',
+        },
+        {
+          type: 'info',
+          message: 'ORDER BY without LIMIT may sort more rows than needed.',
+          fix: 'Add LIMIT/OFFSET for paginated reads.',
+        },
+        {
+          type: 'info',
+          message: 'Review indexes for: status, created_at.',
+          fix:
+            'Align composite indexes with WHERE equality columns first, then range and ORDER BY columns.',
+        },
+      ],
+      score: 78,
+    });
+
+    expect(
+      optimizeSQL(
+        'SELECT id FROM users ORDER BY created_at DESC LIMIT 10;',
+      ),
+    ).toMatchObject({
+      suggestions: [
+        {
+          type: 'info',
+          message: 'Review indexes for: created_at.',
+          fix:
+            'Align composite indexes with WHERE equality columns first, then range and ORDER BY columns.',
+        },
+      ],
+      score: 95,
+    });
   });
 
   it('builds simplified query execution plan steps for SQL text', () => {

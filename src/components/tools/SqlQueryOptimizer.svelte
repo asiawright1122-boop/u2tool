@@ -21,6 +21,17 @@
   let result = $state<SqlAnalysisResult | null>(null);
   let error = $state('');
   let copied = $state<'formatted' | 'findings' | null>(null);
+  let copyError = $state('');
+
+  $effect(() => {
+    void dialect;
+    void sql;
+    void explainText;
+    result = null;
+    error = '';
+    copied = null;
+    copyError = '';
+  });
 
   function t(key: string): string {
     const tools = translations.tools as Record<string, unknown> | undefined;
@@ -50,6 +61,7 @@
     explainText = '';
     result = null;
     error = '';
+    copyError = '';
   }
 
   function handleClear() {
@@ -58,6 +70,7 @@
     result = null;
     error = '';
     copied = null;
+    copyError = '';
   }
 
   function handleAnalyze() {
@@ -77,11 +90,20 @@
       kind === 'formatted'
         ? result.formattedSql
         : formatFindings(result.suggestions, result.explainFindings);
-    await navigator.clipboard.writeText(text);
-    copied = kind;
-    setTimeout(() => {
-      if (copied === kind) copied = null;
-    }, 1800);
+    try {
+      if (!navigator.clipboard?.writeText) {
+        throw new Error('Clipboard API unavailable');
+      }
+      await navigator.clipboard.writeText(text);
+      copyError = '';
+      copied = kind;
+      setTimeout(() => {
+        if (copied === kind) copied = null;
+      }, 1800);
+    } catch {
+      copied = null;
+      copyError = t('copyFailed');
+    }
   }
 
   function formatFindings(
@@ -179,6 +201,9 @@
   {#if error}
     <p class="text-sm font-medium text-red-700 dark:text-red-300" role="alert" data-sql-error>{error}</p>
   {/if}
+  {#if copyError}
+    <p class="text-sm font-medium text-red-700 dark:text-red-300" role="alert" aria-live="assertive" data-sql-copy-error>{copyError}</p>
+  {/if}
 
   <div class="flex flex-wrap gap-3">
     <button
@@ -222,7 +247,7 @@
         {#if result.suggestions.length === 0}
           <p class="text-sm text-gray-600 dark:text-gray-300">{t('noFindings')}</p>
         {:else}
-          {#each result.suggestions as finding (finding.code)}
+          {#each result.suggestions as finding, index (`${finding.code}-${index}`)}
             <article class={`rounded-xl border p-4 ${findingTone(finding.severity)}`} data-sql-finding={finding.code}>
               <div class="flex flex-wrap items-start justify-between gap-3">
                 <p class="font-medium text-gray-900 dark:text-white">{finding.message}</p>
@@ -252,7 +277,7 @@
       {#if result.explainFindings.length > 0}
         <div class="space-y-3" data-sql-explain-findings>
           <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('explainFindings')}</h3>
-          {#each result.explainFindings as finding (finding.code)}
+          {#each result.explainFindings as finding, index (`${finding.code}-${index}`)}
             <article class={`rounded-xl border p-4 ${findingTone(finding.severity)}`} data-sql-explain-finding={finding.code}>
               <div class="flex flex-wrap items-start justify-between gap-3">
                 <p class="font-medium text-gray-900 dark:text-white">{finding.message}</p>

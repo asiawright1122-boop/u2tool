@@ -54,7 +54,7 @@ describe('SQL query optimizer message catalogs', () => {
     }
   });
 
-  it('states the English-diagnostic boundary in every aggregate, base, and split SQL catalog', () => {
+  it('states the English-diagnostic boundary in every aggregate, base, and split SQL catalog [capability:sql-query-optimizer:profile:release-readiness] [capability:sql-query-optimizer:engine:language-support] [capability:sql-query-optimizer:limit:english-diagnostics]', () => {
     for (const locale of locales) {
       const aggregate = sqlEntry(readCatalog(`${locale}.json`));
       const base = sqlEntry(readCatalog(`${locale}/base.json`));
@@ -73,7 +73,7 @@ describe('SQL query optimizer message catalogs', () => {
     }
   });
 
-  it('keeps local-only safety copy and the full release-blocking capability vocabulary in all catalogs', () => {
+  it('keeps local-only safety copy and the full release-blocking capability vocabulary in all catalogs [capability:sql-query-optimizer:profile:release-readiness] [capability:sql-query-optimizer:limit:no-database-connection] [capability:sql-query-optimizer:limit:no-query-execution] [capability:sql-query-optimizer:limit:no-automatic-rewrite] [capability:sql-query-optimizer:limit:unverified-indexes] [capability:sql-query-optimizer:limit:no-speed-guarantee]', () => {
     const capabilityKeys = [
       ['modes', 'localStaticAnalysis'],
       ['modes', 'pastedExplainAnalysis'],
@@ -111,6 +111,10 @@ describe('SQL query optimizer message catalogs', () => {
         expect(JSON.stringify(catalog), `${locale} ${name} no server assist`).not.toMatch(
           /AI assist|server assist|Workers AI|Cloudflare AI/iu,
         );
+        expect(
+          String(catalog.copyFailed),
+          `${locale} ${name} localized clipboard failure`,
+        ).not.toMatch(/^$|^undefined$/);
       }
 
       const capabilities = split.capabilities as Record<string, Record<string, unknown>>;
