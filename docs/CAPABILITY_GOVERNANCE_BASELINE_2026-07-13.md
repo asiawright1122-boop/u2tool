@@ -98,6 +98,10 @@ ends in an SQL/query head or documented executable-object noun such as a
 workflow, test, process, task, job, code, batch, or program. This positive head
 evidence allows ordinary automatic, local-environment, one-click, and
 instrumental modifier phrases without enumerating their surface forms.
+Classification then applies SQL precedence: an executable code, script, batch,
+program, or job head explicitly prefixed by `SQL` or the localized query marker
+is governed, with Japanese/Korean compact and spaced forms treated
+equivalently. The same executable heads without that prefix remain non-SQL.
 Generic unknown accusatives retain the strict suffix rule, so press, click,
 select, input, interact, or any other intervening action text rejects the
 candidate because that earlier action consumes its object. Among eligible
@@ -181,7 +185,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 501/501 tests passed.
+Result: exit `0`; 7/7 files and 526/526 tests passed.
 
 ### Default claims validator
 
