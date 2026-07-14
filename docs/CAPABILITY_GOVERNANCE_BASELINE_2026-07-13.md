@@ -93,19 +93,24 @@ overrides inherited state. Every accusative candidate in the action prefix is
 collected even when a location or adverb intervenes before the execute
 predicate. A candidate belongs to that execute predicate only when the span
 after its particle reduces to recognized location structure, locative
-particles, punctuation, and execution adverbs. Press, click, select, input,
-interact, or any other intervening action text rejects the candidate because
-that earlier action consumes its object. Among eligible candidates, the final
-one governs: a final SQL object restores governed context while a final
-non-SQL object clears it. Topic/additive markers (`は`/`も`, `은`/`는`/`도`)
-are deliberately constrained because they may mark the executing subject:
-only SQL/query-statement heads and documented non-SQL execution-object nouns
-such as tests, processes, tasks, jobs, code, batches, or programs may mutate
-state. SQL heads restore governed context, known non-SQL heads clear it, and
-current tool/application/system or other unknown topic heads preserve carried
-SQL context. Particle-omitted evidence uses the same finite head lexicon;
-arbitrary trailing tokens are not treated as objects. Japanese locatives
-`では`/`でも` and Korean
+particles, punctuation, and execution adverbs, or when the candidate itself
+ends in an SQL/query head or documented executable-object noun such as a
+workflow, test, process, task, job, code, batch, or program. This positive head
+evidence allows ordinary automatic, local-environment, one-click, and
+instrumental modifier phrases without enumerating their surface forms.
+Generic unknown accusatives retain the strict suffix rule, so press, click,
+select, input, interact, or any other intervening action text rejects the
+candidate because that earlier action consumes its object. Among eligible
+candidates, the final one governs: a final SQL object restores governed
+context while a final non-SQL object clears it. Topic/additive markers
+(`は`/`も`, `은`/`는`/`도`) are deliberately constrained because they may mark
+the executing subject: only SQL/query-statement heads and documented non-SQL
+execution-object nouns such as tests, processes, tasks, jobs, code, batches,
+or programs may mutate state. SQL heads restore governed context, known
+non-SQL heads clear it, and current tool/application/system or other unknown
+topic heads preserve carried SQL context. Particle-omitted evidence uses the
+same finite head lexicon; arbitrary trailing tokens are not treated as
+objects. Japanese locatives `では`/`でも` and Korean
 locatives `에서는`/`에서도` are excluded from object evidence, while adverbial
 prefixes such as `すぐ`/`安全に` and `즉시`/`안전하게` preserve true SQL-object
 elision. Meta execute mentions do not mutate object state. Japanese
@@ -176,7 +181,7 @@ assertions. Three repeated runner-group checks completed stably in about
 npx vitest run src/config/tool-capabilities/index.test.ts src/lib/tool-capability-claims.test.ts src/lib/support-content-fallback.test.ts scripts/validation/validate-tool-capability-claims.test.ts scripts/validation/tool-page-render-contract.test.ts src/components/tools/ToolCapabilityDisclosure.test.ts src/lib/tool-capability-disclosure.test.ts
 ```
 
-Result: exit `0`; 7/7 files and 491/491 tests passed.
+Result: exit `0`; 7/7 files and 501/501 tests passed.
 
 ### Default claims validator
 
