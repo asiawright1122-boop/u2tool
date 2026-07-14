@@ -1,61 +1,103 @@
 {
+  "name": "SQL Query Optimizer",
+  "description": "Analyze SQL text locally with dialect-aware heuristics and optional pasted EXPLAIN tokens.",
+  "seo_title": "Local SQL Query Optimizer and EXPLAIN Review | U2Tool",
+  "seo_description": "Analyze pasted SQL locally, choose a database dialect, review evidence-backed findings and index candidates, format SQL, and inspect pasted EXPLAIN tokens without connecting to a database or executing queries.",
+  "databaseDialect": "Database dialect",
+  "dialects": {
+    "generic": "Generic SQL",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "SQL query",
+  "inputPlaceholder": "Enter SQL to review...",
+  "explainText": "EXPLAIN text (optional)",
+  "explainPlaceholder": "Paste EXPLAIN output...",
+  "loadExample": "Load example",
+  "analyzeLocally": "Analyze locally",
+  "localSafety": "This tool does not connect to a database, does not execute SQL, does not rewrite queries automatically, and does not guarantee faster queries.",
+  "diagnosticsLanguageNotice": "Local diagnostic explanations are displayed in English.",
+  "analysisScore": "Static analysis score",
+  "findings": "Findings",
+  "explainFindings": "EXPLAIN findings",
+  "noFindings": "No supported patterns were found.",
+  "evidence": "Evidence",
+  "indexCandidates": "Index candidates",
+  "formattedSql": "Formatted SQL",
+  "limitations": "Limitations",
+  "copyFormattedSql": "Copy formatted SQL",
+  "copyFindings": "Copy findings",
+  "emptySql": "Enter SQL before analyzing.",
   "capabilities": {
-    "modes": { "staticAnalysis": "Static SQL analysis" },
-    "inputs": { "sqlText": "SQL text" },
+    "modes": {
+      "localStaticAnalysis": "Local static SQL analysis",
+      "pastedExplainAnalysis": "Pasted EXPLAIN text analysis"
+    },
+    "inputs": {
+      "sqlText": "SQL text",
+      "sqlDialect": "Database dialect",
+      "explainText": "Pasted EXPLAIN text"
+    },
     "outputs": {
-      "performanceScore": "Performance score",
+      "analysisScore": "Static analysis score",
       "formattedSql": "Formatted SQL",
-      "optimizationSuggestions": "Optimization suggestions",
-      "generalIndexCandidates": "General index candidates"
+      "diagnosticFindings": "Evidence-backed diagnostic findings",
+      "indexCandidates": "Composite index candidates",
+      "explainFindings": "EXPLAIN token findings"
     },
     "features": {
-      "staticHeuristics": "Static heuristic analysis",
-      "performanceScore": "Query performance score",
+      "dialectSelector": "Five-dialect selector",
+      "staticHeuristics": "Static SQL heuristics",
       "sqlFormatting": "SQL formatting",
-      "generalIndexCandidates": "General index candidates"
+      "compositeIndexCandidates": "Composite index candidates",
+      "explainTokenAnalysis": "Dialect-specific EXPLAIN token analysis",
+      "copyControls": "Copy formatted SQL and findings"
     },
     "limits": {
-      "noDatabaseSelector": "No database or dialect selector",
-      "noExplainParser": "Does not parse EXPLAIN plans",
+      "englishDiagnostics": "Diagnostic explanations are in English",
       "noDatabaseConnection": "Does not connect to databases",
-      "noQueryExecution": "Does not execute queries",
+      "noQueryExecution": "Does not execute SQL",
+      "noAutomaticRewrite": "Does not rewrite SQL automatically",
+      "unverifiedIndexes": "Index candidates are not verified against a schema",
       "noSpeedGuarantee": "Cannot guarantee faster queries"
     }
   },
-  "detailed_description": "SQL Query Optimizer gives a quick browser-side review of a SQL statement. Paste a query or load the example to get a score, formatted SQL, and practical suggestions for common patterns such as SELECT *, unbounded SELECT results, UPDATE or DELETE without WHERE, leading-wildcard LIKE filters, functions in WHERE clauses, OR-heavy filters, and columns that may deserve index review. It is a static helper, not a database EXPLAIN plan or a replacement for testing against your real schema and data.",
+  "detailed_description": "SQL Query Optimizer performs a local static review of pasted SQL. Choose Generic SQL, PostgreSQL, MySQL, SQLite, or SQL Server; optionally paste EXPLAIN text; then review the score, formatted SQL, evidence excerpts, cautious findings, and composite index candidates. The analyzer never connects to a database, executes SQL, applies rewrites, verifies indexes, or guarantees a speed improvement. Local diagnostic explanations are in English.",
   "usage_steps": [
-    "Paste a SQL statement into the editor or click Load Example.",
-    "Review the performance score that appears automatically.",
-    "Read each warning, improvement, or info suggestion.",
-    "Compare the formatted query output with your original SQL.",
-    "Copy the formatted query and test any changes in your own database environment."
+    "Choose the database dialect that best matches the SQL.",
+    "Paste SQL and, if available, paste EXPLAIN text from your own database tool.",
+    "Select Analyze locally to run the browser-only static review.",
+    "Review each English diagnostic, its evidence excerpt, index candidates, formatted SQL, and limitations.",
+    "Copy only the material you need, then validate any change in your own database environment."
   ],
   "usage_examples": [
-    "Spot a SELECT * query before it reaches a production API endpoint.",
-    "Catch a DELETE statement that is missing a WHERE clause.",
-    "Notice when LOWER(email) in a WHERE filter may prevent a normal index from helping.",
-    "Format a query before adding it to a pull request or ticket."
+    "Review SELECT * and unbounded reads before code review.",
+    "Spot UPDATE or DELETE statements without a WHERE clause.",
+    "Inspect PostgreSQL Seq Scan, MySQL type: ALL, SQLite SCAN, or SQL Server Table Scan text that you paste.",
+    "Draft a composite index candidate from equality filters and ORDER BY columns, then verify it against the real schema and workload."
   ],
   "faqs": [
     {
-      "question": "Does this run my query against a database?",
-      "answer": "No. It only scans the SQL text in the browser and returns static suggestions."
+      "question": "Does this connect to or run queries on my database?",
+      "answer": "No. The browser tool analyzes only the SQL and optional EXPLAIN text you paste. It does not connect to a database or execute SQL."
     },
     {
-      "question": "Can it replace EXPLAIN ANALYZE?",
-      "answer": "No. Use your database's EXPLAIN tools for real execution plans, row estimates, and timing."
+      "question": "Does it rewrite my query automatically?",
+      "answer": "No. It provides formatted SQL and review findings but never applies a semantic rewrite or changes your input automatically."
     },
     {
-      "question": "What kind of index advice does it provide?",
-      "answer": "It extracts fields from WHERE and ORDER BY clauses and suggests reviewing matching indexes. It cannot verify whether an index exists."
+      "question": "Are index candidates verified?",
+      "answer": "No. They are static hypotheses based on visible predicates and ordering, not verified recommendations from your schema or statistics."
     },
     {
-      "question": "Is the optimized query guaranteed to be faster?",
-      "answer": "No. Treat the output as a checklist and always test changes with your real schema, data volume, and workload."
+      "question": "Does an EXPLAIN finding prove a query is slow?",
+      "answer": "No. The tool recognizes a small set of pasted plan tokens. Review the complete plan, estimates, data distribution, and workload in your database."
     },
     {
-      "question": "What should I check before using the SQL Query Optimizer output?",
-      "answer": "Review code, configuration, parsing details, and any assumptions before using the result in a repository, script, or deployment workflow."
+      "question": "Will the suggestions make a query faster?",
+      "answer": "There is no speed guarantee. Test any proposed change with the real schema, data, and representative workload."
     }
   ]
 }

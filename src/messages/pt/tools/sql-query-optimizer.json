@@ -1,61 +1,103 @@
 {
+  "name": "Otimizador de consultas SQL",
+  "description": "Analise SQL localmente com regras por dialeto e revise texto EXPLAIN colado de forma opcional.",
+  "seo_title": "Otimizador SQL local e revisão EXPLAIN | U2Tool",
+  "seo_description": "Analise SQL no navegador, escolha um dialeto, revise achados com evidências, candidatos a índice, SQL formatado e tokens EXPLAIN colados, sem conectar a banco de dados nem executar consultas.",
+  "databaseDialect": "Dialeto do banco de dados",
+  "dialects": {
+    "generic": "SQL genérico",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "Consulta SQL",
+  "inputPlaceholder": "Insira o SQL para revisão...",
+  "explainText": "Texto EXPLAIN (opcional)",
+  "explainPlaceholder": "Cole a saída EXPLAIN...",
+  "loadExample": "Carregar exemplo",
+  "analyzeLocally": "Analisar localmente",
+  "localSafety": "Esta ferramenta não se conecta a um banco de dados, não executa SQL, não reescreve consultas automaticamente nem garante consultas mais rápidas.",
+  "diagnosticsLanguageNotice": "A interface está localizada, mas as explicações do diagnóstico local são exibidas em inglês.",
+  "analysisScore": "Pontuação da análise estática",
+  "findings": "Achados",
+  "explainFindings": "Achados EXPLAIN",
+  "noFindings": "Nenhum padrão compatível foi encontrado.",
+  "evidence": "Evidência",
+  "indexCandidates": "Candidatos a índice",
+  "formattedSql": "SQL formatado",
+  "limitations": "Limitações",
+  "copyFormattedSql": "Copiar SQL formatado",
+  "copyFindings": "Copiar achados",
+  "emptySql": "Insira SQL antes de analisar.",
   "capabilities": {
-    "modes": { "staticAnalysis": "Análise estática de SQL" },
-    "inputs": { "sqlText": "Texto SQL" },
+    "modes": {
+      "localStaticAnalysis": "Análise SQL estática local",
+      "pastedExplainAnalysis": "Análise de texto EXPLAIN colado"
+    },
+    "inputs": {
+      "sqlText": "Texto SQL",
+      "sqlDialect": "Dialeto do banco de dados",
+      "explainText": "Texto EXPLAIN colado"
+    },
     "outputs": {
-      "performanceScore": "Pontuação de desempenho",
+      "analysisScore": "Pontuação da análise estática",
       "formattedSql": "SQL formatado",
-      "optimizationSuggestions": "Sugestões de otimização",
-      "generalIndexCandidates": "Candidatos gerais a índices"
+      "diagnosticFindings": "Achados de diagnóstico com evidências",
+      "indexCandidates": "Candidatos a índice composto",
+      "explainFindings": "Achados de tokens EXPLAIN"
     },
     "features": {
-      "staticHeuristics": "Análise heurística estática",
-      "performanceScore": "Pontuação de desempenho da consulta",
+      "dialectSelector": "Seletor de cinco dialetos",
+      "staticHeuristics": "Heurísticas SQL estáticas",
       "sqlFormatting": "Formatação de SQL",
-      "generalIndexCandidates": "Candidatos gerais a índices"
+      "compositeIndexCandidates": "Candidatos a índice composto",
+      "explainTokenAnalysis": "Análise de tokens EXPLAIN por dialeto",
+      "copyControls": "Cópia do SQL formatado e dos achados"
     },
     "limits": {
-      "noDatabaseSelector": "Sem seletor de banco de dados ou dialeto",
-      "noExplainParser": "Não analisa planos EXPLAIN",
+      "englishDiagnostics": "As explicações do diagnóstico estão em inglês",
       "noDatabaseConnection": "Não se conecta a bancos de dados",
-      "noQueryExecution": "Não executa consultas",
+      "noQueryExecution": "Não executa SQL",
+      "noAutomaticRewrite": "Não reescreve SQL automaticamente",
+      "unverifiedIndexes": "Candidatos a índice não são verificados com o esquema",
       "noSpeedGuarantee": "Não pode garantir consultas mais rápidas"
     }
   },
-  "detailed_description": "O Otimizador de Consultas SQL analisa suas consultas SQL e fornece sugestões de otimização para melhor desempenho.",
+  "detailed_description": "O Otimizador de consultas SQL faz uma revisão estática local do SQL colado. Escolha SQL genérico, PostgreSQL, MySQL, SQLite ou SQL Server; cole texto EXPLAIN se disponível; e revise pontuação, SQL formatado, evidências, achados cautelosos e candidatos a índice composto. Não se conecta a banco de dados, não executa SQL, não aplica reescritas, não verifica índices nem garante ganho de velocidade. As explicações do diagnóstico local estão em inglês.",
   "usage_steps": [
-    "Cole a consulta SQL",
-    "Selecione o tipo de banco de dados",
-    "Clique em Otimizar",
-    "Visualize as sugestões",
-    "Aplique as mudanças"
+    "Escolha o dialeto que melhor corresponde ao SQL.",
+    "Cole o SQL e, se disponível, o texto EXPLAIN obtido na sua própria ferramenta de banco de dados.",
+    "Selecione Analisar localmente para executar a revisão estática no navegador.",
+    "Revise os diagnósticos em inglês, evidências, candidatos a índice, SQL formatado e limitações.",
+    "Copie apenas o necessário e valide qualquer mudança no seu ambiente de banco de dados."
   ],
   "usage_examples": [
-    "Otimizar SELECT lento",
-    "Obter recomendações de índices",
-    "Reescrever subconsultas",
-    "Verificar uma entrada curta antes de processar o conteúdo completo."
+    "Revisar SELECT * e leituras sem limite antes da revisão de código.",
+    "Identificar UPDATE ou DELETE sem cláusula WHERE.",
+    "Revisar texto colado com Seq Scan, type: ALL, SCAN ou Table Scan.",
+    "Propor um índice composto a partir de filtros de igualdade e ORDER BY e verificá-lo com o esquema e a carga reais."
   ],
   "faqs": [
     {
-      "question": "O que devo revisar antes de usar o resultado de Otimizador de Consultas SQL?",
-      "answer": "Revise entradas, opções, formato e contexto. Em resultados importantes, confira números, caracteres e significado antes de compartilhar ou publicar."
+      "question": "A ferramenta se conecta ou executa consultas no meu banco?",
+      "answer": "Não. Ela analisa no navegador apenas o SQL e o texto EXPLAIN opcional que você colar."
     },
     {
-      "question": "Posso alterar o resultado depois de gerar?",
-      "answer": "Sim. Ajuste a entrada ou as opções disponíveis, processe novamente e use a saída atualizada somente depois de revisar."
+      "question": "Ela reescreve a consulta automaticamente?",
+      "answer": "Não. Exibe SQL formatado e achados, mas não aplica reescritas semânticas nem altera a entrada."
     },
     {
-      "question": "Por que o resultado pode diferir de outra ferramenta?",
-      "answer": "Ferramentas podem tratar arredondamento, análise, formatação ou exibição de formas diferentes. Compare usando a mesma entrada e observe os limites da interface."
+      "question": "Os candidatos a índice são verificados?",
+      "answer": "Não. São hipóteses estáticas baseadas em predicados e ordenação visíveis, não recomendações verificadas com esquema ou estatísticas."
     },
     {
-      "question": "Posso começar com uma entrada curta?",
-      "answer": "Sim. Comece com uma entrada curta ou conteúdo não sensível para confirmar o formato da saída antes de usar o conteúdo real."
+      "question": "Um achado EXPLAIN prova que a consulta é lenta?",
+      "answer": "Não. A ferramenta reconhece poucos tokens de planos colados. Revise o plano completo, estimativas, distribuição de dados e carga."
     },
     {
-      "question": "A ferramenta substitui uma revisão manual?",
-      "answer": "Não. Ela acelera tarefas repetitivas, mas resultados importantes ainda devem ser revisados quanto a precisão, contexto e adequação."
+      "question": "As sugestões garantem consultas mais rápidas?",
+      "answer": "Não há garantia. Teste qualquer alteração com o esquema, os dados e uma carga representativa."
     }
   ]
 }

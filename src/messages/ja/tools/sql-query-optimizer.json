@@ -1,61 +1,103 @@
 {
+  "name": "SQLクエリ最適化ツール",
+  "description": "方言別の静的ルールで SQL をローカル分析し、貼り付けた EXPLAIN テキストも確認できます。",
+  "seo_title": "ローカル SQL クエリ最適化・EXPLAIN 確認 | U2Tool",
+  "seo_description": "ブラウザー内で SQL を静的分析し、データベース方言、根拠付き診断、インデックス候補、整形 SQL、貼り付けた EXPLAIN トークンを確認できます。データベースには接続せず、SQLクエリを実行しません。",
+  "databaseDialect": "データベース方言",
+  "dialects": {
+    "generic": "汎用 SQL",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "SQL クエリ",
+  "inputPlaceholder": "確認する SQL を入力...",
+  "explainText": "EXPLAIN テキスト（任意）",
+  "explainPlaceholder": "EXPLAIN 出力を貼り付け...",
+  "loadExample": "例を読み込む",
+  "analyzeLocally": "ローカルで分析",
+  "localSafety": "このツールはデータベースに接続しません。SQLを実行しません。クエリを自動で書き換えず、高速化も保証しません。",
+  "diagnosticsLanguageNotice": "画面は日本語ですが、ローカル診断の説明は英語で表示されます。",
+  "analysisScore": "静的分析スコア",
+  "findings": "診断結果",
+  "explainFindings": "EXPLAIN 診断",
+  "noFindings": "対応するパターンは見つかりませんでした。",
+  "evidence": "根拠",
+  "indexCandidates": "インデックス候補",
+  "formattedSql": "整形済み SQL",
+  "limitations": "制限",
+  "copyFormattedSql": "整形済み SQL をコピー",
+  "copyFindings": "診断結果をコピー",
+  "emptySql": "分析する SQL を入力してください。",
   "capabilities": {
-    "modes": { "staticAnalysis": "SQL の静的解析" },
-    "inputs": { "sqlText": "SQL テキスト" },
+    "modes": {
+      "localStaticAnalysis": "ローカル SQL 静的分析",
+      "pastedExplainAnalysis": "貼り付けた EXPLAIN テキストの分析"
+    },
+    "inputs": {
+      "sqlText": "SQL テキスト",
+      "sqlDialect": "データベース方言",
+      "explainText": "貼り付けた EXPLAIN テキスト"
+    },
     "outputs": {
-      "performanceScore": "パフォーマンススコア",
+      "analysisScore": "静的分析スコア",
       "formattedSql": "整形済み SQL",
-      "optimizationSuggestions": "最適化の提案",
-      "generalIndexCandidates": "一般的なインデックス候補"
+      "diagnosticFindings": "根拠付き診断結果",
+      "indexCandidates": "複合インデックス候補",
+      "explainFindings": "EXPLAIN トークン診断"
     },
     "features": {
-      "staticHeuristics": "静的ヒューリスティック解析",
-      "performanceScore": "クエリのパフォーマンススコア",
-      "sqlFormatting": "SQL の整形",
-      "generalIndexCandidates": "一般的なインデックス候補"
+      "dialectSelector": "5 方言セレクター",
+      "staticHeuristics": "SQL 静的ヒューリスティクス",
+      "sqlFormatting": "SQL 整形",
+      "compositeIndexCandidates": "複合インデックス候補",
+      "explainTokenAnalysis": "方言別 EXPLAIN トークン分析",
+      "copyControls": "整形 SQL と診断結果のコピー"
     },
     "limits": {
-      "noDatabaseSelector": "データベースまたは方言の選択機能はありません",
-      "noExplainParser": "EXPLAIN プランは解析しません",
+      "englishDiagnostics": "診断説明は英語のみ",
       "noDatabaseConnection": "データベースには接続しません",
-      "noQueryExecution": "クエリは実行しません",
-      "noSpeedGuarantee": "クエリの高速化は保証できません"
+      "noQueryExecution": "SQL は実行しません",
+      "noAutomaticRewrite": "SQL を自動で書き換えません",
+      "unverifiedIndexes": "インデックス候補は実際のスキーマで未検証",
+      "noSpeedGuarantee": "高速化は保証できません"
     }
   },
-  "detailed_description": "SQLクエリ最適化ツールは、あなたのSQLクエリを分析し、より良いパフォーマンスのための最適化提案を行います。 SQLクエリ最適化ツールは、開発作業の下書き確認をすばやく行うための補助ツールであり、結果を確認せずに自動適用するものではありません。入力、形式、前提を確認し、重要な変更は自分の作業フローで追加確認してください。",
+  "detailed_description": "SQLクエリ最適化ツールは、貼り付けた SQL をブラウザー内で静的に確認します。汎用 SQL、PostgreSQL、MySQL、SQLite、SQL Server を選び、必要なら EXPLAIN テキストを貼り付けて、スコア、整形 SQL、根拠、慎重な診断、複合インデックス候補を確認できます。データベースには接続しません。SQLクエリを実行しません。自動書き換え、インデックス検証、高速化保証も行いません。ローカル診断の説明は英語です。",
   "usage_steps": [
-    "SQLクエリをペースト",
-    "データベースの種類を選択",
-    "「最適化」をクリック",
-    "提案を確認",
-    "変更を適用"
+    "SQL に最も近いデータベース方言を選びます。",
+    "SQL を貼り付け、必要なら自分のデータベースツールから得た EXPLAIN テキストも貼り付けます。",
+    "「ローカルで分析」を選んでブラウザー内の静的確認を開始します。",
+    "英語の診断、根拠、インデックス候補、整形 SQL、制限を確認します。",
+    "必要な内容だけをコピーし、変更は自分のデータベース環境で検証します。"
   ],
   "usage_examples": [
-    "遅いSELECTクエリの最適化",
-    "インデックスの推薦を受ける",
-    "サブクエリのリライト",
-    "小さな入力で結果を確認してから、リポジトリや作業中のプロジェクトに反映します。"
+    "コードレビュー前に SELECT * と無制限読み取りを確認する。",
+    "WHERE のない UPDATE または DELETE を見つける。",
+    "貼り付けた Seq Scan、type: ALL、SCAN、Table Scan のテキストを確認する。",
+    "等価条件と ORDER BY から複合インデックス候補を作り、実際のスキーマと負荷で検証する。"
   ],
   "faqs": [
     {
-      "question": "SQLクエリ最適化ツールの結果を使う前に何を確認すべきですか？",
-      "answer": "入力内容、選択した設定、結果が目的に合っているかを確認してください。重要な内容では、数値、形式、文脈を見直してから共有や公開に進みます。"
+      "question": "データベースに接続したりクエリを実行したりしますか？",
+      "answer": "いいえ。貼り付けた SQL と任意の EXPLAIN テキストだけをブラウザーで分析します。"
     },
     {
-      "question": "生成後に結果を変更できますか？",
-      "answer": "はい。入力内容や利用できる設定を変更し、もう一度処理してから、更新された結果を確認して使えます。"
+      "question": "クエリを自動で書き換えますか？",
+      "answer": "いいえ。整形 SQL と診断を表示しますが、意味を変える書き換えや入力変更は自動適用しません。"
     },
     {
-      "question": "他の開発ツールと結果が違うのはなぜですか？",
-      "answer": "丸め、解析方法、表示形式、設定の扱いがツールごとに異なる場合があります。同じ入力で比較し、画面上の条件や制限も確認してください。"
+      "question": "インデックス候補は検証済みですか？",
+      "answer": "いいえ。見えている条件と並び順から作る静的な仮説で、スキーマや統計では検証していません。"
     },
     {
-      "question": "短い例から始められますか？",
-      "answer": "はい。まず短い入力や公開してよい内容で結果の形を確認し、その後で実際に使う入力へ進むと安全です。"
+      "question": "EXPLAIN 診断は遅いクエリの証明ですか？",
+      "answer": "いいえ。少数の計画トークンだけを認識します。完全な計画、推定、データ分布、負荷をデータベースで確認してください。"
     },
     {
-      "question": "手作業の確認を置き換えますか？",
-      "answer": "いいえ。作業を速くするための補助ですが、重要な結果は正確性、文脈、利用先への適合を確認してから使ってください。"
+      "question": "提案で必ず速くなりますか？",
+      "answer": "保証はありません。実際のスキーマ、データ、代表的な負荷でテストしてください。"
     }
   ]
 }

@@ -12,6 +12,7 @@ export {
   K,
   bicDatabase
 } from './runtime-integrity/developer-db';
+export { analyzeSql, EXAMPLE_SQL } from './sql-query-optimizer';
 
 import {
   base64UrlEncode as runtimeBase64UrlEncode,
@@ -57,6 +58,7 @@ import {
   parseTimeToMinutes as runtimeParseTimeToMinutes,
 } from './runtime-integrity/scheduling';
 import { formatSql as runtimeFormatSql, minifySql as runtimeMinifySql } from './runtime-integrity/sql';
+import { analyzeSql as runtimeAnalyzeSql } from './sql-query-optimizer';
 import {
   ASCII_FONTS as runtimeAsciiFonts,
   flipMap as runtimeFlipMap,
@@ -2165,10 +2167,6 @@ export const EXAMPLE_SPEC = {
     },
   },
 };
-export const EXAMPLE_SQL = `SELECT *
-FROM orders
-WHERE LOWER(customer_email) = 'alice@example.com'
-ORDER BY created_at DESC;`;
 export const ErrorInfo = [];
 export const FIELD_NAMES = [
   "firstName",
@@ -4275,59 +4273,17 @@ export function normalizePrefix(prefix = '') {
 }
 export function optimizeSQL(sql = '') {
   const original = String(sql || '').trim();
-  const suggestions = [];
-  let score = 100;
-
-  const addSuggestion = (type, message, fix) => {
-    suggestions.push({ type, message, fix });
-    score -= type === 'warning' ? 20 : type === 'improvement' ? 12 : 5;
-  };
-
-  if (/^\s*select\s+\*/i.test(original)) {
-    addSuggestion('improvement', 'Avoid SELECT * in production queries.', 'Select only the columns needed by the caller.');
-  }
-
-  if (/^\s*select\b/i.test(original) && !/\blimit\b/i.test(original)) {
-    addSuggestion('improvement', 'Large SELECT queries should usually include a LIMIT.', 'Add a LIMIT when the UI or API only needs a bounded result set.');
-  }
-
-  if (/^\s*(update|delete)\b/i.test(original) && !/\bwhere\b/i.test(original)) {
-    addSuggestion('warning', 'UPDATE or DELETE without a WHERE clause can affect the whole table.', 'Add a restrictive WHERE clause or run the statement inside a reviewed migration.');
-  }
-
-  if (/\blike\s+['"]%/i.test(original)) {
-    addSuggestion('warning', 'Leading-wildcard LIKE patterns usually cannot use a normal B-tree index.', 'Prefer prefix search, full-text search, or a trigram index if substring search is required.');
-  }
-
-  if (/\bwhere\b[\s\S]*\b(lower|upper|date|cast|substring)\s*\(/i.test(original)) {
-    addSuggestion('warning', 'Functions applied to filtered columns can prevent index usage.', 'Compare normalized stored values or add a matching functional index.');
-  }
-
-  if (/\border\s+by\b/i.test(original) && !/\blimit\b/i.test(original)) {
-    addSuggestion('info', 'ORDER BY without LIMIT may sort more rows than needed.', 'Add LIMIT/OFFSET for paginated reads.');
-  }
-
-  if (/\bwhere\b[\s\S]*\bor\b/i.test(original)) {
-    addSuggestion('info', 'OR-heavy filters can make index selection harder.', 'Consider UNION ALL or separate indexed predicates for hot paths.');
-  }
-
-  const whereText = original.match(/\bwhere\b([\s\S]*?)(?:\border\s+by\b|\bgroup\s+by\b|\blimit\b|$)/i)?.[1] || '';
-  const orderText = getSqlClause(original, 'order by', ['limit', 'offset']);
-  const indexFields = new Set();
-  for (const condition of splitSqlConditions(whereText)) {
-    const field = condition.match(/^(.+?)\s*(?:=|!=|<>|>=|<=|>|<|\bin\b|\blike\b|\bis\b)/i)?.[1];
-    if (field) indexFields.add(unquoteSqlIdentifier(field));
-  }
-  for (const field of Object.keys(parseSqlOrder(orderText))) indexFields.add(field);
-  if (indexFields.size > 0) {
-    addSuggestion('info', `Review indexes for: ${[...indexFields].join(', ')}.`, 'Align composite indexes with WHERE equality columns first, then range and ORDER BY columns.');
-  }
+  const analysis = runtimeAnalyzeSql({ sql: original, dialect: 'generic' });
 
   return {
     original,
-    optimized: runtimeFormatSql(original),
-    suggestions,
-    score: Math.max(0, Math.min(100, score)),
+    optimized: analysis.formattedSql,
+    suggestions: analysis.suggestions.map((suggestion) => ({
+      type: suggestion.severity,
+      message: suggestion.message,
+      fix: suggestion.evidence,
+    })),
+    score: analysis.score,
   };
 }
 export const paperStyles = {};

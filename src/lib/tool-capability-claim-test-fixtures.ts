@@ -106,6 +106,20 @@ export const localizedClaimTerms: Record<string, LocalizedTerms> = {
     "ejecutar consultas SQL", "executar consultas SQL", "exécuter des requêtes SQL",
     "führt SQL-Abfragen aus", "выполняет SQL-запросы", "ينفذ استعلامات SQL",
   ),
+  "sql-optimizer-automatic-rewrite-claim": terms(
+    "automatic SQL rewriting", "自动重写 SQL 查询", "SQLクエリの自動書き換え",
+    "SQL 쿼리 자동 재작성", "reescritura automática de consultas SQL",
+    "reescrita automática de consultas SQL", "réécriture automatique des requêtes SQL",
+    "automatische Umschreibung von SQL-Abfragen", "автоматическое переписывание SQL-запросов",
+    "إعادة كتابة استعلامات SQL تلقائيًا",
+  ),
+  "sql-optimizer-verified-index-claim": terms(
+    "verified index recommendations", "经过数据库验证的索引建议", "検証済みのインデックス推奨",
+    "검증된 인덱스 추천", "recomendaciones de índices verificadas",
+    "recomendações de índices verificadas", "recommandations d’index vérifiées",
+    "verifizierte Indexempfehlungen", "проверенные рекомендации по индексам",
+    "توصيات فهارس متحقق منها",
+  ),
   "sql-optimizer-speed-guarantee-claim": terms(
     "guarantee faster query performance", "保证查询性能更快", "クエリ性能の高速化を保証",
     "더 빠른 쿼리 성능을 보장", "garantizar un rendimiento más rápido",

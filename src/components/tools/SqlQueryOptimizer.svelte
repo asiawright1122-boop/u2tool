@@ -1,5 +1,12 @@
 <script lang="ts">
-  import { EXAMPLE_SQL, optimizeSQL } from '@/lib/tool-stubs';
+  import {
+    analyzeSql,
+    EXAMPLE_SQL,
+    type ExplainFinding,
+    type SqlAnalysisResult,
+    type SqlDialect,
+    type SqlSuggestion,
+  } from '@/lib/sql-query-optimizer';
 
   interface Props {
     locale: string;
@@ -8,114 +15,283 @@
 
   let { locale, translations }: Props = $props();
 
-  // Translation helpers
+  let dialect = $state<SqlDialect>('generic');
+  let sql = $state('');
+  let explainText = $state('');
+  let result = $state<SqlAnalysisResult | null>(null);
+  let error = $state('');
+  let copied = $state<'formatted' | 'findings' | null>(null);
+
   function t(key: string): string {
-    const scope = translations['tools']['sql-query-optimizer'] as Record<string, unknown> || {};
-    const keys = key.split('.');
+    const tools = translations.tools as Record<string, unknown> | undefined;
+    const scope = tools?.['sql-query-optimizer'] as
+      | Record<string, unknown>
+      | undefined;
     let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
-    return typeof value === 'string' ? value : `MISSING: tools.sql-query-optimizer.${key}`;
+    for (const segment of key.split('.')) {
+      if (typeof value !== 'object' || value === null || Array.isArray(value)) {
+        return `MISSING: tools.sql-query-optimizer.${key}`;
+      }
+      value = (value as Record<string, unknown>)[segment];
+    }
+    return typeof value === 'string'
+      ? value
+      : `MISSING: tools.sql-query-optimizer.${key}`;
   }
+
   function tCommon(key: string): string {
-    const scope = translations['tools'] as Record<string, unknown> || {};
-    const keys = key.split('.');
-    let value: unknown = scope;
-    for (const k of keys) { value = (value as Record<string, unknown>)?.[k]; }
+    const tools = translations.tools as Record<string, unknown> | undefined;
+    const value = tools?.[key];
     return typeof value === 'string' ? value : `MISSING: tools.${key}`;
   }
 
-  // Types
-  interface OptimizationResult {
-  original: string;
-  optimized: string;
-  suggestions: Array<{ type: 'warning' | 'info' | 'improvement'; message: string; fix?: string }>;
-  score: number;
-}
-
-  let sql = $state('');
-
-  let copied = $state(false);
-
-  let result = $derived.by(() => {
-    if (!sql.trim()) return null;
-    return optimizeSQL(sql);
-  });
-
-  function handleClear() { return sql = ''; }
-
-  function loadExample() { return sql = EXAMPLE_SQL; }
-
-  function handleCopy() {
-    if (result) {
-      navigator.clipboard.writeText(result.optimized);
-      copied = true;
-      setTimeout(() => copied = false, 2000);
-    }
+  function loadExample() {
+    sql = EXAMPLE_SQL;
+    explainText = '';
+    result = null;
+    error = '';
   }
 
-  // Functions
-  function getTypeColor(type: string) {
-    switch (type) {
-      case 'warning': return 'bg-red-50 border-red-200 dark:bg-red-900/20 dark:border-red-800';
-      case 'improvement': return 'bg-yellow-50 border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-800';
-      case 'info': return 'bg-amber-50 border-amber-200 dark:bg-amber-900/20 dark:border-amber-800';
-      default: return 'bg-gray-50 border-gray-200 dark:bg-gray-800 dark:border-gray-700';
-    }
+  function handleClear() {
+    sql = '';
+    explainText = '';
+    result = null;
+    error = '';
+    copied = null;
   }
 
+  function handleAnalyze() {
+    if (!sql.trim()) {
+      result = null;
+      error = t('emptySql');
+      return;
+    }
+
+    error = '';
+    result = analyzeSql({ sql, dialect, explainText });
+  }
+
+  async function copyText(kind: 'formatted' | 'findings') {
+    if (!result) return;
+    const text =
+      kind === 'formatted'
+        ? result.formattedSql
+        : formatFindings(result.suggestions, result.explainFindings);
+    await navigator.clipboard.writeText(text);
+    copied = kind;
+    setTimeout(() => {
+      if (copied === kind) copied = null;
+    }, 1800);
+  }
+
+  function formatFindings(
+    suggestions: SqlSuggestion[],
+    explainFindings: ExplainFinding[],
+  ): string {
+    return [...suggestions, ...explainFindings]
+      .map((finding) => {
+        const candidates =
+          'indexCandidates' in finding && finding.indexCandidates.length > 0
+            ? `\nIndex candidates: ${finding.indexCandidates.join('; ')}`
+            : '';
+        return `[${finding.severity.toUpperCase()}] ${finding.message}\nEvidence: ${finding.evidence}${candidates}`;
+      })
+      .join('\n\n');
+  }
+
+  function scoreTone(score: number): string {
+    if (score >= 80) return 'text-emerald-700 dark:text-emerald-300';
+    if (score >= 55) return 'text-amber-700 dark:text-amber-300';
+    return 'text-red-700 dark:text-red-300';
+  }
+
+  function findingTone(severity: SqlSuggestion['severity'] | ExplainFinding['severity']): string {
+    if (severity === 'warning') {
+      return 'border-red-200 bg-red-50/70 dark:border-red-900 dark:bg-red-950/30';
+    }
+    if (severity === 'improvement') {
+      return 'border-amber-200 bg-amber-50/70 dark:border-amber-900 dark:bg-amber-950/30';
+    }
+    return 'border-sky-200 bg-sky-50/70 dark:border-sky-900 dark:bg-sky-950/30';
+  }
 </script>
 
+<div class="space-y-6" data-sql-optimizer data-locale={locale}>
+  <div class="rounded-xl bg-gray-50 p-4 dark:bg-gray-900/70">
+    <p id="sql-local-safety" class="text-sm font-medium text-gray-800 dark:text-gray-100" data-sql-safety>
+      {t('localSafety')}
+    </p>
+    <p id="sql-diagnostics-language" class="mt-2 text-sm text-gray-600 dark:text-gray-300" data-sql-diagnostics-language>
+      {t('diagnosticsLanguageNotice')}
+    </p>
+  </div>
 
-    <div class="space-y-6">
-      <div>
-        <div class="flex justify-between items-center mb-2">
-          <div class="tool-label">{t('sqlQuery')}</div>
-          <button onclick={loadExample} class="text-xs text-amber-600 hover:text-amber-700 dark:text-amber-400">{t('loadExample')}</button>
+  <div class="space-y-2">
+    <label class="tool-label" for="sql-dialect">{t('databaseDialect')}</label>
+    <select
+      id="sql-dialect"
+      bind:value={dialect}
+      data-sql-dialect
+      class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-gray-900 outline-none transition focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 dark:border-gray-600 dark:bg-gray-800 dark:text-white"
+    >
+      <option value="generic">{t('dialects.generic')}</option>
+      <option value="postgresql">{t('dialects.postgresql')}</option>
+      <option value="mysql">{t('dialects.mysql')}</option>
+      <option value="sqlite">{t('dialects.sqlite')}</option>
+      <option value="sql-server">{t('dialects.sqlServer')}</option>
+    </select>
+  </div>
+
+  <div class="space-y-2">
+    <div class="flex items-center justify-between gap-4">
+      <label class="tool-label" for="sql-query-input">{t('sqlQuery')}</label>
+      <button
+        type="button"
+        onclick={loadExample}
+        class="text-sm font-medium text-amber-700 hover:text-amber-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 dark:text-amber-300 dark:hover:text-amber-200"
+      >
+        {t('loadExample')}
+      </button>
+    </div>
+    <textarea
+      id="sql-query-input"
+      bind:value={sql}
+      data-sql-input
+      aria-describedby="sql-local-safety sql-diagnostics-language"
+      placeholder={t('inputPlaceholder')}
+      spellcheck="false"
+      class="min-h-44 w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 font-mono text-sm text-gray-900 outline-none transition placeholder:text-gray-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400"
+    ></textarea>
+  </div>
+
+  <div class="space-y-2">
+    <label class="tool-label" for="sql-explain-input">{t('explainText')}</label>
+    <textarea
+      id="sql-explain-input"
+      bind:value={explainText}
+      data-sql-explain-input
+      placeholder={t('explainPlaceholder')}
+      spellcheck="false"
+      class="min-h-28 w-full resize-y rounded-lg border border-gray-300 bg-white px-4 py-3 font-mono text-sm text-gray-900 outline-none transition placeholder:text-gray-500 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400"
+    ></textarea>
+  </div>
+
+  {#if error}
+    <p class="text-sm font-medium text-red-700 dark:text-red-300" role="alert" data-sql-error>{error}</p>
+  {/if}
+
+  <div class="flex flex-wrap gap-3">
+    <button
+      type="button"
+      onclick={handleAnalyze}
+      data-sql-analyze
+      class="rounded-lg bg-amber-600 px-5 py-2.5 font-medium text-white transition hover:bg-amber-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 active:bg-amber-800 dark:ring-offset-gray-900"
+    >
+      {t('analyzeLocally')}
+    </button>
+    <button
+      type="button"
+      onclick={handleClear}
+      class="rounded-lg bg-gray-600 px-5 py-2.5 font-medium text-white transition hover:bg-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-500 focus-visible:ring-offset-2 active:bg-gray-800 dark:ring-offset-gray-900"
+    >
+      {tCommon('clear')}
+    </button>
+  </div>
+
+  {#if result}
+    <section class="space-y-6" data-sql-analysis aria-live="polite">
+      <div class="flex flex-wrap items-end justify-between gap-4 border-b border-gray-200 pb-4 dark:border-gray-700">
+        <div>
+          <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('analysisScore')}</h3>
+          <p class={`mt-1 text-3xl font-bold tabular-nums ${scoreTone(result.score)}`} data-sql-score>
+            {result.score}/100
+          </p>
         </div>
-        <textarea bind:value={sql} placeholder={t("inputPlaceholder")}
-          class="w-full h-40 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm resize-none"></textarea>
+        <button
+          type="button"
+          onclick={() => copyText('findings')}
+          data-sql-copy-findings
+          class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
+        >
+          {copied === 'findings' ? tCommon('copied') : t('copyFindings')}
+        </button>
       </div>
 
-      <button onclick={handleClear} class="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-medium">{tCommon('clear')}</button>
-
-      {#if result}
-<div class="space-y-6">
-          <div class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg text-center">
-            <div class={`text-3xl font-bold ${result.score >= 80 ? 'text-green-600' : result.score >= 50 ? 'text-yellow-600' : 'text-red-600'}`}>
-              {result.score}/100
-            </div>
-            <div class="text-sm text-gray-500">{t('queryPerformanceScore')}</div>
-          </div>
-
-          {#if result.suggestions.length > 0}
-<div class="space-y-3">
-              <h3 class="text-lg font-medium text-gray-900 dark:text-white">{t('optimizationSuggestions')}</h3>
-              {#each result.suggestions as s, idx (idx)}
-<div  class={`p-3 rounded-lg border ${getTypeColor(s.type)}`}>
-                  <div class="flex items-center gap-2 mb-1">
-                    <span class="text-lg">{@html s.type === 'warning' ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>' : s.type === 'improvement' ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>' : 'ℹ'}</span>
-                    <span class="text-sm font-medium text-gray-800 dark:text-gray-200">{s.message}</span>
-                  </div>
-                  {#if s.fix}
-<p class="text-sm text-gray-600 dark:text-gray-400 ml-7">{t('fix')}: {s.fix}</p>
-{/if}
+      <div class="space-y-3">
+        <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('findings')}</h3>
+        {#if result.suggestions.length === 0}
+          <p class="text-sm text-gray-600 dark:text-gray-300">{t('noFindings')}</p>
+        {:else}
+          {#each result.suggestions as finding (finding.code)}
+            <article class={`rounded-xl border p-4 ${findingTone(finding.severity)}`} data-sql-finding={finding.code}>
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <p class="font-medium text-gray-900 dark:text-white">{finding.message}</p>
+                <span class="rounded-full bg-white/80 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:bg-gray-900/70 dark:text-gray-200" data-sql-severity>
+                  {finding.severity}
+                </span>
+              </div>
+              <p class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+                <span class="font-semibold">{t('evidence')}:</span>
+                <code class="ml-1 break-words" data-sql-evidence>{finding.evidence}</code>
+              </p>
+              {#if finding.indexCandidates.length > 0}
+                <div class="mt-3">
+                  <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{t('indexCandidates')}</p>
+                  <ul class="mt-1 space-y-1">
+                    {#each finding.indexCandidates as candidate}
+                      <li class="font-mono text-sm text-gray-700 dark:text-gray-300" data-sql-index-candidate>{candidate}</li>
+                    {/each}
+                  </ul>
                 </div>
-{/each}
-            </div>
-{/if}
+              {/if}
+            </article>
+          {/each}
+        {/if}
+      </div>
 
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <div class="tool-label">{t('formattedQuery')}</div>
-              <button onclick={handleCopy} class="text-sm text-amber-600 hover:text-amber-700 dark:text-amber-400">
-                {copied ? tCommon('copied') : tCommon('copy')}
-              </button>
-            </div>
-            <pre class="p-4 bg-gray-50 dark:bg-gray-900 rounded-lg overflow-x-auto text-sm font-mono text-gray-800 dark:text-gray-200">
-              {result.optimized}
-            </pre>
-          </div>
+      {#if result.explainFindings.length > 0}
+        <div class="space-y-3" data-sql-explain-findings>
+          <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('explainFindings')}</h3>
+          {#each result.explainFindings as finding (finding.code)}
+            <article class={`rounded-xl border p-4 ${findingTone(finding.severity)}`} data-sql-explain-finding={finding.code}>
+              <div class="flex flex-wrap items-start justify-between gap-3">
+                <p class="font-medium text-gray-900 dark:text-white">{finding.message}</p>
+                <span class="rounded-full bg-white/80 px-2.5 py-1 text-xs font-semibold text-gray-700 dark:bg-gray-900/70 dark:text-gray-200" data-sql-severity>
+                  {finding.severity}
+                </span>
+              </div>
+              <p class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+                <span class="font-semibold">{t('evidence')}:</span>
+                <code class="ml-1 break-words" data-sql-evidence>{finding.evidence}</code>
+              </p>
+            </article>
+          {/each}
         </div>
-{/if}
-    </div>
-  
+      {/if}
+
+      <div class="space-y-2">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('formattedSql')}</h3>
+          <button
+            type="button"
+            onclick={() => copyText('formatted')}
+            data-sql-copy-formatted
+            class="rounded-lg border border-gray-300 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-800"
+          >
+            {copied === 'formatted' ? tCommon('copied') : t('copyFormattedSql')}
+          </button>
+        </div>
+        <pre class="overflow-x-auto rounded-xl bg-gray-950 p-4 text-sm text-gray-100" data-sql-formatted><code>{result.formattedSql}</code></pre>
+      </div>
+
+      <div class="space-y-2">
+        <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('limitations')}</h3>
+        <ul class="list-disc space-y-1 pl-5 text-sm text-gray-700 dark:text-gray-300">
+          {#each result.limitations as limitation}
+            <li data-sql-limitation>{limitation}</li>
+          {/each}
+        </ul>
+      </div>
+    </section>
+  {/if}
+</div>

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   applyBitFlags,
+  analyzeSql,
   analyzeQuery,
   analyzeComplexity,
   analyzeDeadCode,
@@ -378,9 +379,14 @@ X-Trace-Id: abc123
     expect(safe.vulnerable).toBe(false);
 
     const optimized = optimizeSQL(EXAMPLE_SQL);
+    const analyzed = analyzeSql({ sql: EXAMPLE_SQL, dialect: 'generic' });
     expect(optimized.optimized).toContain('SELECT');
+    expect(optimized.optimized).toBe(analyzed.formattedSql);
     expect(optimized.score).toBeLessThan(100);
     expect(optimized.suggestions.map((suggestion) => suggestion.type)).toContain('warning');
+    expect(optimized.suggestions.map((suggestion) => suggestion.type)).toEqual(
+      analyzed.suggestions.map((suggestion) => suggestion.severity),
+    );
   });
 
   it('builds simplified query execution plan steps for SQL text', () => {

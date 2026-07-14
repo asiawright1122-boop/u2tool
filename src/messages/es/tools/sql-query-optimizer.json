@@ -1,61 +1,103 @@
 {
+  "name": "Optimizador de consultas SQL",
+  "description": "Analiza SQL localmente con reglas por dialecto y revisa texto EXPLAIN pegado de forma opcional.",
+  "seo_title": "Optimizador SQL local y revisión EXPLAIN | U2Tool",
+  "seo_description": "Analiza SQL en el navegador, elige un dialecto, revisa hallazgos con evidencia, candidatos de índice, SQL formateado y tokens EXPLAIN pegados, sin conectar a una base de datos ni ejecutar consultas.",
+  "databaseDialect": "Dialecto de base de datos",
+  "dialects": {
+    "generic": "SQL genérico",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "Consulta SQL",
+  "inputPlaceholder": "Introduce el SQL que quieres revisar...",
+  "explainText": "Texto EXPLAIN (opcional)",
+  "explainPlaceholder": "Pega la salida EXPLAIN...",
+  "loadExample": "Cargar ejemplo",
+  "analyzeLocally": "Analizar localmente",
+  "localSafety": "Esta herramienta no se conecta a una base de datos, no ejecuta SQL, no reescribe consultas automáticamente ni garantiza consultas más rápidas.",
+  "diagnosticsLanguageNotice": "La interfaz está localizada, pero las explicaciones de diagnóstico local se muestran en inglés.",
+  "analysisScore": "Puntuación de análisis estático",
+  "findings": "Hallazgos",
+  "explainFindings": "Hallazgos EXPLAIN",
+  "noFindings": "No se encontraron patrones compatibles.",
+  "evidence": "Evidencia",
+  "indexCandidates": "Candidatos de índice",
+  "formattedSql": "SQL formateado",
+  "limitations": "Limitaciones",
+  "copyFormattedSql": "Copiar SQL formateado",
+  "copyFindings": "Copiar hallazgos",
+  "emptySql": "Introduce SQL antes de analizar.",
   "capabilities": {
-    "modes": { "staticAnalysis": "Análisis estático de SQL" },
-    "inputs": { "sqlText": "Texto SQL" },
+    "modes": {
+      "localStaticAnalysis": "Análisis SQL estático local",
+      "pastedExplainAnalysis": "Análisis de texto EXPLAIN pegado"
+    },
+    "inputs": {
+      "sqlText": "Texto SQL",
+      "sqlDialect": "Dialecto de base de datos",
+      "explainText": "Texto EXPLAIN pegado"
+    },
     "outputs": {
-      "performanceScore": "Puntuación de rendimiento",
+      "analysisScore": "Puntuación de análisis estático",
       "formattedSql": "SQL formateado",
-      "optimizationSuggestions": "Sugerencias de optimización",
-      "generalIndexCandidates": "Candidatos generales para índices"
+      "diagnosticFindings": "Hallazgos de diagnóstico con evidencia",
+      "indexCandidates": "Candidatos de índice compuesto",
+      "explainFindings": "Hallazgos de tokens EXPLAIN"
     },
     "features": {
-      "staticHeuristics": "Análisis heurístico estático",
-      "performanceScore": "Puntuación de rendimiento de la consulta",
-      "sqlFormatting": "Formateo de SQL",
-      "generalIndexCandidates": "Candidatos generales para índices"
+      "dialectSelector": "Selector de cinco dialectos",
+      "staticHeuristics": "Heurísticas SQL estáticas",
+      "sqlFormatting": "Formato de SQL",
+      "compositeIndexCandidates": "Candidatos de índice compuesto",
+      "explainTokenAnalysis": "Análisis de tokens EXPLAIN por dialecto",
+      "copyControls": "Copia de SQL formateado y hallazgos"
     },
     "limits": {
-      "noDatabaseSelector": "Sin selector de base de datos o dialecto",
-      "noExplainParser": "No analiza planes EXPLAIN",
+      "englishDiagnostics": "Las explicaciones de diagnóstico están en inglés",
       "noDatabaseConnection": "No se conecta a bases de datos",
-      "noQueryExecution": "No ejecuta consultas",
+      "noQueryExecution": "No ejecuta SQL",
+      "noAutomaticRewrite": "No reescribe SQL automáticamente",
+      "unverifiedIndexes": "Los candidatos de índice no se verifican con el esquema",
       "noSpeedGuarantee": "No puede garantizar consultas más rápidas"
     }
   },
-  "detailed_description": "El Optimizador de Consultas SQL analiza tus consultas SQL y proporciona sugerencias de optimización para mejorar el rendimiento. Optimizador de Consultas SQL está pensado para revisar tareas de desarrollo de forma rápida, no para aplicar resultados sin comprobación. Usa el resultado como punto de partida, revisa entradas, formato y contexto, y valida los cambios importantes dentro de tu propio flujo de trabajo.",
+  "detailed_description": "El Optimizador de consultas SQL realiza una revisión estática local del SQL pegado. Elige SQL genérico, PostgreSQL, MySQL, SQLite o SQL Server; pega texto EXPLAIN si lo tienes; y revisa puntuación, SQL formateado, evidencia, hallazgos prudentes y candidatos de índice compuesto. No se conecta a una base de datos, no ejecuta SQL, no aplica reescrituras, no verifica índices ni garantiza mejoras de velocidad. Las explicaciones de diagnóstico local están en inglés.",
   "usage_steps": [
-    "Pega la consulta SQL",
-    "Selecciona el tipo de base de datos",
-    "Haz clic en Optimizar",
-    "Visualiza las sugerencias",
-    "Aplica los cambios"
+    "Elige el dialecto que mejor corresponda al SQL.",
+    "Pega el SQL y, si está disponible, el texto EXPLAIN de tu propia herramienta de base de datos.",
+    "Pulsa Analizar localmente para ejecutar la revisión estática en el navegador.",
+    "Revisa los diagnósticos en inglés, la evidencia, los candidatos de índice, el SQL formateado y las limitaciones.",
+    "Copia solo lo necesario y valida cualquier cambio en tu propio entorno de base de datos."
   ],
   "usage_examples": [
-    "Optimiza consultas SELECT lentas",
-    "Obtén recomendaciones de índices",
-    "Reescribe subconsultas",
-    "Revisar el resultado con una entrada corta antes de usarlo en un repositorio o proyecto real."
+    "Revisar SELECT * y lecturas sin límite antes de una revisión de código.",
+    "Detectar UPDATE o DELETE sin cláusula WHERE.",
+    "Revisar texto pegado con Seq Scan, type: ALL, SCAN o Table Scan.",
+    "Proponer un índice compuesto desde filtros de igualdad y ORDER BY y verificarlo con el esquema y la carga reales."
   ],
   "faqs": [
     {
-      "question": "Qué debo revisar antes de usar el resultado de Optimizador de Consultas SQL?",
-      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+      "question": "¿Se conecta o ejecuta consultas en mi base de datos?",
+      "answer": "No. Solo analiza en el navegador el SQL y el texto EXPLAIN opcional que pegues."
     },
     {
-      "question": "Puedo modificar el resultado después de generarlo?",
-      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+      "question": "¿Reescribe la consulta automáticamente?",
+      "answer": "No. Muestra SQL formateado y hallazgos, pero no aplica reescrituras semánticas ni cambia la entrada."
     },
     {
-      "question": "Por qué el resultado puede diferir de otra herramienta de desarrollo?",
-      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+      "question": "¿Los candidatos de índice están verificados?",
+      "answer": "No. Son hipótesis estáticas basadas en predicados y orden visibles, no recomendaciones verificadas con el esquema o las estadísticas."
     },
     {
-      "question": "Puedo empezar con una entrada corta?",
-      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+      "question": "¿Un hallazgo EXPLAIN demuestra que la consulta es lenta?",
+      "answer": "No. Solo reconoce unos pocos tokens de planes pegados. Revisa el plan completo, estimaciones, distribución de datos y carga."
     },
     {
-      "question": "Sustituye la revisión manual?",
-      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+      "question": "¿Las sugerencias garantizan una consulta más rápida?",
+      "answer": "No hay garantía. Prueba cualquier cambio con el esquema, los datos y una carga representativa."
     }
   ]
 }

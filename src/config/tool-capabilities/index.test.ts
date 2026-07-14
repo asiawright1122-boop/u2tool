@@ -21,7 +21,7 @@ describe("pilot tool capability registry", () => {
     const expectedStates = {
       "grammar-checker": { version: "1.1.0", enforcement: "release-blocking" },
       "hex-editor": { version: "2.0.0", enforcement: "release-blocking" },
-      "sql-query-optimizer": { version: "1.0.0", enforcement: "inventory" },
+      "sql-query-optimizer": { version: "2.0.0", enforcement: "release-blocking" },
       "excel-viewer": { version: "1.0.0", enforcement: "inventory" },
       "typing-speed-test": { version: "1.0.0", enforcement: "inventory" },
       "gantt-chart-generator": { version: "1.0.0", enforcement: "inventory" },
@@ -105,6 +105,11 @@ describe("pilot tool capability registry", () => {
       kind: "engine-limited",
       local: ["en"],
       optionalServer: [],
+      evidence: {
+        file: "src/lib/sql-query-optimizer.test.ts",
+        testName:
+          "formats SQL without changing the submitted text and keeps local diagnostics in English [capability:sql-query-optimizer:produced-output:formatted-sql] [capability:sql-query-optimizer:browser-feature:sql-formatting] [capability:sql-query-optimizer:engine:language-support]",
+      },
     });
     expect(
       getToolCapabilityProfile("typing-speed-test")?.supportedLocales.engine,
@@ -115,17 +120,21 @@ describe("pilot tool capability registry", () => {
     });
   });
 
-  it("promotes Grammar and Hex only after matching behavior evidence exists", () => {
+  it("promotes Grammar, Hex, and SQL only after matching behavior evidence exists", () => {
     const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
     const hexProfile = getToolCapabilityProfile("hex-editor")!;
+    const sqlProfile = getToolCapabilityProfile("sql-query-optimizer")!;
     expect(grammarProfile.enforcement).toBe("release-blocking");
     expect(grammarProfile.evidenceTests).toHaveLength(2);
     expect(hexProfile.enforcement).toBe("release-blocking");
     expect(hexProfile.evidenceTests).toHaveLength(1);
+    expect(sqlProfile.enforcement).toBe("release-blocking");
+    expect(sqlProfile.evidenceTests).toHaveLength(2);
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
+    expect(sqlProfile.optionalServerFeatures).toEqual([]);
 
     for (const profile of getPilotToolCapabilityProfiles()) {
-      if (!["grammar-checker", "hex-editor"].includes(profile.slug)) {
+      if (!["grammar-checker", "hex-editor", "sql-query-optimizer"].includes(profile.slug)) {
         expect(profile.enforcement).toBe("inventory");
         expect(profile.evidenceTests).toEqual([]);
       }
@@ -182,16 +191,19 @@ describe("pilot tool capability registry", () => {
       },
       "sql-query-optimizer": {
         features: [
+          "dialect-selector",
           "static-heuristics",
-          "performance-score",
           "sql-formatting",
-          "general-index-candidates",
+          "composite-index-candidates",
+          "explain-token-analysis",
+          "copy-controls",
         ],
         limits: [
-          "no-database-selector",
-          "no-explain-parser",
+          "english-diagnostics",
           "no-database-connection",
           "no-query-execution",
+          "no-automatic-rewrite",
+          "unverified-indexes",
           "no-speed-guarantee",
         ],
       },
@@ -362,14 +374,6 @@ describe("pilot tool capability registry", () => {
   it("flags affirmative SQL capability claims without flagging honest limits", () => {
     const profile = getToolCapabilityProfile("sql-query-optimizer")!;
     const examples = {
-      "sql-optimizer-database-selector-claim": {
-        positive: "Includes a database selector.",
-        negative: "No database selector is available.",
-      },
-      "sql-optimizer-explain-claim": {
-        positive: "Parses EXPLAIN output.",
-        negative: "Does not parse EXPLAIN output.",
-      },
       "sql-optimizer-connection-claim": {
         positive: "Connects to a live database.",
         negative: "Does not connect to a database.",
@@ -377,6 +381,14 @@ describe("pilot tool capability registry", () => {
       "sql-optimizer-execution-claim": {
         positive: "Runs SQL queries.",
         negative: "Does not run SQL queries.",
+      },
+      "sql-optimizer-automatic-rewrite-claim": {
+        positive: "Automatically rewrites the SQL.",
+        negative: "Does not automatically rewrite the SQL.",
+      },
+      "sql-optimizer-verified-index-claim": {
+        positive: "Verifies whether suggested indexes exist.",
+        negative: "Does not verify whether suggested indexes exist.",
       },
       "sql-optimizer-speed-guarantee-claim": {
         positive: "Guarantees faster query performance.",
@@ -389,6 +401,32 @@ describe("pilot tool capability registry", () => {
       expect(example, claim.code).toBeDefined();
       expect(claim.pattern.test(example.positive), claim.code).toBe(true);
       expect(claim.pattern.test(example.negative), claim.code).toBe(false);
+    }
+  });
+
+  it("records SQL local analysis, pasted plan review, and empty optional-server support", () => {
+    const profile = getToolCapabilityProfile("sql-query-optimizer")!;
+
+    expect(profile.modes.map(({ id }) => id)).toEqual([
+      "local-static-analysis",
+      "pasted-explain-analysis",
+    ]);
+    expect(profile.acceptedInputs.map(({ id }) => id)).toEqual([
+      "sql-text",
+      "sql-dialect",
+      "explain-text",
+    ]);
+    expect(profile.producedOutputs.map(({ id }) => id)).toEqual([
+      "analysis-score",
+      "formatted-sql",
+      "diagnostic-findings",
+      "index-candidates",
+      "explain-findings",
+    ]);
+    expect(profile.optionalServerFeatures).toEqual([]);
+    expect(profile.supportedLocales.engine.kind).toBe("engine-limited");
+    if (profile.supportedLocales.engine.kind === "engine-limited") {
+      expect(profile.supportedLocales.engine.optionalServer).toEqual([]);
     }
   });
 

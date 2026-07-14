@@ -1,38 +1,103 @@
 {
+  "name": "Optimiseur de requêtes SQL",
+  "description": "Analysez le SQL localement avec des règles par dialecte et examinez un texte EXPLAIN collé en option.",
+  "seo_title": "Optimiseur SQL local et examen EXPLAIN | U2Tool",
+  "seo_description": "Analysez le SQL dans le navigateur, choisissez un dialecte, examinez des constats avec preuves, des candidats d’index, le SQL formaté et des jetons EXPLAIN collés, sans connexion ni exécution.",
+  "databaseDialect": "Dialecte de base de données",
+  "dialects": {
+    "generic": "SQL générique",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "Requête SQL",
+  "inputPlaceholder": "Saisissez le SQL à examiner...",
+  "explainText": "Texte EXPLAIN (facultatif)",
+  "explainPlaceholder": "Collez la sortie EXPLAIN...",
+  "loadExample": "Charger un exemple",
+  "analyzeLocally": "Analyser localement",
+  "localSafety": "Cet outil ne se connecte pas à une base de données, n’exécute pas de SQL, ne réécrit pas automatiquement les requêtes et ne garantit pas leur accélération.",
+  "diagnosticsLanguageNotice": "L’interface est localisée, mais les explications du diagnostic local sont affichées en anglais.",
+  "analysisScore": "Score d’analyse statique",
+  "findings": "Constats",
+  "explainFindings": "Constats EXPLAIN",
+  "noFindings": "Aucun motif pris en charge n’a été trouvé.",
+  "evidence": "Preuve",
+  "indexCandidates": "Candidats d’index",
+  "formattedSql": "SQL formaté",
+  "limitations": "Limites",
+  "copyFormattedSql": "Copier le SQL formaté",
+  "copyFindings": "Copier les constats",
+  "emptySql": "Saisissez du SQL avant l’analyse.",
   "capabilities": {
-    "modes": { "staticAnalysis": "Analyse statique du SQL" },
-    "inputs": { "sqlText": "Texte SQL" },
+    "modes": {
+      "localStaticAnalysis": "Analyse SQL statique locale",
+      "pastedExplainAnalysis": "Analyse de texte EXPLAIN collé"
+    },
+    "inputs": {
+      "sqlText": "Texte SQL",
+      "sqlDialect": "Dialecte de base de données",
+      "explainText": "Texte EXPLAIN collé"
+    },
     "outputs": {
-      "performanceScore": "Score de performance",
-      "formattedSql": "SQL mis en forme",
-      "optimizationSuggestions": "Suggestions d’optimisation",
-      "generalIndexCandidates": "Candidats généraux pour les index"
+      "analysisScore": "Score d’analyse statique",
+      "formattedSql": "SQL formaté",
+      "diagnosticFindings": "Constats de diagnostic avec preuves",
+      "indexCandidates": "Candidats d’index composite",
+      "explainFindings": "Constats sur les jetons EXPLAIN"
     },
     "features": {
-      "staticHeuristics": "Analyse heuristique statique",
-      "performanceScore": "Score de performance de la requête",
+      "dialectSelector": "Sélecteur de cinq dialectes",
+      "staticHeuristics": "Heuristiques SQL statiques",
       "sqlFormatting": "Mise en forme du SQL",
-      "generalIndexCandidates": "Candidats généraux pour les index"
+      "compositeIndexCandidates": "Candidats d’index composite",
+      "explainTokenAnalysis": "Analyse des jetons EXPLAIN par dialecte",
+      "copyControls": "Copie du SQL formaté et des constats"
     },
     "limits": {
-      "noDatabaseSelector": "Aucun sélecteur de base de données ou de dialecte",
-      "noExplainParser": "N’analyse pas les plans EXPLAIN",
+      "englishDiagnostics": "Les explications du diagnostic sont en anglais",
       "noDatabaseConnection": "Ne se connecte pas aux bases de données",
-      "noQueryExecution": "N’exécute pas les requêtes",
+      "noQueryExecution": "N’exécute pas le SQL",
+      "noAutomaticRewrite": "Ne réécrit pas automatiquement le SQL",
+      "unverifiedIndexes": "Les candidats d’index ne sont pas vérifiés avec le schéma",
       "noSpeedGuarantee": "Ne peut pas garantir des requêtes plus rapides"
     }
   },
-  "detailed_description": "L'Optimiseur de Requêtes SQL analyse vos requêtes SQL et vous propose des suggestions d'optimisation pour une meilleure performance.",
+  "detailed_description": "L’Optimiseur de requêtes SQL effectue un examen statique local du SQL collé. Choisissez SQL générique, PostgreSQL, MySQL, SQLite ou SQL Server, collez éventuellement un texte EXPLAIN, puis examinez le score, le SQL formaté, les preuves, les constats prudents et les candidats d’index composite. Il ne se connecte pas à une base de données, n’exécute pas le SQL, n’applique pas de réécriture, ne vérifie pas les index et ne garantit aucun gain de vitesse. Les explications du diagnostic local sont en anglais.",
   "usage_steps": [
-    "Coller votre requête SQL",
-    "Sélectionner le type de base de données",
-    "Cliquez sur Optimiser",
-    "Voir les suggestions",
-    "Appliquer les modifications"
+    "Choisissez le dialecte qui correspond le mieux au SQL.",
+    "Collez le SQL et, si disponible, le texte EXPLAIN obtenu avec votre propre outil de base de données.",
+    "Sélectionnez Analyser localement pour lancer l’examen statique dans le navigateur.",
+    "Examinez les diagnostics en anglais, les preuves, les candidats d’index, le SQL formaté et les limites.",
+    "Copiez uniquement ce qui est nécessaire et validez toute modification dans votre environnement de base de données."
   ],
   "usage_examples": [
-    "Optimiser des SELECT lents",
-    "Obtenir des recommandations d'index",
-    "Réécrire des sous-requêtes"
+    "Examiner SELECT * et les lectures non bornées avant une revue de code.",
+    "Repérer un UPDATE ou DELETE sans clause WHERE.",
+    "Examiner un texte collé contenant Seq Scan, type: ALL, SCAN ou Table Scan.",
+    "Proposer un index composite à partir des filtres d’égalité et de ORDER BY, puis le vérifier avec le schéma et la charge réels."
+  ],
+  "faqs": [
+    {
+      "question": "L’outil se connecte-t-il à ma base ou exécute-t-il des requêtes ?",
+      "answer": "Non. Il analyse uniquement dans le navigateur le SQL et le texte EXPLAIN facultatif que vous collez."
+    },
+    {
+      "question": "Réécrit-il automatiquement la requête ?",
+      "answer": "Non. Il affiche du SQL formaté et des constats, sans appliquer de réécriture sémantique ni modifier l’entrée."
+    },
+    {
+      "question": "Les candidats d’index sont-ils vérifiés ?",
+      "answer": "Non. Ce sont des hypothèses statiques fondées sur les prédicats et l’ordre visibles, pas des recommandations vérifiées avec le schéma ou les statistiques."
+    },
+    {
+      "question": "Un constat EXPLAIN prouve-t-il que la requête est lente ?",
+      "answer": "Non. L’outil reconnaît quelques jetons de plans collés. Examinez le plan complet, les estimations, la distribution des données et la charge."
+    },
+    {
+      "question": "Les suggestions garantissent-elles une requête plus rapide ?",
+      "answer": "Aucune garantie. Testez toute modification avec le schéma, les données et une charge représentative."
+    }
   ]
 }

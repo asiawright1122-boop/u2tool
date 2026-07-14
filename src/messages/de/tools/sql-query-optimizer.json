@@ -1,38 +1,103 @@
 {
+  "name": "SQL-Abfrage-Optimierer",
+  "description": "SQL lokal mit dialektspezifischen Regeln analysieren und optional eingefügten EXPLAIN-Text prüfen.",
+  "seo_title": "Lokaler SQL-Optimierer und EXPLAIN-Prüfung | U2Tool",
+  "seo_description": "SQL im Browser analysieren, einen Dialekt wählen, belegte Hinweise, Indexkandidaten, formatiertes SQL und eingefügte EXPLAIN-Tokens prüfen – ohne Datenbankverbindung oder Abfrageausführung.",
+  "databaseDialect": "Datenbankdialekt",
+  "dialects": {
+    "generic": "Generisches SQL",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "SQL-Abfrage",
+  "inputPlaceholder": "SQL zur Prüfung eingeben...",
+  "explainText": "EXPLAIN-Text (optional)",
+  "explainPlaceholder": "EXPLAIN-Ausgabe einfügen...",
+  "loadExample": "Beispiel laden",
+  "analyzeLocally": "Lokal analysieren",
+  "localSafety": "Dieses Tool verbindet sich nicht mit einer Datenbank, führt SQL nicht aus, schreibt Abfragen nicht automatisch um und garantiert keine schnelleren Abfragen.",
+  "diagnosticsLanguageNotice": "Die Oberfläche ist lokalisiert, aber die lokalen Diagnoseerklärungen werden auf Englisch angezeigt.",
+  "analysisScore": "Statische Analysebewertung",
+  "findings": "Hinweise",
+  "explainFindings": "EXPLAIN-Hinweise",
+  "noFindings": "Keine unterstützten Muster gefunden.",
+  "evidence": "Beleg",
+  "indexCandidates": "Indexkandidaten",
+  "formattedSql": "Formatiertes SQL",
+  "limitations": "Einschränkungen",
+  "copyFormattedSql": "Formatiertes SQL kopieren",
+  "copyFindings": "Hinweise kopieren",
+  "emptySql": "Vor der Analyse SQL eingeben.",
   "capabilities": {
-    "modes": { "staticAnalysis": "Statische SQL-Analyse" },
-    "inputs": { "sqlText": "SQL-Text" },
+    "modes": {
+      "localStaticAnalysis": "Lokale statische SQL-Analyse",
+      "pastedExplainAnalysis": "Analyse eingefügten EXPLAIN-Texts"
+    },
+    "inputs": {
+      "sqlText": "SQL-Text",
+      "sqlDialect": "Datenbankdialekt",
+      "explainText": "Eingefügter EXPLAIN-Text"
+    },
     "outputs": {
-      "performanceScore": "Leistungsbewertung",
+      "analysisScore": "Statische Analysebewertung",
       "formattedSql": "Formatiertes SQL",
-      "optimizationSuggestions": "Optimierungsvorschläge",
-      "generalIndexCandidates": "Allgemeine Indexkandidaten"
+      "diagnosticFindings": "Diagnosehinweise mit Belegen",
+      "indexCandidates": "Zusammengesetzte Indexkandidaten",
+      "explainFindings": "EXPLAIN-Token-Hinweise"
     },
     "features": {
-      "staticHeuristics": "Statische heuristische Analyse",
-      "performanceScore": "Leistungsbewertung der Abfrage",
+      "dialectSelector": "Auswahl aus fünf Dialekten",
+      "staticHeuristics": "Statische SQL-Heuristiken",
       "sqlFormatting": "SQL-Formatierung",
-      "generalIndexCandidates": "Allgemeine Indexkandidaten"
+      "compositeIndexCandidates": "Zusammengesetzte Indexkandidaten",
+      "explainTokenAnalysis": "Dialektspezifische EXPLAIN-Token-Analyse",
+      "copyControls": "Kopieren von formatiertem SQL und Hinweisen"
     },
     "limits": {
-      "noDatabaseSelector": "Keine Auswahl für Datenbank oder Dialekt",
-      "noExplainParser": "Analysiert keine EXPLAIN-Pläne",
-      "noDatabaseConnection": "Stellt keine Verbindung zu Datenbanken her",
-      "noQueryExecution": "Führt keine Abfragen aus",
+      "englishDiagnostics": "Diagnoseerklärungen sind auf Englisch",
+      "noDatabaseConnection": "Keine Datenbankverbindung",
+      "noQueryExecution": "Führt SQL nicht aus",
+      "noAutomaticRewrite": "Schreibt SQL nicht automatisch um",
+      "unverifiedIndexes": "Indexkandidaten sind nicht gegen das Schema geprüft",
       "noSpeedGuarantee": "Kann schnellere Abfragen nicht garantieren"
     }
   },
-  "detailed_description": "Der SQL-Abfrage-Optimierer analysiert Ihre SQL-Abfragen und bietet Optimierungsvorschläge für eine bessere Leistung.",
+  "detailed_description": "Der SQL-Abfrage-Optimierer prüft eingefügtes SQL lokal und statisch. Wählen Sie generisches SQL, PostgreSQL, MySQL, SQLite oder SQL Server, fügen Sie optional EXPLAIN-Text ein und prüfen Sie Bewertung, formatiertes SQL, Belege, vorsichtige Hinweise und zusammengesetzte Indexkandidaten. Das Tool verbindet sich nicht mit einer Datenbank, führt kein SQL aus, wendet keine Umschreibungen an, verifiziert keine Indexe und garantiert keinen Geschwindigkeitsgewinn. Lokale Diagnoseerklärungen sind auf Englisch.",
   "usage_steps": [
-    "Fügen Sie SQL-Abfrage ein",
-    "Datenbanktyp auswählen",
-    "Optimieren klicken",
-    "Vorschläge anzeigen",
-    "Änderungen anwenden"
+    "Den Datenbankdialekt wählen, der am besten zum SQL passt.",
+    "SQL und bei Bedarf EXPLAIN-Text aus dem eigenen Datenbankwerkzeug einfügen.",
+    "Lokal analysieren auswählen, um die browserbasierte statische Prüfung auszuführen.",
+    "Englische Diagnosen, Belege, Indexkandidaten, formatiertes SQL und Einschränkungen prüfen.",
+    "Nur benötigte Inhalte kopieren und Änderungen in der eigenen Datenbankumgebung validieren."
   ],
   "usage_examples": [
-    "Langsame SELECT-Abfragen optimieren",
-    "Index-Empfehlungen erhalten",
-    "Teilabfragen neu schreiben"
+    "SELECT * und unbegrenzte Lesevorgänge vor dem Code-Review prüfen.",
+    "UPDATE oder DELETE ohne WHERE-Klausel erkennen.",
+    "Eingefügten Text mit Seq Scan, type: ALL, SCAN oder Table Scan prüfen.",
+    "Aus Gleichheitsfiltern und ORDER BY einen zusammengesetzten Indexkandidaten ableiten und mit Schema und Workload prüfen."
+  ],
+  "faqs": [
+    {
+      "question": "Verbindet sich das Tool mit meiner Datenbank oder führt es Abfragen aus?",
+      "answer": "Nein. Es analysiert nur das eingefügte SQL und den optionalen EXPLAIN-Text im Browser."
+    },
+    {
+      "question": "Schreibt es die Abfrage automatisch um?",
+      "answer": "Nein. Es zeigt formatiertes SQL und Hinweise, wendet aber keine semantische Umschreibung an und ändert die Eingabe nicht."
+    },
+    {
+      "question": "Sind Indexkandidaten verifiziert?",
+      "answer": "Nein. Es sind statische Hypothesen aus sichtbaren Prädikaten und Sortierung, keine mit Schema oder Statistiken geprüften Empfehlungen."
+    },
+    {
+      "question": "Beweist ein EXPLAIN-Hinweis, dass die Abfrage langsam ist?",
+      "answer": "Nein. Das Tool erkennt wenige Tokens aus eingefügten Plänen. Prüfen Sie vollständigen Plan, Schätzungen, Datenverteilung und Workload."
+    },
+    {
+      "question": "Garantieren die Hinweise schnellere Abfragen?",
+      "answer": "Nein. Testen Sie Änderungen mit dem echten Schema, den Daten und einer repräsentativen Workload."
+    }
   ]
 }

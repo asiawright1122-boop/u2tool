@@ -1,61 +1,103 @@
 {
+  "name": "SQL 쿼리 최적화 도구",
+  "description": "방언별 정적 규칙으로 SQL을 로컬 분석하고 붙여넣은 EXPLAIN 텍스트도 검토합니다.",
+  "seo_title": "로컬 SQL 쿼리 최적화 및 EXPLAIN 검토 | U2Tool",
+  "seo_description": "브라우저에서 SQL을 정적 분석하고 데이터베이스 방언, 근거가 있는 진단, 인덱스 후보, 서식 SQL, 붙여넣은 EXPLAIN 토큰을 검토합니다. 데이터베이스에 연결하지 않고 SQL 쿼리를 실행하지 않습니다.",
+  "databaseDialect": "데이터베이스 방언",
+  "dialects": {
+    "generic": "일반 SQL",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "SQL 쿼리",
+  "inputPlaceholder": "검토할 SQL 입력...",
+  "explainText": "EXPLAIN 텍스트(선택 사항)",
+  "explainPlaceholder": "EXPLAIN 출력 붙여넣기...",
+  "loadExample": "예제 불러오기",
+  "analyzeLocally": "로컬에서 분석",
+  "localSafety": "이 도구는 데이터베이스에 연결하지 않고 SQL을 실행하지 않으며 쿼리를 자동으로 다시 쓰거나 속도 향상을 보장하지 않습니다.",
+  "diagnosticsLanguageNotice": "인터페이스는 한국어이지만 로컬 진단 설명은 영어로 표시됩니다.",
+  "analysisScore": "정적 분석 점수",
+  "findings": "진단 결과",
+  "explainFindings": "EXPLAIN 결과",
+  "noFindings": "지원되는 패턴을 찾지 못했습니다.",
+  "evidence": "근거",
+  "indexCandidates": "인덱스 후보",
+  "formattedSql": "서식이 적용된 SQL",
+  "limitations": "제한 사항",
+  "copyFormattedSql": "서식 SQL 복사",
+  "copyFindings": "진단 결과 복사",
+  "emptySql": "분석할 SQL을 입력하세요.",
   "capabilities": {
-    "modes": { "staticAnalysis": "SQL 정적 분석" },
-    "inputs": { "sqlText": "SQL 텍스트" },
+    "modes": {
+      "localStaticAnalysis": "로컬 SQL 정적 분석",
+      "pastedExplainAnalysis": "붙여넣은 EXPLAIN 텍스트 분석"
+    },
+    "inputs": {
+      "sqlText": "SQL 텍스트",
+      "sqlDialect": "데이터베이스 방언",
+      "explainText": "붙여넣은 EXPLAIN 텍스트"
+    },
     "outputs": {
-      "performanceScore": "성능 점수",
+      "analysisScore": "정적 분석 점수",
       "formattedSql": "서식이 적용된 SQL",
-      "optimizationSuggestions": "최적화 제안",
-      "generalIndexCandidates": "일반적인 인덱스 후보"
+      "diagnosticFindings": "근거가 포함된 진단 결과",
+      "indexCandidates": "복합 인덱스 후보",
+      "explainFindings": "EXPLAIN 토큰 결과"
     },
     "features": {
-      "staticHeuristics": "정적 휴리스틱 분석",
-      "performanceScore": "쿼리 성능 점수",
+      "dialectSelector": "5개 방언 선택기",
+      "staticHeuristics": "SQL 정적 휴리스틱",
       "sqlFormatting": "SQL 서식 지정",
-      "generalIndexCandidates": "일반적인 인덱스 후보"
+      "compositeIndexCandidates": "복합 인덱스 후보",
+      "explainTokenAnalysis": "방언별 EXPLAIN 토큰 분석",
+      "copyControls": "서식 SQL 및 진단 결과 복사"
     },
     "limits": {
-      "noDatabaseSelector": "데이터베이스 또는 방언 선택기 없음",
-      "noExplainParser": "EXPLAIN 계획을 분석하지 않음",
+      "englishDiagnostics": "진단 설명은 영어로 제공",
       "noDatabaseConnection": "데이터베이스에 연결하지 않음",
-      "noQueryExecution": "쿼리를 실행하지 않음",
-      "noSpeedGuarantee": "쿼리 속도 향상을 보장할 수 없음"
+      "noQueryExecution": "SQL을 실행하지 않음",
+      "noAutomaticRewrite": "SQL을 자동으로 다시 쓰지 않음",
+      "unverifiedIndexes": "인덱스 후보는 실제 스키마로 검증되지 않음",
+      "noSpeedGuarantee": "더 빠른 쿼리를 보장할 수 없음"
     }
   },
-  "detailed_description": "SQL 쿼리 최적화 도구는 사용자의 SQL 쿼리를 분석하고 성능을 향상시키기 위한 최적화 제안을 제공합니다. SQL 쿼리 최적화 도구은 입력, 설정, 결과를 빠르게 확인하기 위한 보조 도구입니다. 결과를 바로 확정하지 말고 초안으로 다루며, 형식, 숫자, 문자, 문맥을 확인한 뒤 공유하거나 게시하거나 실제 작업에 반영하세요. 중요한 결과는 사용하는 업무 흐름 안에서 한 번 더 검토하는 것이 좋습니다.",
+  "detailed_description": "SQL 쿼리 최적화 도구는 붙여넣은 SQL을 브라우저에서 정적으로 검토합니다. 일반 SQL, PostgreSQL, MySQL, SQLite, SQL Server를 선택하고 필요한 경우 EXPLAIN 텍스트를 붙여넣어 점수, 서식 SQL, 근거, 신중한 진단, 복합 인덱스 후보를 확인합니다. 데이터베이스에 연결하지 않습니다. SQL 쿼리를 실행하지 않습니다. 자동 재작성, 인덱스 검증 또는 속도 향상도 보장하지 않습니다. 로컬 진단 설명은 영어입니다.",
   "usage_steps": [
-    "SQL 쿼리 붙여넣기",
-    "데이터베이스 유형 선택",
-    "최적화 클릭",
-    "제안 확인",
-    "변경 사항 적용"
+    "SQL에 가장 가까운 데이터베이스 방언을 선택합니다.",
+    "SQL을 붙여넣고 필요한 경우 자체 데이터베이스 도구의 EXPLAIN 텍스트도 붙여넣습니다.",
+    "로컬에서 분석을 눌러 브라우저 전용 정적 검토를 시작합니다.",
+    "영어 진단, 근거, 인덱스 후보, 서식 SQL 및 제한 사항을 검토합니다.",
+    "필요한 내용만 복사하고 변경 사항은 자체 데이터베이스 환경에서 검증합니다."
   ],
   "usage_examples": [
-    "느리운 SELECT 최적화",
-    "인덱스 추천 얻기",
-    "서브쿼리 재구성",
-    "짧은 입력으로 결과 형태를 먼저 확인합니다."
+    "코드 검토 전에 SELECT *와 제한 없는 읽기를 확인합니다.",
+    "WHERE 절이 없는 UPDATE 또는 DELETE를 찾습니다.",
+    "붙여넣은 Seq Scan, type: ALL, SCAN 또는 Table Scan 텍스트를 검토합니다.",
+    "동등 필터와 ORDER BY 열에서 복합 인덱스 후보를 만들고 실제 스키마와 워크로드로 검증합니다."
   ],
   "faqs": [
     {
-      "question": "SQL 쿼리 최적화 도구 결과를 사용하기 전에 무엇을 확인해야 하나요?",
-      "answer": "입력 내용, 선택한 설정, 결과 형식과 문맥을 확인하세요. 중요한 자료라면 숫자, 문자, 의미를 다시 검토한 뒤 공유하거나 게시하는 것이 좋습니다."
+      "question": "데이터베이스에 연결하거나 쿼리를 실행하나요?",
+      "answer": "아니요. 붙여넣은 SQL과 선택적 EXPLAIN 텍스트만 브라우저에서 분석합니다."
     },
     {
-      "question": "생성 후 결과를 바꿀 수 있나요?",
-      "answer": "네. 입력이나 사용 가능한 옵션을 조정한 뒤 다시 처리하고, 업데이트된 결과를 확인한 다음 사용할 수 있습니다."
+      "question": "쿼리를 자동으로 다시 쓰나요?",
+      "answer": "아니요. 서식 SQL과 진단을 제공하지만 의미 변경이나 입력 수정은 자동 적용하지 않습니다."
     },
     {
-      "question": "다른 도구와 결과가 다른 이유는 무엇인가요?",
-      "answer": "도구마다 반올림, 해석 방식, 표시 형식, 옵션 처리 방식이 다를 수 있습니다. 같은 입력으로 비교하고 화면의 제한 사항도 확인하세요."
+      "question": "인덱스 후보가 검증되었나요?",
+      "answer": "아니요. 표시된 조건과 정렬을 기반으로 한 정적 가설이며 스키마나 통계로 검증되지 않았습니다."
     },
     {
-      "question": "짧은 입력으로 시작할 수 있나요?",
-      "answer": "네. 먼저 짧은 입력이나 공개해도 되는 내용으로 결과 형태를 확인한 뒤 실제 입력으로 진행하면 더 안전합니다."
+      "question": "EXPLAIN 결과가 느린 쿼리를 증명하나요?",
+      "answer": "아니요. 소수의 계획 토큰만 인식합니다. 전체 계획, 추정치, 데이터 분포 및 워크로드를 데이터베이스에서 검토하세요."
     },
     {
-      "question": "수동 검토를 대신하나요?",
-      "answer": "아니요. 반복 작업을 빠르게 돕는 용도이며, 중요한 결과는 정확성, 문맥, 사용처에 맞는지 확인한 뒤 사용해야 합니다."
+      "question": "제안이 쿼리를 더 빠르게 만드나요?",
+      "answer": "보장하지 않습니다. 실제 스키마, 데이터 및 대표 워크로드로 테스트하세요."
     }
   ]
 }

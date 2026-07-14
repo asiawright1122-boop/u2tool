@@ -1,0 +1,86 @@
+---
+import SqlQueryOptimizer from '@/components/tools/SqlQueryOptimizer.svelte';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }, { params: { locale: 'ru' } }];
+}
+
+const locale = Astro.params.locale ?? 'en';
+const common = locale === 'ru'
+  ? { copy: 'Копировать', copied: 'Скопировано', clear: 'Очистить' }
+  : { copy: 'Copy', copied: 'Copied', clear: 'Clear' };
+const copy = locale === 'ru'
+  ? {
+      databaseDialect: 'Диалект базы данных',
+      dialects: {
+        generic: 'Общий SQL',
+        postgresql: 'PostgreSQL',
+        mysql: 'MySQL',
+        sqlite: 'SQLite',
+        sqlServer: 'SQL Server',
+      },
+      sqlQuery: 'SQL-запрос',
+      inputPlaceholder: 'Введите SQL-запрос...',
+      explainText: 'Текст EXPLAIN (необязательно)',
+      explainPlaceholder: 'Вставьте текст EXPLAIN...',
+      loadExample: 'Загрузить пример',
+      analyzeLocally: 'Анализировать локально',
+      localSafety: 'Инструмент не подключается к базе данных, не выполняет SQL, не изменяет запрос автоматически и не гарантирует ускорение.',
+      diagnosticsLanguageNotice: 'Интерфейс локализован, но локальные диагностические объяснения отображаются на английском языке.',
+      analysisScore: 'Оценка статического анализа',
+      findings: 'Наблюдения',
+      explainFindings: 'Наблюдения EXPLAIN',
+      noFindings: 'Поддерживаемые шаблоны не найдены.',
+      evidence: 'Основание',
+      indexCandidates: 'Кандидаты на индексы',
+      formattedSql: 'Форматированный SQL',
+      limitations: 'Ограничения',
+      copyFormattedSql: 'Копировать форматированный SQL',
+      copyFindings: 'Копировать наблюдения',
+      emptySql: 'Введите SQL перед анализом.',
+    }
+  : {
+      databaseDialect: 'Database dialect',
+      dialects: {
+        generic: 'Generic SQL',
+        postgresql: 'PostgreSQL',
+        mysql: 'MySQL',
+        sqlite: 'SQLite',
+        sqlServer: 'SQL Server',
+      },
+      sqlQuery: 'SQL query',
+      inputPlaceholder: 'Enter SQL to review...',
+      explainText: 'EXPLAIN text (optional)',
+      explainPlaceholder: 'Paste EXPLAIN output...',
+      loadExample: 'Load example',
+      analyzeLocally: 'Analyze locally',
+      localSafety: 'This tool does not connect to a database, execute SQL, rewrite queries automatically, or guarantee faster queries.',
+      diagnosticsLanguageNotice: 'Local diagnostic explanations are displayed in English.',
+      analysisScore: 'Static analysis score',
+      findings: 'Findings',
+      explainFindings: 'EXPLAIN findings',
+      noFindings: 'No supported patterns were found.',
+      evidence: 'Evidence',
+      indexCandidates: 'Index candidates',
+      formattedSql: 'Formatted SQL',
+      limitations: 'Limitations',
+      copyFormattedSql: 'Copy formatted SQL',
+      copyFindings: 'Copy findings',
+      emptySql: 'Enter SQL before analyzing.',
+    };
+
+const translations = {
+  tools: {
+    ...common,
+    'sql-query-optimizer': copy,
+  },
+};
+---
+
+<html lang={locale}>
+  <body>
+    <main>
+      <SqlQueryOptimizer client:load {locale} {translations} />
+    </main>
+  </body>
+</html>

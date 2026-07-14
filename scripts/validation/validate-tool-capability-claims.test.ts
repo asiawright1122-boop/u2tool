@@ -90,6 +90,38 @@ function releaseBlockingGrammarProfile(
   };
 }
 
+function forcedInventoryProfile(
+  profile: ToolCapabilityProfile,
+): ToolCapabilityProfile {
+  return {
+    ...profile,
+    enforcement: 'inventory',
+    evidenceTests: [],
+    modes: profile.modes.map((item) => ({ ...item, evidence: undefined })),
+    acceptedInputs: profile.acceptedInputs.map((item) => ({
+      ...item,
+      evidence: undefined,
+    })),
+    producedOutputs: profile.producedOutputs.map((item) => ({
+      ...item,
+      evidence: undefined,
+    })),
+    supportedLocales: {
+      ...profile.supportedLocales,
+      engine: { ...profile.supportedLocales.engine, evidence: undefined },
+    },
+    browserOnlyFeatures: profile.browserOnlyFeatures.map((item) => ({
+      ...item,
+      evidence: undefined,
+    })),
+    optionalServerFeatures: profile.optionalServerFeatures.map((item) => ({
+      ...item,
+      evidence: undefined,
+    })),
+    limits: profile.limits.map((item) => ({ ...item, evidence: undefined })),
+  };
+}
+
 function evidenceModuleForProfile(profile: ToolCapabilityProfile) {
   const references = [
     ...profile.evidenceTests,
@@ -229,12 +261,13 @@ describe('validateCapabilityMessageMatrix', () => {
 
 describe('validateReleaseReadyProfiles', () => {
   it('allows inventory profiles to omit behavior evidence', () => {
-    const inventoryProfile = getToolCapabilityProfile('hex-editor');
-    expect(inventoryProfile).toBeDefined();
+    const hexProfile = getToolCapabilityProfile('hex-editor');
+    expect(hexProfile).toBeDefined();
+    const inventoryProfile = forcedInventoryProfile(hexProfile!);
 
     expect(
       validateReleaseReadyProfiles(
-        [inventoryProfile!],
+        [inventoryProfile],
         () => null,
         () => undefined,
       ),
@@ -910,11 +943,12 @@ describe('runToolCapabilityClaimValidation', () => {
   it('keeps the default inventory validation non-blocking when copy is truthful', async () => {
     const hexProfile = getToolCapabilityProfile('hex-editor');
     expect(hexProfile).toBeDefined();
+    const inventoryProfile = forcedInventoryProfile(hexProfile!);
 
     const report = await runToolCapabilityClaimValidation(
       {},
       {
-        profiles: [hexProfile!],
+        profiles: [inventoryProfile],
         locales: ['en'],
         loadToolMessages: async () => ({
           description: 'Converts text and hexadecimal locally in the browser.',

@@ -1,61 +1,103 @@
 {
+  "name": "SQL 查询优化器",
+  "description": "在本地使用方言相关的静态规则分析 SQL，并可检查粘贴的 EXPLAIN 文本。",
+  "seo_title": "本地 SQL 查询优化器与 EXPLAIN 检查 | U2Tool",
+  "seo_description": "在浏览器本地分析 SQL，选择数据库方言，查看带证据的诊断、索引候选项和格式化 SQL，并检查粘贴的 EXPLAIN 标记；工具不会连接数据库或执行查询。",
+  "databaseDialect": "数据库方言",
+  "dialects": {
+    "generic": "通用 SQL",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "sqlite": "SQLite",
+    "sqlServer": "SQL Server"
+  },
+  "sqlQuery": "SQL 查询",
+  "inputPlaceholder": "输入要检查的 SQL...",
+  "explainText": "EXPLAIN 文本（可选）",
+  "explainPlaceholder": "粘贴 EXPLAIN 输出...",
+  "loadExample": "加载示例",
+  "analyzeLocally": "本地分析",
+  "localSafety": "本工具不连接数据库，不执行 SQL，不自动重写查询，也不保证查询更快。",
+  "diagnosticsLanguageNotice": "界面已本地化，但本地诊断说明以英语显示。",
+  "analysisScore": "静态分析评分",
+  "findings": "诊断结果",
+  "explainFindings": "EXPLAIN 结果",
+  "noFindings": "未发现受支持的模式。",
+  "evidence": "证据",
+  "indexCandidates": "索引候选项",
+  "formattedSql": "格式化 SQL",
+  "limitations": "限制",
+  "copyFormattedSql": "复制格式化 SQL",
+  "copyFindings": "复制诊断结果",
+  "emptySql": "请先输入 SQL。",
   "capabilities": {
-    "modes": { "staticAnalysis": "SQL 静态分析" },
-    "inputs": { "sqlText": "SQL 文本" },
+    "modes": {
+      "localStaticAnalysis": "本地 SQL 静态分析",
+      "pastedExplainAnalysis": "粘贴 EXPLAIN 文本分析"
+    },
+    "inputs": {
+      "sqlText": "SQL 文本",
+      "sqlDialect": "数据库方言",
+      "explainText": "粘贴的 EXPLAIN 文本"
+    },
     "outputs": {
-      "performanceScore": "性能评分",
-      "formattedSql": "格式化后的 SQL",
-      "optimizationSuggestions": "优化建议",
-      "generalIndexCandidates": "通用索引候选项"
+      "analysisScore": "静态分析评分",
+      "formattedSql": "格式化 SQL",
+      "diagnosticFindings": "带证据的诊断结果",
+      "indexCandidates": "复合索引候选项",
+      "explainFindings": "EXPLAIN 标记结果"
     },
     "features": {
-      "staticHeuristics": "静态启发式分析",
-      "performanceScore": "查询性能评分",
+      "dialectSelector": "五种方言选择器",
+      "staticHeuristics": "SQL 静态启发式规则",
       "sqlFormatting": "SQL 格式化",
-      "generalIndexCandidates": "通用索引候选项"
+      "compositeIndexCandidates": "复合索引候选项",
+      "explainTokenAnalysis": "按方言识别 EXPLAIN 标记",
+      "copyControls": "复制格式化 SQL 和诊断结果"
     },
     "limits": {
-      "noDatabaseSelector": "不提供数据库或方言选择器",
-      "noExplainParser": "不解析 EXPLAIN 计划",
+      "englishDiagnostics": "诊断说明仅提供英语",
       "noDatabaseConnection": "不连接数据库",
-      "noQueryExecution": "不执行查询",
-      "noSpeedGuarantee": "无法保证查询速度提升"
+      "noQueryExecution": "不执行 SQL",
+      "noAutomaticRewrite": "不自动重写 SQL",
+      "unverifiedIndexes": "索引候选项未经真实架构验证",
+      "noSpeedGuarantee": "不能保证查询更快"
     }
   },
-  "detailed_description": "SQL查询优化器分析您的SQL查询，并提供优化建议以提升性能。 SQL查询优化器用于快速检查输入、设置和结果。请把输出当作草稿，先核对格式、数字、字符和上下文，再在自己的工作流程中确认重要结果，然后用于分享、发布或项目落地。对于影响业务、代码、财务或安全的内容，仍应保留人工复核。",
+  "detailed_description": "SQL 查询优化器在浏览器本地对粘贴的 SQL 进行静态检查。可选择通用 SQL、PostgreSQL、MySQL、SQLite 或 SQL Server，也可粘贴 EXPLAIN 文本，然后查看评分、格式化 SQL、证据片段、谨慎措辞的诊断和复合索引候选项。工具不会连接数据库、执行 SQL、自动应用重写、验证索引或保证提速。本地诊断说明以英语显示。",
   "usage_steps": [
-    "粘贴SQL查询",
-    "选择数据库类型",
-    "点击优化",
-    "查看建议",
-    "应用更改"
+    "选择最符合查询的数据库方言。",
+    "粘贴 SQL；如有需要，再粘贴从自己的数据库工具获得的 EXPLAIN 文本。",
+    "点击“本地分析”运行纯浏览器静态检查。",
+    "查看英语诊断、证据片段、索引候选项、格式化 SQL 和限制。",
+    "只复制需要的内容，并在自己的数据库环境中验证任何修改。"
   ],
   "usage_examples": [
-    "优化慢速SELECT查询",
-    "获取索引推荐",
-    "重写子查询",
-    "先用短输入确认结果形态，再处理完整内容。"
+    "在代码审查前检查 SELECT * 和无界读取。",
+    "发现没有 WHERE 子句的 UPDATE 或 DELETE。",
+    "检查粘贴的 PostgreSQL Seq Scan、MySQL type: ALL、SQLite SCAN 或 SQL Server Table Scan 文本。",
+    "根据等值过滤和 ORDER BY 生成复合索引候选项，再用真实架构和负载验证。"
   ],
   "faqs": [
     {
-      "question": "使用SQL查询优化器的结果前要检查什么？",
-      "answer": "请检查输入内容、选择的设置、结果格式和上下文。重要内容还应复核数字、字符和含义，再分享或发布。"
+      "question": "工具会连接数据库或执行查询吗？",
+      "answer": "不会。浏览器工具只分析您粘贴的 SQL 和可选 EXPLAIN 文本，不连接数据库，也不执行 SQL。"
     },
     {
-      "question": "生成后还能修改结果吗？",
-      "answer": "可以。调整输入或可用选项后重新处理，再使用更新后的结果。"
+      "question": "工具会自动重写查询吗？",
+      "answer": "不会。它提供格式化 SQL 和检查结果，但不会自动应用语义重写或更改输入。"
     },
     {
-      "question": "为什么结果可能和其他工具不同？",
-      "answer": "不同工具可能采用不同的取整、解析、格式化或展示方式。请用相同输入比较，并留意界面限制。"
+      "question": "索引候选项经过验证吗？",
+      "answer": "没有。它们只是根据可见条件和排序生成的静态假设，并未用架构或统计信息验证。"
     },
     {
-      "question": "可以先用短输入开始吗？",
-      "answer": "可以。先用短输入或非敏感内容确认输出形态，再换成实际输入会更稳妥。"
+      "question": "EXPLAIN 结果能证明查询很慢吗？",
+      "answer": "不能。工具只识别少量粘贴的计划标记；请在数据库中检查完整计划、估算、数据分布和负载。"
     },
     {
-      "question": "这个工具能替代人工检查吗？",
-      "answer": "不能。它能加快重复工作，但重要结果仍需要确认准确性、上下文和适用场景。"
+      "question": "建议一定会让查询更快吗？",
+      "answer": "没有速度保证。请使用真实架构、数据和代表性负载测试任何修改。"
     }
   ]
 }
