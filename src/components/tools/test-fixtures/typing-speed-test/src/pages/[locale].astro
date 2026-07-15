@@ -1,0 +1,14 @@
+---
+import TypingFixture from '../TypingFixture.svelte';
+import en from '@/messages/en.json';
+
+export function getStaticPaths() {
+  return [{ params: { locale: 'en' } }];
+}
+---
+
+<html lang="en">
+  <body>
+    <TypingFixture client:load translations={en} />
+  </body>
+</html>

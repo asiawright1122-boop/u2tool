@@ -23,7 +23,7 @@ describe("pilot tool capability registry", () => {
       "hex-editor": { version: "2.0.0", enforcement: "release-blocking" },
       "sql-query-optimizer": { version: "2.0.0", enforcement: "release-blocking" },
       "excel-viewer": { version: "2.0.0", enforcement: "release-blocking" },
-      "typing-speed-test": { version: "1.0.0", enforcement: "inventory" },
+      "typing-speed-test": { version: "2.0.0", enforcement: "release-blocking" },
       "gantt-chart-generator": { version: "1.0.0", enforcement: "inventory" },
     } as const;
 
@@ -128,14 +128,20 @@ describe("pilot tool capability registry", () => {
       kind: "engine-limited",
       local: locales,
       optionalServer: [],
+      evidence: {
+        file: "src/lib/typing-speed-test.test.ts",
+        testName:
+          "provides native prompt fixtures and timed UI messages in all ten locales [capability:typing-speed-test:engine:language-support] [capability:typing-speed-test:browser-feature:difficulty-prompt-banks]",
+      },
     });
   });
 
-  it("promotes Grammar, Hex, SQL, and Excel only after matching behavior evidence exists", () => {
+  it("promotes release-blocking profiles only after matching behavior evidence exists", () => {
     const grammarProfile = getToolCapabilityProfile("grammar-checker")!;
     const hexProfile = getToolCapabilityProfile("hex-editor")!;
     const sqlProfile = getToolCapabilityProfile("sql-query-optimizer")!;
     const excelProfile = getToolCapabilityProfile("excel-viewer")!;
+    const typingProfile = getToolCapabilityProfile("typing-speed-test")!;
     expect(grammarProfile.enforcement).toBe("release-blocking");
     expect(grammarProfile.evidenceTests).toHaveLength(2);
     expect(hexProfile.enforcement).toBe("release-blocking");
@@ -149,11 +155,20 @@ describe("pilot tool capability registry", () => {
       testName:
         "derives worksheet bounds from actual cells instead of a hostile declared range [capability:excel-viewer:profile:release-readiness]",
     });
+    expect(typingProfile.enforcement).toBe("release-blocking");
+    expect(typingProfile.evidenceTests).toEqual([
+      {
+        file: "src/lib/typing-speed-test.test.ts",
+        testName:
+          "calculates Unicode-aware timed metrics and character errors [capability:typing-speed-test:profile:release-readiness] [capability:typing-speed-test:produced-output:wpm] [capability:typing-speed-test:produced-output:cpm] [capability:typing-speed-test:produced-output:accuracy] [capability:typing-speed-test:produced-output:consistency] [capability:typing-speed-test:produced-output:elapsed-duration]",
+      },
+    ]);
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
     expect(sqlProfile.optionalServerFeatures).toEqual([]);
+    expect(typingProfile.optionalServerFeatures).toEqual([]);
 
     for (const profile of getPilotToolCapabilityProfiles()) {
-      if (!["grammar-checker", "hex-editor", "sql-query-optimizer", "excel-viewer"].includes(profile.slug)) {
+      if (!["grammar-checker", "hex-editor", "sql-query-optimizer", "excel-viewer", "typing-speed-test"].includes(profile.slug)) {
         expect(profile.enforcement).toBe("inventory");
         expect(profile.evidenceTests).toEqual([]);
       }
@@ -165,6 +180,30 @@ describe("pilot tool capability registry", () => {
       for (const intentId of profile.targetSearchIntents) {
         expect(intentId).toMatch(new RegExp(`^${profile.slug}\\.[a-z0-9-]+$`));
       }
+    }
+  });
+
+  it("binds every Typing negative limit to the strengthened completed-flow evidence", () => {
+    const typingProfile = getToolCapabilityProfile("typing-speed-test")!;
+    const strengthenedTestName =
+      "completes locally without network navigation download account ranking certificate or cloud-history side effects [capability:typing-speed-test:limit:no-account] [capability:typing-speed-test:limit:no-ranking] [capability:typing-speed-test:limit:no-certificate] [capability:typing-speed-test:limit:no-cloud-history]";
+
+    for (const limitId of [
+      "no-account",
+      "no-ranking",
+      "no-certificate",
+      "no-cloud-history",
+    ]) {
+      expect(
+        typingProfile.limits.find(({ id }) => id === limitId)?.evidence,
+        limitId,
+      ).toEqual({
+        file: "src/components/tools/TypingSpeedTest.test.ts",
+        testName: strengthenedTestName,
+      });
+      expect(strengthenedTestName).toContain(
+        `[capability:typing-speed-test:limit:${limitId}]`,
+      );
     }
   });
 
@@ -250,17 +289,16 @@ describe("pilot tool capability registry", () => {
       "typing-speed-test": {
         features: [
           "difficulty-prompt-banks",
-          "completion-wpm",
-          "completion-accuracy",
-          "completion-duration",
+          "selectable-timed-modes",
+          "automatic-finish",
+          "character-errors",
+          "local-history",
         ],
         limits: [
-          "no-fixed-timer",
-          "no-cpm",
-          "no-consistency-score",
-          "no-history",
           "no-account",
           "no-ranking",
+          "no-certificate",
+          "no-cloud-history",
         ],
       },
       "gantt-chart-generator": {
@@ -498,22 +536,6 @@ describe("pilot tool capability registry", () => {
   it("flags affirmative Typing capability claims without flagging honest limits", () => {
     const profile = getToolCapabilityProfile("typing-speed-test")!;
     const examples = {
-      "typing-speed-test-fixed-timer-claim": {
-        positive: "Offers a fixed timer.",
-        negative: "No fixed timer is available.",
-      },
-      "typing-speed-test-cpm-claim": {
-        positive: "Reports CPM at completion.",
-        negative: "Does not report CPM.",
-      },
-      "typing-speed-test-consistency-claim": {
-        positive: "Tracks a consistency score.",
-        negative: "Does not track a consistency score.",
-      },
-      "typing-speed-test-history-claim": {
-        positive: "Saves typing history.",
-        negative: "Does not save typing history.",
-      },
       "typing-speed-test-account-claim": {
         positive: "Supports user accounts.",
         negative: "Does not support user accounts.",
@@ -525,6 +547,10 @@ describe("pilot tool capability registry", () => {
       "typing-speed-test-certificate-claim": {
         positive: "Awards a completion certificate.",
         negative: "Does not issue a certificate.",
+      },
+      "typing-speed-test-cloud-history-claim": {
+        positive: "Offers cloud typing history.",
+        negative: "No cloud typing history is available.",
       },
     } as const;
 

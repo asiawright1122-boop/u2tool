@@ -3,6 +3,8 @@
  * Shared utility functions for calculator tools
  */
 
+import { calculateTimedTypingResult } from './typing-speed-test';
+
 // ============================================
 // Loan Calculator Functions
 // ============================================
@@ -676,35 +678,20 @@ export function calculateTypingStats(
   typedText: string,
   durationMs: number
 ): TypingTestResult {
-  const totalChars = typedText.length;
-  let correctChars = 0;
-  let incorrectChars = 0;
-  
-  for (let i = 0; i < typedText.length; i++) {
-    if (i < targetText.length && typedText[i] === targetText[i]) {
-      correctChars++;
-    } else {
-      incorrectChars++;
-    }
-  }
-  
-  const durationMinutes = durationMs / 1000 / 60;
-  const durationSeconds = durationMs / 1000;
-  
-  // WPM = (characters / 5) / minutes
-  // Standard word length is 5 characters
-  const wpm = durationMinutes > 0 ? (correctChars / 5) / durationMinutes : 0;
-  
-  // Accuracy = correct / total * 100
-  const accuracy = totalChars > 0 ? (correctChars / totalChars) * 100 : 0;
-  
+  const timedResult = calculateTimedTypingResult({
+    targetText,
+    typedText,
+    elapsedMs: durationMs,
+    intervalCorrectCharCounts: [],
+  });
+
   return {
-    wpm: Math.round(wpm),
-    accuracy: Math.round(accuracy * 100) / 100,
-    correctChars,
-    incorrectChars,
-    totalChars,
-    duration: durationSeconds,
+    wpm: timedResult.wpm,
+    accuracy: timedResult.accuracy,
+    correctChars: timedResult.correctChars,
+    incorrectChars: timedResult.incorrectChars,
+    totalChars: Array.from(typedText).length,
+    duration: timedResult.elapsedSeconds,
   };
 }
 

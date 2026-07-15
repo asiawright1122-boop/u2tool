@@ -2,24 +2,27 @@
   "capabilities": {
     "inputs": { "promptKeystrokes": "Prompt keystrokes" },
     "features": {
-      "difficultyPromptBanks": "Localized difficulty prompt banks"
+      "difficultyPromptBanks": "Localized difficulty prompt banks",
+      "selectableTimedModes": "Selectable 15, 30, 60, and 120 second tests",
+      "automaticFinish": "Automatic finish when time reaches zero",
+      "characterErrors": "Character-level error summary",
+      "localHistory": "Local result history"
     },
     "limits": {
-      "noFixedTimer": "No fixed timer",
-      "noCpm": "No characters-per-minute (CPM) score",
-      "noConsistencyScore": "No consistency score",
-      "noHistory": "No result history",
       "noAccount": "No user accounts",
-      "noRanking": "No leaderboard or ranking"
+      "noRanking": "No leaderboard or ranking",
+      "noCertificate": "No certificates",
+      "noCloudHistory": "No cloud history"
     }
   },
-  "detailed_description": "Typing Speed Test measures words per minute (WPM), accuracy, correct characters, mistakes, and elapsed time directly in the browser. Choose an easy, medium, or hard prompt, then start typing in the text box; the page highlights each character as correct or incorrect while you work. When you finish the prompt, the result cards show your WPM, accuracy percentage, character totals, duration, and a simple skill rating. The test is intentionally lightweight and private: it uses local sample text, does not require an account, and does not upload what you type.",
+  "detailed_description": "Typing Speed Test offers fixed 15, 30, 60, and 120 second modes that end automatically when the countdown reaches zero. It calculates WPM, CPM, accuracy, consistency, correct and incorrect character totals, and a character-level error summary directly in your browser. Results are kept only in local history in the current browser: no account is required, and no typing data or history is uploaded to the cloud.",
   "usage_steps": [
-    "Select Easy, Medium, or Hard to choose the length and complexity of the prompt.",
+    "Choose a 15, 30, 60, or 120 second mode and an Easy, Medium, or Hard prompt bank.",
     "Click inside the typing box and begin entering the displayed text.",
     "Watch the character highlighting to catch mistakes while you type.",
-    "Finish the prompt to see WPM, accuracy, correct characters, incorrect characters, duration, and rating.",
-    "Use New Text or Try Again to practice with another sample."
+    "Keep typing until the countdown reaches zero and the test ends automatically.",
+    "Review WPM, CPM, accuracy, consistency, character errors, and the local result history.",
+    "Use Restart or Try Again to begin another timed test."
   ],
   "usage_examples": [
     "A student checks their WPM before an online writing exam.",
@@ -30,11 +33,11 @@
   "faqs": [
     {
       "question": "How is WPM calculated?",
-      "answer": "The test measures how long it takes to finish the prompt and converts the typed character count into a words-per-minute estimate."
+      "answer": "WPM uses the correctly typed character count during the selected fixed duration, with five characters treated as one word. CPM reports the correctly typed characters per minute."
     },
     {
       "question": "Does the test upload what I type?",
-      "answer": "No. The prompts and scoring run in the browser, and the tool does not require an account."
+      "answer": "No. Prompts and scoring run in the browser, local history stays in this browser, and the tool does not require an account or cloud storage."
     },
     {
       "question": "Can I choose the difficulty?",
@@ -42,11 +45,11 @@
     },
     {
       "question": "What happens if I make mistakes?",
-      "answer": "Characters are highlighted as you type, and the final result includes correct characters, incorrect characters, accuracy, duration, and WPM."
+      "answer": "Characters are highlighted as you type, and the final result includes a character-level error summary, correct and incorrect totals, WPM, CPM, accuracy, and consistency."
     },
     {
       "question": "What should I check before using the Typing Speed Test output?",
-      "answer": "Proofread wording, characters, spacing, and formatting before publishing or sharing the transformed text."
+      "answer": "Review the character error summary and compare local history entries across equal test durations before drawing conclusions about progress."
     }
   ]
 }

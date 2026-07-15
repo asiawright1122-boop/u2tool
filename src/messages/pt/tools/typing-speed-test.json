@@ -2,24 +2,27 @@
   "capabilities": {
     "inputs": { "promptKeystrokes": "Teclas digitadas a partir do texto proposto" },
     "features": {
-      "difficultyPromptBanks": "Textos de dificuldade localizados"
+      "difficultyPromptBanks": "Textos de dificuldade localizados",
+      "selectableTimedModes": "Testes de 15, 30, 60 e 120 segundos",
+      "automaticFinish": "Término automático quando o tempo chega a zero",
+      "characterErrors": "Resumo de erros por caractere",
+      "localHistory": "Histórico local de resultados"
     },
     "limits": {
-      "noFixedTimer": "Sem cronômetro fixo",
-      "noCpm": "Sem pontuação de caracteres por minuto (CPM)",
-      "noConsistencyScore": "Sem pontuação de consistência",
-      "noHistory": "Sem histórico de resultados",
       "noAccount": "Sem contas de usuário",
-      "noRanking": "Sem classificação ou placar"
+      "noRanking": "Sem classificação ou placar",
+      "noCertificate": "Sem certificados",
+      "noCloudHistory": "Sem histórico na nuvem"
     }
   },
-  "detailed_description": "Teste de Digitação mede palavras por minuto (WPM), precisão, caracteres corretos, erros e duração diretamente no navegador. Escolha um texto fácil, médio ou difícil, comece a digitar na caixa e acompanhe o destaque de cada caractere: verde para acertos, vermelho para erros e marcação no próximo caractere. Quando você termina o texto, os cartões de resultado mostram WPM, porcentagem de precisão, contagem de caracteres, tempo gasto e uma classificação simples de nível. A ferramenta usa textos de exemplo locais, não exige conta e foi feita para treino rápido de velocidade e precisão.",
+  "detailed_description": "O Teste de Digitação oferece modos fixos de 15, 30, 60 e 120 segundos que terminam automaticamente quando a contagem chega a zero. Ele calcula WPM, CPM, precisão, consistência, totais de caracteres corretos e incorretos e um resumo de erros por caractere diretamente no navegador. Os resultados ficam apenas no histórico local deste navegador: nenhuma conta é necessária e os textos digitados ou o histórico não são enviados para a nuvem.",
   "usage_steps": [
-    "Escolha Fácil, Médio ou Difícil para definir o tipo de texto.",
+    "Escolha um modo de 15, 30, 60 ou 120 segundos e um texto Fácil, Médio ou Difícil.",
     "Clique na caixa de digitação e comece a copiar o texto exibido.",
     "Observe o destaque dos caracteres para corrigir erros enquanto digita.",
-    "Termine o texto para ver WPM, precisão, acertos, erros, duração e classificação.",
-    "Use Novo texto ou Tentar novamente para praticar com outra amostra."
+    "Continue digitando até a contagem chegar a zero e o teste terminar automaticamente.",
+    "Consulte WPM, CPM, precisão, consistência, erros por caractere e o histórico local.",
+    "Use Reiniciar ou Tentar novamente para começar outro teste cronometrado."
   ],
   "usage_examples": [
     "Um estudante mede o WPM antes de uma prova de redação online.",
@@ -33,7 +36,7 @@
     },
     {
       "question": "Como o WPM é calculado?",
-      "answer": "A página mede o tempo até o fim do texto e converte a quantidade digitada em uma estimativa de palavras por minuto."
+      "answer": "O WPM usa os caracteres digitados corretamente durante a duração fixa escolhida, considerando cinco caracteres como uma palavra. O CPM mostra os caracteres corretos por minuto."
     },
     {
       "question": "Posso escolher a dificuldade?",
@@ -41,7 +44,7 @@
     },
     {
       "question": "O que acontece se eu errar?",
-      "answer": "Os caracteres incorretos ficam destacados durante o teste, e o resultado final inclui erros, acertos, precisão, duração e WPM."
+      "answer": "Os caracteres incorretos ficam destacados, e o resultado inclui um resumo de erros por caractere, acertos, WPM, CPM, precisão e consistência."
     }
   ]
 }
