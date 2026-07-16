@@ -256,7 +256,7 @@ export function evaluateToolIndexReadiness(
     return {
       recommendation: 'manual-review',
       reasons: ['capability-profile-missing'],
-      missingEvidence: ['capability.profile'],
+      missingEvidence: ['hasCapabilityProfile'],
       reviewRequired: true,
     };
   }
@@ -268,7 +268,7 @@ export function evaluateToolIndexReadiness(
     return {
       recommendation: 'manual-review',
       reasons: ['capability-enforcement-not-release-blocking'],
-      missingEvidence: [],
+      missingEvidence: ['capabilityEnforcement'],
       reviewRequired: true,
     };
   }

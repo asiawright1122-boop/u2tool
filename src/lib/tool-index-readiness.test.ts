@@ -47,6 +47,16 @@ function createEvidence(
   };
 }
 
+const strongContentBoundary: IndexReadinessEvidence['content'] = {
+  hasIndependentSplitCopy: true,
+  detailedDescriptionLength: 220,
+  usageStepCount: 3,
+  usageExampleCount: 2,
+  faqCount: 3,
+  duplicateContentKey: null,
+  fallbackUsed: false,
+};
+
 describe('evaluateToolIndexReadiness', () => {
   it('recommends improving a demanded page when technical evidence fails', () => {
     const decision = evaluateToolIndexReadiness(
@@ -136,6 +146,49 @@ describe('evaluateToolIndexReadiness', () => {
     });
     expect(decision).not.toHaveProperty('score');
   });
+
+  it('keeps content at the exact 220/3/2/3 strong-content boundaries', () => {
+    const decision = evaluateToolIndexReadiness(
+      createEvidence({ content: strongContentBoundary }),
+    );
+
+    expect(decision.recommendation).toBe('keep');
+    expect(decision.reasons).toContain('content-readiness-strong');
+  });
+
+  it.each([
+    [
+      'detailed description',
+      { ...strongContentBoundary, detailedDescriptionLength: 219 },
+      'content-detailed-description-thin',
+    ],
+    [
+      'usage steps',
+      { ...strongContentBoundary, usageStepCount: 2 },
+      'content-usage-steps-thin',
+    ],
+    [
+      'usage examples',
+      { ...strongContentBoundary, usageExampleCount: 1 },
+      'content-usage-examples-thin',
+    ],
+    [
+      'FAQs',
+      { ...strongContentBoundary, faqCount: 2 },
+      'content-faqs-thin',
+    ],
+  ] as const)(
+    'does not automatically keep content with %s just below the strong boundary',
+    (_label, content, expectedReason) => {
+      const decision = evaluateToolIndexReadiness(
+        createEvidence({ content: { ...content } }),
+      );
+
+      expect(decision.recommendation).toBe('improve');
+      expect(decision.recommendation).not.toBe('keep');
+      expect(decision.reasons).toContain(expectedReason);
+    },
+  );
 
   it('recommends merging a demanded page with a stronger same-intent sibling', () => {
     const decision = evaluateToolIndexReadiness(
@@ -287,7 +340,7 @@ describe('evaluateToolIndexReadiness', () => {
     expect(decision).toEqual({
       recommendation: 'manual-review',
       reasons: ['capability-profile-missing'],
-      missingEvidence: ['capability.profile'],
+      missingEvidence: ['hasCapabilityProfile'],
       reviewRequired: true,
     });
   });
@@ -303,9 +356,26 @@ describe('evaluateToolIndexReadiness', () => {
     expect(decision).toEqual({
       recommendation: 'manual-review',
       reasons: ['capability-enforcement-not-release-blocking'],
-      missingEvidence: [],
+      missingEvidence: ['capabilityEnforcement'],
       reviewRequired: true,
     });
+  });
+
+  it('keeps a healthy page when one query has exactly 0.80 share', () => {
+    const decision = evaluateToolIndexReadiness(
+      createEvidence({
+        demand: {
+          currentClicks: 8,
+          currentImpressions: 120,
+          historicalClicks: 5,
+          historicalImpressions: 90,
+          topQueryShare: 0.8,
+        },
+      }),
+    );
+
+    expect(decision.recommendation).toBe('keep');
+    expect(decision.reasons).not.toContain('one-query-dominance');
   });
 
   it('adds a reason and prevents automatic keep when one query exceeds 0.80 share', () => {
