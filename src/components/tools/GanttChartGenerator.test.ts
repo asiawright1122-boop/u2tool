@@ -289,6 +289,14 @@ describe("GanttChartGenerator public UI", () => {
       ).toBe("2026-08-01");
       expect(
         await page.$eval(
+          ".task-row:not(.task-header)",
+          (row) =>
+            row.querySelectorAll<HTMLInputElement>('input[type="date"]')[1]!
+              .value,
+        ),
+      ).toBe("2026-08-03");
+      expect(
+        await page.$eval(
           '.task-row:not(.task-header) input[type="number"]',
           (node) => (node as HTMLInputElement).value,
         ),
@@ -387,7 +395,7 @@ describe("GanttChartGenerator public UI", () => {
     });
   }, 20_000);
 
-  it("renders imported task markup as escaped tooltip text", async () => {
+  it("renders imported task markup as escaped tooltip text [capability:gantt-chart-generator:profile:release-readiness]", async () => {
     await withPage(async (page) => {
       await waitForEditor(page);
       await uploadTextFile(

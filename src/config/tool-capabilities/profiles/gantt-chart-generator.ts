@@ -21,6 +21,11 @@ const importEvidence = {
   testName:
     "imports valid JSON and CSV then rejects duplicate IDs without replacing the valid editor state [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:browser-feature:project-data-exchange]",
 };
+const tooltipEvidence = {
+  file: "src/components/tools/GanttChartGenerator.test.ts",
+  testName:
+    "renders imported task markup as escaped tooltip text [capability:gantt-chart-generator:profile:release-readiness]",
+};
 const exchangeEvidence = {
   file: "src/components/tools/GanttChartGenerator.test.ts",
   testName:
@@ -226,6 +231,7 @@ export const ganttChartGeneratorCapabilityProfile = defineToolCapabilityProfile(
       exportEvidence,
       editorEvidence,
       importEvidence,
+      tooltipEvidence,
       exchangeEvidence,
       limitsEvidence,
     ],

@@ -200,6 +200,11 @@ describe("pilot tool capability registry", () => {
       {
         file: "src/components/tools/GanttChartGenerator.test.ts",
         testName:
+          "renders imported task markup as escaped tooltip text [capability:gantt-chart-generator:profile:release-readiness]",
+      },
+      {
+        file: "src/components/tools/GanttChartGenerator.test.ts",
+        testName:
           "exports JSON and CSV and restores edits from browser-local storage [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:produced-output:json-project] [capability:gantt-chart-generator:produced-output:csv-project] [capability:gantt-chart-generator:browser-feature:local-persistence] [capability:gantt-chart-generator:browser-feature:project-data-exchange]",
       },
       {
