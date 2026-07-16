@@ -1,29 +1,93 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "로컬 간트 차트 편집기" },
-    "inputs": { "taskDates": "작업 시작일과 종료일" },
+    "modes": { "localProjectPlanning": "로컬 간트 프로젝트 계획" },
+    "inputs": {
+      "taskFields": "작업 이름, 날짜, 진행률, 마일스톤 및 종속성",
+      "jsonProject": "로컬 JSON 프로젝트 파일",
+      "csvProject": "로컬 CSV 프로젝트 파일"
+    },
+    "outputs": {
+      "criticalPath": "계산된 임계 경로",
+      "jsonProject": "JSON 프로젝트 파일",
+      "csvProject": "CSV 프로젝트 파일"
+    },
     "features": {
-      "taskNameDatesProgress": "작업 이름, 날짜 및 진행률 편집"
+      "taskNameDatesProgress": "작업 이름, 날짜 및 진행률 편집",
+      "dependencies": "작업 종속성 연결",
+      "milestones": "0일 마일스톤",
+      "criticalPathHighlighting": "임계 경로 계산 및 강조",
+      "localPersistence": "이 브라우저에서 저장 및 복원",
+      "projectTemplates": "소프트웨어, 마케팅 및 이벤트 템플릿",
+      "projectDataExchange": "로컬 JSON 및 CSV 가져오기와 내보내기"
     },
     "limits": {
-      "noDependencies": "작업 종속성 없음",
-      "noMilestones": "마일스톤 없음",
-      "noCriticalPath": "주요 경로 계산 없음",
-      "noPersistence": "프로젝트 저장 없음",
-      "noDataImportExport": "프로젝트 데이터 가져오기 또는 내보내기 없음",
-      "noCollaboration": "협업 기능 없음"
+      "noCollaboration": "협업 또는 팀 공유 없음",
+      "noCloudSync": "클라우드 동기화 없음",
+      "noResourceManagement": "리소스 배정 또는 관리 없음",
+      "noEnterpriseWorkflow": "기업 승인 워크플로 없음",
+      "noLiveMultiUser": "실시간 다중 사용자 프로젝트 상태 없음"
     }
   },
-  "detailed_description": "간트 차트 생성기는 짧은 작업 목록을 브라우저의 시각적 타임라인으로 만듭니다. 작업 이름, 시작일, 종료일, 진행률을 입력하고 색상 테마를 고른 뒤 PNG 또는 SVG 이미지를 다운로드할 수 있습니다. 작업 종속성, 마일스톤, 주요 경로 계산, 프로젝트 저장, 프로젝트 데이터 가져오기나 내보내기, 협업 기능은 제공하지 않습니다.",
+  "milestone": "마일스톤",
+  "dependencies": "종속성",
+  "criticalPath": "임계 경로",
+  "days": "일",
+  "projectWarnings": "프로젝트 경고",
+  "criticalPathHelp": "임계 경로 작업은 빨간색으로 강조됩니다. 기간은 시작일과 종료일을 포함한 달력 날짜이며 마일스톤은 0일입니다.",
+  "exportJson": "JSON 내보내기",
+  "exportCsv": "CSV 내보내기",
+  "importJson": "JSON 가져오기",
+  "importCsv": "CSV 가져오기",
+  "saveLocal": "로컬 저장",
+  "restoreLocal": "저장본 복원",
+  "clearSaved": "저장본 삭제",
+  "projectExported": "프로젝트 파일을 다운로드했습니다.",
+  "projectImported": "프로젝트를 로컬에서 가져왔습니다.",
+  "importError": "프로젝트를 가져올 수 없습니다.",
+  "projectSaved": "이 브라우저에 프로젝트를 저장했습니다.",
+  "projectRestored": "저장된 프로젝트를 복원했습니다.",
+  "noSavedProject": "유효한 저장 프로젝트를 찾지 못했습니다.",
+  "savedProjectCleared": "저장 프로젝트를 삭제했습니다.",
+  "projectCleared": "현재 프로젝트를 지웠습니다.",
+  "chartNotReady": "차트가 아직 내보낼 준비가 되지 않았습니다.",
+  "projectTemplate": "프로젝트 템플릿",
+  "applyTemplate": "템플릿 적용",
+  "templateApplied": "템플릿을 적용했습니다.",
+  "templateSoftwareRelease": "소프트웨어 릴리스",
+  "templateMarketingCampaign": "마케팅 캠페인",
+  "templateEventPreparation": "이벤트 준비",
+  "templateTaskReleasePlan": "릴리스 계획",
+  "templateTaskReleaseBuild": "기능 개발",
+  "templateTaskReleaseTest": "릴리스 테스트",
+  "templateTaskReleaseLaunch": "릴리스",
+  "templateTaskCampaignBrief": "캠페인 브리프",
+  "templateTaskCampaignCreate": "캠페인 제작",
+  "templateTaskCampaignLaunch": "캠페인 시작",
+  "templateTaskEventScope": "이벤트 범위 정의",
+  "templateTaskEventLogistics": "물류 준비",
+  "templateTaskEventRehearsal": "리허설 진행",
+  "templateTaskEventDay": "이벤트 당일",
+  "projectActions": "프로젝트 작업",
+  "removeTask": "작업 삭제",
+  "noTasks": "작업을 추가하거나 템플릿을 적용해 시작하세요.",
+  "localOnlyTitle": "로컬 프로젝트 데이터",
+  "localOnlyDescription": "가져오기, 내보내기, 계산 및 저장은 이 브라우저에서만 이루어지며 업로드되거나 동기화되지 않습니다.",
+  "detailed_description": "작업 날짜, 진행률, 마일스톤 및 종속성을 포함한 간트 프로젝트를 브라우저에서 작성합니다. 도구는 임계 경로를 결정적으로 계산하고 해당 작업을 강조하며 순환, 누락된 종속성 또는 잘못된 날짜를 경고합니다. 이 브라우저에 프로젝트 하나를 저장하고 복원할 수 있으며 소프트웨어 릴리스, 마케팅 캠페인 또는 이벤트 준비 템플릿으로 시작할 수 있습니다. 프로젝트 데이터는 로컬 JSON 또는 CSV 파일로 교환할 수 있고 PNG 및 SVG 차트 내보내기도 유지됩니다. 협업, 클라우드 동기화, 리소스 배정, 기업 승인 워크플로 또는 실시간 다중 사용자 상태는 제공하지 않습니다.",
   "usage_steps": [
-    "작업 추가를 눌러 새 행을 만듭니다.",
-    "작업 이름, 시작일, 종료일, 진행률을 입력합니다.",
-    "색상 테마를 고르고 미리보기를 확인합니다.",
-    "완성된 차트를 PNG 또는 SVG로 다운로드합니다."
+    "기본 템플릿을 선택하거나 작업을 직접 추가합니다.",
+    "각 작업의 이름, 날짜, 진행률, 마일스톤 및 종속성을 설정합니다.",
+    "경고와 미리보기에서 빨간색으로 표시된 임계 경로를 검토합니다.",
+    "이 브라우저에 저장하거나 JSON, CSV, PNG 또는 SVG로 내보냅니다.",
+    "편집을 계속하려면 로컬 JSON 또는 CSV 프로젝트를 가져옵니다."
   ],
   "usage_examples": [
-    "스프린트 작업의 날짜와 진행률을 간단한 타임라인으로 표시합니다.",
-    "마케팅 캠페인 단계를 시각적 일정으로 정리합니다.",
-    "보고서나 슬라이드에 넣을 차트 이미지를 다운로드합니다."
+    "계획, 개발, 테스트 및 0일 릴리스 마일스톤을 연결한 소프트웨어 일정을 만듭니다.",
+    "캠페인 브리프, 제작 및 시작 작업을 연결하고 가장 긴 종속 경로를 확인합니다.",
+    "이벤트 준비 일정을 로컬에서 작성하고 CSV로 스프레드시트 흐름과 교환합니다."
+  ],
+  "faqs": [
+    { "question": "임계 경로를 계산할 수 있나요?", "answer": "예. 종속 경로의 달력 일수를 합산하고 마일스톤을 0일로 처리하여 결정적인 최장 경로 하나를 강조합니다." },
+    { "question": "저장된 프로젝트는 어디에 있나요?", "answer": "현재 브라우저의 로컬 저장소에만 있습니다. 계정이나 클라우드 동기화는 없습니다." },
+    { "question": "가져온 파일이 업로드되나요?", "answer": "아니요. JSON 및 CSV 파일은 브라우저에서 로컬로 읽습니다." }
   ]
 }

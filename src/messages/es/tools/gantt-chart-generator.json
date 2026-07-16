@@ -1,53 +1,93 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "Editor local de diagramas de Gantt" },
-    "inputs": { "taskDates": "Fechas de inicio y fin de las tareas" },
+    "modes": { "localProjectPlanning": "Planificación local de proyectos Gantt" },
+    "inputs": {
+      "taskFields": "Nombres, fechas, progreso, hitos y dependencias de tareas",
+      "jsonProject": "Archivo de proyecto JSON local",
+      "csvProject": "Archivo de proyecto CSV local"
+    },
+    "outputs": {
+      "criticalPath": "Ruta crítica calculada",
+      "jsonProject": "Archivo de proyecto JSON",
+      "csvProject": "Archivo de proyecto CSV"
+    },
     "features": {
-      "taskNameDatesProgress": "Editar nombres, fechas y progreso de las tareas"
+      "taskNameDatesProgress": "Editar nombres, fechas y progreso de tareas",
+      "dependencies": "Enlaces de dependencia entre tareas",
+      "milestones": "Hitos de cero días",
+      "criticalPathHighlighting": "Cálculo y resaltado de la ruta crítica",
+      "localPersistence": "Guardar y restaurar en este navegador",
+      "projectTemplates": "Plantillas de software, marketing y eventos",
+      "projectDataExchange": "Importación y exportación local JSON y CSV"
     },
     "limits": {
-      "noDependencies": "Sin dependencias entre tareas",
-      "noMilestones": "Sin hitos",
-      "noCriticalPath": "Sin cálculo de la ruta crítica",
-      "noPersistence": "Sin proyectos guardados",
-      "noDataImportExport": "Sin importación ni exportación de datos del proyecto",
-      "noCollaboration": "Sin colaboración"
+      "noCollaboration": "Sin colaboración ni uso compartido en equipo",
+      "noCloudSync": "Sin sincronización en la nube",
+      "noResourceManagement": "Sin asignación ni gestión de recursos",
+      "noEnterpriseWorkflow": "Sin flujo de aprobación empresarial",
+      "noLiveMultiUser": "Sin estado multiusuario en vivo"
     }
   },
-  "detailed_description": "El generador de diagramas de Gantt convierte una lista corta de tareas en una línea de tiempo visual directamente en el navegador. Añade el nombre de la tarea, la fecha de inicio, la fecha de fin y el porcentaje de progreso; después elige un tema de color y revisa la vista previa creada con ECharts. Es útil para presentar planes simples, sprints, campañas, trabajos de clase o cronogramas internos cuando necesitas una imagen clara sin abrir una herramienta de gestión de proyectos completa. La página se centra en crear y exportar el gráfico como PNG o SVG.",
+  "milestone": "Hito",
+  "dependencies": "Dependencias",
+  "criticalPath": "Ruta crítica",
+  "days": "días",
+  "projectWarnings": "Avisos del proyecto",
+  "criticalPathHelp": "Las tareas de la ruta crítica aparecen en rojo. Las duraciones incluyen las fechas inicial y final; los hitos duran cero días.",
+  "exportJson": "Exportar JSON",
+  "exportCsv": "Exportar CSV",
+  "importJson": "Importar JSON",
+  "importCsv": "Importar CSV",
+  "saveLocal": "Guardar localmente",
+  "restoreLocal": "Restaurar guardado",
+  "clearSaved": "Borrar guardado",
+  "projectExported": "Archivo de proyecto descargado.",
+  "projectImported": "Proyecto importado localmente.",
+  "importError": "No se pudo importar el proyecto.",
+  "projectSaved": "Proyecto guardado en este navegador.",
+  "projectRestored": "Proyecto guardado restaurado.",
+  "noSavedProject": "No se encontró un proyecto guardado válido.",
+  "savedProjectCleared": "Proyecto guardado eliminado.",
+  "projectCleared": "Proyecto actual borrado.",
+  "chartNotReady": "El gráfico aún no está listo para exportarse.",
+  "projectTemplate": "Plantilla de proyecto",
+  "applyTemplate": "Aplicar plantilla",
+  "templateApplied": "Plantilla aplicada.",
+  "templateSoftwareRelease": "Lanzamiento de software",
+  "templateMarketingCampaign": "Campaña de marketing",
+  "templateEventPreparation": "Preparación de evento",
+  "templateTaskReleasePlan": "Planificar lanzamiento",
+  "templateTaskReleaseBuild": "Desarrollar funciones",
+  "templateTaskReleaseTest": "Probar lanzamiento",
+  "templateTaskReleaseLaunch": "Publicar versión",
+  "templateTaskCampaignBrief": "Brief de campaña",
+  "templateTaskCampaignCreate": "Crear campaña",
+  "templateTaskCampaignLaunch": "Lanzar campaña",
+  "templateTaskEventScope": "Definir evento",
+  "templateTaskEventLogistics": "Organizar logística",
+  "templateTaskEventRehearsal": "Realizar ensayo",
+  "templateTaskEventDay": "Día del evento",
+  "projectActions": "Acciones del proyecto",
+  "removeTask": "Eliminar tarea",
+  "noTasks": "Añade una tarea o aplica una plantilla para empezar.",
+  "localOnlyTitle": "Datos locales del proyecto",
+  "localOnlyDescription": "Las importaciones, exportaciones, cálculos y proyectos guardados permanecen en este navegador. Nada se sube ni sincroniza.",
+  "detailed_description": "Crea en el navegador un proyecto Gantt con fechas, progreso, hitos y dependencias. La herramienta calcula una ruta crítica determinista, resalta sus tareas y avisa de ciclos, dependencias ausentes o fechas no válidas. Puedes guardar y restaurar un proyecto en este navegador, comenzar con una plantilla de lanzamiento de software, campaña de marketing o preparación de evento e intercambiar datos mediante archivos JSON o CSV locales. Se mantienen las exportaciones del gráfico en PNG y SVG. No ofrece colaboración, sincronización en la nube, asignación de recursos, aprobaciones empresariales ni estado multiusuario en vivo.",
   "usage_steps": [
-    "Escribe un título para el gráfico si quieres personalizar la vista previa.",
-    "Añade o edita tareas con nombre de la tarea, fecha de inicio, fecha de fin y progreso.",
-    "Elige un tema de color para adaptar la visualización al informe o presentación.",
-    "Revisa el diagrama generado y ajusta fechas o porcentajes si algo no se ve claro.",
-    "Descarga el resultado como PNG o SVG para usarlo en documentos, diapositivas o mensajes."
+    "Elige una plantilla integrada o añade tareas manualmente.",
+    "Define nombre, fechas, progreso, hito y dependencias de cada tarea.",
+    "Revisa los avisos y la ruta crítica resaltada en rojo.",
+    "Guarda en este navegador o exporta como JSON, CSV, PNG o SVG.",
+    "Importa un proyecto JSON o CSV local para seguir editándolo."
   ],
   "usage_examples": [
-    "Preparar una línea de tiempo de sprint con planificación, desarrollo, pruebas y lanzamiento.",
-    "Visualizar una campaña de marketing con fechas para contenido, revisión y publicación.",
-    "Crear un cronograma académico simple para investigación, redacción, revisión y entrega.",
-    "Exportar un diagrama PNG o SVG para incluirlo en una actualización semanal del equipo."
+    "Planificar una versión de software desde el alcance hasta un hito de publicación de cero días.",
+    "Enlazar el brief, la producción y el lanzamiento de una campaña y revisar la cadena más larga.",
+    "Preparar localmente un evento e intercambiar el calendario como CSV."
   ],
   "faqs": [
-    {
-      "question": "¿Qué datos necesita cada tarea?",
-      "answer": "Cada fila usa nombre de la tarea, fecha de inicio, fecha de fin y porcentaje de progreso."
-    },
-    {
-      "question": "¿Puedo cambiar el estilo del gráfico?",
-      "answer": "Sí. Puedes elegir entre temas de color predefinidos y cambiar el título del gráfico."
-    },
-    {
-      "question": "¿Qué formatos de exportación incluye?",
-      "answer": "Puedes descargar el diagrama terminado como PNG o SVG."
-    },
-    {
-      "question": "¿Es una herramienta completa de gestión de proyectos?",
-      "answer": "No. Está pensada para crear una línea de tiempo visual sencilla a partir de tareas, fechas y progreso."
-    },
-    {
-      "question": "Qué debo revisar antes de usar el resultado de Generador de diagramas de Gantt?",
-      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
-    }
+    { "question": "¿Puede calcular la ruta crítica?", "answer": "Sí. Suma los días naturales inclusivos de cada cadena, trata los hitos como cero días y resalta una ruta más larga determinista." },
+    { "question": "¿Dónde se guarda el proyecto?", "answer": "Solo en el almacenamiento local de este navegador. No hay cuenta ni sincronización en la nube." },
+    { "question": "¿Se suben los archivos importados?", "answer": "No. Los archivos JSON y CSV se leen localmente en el navegador." }
   ]
 }

@@ -24,7 +24,7 @@ describe("pilot tool capability registry", () => {
       "sql-query-optimizer": { version: "2.0.0", enforcement: "release-blocking" },
       "excel-viewer": { version: "2.0.0", enforcement: "release-blocking" },
       "typing-speed-test": { version: "2.0.0", enforcement: "release-blocking" },
-      "gantt-chart-generator": { version: "1.0.0", enforcement: "inventory" },
+      "gantt-chart-generator": { version: "2.0.0", enforcement: "release-blocking" },
     } as const;
 
     for (const slug of PILOT_TOOL_SLUGS) {
@@ -70,11 +70,12 @@ describe("pilot tool capability registry", () => {
   });
 
   it("declares engine locales only for language-dependent tools", () => {
-    for (const slug of ["gantt-chart-generator"]) {
-      expect(getToolCapabilityProfile(slug)?.supportedLocales.engine).toEqual({
-        kind: "language-neutral",
-      });
-    }
+    expect(
+      getToolCapabilityProfile("gantt-chart-generator")?.supportedLocales.engine,
+    ).toMatchObject({
+      kind: "language-neutral",
+      evidence: { file: "src/lib/gantt-chart.test.ts" },
+    });
 
     expect(
       getToolCapabilityProfile("hex-editor")?.supportedLocales.engine,
@@ -168,7 +169,7 @@ describe("pilot tool capability registry", () => {
     expect(typingProfile.optionalServerFeatures).toEqual([]);
 
     for (const profile of getPilotToolCapabilityProfiles()) {
-      if (!["grammar-checker", "hex-editor", "sql-query-optimizer", "excel-viewer", "typing-speed-test"].includes(profile.slug)) {
+      if (!["grammar-checker", "hex-editor", "sql-query-optimizer", "excel-viewer", "typing-speed-test", "gantt-chart-generator"].includes(profile.slug)) {
         expect(profile.enforcement).toBe("inventory");
         expect(profile.evidenceTests).toEqual([]);
       }
@@ -304,17 +305,22 @@ describe("pilot tool capability registry", () => {
       "gantt-chart-generator": {
         features: [
           "task-name-dates-progress",
+          "dependencies",
+          "milestones",
+          "critical-path-highlighting",
+          "local-persistence",
+          "project-templates",
+          "project-data-exchange",
           "theme",
           "png-export",
           "svg-export",
         ],
         limits: [
-          "no-dependencies",
-          "no-milestones",
-          "no-critical-path",
-          "no-persistence",
-          "no-data-import-export",
           "no-collaboration",
+          "no-cloud-sync",
+          "no-resource-management",
+          "no-enterprise-workflow",
+          "no-live-multi-user",
         ],
       },
     } as const;
@@ -341,32 +347,28 @@ describe("pilot tool capability registry", () => {
     ]);
   });
 
-  it("flags affirmative Gantt capability claims without flagging honest limits", () => {
+  it("flags unsupported Gantt service claims without blocking local planning features", () => {
     const profile = getToolCapabilityProfile("gantt-chart-generator")!;
     const examples = {
-      "gantt-generator-dependencies-claim": {
-        positive: "Supports task dependencies between rows.",
-        negative: "No task dependencies are supported.",
-      },
-      "gantt-generator-milestones-claim": {
-        positive: "Adds project milestones to the chart.",
-        negative: "No milestones are available.",
-      },
-      "gantt-generator-critical-path-claim": {
-        positive: "Calculates the critical path automatically.",
-        negative: "Does not calculate a critical path.",
-      },
-      "gantt-generator-persistence-claim": {
-        positive: "Automatically saves your charts.",
-        negative: "Charts are not saved.",
-      },
-      "gantt-generator-data-transfer-claim": {
-        positive: "Imports project data from another tool.",
-        negative: "Does not import or export project data.",
-      },
       "gantt-generator-collaboration-claim": {
         positive: "Supports real-time collaboration.",
         negative: "No collaboration is available.",
+      },
+      "gantt-generator-cloud-sync-claim": {
+        positive: "Synchronizes projects through the cloud.",
+        negative: "No cloud synchronization is available.",
+      },
+      "gantt-generator-resource-management-claim": {
+        positive: "Allocates resources across tasks.",
+        negative: "Does not allocate project resources.",
+      },
+      "gantt-generator-enterprise-workflow-claim": {
+        positive: "Supports enterprise approval workflows.",
+        negative: "No enterprise workflow is available.",
+      },
+      "gantt-generator-live-multi-user-claim": {
+        positive: "Shows live multi-user project status.",
+        negative: "Does not show live multi-user status.",
       },
     } as const;
 
@@ -376,6 +378,8 @@ describe("pilot tool capability registry", () => {
       expect(claim.pattern.test(example.positive), claim.code).toBe(true);
       expect(claim.pattern.test(example.negative), claim.code).toBe(false);
     }
+
+    expect(profile.forbiddenClaims.some((claim) => claim.pattern.test("Supports task dependencies and highlights the critical path."))).toBe(false);
   });
 
   it("flags affirmative grammar capability claims without flagging honest limits", () => {

@@ -199,6 +199,12 @@ export const localizedClaimTerms: Record<string, LocalizedTerms> = {
     "un certificado de mecanografía", "um certificado de digitação",
     "un certificat de frappe", "ein Tippzertifikat", "сертификат скорости печати", "شهادة كتابة",
   ),
+  "typing-speed-test-cloud-history-claim": terms(
+    "cloud typing history", "云端打字历史", "クラウド入力履歴", "클라우드 타이핑 기록",
+    "historial de escritura en la nube", "histórico de digitação na nuvem",
+    "historique de frappe dans le cloud", "Tippverlauf in der Cloud",
+    "облачную историю набора", "سجل الكتابة السحابي",
+  ),
   "gantt-generator-dependencies-claim": terms(
     "task dependencies", "任务依赖", "タスク依存関係", "작업 종속성",
     "dependencias entre tareas", "dependências entre tarefas", "dépendances entre tâches",
@@ -227,6 +233,26 @@ export const localizedClaimTerms: Record<string, LocalizedTerms> = {
     "real-time collaboration", "实时协作", "リアルタイム共同作業", "실시간 협업",
     "colaboración en tiempo real", "colaboração em tempo real", "collaboration en temps réel",
     "Echtzeit-Zusammenarbeit", "совместная работа в реальном времени", "تعاون في الوقت الفعلي",
+  ),
+  "gantt-generator-cloud-sync-claim": terms(
+    "cloud synchronization", "云端同步", "クラウド同期", "클라우드 동기화",
+    "sincronización en la nube", "sincronização na nuvem", "synchronisation cloud",
+    "Cloud-Synchronisierung", "облачную синхронизацию", "مزامنة سحابية",
+  ),
+  "gantt-generator-resource-management-claim": terms(
+    "project resource management", "项目资源管理", "プロジェクトのリソース管理", "프로젝트 리소스 관리",
+    "gestión de recursos del proyecto", "gestão de recursos do projeto", "gestion des ressources du projet",
+    "Projektressourcenverwaltung", "управление ресурсами проекта", "إدارة موارد المشروع",
+  ),
+  "gantt-generator-enterprise-workflow-claim": terms(
+    "enterprise approval workflows", "企业审批工作流", "企業承認ワークフロー", "엔터프라이즈 승인 워크플로",
+    "flujos de aprobación empresariales", "fluxos de aprovação empresariais", "workflows d’approbation d’entreprise",
+    "Enterprise-Genehmigungsworkflows", "корпоративные процессы согласования", "سير عمل موافقات المؤسسة",
+  ),
+  "gantt-generator-live-multi-user-claim": terms(
+    "live multi-user project status", "实时多用户项目状态", "ライブのマルチユーザープロジェクト状況", "실시간 다중 사용자 프로젝트 상태",
+    "estado del proyecto multiusuario en vivo", "status do projeto multiusuário ao vivo", "statut du projet multiutilisateur en direct",
+    "Live-Mehrbenutzer-Projektstatus", "статус многопользовательского проекта в реальном времени", "حالة مشروع مباشرة متعددة المستخدمين",
   ),
 };
 

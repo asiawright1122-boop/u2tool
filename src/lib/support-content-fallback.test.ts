@@ -1391,7 +1391,7 @@ describe('assessSupportContentTrust', () => {
     );
   });
 
-  it('blocks Gantt Chart project-management claims that are not implemented', () => {
+  it('allows implemented Gantt dependency planning claims', () => {
     const report = assessSupportContentTrust({
       slug: 'gantt-chart-generator',
       locale: 'en',
@@ -1404,28 +1404,45 @@ describe('assessSupportContentTrust', () => {
       faqs: [],
     });
 
-    expect(report.blockSupportContent).toBe(true);
-    expect(report.issues.map((issue) => issue.code)).toContain(
-      'gantt-chart-unsupported-project-management-claim'
-    );
+    expect(report.blockSupportContent).toBe(false);
+    expect(report.issues).toEqual([]);
   });
 
-  it('blocks Spanish Gantt Chart project-management claims that are not implemented', () => {
+  it('allows Spanish Gantt dependency and critical-path claims', () => {
     const report = assessSupportContentTrust({
       slug: 'gantt-chart-generator',
       locale: 'es',
       name: 'Generador de diagramas de Gantt',
       description: '',
       detailedDescription:
-        'La línea de tiempo visual ayuda a identificar dependencias y posibles cuellos de botella.',
+        'La línea de tiempo visual ayuda a identificar dependencias entre tareas.',
       usageSteps: ['Use el panel para gestionar las dependencias y revisar la ruta crítica.'],
       usageExamples: [],
       faqs: [],
     });
 
+    expect(report.blockSupportContent).toBe(false);
+    expect(report.issues).toEqual([]);
+  });
+
+  it('still blocks unsupported Gantt resource allocation and live team status claims', () => {
+    const report = assessSupportContentTrust({
+      slug: 'gantt-chart-generator',
+      locale: 'en',
+      name: 'Gantt Chart Maker',
+      description: '',
+      detailedDescription: 'Allocates project resources and provides live team status.',
+      usageSteps: [],
+      usageExamples: [],
+      faqs: [],
+    });
+
     expect(report.blockSupportContent).toBe(true);
-    expect(report.issues.map((issue) => issue.code)).toContain(
-      'gantt-chart-unsupported-project-management-claim'
+    expect(report.issues.map((issue) => issue.code)).toEqual(
+      expect.arrayContaining([
+        'gantt-chart-unsupported-project-management-claim',
+        'gantt-generator-resource-management-claim',
+      ])
     );
   });
 

@@ -1,59 +1,96 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "Local Gantt chart editor" },
-    "inputs": { "taskDates": "Task start and end dates" },
+    "modes": { "localProjectPlanning": "Local Gantt project planning" },
+    "inputs": {
+      "taskFields": "Task names, dates, progress, milestones, and dependencies",
+      "jsonProject": "Local JSON project file",
+      "csvProject": "Local CSV project file"
+    },
+    "outputs": {
+      "criticalPath": "Calculated critical path",
+      "jsonProject": "JSON project file",
+      "csvProject": "CSV project file"
+    },
     "features": {
-      "taskNameDatesProgress": "Edit task names, dates, and progress"
+      "taskNameDatesProgress": "Edit task names, dates, and progress",
+      "dependencies": "Task dependency links",
+      "milestones": "Zero-day milestones",
+      "criticalPathHighlighting": "Critical-path calculation and highlighting",
+      "localPersistence": "Save and restore in this browser",
+      "projectTemplates": "Software, marketing, and event templates",
+      "projectDataExchange": "Local JSON and CSV import and export"
     },
     "limits": {
-      "noDependencies": "No task dependencies",
-      "noMilestones": "No milestones",
-      "noCriticalPath": "No critical path calculation",
-      "noPersistence": "No saved projects",
-      "noDataImportExport": "No project data import or export",
-      "noCollaboration": "No collaboration"
+      "noCollaboration": "No collaboration or team sharing",
+      "noCloudSync": "No cloud synchronization",
+      "noResourceManagement": "No resource allocation or management",
+      "noEnterpriseWorkflow": "No enterprise approval workflow",
+      "noLiveMultiUser": "No live multi-user project status"
     }
   },
-  "detailed_description": "The Gantt Chart Maker is a free online Gantt chart maker for turning a short task list into a visual project timeline or schedule chart. Use it to create Gantt chart online free when you need an easy Gantt chart maker for a quick plan, sprint, campaign, or roadmap snapshot. Add tasks, set start and end dates, update progress percentages, choose a color theme, and preview the result as a horizontal timeline chart. It is useful for sprint planning, marketing campaign schedules, roadmap snapshots, lightweight project briefs, and status visuals where a simple task-duration view is enough. The finished Gantt chart can be downloaded as PNG or SVG for docs, slides, reports, and stakeholder updates. The tool focuses on chart creation; it does not calculate dependencies, resource allocation, critical paths, or live project tracking.",
+  "milestone": "Milestone",
+  "dependencies": "Dependencies",
+  "criticalPath": "Critical path",
+  "days": "days",
+  "projectWarnings": "Project warnings",
+  "criticalPathHelp": "Critical-path tasks are highlighted in red. Durations use inclusive calendar days; milestones add zero days.",
+  "exportJson": "Export JSON",
+  "exportCsv": "Export CSV",
+  "importJson": "Import JSON",
+  "importCsv": "Import CSV",
+  "saveLocal": "Save locally",
+  "restoreLocal": "Restore saved",
+  "clearSaved": "Clear saved",
+  "projectExported": "Project file downloaded.",
+  "projectImported": "Project imported locally.",
+  "importError": "Could not import the project.",
+  "projectSaved": "Project saved in this browser.",
+  "projectRestored": "Saved project restored.",
+  "noSavedProject": "No valid saved project was found.",
+  "savedProjectCleared": "Saved project cleared.",
+  "projectCleared": "Current project cleared.",
+  "chartNotReady": "The chart is not ready to export yet.",
+  "projectTemplate": "Project template",
+  "applyTemplate": "Apply template",
+  "templateApplied": "Template applied.",
+  "templateSoftwareRelease": "Software release",
+  "templateMarketingCampaign": "Marketing campaign",
+  "templateEventPreparation": "Event preparation",
+  "templateTaskReleasePlan": "Plan release",
+  "templateTaskReleaseBuild": "Build features",
+  "templateTaskReleaseTest": "Test release",
+  "templateTaskReleaseLaunch": "Release",
+  "templateTaskCampaignBrief": "Campaign brief",
+  "templateTaskCampaignCreate": "Create campaign",
+  "templateTaskCampaignLaunch": "Launch campaign",
+  "templateTaskEventScope": "Define event",
+  "templateTaskEventLogistics": "Arrange logistics",
+  "templateTaskEventRehearsal": "Run rehearsal",
+  "templateTaskEventDay": "Event day",
+  "projectActions": "Project actions",
+  "removeTask": "Remove task",
+  "noTasks": "Add a task or apply a template to begin.",
+  "localOnlyTitle": "Local project data",
+  "localOnlyDescription": "Imports, exports, calculations, and saved projects stay in this browser. Nothing is uploaded or synchronized.",
+  "detailed_description": "Create a local Gantt project with task dates, progress, milestones, and dependency links. The browser calculates a deterministic critical path, highlights its tasks, and warns about cycles, missing dependencies, or invalid dates. Save and restore one project in this browser, start from a software release, marketing campaign, or event preparation template, and exchange project data with local JSON or CSV files. PNG and SVG chart export remain available. The tool does not provide collaboration, cloud synchronization, resource allocation, enterprise approval workflows, or live multi-user status.",
   "usage_steps": [
-    "Edit the chart title and choose a color theme.",
-    "Click Add Task to create another task row.",
-    "Enter each task name, start date, end date, and progress percentage.",
-    "Review the live Gantt preview on the right side of the page.",
-    "Remove any sample task you do not need.",
-    "Download the finished Gantt chart as PNG or SVG."
+    "Choose a built-in template or add tasks manually.",
+    "Set each task name, dates, progress, milestone status, and dependencies.",
+    "Review warnings and the red critical-path highlight in the preview.",
+    "Save the project in this browser or export it as JSON or CSV.",
+    "Import a local JSON or CSV project when you want to continue editing.",
+    "Download the chart as PNG or SVG."
   ],
   "usage_examples": [
-    "Create a Gantt chart online for a small project plan with task names, dates, and progress bars.",
-    "Create a software sprint timeline with planning, development, testing, and release tasks.",
-    "Build a marketing campaign schedule chart showing content drafting, review, launch, and reporting.",
-    "Turn a construction, event, or product roadmap plan into a simple visual timeline for a stakeholder update.",
-    "Export a PNG for a status memo or an SVG for a slide deck."
+    "Plan a software release from scope through testing and a zero-day launch milestone.",
+    "Link campaign brief, production, and launch tasks and review the longest dependency chain.",
+    "Prepare an event schedule locally and exchange it as CSV with a spreadsheet workflow."
   ],
   "faqs": [
-    {
-      "question": "Can I export the Gantt chart?",
-      "answer": "Yes. The current chart can be downloaded as PNG or SVG from the buttons above the editor."
-    },
-    {
-      "question": "Does this tool track task dependencies?",
-      "answer": "No. It visualizes task dates and progress, but it does not calculate dependencies, critical paths, or resource constraints."
-    },
-    {
-      "question": "Can I use it as an online project timeline maker?",
-      "answer": "Yes. It works well for quick project timeline visuals when you need editable task names, start dates, end dates, progress bars, and PNG or SVG export."
-    },
-    {
-      "question": "Can I create a Gantt chart online without installing software?",
-      "answer": "Yes. You can create a Gantt chart online in the browser, edit the rows, preview the chart, and export PNG or SVG files without installing a desktop app."
-    },
-    {
-      "question": "What fields can I edit?",
-      "answer": "You can edit the chart title, color theme, task name, start date, end date, and progress percentage for each task."
-    },
-    {
-      "question": "Is this a project management app?",
-      "answer": "No. It is a browser-based chart maker for quick project timeline visuals, not a full project management system."
-    }
+    { "question": "Can the tool calculate a critical path?", "answer": "Yes. It sums inclusive calendar-day task durations across dependencies, treats milestones as zero days, and highlights one deterministic longest path." },
+    { "question": "Where is a saved project stored?", "answer": "It is stored only in this browser's local storage. There is no account or cloud synchronization." },
+    { "question": "Are imported files uploaded?", "answer": "No. JSON and CSV files are read locally in the browser and are not uploaded." },
+    { "question": "Can I export the chart?", "answer": "Yes. PNG and SVG chart export are available, and project data can be exported as JSON or CSV." },
+    { "question": "Does it manage resources or team status?", "answer": "No. It does not allocate resources, provide collaboration, run enterprise approvals, or show live multi-user status." }
   ]
 }

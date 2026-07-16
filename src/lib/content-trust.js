@@ -549,8 +549,8 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
   },
   {
     code: 'gantt-chart-unsupported-project-management-claim',
-    pattern: /\bmanage dependencies\b|\bidentify task dependencies\b|gestiona(?:r)? las dependencias|identificar dependencias|cuellos de botella|ruta cr[ií]tica|asignaci[oó]n de recursos|seguimiento en vivo/i,
-    message: 'Claims project-management behavior that is not present in the current Gantt chart maker.',
+    pattern: /\bresource allocation\b|\ballocates? project resources\b|\blive (?:team|multi-user) status\b|\benterprise (?:approval )?workflow\b|asignaci[oó]n de recursos|seguimiento en vivo/i,
+    message: 'Claims resource, enterprise workflow, or live team behavior that is not present in the local Gantt chart maker.',
     slugs: ['gantt-chart-generator'],
   },
   {

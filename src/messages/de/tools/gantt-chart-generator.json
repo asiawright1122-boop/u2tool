@@ -1,30 +1,113 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "Lokaler Gantt-Diagramm-Editor" },
-    "inputs": { "taskDates": "Start- und Enddatum der Aufgaben" },
+    "modes": {
+      "localProjectPlanning": "Lokale Gantt-Projektplanung"
+    },
+    "inputs": {
+      "taskFields": "Aufgabennamen, Termine, Fortschritt, Meilensteine und Abhängigkeiten",
+      "jsonProject": "Lokale JSON-Projektdatei",
+      "csvProject": "Lokale CSV-Projektdatei"
+    },
+    "outputs": {
+      "criticalPath": "Berechneter kritischer Pfad",
+      "jsonProject": "JSON-Projektdatei",
+      "csvProject": "CSV-Projektdatei"
+    },
     "features": {
-      "taskNameDatesProgress": "Aufgabennamen, Daten und Fortschritt bearbeiten"
+      "taskNameDatesProgress": "Aufgabennamen, Termine und Fortschritt bearbeiten",
+      "dependencies": "Abhängigkeiten zwischen Aufgaben",
+      "milestones": "Meilensteine mit null Tagen",
+      "criticalPathHighlighting": "Berechnung und Hervorhebung des kritischen Pfads",
+      "localPersistence": "In diesem Browser speichern und wiederherstellen",
+      "projectTemplates": "Vorlagen für Software, Marketing und Veranstaltungen",
+      "projectDataExchange": "Lokaler JSON- und CSV-Import und -Export"
     },
     "limits": {
-      "noDependencies": "Keine Aufgabenabhängigkeiten",
-      "noMilestones": "Keine Meilensteine",
-      "noCriticalPath": "Keine Berechnung des kritischen Pfads",
-      "noPersistence": "Keine gespeicherten Projekte",
-      "noDataImportExport": "Kein Import oder Export von Projektdaten",
-      "noCollaboration": "Keine Zusammenarbeit"
+      "noCollaboration": "Keine Zusammenarbeit oder Freigabe im Team",
+      "noCloudSync": "Keine Cloud-Synchronisierung",
+      "noResourceManagement": "Keine Zuweisung oder Verwaltung von Ressourcen",
+      "noEnterpriseWorkflow": "Kein Enterprise-Genehmigungsworkflow",
+      "noLiveMultiUser": "Kein Live-Mehrbenutzer-Projektstatus"
     }
   },
-  "detailed_description": "Der Gantt-Diagramm-Ersteller wandelt eine kurze Aufgabenliste im Browser in eine visuelle Zeitleiste um. Fügen Sie Aufgabennamen, Start- und Enddaten sowie Fortschrittswerte hinzu, wählen Sie ein Farbthema und laden Sie das Diagramm als PNG oder SVG herunter. Das Werkzeug modelliert keine Abhängigkeiten oder Meilensteine, berechnet keinen kritischen Pfad und speichert keine Projektdaten.",
+  "milestone": "Meilenstein",
+  "dependencies": "Abhängigkeiten",
+  "criticalPath": "Kritischer Pfad",
+  "days": "Tage",
+  "projectWarnings": "Projektwarnungen",
+  "criticalPathHelp": "Aufgaben auf dem kritischen Pfad werden rot hervorgehoben. Dauern verwenden einschließlich gezählte Kalendertage; Meilensteine fügen null Tage hinzu.",
+  "exportJson": "JSON exportieren",
+  "exportCsv": "CSV exportieren",
+  "importJson": "JSON importieren",
+  "importCsv": "CSV importieren",
+  "saveLocal": "Lokal speichern",
+  "restoreLocal": "Gespeichertes wiederherstellen",
+  "clearSaved": "Gespeichertes löschen",
+  "projectExported": "Projektdatei wurde heruntergeladen.",
+  "projectImported": "Projekt wurde lokal importiert.",
+  "importError": "Das Projekt konnte nicht importiert werden.",
+  "projectSaved": "Projekt wurde in diesem Browser gespeichert.",
+  "projectRestored": "Gespeichertes Projekt wurde wiederhergestellt.",
+  "noSavedProject": "Es wurde kein gültiges gespeichertes Projekt gefunden.",
+  "savedProjectCleared": "Gespeichertes Projekt wurde gelöscht.",
+  "projectCleared": "Aktuelles Projekt wurde geleert.",
+  "chartNotReady": "Das Diagramm kann noch nicht exportiert werden.",
+  "projectTemplate": "Projektvorlage",
+  "applyTemplate": "Vorlage anwenden",
+  "templateApplied": "Vorlage wurde angewendet.",
+  "templateSoftwareRelease": "Software-Release",
+  "templateMarketingCampaign": "Marketingkampagne",
+  "templateEventPreparation": "Veranstaltungsvorbereitung",
+  "templateTaskReleasePlan": "Release planen",
+  "templateTaskReleaseBuild": "Funktionen entwickeln",
+  "templateTaskReleaseTest": "Release testen",
+  "templateTaskReleaseLaunch": "Release",
+  "templateTaskCampaignBrief": "Kampagnenbriefing",
+  "templateTaskCampaignCreate": "Kampagne erstellen",
+  "templateTaskCampaignLaunch": "Kampagne starten",
+  "templateTaskEventScope": "Veranstaltung definieren",
+  "templateTaskEventLogistics": "Logistik organisieren",
+  "templateTaskEventRehearsal": "Probe durchführen",
+  "templateTaskEventDay": "Veranstaltungstag",
+  "projectActions": "Projektaktionen",
+  "removeTask": "Aufgabe entfernen",
+  "noTasks": "Fügen Sie eine Aufgabe hinzu oder wenden Sie eine Vorlage an.",
+  "localOnlyTitle": "Lokale Projektdaten",
+  "localOnlyDescription": "Importe, Exporte, Berechnungen und gespeicherte Projekte bleiben in diesem Browser. Nichts wird hochgeladen oder synchronisiert.",
+  "detailed_description": "Erstellen Sie ein lokales Gantt-Projekt mit Aufgabenterminen, Fortschritt, Meilensteinen und Abhängigkeiten. Der Browser berechnet einen deterministischen kritischen Pfad, hebt dessen Aufgaben hervor und warnt vor Zyklen, fehlenden Abhängigkeiten oder ungültigen Terminen. Speichern Sie ein Projekt in diesem Browser, verwenden Sie Vorlagen für Software-Releases, Marketingkampagnen oder Veranstaltungen und tauschen Sie Projektdaten über lokale JSON- oder CSV-Dateien aus. Der Export als PNG und SVG bleibt verfügbar. Das Werkzeug bietet keine Zusammenarbeit, Cloud-Synchronisierung, Ressourcenzuweisung, Enterprise-Genehmigungsworkflows oder Live-Mehrbenutzer-Status.",
   "usage_steps": [
-    "Klicken Sie auf 'Aufgabe hinzufügen', um Ihre erste Projektarbeit zu erstellen",
-    "Geben Sie den Namen, den Start- und Endtermin jeder Aufgabe ein",
-    "Setzen Sie den Fortschrittswert, um den Fortschritt zu verfolgen",
-    "Wählen Sie ein Farbthema, das zu Ihrem Projektstil passt",
-    "Vorschau Ihres Gantt-Diagramms und Herunterladen als PNG oder SVG"
+    "Wählen Sie eine integrierte Vorlage oder fügen Sie Aufgaben manuell hinzu.",
+    "Legen Sie Name, Termine, Fortschritt, Meilensteinstatus und Abhängigkeiten jeder Aufgabe fest.",
+    "Prüfen Sie Warnungen und die rote Hervorhebung des kritischen Pfads in der Vorschau.",
+    "Speichern Sie das Projekt in diesem Browser oder exportieren Sie es als JSON oder CSV.",
+    "Importieren Sie ein lokales JSON- oder CSV-Projekt, um es weiter zu bearbeiten.",
+    "Laden Sie das Diagramm als PNG oder SVG herunter."
   ],
   "usage_examples": [
-    "Erstellen Sie einen Zeitplan für Softwareentwicklungs-Sprintphasen wie Planung, Entwicklung, Test und Deployment",
-    "Erstellen Sie ein Gantt-Diagramm für eine Marketingkampagne, das die Daten für die Erstellung, Überprüfung und Einführung des Inhalts zeigt",
-    "Visualisieren Sie die Bauphasen Fundament, Rahmen, Elektrik und Abschluss als einfache Aufgabenbalken"
+    "Planen Sie ein Software-Release vom Umfang bis zum Test und einem nulltägigen Release-Meilenstein.",
+    "Verknüpfen Sie Briefing, Produktion und Start einer Kampagne und prüfen Sie die längste Abhängigkeitskette.",
+    "Bereiten Sie einen Veranstaltungsplan lokal vor und tauschen Sie ihn als CSV mit einem Tabellenworkflow aus."
+  ],
+  "faqs": [
+    {
+      "question": "Kann das Werkzeug einen kritischen Pfad berechnen?",
+      "answer": "Ja. Es summiert einschließlich gezählte Kalendertage über Abhängigkeiten, behandelt Meilensteine als null Tage und hebt einen deterministischen längsten Pfad hervor."
+    },
+    {
+      "question": "Wo wird ein gespeichertes Projekt abgelegt?",
+      "answer": "Es wird nur im lokalen Speicher dieses Browsers abgelegt. Es gibt kein Konto und keine Cloud-Synchronisierung."
+    },
+    {
+      "question": "Werden importierte Dateien hochgeladen?",
+      "answer": "Nein. JSON- und CSV-Dateien werden lokal im Browser gelesen und nicht hochgeladen."
+    },
+    {
+      "question": "Kann ich das Diagramm exportieren?",
+      "answer": "Ja. Das Diagramm kann als PNG oder SVG und die Projektdaten als JSON oder CSV exportiert werden."
+    },
+    {
+      "question": "Verwaltet es Ressourcen oder den Teamstatus?",
+      "answer": "Nein. Es weist keine Ressourcen zu, bietet keine Zusammenarbeit, führt keine Enterprise-Genehmigungen aus und zeigt keinen Live-Mehrbenutzer-Status."
+    }
   ]
 }

@@ -1,30 +1,93 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "Éditeur local de diagramme de Gantt" },
-    "inputs": { "taskDates": "Dates de début et de fin des tâches" },
+    "modes": { "localProjectPlanning": "Planification locale de projet Gantt" },
+    "inputs": {
+      "taskFields": "Noms, dates, avancement, jalons et dépendances des tâches",
+      "jsonProject": "Fichier de projet JSON local",
+      "csvProject": "Fichier de projet CSV local"
+    },
+    "outputs": {
+      "criticalPath": "Chemin critique calculé",
+      "jsonProject": "Fichier de projet JSON",
+      "csvProject": "Fichier de projet CSV"
+    },
     "features": {
-      "taskNameDatesProgress": "Modifier les noms, les dates et l’avancement des tâches"
+      "taskNameDatesProgress": "Modifier les noms, dates et avancement",
+      "dependencies": "Liens de dépendance entre tâches",
+      "milestones": "Jalons de zéro jour",
+      "criticalPathHighlighting": "Calcul et mise en évidence du chemin critique",
+      "localPersistence": "Enregistrer et restaurer dans ce navigateur",
+      "projectTemplates": "Modèles logiciel, marketing et événement",
+      "projectDataExchange": "Import et export locaux JSON et CSV"
     },
     "limits": {
-      "noDependencies": "Aucune dépendance entre les tâches",
-      "noMilestones": "Aucun jalon",
-      "noCriticalPath": "Aucun calcul du chemin critique",
-      "noPersistence": "Aucun projet enregistré",
-      "noDataImportExport": "Aucun import ni export des données du projet",
-      "noCollaboration": "Aucune collaboration"
+      "noCollaboration": "Aucune collaboration ni partage d’équipe",
+      "noCloudSync": "Aucune synchronisation cloud",
+      "noResourceManagement": "Aucune allocation ni gestion des ressources",
+      "noEnterpriseWorkflow": "Aucun circuit d’approbation d’entreprise",
+      "noLiveMultiUser": "Aucun état multiutilisateur en direct"
     }
   },
-  "detailed_description": "Le générateur de diagrammes de Gantt transforme une courte liste de tâches en chronologie visuelle dans le navigateur. Ajoutez les noms, les dates de début et de fin et les pourcentages d’avancement, choisissez un thème, puis téléchargez le diagramme en PNG ou SVG. L’outil ne modélise ni dépendances ni jalons, ne calcule pas le chemin critique et n’enregistre pas les données du projet.",
+  "milestone": "Jalon",
+  "dependencies": "Dépendances",
+  "criticalPath": "Chemin critique",
+  "days": "jours",
+  "projectWarnings": "Avertissements du projet",
+  "criticalPathHelp": "Les tâches du chemin critique sont affichées en rouge. Les durées incluent les dates de début et de fin ; les jalons durent zéro jour.",
+  "exportJson": "Exporter JSON",
+  "exportCsv": "Exporter CSV",
+  "importJson": "Importer JSON",
+  "importCsv": "Importer CSV",
+  "saveLocal": "Enregistrer localement",
+  "restoreLocal": "Restaurer l’enregistrement",
+  "clearSaved": "Effacer l’enregistrement",
+  "projectExported": "Fichier de projet téléchargé.",
+  "projectImported": "Projet importé localement.",
+  "importError": "Impossible d’importer le projet.",
+  "projectSaved": "Projet enregistré dans ce navigateur.",
+  "projectRestored": "Projet enregistré restauré.",
+  "noSavedProject": "Aucun projet enregistré valide n’a été trouvé.",
+  "savedProjectCleared": "Projet enregistré effacé.",
+  "projectCleared": "Projet actuel effacé.",
+  "chartNotReady": "Le graphique n’est pas encore prêt à être exporté.",
+  "projectTemplate": "Modèle de projet",
+  "applyTemplate": "Appliquer le modèle",
+  "templateApplied": "Modèle appliqué.",
+  "templateSoftwareRelease": "Version logicielle",
+  "templateMarketingCampaign": "Campagne marketing",
+  "templateEventPreparation": "Préparation d’événement",
+  "templateTaskReleasePlan": "Planifier la version",
+  "templateTaskReleaseBuild": "Développer les fonctions",
+  "templateTaskReleaseTest": "Tester la version",
+  "templateTaskReleaseLaunch": "Publier la version",
+  "templateTaskCampaignBrief": "Brief de campagne",
+  "templateTaskCampaignCreate": "Créer la campagne",
+  "templateTaskCampaignLaunch": "Lancer la campagne",
+  "templateTaskEventScope": "Définir l’événement",
+  "templateTaskEventLogistics": "Organiser la logistique",
+  "templateTaskEventRehearsal": "Effectuer la répétition",
+  "templateTaskEventDay": "Jour de l’événement",
+  "projectActions": "Actions du projet",
+  "removeTask": "Supprimer la tâche",
+  "noTasks": "Ajoutez une tâche ou appliquez un modèle pour commencer.",
+  "localOnlyTitle": "Données de projet locales",
+  "localOnlyDescription": "Les imports, exports, calculs et projets enregistrés restent dans ce navigateur. Rien n’est téléversé ni synchronisé.",
+  "detailed_description": "Créez dans le navigateur un projet Gantt avec dates, avancement, jalons et dépendances. L’outil calcule un chemin critique déterministe, met en évidence ses tâches et signale les cycles, dépendances manquantes ou dates invalides. Vous pouvez enregistrer et restaurer un projet dans ce navigateur, commencer avec un modèle de version logicielle, campagne marketing ou préparation d’événement, puis échanger les données avec des fichiers JSON ou CSV locaux. L’export du graphique en PNG et SVG reste disponible. L’outil ne fournit ni collaboration, ni synchronisation cloud, ni allocation de ressources, ni approbations d’entreprise, ni état multiutilisateur en direct.",
   "usage_steps": [
-    "Cliquez sur 'Ajouter une tâche' pour créer votre première tâche de projet",
-    "Entrez le nom de la tâche, la date de début et la date de fin pour chaque tâche",
-    "Définissez le pourcentage de progression pour suivre l'état d'achèvement",
-    "Choisissez un thème de couleur qui correspond au style de votre projet",
-    "Prévisualisez votre diagramme de Gantt et téléchargez-le en PNG ou SVG"
+    "Choisissez un modèle intégré ou ajoutez les tâches manuellement.",
+    "Définissez le nom, les dates, l’avancement, le jalon et les dépendances de chaque tâche.",
+    "Vérifiez les avertissements et le chemin critique affiché en rouge.",
+    "Enregistrez dans ce navigateur ou exportez en JSON, CSV, PNG ou SVG.",
+    "Importez un projet JSON ou CSV local pour poursuivre la modification."
   ],
   "usage_examples": [
-    "Créez une chronologie de sprint de développement logiciel avec les phases de Planification, Développement, Tests et Déploiement",
-    "Construisez un diagramme de Gantt de campagne marketing montrant les dates de création de contenu, de révision et de lancement",
-    "Affichez les phases fondations, structure, électricité et finitions sous forme de barres de tâches simples"
+    "Planifier une version logicielle jusqu’à un jalon de publication de zéro jour.",
+    "Relier le brief, la production et le lancement d’une campagne puis examiner la chaîne la plus longue.",
+    "Préparer localement un événement et échanger le calendrier au format CSV."
+  ],
+  "faqs": [
+    { "question": "L’outil calcule-t-il le chemin critique ?", "answer": "Oui. Il additionne les jours calendaires inclusifs des chaînes, traite les jalons comme zéro jour et met en évidence un chemin le plus long déterministe." },
+    { "question": "Où le projet est-il enregistré ?", "answer": "Uniquement dans le stockage local de ce navigateur. Il n’y a ni compte ni synchronisation cloud." },
+    { "question": "Les fichiers importés sont-ils téléversés ?", "answer": "Non. Les fichiers JSON et CSV sont lus localement dans le navigateur." }
   ]
 }

@@ -1,30 +1,93 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "Editor local de gráfico de Gantt" },
-    "inputs": { "taskDates": "Datas de início e término das tarefas" },
+    "modes": { "localProjectPlanning": "Planejamento local de projetos Gantt" },
+    "inputs": {
+      "taskFields": "Nomes, datas, progresso, marcos e dependências das tarefas",
+      "jsonProject": "Arquivo de projeto JSON local",
+      "csvProject": "Arquivo de projeto CSV local"
+    },
+    "outputs": {
+      "criticalPath": "Caminho crítico calculado",
+      "jsonProject": "Arquivo de projeto JSON",
+      "csvProject": "Arquivo de projeto CSV"
+    },
     "features": {
-      "taskNameDatesProgress": "Editar nomes, datas e progresso das tarefas"
+      "taskNameDatesProgress": "Editar nomes, datas e progresso das tarefas",
+      "dependencies": "Ligações de dependência entre tarefas",
+      "milestones": "Marcos de zero dias",
+      "criticalPathHighlighting": "Cálculo e destaque do caminho crítico",
+      "localPersistence": "Salvar e restaurar neste navegador",
+      "projectTemplates": "Modelos de software, marketing e eventos",
+      "projectDataExchange": "Importação e exportação local de JSON e CSV"
     },
     "limits": {
-      "noDependencies": "Sem dependências entre tarefas",
-      "noMilestones": "Sem marcos",
-      "noCriticalPath": "Sem cálculo do caminho crítico",
-      "noPersistence": "Sem projetos salvos",
-      "noDataImportExport": "Sem importação ou exportação de dados do projeto",
-      "noCollaboration": "Sem colaboração"
+      "noCollaboration": "Sem colaboração ou compartilhamento em equipe",
+      "noCloudSync": "Sem sincronização na nuvem",
+      "noResourceManagement": "Sem alocação ou gestão de recursos",
+      "noEnterpriseWorkflow": "Sem fluxo de aprovação empresarial",
+      "noLiveMultiUser": "Sem status multiusuário ao vivo"
     }
   },
-  "detailed_description": "O gerador de gráficos de Gantt transforma uma lista curta de tarefas em uma linha do tempo visual no navegador. Adicione nomes, datas de início e fim e percentuais de progresso, escolha um tema de cores e baixe o gráfico como PNG ou SVG. A ferramenta não modela dependências ou marcos, não calcula o caminho crítico e não salva dados do projeto.",
+  "milestone": "Marco",
+  "dependencies": "Dependências",
+  "criticalPath": "Caminho crítico",
+  "days": "dias",
+  "projectWarnings": "Avisos do projeto",
+  "criticalPathHelp": "As tarefas do caminho crítico são destacadas em vermelho. As durações incluem as datas inicial e final; marcos têm zero dias.",
+  "exportJson": "Exportar JSON",
+  "exportCsv": "Exportar CSV",
+  "importJson": "Importar JSON",
+  "importCsv": "Importar CSV",
+  "saveLocal": "Salvar localmente",
+  "restoreLocal": "Restaurar salvo",
+  "clearSaved": "Limpar salvo",
+  "projectExported": "Arquivo do projeto baixado.",
+  "projectImported": "Projeto importado localmente.",
+  "importError": "Não foi possível importar o projeto.",
+  "projectSaved": "Projeto salvo neste navegador.",
+  "projectRestored": "Projeto salvo restaurado.",
+  "noSavedProject": "Nenhum projeto salvo válido foi encontrado.",
+  "savedProjectCleared": "Projeto salvo removido.",
+  "projectCleared": "Projeto atual limpo.",
+  "chartNotReady": "O gráfico ainda não está pronto para exportação.",
+  "projectTemplate": "Modelo de projeto",
+  "applyTemplate": "Aplicar modelo",
+  "templateApplied": "Modelo aplicado.",
+  "templateSoftwareRelease": "Lançamento de software",
+  "templateMarketingCampaign": "Campanha de marketing",
+  "templateEventPreparation": "Preparação de evento",
+  "templateTaskReleasePlan": "Planejar lançamento",
+  "templateTaskReleaseBuild": "Desenvolver recursos",
+  "templateTaskReleaseTest": "Testar lançamento",
+  "templateTaskReleaseLaunch": "Lançar versão",
+  "templateTaskCampaignBrief": "Briefing da campanha",
+  "templateTaskCampaignCreate": "Criar campanha",
+  "templateTaskCampaignLaunch": "Lançar campanha",
+  "templateTaskEventScope": "Definir evento",
+  "templateTaskEventLogistics": "Organizar logística",
+  "templateTaskEventRehearsal": "Realizar ensaio",
+  "templateTaskEventDay": "Dia do evento",
+  "projectActions": "Ações do projeto",
+  "removeTask": "Remover tarefa",
+  "noTasks": "Adicione uma tarefa ou aplique um modelo para começar.",
+  "localOnlyTitle": "Dados locais do projeto",
+  "localOnlyDescription": "Importações, exportações, cálculos e projetos salvos permanecem neste navegador. Nada é enviado ou sincronizado.",
+  "detailed_description": "Crie no navegador um projeto Gantt com datas, progresso, marcos e dependências. A ferramenta calcula um caminho crítico determinístico, destaca suas tarefas e alerta sobre ciclos, dependências ausentes ou datas inválidas. Você pode salvar e restaurar um projeto neste navegador, começar com um modelo de lançamento de software, campanha de marketing ou preparação de evento e trocar dados por arquivos JSON ou CSV locais. A exportação do gráfico em PNG e SVG continua disponível. A ferramenta não oferece colaboração, sincronização na nuvem, alocação de recursos, aprovações empresariais ou status multiusuário ao vivo.",
   "usage_steps": [
-    "Clique em 'Adicionar tarefa' para criar sua primeira tarefa do projeto",
-    "Digite o nome da tarefa, data de início e data de término para cada tarefa",
-    "Defina a porcentagem de progresso para acompanhar o status de conclusão",
-    "Escolha um tema de cores que combine com o estilo do seu projeto",
-    "Visualize seu gráfico de Gantt e baixe como PNG ou SVG"
+    "Escolha um modelo integrado ou adicione tarefas manualmente.",
+    "Defina nome, datas, progresso, marco e dependências de cada tarefa.",
+    "Revise os avisos e o caminho crítico destacado em vermelho.",
+    "Salve neste navegador ou exporte como JSON, CSV, PNG ou SVG.",
+    "Importe um projeto JSON ou CSV local para continuar a edição."
   ],
   "usage_examples": [
-    "Crie uma linha do tempo de sprint de desenvolvimento de software com fases de Planejamento, Desenvolvimento, Testes e Implantação",
-    "Construa um gráfico de Gantt de campanha de marketing mostrando datas de criação de conteúdo, revisão e lançamento",
-    "Mostre as fases fundação, estrutura, elétrica e acabamento como barras de tarefas simples"
+    "Planejar uma versão de software até um marco de lançamento de zero dias.",
+    "Ligar briefing, produção e lançamento de campanha e revisar a cadeia mais longa.",
+    "Preparar um evento localmente e trocar o cronograma como CSV."
+  ],
+  "faqs": [
+    { "question": "A ferramenta calcula o caminho crítico?", "answer": "Sim. Ela soma os dias corridos inclusivos das cadeias, trata marcos como zero dias e destaca um caminho mais longo determinístico." },
+    { "question": "Onde o projeto é salvo?", "answer": "Somente no armazenamento local deste navegador. Não há conta nem sincronização na nuvem." },
+    { "question": "Os arquivos importados são enviados?", "answer": "Não. Arquivos JSON e CSV são lidos localmente no navegador." }
   ]
 }

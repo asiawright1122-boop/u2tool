@@ -184,6 +184,7 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/sql-query-optimizer',
       'en/excel-viewer',
       'en/typing-speed-test',
+      'en/gantt-chart-generator',
       'ru/grammar-checker',
       'ja/json-formatter',
       'ar/password-generator',

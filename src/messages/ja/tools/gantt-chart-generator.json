@@ -1,30 +1,93 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "ローカルのガントチャートエディター" },
-    "inputs": { "taskDates": "タスクの開始日と終了日" },
+    "modes": { "localProjectPlanning": "ローカルのガントプロジェクト計画" },
+    "inputs": {
+      "taskFields": "タスク名、日付、進捗、マイルストーン、依存関係",
+      "jsonProject": "ローカル JSON プロジェクトファイル",
+      "csvProject": "ローカル CSV プロジェクトファイル"
+    },
+    "outputs": {
+      "criticalPath": "計算されたクリティカルパス",
+      "jsonProject": "JSON プロジェクトファイル",
+      "csvProject": "CSV プロジェクトファイル"
+    },
     "features": {
-      "taskNameDatesProgress": "タスク名、日付、進捗を編集"
+      "taskNameDatesProgress": "タスク名、日付、進捗を編集",
+      "dependencies": "タスクの依存関係",
+      "milestones": "0日マイルストーン",
+      "criticalPathHighlighting": "クリティカルパスの計算と強調表示",
+      "localPersistence": "このブラウザーで保存と復元",
+      "projectTemplates": "ソフトウェア、マーケティング、イベントのテンプレート",
+      "projectDataExchange": "ローカル JSON / CSV のインポートとエクスポート"
     },
     "limits": {
-      "noDependencies": "タスクの依存関係はありません",
-      "noMilestones": "マイルストーンはありません",
-      "noCriticalPath": "クリティカルパスは計算しません",
-      "noPersistence": "プロジェクトは保存しません",
-      "noDataImportExport": "プロジェクトデータのインポートとエクスポートはできません",
-      "noCollaboration": "共同編集機能はありません"
+      "noCollaboration": "共同作業やチーム共有なし",
+      "noCloudSync": "クラウド同期なし",
+      "noResourceManagement": "リソース配分や管理なし",
+      "noEnterpriseWorkflow": "企業向け承認ワークフローなし",
+      "noLiveMultiUser": "リアルタイムの複数ユーザー状態なし"
     }
   },
-  "detailed_description": "ガントチャート作成ツールは、短いタスク一覧をブラウザ内の視覚的なタイムラインへ変換します。タスク名、開始日、終了日、進捗率を追加し、配色を選んで、PNG または SVG 画像をダウンロードできます。依存関係やマイルストーンのモデル化、クリティカルパスの計算、プロジェクトデータの保存には対応していません。",
+  "milestone": "マイルストーン",
+  "dependencies": "依存関係",
+  "criticalPath": "クリティカルパス",
+  "days": "日",
+  "projectWarnings": "プロジェクトの警告",
+  "criticalPathHelp": "クリティカルパスのタスクは赤色で表示されます。期間は開始日と終了日を含む暦日で、マイルストーンは0日です。",
+  "exportJson": "JSON をエクスポート",
+  "exportCsv": "CSV をエクスポート",
+  "importJson": "JSON をインポート",
+  "importCsv": "CSV をインポート",
+  "saveLocal": "ローカルに保存",
+  "restoreLocal": "保存済みを復元",
+  "clearSaved": "保存済みを削除",
+  "projectExported": "プロジェクトファイルをダウンロードしました。",
+  "projectImported": "プロジェクトをローカルでインポートしました。",
+  "importError": "プロジェクトをインポートできませんでした。",
+  "projectSaved": "このブラウザーにプロジェクトを保存しました。",
+  "projectRestored": "保存済みプロジェクトを復元しました。",
+  "noSavedProject": "有効な保存済みプロジェクトが見つかりません。",
+  "savedProjectCleared": "保存済みプロジェクトを削除しました。",
+  "projectCleared": "現在のプロジェクトを消去しました。",
+  "chartNotReady": "チャートはまだエクスポートできません。",
+  "projectTemplate": "プロジェクトテンプレート",
+  "applyTemplate": "テンプレートを適用",
+  "templateApplied": "テンプレートを適用しました。",
+  "templateSoftwareRelease": "ソフトウェアリリース",
+  "templateMarketingCampaign": "マーケティングキャンペーン",
+  "templateEventPreparation": "イベント準備",
+  "templateTaskReleasePlan": "リリース計画",
+  "templateTaskReleaseBuild": "機能開発",
+  "templateTaskReleaseTest": "リリーステスト",
+  "templateTaskReleaseLaunch": "リリース",
+  "templateTaskCampaignBrief": "キャンペーン概要",
+  "templateTaskCampaignCreate": "キャンペーン制作",
+  "templateTaskCampaignLaunch": "キャンペーン開始",
+  "templateTaskEventScope": "イベント範囲の決定",
+  "templateTaskEventLogistics": "会場・物流の手配",
+  "templateTaskEventRehearsal": "リハーサル",
+  "templateTaskEventDay": "イベント当日",
+  "projectActions": "プロジェクト操作",
+  "removeTask": "タスクを削除",
+  "noTasks": "タスクを追加するかテンプレートを適用してください。",
+  "localOnlyTitle": "ローカルプロジェクトデータ",
+  "localOnlyDescription": "インポート、エクスポート、計算、保存はこのブラウザー内で行われ、アップロードや同期はされません。",
+  "detailed_description": "タスクの日付、進捗、マイルストーン、依存関係を含むガントプロジェクトをブラウザー内で作成できます。クリティカルパスを決定的に計算して該当タスクを強調し、循環、存在しない依存先、無効な日付を警告します。このブラウザーに1件のプロジェクトを保存・復元でき、ソフトウェアリリース、マーケティングキャンペーン、イベント準備のテンプレートから開始できます。プロジェクトデータはローカルの JSON または CSV で交換でき、PNG と SVG のチャート書き出しも利用できます。共同作業、クラウド同期、リソース配分、企業向け承認、リアルタイムの複数ユーザー状態は提供しません。",
   "usage_steps": [
-    "「タスクを追加」をクリックして最初のプロジェクトタスクを作成",
-    "各タスクのタスク名、開始日、終了日を入力",
-    "完了状況を追跡するために進捗率を設定",
-    "プロジェクトスタイルに合ったカラーテーマを選択",
-    "ガントチャートをプレビューしてPNGまたはSVGでダウンロード"
+    "内蔵テンプレートを選ぶか、タスクを手動で追加します。",
+    "各タスクの名前、日付、進捗、マイルストーン、依存関係を設定します。",
+    "警告と、プレビューで赤く表示されるクリティカルパスを確認します。",
+    "このブラウザーに保存するか、JSON、CSV、PNG、SVG として書き出します。",
+    "編集を続けるときはローカルの JSON または CSV を読み込みます。"
   ],
   "usage_examples": [
-    "計画、開発、テスト、デプロイメントフェーズを含むソフトウェア開発スプリントタイムラインを作成",
-    "コンテンツ作成、レビュー、公開日を示すマーケティングキャンペーンガントチャートを作成",
-    "基礎、骨組み、電気、仕上げの各工程を単純なタスクバーとして表示"
+    "計画、開発、テスト、0日リリースマイルストーンをつないだソフトウェア計画を作成する。",
+    "キャンペーン概要、制作、公開をつなぎ、最長の依存チェーンを確認する。",
+    "イベント準備日程をローカルで作成し、CSV で表計算フローと交換する。"
+  ],
+  "faqs": [
+    { "question": "クリティカルパスを計算できますか？", "answer": "はい。依存チェーン上の暦日を合計し、マイルストーンを0日として、決定的な最長パスを強調します。" },
+    { "question": "保存先はどこですか？", "answer": "現在のブラウザーのローカルストレージだけです。アカウントやクラウド同期はありません。" },
+    { "question": "インポートしたファイルはアップロードされますか？", "answer": "いいえ。JSON と CSV はブラウザー内でローカルに読み込まれます。" }
   ]
 }

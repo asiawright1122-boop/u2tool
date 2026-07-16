@@ -1,50 +1,93 @@
 {
   "capabilities": {
-    "modes": { "localChartEditor": "本地甘特图编辑器" },
-    "inputs": { "taskDates": "任务开始和结束日期" },
+    "modes": { "localProjectPlanning": "本地甘特项目规划" },
+    "inputs": {
+      "taskFields": "任务名称、日期、进度、里程碑和依赖关系",
+      "jsonProject": "本地 JSON 项目文件",
+      "csvProject": "本地 CSV 项目文件"
+    },
+    "outputs": {
+      "criticalPath": "计算得到的关键路径",
+      "jsonProject": "JSON 项目文件",
+      "csvProject": "CSV 项目文件"
+    },
     "features": {
-      "taskNameDatesProgress": "编辑任务名称、日期和进度"
+      "taskNameDatesProgress": "编辑任务名称、日期和进度",
+      "dependencies": "任务依赖关系",
+      "milestones": "零天里程碑",
+      "criticalPathHighlighting": "关键路径计算与高亮",
+      "localPersistence": "在当前浏览器中保存和恢复",
+      "projectTemplates": "软件发布、营销活动和活动筹备模板",
+      "projectDataExchange": "本地 JSON 和 CSV 导入导出"
     },
     "limits": {
-      "noDependencies": "不支持任务依赖关系",
-      "noMilestones": "不支持里程碑",
-      "noCriticalPath": "不计算关键路径",
-      "noPersistence": "不保存项目",
-      "noDataImportExport": "不支持导入或导出项目数据",
-      "noCollaboration": "不支持协作"
+      "noCollaboration": "不提供协作或团队共享",
+      "noCloudSync": "不提供云同步",
+      "noResourceManagement": "不提供资源分配或管理",
+      "noEnterpriseWorkflow": "不提供企业审批流程",
+      "noLiveMultiUser": "不提供实时多用户项目状态"
     }
   },
-  "detailed_description": "图表可视化工具可以快速生成各种类型的图表，用于数据可视化。 Gantt Chart Generator 是一个便捷的在线生成器，可以快速生成各种类型的数据。 使用 Gantt Chart Generator，您可以轻松创建符合特定格式要求的数据，无需手动编写。 这个工具支持多种配置选项，让您可以根据需要定制生成的内容。 无论您需要生成测试数据、示例内容还是随机值，Gantt Chart Generator 都能满足您的需求。 所有生成都在浏览器本地完成，确保您的隐私安全，不会上传任何数据。 立即使用 Gantt Chart Generator，体验快速、安全、免费的在线工具服务。",
+  "milestone": "里程碑",
+  "dependencies": "依赖关系",
+  "criticalPath": "关键路径",
+  "days": "天",
+  "projectWarnings": "项目警告",
+  "criticalPathHelp": "关键路径任务以红色高亮。持续时间按包含首尾日期的日历天计算，里程碑为零天。",
+  "exportJson": "导出 JSON",
+  "exportCsv": "导出 CSV",
+  "importJson": "导入 JSON",
+  "importCsv": "导入 CSV",
+  "saveLocal": "保存到本地",
+  "restoreLocal": "恢复保存内容",
+  "clearSaved": "清除保存内容",
+  "projectExported": "项目文件已下载。",
+  "projectImported": "项目已在本地导入。",
+  "importError": "无法导入项目。",
+  "projectSaved": "项目已保存在此浏览器中。",
+  "projectRestored": "已恢复保存的项目。",
+  "noSavedProject": "未找到有效的已保存项目。",
+  "savedProjectCleared": "已清除保存的项目。",
+  "projectCleared": "已清除当前项目。",
+  "chartNotReady": "图表尚未准备好导出。",
+  "projectTemplate": "项目模板",
+  "applyTemplate": "应用模板",
+  "templateApplied": "模板已应用。",
+  "templateSoftwareRelease": "软件发布",
+  "templateMarketingCampaign": "营销活动",
+  "templateEventPreparation": "活动筹备",
+  "templateTaskReleasePlan": "规划发布",
+  "templateTaskReleaseBuild": "开发功能",
+  "templateTaskReleaseTest": "测试发布版本",
+  "templateTaskReleaseLaunch": "正式发布",
+  "templateTaskCampaignBrief": "活动简报",
+  "templateTaskCampaignCreate": "制作活动内容",
+  "templateTaskCampaignLaunch": "启动活动",
+  "templateTaskEventScope": "确定活动范围",
+  "templateTaskEventLogistics": "安排后勤",
+  "templateTaskEventRehearsal": "进行彩排",
+  "templateTaskEventDay": "活动当天",
+  "projectActions": "项目操作",
+  "removeTask": "删除任务",
+  "noTasks": "添加任务或应用模板即可开始。",
+  "localOnlyTitle": "本地项目数据",
+  "localOnlyDescription": "导入、导出、计算和保存都在此浏览器中完成，不会上传或同步任何内容。",
+  "detailed_description": "在浏览器中创建包含任务日期、进度、里程碑和依赖关系的甘特项目。工具会确定性地计算关键路径并高亮相关任务，同时提示循环依赖、缺失依赖或无效日期。你可以在当前浏览器中保存和恢复一个项目，使用软件发布、营销活动或活动筹备模板，并通过本地 JSON 或 CSV 文件交换项目数据。PNG 和 SVG 图表导出仍然可用。本工具不提供协作、云同步、资源分配、企业审批流程或实时多用户状态。",
   "usage_steps": [
-    "打开 Gantt Chart Generator 工具页面",
-    "根据需要配置生成选项（如长度、格式等）",
-    "点击生成按钮，查看生成结果",
-    "复制或下载生成的内容"
+    "选择内置模板或手动添加任务。",
+    "设置任务名称、日期、进度、里程碑状态和依赖关系。",
+    "查看警告以及预览中红色高亮的关键路径。",
+    "在当前浏览器中保存项目，或导出为 JSON、CSV、PNG 或 SVG。",
+    "需要继续编辑时导入本地 JSON 或 CSV 项目文件。"
   ],
   "usage_examples": [
-    "使用 Gantt Chart Generator 生成符合要求的数据",
-    "可以配置各种参数来定制生成结果"
+    "规划从范围确定、开发、测试到发布里程碑的软件版本。",
+    "连接营销简报、内容制作和上线任务，并查看最长依赖链。",
+    "在本地准备活动日程，并以 CSV 与电子表格流程交换。"
   ],
   "faqs": [
-    {
-      "question": "甘特图生成器免费吗？",
-      "answer": "是的，甘特图生成器可免费使用，无需注册或登录。"
-    },
-    {
-      "question": "使用甘特图生成器安全吗？",
-      "answer": "安全。所有数据处理都在浏览器本地完成，不会上传到服务器。"
-    },
-    {
-      "question": "支持导出哪些格式？",
-      "answer": "支持导出 PNG 和 SVG，适合项目汇报、文档归档和排期展示。"
-    },
-    {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。甘特图生成器是完全基于浏览器的在线工具，打开网页即可使用。"
-    },
-    {
-      "question": "适合哪些场景？",
-      "answer": "适合项目排期、研发计划、活动筹备、团队协作和任务进度跟踪。"
-    }
+    { "question": "工具能计算关键路径吗？", "answer": "可以。它会累加依赖链上包含首尾日期的任务时长，将里程碑视为零天，并高亮一条确定性的最长路径。" },
+    { "question": "保存的项目存在哪里？", "answer": "仅存储在当前浏览器的本地存储中，不需要账户，也不会进行云同步。" },
+    { "question": "导入文件会上传吗？", "answer": "不会。JSON 和 CSV 文件只在浏览器本地读取。" }
   ]
 }
