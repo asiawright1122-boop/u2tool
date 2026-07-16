@@ -3,6 +3,7 @@
 
   import { useChartTheme } from '@/hooks/useChartTheme';
   import {
+    assertGanttImportByteLength,
     calculateCriticalPath,
     clearGanttProject,
     createGanttTemplate,
@@ -313,6 +314,7 @@
   async function importProject(file: File | undefined, format: 'json' | 'csv'): Promise<void> {
     if (!file) return;
     try {
+      assertGanttImportByteLength(file.size);
       const input = await file.text();
       tasks = format === 'json' ? ganttTasksFromJson(input) : ganttTasksFromCsv(input);
       feedback = t('projectImported');

@@ -1,3 +1,8 @@
+import {
+  neutralizeCsvFormula,
+  removeCsvFormulaSafetyLayer,
+} from "./csv-formula-safety";
+
 export interface GanttTask {
   id: string;
   name: string;
@@ -12,6 +17,22 @@ export interface CriticalPathResult {
   taskIds: string[];
   totalDays: number;
   warnings: string[];
+}
+
+export const GANTT_IMPORT_LIMITS = Object.freeze({
+  fileBytes: 1024 * 1024,
+  tasks: 500,
+  taskIdCharacters: 128,
+  taskNameCharacters: 256,
+  dateCharacters: 10,
+  dependenciesPerTask: 100,
+  totalDependencyEdges: 5_000,
+});
+
+export function assertGanttImportByteLength(byteLength: number): void {
+  if (byteLength > GANTT_IMPORT_LIMITS.fileBytes) {
+    throw new Error("Gantt project exceeds the 1 MiB import limit.");
+  }
 }
 
 export type GanttTemplateId =
@@ -354,8 +375,20 @@ function parseTask(value: unknown, index: number): GanttTask {
   if (typeof record.id !== "string" || record.id.length === 0) {
     throw new Error(`Task at index ${index} has an invalid ID.`);
   }
+  if (record.id.length > GANTT_IMPORT_LIMITS.taskIdCharacters) {
+    throw new Error(`Task at index ${index} exceeds the ${GANTT_IMPORT_LIMITS.taskIdCharacters}-character ID limit.`);
+  }
   if (typeof record.name !== "string") {
     throw new Error(`Task at index ${index} has an invalid name.`);
+  }
+  if (record.name.length > GANTT_IMPORT_LIMITS.taskNameCharacters) {
+    throw new Error(`Task at index ${index} exceeds the ${GANTT_IMPORT_LIMITS.taskNameCharacters}-character name limit.`);
+  }
+  if (
+    (typeof record.startDate === "string" && record.startDate.length > GANTT_IMPORT_LIMITS.dateCharacters) ||
+    (typeof record.endDate === "string" && record.endDate.length > GANTT_IMPORT_LIMITS.dateCharacters)
+  ) {
+    throw new Error(`Task at index ${index} exceeds the ${GANTT_IMPORT_LIMITS.dateCharacters}-character date limit.`);
   }
   if (
     typeof record.startDate !== "string" ||
@@ -386,6 +419,12 @@ function parseTask(value: unknown, index: number): GanttTask {
   ) {
     throw new Error(`Task at index ${index} has invalid dependency IDs.`);
   }
+  if (record.dependencyIds.length > GANTT_IMPORT_LIMITS.dependenciesPerTask) {
+    throw new Error(`Task at index ${index} exceeds the ${GANTT_IMPORT_LIMITS.dependenciesPerTask}-dependency limit.`);
+  }
+  if (record.dependencyIds.some((id) => id.length > GANTT_IMPORT_LIMITS.taskIdCharacters)) {
+    throw new Error(`Task at index ${index} has a dependency ID exceeding the ${GANTT_IMPORT_LIMITS.taskIdCharacters}-character limit.`);
+  }
 
   return {
     id: record.id,
@@ -402,7 +441,14 @@ function parseTaskArray(value: unknown): GanttTask[] {
   if (!Array.isArray(value)) {
     throw new Error("Gantt project must be an array of tasks.");
   }
+  if (value.length > GANTT_IMPORT_LIMITS.tasks) {
+    throw new Error(`Gantt project exceeds the ${GANTT_IMPORT_LIMITS.tasks}-task import limit.`);
+  }
   const tasks = value.map(parseTask);
+  const totalEdges = tasks.reduce((sum, task) => sum + task.dependencyIds.length, 0);
+  if (totalEdges > GANTT_IMPORT_LIMITS.totalDependencyEdges) {
+    throw new Error(`Gantt project exceeds the ${GANTT_IMPORT_LIMITS.totalDependencyEdges}-edge dependency limit.`);
+  }
   const warnings = validateGanttTasks(tasks);
   if (warnings.length > 0) {
     throw new Error(warnings.join(" "));
@@ -415,6 +461,7 @@ export function ganttTasksToJson(tasks: GanttTask[]): string {
 }
 
 export function ganttTasksFromJson(input: string): GanttTask[] {
+  assertGanttImportByteLength(new TextEncoder().encode(input).byteLength);
   let value: unknown;
   try {
     value = JSON.parse(input);
@@ -425,6 +472,7 @@ export function ganttTasksFromJson(input: string): GanttTask[] {
 }
 
 function quoteCsvCell(value: string): string {
+  value = neutralizeCsvFormula(value);
   if (!/[",\r\n]/.test(value)) return value;
   return `"${value.replaceAll('"', '""')}"`;
 }
@@ -490,6 +538,7 @@ function parseCsvRows(input: string): string[][] {
 }
 
 export function ganttTasksFromCsv(input: string): GanttTask[] {
+  assertGanttImportByteLength(new TextEncoder().encode(input).byteLength);
   const rows = parseCsvRows(input);
   if (rows.length === 0) throw new Error("Gantt CSV is empty.");
   if (
@@ -510,12 +559,16 @@ export function ganttTasksFromCsv(input: string): GanttTask[] {
       throw new Error(`CSV row ${index + 2} has invalid dependency IDs.`);
     }
     return {
-      id: row[0],
-      name: row[1],
-      startDate: row[2],
-      endDate: row[3],
-      progress: Number(row[4]),
-      milestone: row[5] === "true" ? true : row[5] === "false" ? false : row[5],
+      id: removeCsvFormulaSafetyLayer(row[0]),
+      name: removeCsvFormulaSafetyLayer(row[1]),
+      startDate: removeCsvFormulaSafetyLayer(row[2]),
+      endDate: removeCsvFormulaSafetyLayer(row[3]),
+      progress: Number(removeCsvFormulaSafetyLayer(row[4])),
+      milestone: removeCsvFormulaSafetyLayer(row[5]) === "true"
+        ? true
+        : removeCsvFormulaSafetyLayer(row[5]) === "false"
+          ? false
+          : removeCsvFormulaSafetyLayer(row[5]),
       dependencyIds,
     };
   });

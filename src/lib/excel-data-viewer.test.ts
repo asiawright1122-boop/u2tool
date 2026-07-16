@@ -173,6 +173,47 @@ describe('Excel data viewer model', () => {
     ].join('\r\n'));
   });
 
+  it('neutralizes formula-leading CSV cells after whitespace or control characters', () => {
+    const values = ['=SUM(A1:A2)', ' +1', '\t-2', '\u0001@command', "'=intentional"];
+    const sheet = {
+      name: 'Formula safety',
+      range: 'A1:E2',
+      headers: values,
+      rows: [values.map((value, index) => ({
+        address: `${String.fromCharCode(65 + index)}2`,
+        value,
+        formula: null,
+      }))],
+      merges: [],
+    };
+
+    expect(sheetToCsv(sheet)).toBe([
+      "'=SUM(A1:A2),' +1,'\t-2,'\u0001@command,''=intentional",
+      "'=SUM(A1:A2),' +1,'\t-2,'\u0001@command,''=intentional",
+    ].join('\r\n'));
+  });
+
+  it('preserves numeric and boolean CSV scalars while neutralizing formula-like strings', () => {
+    const sheet = {
+      name: 'Scalar safety',
+      range: 'A1:E2',
+      headers: ['Number', 'Boolean', 'String', 'Whitespace', 'Control'],
+      rows: [[
+        { address: 'A2', value: -42, formula: null },
+        { address: 'B2', value: true, formula: null },
+        { address: 'C2', value: '-42', formula: null },
+        { address: 'D2', value: ' \t=SUM(A1:A2)', formula: null },
+        { address: 'E2', value: '\u0001@command', formula: null },
+      ]],
+      merges: [],
+    };
+
+    expect(sheetToCsv(sheet)).toBe([
+      'Number,Boolean,String,Whitespace,Control',
+      "-42,true,'-42,' \t=SUM(A1:A2),'\u0001@command",
+    ].join('\r\n'));
+  });
+
   it('reports safely detected workbook features that the viewer does not execute or reproduce', async () => {
     const workbook = await parseExcelWorkbook(await createExcelWorkbookMetadataFixture());
 

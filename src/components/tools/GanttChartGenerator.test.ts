@@ -20,6 +20,8 @@ import puppeteer, {
 } from "puppeteer";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
+import { GANTT_IMPORT_LIMITS } from "../../lib/gantt-chart";
+
 const repoRoot = fileURLToPath(new URL("../../..", import.meta.url));
 const fixtureRoot = path.join(
   repoRoot,
@@ -32,11 +34,17 @@ let outDir = "";
 let server: Server | undefined;
 let browser: Browser | undefined;
 let baseUrl = "";
+let oversizedJsonPath = "";
+let oversizedCsvPath = "";
 
 beforeAll(async () => {
   tempRoot = mkdtempSync(path.join(tmpdir(), "u2tool-gantt-chart-"));
   outDir = path.join(tempRoot, "dist");
   const cacheDir = path.join(tempRoot, "cache");
+  oversizedJsonPath = path.join(tempRoot, "oversized.json");
+  oversizedCsvPath = path.join(tempRoot, "oversized.csv");
+  writeFileSync(oversizedJsonPath, Buffer.alloc(GANTT_IMPORT_LIMITS.fileBytes + 1, 0x20));
+  writeFileSync(oversizedCsvPath, Buffer.alloc(GANTT_IMPORT_LIMITS.fileBytes + 1, 0x20));
   symlinkSync(
     path.join(repoRoot, "node_modules"),
     path.join(tempRoot, "node_modules"),
@@ -430,6 +438,38 @@ describe("GanttChartGenerator public UI", () => {
     });
   }, 20_000);
 
+  it("rejects oversized JSON and CSV before File.text without replacing valid editor state", async () => {
+    await withPage(async (page) => {
+      await waitForEditor(page);
+      const originalNames = await taskNames(page);
+      await page.evaluate(() => {
+        (window as unknown as { __ganttFileTextCalls: number }).__ganttFileTextCalls = 0;
+        const originalText = File.prototype.text;
+        File.prototype.text = function text() {
+          (window as unknown as { __ganttFileTextCalls: number }).__ganttFileTextCalls += 1;
+          return originalText.call(this);
+        };
+      });
+
+      for (const [selector, filePath] of [
+        ['input[type="file"][accept*="application/json"]', oversizedJsonPath],
+        ['input[type="file"][accept*="text/csv"]', oversizedCsvPath],
+      ] as const) {
+        const input = (await page.$(selector)) as ElementHandle<HTMLInputElement> | null;
+        expect(input).not.toBeNull();
+        await input!.uploadFile(filePath);
+        await page.waitForFunction(() =>
+          document.querySelector('[role="alert"]')?.textContent?.includes("1 MiB import limit"),
+        );
+        expect(await taskNames(page)).toEqual(originalNames);
+      }
+
+      expect(await page.evaluate(
+        () => (window as unknown as { __ganttFileTextCalls: number }).__ganttFileTextCalls,
+      )).toBe(0);
+    });
+  }, 20_000);
+
   it("exports JSON and CSV and restores edits from browser-local storage [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:produced-output:json-project] [capability:gantt-chart-generator:produced-output:csv-project] [capability:gantt-chart-generator:browser-feature:local-persistence] [capability:gantt-chart-generator:browser-feature:project-data-exchange]", async () => {
     await withPage(async (page) => {
       await waitForEditor(page);
@@ -438,11 +478,10 @@ describe("GanttChartGenerator public UI", () => {
       const firstName = await page.$(
         '.task-row:not(.task-header) input[type="text"]',
       );
-      await firstName!.click({ clickCount: 3 });
-      await firstName!.type("Saved locally");
-      await firstName!.evaluate((node) =>
-        node.dispatchEvent(new Event("change", { bubbles: true })),
-      );
+      await firstName!.evaluate((node) => {
+        node.value = "\t=Saved locally";
+        node.dispatchEvent(new Event("change", { bubbles: true }));
+      });
       await clickButton(page, "Save locally");
 
       await page.evaluate(() => {
@@ -458,7 +497,7 @@ describe("GanttChartGenerator public UI", () => {
         () =>
           document.querySelectorAll(".task-row:not(.task-header)").length > 0,
       );
-      expect((await taskNames(page))[0]).toBe("Saved locally");
+      expect((await taskNames(page))[0]).toBe("\t=Saved locally");
 
       await clickButton(page, "Export JSON");
       await clickButton(page, "Export CSV");
@@ -467,8 +506,8 @@ describe("GanttChartGenerator public UI", () => {
         "gantt-project.json",
         "gantt-project.csv",
       ]);
-      expect(downloads.blobs[0]?.text).toContain('"name": "Saved locally"');
-      expect(downloads.blobs[1]?.text).toContain("Saved locally");
+      expect(downloads.blobs[0]?.text).toContain('"name": "\\t=Saved locally"');
+      expect(downloads.blobs[1]?.text).toContain("'\t=Saved locally");
     });
   }, 20_000);
 

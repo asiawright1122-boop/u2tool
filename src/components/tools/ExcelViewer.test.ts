@@ -50,6 +50,7 @@ let oversizedWorkbookPath = '';
 let invalidWorkbookPath = '';
 let largeWorkbookPath = '';
 let limitWorkbookPath = '';
+let formulaWorkbookPath = '';
 
 beforeAll(async () => {
   tempRoot = mkdtempSync(path.join(tmpdir(), 'u2tool-excel-viewer-'));
@@ -119,6 +120,17 @@ beforeAll(async () => {
   writeFileSync(
     limitWorkbookPath,
     createExcelWorkbookSpanFixture({ r: EXCEL_MAX_ROWS_PER_SHEET, c: 0 }),
+  );
+
+  const formulaWorkbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(formulaWorkbook, XLSX.utils.aoa_to_sheet([
+    ['Label', 'Formula-like'],
+    ['Unsafe', '\t=SUM(A1:A2)'],
+  ]), 'Formula safety');
+  formulaWorkbookPath = path.join(tempRoot, 'formula-safety.xlsx');
+  writeFileSync(
+    formulaWorkbookPath,
+    XLSX.write(formulaWorkbook, { type: 'buffer', bookType: 'xlsx' }),
   );
 
   execFileSync(astroBin, ['build'], {
@@ -314,6 +326,38 @@ describe('ExcelViewer public UI', () => {
         await page.$eval('[data-excel-error]', (node) => node.textContent?.trim()),
       ).toBe('This file is larger than the 10 MiB browser limit.');
       expect(await page.$$eval('[data-excel-file-name]', (nodes) => nodes.length)).toBe(0);
+    } finally {
+      await page.close();
+    }
+  }, 15_000);
+
+  it('neutralizes formula-leading values in a real selected-sheet CSV download', async () => {
+    const page = await openFixturePage();
+    try {
+      await page.evaluate(() => {
+        const state = { text: '' };
+        (window as unknown as { __excelFormulaDownload: typeof state }).__excelFormulaDownload = state;
+        URL.createObjectURL = (blob: Blob) => {
+          void blob.text().then((text) => {
+            state.text = text;
+          });
+          return 'blob:excel-formula-test';
+        };
+        URL.revokeObjectURL = () => {};
+        HTMLAnchorElement.prototype.click = () => {};
+      });
+      await uploadFile(page, formulaWorkbookPath);
+      await page.waitForSelector('[data-excel-download-csv]');
+      await clickElement(page, '[data-excel-download-csv]');
+      await page.waitForFunction(
+        () => (window as unknown as { __excelFormulaDownload: { text: string } })
+          .__excelFormulaDownload.text.length > 0,
+      );
+
+      expect(await page.evaluate(
+        () => (window as unknown as { __excelFormulaDownload: { text: string } })
+          .__excelFormulaDownload.text,
+      )).toContain("Unsafe,'\t=SUM(A1:A2)");
     } finally {
       await page.close();
     }

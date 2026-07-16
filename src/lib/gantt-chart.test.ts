@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
+  GANTT_IMPORT_LIMITS,
+  assertGanttImportByteLength,
   calculateCriticalPath,
   clearGanttProject,
   createGanttTemplate,
@@ -170,6 +172,21 @@ describe("Gantt task data exchange", () => {
     expect(ganttTasksFromCsv(csv)).toEqual(tasks);
   });
 
+  it("neutralizes formula-leading CSV cells and deterministically removes only its safety layer", () => {
+    const formulaTasks = [
+      task({ id: "=task", name: " +formula" }),
+      task({ id: "\t-task", name: "\u0001@command", dependencyIds: ["=task"] }),
+      task({ id: "'=intentional", name: "''@two", dependencyIds: ["\t-task"] }),
+    ];
+
+    const csv = ganttTasksToCsv(formulaTasks);
+
+    expect(csv).toContain("'=task,' +formula");
+    expect(csv).toContain("'\t-task,'\u0001@command");
+    expect(csv).toContain("''=intentional,'''@two");
+    expect(ganttTasksFromCsv(csv)).toEqual(formulaTasks);
+  });
+
   it("rejects duplicate task IDs and invalid dependency graphs from CSV imports", () => {
     expect(() =>
       ganttTasksFromCsv(
@@ -188,6 +205,143 @@ describe("Gantt task data exchange", () => {
         ]),
       ),
     ).toThrow("Dependency cycle detected.");
+  });
+});
+
+describe("Gantt import limits", () => {
+  const formats = [
+    { name: "JSON", serialize: (tasks: GanttTask[]) => JSON.stringify(tasks), parse: ganttTasksFromJson },
+    { name: "CSV", serialize: ganttTasksToCsv, parse: ganttTasksFromCsv },
+  ] as const;
+
+  function sequentialTasks(count: number): GanttTask[] {
+    return Array.from({ length: count }, (_, index) => task({
+      id: `task-${index}`,
+      name: `Task ${index}`,
+    }));
+  }
+
+  function expectAcceptedByBoth(tasks: GanttTask[]): void {
+    for (const format of formats) {
+      expect(format.parse(format.serialize(tasks)), format.name).toEqual(tasks);
+    }
+  }
+
+  function expectRejectedByBoth(tasks: GanttTask[], message: string): void {
+    for (const format of formats) {
+      expect(() => format.parse(format.serialize(tasks)), format.name).toThrow(message);
+    }
+  }
+
+  it("accepts the exact byte boundary and rejects one byte over before parsing JSON or CSV", () => {
+    const jsonAtLimit = `[]${" ".repeat(GANTT_IMPORT_LIMITS.fileBytes - 2)}`;
+    const csvBase = [
+      "id,name,startDate,endDate,progress,milestone,dependencyIds",
+      "task-a,Plan,2026-07-01,2026-07-02,0,false,[]",
+    ].join("\n");
+    const csvAtLimit = csvBase.replace(
+      "[]",
+      `${" ".repeat(GANTT_IMPORT_LIMITS.fileBytes - csvBase.length)}[]`,
+    );
+
+    expect(() => assertGanttImportByteLength(GANTT_IMPORT_LIMITS.fileBytes)).not.toThrow();
+    expect(ganttTasksFromJson(jsonAtLimit)).toEqual([]);
+    expect(ganttTasksFromCsv(csvAtLimit)).toEqual([task()]);
+    expect(() => assertGanttImportByteLength(GANTT_IMPORT_LIMITS.fileBytes + 1)).toThrow(
+      "Gantt project exceeds the 1 MiB import limit.",
+    );
+    expect(() => ganttTasksFromJson(`${jsonAtLimit} `)).toThrow(
+      "Gantt project exceeds the 1 MiB import limit.",
+    );
+    expect(() => ganttTasksFromCsv(`${csvAtLimit} `)).toThrow(
+      "Gantt project exceeds the 1 MiB import limit.",
+    );
+  });
+
+  it("accepts the exact task-count boundary and rejects one task over in JSON and CSV", () => {
+    expectAcceptedByBoth(sequentialTasks(GANTT_IMPORT_LIMITS.tasks));
+    expectRejectedByBoth(
+      sequentialTasks(GANTT_IMPORT_LIMITS.tasks + 1),
+      `Gantt project exceeds the ${GANTT_IMPORT_LIMITS.tasks}-task import limit.`,
+    );
+  });
+
+  it("accepts the exact task ID length and rejects one character over", () => {
+    const exactId = "i".repeat(GANTT_IMPORT_LIMITS.taskIdCharacters);
+    expectAcceptedByBoth([task({ id: exactId })]);
+    expectRejectedByBoth(
+      [task({ id: "i".repeat(GANTT_IMPORT_LIMITS.taskIdCharacters + 1) })],
+      `Task at index 0 exceeds the ${GANTT_IMPORT_LIMITS.taskIdCharacters}-character ID limit.`,
+    );
+  });
+
+  it("accepts the exact dependency ID length and rejects one character over", () => {
+    const exactId = "i".repeat(GANTT_IMPORT_LIMITS.taskIdCharacters);
+    expectAcceptedByBoth([
+      task({ id: exactId }),
+      task({ id: "dependent", dependencyIds: [exactId] }),
+    ]);
+    expectRejectedByBoth(
+      [task({ dependencyIds: ["i".repeat(GANTT_IMPORT_LIMITS.taskIdCharacters + 1)] })],
+      `Task at index 0 has a dependency ID exceeding the ${GANTT_IMPORT_LIMITS.taskIdCharacters}-character limit.`,
+    );
+  });
+
+  it("accepts the exact task name length and rejects one character over", () => {
+    expectAcceptedByBoth([task({
+      name: "n".repeat(GANTT_IMPORT_LIMITS.taskNameCharacters),
+    })]);
+    expectRejectedByBoth(
+      [task({ name: "n".repeat(GANTT_IMPORT_LIMITS.taskNameCharacters + 1) })],
+      `Task at index 0 exceeds the ${GANTT_IMPORT_LIMITS.taskNameCharacters}-character name limit.`,
+    );
+  });
+
+  it("accepts exact date lengths and rejects each field one character over", () => {
+    expectAcceptedByBoth([task({
+      startDate: "2026-07-01",
+      endDate: "2026-07-02",
+    })]);
+    for (const field of ["startDate", "endDate"] as const) {
+      expectRejectedByBoth(
+        [task({ [field]: "2026-07-010" })],
+        `Task at index 0 exceeds the ${GANTT_IMPORT_LIMITS.dateCharacters}-character date limit.`,
+      );
+    }
+  });
+
+  it("accepts the exact per-task dependency boundary and rejects one dependency over", () => {
+    const dependencies = sequentialTasks(GANTT_IMPORT_LIMITS.dependenciesPerTask);
+    expectAcceptedByBoth([
+      ...dependencies,
+      task({
+        id: "dependent",
+        dependencyIds: dependencies.map(({ id }) => id),
+      }),
+    ]);
+    expectRejectedByBoth([
+      ...dependencies,
+      task({ id: "extra" }),
+      task({
+        id: "dependent",
+        dependencyIds: [...dependencies.map(({ id }) => id), "extra"],
+      }),
+    ], `Task at index ${dependencies.length + 1} exceeds the ${GANTT_IMPORT_LIMITS.dependenciesPerTask}-dependency limit.`);
+  });
+
+  it("accepts the exact total-edge boundary and rejects one edge over", () => {
+    const dependencies = sequentialTasks(GANTT_IMPORT_LIMITS.dependenciesPerTask);
+    const dependencyIds = dependencies.map(({ id }) => id);
+    const exactDependents = Array.from(
+      { length: GANTT_IMPORT_LIMITS.totalDependencyEdges / GANTT_IMPORT_LIMITS.dependenciesPerTask },
+      (_, index) => task({ id: `dependent-${index}`, dependencyIds }),
+    );
+    expectAcceptedByBoth([...dependencies, ...exactDependents]);
+    expectRejectedByBoth([
+      ...dependencies,
+      ...exactDependents,
+      task({ id: "one-edge-over", dependencyIds: [dependencies[0].id] }),
+    ], `Gantt project exceeds the ${GANTT_IMPORT_LIMITS.totalDependencyEdges}-edge dependency limit.`);
   });
 });
 

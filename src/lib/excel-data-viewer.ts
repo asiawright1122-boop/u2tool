@@ -1,5 +1,7 @@
 import * as XLSX from 'xlsx';
 
+import { neutralizeCsvFormula } from './csv-formula-safety';
+
 export interface ExcelCellView {
   address: string;
   value: string | number | boolean | null;
@@ -536,7 +538,11 @@ export function sortExcelRows(
 }
 
 function csvField(value: ExcelCellView['value'] | string): string {
-  const text = value === null ? '' : String(value);
+  const text = typeof value === 'string'
+    ? neutralizeCsvFormula(value)
+    : value === null
+      ? ''
+      : String(value);
   if (!/[",\r\n]/.test(text)) {
     return text;
   }
