@@ -28,3 +28,24 @@ const translations = {
   .chart-frame .h-full { height: 100%; }
   .chart-frame .absolute { position: absolute; }
 </style>
+
+<script>
+  import echarts from '@/lib/echarts/custom-runtime';
+
+  (window as unknown as { __showGanttTooltip: () => boolean }).__showGanttTooltip = () => {
+    const chartElement = document.querySelector<HTMLElement>('[_echarts_instance_]');
+    if (!chartElement) return false;
+    const chart = echarts.getInstanceByDom(chartElement);
+    if (!chart) return false;
+    const formatter = (chart.getOption().tooltip as Array<{
+      formatter?: (params: { dataIndex: number; marker: string }) => string;
+    }> | undefined)?.[0]?.formatter;
+    if (typeof formatter !== 'function') return false;
+    document.querySelector('[data-gantt-tooltip-probe]')?.remove();
+    const probe = document.createElement('div');
+    probe.dataset.ganttTooltipProbe = '';
+    probe.innerHTML = formatter({ dataIndex: 0, marker: '' });
+    document.body.append(probe);
+    return true;
+  };
+</script>

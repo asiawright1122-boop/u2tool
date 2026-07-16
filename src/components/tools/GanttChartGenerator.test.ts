@@ -236,6 +236,37 @@ describe("GanttChartGenerator public UI", () => {
       await firstName!.evaluate((node) =>
         node.dispatchEvent(new Event("change", { bubbles: true })),
       );
+      await page.evaluate(() => {
+        const rows = Array.from(
+          document.querySelectorAll<HTMLElement>(
+            ".task-row:not(.task-header)",
+          ),
+        );
+        const first = rows[0]!;
+        const second = rows[1]!;
+        const dates = first.querySelectorAll<HTMLInputElement>(
+          'input[type="date"]',
+        );
+        dates[0]!.value = "2026-08-01";
+        dates[0]!.dispatchEvent(new Event("change", { bubbles: true }));
+        dates[1]!.value = "2026-08-03";
+        dates[1]!.dispatchEvent(new Event("change", { bubbles: true }));
+        const progress = first.querySelector<HTMLInputElement>(
+          'input[type="number"]',
+        )!;
+        progress.value = "37";
+        progress.dispatchEvent(new Event("change", { bubbles: true }));
+        const milestone = first.querySelector<HTMLInputElement>(
+          '.milestone-control input[type="checkbox"]',
+        )!;
+        milestone.checked = true;
+        milestone.dispatchEvent(new Event("change", { bubbles: true }));
+        const dependencies = second.querySelector<HTMLSelectElement>(
+          "select.dependency-select",
+        )!;
+        for (const option of dependencies.options) option.selected = false;
+        dependencies.dispatchEvent(new Event("change", { bubbles: true }));
+      });
       await page.select("#gantt-color-theme", "forest");
 
       expect(await taskNames(page)).toEqual([
@@ -251,6 +282,30 @@ describe("GanttChartGenerator public UI", () => {
         ),
       ).toBe("forest");
       expect(
+        await page.$eval(
+          '.task-row:not(.task-header) input[type="date"]',
+          (node) => (node as HTMLInputElement).value,
+        ),
+      ).toBe("2026-08-01");
+      expect(
+        await page.$eval(
+          '.task-row:not(.task-header) input[type="number"]',
+          (node) => (node as HTMLInputElement).value,
+        ),
+      ).toBe("37");
+      expect(
+        await page.$$eval(
+          ".milestone-control input:checked",
+          (nodes) => nodes.length,
+        ),
+      ).toBe(2);
+      expect(
+        await page.$$eval(
+          '.task-row:not(.task-header):nth-child(3) select.dependency-select option:checked',
+          (nodes) => nodes.length,
+        ),
+      ).toBe(0);
+      expect(
         await page.$eval("[data-critical-path-summary]", (node) =>
           node.textContent?.trim(),
         ),
@@ -258,14 +313,43 @@ describe("GanttChartGenerator public UI", () => {
     });
   }, 20_000);
 
-  it("rejects duplicate JSON and CSV IDs without replacing the valid editor state [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:browser-feature:project-data-exchange]", async () => {
+  it("imports valid JSON and CSV then rejects duplicate IDs without replacing the valid editor state [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:browser-feature:project-data-exchange]", async () => {
     await withPage(async (page) => {
       await waitForEditor(page);
-      const originalNames = await taskNames(page);
       const pageErrors: string[] = [];
       page.on("pageerror", (error: unknown) =>
         pageErrors.push(error instanceof Error ? error.message : String(error)),
       );
+
+      await uploadTextFile(
+        page,
+        'input[type="file"][accept*="application/json"]',
+        "valid.json",
+        JSON.stringify([ganttTask("valid-json", "Valid JSON import")]),
+      );
+      await page.waitForFunction(
+        () =>
+          document.querySelector<HTMLInputElement>(
+            '.task-row:not(.task-header) input[type="text"]',
+          )?.value === "Valid JSON import",
+      );
+
+      await uploadTextFile(
+        page,
+        'input[type="file"][accept*="text/csv"]',
+        "valid.csv",
+        [
+          "id,name,startDate,endDate,progress,milestone,dependencyIds",
+          "valid-csv,Valid CSV import,2026-07-01,2026-07-02,25,false,[]",
+        ].join("\n"),
+      );
+      await page.waitForFunction(
+        () =>
+          document.querySelector<HTMLInputElement>(
+            '.task-row:not(.task-header) input[type="text"]',
+          )?.value === "Valid CSV import",
+      );
+      const originalNames = await taskNames(page);
 
       await uploadTextFile(
         page,
@@ -300,6 +384,41 @@ describe("GanttChartGenerator public UI", () => {
       );
       expect(await taskNames(page)).toEqual(originalNames);
       expect(pageErrors).toEqual([]);
+    });
+  }, 20_000);
+
+  it("renders imported task markup as escaped tooltip text", async () => {
+    await withPage(async (page) => {
+      await waitForEditor(page);
+      await uploadTextFile(
+        page,
+        'input[type="file"][accept*="application/json"]',
+        "tooltip.json",
+        JSON.stringify([
+          ganttTask(
+            "unsafe-tooltip",
+            '<img src=x onerror="window.__ganttPwned=1">Unsafe tooltip',
+          ),
+        ]),
+      );
+      await page.waitForFunction(
+        () =>
+          document.querySelector<HTMLInputElement>(
+            '.task-row:not(.task-header) input[type="text"]',
+          )?.value.includes("Unsafe tooltip"),
+      );
+
+      const tooltip = await revealTooltip(page, "window.__ganttPwned");
+      expect(tooltip.text).toContain(
+        '<img src=x onerror="window.__ganttPwned=1">Unsafe tooltip',
+      );
+      expect(tooltip.html).toContain("&lt;img");
+      expect(tooltip.hasExecutableMarkup).toBe(false);
+      expect(
+        await page.evaluate(
+          () => (window as unknown as { __ganttPwned?: number }).__ganttPwned,
+        ),
+      ).toBeUndefined();
     });
   }, 20_000);
 
@@ -420,6 +539,45 @@ async function taskNames(page: Page): Promise<string[]> {
     '.task-row:not(.task-header) input[type="text"]',
     (inputs) => inputs.map((input) => (input as HTMLInputElement).value),
   );
+}
+
+async function revealTooltip(
+  page: Page,
+  marker: string,
+): Promise<{ html: string; text: string; hasExecutableMarkup: boolean }> {
+  await page.waitForFunction(
+    () =>
+      typeof (
+        window as unknown as { __showGanttTooltip?: () => boolean }
+      ).__showGanttTooltip === "function",
+  );
+  const shown = await page.evaluate(() =>
+    (
+      window as unknown as { __showGanttTooltip: () => boolean }
+    ).__showGanttTooltip(),
+  );
+  expect(shown).toBe(true);
+  await page.waitForFunction(
+    (expectedMarker) =>
+      document
+        .querySelector<HTMLElement>("[data-gantt-tooltip-probe]")
+        ?.textContent?.includes(expectedMarker),
+    {},
+    marker,
+  );
+  return page.evaluate((expectedMarker) => {
+    const node = document.querySelector<HTMLElement>(
+      "[data-gantt-tooltip-probe]",
+    )!;
+    if (!node.textContent?.includes(expectedMarker)) {
+      throw new Error("Tooltip probe did not render the expected task name");
+    }
+    return {
+      html: node.innerHTML,
+      text: node.textContent ?? "",
+      hasExecutableMarkup: Boolean(node.querySelector("img,script")),
+    };
+  }, marker);
 }
 
 async function uploadTextFile(
