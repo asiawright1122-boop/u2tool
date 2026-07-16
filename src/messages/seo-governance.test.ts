@@ -655,8 +655,8 @@ const prioritySeoKeywords = {
       description: ['十六进制', 'base64', '数据编码'],
     },
     'hex-editor': {
-      title: ['文本', '十六进制', '转换器'],
-      description: ['十六进制', '字节', '转换'],
+      title: ['十六进制', '编辑器', '二进制'],
+      description: ['二进制', '十六进制', '字节', '浏览器', '本地'],
     },
     'html-minifier': {
       title: ['html', '压缩器'],
