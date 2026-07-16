@@ -6,6 +6,7 @@
     calculateCriticalPath,
     clearGanttProject,
     createGanttTemplate,
+    escapeGanttTooltipHtml,
     ganttTasksFromCsv,
     ganttTasksFromJson,
     ganttTasksToCsv,
@@ -184,12 +185,12 @@
             .map((id) => tasks.find((candidate) => candidate.id === id)?.name ?? id)
             .join(', ');
           return [
-            `${params.marker} <b>${task.name}</b>`,
+            `${params.marker} <b>${escapeGanttTooltipHtml(task.name)}</b>`,
             `${t('start')}: ${task.startDate}`,
             `${t('end')}: ${task.endDate}`,
             `${t('progress')}: ${task.progress}%`,
             task.milestone ? t('milestone') : '',
-            dependencyNames ? `${t('dependencies')}: ${dependencyNames}` : '',
+            dependencyNames ? `${t('dependencies')}: ${escapeGanttTooltipHtml(dependencyNames)}` : '',
           ].filter(Boolean).join('<br/>');
         },
       },
@@ -263,16 +264,37 @@
     errorMessage = '';
   }
 
-  function exportChart(format: 'png' | 'svg'): void {
+  async function exportChart(format: 'png' | 'svg'): Promise<void> {
     const chart = chartRef?.getEchartsInstance?.();
     if (!chart) {
       errorMessage = t('chartNotReady');
       return;
     }
     const link = document.createElement('a');
-    link.href = chart.getDataURL({ type: format, pixelRatio: 2, backgroundColor: chartTheme.backgroundColor });
     link.download = `gantt-chart.${format}`;
-    link.click();
+    if (format === 'png') {
+      link.href = chart.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: chartTheme.backgroundColor });
+      link.click();
+      return;
+    }
+
+    const echarts = (await import('@/lib/echarts/custom-svg-runtime')).default;
+    const svgChart = echarts.init(document.createElement('div'), undefined, {
+      renderer: 'svg',
+      width: Math.max(chart.getWidth(), 1),
+      height: Math.max(chart.getHeight(), 1),
+    });
+    try {
+      svgChart.setOption(getChartOption(), true);
+      const svg = svgChart.renderToSVGString({ useViewBox: true });
+      const blob = new Blob([svg], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      link.href = url;
+      link.click();
+      URL.revokeObjectURL(url);
+    } finally {
+      svgChart.dispose();
+    }
   }
 
   function downloadProject(format: 'json' | 'csv'): void {
@@ -473,6 +495,13 @@
   <aside class="privacy-note">
     <strong>{t('localOnlyTitle')}</strong>
     <span>{t('localOnlyDescription')}</span>
+    <ul class="privacy-limit-list" aria-label={t('localOnlyTitle')}>
+      <li data-gantt-limit="no-collaboration">{t('capabilities.limits.noCollaboration')}</li>
+      <li data-gantt-limit="no-cloud-sync">{t('capabilities.limits.noCloudSync')}</li>
+      <li data-gantt-limit="no-resource-management">{t('capabilities.limits.noResourceManagement')}</li>
+      <li data-gantt-limit="no-enterprise-workflow">{t('capabilities.limits.noEnterpriseWorkflow')}</li>
+      <li data-gantt-limit="no-live-multi-user">{t('capabilities.limits.noLiveMultiUser')}</li>
+    </ul>
   </aside>
 </div>
 
@@ -486,6 +515,17 @@
   .privacy-note {
     display: flex;
     align-items: center;
+  }
+
+  .privacy-limit-list {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 0.35rem 1rem;
+    list-style: none;
+    font-size: 0.8125rem;
   }
 
   .toolbar {

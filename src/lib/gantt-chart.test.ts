@@ -29,7 +29,12 @@ describe("validateGanttTasks", () => {
     const tasks = [
       task(),
       task({ id: "task-b", name: "Build", dependencyIds: ["task-a"] }),
-      task({ id: "release", name: "Release", milestone: true, dependencyIds: ["task-b"] }),
+      task({
+        id: "release",
+        name: "Release",
+        milestone: true,
+        dependencyIds: ["task-b"],
+      }),
     ];
 
     expect(validateGanttTasks(tasks)).toEqual([]);
@@ -139,6 +144,23 @@ describe("Gantt task data exchange", () => {
     ).toThrow("Task at index 0 has an invalid progress value.");
   });
 
+  it("rejects duplicate task IDs and invalid dependency graphs from JSON imports", () => {
+    expect(() =>
+      ganttTasksFromJson(
+        JSON.stringify([
+          task({ id: "duplicate", name: "First" }),
+          task({ id: "duplicate", name: "Second" }),
+        ]),
+      ),
+    ).toThrow('Duplicate task ID "duplicate".');
+
+    expect(() =>
+      ganttTasksFromJson(
+        JSON.stringify([task({ id: "orphan", dependencyIds: ["missing"] })]),
+      ),
+    ).toThrow('Task "orphan" references missing dependency "missing".');
+  });
+
   it("quotes CSV commas, quotes, newlines, and dependency data", () => {
     const csv = ganttTasksToCsv(tasks);
 
@@ -146,6 +168,46 @@ describe("Gantt task data exchange", () => {
     expect(csv).toContain('"Launch\nannouncement"');
     expect(csv).toContain('"[""brief""]"');
     expect(ganttTasksFromCsv(csv)).toEqual(tasks);
+  });
+
+  it("rejects duplicate task IDs and invalid dependency graphs from CSV imports", () => {
+    expect(() =>
+      ganttTasksFromCsv(
+        ganttTasksToCsv([
+          task({ id: "duplicate", name: "First" }),
+          task({ id: "duplicate", name: "Second" }),
+        ]),
+      ),
+    ).toThrow('Duplicate task ID "duplicate".');
+
+    expect(() =>
+      ganttTasksFromCsv(
+        ganttTasksToCsv([
+          task({ id: "first", dependencyIds: ["second"] }),
+          task({ id: "second", dependencyIds: ["first"] }),
+        ]),
+      ),
+    ).toThrow("Dependency cycle detected.");
+  });
+});
+
+describe("Gantt tooltip safety", () => {
+  it("escapes imported task and dependency markup before it reaches tooltip HTML", async () => {
+    const ganttModule = await import("./gantt-chart");
+    const escapeTooltipHtml = (
+      ganttModule as unknown as Record<string, unknown>
+    ).escapeGanttTooltipHtml;
+
+    expect(escapeTooltipHtml).toBeTypeOf("function");
+    const escape = escapeTooltipHtml as (value: string) => string;
+    const crafted =
+      '<img src=x onerror="window.pwned=true"> & <script>alert(1)</script> "task"';
+    const escaped = escape(crafted);
+
+    expect(escaped).toBe(
+      "&lt;img src=x onerror=&quot;window.pwned=true&quot;&gt; &amp; &lt;script&gt;alert(1)&lt;/script&gt; &quot;task&quot;",
+    );
+    expect(escaped).not.toMatch(/<\/?(?:img|script)\b/i);
   });
 });
 
@@ -219,11 +281,13 @@ describe("Gantt project templates", () => {
       "event-rehearsal",
       "event-day",
     ]);
-    expect(validateGanttTasks([...software, ...marketing, ...event])).toEqual([]);
+    expect(validateGanttTasks([...software, ...marketing, ...event])).toEqual(
+      [],
+    );
   });
 });
 
-it("round-trips a dependency project through local planning formats and storage [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:mode:local-project-planning] [capability:gantt-chart-generator:accepted-input:task-fields] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:produced-output:critical-path] [capability:gantt-chart-generator:produced-output:json-project] [capability:gantt-chart-generator:produced-output:csv-project] [capability:gantt-chart-generator:produced-output:png-chart] [capability:gantt-chart-generator:produced-output:svg-chart] [capability:gantt-chart-generator:browser-feature:task-name-dates-progress] [capability:gantt-chart-generator:browser-feature:dependencies] [capability:gantt-chart-generator:browser-feature:milestones] [capability:gantt-chart-generator:browser-feature:critical-path-highlighting] [capability:gantt-chart-generator:browser-feature:local-persistence] [capability:gantt-chart-generator:browser-feature:project-templates] [capability:gantt-chart-generator:browser-feature:project-data-exchange] [capability:gantt-chart-generator:browser-feature:theme] [capability:gantt-chart-generator:browser-feature:png-export] [capability:gantt-chart-generator:browser-feature:svg-export] [capability:gantt-chart-generator:limit:no-collaboration] [capability:gantt-chart-generator:limit:no-cloud-sync] [capability:gantt-chart-generator:limit:no-resource-management] [capability:gantt-chart-generator:limit:no-enterprise-workflow] [capability:gantt-chart-generator:limit:no-live-multi-user] [capability:gantt-chart-generator:engine:language-support]", () => {
+it("round-trips a dependency project through local planning formats and storage [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:produced-output:critical-path] [capability:gantt-chart-generator:engine:language-support]", () => {
   const tasks = [
     task({ id: "build", name: "Build" }),
     task({

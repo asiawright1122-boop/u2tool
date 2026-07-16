@@ -1,0 +1,30 @@
+---
+import GanttChartGenerator from '@/components/tools/GanttChartGenerator.svelte';
+import en from '@/messages/en.json';
+import ganttMessages from '@/messages/en/tools/gantt-chart-generator.json';
+
+const translations = {
+  ...en,
+  tools: {
+    ...en.tools,
+    'gantt-chart-generator': {
+      ...en.tools['gantt-chart-generator'],
+      ...ganttMessages,
+    },
+  },
+};
+---
+
+<html lang="en">
+  <body>
+    <GanttChartGenerator client:only="svelte" locale="en" translations={translations} />
+  </body>
+</html>
+
+<style is:global>
+  html, body { margin: 0; min-width: 1200px; }
+  [data-gantt-project-editor] { width: 1160px; margin: 20px; }
+  .chart-frame .relative, .chart-frame .w-full { width: 100%; }
+  .chart-frame .h-full { height: 100%; }
+  .chart-frame .absolute { position: absolute; }
+</style>

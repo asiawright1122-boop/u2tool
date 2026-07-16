@@ -21,10 +21,19 @@ describe("pilot tool capability registry", () => {
     const expectedStates = {
       "grammar-checker": { version: "1.1.0", enforcement: "release-blocking" },
       "hex-editor": { version: "2.0.0", enforcement: "release-blocking" },
-      "sql-query-optimizer": { version: "2.0.0", enforcement: "release-blocking" },
+      "sql-query-optimizer": {
+        version: "2.0.0",
+        enforcement: "release-blocking",
+      },
       "excel-viewer": { version: "2.0.0", enforcement: "release-blocking" },
-      "typing-speed-test": { version: "2.0.0", enforcement: "release-blocking" },
-      "gantt-chart-generator": { version: "2.0.0", enforcement: "release-blocking" },
+      "typing-speed-test": {
+        version: "2.0.0",
+        enforcement: "release-blocking",
+      },
+      "gantt-chart-generator": {
+        version: "2.0.0",
+        enforcement: "release-blocking",
+      },
     } as const;
 
     for (const slug of PILOT_TOOL_SLUGS) {
@@ -71,7 +80,8 @@ describe("pilot tool capability registry", () => {
 
   it("declares engine locales only for language-dependent tools", () => {
     expect(
-      getToolCapabilityProfile("gantt-chart-generator")?.supportedLocales.engine,
+      getToolCapabilityProfile("gantt-chart-generator")?.supportedLocales
+        .engine,
     ).toMatchObject({
       kind: "language-neutral",
       evidence: { file: "src/lib/gantt-chart.test.ts" },
@@ -143,6 +153,7 @@ describe("pilot tool capability registry", () => {
     const sqlProfile = getToolCapabilityProfile("sql-query-optimizer")!;
     const excelProfile = getToolCapabilityProfile("excel-viewer")!;
     const typingProfile = getToolCapabilityProfile("typing-speed-test")!;
+    const ganttProfile = getToolCapabilityProfile("gantt-chart-generator")!;
     expect(grammarProfile.enforcement).toBe("release-blocking");
     expect(grammarProfile.evidenceTests).toHaveLength(2);
     expect(hexProfile.enforcement).toBe("release-blocking");
@@ -164,12 +175,54 @@ describe("pilot tool capability registry", () => {
           "calculates Unicode-aware timed metrics and character errors [capability:typing-speed-test:profile:release-readiness] [capability:typing-speed-test:produced-output:wpm] [capability:typing-speed-test:produced-output:cpm] [capability:typing-speed-test:produced-output:accuracy] [capability:typing-speed-test:produced-output:consistency] [capability:typing-speed-test:produced-output:elapsed-duration]",
       },
     ]);
+    expect(ganttProfile.enforcement).toBe("release-blocking");
+    expect(ganttProfile.evidenceTests).toEqual([
+      {
+        file: "src/lib/gantt-chart.test.ts",
+        testName:
+          "round-trips a dependency project through local planning formats and storage [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:produced-output:critical-path] [capability:gantt-chart-generator:engine:language-support]",
+      },
+      {
+        file: "src/components/tools/GanttChartGenerator.test.ts",
+        testName:
+          "downloads a real PNG and vector SVG chart payload [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:produced-output:png-chart] [capability:gantt-chart-generator:produced-output:svg-chart] [capability:gantt-chart-generator:browser-feature:png-export] [capability:gantt-chart-generator:browser-feature:svg-export]",
+      },
+      {
+        file: "src/components/tools/GanttChartGenerator.test.ts",
+        testName:
+          "applies every template and keeps task fields dependencies milestones theme and critical highlighting editable [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:mode:local-project-planning] [capability:gantt-chart-generator:accepted-input:task-fields] [capability:gantt-chart-generator:produced-output:critical-path] [capability:gantt-chart-generator:browser-feature:task-name-dates-progress] [capability:gantt-chart-generator:browser-feature:dependencies] [capability:gantt-chart-generator:browser-feature:milestones] [capability:gantt-chart-generator:browser-feature:critical-path-highlighting] [capability:gantt-chart-generator:browser-feature:project-templates] [capability:gantt-chart-generator:browser-feature:theme]",
+      },
+      {
+        file: "src/components/tools/GanttChartGenerator.test.ts",
+        testName:
+          "rejects duplicate JSON and CSV IDs without replacing the valid editor state [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:accepted-input:json-project] [capability:gantt-chart-generator:accepted-input:csv-project] [capability:gantt-chart-generator:browser-feature:project-data-exchange]",
+      },
+      {
+        file: "src/components/tools/GanttChartGenerator.test.ts",
+        testName:
+          "exports JSON and CSV and restores edits from browser-local storage [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:produced-output:json-project] [capability:gantt-chart-generator:produced-output:csv-project] [capability:gantt-chart-generator:browser-feature:local-persistence] [capability:gantt-chart-generator:browser-feature:project-data-exchange]",
+      },
+      {
+        file: "src/components/tools/GanttChartGenerator.test.ts",
+        testName:
+          "discloses local-only service limits and performs project workflows without network requests [capability:gantt-chart-generator:profile:release-readiness] [capability:gantt-chart-generator:limit:no-collaboration] [capability:gantt-chart-generator:limit:no-cloud-sync] [capability:gantt-chart-generator:limit:no-resource-management] [capability:gantt-chart-generator:limit:no-enterprise-workflow] [capability:gantt-chart-generator:limit:no-live-multi-user]",
+      },
+    ]);
     expect(grammarProfile.optionalServerFeatures).toEqual([]);
     expect(sqlProfile.optionalServerFeatures).toEqual([]);
     expect(typingProfile.optionalServerFeatures).toEqual([]);
 
     for (const profile of getPilotToolCapabilityProfiles()) {
-      if (!["grammar-checker", "hex-editor", "sql-query-optimizer", "excel-viewer", "typing-speed-test", "gantt-chart-generator"].includes(profile.slug)) {
+      if (
+        ![
+          "grammar-checker",
+          "hex-editor",
+          "sql-query-optimizer",
+          "excel-viewer",
+          "typing-speed-test",
+          "gantt-chart-generator",
+        ].includes(profile.slug)
+      ) {
         expect(profile.enforcement).toBe("inventory");
         expect(profile.evidenceTests).toEqual([]);
       }
@@ -242,11 +295,7 @@ describe("pilot tool capability registry", () => {
           "download",
           "text-conversion",
         ],
-        limits: [
-          "two-mib-files",
-          "local-files-only",
-          "utf8-text-converter",
-        ],
+        limits: ["two-mib-files", "local-files-only", "utf8-text-converter"],
       },
       "sql-query-optimizer": {
         features: [
@@ -379,7 +428,13 @@ describe("pilot tool capability registry", () => {
       expect(claim.pattern.test(example.negative), claim.code).toBe(false);
     }
 
-    expect(profile.forbiddenClaims.some((claim) => claim.pattern.test("Supports task dependencies and highlights the critical path."))).toBe(false);
+    expect(
+      profile.forbiddenClaims.some((claim) =>
+        claim.pattern.test(
+          "Supports task dependencies and highlights the critical path.",
+        ),
+      ),
+    ).toBe(false);
   });
 
   it("flags affirmative grammar capability claims without flagging honest limits", () => {
@@ -413,7 +468,8 @@ describe("pilot tool capability registry", () => {
     const examples = {
       "hex-editor-disassembly-claim": {
         positive: "Provides assembly instructions from executable files.",
-        negative: "Does not provide assembly instructions from executable files.",
+        negative:
+          "Does not provide assembly instructions from executable files.",
       },
       "hex-editor-remote-file-claim": {
         positive: "Your file is uploaded to our server for processing.",
@@ -424,8 +480,10 @@ describe("pilot tool capability registry", () => {
         negative: "Does not scan malware samples.",
       },
       "hex-editor-professional-reverse-engineering-claim": {
-        positive: "Provides daily workflows for professional reverse engineers.",
-        negative: "Does not provide workflows for professional reverse engineers.",
+        positive:
+          "Provides daily workflows for professional reverse engineers.",
+        negative:
+          "Does not provide workflows for professional reverse engineers.",
       },
     } as const;
 

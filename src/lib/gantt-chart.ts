@@ -41,23 +41,93 @@ const CSV_HEADERS = [
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
+export function escapeGanttTooltipHtml(value: string): string {
+  return value.replace(
+    /[&<>"']/g,
+    (character) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      })[character]!,
+  );
+}
+
 const GANTT_TEMPLATES: Record<GanttTemplateId, readonly GanttTemplateTask[]> = {
   "software-release": [
     { id: "release-plan", name: "Plan release", startOffset: 0, endOffset: 2 },
-    { id: "release-build", name: "Build features", startOffset: 3, endOffset: 8, dependencyIds: ["release-plan"] },
-    { id: "release-test", name: "Test release", startOffset: 9, endOffset: 12, dependencyIds: ["release-build"] },
-    { id: "release-launch", name: "Release", startOffset: 13, endOffset: 13, milestone: true, dependencyIds: ["release-test"] },
+    {
+      id: "release-build",
+      name: "Build features",
+      startOffset: 3,
+      endOffset: 8,
+      dependencyIds: ["release-plan"],
+    },
+    {
+      id: "release-test",
+      name: "Test release",
+      startOffset: 9,
+      endOffset: 12,
+      dependencyIds: ["release-build"],
+    },
+    {
+      id: "release-launch",
+      name: "Release",
+      startOffset: 13,
+      endOffset: 13,
+      milestone: true,
+      dependencyIds: ["release-test"],
+    },
   ],
   "marketing-campaign": [
-    { id: "campaign-brief", name: "Campaign brief", startOffset: 0, endOffset: 2 },
-    { id: "campaign-create", name: "Create campaign", startOffset: 3, endOffset: 8, dependencyIds: ["campaign-brief"] },
-    { id: "campaign-launch", name: "Launch campaign", startOffset: 9, endOffset: 9, milestone: true, dependencyIds: ["campaign-create"] },
+    {
+      id: "campaign-brief",
+      name: "Campaign brief",
+      startOffset: 0,
+      endOffset: 2,
+    },
+    {
+      id: "campaign-create",
+      name: "Create campaign",
+      startOffset: 3,
+      endOffset: 8,
+      dependencyIds: ["campaign-brief"],
+    },
+    {
+      id: "campaign-launch",
+      name: "Launch campaign",
+      startOffset: 9,
+      endOffset: 9,
+      milestone: true,
+      dependencyIds: ["campaign-create"],
+    },
   ],
   "event-preparation": [
     { id: "event-scope", name: "Define event", startOffset: 0, endOffset: 2 },
-    { id: "event-logistics", name: "Arrange logistics", startOffset: 3, endOffset: 9, dependencyIds: ["event-scope"] },
-    { id: "event-rehearsal", name: "Run rehearsal", startOffset: 10, endOffset: 11, dependencyIds: ["event-logistics"] },
-    { id: "event-day", name: "Event day", startOffset: 12, endOffset: 12, milestone: true, dependencyIds: ["event-rehearsal"] },
+    {
+      id: "event-logistics",
+      name: "Arrange logistics",
+      startOffset: 3,
+      endOffset: 9,
+      dependencyIds: ["event-scope"],
+    },
+    {
+      id: "event-rehearsal",
+      name: "Run rehearsal",
+      startOffset: 10,
+      endOffset: 11,
+      dependencyIds: ["event-logistics"],
+    },
+    {
+      id: "event-day",
+      name: "Event day",
+      startOffset: 12,
+      endOffset: 12,
+      milestone: true,
+      dependencyIds: ["event-rehearsal"],
+    },
   ],
 };
 
@@ -86,7 +156,8 @@ export function createGanttTemplate(
   names: Readonly<Record<string, string>> = {},
 ): GanttTask[] {
   const anchor = parseCalendarDate(startDate);
-  if (anchor === null) throw new Error("Gantt template requires a valid start date.");
+  if (anchor === null)
+    throw new Error("Gantt template requires a valid start date.");
 
   return GANTT_TEMPLATES[templateId].map((templateTask) => ({
     id: templateTask.id,
@@ -99,7 +170,10 @@ export function createGanttTemplate(
   }));
 }
 
-function detectDependencyCycle(tasks: GanttTask[], knownIds: Set<string>): boolean {
+function detectDependencyCycle(
+  tasks: GanttTask[],
+  knownIds: Set<string>,
+): boolean {
   const indegree = new Map(tasks.map((task) => [task.id, 0]));
   const dependents = new Map<string, string[]>();
 
@@ -159,7 +233,11 @@ export function validateGanttTasks(tasks: GanttTask[]): string[] {
     if (start !== null && end !== null && end < start) {
       warnings.push(`Task "${task.id}" ends before it starts.`);
     }
-    if (!Number.isFinite(task.progress) || task.progress < 0 || task.progress > 100) {
+    if (
+      !Number.isFinite(task.progress) ||
+      task.progress < 0 ||
+      task.progress > 100
+    ) {
       warnings.push(`Task "${task.id}" has progress outside 0 to 100.`);
     }
     for (const dependencyId of task.dependencyIds) {
@@ -197,7 +275,9 @@ export function calculateCriticalPath(tasks: GanttTask[]): CriticalPathResult {
   }
 
   const taskById = new Map(tasks.map((task) => [task.id, task]));
-  const indegree = new Map(tasks.map((task) => [task.id, task.dependencyIds.length]));
+  const indegree = new Map(
+    tasks.map((task) => [task.id, task.dependencyIds.length]),
+  );
   const dependents = new Map<string, string[]>();
   for (const task of tasks) {
     for (const dependencyId of task.dependencyIds) {
@@ -227,7 +307,8 @@ export function calculateCriticalPath(tasks: GanttTask[]): CriticalPathResult {
       const candidatePath = [...(paths.get(dependencyId) ?? []), id];
       if (
         candidateTotal > bestTotal ||
-        (candidateTotal === bestTotal && comparePaths(candidatePath, bestPath) < 0)
+        (candidateTotal === bestTotal &&
+          comparePaths(candidatePath, bestPath) < 0)
       ) {
         bestTotal = candidateTotal;
         bestPath = candidatePath;
@@ -276,10 +357,16 @@ function parseTask(value: unknown, index: number): GanttTask {
   if (typeof record.name !== "string") {
     throw new Error(`Task at index ${index} has an invalid name.`);
   }
-  if (typeof record.startDate !== "string" || parseCalendarDate(record.startDate) === null) {
+  if (
+    typeof record.startDate !== "string" ||
+    parseCalendarDate(record.startDate) === null
+  ) {
     throw new Error(`Task at index ${index} has an invalid start date.`);
   }
-  if (typeof record.endDate !== "string" || parseCalendarDate(record.endDate) === null) {
+  if (
+    typeof record.endDate !== "string" ||
+    parseCalendarDate(record.endDate) === null
+  ) {
     throw new Error(`Task at index ${index} has an invalid end date.`);
   }
   if (
@@ -315,7 +402,12 @@ function parseTaskArray(value: unknown): GanttTask[] {
   if (!Array.isArray(value)) {
     throw new Error("Gantt project must be an array of tasks.");
   }
-  return value.map(parseTask);
+  const tasks = value.map(parseTask);
+  const warnings = validateGanttTasks(tasks);
+  if (warnings.length > 0) {
+    throw new Error(warnings.join(" "));
+  }
+  return tasks;
 }
 
 export function ganttTasksToJson(tasks: GanttTask[]): string {
@@ -388,7 +480,8 @@ function parseCsvRows(input: string): string[][] {
     }
   }
 
-  if (quoted) throw new Error("Gantt CSV contains an unterminated quoted field.");
+  if (quoted)
+    throw new Error("Gantt CSV contains an unterminated quoted field.");
   if (field.length > 0 || row.length > 0) {
     row.push(field);
     rows.push(row);
@@ -449,8 +542,6 @@ export function writeGanttProject(
   storage.setItem(STORAGE_KEY, ganttTasksToJson(tasks));
 }
 
-export function clearGanttProject(
-  storage: Pick<Storage, "removeItem">,
-): void {
+export function clearGanttProject(storage: Pick<Storage, "removeItem">): void {
   storage.removeItem(STORAGE_KEY);
 }
