@@ -1,5 +1,13 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+vi.mock('cloudflare:workers', () => ({
+  env: new Proxy({}, {
+    get() {
+      throw new Error('Cloudflare env is unavailable in Vitest');
+    },
+  }),
+}));
+
 describe('ai discovery events api', () => {
   afterEach(() => {
     vi.resetModules();
