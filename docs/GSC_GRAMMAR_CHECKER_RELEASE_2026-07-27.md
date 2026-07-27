@@ -2,9 +2,11 @@
 
 ## Status
 
-- Release state: `READY_TO_DEPLOY`.
+- Release state: `DEPLOYED_ACCEPTED`.
 - Release branch: `codex/grammar-checker-recovery-release`.
 - Production base: `origin/main` at `f2cac3d7`.
+- Production Worker version: `dbd4ef12-6b4c-413d-9d39-47e0105f4415`.
+- Worker deployment time: `2026-07-27 18:56:12 Asia/Shanghai (+08:00)`.
 - Rollback Worker version: `d038c377-269e-458c-b27e-398c274da620`.
 - This release does not resubmit sitemaps, request indexing, or change robots,
   canonical, hreflang, redirects, `noindex`, or sitemap membership.
@@ -106,9 +108,59 @@ After deployment, require all of the following before the release is accepted:
 Any failure rolls back to Worker version
 `d038c377-269e-458c-b27e-398c274da620`.
 
+## Production Acceptance
+
+The Worker deployment completed successfully, but the unparameterized
+canonical Grammar Checker URLs initially continued to serve the previous HTML
+from Cloudflare's outer CDN cache. Cache-busted requests already returned the
+new release, confirming that deployment and Worker routing were correct.
+
+At approximately `2026-07-27 21:55 Asia/Shanghai (+08:00)`, the following ten
+canonical URLs were purged with Cloudflare's custom URL purge. No hostname-wide
+or sitewide purge was used:
+
+```text
+https://www.u2tool.com/en/tools/grammar-checker/
+https://www.u2tool.com/zh/tools/grammar-checker/
+https://www.u2tool.com/ja/tools/grammar-checker/
+https://www.u2tool.com/ko/tools/grammar-checker/
+https://www.u2tool.com/es/tools/grammar-checker/
+https://www.u2tool.com/pt/tools/grammar-checker/
+https://www.u2tool.com/fr/tools/grammar-checker/
+https://www.u2tool.com/de/tools/grammar-checker/
+https://www.u2tool.com/ru/tools/grammar-checker/
+https://www.u2tool.com/ar/tools/grammar-checker/
+```
+
+Cloudflare confirmed that the purge request was accepted and would take effect
+within five seconds. Production acceptance completed at
+`2026-07-27 22:00 Asia/Shanghai (+08:00)`.
+
+| Gate | Result |
+|---|---|
+| Ten canonical locale pages | 10 / 10 passed |
+| HTTP status and redirects | HTTP 200, no redirects |
+| Localized English-input titles | 10 / 10 passed |
+| Self-referencing canonical | 10 / 10 passed |
+| Robots directive | 10 / 10 `index, follow` |
+| Capability disclosure | 10 / 10, `grammar-checker` version `1.1.0` |
+| Persistent English-input notice | 10 / 10 passed |
+| English/Russian rendered contract | 2 / 2 passed |
+| English/Russian Grammar runtime | 2 / 2 loaded, 3 controls each |
+| Untreated control pages | 5 / 5 with no public capability disclosure |
+| Search-engine compliance | passed |
+| Worker SSR | two rounds passed |
+
+The accepted controls are `hex-editor`, `sql-query-optimizer`, `excel-viewer`,
+`typing-speed-test`, and `gantt-chart-generator`. Query-string routes retain
+their intentional `noindex, nofollow` behavior and were not used as substitutes
+for canonical acceptance.
+
 ## Measurement Gates
 
-- 48 hours: technical and rendered-contract verification only.
+- 48 hours: technical and rendered-contract verification at or after
+  `2026-07-29 22:00 Asia/Shanghai (+08:00)`; do not release Hex before this
+  checkpoint.
 - Day 7: directional observation; do not expand the pilot.
 - Day 14: equal-window page/query comparison against this baseline.
 - Day 28: expand, hold, or roll back based on treatment versus control.
