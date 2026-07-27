@@ -16,16 +16,18 @@ As a result, all six tests in
 `src/lib/ai-discovery/events-api.test.ts` fail while importing the route, before
 any API behavior is exercised.
 
-The repository already establishes the intended test pattern in
-`src/middleware.test.ts`: a file-local Vitest module mock supplies an empty
-`env` object. The route then uses its existing guarded access and test-provided
-runtime locals.
+The repository already establishes the intended module-resolution pattern in
+`src/middleware.test.ts`: a file-local Vitest mock supplies the virtual module.
+Unlike the middleware, the events route consults test-provided runtime locals
+only when imported `env` property access throws. Its test mock must therefore
+model an unavailable Workers environment rather than return an empty object.
 
 ## Design
 
 Add a hoisted, file-local `vi.mock('cloudflare:workers', ...)` declaration to
-`src/lib/ai-discovery/events-api.test.ts`. The mock exposes only the `env`
-object required by the route import.
+`src/lib/ai-discovery/events-api.test.ts`. The mock exposes `env` through a
+`Proxy` whose property reads throw, activating the route's existing fallback
+to `locals.runtime.env` without changing production code.
 
 Keep the change local to the failing test file:
 

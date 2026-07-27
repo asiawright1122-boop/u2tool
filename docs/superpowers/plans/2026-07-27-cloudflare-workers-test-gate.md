@@ -4,7 +4,7 @@
 
 **Goal:** Restore the repository-wide Vitest gate by supplying the Cloudflare Workers virtual module inside the one test file that imports the AI Discovery events route.
 
-**Architecture:** Add a hoisted, file-local Vitest mock for `cloudflare:workers` in `src/lib/ai-discovery/events-api.test.ts`, matching the established pattern in `src/middleware.test.ts`. Keep production routes, global Vitest configuration, dependencies, Grammar Checker release files, and Cloudflare configuration unchanged.
+**Architecture:** Add a hoisted, file-local Vitest mock for `cloudflare:workers` in `src/lib/ai-discovery/events-api.test.ts`. Its `env` proxy throws on property access so the route exercises its existing fallback to test-provided `locals.runtime.env`. Keep production routes, global Vitest configuration, dependencies, Grammar Checker release files, and Cloudflare configuration unchanged.
 
 **Tech Stack:** TypeScript, Vitest, Astro, npm, Cloudflare Workers runtime types.
 
@@ -15,7 +15,7 @@
 - Do not touch the Grammar Checker release branch or its worktree.
 - Do not change `src/pages/api/ai-discovery/events.ts`, `vitest.config.ts`, dependencies, Worker bindings, or production configuration.
 - Do not release or deploy Grammar Checker or Hex Calculator as part of this fix.
-- Stop and reassess if the file-local mock does not resolve the virtual module; do not expand scope automatically.
+- Stop and reassess if the approved throwing proxy does not produce `6/6`; do not expand scope automatically.
 
 ---
 
@@ -25,7 +25,7 @@
 - Modify: `src/lib/ai-discovery/events-api.test.ts`
 
 **Interfaces:**
-- Consumes: the route's `import { env } from 'cloudflare:workers'` and the existing file-local mock pattern in `src/middleware.test.ts`.
+- Consumes: the route's `import { env } from 'cloudflare:workers'`, its exception-driven fallback to `locals.runtime.env`, and the file-local mock pattern in `src/middleware.test.ts`.
 - Produces: a Node-compatible test environment for the six AI Discovery events API tests without changing production behavior.
 
 - [ ] **Step 1: Preserve the RED evidence**
@@ -44,7 +44,11 @@ Immediately after the Vitest import in `src/lib/ai-discovery/events-api.test.ts`
 
 ```ts
 vi.mock('cloudflare:workers', () => ({
-  env: {},
+  env: new Proxy({}, {
+    get() {
+      throw new Error('Cloudflare env is unavailable in Vitest');
+    },
+  }),
 }));
 ```
 
@@ -100,7 +104,7 @@ git status --short
 git diff -- src/lib/ai-discovery/events-api.test.ts
 ```
 
-Expected: no whitespace errors, and the implementation diff contains only the three-line file-local mock in the approved test file.
+Expected: no whitespace errors, and the implementation diff contains only the approved file-local throwing proxy mock in the test file.
 
 - [ ] **Step 8: Commit the verified fix**
 
