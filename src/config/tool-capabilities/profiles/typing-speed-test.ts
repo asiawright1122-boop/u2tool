@@ -22,6 +22,17 @@ const promptLocaleEvidence = {
   file: "src/lib/typing-speed-test.test.ts",
   testName: PROMPT_LOCALE_TEST,
 };
+const typingLocaleEvidence = locales.map((locale) => ({
+  locale,
+  runtime: "local" as const,
+  evidence: promptLocaleEvidence,
+  data: {
+    kind: "message-prompt-bank" as const,
+    fileTemplate: "src/messages/{locale}.json",
+    messagePath: ["tools", "typing-speed-test", "sampleTexts"] as const,
+    minimumNonEmptyEntries: 6,
+  },
+}));
 const negativeLimitsEvidence = {
   file: "src/components/tools/TypingSpeedTest.test.ts",
   testName: NEGATIVE_LIMITS_TEST,
@@ -65,11 +76,31 @@ export const typingSpeedTestCapabilityProfile = defineToolCapabilityProfile({
     },
   ],
   producedOutputs: [
-    { id: "wpm", labelKey: "tools.typing-speed-test.wpm", evidence: resultEngineEvidence },
-    { id: "cpm", labelKey: "tools.typing-speed-test.cpm", evidence: resultEngineEvidence },
-    { id: "accuracy", labelKey: "tools.typing-speed-test.accuracy", evidence: resultEngineEvidence },
-    { id: "consistency", labelKey: "tools.typing-speed-test.consistency", evidence: resultEngineEvidence },
-    { id: "elapsed-duration", labelKey: "tools.typing-speed-test.duration", evidence: resultEngineEvidence },
+    {
+      id: "wpm",
+      labelKey: "tools.typing-speed-test.wpm",
+      evidence: resultEngineEvidence,
+    },
+    {
+      id: "cpm",
+      labelKey: "tools.typing-speed-test.cpm",
+      evidence: resultEngineEvidence,
+    },
+    {
+      id: "accuracy",
+      labelKey: "tools.typing-speed-test.accuracy",
+      evidence: resultEngineEvidence,
+    },
+    {
+      id: "consistency",
+      labelKey: "tools.typing-speed-test.consistency",
+      evidence: resultEngineEvidence,
+    },
+    {
+      id: "elapsed-duration",
+      labelKey: "tools.typing-speed-test.duration",
+      evidence: resultEngineEvidence,
+    },
   ],
   supportedLocales: {
     ui: locales,
@@ -78,17 +109,25 @@ export const typingSpeedTestCapabilityProfile = defineToolCapabilityProfile({
       local: locales,
       optionalServer: [],
       evidence: promptLocaleEvidence,
+      localeEvidence: typingLocaleEvidence,
+      disclosure: {
+        labelKey:
+          "tools.typing-speed-test.capabilities.features.difficultyPromptBanks",
+        unsupportedLocaleClaimCodes: [],
+      },
     },
   },
   browserOnlyFeatures: [
     {
       id: "difficulty-prompt-banks",
-      labelKey: "tools.typing-speed-test.capabilities.features.difficultyPromptBanks",
+      labelKey:
+        "tools.typing-speed-test.capabilities.features.difficultyPromptBanks",
       evidence: promptLocaleEvidence,
     },
     {
       id: "selectable-timed-modes",
-      labelKey: "tools.typing-speed-test.capabilities.features.selectableTimedModes",
+      labelKey:
+        "tools.typing-speed-test.capabilities.features.selectableTimedModes",
       evidence: timedUiEvidence,
     },
     {
@@ -151,8 +190,7 @@ export const typingSpeedTestCapabilityProfile = defineToolCapabilityProfile({
     },
     {
       code: "typing-speed-test-cloud-history-claim",
-      pattern:
-        /(?<!no )\b(?:cloud|online) (?:result |typing )?history\b/i,
+      pattern: /(?<!no )\b(?:cloud|online) (?:result |typing )?history\b/i,
       reason: "Typing history is stored only in the current browser.",
     },
   ],

@@ -20,6 +20,18 @@ describe('grammar checker rules', () => {
     ]);
   });
 
+  it('exercises non-empty English grammar fixtures [capability:grammar-checker:engine:language-support]', () => {
+    const fixtureTexts = Object.values(grammarCheckerEnglishFixtures);
+
+    expect(
+      fixtureTexts.filter((text) => text.trim().length > 0).length,
+    ).toBeGreaterThanOrEqual(6);
+    expect(checkGrammar(grammarCheckerEnglishFixtures.correct)).toEqual([]);
+    expect(
+      checkGrammar(grammarCheckerEnglishFixtures.repeatedWord).length,
+    ).toBeGreaterThan(0);
+  });
+
   it('accepts empty and large plain-text fixtures', () => {
     expect(checkGrammar(grammarCheckerEnglishFixtures.empty)).toEqual([]);
     expect(grammarCheckerEnglishFixtures.largeInput).toHaveLength(

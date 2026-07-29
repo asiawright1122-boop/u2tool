@@ -5,6 +5,7 @@ interface LocaleClaimDetector {
   target?: RegExp;
   assertion?: RegExp;
   negation: RegExp;
+  negationExclusion?: RegExp;
 }
 
 const NEGATION_BY_LOCALE: Record<Locale, RegExp> = {
@@ -20,6 +21,14 @@ const NEGATION_BY_LOCALE: Record<Locale, RegExp> = {
   ar: /(?:^|\s)(?:لا|ليس|ليست|لن|بدون)(?:\s|$)|غير (?:متاح|مدعوم)|يتعذر/u,
 };
 
+const SQL_NATIVE_DIAGNOSTICS_NEGATION_EXCLUSION_BY_LOCALE: Partial<
+  Record<Locale, RegExp>
+> = {
+  es: /\bno ingles\p{L}*\b/giu,
+  pt: /\bnão ingles\p{L}*\b/giu,
+  de: /\bnicht englisch\b/giu,
+};
+
 const CONTRAST_BY_LOCALE: Record<Locale, RegExp> = {
   en: /\s*(?:,\s*)?\b(?:but|however|yet)\b\s*/iu,
   zh: /\s*(?:，\s*)?(?:但是|但|不过|然而)\s*/u,
@@ -31,6 +40,12 @@ const CONTRAST_BY_LOCALE: Record<Locale, RegExp> = {
   de: /\s*(?:,\s*)?\b(?:aber|jedoch)\b\s*/iu,
   ru: /(?:,\s*|\s+)(?:но|однако)\s+/iu,
   ar: /\s*(?:،\s*)?(?:لكن|ولكن)\s*/u,
+};
+
+// Deterministic best-effort lint for controlled repository copy only; this is
+// neither a general natural-language parser nor locale release evidence.
+const NEGATED_ADDITION_BY_LOCALE: Partial<Record<Locale, RegExp>> = {
+  ru: /\s+и\s+(?=не(?:\s|$))/iu,
 };
 
 const BARE_AFFIRMATIVE_BY_LOCALE: Record<Locale, RegExp> = {
@@ -149,7 +164,7 @@ const ASSERTION_BY_LOCALE: Record<Locale, RegExp> = {
   pt: /\b(?:suporta|oferece|fornece|inclui|usa|executa|renderiza|mostra|preserva|exporta|baixa|salva|abre|carrega|envia|edita|modifica|seleciona|analisa|interpreta|conecta|consulta|calcula|rastreia|armazena|publica|emite|gera|concede|identifica|identificar|ajuda|planeje|adiciona|cria|destaca|permite|garante|promete|alimentad\p{L}*)\b/iu,
   fr: /\b(?:prend en charge|supporte|offre|fournit|inclut|utilise|exécute|affiche|préserve|conserve|exporte|télécharge|enregistre|ouvre|charge|téléverse|édite|modifie|sélectionne|analyse|interprète|connecte|interroge|calcule|suit|stocke|publie|émet|génère|attribue|identifie|identifier|aide|planifiez|ajoute|crée|met en évidence|permet|garantit|promet|alimenté\p{L}*)\b/iu,
   de: /\b(?:unterstützt|bietet|stellt bereit|enthält|verwendet|nutzt|führt|rendert|zeigt|bewahrt|exportiert|lädt herunter|speichert|öffnet|lädt|bearbeitet|ändert|wählt|analysiert|parst|verbindet|fragt ab|berechnet|verfolgt|publiziert|stellt aus|erzeugt|vergibt|identifiziert|identifizieren|plant|planen|fügt hinzu|erstellt|hebt hervor|ermöglicht|hilft|garantiert|verspricht|KI-gestützt)\b/iu,
-  ru: /(?:поддерживает|предлагает|предоставляет|включает|использует|выполняет|запускает|отображает|показывает|сохраняет|экспортирует|скачивает|открывает|загружает|редактирует|изменяет|выбирает|анализирует|разбирает|подключается|запрашивает|вычисляет|рассчитывает|отслеживает|хранит|публикует|выдаёт|генерирует|награждает|определяет|определить|помогает|планируйте|добавляет|создаёт|подсвечивает|позволяет|гарантирует|обещает|работает на)/iu,
+  ru: /(?:доступн\p{L}*|поддержива\p{L}*|предлагает|предоставляет|включает|использует|выполняет|запускает|отображает|показывает|сохраняет|экспортирует|скачивает|открывает|загружает|редактирует|изменяет|выбирает|анализирует|разбирает|подключается|запрашивает|вычисляет|рассчитывает|отслеживает|хранит|публикует|выдаёт|генерирует|награждает|определяет|определить|помогает|планируйте|добавляет|создаёт|подсвечивает|позволяет|гарантирует|обещает|работает на)/iu,
   ar: /(?:يدعم|تدعم|دعم|يوفر|توفر|يقدم|تقدم|يتضمن|تتضمن|يستخدم|تستخدم|يشغل|تشغل|ينفذ|تنفذ|يعرض|تعرض|يحافظ|تحافظ|يصدر|تصدر|تصدير|ينزل|تنزل|يحفظ|تحفظ|يفتح|تفتح|يرفع|ترفع|يحمّل|تحمّل|يحرر|تحرر|يعدل|تعدل|التعديل|يختار|تختار|اختر|يحلل|تحلل|تحليل|يفسر|تفسر|يتصل|تتصل|يستعلم|تستعلم|يحسب|تحسب|يتتبع|تتبع|يخزن|تخزن|ينشر|تنشر|ينشئ|تنشئ|يمنح|تمنح|يحدد|تحدد|يضيف|تضيف|يبرز|تبرز|يمكّن|تمكّن|يسمح|تسمح|يتيح|تتيح|يضمن|تضمن|يعد|تعد|مدعوم)/u,
 };
 
@@ -169,6 +184,18 @@ const CLAIM_TARGETS: Readonly<Record<string, ClaimTargets>> = {
     de: /(?:Grammatik|Korrektur).{0,24}(?:mehrsprachig|nicht englisch|Deutsch|Russisch|Chinesisch|Japanisch|Koreanisch|Spanisch|Portugiesisch|Französisch|Arabisch)|(?:mehrsprachige|deutsche|russische|chinesische|japanische|koreanische|spanische|portugiesische|französische|arabische).{0,24}(?:Grammatik|Korrektur)/iu,
     ru: /(?:русск\p{L}*|китайск\p{L}*|японск\p{L}*|корейск\p{L}*|испанск\p{L}*|португальск\p{L}*|французск\p{L}*|немецк\p{L}*|арабск\p{L}*|многоязычн\p{L}*).{0,20}(?:грамматик\p{L}*|провер\p{L}*)/iu,
     ar: /(?:قواعد|تدقيق).{0,24}(?:متعدد اللغات|غير الإنجليزية|العربية|الروسية|الصينية|اليابانية|الكورية|الإسبانية|البرتغالية|الفرنسية|الألمانية)|(?:متعدد اللغات|غير الإنجليزية|العربية|الروسية|الصينية|اليابانية|الكورية|الإسبانية|البرتغالية|الفرنسية|الألمانية).{0,24}(?:قواعد|تدقيق)/u,
+  },
+  "sql-query-optimizer-native-non-english-diagnostics-claim": {
+    en: /(?:multilingual|non-English|Russian|Chinese|Japanese|Korean|Spanish|Portuguese|French|German|Arabic).{0,40}(?:diagnostics?|findings?|explanations?)|(?:diagnostics?|findings?|explanations?).{0,40}(?:multilingual|non-English|Russian|Chinese|Japanese|Korean|Spanish|Portuguese|French|German|Arabic)/iu,
+    zh: /(?:多语言|非英语|中文|俄语|日语|韩语|西班牙语|葡萄牙语|法语|德语|阿拉伯语).{0,24}(?:诊断|发现|说明|解释)|(?:诊断|发现|说明|解释).{0,24}(?:多语言|非英语|中文|俄语|日语|韩语|西班牙语|葡萄牙语|法语|德语|阿拉伯语)/u,
+    ja: /(?:多言語|英語以外|日本語|中国語|韓国語|ロシア語|スペイン語|ポルトガル語|フランス語|ドイツ語|アラビア語).{0,24}(?:診断|所見|説明)|(?:診断|所見|説明).{0,24}(?:多言語|英語以外|日本語|中国語|韓国語|ロシア語|スペイン語|ポルトガル語|フランス語|ドイツ語|アラビア語)/u,
+    ko: /(?:다국어|비영어|한국어|중국어|일본어|러시아어|스페인어|포르투갈어|프랑스어|독일어|아랍어).{0,24}(?:진단|결과|설명)|(?:진단|결과|설명).{0,24}(?:다국어|비영어|한국어|중국어|일본어|러시아어|스페인어|포르투갈어|프랑스어|독일어|아랍어)/u,
+    es: /(?:diagnóstic\p{L}*|hallazg\p{L}*|explicacion\p{L}*|explicación\p{L}*).{0,40}(?:multilingüe|no ingles\p{L}*|español|rus\p{L}*|chin\p{L}*|japonés|corean\p{L}*|portugués|francés|alemán|árabe)|(?:multilingüe|no ingles\p{L}*|español|rus\p{L}*|chin\p{L}*|japonés|corean\p{L}*|portugués|francés|alemán|árabe).{0,40}(?:diagnóstic\p{L}*|hallazg\p{L}*|explicacion\p{L}*|explicación\p{L}*)/iu,
+    pt: /(?:diagnóstic\p{L}*|achad\p{L}*|explicaç\p{L}*).{0,40}(?:multilíngue|não ingles\p{L}*|português|russ\p{L}*|chinês|japonês|corean\p{L}*|espanhol|francês|alemão|árabe)|(?:multilíngue|não ingles\p{L}*|português|russ\p{L}*|chinês|japonês|corean\p{L}*|espanhol|francês|alemão|árabe).{0,40}(?:diagnóstic\p{L}*|achad\p{L}*|explicaç\p{L}*)/iu,
+    fr: /(?:diagnostic\p{L}*|constat\p{L}*|explication\p{L}*).{0,40}(?:multilingue|non anglais\p{L}*|français|russe|chinois|japonais|coréen|espagnol|portugais|allemand|arabe)|(?:multilingue|non anglais\p{L}*|français|russe|chinois|japonais|coréen|espagnol|portugais|allemand|arabe).{0,40}(?:diagnostic\p{L}*|constat\p{L}*|explication\p{L}*)/iu,
+    de: /(?:Diagnos\p{L}*|Befund\p{L}*|Erklärung\p{L}*).{0,40}(?:mehrsprachig|nicht englisch|Deutsch|Russisch|Chinesisch|Japanisch|Koreanisch|Spanisch|Portugiesisch|Französisch|Arabisch)|(?:mehrsprachig|nicht englisch|Deutsch|Russisch|Chinesisch|Japanisch|Koreanisch|Spanisch|Portugiesisch|Französisch|Arabisch).{0,40}(?:Diagnos\p{L}*|Befund\p{L}*|Erklärung\p{L}*)/iu,
+    ru: /(?:диагност\p{L}*|замечани\p{L}*|объяснени\p{L}*).{0,40}(?:русск\p{L}*|китайск\p{L}*|японск\p{L}*|корейск\p{L}*|испанск\p{L}*|португальск\p{L}*|французск\p{L}*|немецк\p{L}*|арабск\p{L}*|многоязычн\p{L}*)|(?:русск\p{L}*|китайск\p{L}*|японск\p{L}*|корейск\p{L}*|испанск\p{L}*|португальск\p{L}*|французск\p{L}*|немецк\p{L}*|арабск\p{L}*|многоязычн\p{L}*).{0,40}(?:диагност\p{L}*|замечани\p{L}*|объяснени\p{L}*)/iu,
+    ar: /(?:تشخيص|نتائج|تفسيرات|شرح).{0,40}(?:متعدد اللغات|غير الإنجليزية|العربية|الروسية|الصينية|اليابانية|الكورية|الإسبانية|البرتغالية|الفرنسية|الألمانية)|(?:متعدد اللغات|غير الإنجليزية|العربية|الروسية|الصينية|اليابانية|الكورية|الإسبانية|البرتغالية|الفرنسية|الألمانية).{0,40}(?:تشخيص|نتائج|تفسيرات|شرح)/u,
   },
   "grammar-checker-ai-claim": {
     en: /\b(?:AI|artificial intelligence|large language model|LLM)\b/iu,
@@ -379,7 +406,10 @@ function localeTargets(
   return { en, zh, ja, ko, es, pt, fr, de, ru, ar };
 }
 
-function targetDetectors(targets: ClaimTargets): Record<Locale, LocaleClaimDetector> {
+function targetDetectors(
+  targets: ClaimTargets,
+  negationExclusions?: Partial<Record<Locale, RegExp>>,
+): Record<Locale, LocaleClaimDetector> {
   return Object.fromEntries(
     (Object.keys(targets) as Locale[]).map((locale) => [
       locale,
@@ -387,6 +417,7 @@ function targetDetectors(targets: ClaimTargets): Record<Locale, LocaleClaimDetec
         target: targets[locale],
         assertion: ASSERTION_BY_LOCALE[locale],
         negation: NEGATION_BY_LOCALE[locale],
+        negationExclusion: negationExclusions?.[locale],
       },
     ]),
   ) as Record<Locale, LocaleClaimDetector>;
@@ -405,7 +436,12 @@ const TAXONOMY: Readonly<Record<string, Record<Locale, LocaleClaimDetector>>> = 
   ...Object.fromEntries(
     Object.entries(CLAIM_TARGETS).map(([code, targets]) => [
       code,
-      targetDetectors(targets),
+      targetDetectors(
+        targets,
+        code === "sql-query-optimizer-native-non-english-diagnostics-claim"
+          ? SQL_NATIVE_DIAGNOSTICS_NEGATION_EXCLUSION_BY_LOCALE
+          : undefined,
+      ),
     ]),
   ),
 };
@@ -547,10 +583,16 @@ function splitClaimSegments(text: string, locale?: Locale): string[] {
   const sentences =
     text.match(/[^\n\r.!?。！？؟؛;]+[.!?。！？؟؛;]?/gu) ?? [];
   const contrast = locale ? CONTRAST_BY_LOCALE[locale] : undefined;
+  const negatedAddition = locale
+    ? NEGATED_ADDITION_BY_LOCALE[locale]
+    : undefined;
 
   return sentences
     .flatMap((sentence) =>
       contrast ? sentence.split(contrast) : [sentence],
+    )
+    .flatMap((segment) =>
+      negatedAddition ? segment.split(negatedAddition) : [segment],
     )
     .map((segment) => segment.trim())
     .filter(Boolean);
@@ -602,7 +644,10 @@ export function matchesLocalizedCapabilityClaim(
     ) {
       return false;
     }
-    if (test(detector.negation, segment)) {
+    const negationSegment = detector.negationExclusion
+      ? segment.replace(detector.negationExclusion, "")
+      : segment;
+    if (test(detector.negation, negationSegment)) {
       return false;
     }
     if (detector.affirmative) {
