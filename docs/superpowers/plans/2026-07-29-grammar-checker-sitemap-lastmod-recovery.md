@@ -161,13 +161,12 @@ git commit -m "test(seo): guard grammar sitemap cohort dates"
 
 ```bash
 npx vitest run src/lib/sitemap-lastmod.test.ts src/lib/sitemap-entry-builders.test.ts
-npm run validate:search-engine-compliance
 npm run check
 npm run build
 npm run validate:sitemap
 ```
 
-Expected: all commands exit 0; Astro reports zero errors; the build generates `dist/sitemap-tools.xml`.
+Expected: all commands exit 0; Astro reports zero errors; the build generates `dist/sitemap-tools.xml`. Do not run `validate:search-engine-compliance` before deployment because it compares local manifest expectations with the still-old production sitemap; the online compliance gate runs in Step 4 after production has the new manifest.
 
 - [ ] **Step 2: Assert the built sitemap contains the exact cohort and unchanged control**
 
@@ -256,4 +255,4 @@ git diff --stat main...HEAD
 git log --oneline main..HEAD
 ```
 
-Expected: clean worktree; changes limited to the manifest, two sitemap test files, and the Grammar release record; three focused implementation commits after the plan commit.
+Expected: clean worktree; changes limited to the manifest, two sitemap test files, the corrected implementation plan, and the Grammar release record; four focused commits after the original plan commit.
