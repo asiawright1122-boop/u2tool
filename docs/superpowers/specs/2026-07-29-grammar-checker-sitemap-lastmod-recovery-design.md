@@ -54,13 +54,15 @@ override still resolves to the tools bucket fallback.
 
 Before release, run:
 
-1. The sitemap lastmod unit tests.
-2. Search-engine compliance validation.
+1. The focused sitemap lastmod and entry-builder tests.
+2. The project check.
 3. The production build.
-4. A generated sitemap assertion covering all ten Grammar Checker URLs.
+4. A local generated-sitemap assertion covering all ten Grammar Checker URLs
+   and the unchanged untreated control.
 
 After release, verify the production `sitemap-tools.xml` contains
-`2026-07-27` for all ten paths and that the sitemap index remains valid.
+`2026-07-27` for all ten paths, Worker SSR remains healthy, and online
+search-engine compliance passes (including sitemap-index validity).
 
 ## Failure Handling and Rollback
 

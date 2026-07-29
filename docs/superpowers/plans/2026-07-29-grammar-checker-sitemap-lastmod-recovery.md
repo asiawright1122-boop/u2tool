@@ -91,7 +91,7 @@ Run:
 npx vitest run src/lib/sitemap-lastmod.test.ts
 ```
 
-Expected: all seven resolver tests pass.
+Expected: all eight resolver tests pass.
 
 - [ ] **Step 5: Commit the resolver fix**
 
@@ -137,7 +137,8 @@ it('publishes the Grammar Checker cohort date without redating untreated tools',
 npx vitest run src/lib/sitemap-lastmod.test.ts src/lib/sitemap-entry-builders.test.ts
 ```
 
-Expected: both files pass; the resolver test count is seven and the builder test count is four.
+Expected: both files pass; the resolver test count is eight, the builder test
+count is four, and the focused suite total is twelve.
 
 - [ ] **Step 3: Commit the integration guard**
 
@@ -255,4 +256,8 @@ git diff --stat main...HEAD
 git log --oneline main..HEAD
 ```
 
-Expected: clean worktree; changes limited to the manifest, two sitemap test files, the corrected implementation plan, and the Grammar release record; four focused commits after the original plan commit.
+Expected: clean worktree; changes limited to the manifest, two sitemap test
+files, the recovery design and implementation-plan documents, and the Grammar
+release record, plus the final review-fix report. Confirm that commit subjects
+and their changed-file scopes reconcile with the completion ledger in
+`.superpowers/sdd/progress.md` rather than relying on a fixed commit count.
