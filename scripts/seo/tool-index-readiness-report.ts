@@ -1261,6 +1261,29 @@ function knownEvidenceReasons(row: NormalizedReadinessRow): string[] {
   return reasons;
 }
 
+function knownCapabilityGate(row: NormalizedReadinessRow): {
+  reasons: string[];
+  missingEvidence: string[];
+} {
+  const { evidence } = row;
+  if (evidence.priority === "catalog") {
+    return { reasons: [], missingEvidence: [] };
+  }
+  if (!evidence.hasCapabilityProfile) {
+    return {
+      reasons: ["capability-profile-missing"],
+      missingEvidence: ["hasCapabilityProfile"],
+    };
+  }
+  if (evidence.capabilityEnforcement !== "release-blocking") {
+    return {
+      reasons: ["capability-enforcement-not-release-blocking"],
+      missingEvidence: ["capabilityEnforcement"],
+    };
+  }
+  return { reasons: [], missingEvidence: [] };
+}
+
 export function buildToolIndexReadinessReport(
   input: NormalizedReadinessInputs,
 ): ToolIndexReadinessReport {
@@ -1282,6 +1305,9 @@ export function buildToolIndexReadinessReport(
         missingEvidence.push("demand.historicalPageRow");
         reasons.push("gsc-historical-page-row-missing");
       }
+      const capabilityGate = knownCapabilityGate(row);
+      missingEvidence.push(...capabilityGate.missingEvidence);
+      reasons.push(...capabilityGate.reasons);
 
       const hasSourceGap =
         missingEvidence.length > 0 || decision.missingEvidence.length > 0;
@@ -1666,6 +1692,7 @@ export async function writeToolIndexReadinessArtifacts(
   ].map((entry) => ({
     ...entry,
     tempPath: `${entry.finalPath}.${token}.tmp`,
+    recoveryPath: `${entry.finalPath}.${token}.recovery`,
     backupPath: `${entry.finalPath}.${token}.backup`,
     hadOriginal: false,
     published: false,
@@ -1674,8 +1701,8 @@ export async function writeToolIndexReadinessArtifacts(
   }));
 
   await operations.mkdir(outputDir);
-  let publicationFailed = false;
   let publicationError: unknown;
+  let recoverySetReady = false;
   const rollbackErrors: unknown[] = [];
   try {
     const writeResults = await Promise.allSettled(
@@ -1688,6 +1715,17 @@ export async function writeToolIndexReadinessArtifacts(
     );
     if (failedWrite) throw failedWrite.reason;
 
+    const recoveryResults = await Promise.allSettled(
+      entries.map((entry) =>
+        operations.copyFile(entry.tempPath, entry.recoveryPath),
+      ),
+    );
+    const failedRecovery = recoveryResults.find(
+      (result): result is PromiseRejectedResult => result.status === "rejected",
+    );
+    if (failedRecovery) throw failedRecovery.reason;
+    recoverySetReady = true;
+
     for (const entry of entries) {
       if (existsSync(entry.finalPath)) {
         await operations.copyFile(entry.finalPath, entry.backupPath);
@@ -1699,59 +1737,116 @@ export async function writeToolIndexReadinessArtifacts(
       entry.published = true;
     }
   } catch (error) {
-    publicationFailed = true;
     publicationError = error;
-    for (const entry of [...entries].reverse()) {
-      if (!entry.published) continue;
-      try {
-        await operations.remove(entry.finalPath);
-      } catch (rollbackError) {
-        entry.rollbackRemovalFailed = true;
-        rollbackErrors.push(rollbackError);
-      }
-      if (entry.hadOriginal) {
+    if (recoverySetReady) {
+      for (const entry of [...entries].reverse()) {
+        if (!entry.published) continue;
         try {
-          await operations.rename(entry.backupPath, entry.finalPath);
-          entry.backupRestored = true;
+          await operations.remove(entry.finalPath);
         } catch (rollbackError) {
+          entry.rollbackRemovalFailed = true;
           rollbackErrors.push(rollbackError);
+        }
+        if (entry.hadOriginal) {
+          try {
+            await operations.rename(entry.backupPath, entry.finalPath);
+            entry.backupRestored = true;
+          } catch (rollbackError) {
+            rollbackErrors.push(rollbackError);
+          }
         }
       }
     }
   }
 
-  const cleanupErrors: unknown[] = [];
+  const ancillaryCleanupErrors: unknown[] = [];
   const newPublicationRecoveryRequired = entries.some(
     (entry) =>
       entry.published && !entry.hadOriginal && entry.rollbackRemovalFailed,
   );
-  await Promise.all(
-    entries.flatMap((entry) => {
-      const safePaths = newPublicationRecoveryRequired ? [] : [entry.tempPath];
-      if (
-        !publicationFailed ||
-        !entry.hadOriginal ||
-        !entry.published ||
-        entry.backupRestored
-      ) {
-        safePaths.push(entry.backupPath);
+  for (const entry of entries) {
+    const safePaths = newPublicationRecoveryRequired ? [] : [entry.tempPath];
+    if (
+      publicationError === undefined ||
+      !entry.hadOriginal ||
+      !entry.published ||
+      entry.backupRestored
+    ) {
+      safePaths.push(entry.backupPath);
+    }
+    for (const filePath of safePaths) {
+      try {
+        await operations.remove(filePath);
+      } catch (cleanupError) {
+        ancillaryCleanupErrors.push(cleanupError);
       }
-      return safePaths.map(async (filePath) => {
-        try {
-          await operations.remove(filePath);
-        } catch (cleanupError) {
-          cleanupErrors.push(cleanupError);
-        }
-      });
-    }),
-  );
+    }
+  }
 
-  if (publicationFailed) {
-    const errors = [publicationError, ...rollbackErrors, ...cleanupErrors];
+  const recoveryCleanupErrors: unknown[] = [];
+  const recoveryRestageErrors: unknown[] = [];
+  const preserveRecoverySet =
+    recoverySetReady &&
+    (rollbackErrors.length > 0 || ancillaryCleanupErrors.length > 0);
+  if (!preserveRecoverySet) {
+    for (const entry of entries) {
+      try {
+        await operations.remove(entry.recoveryPath);
+      } catch (cleanupError) {
+        recoveryCleanupErrors.push(cleanupError);
+      }
+    }
+    if (recoverySetReady && recoveryCleanupErrors.length > 0) {
+      for (const entry of entries) {
+        try {
+          await operations.writeFile(entry.recoveryPath, entry.content);
+        } catch (restageError) {
+          recoveryRestageErrors.push(restageError);
+        }
+      }
+    }
+  }
+
+  const cleanupErrors = [
+    ...ancillaryCleanupErrors,
+    ...recoveryCleanupErrors,
+    ...recoveryRestageErrors,
+  ];
+  const errors = [
+    ...(publicationError === undefined ? [] : [publicationError]),
+    ...rollbackErrors,
+    ...cleanupErrors,
+  ];
+  const recoveryPaths = entries.map((entry) => entry.recoveryPath);
+  const recoverySetRetained =
+    recoverySetReady &&
+    (preserveRecoverySet || recoveryCleanupErrors.length > 0);
+  const aggregateMessage = (
+    summary: string,
+    childErrors: readonly unknown[],
+  ): string =>
+    [
+      summary,
+      recoverySetRetained
+        ? `New-generation recovery files: ${recoveryPaths.join(", ")}.`
+        : "",
+      `Child errors: ${childErrors
+        .map((error) =>
+          error instanceof Error ? error.message : String(error),
+        )
+        .join(" | ")}`,
+    ]
+      .filter(Boolean)
+      .join(" ");
+
+  if (publicationError !== undefined) {
     if (errors.length > 1) {
       throw new AggregateError(
         errors,
-        "Tool index readiness artifact publication failed and rollback was incomplete",
+        aggregateMessage(
+          "Tool index readiness artifact publication failed and rollback or cleanup was incomplete.",
+          errors,
+        ),
       );
     }
     throw publicationError;
@@ -1759,7 +1854,10 @@ export async function writeToolIndexReadinessArtifacts(
   if (cleanupErrors.length > 0) {
     throw new AggregateError(
       cleanupErrors,
-      "Tool index readiness artifacts were published but cleanup failed",
+      aggregateMessage(
+        "Tool index readiness artifacts were published but cleanup failed.",
+        cleanupErrors,
+      ),
     );
   }
 

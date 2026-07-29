@@ -510,6 +510,110 @@ describe("tool index readiness evidence report", () => {
     expect(report.rows[0].decision.reasons).not.toContain("zero-demand");
   });
 
+  it("preserves the P1 capability-profile gate when technical evidence is missing", () => {
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/unprofiled-p1/",
+          category: "text",
+          evidence: evidence({
+            slug: "unprofiled-p1",
+            priority: "p1",
+            hasCapabilityProfile: false,
+            capabilityEnforcement: "unprofiled",
+            technical: {
+              routeExists: true,
+              inSitemap: true,
+              canonicalSelfReferences: null,
+              hreflangPasses: null,
+              renderedStatus: null,
+            },
+          }),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: true,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+    const outputs = [
+      renderToolIndexReadinessJson(report),
+      renderToolIndexReadinessCsv(report),
+      renderToolIndexReadinessMarkdown(report),
+    ];
+
+    expect(report.rows[0].decision).toMatchObject({
+      recommendation: "manual-review",
+      reasons: expect.arrayContaining(["capability-profile-missing"]),
+      missingEvidence: expect.arrayContaining(["hasCapabilityProfile"]),
+      reviewRequired: true,
+    });
+    for (const output of outputs) {
+      expect(output).toContain("capability-profile-missing");
+      expect(output).toContain("hasCapabilityProfile");
+    }
+  });
+
+  it("preserves the P1 capability-enforcement gate when technical evidence is missing", () => {
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/inventory-p1/",
+          category: "text",
+          evidence: evidence({
+            slug: "inventory-p1",
+            priority: "p1",
+            hasCapabilityProfile: true,
+            capabilityEnforcement: "inventory",
+            technical: {
+              routeExists: true,
+              inSitemap: true,
+              canonicalSelfReferences: null,
+              hreflangPasses: null,
+              renderedStatus: null,
+            },
+          }),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: true,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+    const outputs = [
+      renderToolIndexReadinessJson(report),
+      renderToolIndexReadinessCsv(report),
+      renderToolIndexReadinessMarkdown(report),
+    ];
+
+    expect(report.rows[0].decision).toMatchObject({
+      recommendation: "manual-review",
+      reasons: expect.arrayContaining([
+        "capability-enforcement-not-release-blocking",
+      ]),
+      missingEvidence: expect.arrayContaining(["capabilityEnforcement"]),
+      reviewRequired: true,
+    });
+    for (const output of outputs) {
+      expect(output).toContain("capability-enforcement-not-release-blocking");
+      expect(output).toContain("capabilityEnforcement");
+    }
+  });
+
   it("serializes missing GSC period metrics as null in JSON and empty CSV cells", async () => {
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
@@ -1614,6 +1718,108 @@ describe("tool index readiness evidence report", () => {
         renderToolIndexReadinessCsv(report),
         renderToolIndexReadinessMarkdown(report),
       ]);
+    } finally {
+      await rm(temporaryRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("preserves a complete new-generation recovery set after mixed third-publication rollback", async () => {
+    const temporaryRoot = await mkdtemp(
+      path.join(tmpdir(), "tool-index-artifact-third-publication-rollback-"),
+    );
+    const finalPaths = {
+      json: path.join(temporaryRoot, "tool-index-readiness.json"),
+      csv: path.join(temporaryRoot, "tool-index-readiness.csv"),
+      markdown: path.join(temporaryRoot, "tool-index-readiness.md"),
+    };
+    const publicationError = new Error("injected Markdown publication failure");
+    const rollbackError = new Error("injected JSON rollback remove failure");
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/grammar-checker/",
+          category: "text",
+          evidence: evidence(),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: true,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+
+    try {
+      let caught: unknown;
+      try {
+        await writeToolIndexReadinessArtifacts(report, temporaryRoot, {
+          rename: async (source, destination) => {
+            if (
+              source.endsWith(".tmp") &&
+              destination === finalPaths.markdown
+            ) {
+              throw publicationError;
+            }
+            await rename(source, destination);
+          },
+          remove: async (filePath) => {
+            if (filePath === finalPaths.json) {
+              throw rollbackError;
+            }
+            await rm(filePath, { force: true });
+          },
+        });
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught).toBeInstanceOf(AggregateError);
+      expect((caught as AggregateError).errors).toEqual([
+        publicationError,
+        rollbackError,
+      ]);
+      const remainingFiles = (await readdir(temporaryRoot)).sort();
+      const recoveryFiles = remainingFiles.filter((fileName) =>
+        fileName.endsWith(".recovery"),
+      );
+      expect(recoveryFiles).toHaveLength(3);
+      expect(recoveryFiles).toEqual([
+        expect.stringMatching(/^tool-index-readiness\.csv\..+\.recovery$/u),
+        expect.stringMatching(/^tool-index-readiness\.json\..+\.recovery$/u),
+        expect.stringMatching(/^tool-index-readiness\.md\..+\.recovery$/u),
+      ]);
+      await expect(
+        Promise.all(
+          recoveryFiles.map((fileName) =>
+            readFile(path.join(temporaryRoot, fileName), "utf8"),
+          ),
+        ),
+      ).resolves.toEqual([
+        renderToolIndexReadinessCsv(report),
+        renderToolIndexReadinessJson(report),
+        renderToolIndexReadinessMarkdown(report),
+      ]);
+      for (const recoveryFile of recoveryFiles) {
+        expect((caught as AggregateError).message).toContain(
+          path.join(temporaryRoot, recoveryFile),
+        );
+      }
+      expect((caught as AggregateError).message).toContain(
+        publicationError.message,
+      );
+      expect((caught as AggregateError).message).toContain(
+        rollbackError.message,
+      );
+      await expect(readFile(finalPaths.json, "utf8")).resolves.toBe(
+        renderToolIndexReadinessJson(report),
+      );
+      await expect(readFile(finalPaths.csv, "utf8")).rejects.toThrow(/ENOENT/u);
     } finally {
       await rm(temporaryRoot, { recursive: true, force: true });
     }
