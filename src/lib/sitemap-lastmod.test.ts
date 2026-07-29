@@ -35,6 +35,18 @@ describe('sitemap lastmod resolver', () => {
       .toBe('2026-06-02');
   });
 
+  it('publishes the Grammar Checker release date for every locale only', () => {
+    const grammarCheckerLocales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
+
+    for (const locale of grammarCheckerLocales) {
+      expect(resolveSitemapLastmod(`/${locale}/tools/grammar-checker/`, 'tools'))
+        .toBe('2026-07-27');
+    }
+
+    expect(resolveSitemapLastmod('/en/tools/uuid-generator/', 'tools'))
+      .toBe('2026-06-02');
+  });
+
   it('returns the newest valid date', () => {
     expect(maxLastmod(['2026-06-02', '2026-07-05', '2026-07-01']))
       .toBe('2026-07-05');
