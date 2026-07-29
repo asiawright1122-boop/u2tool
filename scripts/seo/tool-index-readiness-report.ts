@@ -16,7 +16,10 @@ import {
   getToolCapabilityProfile,
   PILOT_TOOL_SLUGS,
 } from "../../src/config/tool-capabilities";
-import { INDEX_READINESS_OVERRIDES } from "../../src/config/index-readiness-overrides";
+import {
+  INDEX_READINESS_OVERRIDES,
+  type IndexReadinessOverride,
+} from "../../src/config/index-readiness-overrides";
 import {
   evaluateToolIndexReadiness,
   type IndexReadinessDecision,
@@ -55,6 +58,44 @@ export interface GscQueryRow {
   position: number;
 }
 
+export interface ToolIndexReadinessInputProvenance {
+  currentPages: {
+    path: string;
+    sha256: string;
+    selectedHeaders: {
+      page: string;
+      clicks: string;
+      impressions: string;
+      position: string;
+    };
+  };
+  historicalPages: {
+    path: string;
+    sha256: string;
+    selectedHeaders: {
+      page: string;
+      clicks: string;
+      impressions: string;
+      position: string;
+    };
+  };
+  currentQueries: {
+    path: string;
+    sha256: string;
+    scope: "property-query-only";
+    selectedHeaders: {
+      query: string;
+      clicks: string;
+      impressions: string;
+      position: string;
+    };
+  };
+  renderedContracts: {
+    path: string;
+    sha256: string;
+  };
+}
+
 export interface NormalizedReadinessRow {
   url: string;
   category: string;
@@ -67,6 +108,7 @@ export interface NormalizedReadinessRow {
   evidenceGaps?: string[];
   sourceEvidence?: {
     splitMessagePath: string;
+    splitMessageObserved: boolean;
     contentHash: string;
     currentGsc: {
       url: string;
@@ -92,6 +134,7 @@ export interface NormalizedReadinessRow {
 
 export interface NormalizedReadinessInputs {
   checkpointDate: string;
+  inputProvenance?: ToolIndexReadinessInputProvenance;
   queryEvidence: {
     scope: "property-query-only";
     rowCount: number;
@@ -120,6 +163,7 @@ export interface ToolIndexReadinessReportRow extends Omit<
 export interface ToolIndexReadinessReport {
   notice: typeof RECOMMENDATION_ONLY_NOTICE;
   checkpointDate: string;
+  inputProvenance: ToolIndexReadinessInputProvenance | null;
   queryEvidence: NormalizedReadinessInputs["queryEvidence"];
   rows: ToolIndexReadinessReportRow[];
 }
@@ -130,6 +174,7 @@ export interface ToolIndexReadinessAssemblyOptions {
   historicalPages: readonly GscPageRow[];
   currentQueries: readonly GscQueryRow[];
   renderedContracts: unknown;
+  inputProvenance?: ToolIndexReadinessInputProvenance;
   repositoryRoot?: string;
   toolCatalog?: readonly Tool[];
   localeCatalog?: readonly Locale[];
@@ -145,6 +190,7 @@ export interface ToolIndexReadinessAssemblyOptions {
     locale: Locale,
     slug: string,
   ) => boolean | Promise<boolean>;
+  overrides?: readonly IndexReadinessOverride[];
 }
 
 const RECOMMENDATION_ORDER = [
@@ -162,6 +208,91 @@ function compareText(left: string, right: string): number {
 
 function canonicalToolUrl(locale: string, slug: string): string {
   return `https://www.u2tool.com/${locale}/tools/${slug}/`;
+}
+
+function isCalendarDate(value: string): boolean {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/u.exec(value);
+  if (!match) return false;
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  if (year < 1 || month < 1 || month > 12 || day < 1) return false;
+  const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const daysInMonth = [
+    31,
+    leapYear ? 29 : 28,
+    31,
+    30,
+    31,
+    30,
+    31,
+    31,
+    30,
+    31,
+    30,
+    31,
+  ];
+  return day <= daysInMonth[month - 1];
+}
+
+function assertCalendarDate(value: string, label: string): void {
+  if (!isCalendarDate(value)) {
+    throw new Error(`${label} must be a valid YYYY-MM-DD calendar date`);
+  }
+}
+
+function indexReadinessOverrides(
+  overrides: readonly IndexReadinessOverride[],
+  checkpointDate: string,
+): Map<string, IndexReadinessOverride> {
+  assertCalendarDate(checkpointDate, "checkpointDate");
+  const byPair = new Map<string, IndexReadinessOverride>();
+  for (const override of overrides) {
+    if (
+      typeof override.locale !== "string" ||
+      !override.locale.trim() ||
+      typeof override.slug !== "string" ||
+      !override.slug.trim()
+    ) {
+      throw new Error("Index readiness override locale and slug are required");
+    }
+    if (typeof override.reason !== "string" || !override.reason.trim()) {
+      throw new Error(
+        `Index readiness override ${override.locale}/${override.slug} reason is required`,
+      );
+    }
+    if (
+      override.strongerSiblingSlug !== undefined &&
+      override.samePrimaryIntent !== true
+    ) {
+      throw new Error(
+        `Index readiness override ${override.locale}/${override.slug} with strongerSiblingSlug requires samePrimaryIntent:true`,
+      );
+    }
+    if (override.expiresOn !== undefined) {
+      if (
+        typeof override.expiresOn !== "string" ||
+        !isCalendarDate(override.expiresOn)
+      ) {
+        throw new Error(
+          `Index readiness override ${override.locale}/${override.slug} expiresOn must be a valid YYYY-MM-DD calendar date`,
+        );
+      }
+      if (checkpointDate > override.expiresOn) {
+        throw new Error(
+          `Index readiness override ${override.locale}/${override.slug} expired on ${override.expiresOn} before checkpoint ${checkpointDate}`,
+        );
+      }
+    }
+    const pair = `${override.locale}\0${override.slug}`;
+    if (byPair.has(pair)) {
+      throw new Error(
+        `Index readiness override registry has duplicate ${override.locale}/${override.slug}`,
+      );
+    }
+    byPair.set(pair, override);
+  }
+  return byPair;
 }
 
 export function normalizeToolPageUrl(input: string): string | null {
@@ -202,6 +333,7 @@ function indexGscPageRows(
   >();
 
   for (const row of rows) {
+    assertGscMetrics(row, "GSC page row");
     const url = normalizeToolPageUrl(row.url);
     if (!url) continue;
     const value = accumulated.get(url) ?? {
@@ -326,15 +458,6 @@ interface RenderedEvidence {
   hreflangPasses: boolean | null;
 }
 
-function booleanField(
-  row: Record<string, unknown>,
-  contract: Record<string, unknown>,
-  field: string,
-): boolean | null {
-  const value = row[field] ?? contract[field];
-  return typeof value === "boolean" ? value : null;
-}
-
 function renderedCanonicalSelfReferences(
   canonical: string,
   expectedUrl: string,
@@ -356,23 +479,143 @@ function renderedCanonicalSelfReferences(
   }
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+function isNonNegativeInteger(value: unknown): value is number {
+  return (
+    typeof value === "number" &&
+    Number.isFinite(value) &&
+    Number.isInteger(value) &&
+    value >= 0
+  );
+}
+
+function isStringArray(value: unknown): value is string[] {
+  return (
+    Array.isArray(value) && value.every((item) => typeof item === "string")
+  );
+}
+
+function hasRenderedProducerContractSchema(
+  contract: Record<string, unknown>,
+): boolean {
+  return (
+    isNonNegativeInteger(contract.status) &&
+    typeof contract.title === "string" &&
+    typeof contract.description === "string" &&
+    typeof contract.canonical === "string" &&
+    typeof contract.h1 === "string" &&
+    isStringArray(contract.jsonLdTypes) &&
+    isStringArray(contract.toolClusters) &&
+    isStringArray(contract.toolClusterGroups) &&
+    isStringArray(contract.siblingToolHrefs) &&
+    isNonNegativeInteger(contract.faqQuestionCount) &&
+    isStringArray(contract.bodyTextSentinels) &&
+    isNonNegativeInteger(contract.capabilityDisclosureCount) &&
+    isNonNegativeInteger(contract.grammarLanguageNoticeCount)
+  );
+}
+
+function assertRenderedProducerSchema(input: unknown): asserts input is Record<
+  string,
+  unknown
+> & {
+  results: Record<string, unknown>[];
+} {
+  if (!isRecord(input)) {
+    throw new Error(
+      "Rendered evidence does not match the producer report schema",
+    );
+  }
+  const summary = input.summary;
+  const results = input.results;
+  let baseUrlValid = false;
+  try {
+    baseUrlValid =
+      typeof input.baseUrl === "string" && Boolean(new URL(input.baseUrl));
+  } catch {
+    baseUrlValid = false;
+  }
+  if (
+    typeof input.generatedAt !== "string" ||
+    !Number.isFinite(Date.parse(input.generatedAt)) ||
+    !baseUrlValid ||
+    !isRecord(summary) ||
+    !isNonNegativeInteger(summary.total) ||
+    !isNonNegativeInteger(summary.passed) ||
+    !isNonNegativeInteger(summary.failed) ||
+    !Array.isArray(results) ||
+    summary.total !== results.length ||
+    summary.passed + summary.failed !== summary.total
+  ) {
+    throw new Error(
+      "Rendered evidence does not match the producer report schema",
+    );
+  }
+
+  let observedFailed = 0;
+  for (const candidate of results) {
+    if (!isRecord(candidate)) {
+      throw new Error(
+        "Rendered evidence does not match the producer report schema",
+      );
+    }
+    const { locale, slug, failures, contract, error } = candidate;
+    if (
+      typeof locale !== "string" ||
+      !locale ||
+      typeof slug !== "string" ||
+      !slug ||
+      candidate.path !== `/${locale}/tools/${slug}/` ||
+      !isNonNegativeInteger(candidate.status) ||
+      !isStringArray(failures) ||
+      (error !== undefined && typeof error !== "string") ||
+      (contract !== undefined &&
+        (!isRecord(contract) ||
+          !hasRenderedProducerContractSchema(contract) ||
+          contract.status !== candidate.status)) ||
+      (contract === undefined && typeof error !== "string")
+    ) {
+      throw new Error(
+        "Rendered evidence does not match the producer report schema",
+      );
+    }
+    if (failures.length > 0 || error !== undefined) observedFailed += 1;
+  }
+  if (
+    summary.failed !== observedFailed ||
+    summary.passed !== results.length - observedFailed
+  ) {
+    throw new Error(
+      "Rendered evidence does not match the producer report schema",
+    );
+  }
+}
+
 function indexRenderedContracts(
   input: unknown,
 ): Map<string, Record<string, unknown>> {
-  if (!input || typeof input !== "object") return new Map();
-  const root = input as Record<string, unknown>;
-  const candidateRows = Array.isArray(root.results)
-    ? root.results
-    : Array.isArray(input)
-      ? input
-      : [];
+  assertRenderedProducerSchema(input);
+  const candidateRows = input.results;
   const entries: Array<[string, Record<string, unknown>]> = [];
+  const seenPairs = new Set<string>();
   for (const candidate of candidateRows) {
     if (!candidate || typeof candidate !== "object") continue;
     const row = candidate as Record<string, unknown>;
     const locale = typeof row.locale === "string" ? row.locale : "";
     const slug = typeof row.slug === "string" ? row.slug : "";
-    if (locale && slug) entries.push([`${locale}\0${slug}`, row]);
+    if (locale && slug) {
+      const pair = `${locale}\0${slug}`;
+      if (seenPairs.has(pair)) {
+        throw new Error(
+          `Duplicate rendered producer evidence for ${locale}/${slug}`,
+        );
+      }
+      seenPairs.add(pair);
+      entries.push([pair, row]);
+    }
   }
   return new Map(entries);
 }
@@ -392,13 +635,8 @@ function renderedEvidenceFor(
     row.contract && typeof row.contract === "object"
       ? (row.contract as Record<string, unknown>)
       : {};
-  const rawStatus = row.status ?? contract.status;
-  const canonical = row.canonical ?? contract.canonical;
-  const explicitCanonical = booleanField(
-    row,
-    contract,
-    "canonicalSelfReferences",
-  );
+  const rawStatus = row.status;
+  const canonical = contract.canonical;
 
   return {
     status:
@@ -406,11 +644,10 @@ function renderedEvidenceFor(
         ? rawStatus
         : null,
     canonicalSelfReferences:
-      explicitCanonical ??
-      (typeof canonical === "string"
+      typeof canonical === "string"
         ? renderedCanonicalSelfReferences(canonical, expectedUrl)
-        : null),
-    hreflangPasses: booleanField(row, contract, "hreflangPasses"),
+        : null,
+    hreflangPasses: null,
   };
 }
 
@@ -445,6 +682,13 @@ async function mapWithConcurrency<Input, Output>(
 export async function assembleToolIndexReadinessInputs(
   options: ToolIndexReadinessAssemblyOptions,
 ): Promise<NormalizedReadinessInputs> {
+  const overridesByPair = indexReadinessOverrides(
+    options.overrides ?? INDEX_READINESS_OVERRIDES,
+    options.checkpointDate,
+  );
+  for (const query of options.currentQueries) {
+    assertGscMetrics(query, "GSC query row");
+  }
   const repositoryRoot = options.repositoryRoot ?? process.cwd();
   const toolCatalog = options.toolCatalog ?? configuredTools;
   const localeCatalog = options.localeCatalog ?? configuredLocales;
@@ -494,13 +738,6 @@ export async function assembleToolIndexReadinessInputs(
   const routeTemplateExists = existsSync(
     path.join(repositoryRoot, "src/pages/[locale]/tools/[slug].astro"),
   );
-  const overridesByPair = new Map(
-    INDEX_READINESS_OVERRIDES.map((override) => [
-      `${override.locale}\0${override.slug}`,
-      override,
-    ]),
-  );
-
   const pairs = localeCatalog.flatMap((locale) =>
     toolCatalog.map((tool) => ({ locale, tool })),
   );
@@ -578,6 +815,7 @@ export async function assembleToolIndexReadinessInputs(
 
   return {
     checkpointDate: options.checkpointDate,
+    inputProvenance: options.inputProvenance,
     queryEvidence: {
       scope: "property-query-only",
       rowCount: options.currentQueries.length,
@@ -593,6 +831,7 @@ export async function assembleToolIndexReadinessInputs(
           "tools",
           `${draft.tool.slug}.json`,
         ),
+        splitMessageObserved: draft.independentSplitCopy,
         contentHash: draft.contentHash,
         currentGsc: {
           url: draft.url,
@@ -735,7 +974,34 @@ function parseRequiredMetric(value: string | undefined, label: string): number {
   if (!Number.isFinite(parsed)) {
     throw new Error(`GSC CSV ${label} is not numeric: ${value}`);
   }
+  assertGscMetric(parsed, label);
   return parsed;
+}
+
+function assertGscMetric(value: number, label: string): void {
+  if (label === "clicks" || label === "impressions") {
+    if (!Number.isFinite(value) || !Number.isInteger(value) || value < 0) {
+      throw new Error(`GSC ${label} must be a finite non-negative integer`);
+    }
+    return;
+  }
+  if (!Number.isFinite(value) || value < 0) {
+    throw new Error(`GSC ${label} must be a finite non-negative number`);
+  }
+}
+
+function assertGscMetrics(
+  row: Pick<GscPageRow, "clicks" | "impressions" | "position">,
+  context: string,
+): void {
+  for (const label of ["clicks", "impressions", "position"] as const) {
+    try {
+      assertGscMetric(row[label], label);
+    } catch (error) {
+      const details = error instanceof Error ? error.message : String(error);
+      throw new Error(`${context}: ${details}`);
+    }
+  }
 }
 
 function requiredHeaderIndex(
@@ -807,10 +1073,13 @@ function requiredMetricHeaderIndex(
   );
 }
 
-export function parseGscPageRowsForPeriod(
+function parseGscPageRowsWithHeaders(
   csv: string,
   period: "current" | "historical",
-): GscPageRow[] {
+): {
+  rows: GscPageRow[];
+  selectedHeaders: ToolIndexReadinessInputProvenance["currentPages"]["selectedHeaders"];
+} {
   const [headers, ...records] = parseCsv(csv);
   if (!headers) {
     throw new Error("GSC page CSV is empty");
@@ -840,19 +1109,37 @@ export function parseGscPageRowsForPeriod(
       (header.includes("排名") && !header.includes("网页")),
   );
 
-  return records.map((record) => ({
-    url: record[urlIndex]?.trim() ?? "",
-    clicks: parseRequiredMetric(record[clicksIndex], "clicks"),
-    impressions: parseRequiredMetric(record[impressionsIndex], "impressions"),
-    position: parseRequiredMetric(record[positionIndex], "position"),
-  }));
+  return {
+    rows: records.map((record) => ({
+      url: record[urlIndex]?.trim() ?? "",
+      clicks: parseRequiredMetric(record[clicksIndex], "clicks"),
+      impressions: parseRequiredMetric(record[impressionsIndex], "impressions"),
+      position: parseRequiredMetric(record[positionIndex], "position"),
+    })),
+    selectedHeaders: {
+      page: headers[urlIndex].trim(),
+      clicks: headers[clicksIndex].trim(),
+      impressions: headers[impressionsIndex].trim(),
+      position: headers[positionIndex].trim(),
+    },
+  };
+}
+
+export function parseGscPageRowsForPeriod(
+  csv: string,
+  period: "current" | "historical",
+): GscPageRow[] {
+  return parseGscPageRowsWithHeaders(csv, period).rows;
 }
 
 export function parseGscPageRows(csv: string): GscPageRow[] {
   return parseGscPageRowsForPeriod(csv, "current");
 }
 
-export function parseGscQueryRows(csv: string): GscQueryRow[] {
+function parseGscQueryRowsWithHeaders(csv: string): {
+  rows: GscQueryRow[];
+  selectedHeaders: ToolIndexReadinessInputProvenance["currentQueries"]["selectedHeaders"];
+} {
   const [headers, ...records] = parseCsv(csv);
   if (!headers) {
     throw new Error("GSC query CSV is empty");
@@ -882,12 +1169,96 @@ export function parseGscQueryRows(csv: string): GscQueryRow[] {
     (header) => header.includes("position") || header.includes("排名"),
   );
 
-  return records.map((record) => ({
-    query: record[queryIndex]?.trim() ?? "",
-    clicks: parseRequiredMetric(record[clicksIndex], "clicks"),
-    impressions: parseRequiredMetric(record[impressionsIndex], "impressions"),
-    position: parseRequiredMetric(record[positionIndex], "position"),
-  }));
+  return {
+    rows: records.map((record) => ({
+      query: record[queryIndex]?.trim() ?? "",
+      clicks: parseRequiredMetric(record[clicksIndex], "clicks"),
+      impressions: parseRequiredMetric(record[impressionsIndex], "impressions"),
+      position: parseRequiredMetric(record[positionIndex], "position"),
+    })),
+    selectedHeaders: {
+      query: headers[queryIndex].trim(),
+      clicks: headers[clicksIndex].trim(),
+      impressions: headers[impressionsIndex].trim(),
+      position: headers[positionIndex].trim(),
+    },
+  };
+}
+
+export function parseGscQueryRows(csv: string): GscQueryRow[] {
+  return parseGscQueryRowsWithHeaders(csv).rows;
+}
+
+function knownEvidenceReasons(row: NormalizedReadinessRow): string[] {
+  const reasons: string[] = [];
+  const { evidence } = row;
+  const { content, technical } = evidence;
+  const evidenceGaps = new Set(row.evidenceGaps ?? []);
+
+  if (!technical.routeExists) reasons.push("technical-route-missing");
+  if (!technical.inSitemap) reasons.push("technical-sitemap-missing");
+  if (technical.canonicalSelfReferences === false) {
+    reasons.push("technical-canonical-failed");
+  }
+  if (technical.hreflangPasses === false) {
+    reasons.push("technical-hreflang-failed");
+  }
+  if (technical.renderedStatus !== null && technical.renderedStatus !== 200) {
+    reasons.push("technical-rendered-status-failed");
+  }
+  if (evidence.capabilityClaimIssues.length > 0) {
+    reasons.push("capability-claim-issue");
+  }
+  if (
+    !evidence.localEngineSupportsLocale &&
+    !evidenceGaps.has("localEngineSupportsLocale")
+  ) {
+    reasons.push("locale-engine-unsupported");
+  }
+  if (!content.hasIndependentSplitCopy) {
+    reasons.push("independent-split-copy-missing");
+  }
+  if (content.detailedDescriptionLength < 220) {
+    reasons.push("content-detailed-description-thin");
+  }
+  if (content.usageStepCount < 3) reasons.push("content-usage-steps-thin");
+  if (content.usageExampleCount < 2) {
+    reasons.push("content-usage-examples-thin");
+  }
+  if (content.faqCount < 3) reasons.push("content-faqs-thin");
+  if (content.duplicateContentKey !== null) {
+    reasons.push("duplicate-content-detected");
+  }
+  if (content.fallbackUsed) reasons.push("fallback-content-used");
+  if (
+    evidence.overlap.strongerSiblingSlug !== null &&
+    evidence.overlap.samePrimaryIntent
+  ) {
+    reasons.push("stronger-sibling-overlap");
+  }
+  if (
+    row.demandCoverage.currentPageRow &&
+    (evidence.demand.currentClicks > 0 ||
+      evidence.demand.currentImpressions > 0)
+  ) {
+    reasons.push("current-demand-present");
+  }
+  if (
+    row.demandCoverage.historicalPageRow &&
+    (evidence.demand.historicalClicks > 0 ||
+      evidence.demand.historicalImpressions > 0)
+  ) {
+    reasons.push("historical-demand-present");
+  }
+  if (
+    evidence.demand.topQueryShare !== null &&
+    evidence.demand.topQueryShare > 0.8
+  ) {
+    reasons.push("one-query-dominance");
+  }
+  if (evidence.protectedControl) reasons.push("protected-control");
+
+  return reasons;
 }
 
 export function buildToolIndexReadinessReport(
@@ -912,26 +1283,26 @@ export function buildToolIndexReadinessReport(
         reasons.push("gsc-historical-page-row-missing");
       }
 
-      const finalDecision: IndexReadinessDecision =
-        missingEvidence.length === 0
-          ? decision
-          : {
-              recommendation: "manual-review",
-              reasons: [
-                ...new Set([
-                  ...reasons,
-                  ...decision.reasons.filter(
-                    (reason) =>
-                      reason === "protected-control" ||
-                      reason.endsWith("-missing"),
-                  ),
-                ]),
-              ],
-              missingEvidence: [
-                ...new Set([...missingEvidence, ...decision.missingEvidence]),
-              ],
-              reviewRequired: true,
-            };
+      const hasSourceGap =
+        missingEvidence.length > 0 || decision.missingEvidence.length > 0;
+      const finalDecision: IndexReadinessDecision = !hasSourceGap
+        ? decision
+        : {
+            recommendation: "manual-review",
+            reasons: [
+              ...new Set([
+                ...reasons,
+                ...decision.reasons.filter(
+                  (reason) => reason !== "zero-demand",
+                ),
+                ...knownEvidenceReasons(row),
+              ]),
+            ],
+            missingEvidence: [
+              ...new Set([...missingEvidence, ...decision.missingEvidence]),
+            ],
+            reviewRequired: true,
+          };
 
       return {
         ...row,
@@ -972,6 +1343,7 @@ export function buildToolIndexReadinessReport(
   return {
     notice: RECOMMENDATION_ONLY_NOTICE,
     checkpointDate: input.checkpointDate,
+    inputProvenance: input.inputProvenance ?? null,
     queryEvidence: input.queryEvidence,
     rows,
   };
@@ -1012,6 +1384,8 @@ export function renderToolIndexReadinessCsv(
     "historical_clicks",
     "historical_impressions",
     "top_query_share",
+    "split_message_path",
+    "split_message_observed",
     "independent_split_copy",
     "detailed_description_length",
     "usage_step_count",
@@ -1051,6 +1425,8 @@ export function renderToolIndexReadinessCsv(
       demand.historicalClicks,
       demand.historicalImpressions,
       demand.topQueryShare,
+      row.sourceEvidence?.splitMessagePath,
+      row.sourceEvidence?.splitMessageObserved,
       content.hasIndependentSplitCopy,
       content.detailedDescriptionLength,
       content.usageStepCount,
@@ -1147,6 +1523,15 @@ export function renderToolIndexReadinessMarkdown(
       decision.recommendation === "merge" ||
       decision.recommendation === "noindex-candidate",
   );
+  const provenance = report.inputProvenance;
+  const provenanceLines = provenance
+    ? [
+        `- Current GSC pages: path \`${provenance.currentPages.path}\`; SHA-256 \`${provenance.currentPages.sha256}\`; headers page=\`${provenance.currentPages.selectedHeaders.page}\`, clicks=\`${provenance.currentPages.selectedHeaders.clicks}\`, impressions=\`${provenance.currentPages.selectedHeaders.impressions}\`, position=\`${provenance.currentPages.selectedHeaders.position}\`.`,
+        `- Historical GSC pages: path \`${provenance.historicalPages.path}\`; SHA-256 \`${provenance.historicalPages.sha256}\`; headers page=\`${provenance.historicalPages.selectedHeaders.page}\`, clicks=\`${provenance.historicalPages.selectedHeaders.clicks}\`, impressions=\`${provenance.historicalPages.selectedHeaders.impressions}\`, position=\`${provenance.historicalPages.selectedHeaders.position}\`.`,
+        `- Current GSC queries: path \`${provenance.currentQueries.path}\`; SHA-256 \`${provenance.currentQueries.sha256}\`; scope \`${provenance.currentQueries.scope}\`; headers query=\`${provenance.currentQueries.selectedHeaders.query}\`, clicks=\`${provenance.currentQueries.selectedHeaders.clicks}\`, impressions=\`${provenance.currentQueries.selectedHeaders.impressions}\`, position=\`${provenance.currentQueries.selectedHeaders.position}\`.`,
+        `- Rendered contracts: path \`${provenance.renderedContracts.path}\`; SHA-256 \`${provenance.renderedContracts.sha256}\`.`,
+      ]
+    : ["_Input provenance unavailable for this in-memory report._"];
   const lines = [
     RECOMMENDATION_ONLY_NOTICE,
     "",
@@ -1155,6 +1540,12 @@ export function renderToolIndexReadinessMarkdown(
     "This is evidence and recommendation output only. It does not write robots.txt, meta robots, canonical, hreflang, redirects, or sitemap files.",
     "",
     "The query export is property-level query-only data and has no URL-query joint dimension. `topQueryShare` therefore remains `null`; no query is associated with a URL.",
+    "",
+    "## Input provenance",
+    "",
+    ...provenanceLines,
+    "",
+    "The CSV sibling remains a row-only projection; the JSON and Markdown siblings are authoritative for input provenance.",
     "",
     "## Totals",
     "",
@@ -1279,6 +1670,7 @@ export async function writeToolIndexReadinessArtifacts(
     hadOriginal: false,
     published: false,
     backupRestored: false,
+    rollbackRemovalFailed: false,
   }));
 
   await operations.mkdir(outputDir);
@@ -1314,6 +1706,7 @@ export async function writeToolIndexReadinessArtifacts(
       try {
         await operations.remove(entry.finalPath);
       } catch (rollbackError) {
+        entry.rollbackRemovalFailed = true;
         rollbackErrors.push(rollbackError);
       }
       if (entry.hadOriginal) {
@@ -1328,9 +1721,13 @@ export async function writeToolIndexReadinessArtifacts(
   }
 
   const cleanupErrors: unknown[] = [];
+  const newPublicationRecoveryRequired = entries.some(
+    (entry) =>
+      entry.published && !entry.hadOriginal && entry.rollbackRemovalFailed,
+  );
   await Promise.all(
     entries.flatMap((entry) => {
-      const safePaths = [entry.tempPath];
+      const safePaths = newPublicationRecoveryRequired ? [] : [entry.tempPath];
       if (
         !publicationFailed ||
         !entry.hadOriginal ||
@@ -1372,9 +1769,13 @@ export async function writeToolIndexReadinessArtifacts(
 async function readRequiredInput(
   filePath: string,
   label: string,
-): Promise<string> {
+): Promise<{ text: string; sha256: string }> {
   try {
-    return await readFile(filePath, "utf8");
+    const bytes = await readFile(filePath);
+    return {
+      text: bytes.toString("utf8"),
+      sha256: createHash("sha256").update(bytes).digest("hex"),
+    };
   } catch (error) {
     const details = error instanceof Error ? error.message : String(error);
     throw new Error(`${label} input unavailable: ${filePath} (${details})`);
@@ -1393,22 +1794,51 @@ export async function runToolIndexReadinessCli(
     ]);
   let renderedContracts: unknown;
   try {
-    renderedContracts = JSON.parse(renderedJson) as unknown;
+    renderedContracts = JSON.parse(renderedJson.text) as unknown;
   } catch (error) {
     throw new Error(
       `Rendered contracts JSON is invalid: ${options.renderedContractsJson} (${error instanceof Error ? error.message : String(error)})`,
     );
   }
 
+  const currentPages = parseGscPageRowsWithHeaders(
+    currentPagesCsv.text,
+    "current",
+  );
+  const historicalPages = parseGscPageRowsWithHeaders(
+    historicalPagesCsv.text,
+    "historical",
+  );
+  const currentQueries = parseGscQueryRowsWithHeaders(currentQueriesCsv.text);
+
   const normalized = await assembleToolIndexReadinessInputs({
     checkpointDate: options.checkpointDate,
-    currentPages: parseGscPageRowsForPeriod(currentPagesCsv, "current"),
-    historicalPages: parseGscPageRowsForPeriod(
-      historicalPagesCsv,
-      "historical",
-    ),
-    currentQueries: parseGscQueryRows(currentQueriesCsv),
+    currentPages: currentPages.rows,
+    historicalPages: historicalPages.rows,
+    currentQueries: currentQueries.rows,
     renderedContracts,
+    inputProvenance: {
+      currentPages: {
+        path: options.currentPagesCsv,
+        sha256: currentPagesCsv.sha256,
+        selectedHeaders: currentPages.selectedHeaders,
+      },
+      historicalPages: {
+        path: options.historicalPagesCsv,
+        sha256: historicalPagesCsv.sha256,
+        selectedHeaders: historicalPages.selectedHeaders,
+      },
+      currentQueries: {
+        path: options.currentQueriesCsv,
+        sha256: currentQueriesCsv.sha256,
+        scope: "property-query-only",
+        selectedHeaders: currentQueries.selectedHeaders,
+      },
+      renderedContracts: {
+        path: options.renderedContractsJson,
+        sha256: renderedJson.sha256,
+      },
+    },
   });
   const report = buildToolIndexReadinessReport(normalized);
   const outputPaths = await writeToolIndexReadinessArtifacts(
@@ -1468,24 +1898,38 @@ function baselinePaths(
 export function parseToolIndexReadinessArgs(
   args: string[],
 ): ToolIndexReadinessCliOptions {
+  const allowedFlags = new Set([
+    "--checkpoint-date",
+    "--current-pages-csv",
+    "--historical-pages-csv",
+    "--current-queries-csv",
+    "--rendered-contracts-json",
+    "--output-dir",
+  ]);
   const values = new Map<string, string>();
   for (let index = 0; index < args.length; index += 2) {
     const flag = args[index];
     const value = args[index + 1];
-    if (
-      !flag?.startsWith("--") ||
-      value === undefined ||
-      value.startsWith("--")
-    ) {
+    if (!flag?.startsWith("--")) {
       throw new Error(`Invalid argument near ${flag ?? "<end>"}`);
+    }
+    if (!allowedFlags.has(flag)) {
+      throw new Error(`Unknown argument flag ${flag}`);
+    }
+    if (values.has(flag)) {
+      throw new Error(`Duplicate argument flag ${flag}`);
+    }
+    if (value === undefined || value.startsWith("--")) {
+      throw new Error(`Missing value for ${flag}`);
     }
     values.set(flag, value);
   }
 
   const checkpointDate = values.get("--checkpoint-date");
-  if (!checkpointDate || !/^\d{4}-\d{2}-\d{2}$/u.test(checkpointDate)) {
+  if (!checkpointDate) {
     throw new Error("Required: --checkpoint-date YYYY-MM-DD");
   }
+  assertCalendarDate(checkpointDate, "checkpoint date");
 
   const defaults = baselinePaths(checkpointDate);
   return {

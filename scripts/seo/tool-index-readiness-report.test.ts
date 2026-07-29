@@ -8,6 +8,7 @@ import {
   writeFile,
 } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { tmpdir } from "node:os";
 
@@ -70,6 +71,58 @@ function evidence(
   };
 }
 
+function renderedProducerResult(
+  locale: string,
+  slug: string,
+  overrides: Record<string, unknown> = {},
+): Record<string, unknown> {
+  return {
+    locale,
+    slug,
+    path: `/${locale}/tools/${slug}/`,
+    status: 200,
+    failures: [],
+    contract: {
+      status: 200,
+      title: "Tool title",
+      description: "Tool description",
+      canonical: `https://www.u2tool.com/${locale}/tools/${slug}/`,
+      h1: "Tool heading",
+      jsonLdTypes: [],
+      toolClusters: [],
+      toolClusterGroups: [],
+      siblingToolHrefs: [],
+      faqQuestionCount: 0,
+      bodyTextSentinels: [],
+      capabilityDisclosureCount: 0,
+      grammarLanguageNoticeCount: 0,
+    },
+    ...overrides,
+  };
+}
+
+function renderedProducerReport(
+  results: readonly Record<string, unknown>[] = [],
+): Record<string, unknown> {
+  const failed = results.filter((result) => {
+    const failures = result.failures;
+    return (
+      result.error !== undefined ||
+      (Array.isArray(failures) && failures.length > 0)
+    );
+  }).length;
+  return {
+    generatedAt: "2026-07-13T00:00:00.000Z",
+    baseUrl: "http://127.0.0.1:4321",
+    summary: {
+      total: results.length,
+      passed: results.length - failed,
+      failed,
+    },
+    results,
+  };
+}
+
 describe("tool index readiness evidence report", () => {
   it("parses the checkpoint date and supplies the stable baseline input paths", () => {
     expect(
@@ -84,6 +137,31 @@ describe("tool index readiness evidence report", () => {
         "exports/seo/tool-index-readiness/2026-07-13/rendered-contracts.json",
       outputDir: "exports/seo/tool-index-readiness/2026-07-13",
     });
+  });
+
+  it.each([
+    [
+      "unknown flag",
+      ["--checkpoint-date", "2026-07-13", "--current-page-csv", "typo.csv"],
+      /unknown.*--current-page-csv/iu,
+    ],
+    [
+      "duplicate flag",
+      ["--checkpoint-date", "2026-07-13", "--checkpoint-date", "2026-07-14"],
+      /duplicate.*--checkpoint-date/iu,
+    ],
+    [
+      "missing value",
+      ["--checkpoint-date"],
+      /missing value.*--checkpoint-date/iu,
+    ],
+    [
+      "non-calendar checkpoint",
+      ["--checkpoint-date", "2026-02-30"],
+      /valid YYYY-MM-DD calendar date/iu,
+    ],
+  ])("rejects strict CLI args with %s", (_caseName, args, error) => {
+    expect(() => parseToolIndexReadinessArgs(args)).toThrow(error);
   });
 
   it("registers the evidence reporter package script", async () => {
@@ -210,6 +288,33 @@ describe("tool index readiness evidence report", () => {
     ]);
   });
 
+  it.each([
+    ["negative clicks", "-1,10,1", /clicks.*non-negative integer/iu],
+    [
+      "fractional impressions",
+      "1,10.5,1",
+      /impressions.*non-negative integer/iu,
+    ],
+    ["negative position", "1,10,-0.1", /position.*non-negative/iu],
+  ])("rejects GSC page rows with %s", (_caseName, metrics, error) => {
+    expect(() =>
+      parseGscPageRows(
+        [
+          "Top pages,Clicks,Impressions,Position",
+          `https://www.u2tool.com/en/tools/grammar-checker/,${metrics}`,
+        ].join("\n"),
+      ),
+    ).toThrow(error);
+  });
+
+  it("accepts GSC position zero as a no-data export value", () => {
+    expect(
+      parseGscQueryRows(
+        ["Top queries,Clicks,Impressions,Position", "query,0,0,0"].join("\n"),
+      )[0],
+    ).toMatchObject({ clicks: 0, impressions: 0, position: 0 });
+  });
+
   it("keeps a missing historical URL row as missing evidence instead of zero demand", () => {
     const report = buildToolIndexReadinessReport({
       checkpointDate: "2026-07-13",
@@ -291,13 +396,127 @@ describe("tool index readiness evidence report", () => {
     expect(report.rows[0].decision.reasons).not.toContain("zero-demand");
   });
 
+  it("preserves a known canonical failure when historical GSC evidence is missing", () => {
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/grammar-checker/",
+          category: "text",
+          evidence: evidence({
+            technical: {
+              routeExists: true,
+              inSitemap: true,
+              canonicalSelfReferences: false,
+              hreflangPasses: true,
+              renderedStatus: 200,
+            },
+          }),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: false,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+    const json = renderToolIndexReadinessJson(report);
+    const csv = renderToolIndexReadinessCsv(report);
+    const markdown = renderToolIndexReadinessMarkdown(report);
+
+    expect(report.rows[0].decision).toMatchObject({
+      recommendation: "manual-review",
+      reasons: expect.arrayContaining([
+        "technical-canonical-failed",
+        "gsc-historical-page-row-missing",
+      ]),
+      missingEvidence: ["demand.historicalPageRow"],
+    });
+    for (const output of [json, csv, markdown]) {
+      expect(output).toContain("technical-canonical-failed");
+      expect(output).toContain("demand.historicalPageRow");
+    }
+  });
+
+  it("preserves independent technical, capability, content, and overlap facts across source gaps", () => {
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/weak-overlap/",
+          category: "text",
+          evidence: evidence({
+            slug: "weak-overlap",
+            localEngineSupportsLocale: false,
+            capabilityClaimIssues: ["claim-drift"],
+            content: {
+              hasIndependentSplitCopy: false,
+              detailedDescriptionLength: 0,
+              usageStepCount: 0,
+              usageExampleCount: 0,
+              faqCount: 0,
+              duplicateContentKey: "duplicate",
+              fallbackUsed: true,
+            },
+            technical: {
+              routeExists: false,
+              inSitemap: false,
+              canonicalSelfReferences: null,
+              hreflangPasses: false,
+              renderedStatus: 500,
+            },
+            overlap: {
+              strongerSiblingSlug: "stronger",
+              samePrimaryIntent: true,
+            },
+          }),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: false,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+
+    expect(report.rows[0].decision.reasons).toEqual(
+      expect.arrayContaining([
+        "technical-route-missing",
+        "technical-sitemap-missing",
+        "technical-hreflang-failed",
+        "technical-rendered-status-failed",
+        "capability-claim-issue",
+        "locale-engine-unsupported",
+        "independent-split-copy-missing",
+        "content-detailed-description-thin",
+        "content-usage-steps-thin",
+        "content-usage-examples-thin",
+        "content-faqs-thin",
+        "duplicate-content-detected",
+        "fallback-content-used",
+        "stronger-sibling-overlap",
+      ]),
+    );
+    expect(report.rows[0].decision.reasons).not.toContain("zero-demand");
+  });
+
   it("serializes missing GSC period metrics as null in JSON and empty CSV cells", async () => {
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "grammar-checker",
@@ -468,7 +687,7 @@ describe("tool index readiness evidence report", () => {
         },
       ],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "grammar-checker",
@@ -505,6 +724,7 @@ describe("tool index readiness evidence report", () => {
       },
       sourceEvidence: {
         splitMessagePath: "src/messages/en/tools/grammar-checker.json",
+        splitMessageObserved: true,
         currentGsc: {
           observed: true,
           position: 17.5,
@@ -535,7 +755,7 @@ describe("tool index readiness evidence report", () => {
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "grammar-checker",
@@ -563,7 +783,7 @@ describe("tool index readiness evidence report", () => {
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "api-tester",
@@ -593,17 +813,9 @@ describe("tool index readiness evidence report", () => {
       currentPages: [{ url, clicks: 0, impressions: 0, position: 0 }],
       historicalPages: [{ url, clicks: 0, impressions: 0, position: 0 }],
       currentQueries: [],
-      renderedContracts: {
-        results: [
-          {
-            locale: "en",
-            slug,
-            status: 200,
-            canonicalSelfReferences: true,
-            hreflangPasses: true,
-          },
-        ],
-      },
+      renderedContracts: renderedProducerReport([
+        renderedProducerResult("en", slug),
+      ]),
       toolCatalog: [
         {
           slug,
@@ -620,9 +832,11 @@ describe("tool index readiness evidence report", () => {
 
     expect(report.rows[0].decision).toMatchObject({
       recommendation: "manual-review",
-      missingEvidence: ["localEngineSupportsLocale"],
       reviewRequired: true,
     });
+    expect(report.rows[0].decision.missingEvidence).toContain(
+      "localEngineSupportsLocale",
+    );
   });
 
   it("flags only whitespace-normalized exact duplicate support blocks", async () => {
@@ -637,7 +851,7 @@ describe("tool index readiness evidence report", () => {
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "duplicate-a",
@@ -677,7 +891,7 @@ describe("tool index readiness evidence report", () => {
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "structured-a",
@@ -718,7 +932,7 @@ describe("tool index readiness evidence report", () => {
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
       toolCatalog: [
         {
           slug: "invalid-support-items",
@@ -748,26 +962,180 @@ describe("tool index readiness evidence report", () => {
     });
   });
 
+  it("rejects duplicate locale and slug pairs in the override registry", async () => {
+    const duplicateOverride = {
+      locale: "es",
+      slug: "grammar-checker",
+      protectedControl: true,
+      reason: "Temporary protected control",
+      expiresOn: "2026-08-24",
+    };
+
+    await expect(
+      assembleToolIndexReadinessInputs({
+        checkpointDate: "2026-07-13",
+        currentPages: [],
+        historicalPages: [],
+        currentQueries: [],
+        renderedContracts: renderedProducerReport(),
+        toolCatalog: [],
+        localeCatalog: [],
+        overrides: [duplicateOverride, duplicateOverride],
+      } as Parameters<typeof assembleToolIndexReadinessInputs>[0]),
+    ).rejects.toThrow(/duplicate.*es\/grammar-checker/iu);
+  });
+
+  it.each([
+    [
+      "blank reason",
+      {
+        locale: "es",
+        slug: "grammar-checker",
+        reason: "   ",
+      },
+      /reason/iu,
+    ],
+    [
+      "missing reason",
+      {
+        locale: "es",
+        slug: "grammar-checker",
+      },
+      /reason/iu,
+    ],
+    [
+      "stronger sibling without confirmed matching intent",
+      {
+        locale: "es",
+        slug: "grammar-checker",
+        reason: "Possible overlap",
+        strongerSiblingSlug: "spell-checker",
+        samePrimaryIntent: false,
+      },
+      /samePrimaryIntent.*true/iu,
+    ],
+    [
+      "invalid expiry date",
+      {
+        locale: "es",
+        slug: "grammar-checker",
+        reason: "Temporary control",
+        expiresOn: "2026-02-30",
+      },
+      /expiresOn.*valid.*YYYY-MM-DD/iu,
+    ],
+  ])("rejects an override with %s", async (_caseName, override, error) => {
+    await expect(
+      assembleToolIndexReadinessInputs({
+        checkpointDate: "2026-07-13",
+        currentPages: [],
+        historicalPages: [],
+        currentQueries: [],
+        renderedContracts: renderedProducerReport(),
+        toolCatalog: [],
+        localeCatalog: [],
+        overrides: [override],
+      } as Parameters<typeof assembleToolIndexReadinessInputs>[0]),
+    ).rejects.toThrow(error);
+  });
+
+  it("rejects the real Spanish controls after their 2026-08-24 expiry", async () => {
+    await expect(
+      assembleToolIndexReadinessInputs({
+        checkpointDate: "2026-09-01",
+        currentPages: [],
+        historicalPages: [],
+        currentQueries: [],
+        renderedContracts: renderedProducerReport(),
+        toolCatalog: [],
+        localeCatalog: [],
+      }),
+    ).rejects.toThrow(/expired.*2026-08-24.*2026-09-01/iu);
+  });
+
+  it("keeps all five real Spanish controls protected and manual during their validity window", async () => {
+    const protectedSlugs = [
+      "timeline-chart-generator",
+      "graph-chart-generator",
+      "sankey-chart-generator",
+      "gantt-chart-generator",
+      "tree-chart-generator",
+    ];
+    const input = await assembleToolIndexReadinessInputs({
+      checkpointDate: "2026-07-13",
+      currentPages: [],
+      historicalPages: [],
+      currentQueries: [],
+      renderedContracts: renderedProducerReport(),
+      toolCatalog: protectedSlugs.map((slug) => ({
+        slug,
+        category: "charts",
+        icon: "chart",
+        component: "ChartGenerator",
+      })),
+      localeCatalog: ["es"],
+      loadMessages: async () => ({}),
+      hasIndependentSplitCopy: async () => true,
+    });
+    const report = buildToolIndexReadinessReport(input);
+
+    expect(input.rows.map((row) => row.evidence.slug).sort()).toEqual(
+      protectedSlugs.sort(),
+    );
+    expect(input.rows.every((row) => row.evidence.protectedControl)).toBe(true);
+    expect(
+      report.rows.every(
+        (row) =>
+          row.decision.recommendation === "manual-review" &&
+          row.decision.reasons.includes("protected-control"),
+      ),
+    ).toBe(true);
+  });
+
+  it("rejects duplicate locale and slug pairs from rendered producer evidence", async () => {
+    const duplicate = renderedProducerResult("en", "grammar-checker");
+
+    await expect(
+      assembleToolIndexReadinessInputs({
+        checkpointDate: "2026-07-13",
+        currentPages: [],
+        historicalPages: [],
+        currentQueries: [],
+        renderedContracts: renderedProducerReport([duplicate, duplicate]),
+        toolCatalog: [],
+        localeCatalog: [],
+      }),
+    ).rejects.toThrow(/duplicate rendered.*en\/grammar-checker/iu);
+  });
+
+  it("rejects rendered evidence that does not match the real producer report schema", async () => {
+    await expect(
+      assembleToolIndexReadinessInputs({
+        checkpointDate: "2026-07-13",
+        currentPages: [],
+        historicalPages: [],
+        currentQueries: [],
+        renderedContracts: { results: [] },
+        toolCatalog: [],
+        localeCatalog: [],
+      }),
+    ).rejects.toThrow(/rendered.*producer.*schema/iu);
+  });
+
   it("keeps hreflang null for an 18/18 passing real rendered-producer schema", async () => {
     const url = "https://www.u2tool.com/es/tools/timeline-chart-generator/";
+    const renderedRows = [
+      renderedProducerResult("es", "timeline-chart-generator"),
+      ...Array.from({ length: 17 }, (_, index) =>
+        renderedProducerResult("en", `producer-fixture-${index}`),
+      ),
+    ];
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
       currentPages: [{ url, clicks: 0, impressions: 146, position: 81.09 }],
       historicalPages: [{ url, clicks: 0, impressions: 20, position: 78.4 }],
       currentQueries: [],
-      renderedContracts: {
-        summary: { total: 18, passed: 18, failed: 0 },
-        results: [
-          {
-            locale: "es",
-            slug: "timeline-chart-generator",
-            status: 200,
-            contract: {
-              canonical: "/es/tools/timeline-chart-generator/",
-            },
-          },
-        ],
-      },
+      renderedContracts: renderedProducerReport(renderedRows),
       toolCatalog: [
         {
           slug: "timeline-chart-generator",
@@ -818,25 +1186,20 @@ describe("tool index readiness evidence report", () => {
     });
   });
 
-  it("rejects a rendered canonical on a foreign origin", async () => {
+  it("rejects a foreign rendered canonical even when a non-producer boolean claims true", async () => {
+    const renderedRow = renderedProducerResult("en", "grammar-checker");
+    renderedRow.canonicalSelfReferences = true;
+    renderedRow.hreflangPasses = true;
+    renderedRow.contract = {
+      ...(renderedRow.contract as Record<string, unknown>),
+      canonical: "https://example.com/en/tools/grammar-checker/",
+    };
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: {
-        results: [
-          {
-            locale: "en",
-            slug: "grammar-checker",
-            status: 200,
-            hreflangPasses: true,
-            contract: {
-              canonical: "https://example.com/en/tools/grammar-checker/",
-            },
-          },
-        ],
-      },
+      renderedContracts: renderedProducerReport([renderedRow]),
       toolCatalog: [
         {
           slug: "grammar-checker",
@@ -853,6 +1216,7 @@ describe("tool index readiness evidence report", () => {
     expect(input.rows[0].evidence.technical.canonicalSelfReferences).toBe(
       false,
     );
+    expect(input.rows[0].evidence.technical.hreflangPasses).toBeNull();
   });
 
   it("assembles every one of the 5,700 repository tool-locale pairs without treating absent rendered evidence as passing", async () => {
@@ -861,7 +1225,7 @@ describe("tool index readiness evidence report", () => {
       currentPages: [],
       historicalPages: [],
       currentQueries: [],
-      renderedContracts: { results: [] },
+      renderedContracts: renderedProducerReport(),
     });
 
     expect(input.rows).toHaveLength(5_700);
@@ -1169,6 +1533,92 @@ describe("tool index readiness evidence report", () => {
     }
   });
 
+  it("preserves unpublished temps when first publication rollback cannot remove a new final", async () => {
+    const temporaryRoot = await mkdtemp(
+      path.join(tmpdir(), "tool-index-artifact-first-publication-rollback-"),
+    );
+    const finalPaths = {
+      json: path.join(temporaryRoot, "tool-index-readiness.json"),
+      csv: path.join(temporaryRoot, "tool-index-readiness.csv"),
+      markdown: path.join(temporaryRoot, "tool-index-readiness.md"),
+    };
+    const publicationError = new Error("injected CSV publication failure");
+    const rollbackError = new Error("injected JSON rollback remove failure");
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/grammar-checker/",
+          category: "text",
+          evidence: evidence(),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: true,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+
+    try {
+      let caught: unknown;
+      try {
+        await writeToolIndexReadinessArtifacts(report, temporaryRoot, {
+          rename: async (source, destination) => {
+            if (source.endsWith(".tmp") && destination === finalPaths.csv) {
+              throw publicationError;
+            }
+            await rename(source, destination);
+          },
+          remove: async (filePath) => {
+            if (filePath === finalPaths.json) {
+              throw rollbackError;
+            }
+            await rm(filePath, { force: true });
+          },
+        });
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught).toBeInstanceOf(AggregateError);
+      expect((caught as AggregateError).errors).toEqual([
+        publicationError,
+        rollbackError,
+      ]);
+      await expect(readFile(finalPaths.json, "utf8")).resolves.toBe(
+        renderToolIndexReadinessJson(report),
+      );
+
+      const remainingFiles = (await readdir(temporaryRoot)).sort();
+      const recoveryTemps = remainingFiles.filter((fileName) =>
+        fileName.endsWith(".tmp"),
+      );
+      expect(recoveryTemps).toHaveLength(2);
+      expect(recoveryTemps).toEqual([
+        expect.stringMatching(/^tool-index-readiness\.csv\..+\.tmp$/u),
+        expect.stringMatching(/^tool-index-readiness\.md\..+\.tmp$/u),
+      ]);
+      await expect(
+        Promise.all(
+          recoveryTemps.map((fileName) =>
+            readFile(path.join(temporaryRoot, fileName), "utf8"),
+          ),
+        ),
+      ).resolves.toEqual([
+        renderToolIndexReadinessCsv(report),
+        renderToolIndexReadinessMarkdown(report),
+      ]);
+    } finally {
+      await rm(temporaryRoot, { recursive: true, force: true });
+    }
+  });
+
   it("runs the executable CLI against temporary evidence inputs and writes all three report files", async () => {
     const temporaryRoot = await mkdtemp(
       path.join(tmpdir(), "tool-index-readiness-"),
@@ -1181,30 +1631,25 @@ describe("tool index readiness evidence report", () => {
       "rendered-contracts.json",
     );
     const outputDir = path.join(temporaryRoot, "output");
-    const pageHeader = "Top pages,Clicks,Impressions,Position";
+    const pageHeader =
+      "Top pages,Last 3 months Clicks,Previous 3 months Clicks,Last 3 months Impressions,Previous 3 months Impressions,Last 3 months Position,Previous 3 months Position";
     const pageUrl = "https://www.u2tool.com/en/tools/grammar-checker/";
+    const currentPagesBytes = `\uFEFF${pageHeader}\r\n${pageUrl},1,0,10,5,12,20\r\n`;
+    const historicalPagesBytes = `${pageHeader}\n${pageUrl},1,0,10,5,12,20\n`;
+    const currentQueriesBytes =
+      'Top queries,Clicks,Impressions,Position\n"grammar checker, online",1,10,12\n';
+    const renderedContractsBytes = JSON.stringify(
+      renderedProducerReport([renderedProducerResult("en", "grammar-checker")]),
+    );
+    const sha256 = (content: string) =>
+      createHash("sha256").update(Buffer.from(content)).digest("hex");
 
     try {
       await Promise.all([
-        writeFile(currentPagesCsv, `${pageHeader}\n${pageUrl},1,10,12\n`),
-        writeFile(historicalPagesCsv, `${pageHeader}\n${pageUrl},0,5,20\n`),
-        writeFile(
-          currentQueriesCsv,
-          'Top queries,Clicks,Impressions,Position\n"grammar checker, online",1,10,12\n',
-        ),
-        writeFile(
-          renderedContractsJson,
-          JSON.stringify({
-            results: [
-              {
-                locale: "en",
-                slug: "grammar-checker",
-                status: 200,
-                canonicalSelfReferences: true,
-              },
-            ],
-          }),
-        ),
+        writeFile(currentPagesCsv, currentPagesBytes),
+        writeFile(historicalPagesCsv, historicalPagesBytes),
+        writeFile(currentQueriesCsv, currentQueriesBytes),
+        writeFile(renderedContractsJson, renderedContractsBytes),
       ]);
 
       const result = spawnSync(
@@ -1239,9 +1684,60 @@ describe("tool index readiness evidence report", () => {
         readFile(path.join(outputDir, "tool-index-readiness.csv"), "utf8"),
         readFile(path.join(outputDir, "tool-index-readiness.md"), "utf8"),
       ]);
-      expect(JSON.parse(json).notice).toBe(RECOMMENDATION_ONLY_NOTICE);
+      const parsedJson = JSON.parse(json) as Record<string, unknown>;
+      expect(parsedJson.notice).toBe(RECOMMENDATION_ONLY_NOTICE);
+      expect(parsedJson.inputProvenance).toEqual({
+        currentPages: {
+          path: currentPagesCsv,
+          sha256: sha256(currentPagesBytes),
+          selectedHeaders: {
+            page: "Top pages",
+            clicks: "Last 3 months Clicks",
+            impressions: "Last 3 months Impressions",
+            position: "Last 3 months Position",
+          },
+        },
+        historicalPages: {
+          path: historicalPagesCsv,
+          sha256: sha256(historicalPagesBytes),
+          selectedHeaders: {
+            page: "Top pages",
+            clicks: "Previous 3 months Clicks",
+            impressions: "Previous 3 months Impressions",
+            position: "Previous 3 months Position",
+          },
+        },
+        currentQueries: {
+          path: currentQueriesCsv,
+          sha256: sha256(currentQueriesBytes),
+          scope: "property-query-only",
+          selectedHeaders: {
+            query: "Top queries",
+            clicks: "Clicks",
+            impressions: "Impressions",
+            position: "Position",
+          },
+        },
+        renderedContracts: {
+          path: renderedContractsJson,
+          sha256: sha256(renderedContractsBytes),
+        },
+      });
       expect(csv.startsWith(`${RECOMMENDATION_ONLY_NOTICE}\n`)).toBe(true);
       expect(markdown.startsWith(`${RECOMMENDATION_ONLY_NOTICE}\n`)).toBe(true);
+      expect(markdown).toContain("## Input provenance");
+      for (const expected of [
+        currentPagesCsv,
+        historicalPagesCsv,
+        currentQueriesCsv,
+        renderedContractsJson,
+        sha256(currentPagesBytes),
+        "Last 3 months Clicks",
+        "Previous 3 months Clicks",
+        "property-query-only",
+      ]) {
+        expect(markdown).toContain(expected);
+      }
     } finally {
       await rm(temporaryRoot, { recursive: true, force: true });
     }
