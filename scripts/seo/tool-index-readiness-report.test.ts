@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { tmpdir } from "node:os";
@@ -7,6 +7,7 @@ import { tmpdir } from "node:os";
 import {
   assembleToolIndexReadinessInputs,
   buildToolIndexReadinessReport,
+  normalizeToolPageUrl,
   parseGscPageRows,
   parseGscPageRowsForPeriod,
   parseGscQueryRows,
@@ -15,6 +16,7 @@ import {
   renderToolIndexReadinessCsv,
   renderToolIndexReadinessJson,
   renderToolIndexReadinessMarkdown,
+  writeToolIndexReadinessArtifacts,
 } from "./tool-index-readiness-report";
 import type { IndexReadinessEvidence } from "../../src/lib/tool-index-readiness";
 
@@ -158,6 +160,28 @@ describe("tool index readiness evidence report", () => {
       clicks: 2,
       impressions: 264,
       position: 86.78,
+    });
+  });
+
+  it("parses real English Last 3 months and Previous 3 months wide headers", () => {
+    const englishWideCsv = [
+      "Top pages,Last 3 months Clicks,Previous 3 months Clicks,Last 3 months Impressions,Previous 3 months Impressions,Last 3 months Position,Previous 3 months Position",
+      "https://www.u2tool.com/en/tools/grammar-checker/,7,3,140,90,14.5,20.25",
+    ].join("\n");
+
+    expect(
+      parseGscPageRowsForPeriod(englishWideCsv, "current")[0],
+    ).toMatchObject({
+      clicks: 7,
+      impressions: 140,
+      position: 14.5,
+    });
+    expect(
+      parseGscPageRowsForPeriod(englishWideCsv, "historical")[0],
+    ).toMatchObject({
+      clicks: 3,
+      impressions: 90,
+      position: 20.25,
     });
   });
 
@@ -489,6 +513,15 @@ describe("tool index readiness evidence report", () => {
     });
   });
 
+  it.each([
+    "https://example.com/en/tools/grammar-checker/",
+    "https://user:secret@www.u2tool.com/en/tools/grammar-checker/",
+    "https://www.u2tool.com:8443/en/tools/grammar-checker/",
+    "https://preview.u2tool.com/en/tools/grammar-checker/",
+  ])("rejects non-property GSC URL %s", (url) => {
+    expect(normalizeToolPageUrl(url)).toBeNull();
+  });
+
   it("carries locale capability validator issues into the assembled evidence", async () => {
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
@@ -515,6 +548,34 @@ describe("tool index readiness evidence report", () => {
       "locale:missing-disclosure",
     );
     expect(input.rows[0].evidence.localEngineSupportsLocale).toBe(false);
+  });
+
+  it("marks English support fields inherited into a partial locale split as fallback", async () => {
+    const input = await assembleToolIndexReadinessInputs({
+      checkpointDate: "2026-07-13",
+      currentPages: [],
+      historicalPages: [],
+      currentQueries: [],
+      renderedContracts: { results: [] },
+      toolCatalog: [
+        {
+          slug: "api-tester",
+          category: "development",
+          icon: "api",
+          component: "ApiTester",
+        },
+      ],
+      localeCatalog: ["es"],
+    });
+
+    expect(input.rows[0].evidence.content).toMatchObject({
+      hasIndependentSplitCopy: true,
+      faqCount: 4,
+      fallbackUsed: true,
+    });
+    expect(input.rows[0].sourceEvidence).toMatchObject({
+      localeFallbackFields: ["faqs"],
+    });
   });
 
   it("keeps unprofiled locale support as missing evidence instead of inferring unsupported", async () => {
@@ -603,6 +664,47 @@ describe("tool index readiness evidence report", () => {
     expect(duplicateKeys[1]).toBe(duplicateKeys[0]);
   });
 
+  it("does not collide support hashes when leaf strings match but structure differs", async () => {
+    const input = await assembleToolIndexReadinessInputs({
+      checkpointDate: "2026-07-13",
+      currentPages: [],
+      historicalPages: [],
+      currentQueries: [],
+      renderedContracts: { results: [] },
+      toolCatalog: [
+        {
+          slug: "structured-a",
+          category: "text",
+          icon: "a",
+          component: "StructuredA",
+        },
+        {
+          slug: "structured-b",
+          category: "text",
+          icon: "b",
+          component: "StructuredB",
+        },
+      ],
+      localeCatalog: ["en"],
+      loadMessages: async (_locale, slug) => ({
+        detailed_description: "Same description",
+        usage_steps: ["Same step"],
+        usage_examples: ["Same example"],
+        faqs:
+          slug === "structured-a"
+            ? [{ question: "Same question", answer: "Same answer" }]
+            : [{ prompt: "Same question", response: "Same answer" }],
+      }),
+      hasIndependentSplitCopy: async () => true,
+    });
+
+    expect(
+      input.rows.map(
+        ({ evidence: rowEvidence }) => rowEvidence.content.duplicateContentKey,
+      ),
+    ).toEqual([null, null]);
+  });
+
   it("counts only non-empty steps and examples and complete FAQ entries", async () => {
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
@@ -639,7 +741,7 @@ describe("tool index readiness evidence report", () => {
     });
   });
 
-  it("assembles route, sitemap, rendered contract, content, and protected override evidence", async () => {
+  it("keeps hreflang null for an 18/18 passing real rendered-producer schema", async () => {
     const url = "https://www.u2tool.com/es/tools/timeline-chart-generator/";
     const input = await assembleToolIndexReadinessInputs({
       checkpointDate: "2026-07-13",
@@ -647,12 +749,12 @@ describe("tool index readiness evidence report", () => {
       historicalPages: [{ url, clicks: 0, impressions: 20, position: 78.4 }],
       currentQueries: [],
       renderedContracts: {
+        summary: { total: 18, passed: 18, failed: 0 },
         results: [
           {
             locale: "es",
             slug: "timeline-chart-generator",
             status: 200,
-            hreflangPasses: true,
             contract: {
               canonical: "/es/tools/timeline-chart-generator/",
             },
@@ -702,7 +804,7 @@ describe("tool index readiness evidence report", () => {
           routeExists: true,
           inSitemap: true,
           canonicalSelfReferences: true,
-          hreflangPasses: true,
+          hreflangPasses: null,
           renderedStatus: 200,
         },
       },
@@ -894,6 +996,79 @@ describe("tool index readiness evidence report", () => {
     expect(markdown).toContain("separate implementation plan");
   });
 
+  it("keeps an existing artifact set intact when a sibling temp write fails", async () => {
+    const temporaryRoot = await mkdtemp(
+      path.join(tmpdir(), "tool-index-artifacts-"),
+    );
+    const finalPaths = {
+      json: path.join(temporaryRoot, "tool-index-readiness.json"),
+      csv: path.join(temporaryRoot, "tool-index-readiness.csv"),
+      markdown: path.join(temporaryRoot, "tool-index-readiness.md"),
+    };
+    const previous = {
+      json: "previous-json\n",
+      csv: "previous-csv\n",
+      markdown: "previous-markdown\n",
+    };
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/grammar-checker/",
+          category: "text",
+          evidence: evidence(),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: true,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+
+    try {
+      await Promise.all([
+        writeFile(finalPaths.json, previous.json),
+        writeFile(finalPaths.csv, previous.csv),
+        writeFile(finalPaths.markdown, previous.markdown),
+      ]);
+
+      await expect(
+        writeToolIndexReadinessArtifacts(report, temporaryRoot, {
+          writeFile: async (filePath, content) => {
+            if (
+              filePath.includes("tool-index-readiness.csv.") &&
+              filePath.endsWith(".tmp")
+            ) {
+              throw new Error("injected temp write failure");
+            }
+            await writeFile(filePath, content, "utf8");
+          },
+        }),
+      ).rejects.toThrow("injected temp write failure");
+
+      await expect(
+        Promise.all([
+          readFile(finalPaths.json, "utf8"),
+          readFile(finalPaths.csv, "utf8"),
+          readFile(finalPaths.markdown, "utf8"),
+        ]),
+      ).resolves.toEqual([previous.json, previous.csv, previous.markdown]);
+      expect((await readdir(temporaryRoot)).sort()).toEqual(
+        Object.values(finalPaths)
+          .map((filePath) => path.basename(filePath))
+          .sort(),
+      );
+    } finally {
+      await rm(temporaryRoot, { recursive: true, force: true });
+    }
+  });
+
   it("runs the executable CLI against temporary evidence inputs and writes all three report files", async () => {
     const temporaryRoot = await mkdtemp(
       path.join(tmpdir(), "tool-index-readiness-"),
@@ -926,7 +1101,6 @@ describe("tool index readiness evidence report", () => {
                 slug: "grammar-checker",
                 status: 200,
                 canonicalSelfReferences: true,
-                hreflangPasses: true,
               },
             ],
           }),
@@ -961,18 +1135,9 @@ describe("tool index readiness evidence report", () => {
 
       expect(result.status, result.stderr).toBe(0);
       const [json, csv, markdown] = await Promise.all([
-        readFile(
-          path.join(outputDir, "tool-index-readiness-report.json"),
-          "utf8",
-        ),
-        readFile(
-          path.join(outputDir, "tool-index-readiness-report.csv"),
-          "utf8",
-        ),
-        readFile(
-          path.join(outputDir, "tool-index-readiness-report.md"),
-          "utf8",
-        ),
+        readFile(path.join(outputDir, "tool-index-readiness.json"), "utf8"),
+        readFile(path.join(outputDir, "tool-index-readiness.csv"), "utf8"),
+        readFile(path.join(outputDir, "tool-index-readiness.md"), "utf8"),
       ]);
       expect(JSON.parse(json).notice).toBe(RECOMMENDATION_ONLY_NOTICE);
       expect(csv.startsWith(`${RECOMMENDATION_ONLY_NOTICE}\n`)).toBe(true);

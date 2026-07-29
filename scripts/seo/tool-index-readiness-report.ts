@@ -1,7 +1,14 @@
 import path from "node:path";
-import { createHash } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
 import { existsSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import {
+  copyFile,
+  mkdir,
+  readFile,
+  rename,
+  rm,
+  writeFile,
+} from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
 import { tools as configuredTools, type Tool } from "../../src/config/tools";
@@ -79,6 +86,7 @@ export interface NormalizedReadinessRow {
     routeTemplatePath: string;
     sitemapPath: string;
     capabilityProfileVersion: string | null;
+    localeFallbackFields: string[];
   };
 }
 
@@ -129,6 +137,10 @@ export interface ToolIndexReadinessAssemblyOptions {
     locale: Locale,
     slug: string,
   ) => Promise<Record<string, unknown>>;
+  loadLocaleSplitMessages?: (
+    locale: Locale,
+    slug: string,
+  ) => Promise<Record<string, unknown> | null>;
   hasIndependentSplitCopy?: (
     locale: Locale,
     slug: string,
@@ -154,7 +166,16 @@ function canonicalToolUrl(locale: string, slug: string): string {
 
 export function normalizeToolPageUrl(input: string): string | null {
   try {
-    const url = new URL(input.trim(), "https://www.u2tool.com");
+    const url = new URL(input.trim());
+    if (
+      !["http:", "https:"].includes(url.protocol) ||
+      !["u2tool.com", "www.u2tool.com"].includes(url.hostname.toLowerCase()) ||
+      url.username !== "" ||
+      url.password !== "" ||
+      url.port !== ""
+    ) {
+      return null;
+    }
     const pathname = url.pathname.replace(/\/{2,}/gu, "/");
     const withSlash = pathname.endsWith("/") ? pathname : `${pathname}/`;
     return `https://www.u2tool.com${withSlash}`;
@@ -222,16 +243,32 @@ function flattenStrings(value: unknown): string[] {
   return [];
 }
 
+function normalizeSupportStructure(value: unknown): unknown {
+  if (typeof value === "string") {
+    return value.replace(/\s+/gu, " ").trim();
+  }
+  if (Array.isArray(value)) return value.map(normalizeSupportStructure);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.keys(value)
+        .sort(compareText)
+        .map((key) => [
+          key,
+          normalizeSupportStructure((value as Record<string, unknown>)[key]),
+        ]),
+    );
+  }
+  return value;
+}
+
 function normalizedSupportBlock(messages: Record<string, unknown>): string {
   return JSON.stringify(
-    [
-      messages.detailed_description,
-      messages.usage_steps,
-      messages.usage_examples,
-      messages.faqs,
-    ].map((value) =>
-      flattenStrings(value).map((text) => text.replace(/\s+/gu, " ").trim()),
-    ),
+    normalizeSupportStructure({
+      detailed_description: messages.detailed_description,
+      usage_steps: messages.usage_steps,
+      usage_examples: messages.usage_examples,
+      faqs: messages.faqs,
+    }),
   );
 }
 
@@ -239,6 +276,26 @@ function supportContentHash(messages: Record<string, unknown>): string {
   return createHash("sha256")
     .update(normalizedSupportBlock(messages))
     .digest("hex");
+}
+
+const DECISION_CONTENT_FIELDS = [
+  "detailed_description",
+  "usage_steps",
+  "usage_examples",
+  "faqs",
+] as const;
+
+function localeFallbackFields(
+  locale: Locale,
+  mergedMessages: Record<string, unknown>,
+  localeSplitMessages: Record<string, unknown> | null,
+): string[] {
+  if (locale === "en") return [];
+  return DECISION_CONTENT_FIELDS.filter(
+    (field) =>
+      Object.hasOwn(mergedMessages, field) &&
+      !Object.hasOwn(localeSplitMessages ?? {}, field),
+  );
 }
 
 function countNonEmptyStrings(value: unknown): number {
@@ -392,6 +449,28 @@ export async function assembleToolIndexReadinessInputs(
   const toolCatalog = options.toolCatalog ?? configuredTools;
   const localeCatalog = options.localeCatalog ?? configuredLocales;
   const loadMessages = options.loadMessages ?? loadToolPageMessages;
+  const loadLocaleSplitMessages =
+    options.loadLocaleSplitMessages ??
+    (options.loadMessages
+      ? async (locale: Locale, slug: string) => loadMessages(locale, slug)
+      : async (locale: Locale, slug: string) => {
+          try {
+            return JSON.parse(
+              await readFile(
+                path.join(
+                  repositoryRoot,
+                  "src/messages",
+                  locale,
+                  "tools",
+                  `${slug}.json`,
+                ),
+                "utf8",
+              ),
+            ) as Record<string, unknown>;
+          } catch {
+            return null;
+          }
+        });
   const hasIndependentSplitCopy =
     options.hasIndependentSplitCopy ??
     ((locale: Locale, slug: string) =>
@@ -433,6 +512,15 @@ export async function assembleToolIndexReadinessInputs(
       const current = currentByUrl.get(url);
       const historical = historicalByUrl.get(url);
       const messages = await loadMessages(locale, tool.slug);
+      const localeSplitMessages = await loadLocaleSplitMessages(
+        locale,
+        tool.slug,
+      );
+      const inheritedContentFields = localeFallbackFields(
+        locale,
+        messages,
+        localeSplitMessages,
+      );
       const independentSplitCopy = await hasIndependentSplitCopy(
         locale,
         tool.slug,
@@ -462,6 +550,7 @@ export async function assembleToolIndexReadinessInputs(
         current,
         historical,
         messages,
+        inheritedContentFields,
         contentHash: supportContentHash(messages),
         independentSplitCopy,
         profile,
@@ -525,6 +614,7 @@ export async function assembleToolIndexReadinessInputs(
         routeTemplatePath: "src/pages/[locale]/tools/[slug].astro",
         sitemapPath: new URL(draft.url).pathname.replace(/\/$/u, ""),
         capabilityProfileVersion: draft.profile?.version ?? null,
+        localeFallbackFields: draft.inheritedContentFields,
       },
       demandCoverage: {
         currentPageRow: draft.current !== undefined,
@@ -559,7 +649,9 @@ export async function assembleToolIndexReadinessInputs(
             (hashCounts.get(draft.contentHash) ?? 0) > 1
               ? draft.contentHash
               : null,
-          fallbackUsed: !draft.independentSplitCopy,
+          fallbackUsed:
+            !draft.independentSplitCopy ||
+            draft.inheritedContentFields.length > 0,
         },
         technical: {
           routeExists: routeTemplateExists,
@@ -678,13 +770,23 @@ function requiredMetricHeaderIndex(
     if (/\b(?:previous|prior)\b|(?:上一|前一|历史|前期)/u.test(header)) {
       return "historical";
     }
-    if (/\bcurrent\b|(?:当前|本期)/u.test(header)) return "current";
+    if (/\b(?:current|last)\b|(?:当前|本期)/u.test(header)) {
+      return "current";
+    }
     return null;
   };
   const semanticMatches = matchesIndexes.filter(
     (index) => semanticPeriod(headers[index].toLowerCase()) === period,
   );
   if (semanticMatches.length === 1) return semanticMatches[0];
+  if (period === "current" && matchesIndexes.length === 2) {
+    const historicalMatches = matchesIndexes.filter(
+      (index) => semanticPeriod(headers[index].toLowerCase()) === "historical",
+    );
+    if (historicalMatches.length === 1) {
+      return matchesIndexes.find((index) => index !== historicalMatches[0])!;
+    }
+  }
 
   const dated = matchesIndexes.map((index) => {
     const match = headers[index].match(/(\d{4})[/-](\d{1,2})[/-](\d{1,2})/u);
@@ -1120,6 +1222,109 @@ export interface ToolIndexReadinessCliResult {
   };
 }
 
+export interface ArtifactWriteOperations {
+  mkdir: (directory: string) => Promise<void>;
+  writeFile: (filePath: string, content: string) => Promise<void>;
+  copyFile: (source: string, destination: string) => Promise<void>;
+  rename: (source: string, destination: string) => Promise<void>;
+  remove: (filePath: string) => Promise<void>;
+}
+
+export async function writeToolIndexReadinessArtifacts(
+  report: ToolIndexReadinessReport,
+  outputDir: string,
+  overrides: Partial<ArtifactWriteOperations> = {},
+): Promise<ToolIndexReadinessCliResult["outputPaths"]> {
+  const operations: ArtifactWriteOperations = {
+    mkdir: async (directory) => {
+      await mkdir(directory, { recursive: true });
+    },
+    writeFile: async (filePath, content) => {
+      await writeFile(filePath, content, "utf8");
+    },
+    copyFile: async (source, destination) => {
+      await copyFile(source, destination);
+    },
+    rename: async (source, destination) => {
+      await rename(source, destination);
+    },
+    remove: async (filePath) => {
+      await rm(filePath, { force: true });
+    },
+    ...overrides,
+  };
+  const outputPaths = {
+    json: path.join(outputDir, "tool-index-readiness.json"),
+    csv: path.join(outputDir, "tool-index-readiness.csv"),
+    markdown: path.join(outputDir, "tool-index-readiness.md"),
+  };
+  const token = `${process.pid}-${randomUUID()}`;
+  const entries = [
+    {
+      finalPath: outputPaths.json,
+      content: renderToolIndexReadinessJson(report),
+    },
+    {
+      finalPath: outputPaths.csv,
+      content: renderToolIndexReadinessCsv(report),
+    },
+    {
+      finalPath: outputPaths.markdown,
+      content: renderToolIndexReadinessMarkdown(report),
+    },
+  ].map((entry) => ({
+    ...entry,
+    tempPath: `${entry.finalPath}.${token}.tmp`,
+    backupPath: `${entry.finalPath}.${token}.backup`,
+    hadOriginal: false,
+    published: false,
+  }));
+
+  await operations.mkdir(outputDir);
+  try {
+    const writeResults = await Promise.allSettled(
+      entries.map((entry) =>
+        operations.writeFile(entry.tempPath, entry.content),
+      ),
+    );
+    const failedWrite = writeResults.find(
+      (result): result is PromiseRejectedResult => result.status === "rejected",
+    );
+    if (failedWrite) throw failedWrite.reason;
+
+    for (const entry of entries) {
+      if (existsSync(entry.finalPath)) {
+        await operations.copyFile(entry.finalPath, entry.backupPath);
+        entry.hadOriginal = true;
+      }
+    }
+    for (const entry of entries) {
+      await operations.rename(entry.tempPath, entry.finalPath);
+      entry.published = true;
+    }
+  } catch (error) {
+    for (const entry of [...entries].reverse()) {
+      if (!entry.published) continue;
+      await operations.remove(entry.finalPath).catch(() => undefined);
+      if (entry.hadOriginal) {
+        await operations
+          .rename(entry.backupPath, entry.finalPath)
+          .catch(() => undefined);
+      }
+    }
+    throw error;
+  } finally {
+    await Promise.allSettled(
+      entries.flatMap((entry) => [
+        operations.remove(entry.tempPath),
+        operations.remove(entry.backupPath),
+      ]),
+    );
+  }
+
+  return outputPaths;
+}
+
 async function readRequiredInput(
   filePath: string,
   label: string,
@@ -1162,22 +1367,10 @@ export async function runToolIndexReadinessCli(
     renderedContracts,
   });
   const report = buildToolIndexReadinessReport(normalized);
-  const outputPaths = {
-    json: path.join(options.outputDir, "tool-index-readiness-report.json"),
-    csv: path.join(options.outputDir, "tool-index-readiness-report.csv"),
-    markdown: path.join(options.outputDir, "tool-index-readiness-report.md"),
-  };
-
-  await mkdir(options.outputDir, { recursive: true });
-  await Promise.all([
-    writeFile(outputPaths.json, renderToolIndexReadinessJson(report), "utf8"),
-    writeFile(outputPaths.csv, renderToolIndexReadinessCsv(report), "utf8"),
-    writeFile(
-      outputPaths.markdown,
-      renderToolIndexReadinessMarkdown(report),
-      "utf8",
-    ),
-  ]);
+  const outputPaths = await writeToolIndexReadinessArtifacts(
+    report,
+    options.outputDir,
+  );
 
   return { report, outputPaths };
 }
