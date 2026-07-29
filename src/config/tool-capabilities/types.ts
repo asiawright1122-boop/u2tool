@@ -8,6 +8,35 @@ export interface CapabilityEvidenceReference {
   testName: string;
 }
 
+export type EngineLocaleDataEvidence =
+  | {
+      kind: "fixture-object";
+      file: string;
+      exportName: string;
+      minimumNonEmptyValues: number;
+    }
+  | {
+      kind: "message-prompt-bank";
+      fileTemplate: string;
+      messagePath: readonly string[];
+      minimumNonEmptyEntries: number;
+    }
+  | {
+      kind: "behavior-test";
+    };
+
+export interface EngineLocaleEvidenceContract {
+  locale: Locale;
+  runtime: "local" | "optional-server";
+  evidence: CapabilityEvidenceReference;
+  data: EngineLocaleDataEvidence;
+}
+
+export interface EngineLanguageDisclosureContract {
+  labelKey: string;
+  unsupportedLocaleClaimCodes: readonly string[];
+}
+
 export interface CapabilityMode {
   id: string;
   labelKey: string;
@@ -52,6 +81,8 @@ export interface ToolCapabilityProfile {
           local: readonly Locale[];
           optionalServer: readonly Locale[];
           evidence?: CapabilityEvidenceReference;
+          localeEvidence: readonly EngineLocaleEvidenceContract[];
+          disclosure: EngineLanguageDisclosureContract;
         };
   };
   browserOnlyFeatures: readonly CapabilityFeature[];

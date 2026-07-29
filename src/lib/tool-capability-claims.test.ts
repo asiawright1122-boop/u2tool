@@ -323,7 +323,206 @@ const localeFamilyFixtures: Record<
   },
 };
 
+const sqlNativeDiagnosticsFixtures: Record<
+  Locale,
+  { affirmative: string; limitation: string }
+> = {
+  en: {
+    affirmative: "Provides Russian diagnostic explanations.",
+    limitation: "Does not provide Russian diagnostic explanations.",
+  },
+  zh: {
+    affirmative: "提供中文本地诊断说明。",
+    limitation: "不提供中文本地诊断说明。",
+  },
+  ja: {
+    affirmative: "日本語のローカル診断説明を提供します。",
+    limitation: "日本語のローカル診断説明は提供しません。",
+  },
+  ko: {
+    affirmative: "한국어 로컬 진단 설명을 제공합니다.",
+    limitation: "한국어 로컬 진단 설명을 제공하지 않습니다.",
+  },
+  es: {
+    affirmative: "Ofrece explicaciones de diagnóstico local en español.",
+    limitation: "No ofrece explicaciones de diagnóstico local en español.",
+  },
+  pt: {
+    affirmative: "Oferece explicações de diagnóstico local em português.",
+    limitation: "Não oferece explicações de diagnóstico local em português.",
+  },
+  fr: {
+    affirmative: "Fournit des explications de diagnostic local en français.",
+    limitation:
+      "Ne fournit pas d’explications de diagnostic local en français.",
+  },
+  de: {
+    affirmative: "Bietet lokale Diagnoseerklärungen auf Deutsch.",
+    limitation: "Bietet keine lokalen Diagnoseerklärungen auf Deutsch.",
+  },
+  ru: {
+    affirmative:
+      "Предоставляет локальные диагностические объяснения на русском языке.",
+    limitation:
+      "Не предоставляет локальные диагностические объяснения на русском языке.",
+  },
+  ar: {
+    affirmative: "يوفر تفسيرات التشخيص المحلي باللغة العربية.",
+    limitation: "لا يوفر تفسيرات التشخيص المحلي باللغة العربية.",
+  },
+};
+
 describe("assessToolCapabilityClaims", () => {
+  describe("engine locale claim semantics", () => {
+    it("flags Russian nominal, passive, and clause-local native grammar claims", () => {
+      for (const description of [
+        "Русская грамматика доступна.",
+        "Русская грамматика поддерживается.",
+        "Доступна проверка русской грамматики.",
+        "Проверяет русскую грамматику и не отправляет текст на сервер.",
+      ]) {
+        expect(
+          assessToolCapabilityClaims({
+            locale: "ru",
+            slug: "grammar-checker",
+            text: description,
+          }).issues,
+        ).toEqual([
+          expect.objectContaining({
+            code: "grammar-checker-native-non-english-claim",
+          }),
+        ]);
+      }
+    });
+
+    it("allows a truthful Russian grammar limitation with an English-only contrast", () => {
+      expect(
+        assessToolCapabilityClaims({
+          locale: "ru",
+          slug: "grammar-checker",
+          text: "Инструмент не проверяет русскую грамматику, а проверяет только английский текст.",
+        }).issues,
+      ).toEqual([]);
+    });
+
+    it("flags Russian native SQL diagnostics", () => {
+      expect(
+        assessToolCapabilityClaims({
+          locale: "ru",
+          slug: "sql-query-optimizer",
+          text: "Предоставляет локальные диагностические объяснения на русском языке.",
+        }).issues,
+      ).toEqual([
+        expect.objectContaining({
+          code: "sql-query-optimizer-native-non-english-diagnostics-claim",
+        }),
+      ]);
+    });
+
+    it("distinguishes Spanish non-English diagnostics from a negated offer", () => {
+      expect(
+        assessToolCapabilityClaims({
+          locale: "es",
+          slug: "sql-query-optimizer",
+          text: "Ofrece diagnósticos no ingleses.",
+        }).issues,
+      ).toEqual([
+        expect.objectContaining({
+          code: "sql-query-optimizer-native-non-english-diagnostics-claim",
+        }),
+      ]);
+      expect(
+        assessToolCapabilityClaims({
+          locale: "es",
+          slug: "sql-query-optimizer",
+          text: "No ofrece diagnósticos no ingleses.",
+        }).issues,
+      ).toEqual([]);
+    });
+
+    it("distinguishes Portuguese non-English diagnostics from a negated offer", () => {
+      expect(
+        assessToolCapabilityClaims({
+          locale: "pt",
+          slug: "sql-query-optimizer",
+          text: "Oferece diagnósticos não ingleses.",
+        }).issues,
+      ).toEqual([
+        expect.objectContaining({
+          code: "sql-query-optimizer-native-non-english-diagnostics-claim",
+        }),
+      ]);
+      expect(
+        assessToolCapabilityClaims({
+          locale: "pt",
+          slug: "sql-query-optimizer",
+          text: "Não oferece diagnósticos não ingleses.",
+        }).issues,
+      ).toEqual([]);
+    });
+
+    it("distinguishes German non-English diagnostics from a negated offer", () => {
+      expect(
+        assessToolCapabilityClaims({
+          locale: "de",
+          slug: "sql-query-optimizer",
+          text: "Bietet Diagnosen, die nicht englisch sind.",
+        }).issues,
+      ).toEqual([
+        expect.objectContaining({
+          code: "sql-query-optimizer-native-non-english-diagnostics-claim",
+        }),
+      ]);
+      expect(
+        assessToolCapabilityClaims({
+          locale: "de",
+          slug: "sql-query-optimizer",
+          text: "Bietet keine Diagnosen, die nicht englisch sind.",
+        }).issues,
+      ).toEqual([]);
+    });
+
+    it.each([
+      ["es", "No admite diagnósticos en ruso."],
+      ["pt", "Não suporta diagnósticos em russo."],
+      ["de", "Unterstützt keine russischen Diagnosen."],
+    ])("preserves shared SQL diagnostics negation in %s", (locale, text) => {
+      expect(
+        assessToolCapabilityClaims({
+          locale,
+          slug: "sql-query-optimizer",
+          text,
+        }).issues,
+      ).toEqual([]);
+    });
+
+    it.each(locales)(
+      "enforces native non-English SQL diagnostics in %s without relying on the English fallback",
+      (locale) => {
+        const fixture = sqlNativeDiagnosticsFixtures[locale];
+
+        expect(
+          assessToolCapabilityClaims({
+            locale,
+            slug: "sql-query-optimizer",
+            text: fixture.affirmative,
+          }).issues,
+        ).toEqual([
+          expect.objectContaining({
+            code: "sql-query-optimizer-native-non-english-diagnostics-claim",
+          }),
+        ]);
+        expect(
+          assessToolCapabilityClaims({
+            locale,
+            slug: "sql-query-optimizer",
+            text: fixture.limitation,
+          }).issues,
+        ).toEqual([]);
+      },
+    );
+  });
+
   it.each(locales)(
     "flags natural Hex overclaim paraphrases in %s and permits truthful negatives",
     (locale) => {
@@ -413,15 +612,23 @@ describe("assessToolCapabilityClaims", () => {
     for (const profile of getPilotToolCapabilityProfiles()) {
       for (const claim of profile.forbiddenClaims) {
         for (const locale of locales) {
+          const fixture =
+            claim.code ===
+            "sql-query-optimizer-native-non-english-diagnostics-claim"
+              ? sqlNativeDiagnosticsFixtures[locale]
+              : {
+                  affirmative: affirmativeClaimFixture(claim.code, locale),
+                  limitation: limitationClaimFixture(claim.code, locale),
+                };
           const affirmative = assessToolCapabilityClaims({
             slug: profile.slug,
             locale,
-            text: affirmativeClaimFixture(claim.code, locale),
+            text: fixture.affirmative,
           });
           const limitation = assessToolCapabilityClaims({
             slug: profile.slug,
             locale,
-            text: limitationClaimFixture(claim.code, locale),
+            text: fixture.limitation,
           });
 
           if (!affirmative.issues.some((issue) => issue.code === claim.code)) {

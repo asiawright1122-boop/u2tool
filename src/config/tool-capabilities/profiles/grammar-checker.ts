@@ -55,9 +55,32 @@ export const grammarCheckerCapabilityProfile = defineToolCapabilityProfile({
       local: ["en"],
       optionalServer: [],
       evidence: {
-        file: "src/lib/grammar-language-support.test.ts",
+        file: "src/lib/grammar-rules.test.ts",
         testName:
-          "declares English as the only local checking language [capability:grammar-checker:engine:language-support]",
+          "exercises non-empty English grammar fixtures [capability:grammar-checker:engine:language-support]",
+      },
+      localeEvidence: [
+        {
+          locale: "en",
+          runtime: "local",
+          evidence: {
+            file: "src/lib/grammar-rules.test.ts",
+            testName:
+              "exercises non-empty English grammar fixtures [capability:grammar-checker:engine:language-support]",
+          },
+          data: {
+            kind: "fixture-object",
+            file: "src/lib/fixtures/grammar-checker/en.ts",
+            exportName: "grammarCheckerEnglishFixtures",
+            minimumNonEmptyValues: 6,
+          },
+        },
+      ],
+      disclosure: {
+        labelKey: "tools.grammar-checker.capabilities.limits.englishOnlyEngine",
+        unsupportedLocaleClaimCodes: [
+          "grammar-checker-native-non-english-claim",
+        ],
       },
     },
   },

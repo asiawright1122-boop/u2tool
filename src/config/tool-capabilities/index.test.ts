@@ -116,14 +116,37 @@ describe("pilot tool capability registry", () => {
       local: ["en"],
       optionalServer: [],
       evidence: {
-        file: "src/lib/grammar-language-support.test.ts",
+        file: "src/lib/grammar-rules.test.ts",
         testName:
-          "declares English as the only local checking language [capability:grammar-checker:engine:language-support]",
+          "exercises non-empty English grammar fixtures [capability:grammar-checker:engine:language-support]",
+      },
+      localeEvidence: [
+        {
+          locale: "en",
+          runtime: "local",
+          evidence: {
+            file: "src/lib/grammar-rules.test.ts",
+            testName:
+              "exercises non-empty English grammar fixtures [capability:grammar-checker:engine:language-support]",
+          },
+          data: {
+            kind: "fixture-object",
+            file: "src/lib/fixtures/grammar-checker/en.ts",
+            exportName: "grammarCheckerEnglishFixtures",
+            minimumNonEmptyValues: 6,
+          },
+        },
+      ],
+      disclosure: {
+        labelKey: "tools.grammar-checker.capabilities.limits.englishOnlyEngine",
+        unsupportedLocaleClaimCodes: [
+          "grammar-checker-native-non-english-claim",
+        ],
       },
     });
     expect(
       getToolCapabilityProfile("sql-query-optimizer")?.supportedLocales.engine,
-    ).toEqual({
+    ).toMatchObject({
       kind: "engine-limited",
       local: ["en"],
       optionalServer: [],
@@ -135,7 +158,7 @@ describe("pilot tool capability registry", () => {
     });
     expect(
       getToolCapabilityProfile("typing-speed-test")?.supportedLocales.engine,
-    ).toEqual({
+    ).toMatchObject({
       kind: "engine-limited",
       local: locales,
       optionalServer: [],
@@ -145,6 +168,72 @@ describe("pilot tool capability registry", () => {
           "provides native prompt fixtures and timed UI messages in all ten locales [capability:typing-speed-test:engine:language-support] [capability:typing-speed-test:browser-feature:difficulty-prompt-banks]",
       },
     });
+  });
+
+  it("Grammar engine locale evidence is backed by English fixtures", () => {
+    expect(
+      getToolCapabilityProfile("grammar-checker")?.supportedLocales.engine,
+    ).toMatchObject({
+      kind: "engine-limited",
+      local: ["en"],
+      optionalServer: [],
+      localeEvidence: [
+        {
+          locale: "en",
+          runtime: "local",
+          data: {
+            kind: "fixture-object",
+            file: "src/lib/fixtures/grammar-checker/en.ts",
+            exportName: "grammarCheckerEnglishFixtures",
+            minimumNonEmptyValues: 6,
+          },
+        },
+      ],
+      disclosure: {
+        labelKey: "tools.grammar-checker.capabilities.limits.englishOnlyEngine",
+        unsupportedLocaleClaimCodes: [
+          "grammar-checker-native-non-english-claim",
+        ],
+      },
+    });
+  });
+
+  it("SQL and Typing engine locale evidence", () => {
+    expect(
+      getToolCapabilityProfile("sql-query-optimizer")?.supportedLocales.engine,
+    ).toMatchObject({
+      kind: "engine-limited",
+      localeEvidence: [
+        { locale: "en", runtime: "local", data: { kind: "behavior-test" } },
+      ],
+      disclosure: {
+        labelKey:
+          "tools.sql-query-optimizer.capabilities.limits.englishDiagnostics",
+        unsupportedLocaleClaimCodes: [
+          "sql-query-optimizer-native-non-english-diagnostics-claim",
+        ],
+      },
+    });
+
+    const typingEngine =
+      getToolCapabilityProfile("typing-speed-test")?.supportedLocales.engine;
+    expect(typingEngine).toMatchObject({ kind: "engine-limited" });
+    if (typingEngine?.kind === "engine-limited") {
+      expect(typingEngine.localeEvidence.map(({ locale }) => locale)).toEqual(
+        locales,
+      );
+      for (const contract of typingEngine.localeEvidence) {
+        expect(contract).toMatchObject({
+          runtime: "local",
+          data: {
+            kind: "message-prompt-bank",
+            fileTemplate: "src/messages/{locale}.json",
+            messagePath: ["tools", "typing-speed-test", "sampleTexts"],
+            minimumNonEmptyEntries: 6,
+          },
+        });
+      }
+    }
   });
 
   it("promotes release-blocking profiles only after matching behavior evidence exists", () => {
@@ -503,6 +592,10 @@ describe("pilot tool capability registry", () => {
   it("flags affirmative SQL capability claims without flagging honest limits", () => {
     const profile = getToolCapabilityProfile("sql-query-optimizer")!;
     const examples = {
+      "sql-query-optimizer-native-non-english-diagnostics-claim": {
+        positive: "Provides native Chinese diagnostics.",
+        negative: "Local SQL diagnostics are currently English.",
+      },
       "sql-optimizer-connection-claim": {
         positive: "Connects to a live database.",
         negative: "Does not connect to a database.",
@@ -659,5 +752,477 @@ describe("capability profile definition", () => {
     expect(() =>
       defineToolCapabilityProfile({ ...grammarProfile, forbiddenClaims: [] }),
     ).toThrow("grammar-checker: at least one forbidden claim is required");
+  });
+});
+
+describe("engine locale evidence contract", () => {
+  const evidence = {
+    file: "src/lib/example-language-support.test.ts",
+    testName: "proves the example locale capability",
+  };
+  const claimCode = "example-native-language-claim";
+
+  function createProfile(overrides: Record<string, unknown> = {}) {
+    return {
+      slug: "example",
+      version: "1.0.0",
+      enforcement: "release-blocking",
+      modes: [],
+      acceptedInputs: [],
+      producedOutputs: [],
+      supportedLocales: {
+        ui: ["en", "ru"],
+        engine: {
+          kind: "engine-limited",
+          local: ["en"],
+          optionalServer: [],
+          evidence,
+          localeEvidence: [
+            {
+              locale: "en",
+              runtime: "local",
+              evidence,
+              data: { kind: "behavior-test" },
+            },
+          ],
+          disclosure: {
+            labelKey: "tools.example.capabilities.limits.englishOnly",
+            unsupportedLocaleClaimCodes: [claimCode],
+          },
+        },
+      },
+      browserOnlyFeatures: [],
+      optionalServerFeatures: [],
+      limits: [],
+      forbiddenClaims: [
+        { code: claimCode, pattern: /example/, reason: "test" },
+      ],
+      targetSearchIntents: ["example.language-support"],
+      evidenceTests: [evidence],
+      ...overrides,
+    } as any;
+  }
+
+  function createEngineProfile(engine: Record<string, unknown>) {
+    return createProfile({
+      supportedLocales: { ui: ["en", "ru"], engine },
+    });
+  }
+
+  it("requires exactly one contract for every declared engine locale", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            localeEvidence: [],
+          },
+        },
+      }),
+    ).toThrow(
+      "example: engine locale en requires exactly one locale evidence contract",
+    );
+  });
+
+  it("rejects duplicate locale contracts", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            localeEvidence: [
+              ...profile.supportedLocales.engine.localeEvidence,
+              ...profile.supportedLocales.engine.localeEvidence,
+            ],
+          },
+        },
+      }),
+    ).toThrow(
+      "example: engine locale en requires exactly one locale evidence contract",
+    );
+  });
+
+  it("rejects contracts for undeclared locales", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            localeEvidence: [
+              ...profile.supportedLocales.engine.localeEvidence,
+              {
+                ...profile.supportedLocales.engine.localeEvidence[0],
+                locale: "ru",
+              },
+            ],
+          },
+        },
+      }),
+    ).toThrow("example: locale evidence declares unsupported locale ru");
+  });
+
+  it("rejects a locale contract with the wrong runtime", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            localeEvidence: [
+              {
+                ...profile.supportedLocales.engine.localeEvidence[0],
+                runtime: "optional-server",
+              },
+            ],
+          },
+        },
+      }),
+    ).toThrow("example: engine locale en has an invalid runtime");
+  });
+
+  it("rejects an empty disclosure key", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            disclosure: {
+              ...profile.supportedLocales.engine.disclosure,
+              labelKey: "  ",
+            },
+          },
+        },
+      }),
+    ).toThrow("example: engine language disclosure label is required");
+  });
+
+  it("rejects locale evidence without a disclosure contract", () => {
+    const profile = createProfile();
+    const { disclosure: _disclosure, ...engineWithoutDisclosure } =
+      profile.supportedLocales.engine;
+
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: engineWithoutDisclosure,
+        },
+      }),
+    ).toThrow("example: engine language disclosure is required");
+  });
+
+  it("rejects a disclosure contract without locale evidence", () => {
+    const profile = createProfile();
+    const { localeEvidence: _localeEvidence, ...engineWithoutLocaleEvidence } =
+      profile.supportedLocales.engine;
+
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: engineWithoutLocaleEvidence,
+        },
+      }),
+    ).toThrow("example: engine locale evidence is required");
+  });
+
+  it("rejects an engine-limited profile without locale evidence or disclosure", () => {
+    const profile = createProfile();
+    const {
+      localeEvidence: _localeEvidence,
+      disclosure: _disclosure,
+      ...engineWithoutLocaleContracts
+    } = profile.supportedLocales.engine;
+
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: engineWithoutLocaleContracts,
+        },
+      }),
+    ).toThrow("example: engine locale evidence is required");
+  });
+
+  it("rejects a disclosure key outside the tool namespace", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            disclosure: {
+              ...profile.supportedLocales.engine.disclosure,
+              labelKey: "tools.other.capabilities.limits.englishOnly",
+            },
+          },
+        },
+      }),
+    ).toThrow(
+      "example: engine language disclosure label must use tools.example.*",
+    );
+  });
+
+  it("rejects empty, duplicate, and unknown disclosure claim codes", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            disclosure: {
+              ...profile.supportedLocales.engine.disclosure,
+              unsupportedLocaleClaimCodes: [""],
+            },
+          },
+        },
+      }),
+    ).toThrow("example: engine language disclosure claim code is required");
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            disclosure: {
+              ...profile.supportedLocales.engine.disclosure,
+              unsupportedLocaleClaimCodes: [claimCode, claimCode],
+            },
+          },
+        },
+      }),
+    ).toThrow(
+      "example: engine language disclosure claim code example-native-language-claim must be unique",
+    );
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            disclosure: {
+              ...profile.supportedLocales.engine.disclosure,
+              unsupportedLocaleClaimCodes: ["unknown-claim"],
+            },
+          },
+        },
+      }),
+    ).toThrow(
+      "example: engine language disclosure claim code unknown-claim is not forbidden",
+    );
+  });
+
+  it("rejects invalid and traversal data paths", () => {
+    const profile = createProfile();
+    for (const file of ["/fixtures/example.ts", "../fixtures/example.ts"]) {
+      expect(() =>
+        defineToolCapabilityProfile({
+          ...profile,
+          supportedLocales: {
+            ...profile.supportedLocales,
+            engine: {
+              ...profile.supportedLocales.engine,
+              localeEvidence: [
+                {
+                  ...profile.supportedLocales.engine.localeEvidence[0],
+                  data: {
+                    kind: "fixture-object",
+                    file,
+                    exportName: "prompts",
+                    minimumNonEmptyValues: 1,
+                  },
+                },
+              ],
+            },
+          },
+        }),
+      ).toThrow(
+        "example: engine locale en data path must be a relative repository path",
+      );
+    }
+  });
+
+  it("rejects URI schemes in fixture-object data paths", () => {
+    const profile = createProfile();
+    for (const file of [
+      "https://example.test/fixture.ts",
+      "file:///tmp/fixture.ts",
+    ]) {
+      expect(() =>
+        defineToolCapabilityProfile({
+          ...profile,
+          supportedLocales: {
+            ...profile.supportedLocales,
+            engine: {
+              ...profile.supportedLocales.engine,
+              localeEvidence: [
+                {
+                  ...profile.supportedLocales.engine.localeEvidence[0],
+                  data: {
+                    kind: "fixture-object",
+                    file,
+                    exportName: "prompts",
+                    minimumNonEmptyValues: 1,
+                  },
+                },
+              ],
+            },
+          },
+        }),
+      ).toThrow(
+        "example: engine locale en data path must be a relative repository path",
+      );
+    }
+  });
+
+  it("rejects non-positive and non-integer evidence minimums", () => {
+    const profile = createProfile();
+    for (const minimumNonEmptyValues of [0, 1.5]) {
+      expect(() =>
+        defineToolCapabilityProfile({
+          ...profile,
+          supportedLocales: {
+            ...profile.supportedLocales,
+            engine: {
+              ...profile.supportedLocales.engine,
+              localeEvidence: [
+                {
+                  ...profile.supportedLocales.engine.localeEvidence[0],
+                  data: {
+                    kind: "fixture-object",
+                    file: "src/fixtures/example.ts",
+                    exportName: "prompts",
+                    minimumNonEmptyValues,
+                  },
+                },
+              ],
+            },
+          },
+        }),
+      ).toThrow(
+        "example: engine locale en evidence minimum must be a positive integer",
+      );
+    }
+  });
+
+  it("rejects an empty message path", () => {
+    const profile = createProfile();
+    expect(() =>
+      defineToolCapabilityProfile({
+        ...profile,
+        supportedLocales: {
+          ...profile.supportedLocales,
+          engine: {
+            ...profile.supportedLocales.engine,
+            localeEvidence: [
+              {
+                ...profile.supportedLocales.engine.localeEvidence[0],
+                data: {
+                  kind: "message-prompt-bank",
+                  fileTemplate: "src/messages/{locale}/tools/example.json",
+                  messagePath: [""],
+                  minimumNonEmptyEntries: 1,
+                },
+              },
+            ],
+          },
+        },
+      }),
+    ).toThrow("example: engine locale en message path segments are required");
+  });
+
+  it("requires exactly one locale token in a prompt template", () => {
+    const profile = createProfile();
+    for (const fileTemplate of [
+      "src/messages/en/tools/example.json",
+      "src/messages/{locale}/{locale}/example.json",
+    ]) {
+      expect(() =>
+        defineToolCapabilityProfile({
+          ...profile,
+          supportedLocales: {
+            ...profile.supportedLocales,
+            engine: {
+              ...profile.supportedLocales.engine,
+              localeEvidence: [
+                {
+                  ...profile.supportedLocales.engine.localeEvidence[0],
+                  data: {
+                    kind: "message-prompt-bank",
+                    fileTemplate,
+                    messagePath: ["prompts"],
+                    minimumNonEmptyEntries: 1,
+                  },
+                },
+              ],
+            },
+          },
+        }),
+      ).toThrow(
+        "example: engine locale en prompt template requires exactly one {locale} token",
+      );
+    }
+  });
+
+  it("rejects locale-only fields on a language-neutral profile", () => {
+    expect(() =>
+      defineToolCapabilityProfile(
+        createEngineProfile({
+          kind: "language-neutral",
+          evidence,
+          localeEvidence: [],
+          disclosure: {
+            labelKey: "tools.example.capabilities.limits.englishOnly",
+            unsupportedLocaleClaimCodes: [claimCode],
+          },
+        }),
+      ),
+    ).toThrow(
+      "example: language-neutral engines cannot declare locale evidence or disclosure",
+    );
+  });
+
+  it("copies and freezes locale evidence arrays and nested values", () => {
+    const profile = createProfile();
+    const defined = defineToolCapabilityProfile(profile);
+    const engine = defined.supportedLocales.engine as any;
+
+    expect(engine.localeEvidence).not.toBe(
+      profile.supportedLocales.engine.localeEvidence,
+    );
+    expect(engine.disclosure).not.toBe(
+      profile.supportedLocales.engine.disclosure,
+    );
+    expect(Object.isFrozen(engine.localeEvidence)).toBe(true);
+    expect(Object.isFrozen(engine.localeEvidence[0])).toBe(true);
+    expect(Object.isFrozen(engine.localeEvidence[0].evidence)).toBe(true);
+    expect(Object.isFrozen(engine.localeEvidence[0].data)).toBe(true);
+    expect(Object.isFrozen(engine.disclosure)).toBe(true);
+    expect(Object.isFrozen(engine.disclosure.unsupportedLocaleClaimCodes)).toBe(
+      true,
+    );
   });
 });
