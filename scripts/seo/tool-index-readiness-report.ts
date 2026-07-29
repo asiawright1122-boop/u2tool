@@ -1278,9 +1278,13 @@ export async function writeToolIndexReadinessArtifacts(
     backupPath: `${entry.finalPath}.${token}.backup`,
     hadOriginal: false,
     published: false,
+    backupRestored: false,
   }));
 
   await operations.mkdir(outputDir);
+  let publicationFailed = false;
+  let publicationError: unknown;
+  const rollbackErrors: unknown[] = [];
   try {
     const writeResults = await Promise.allSettled(
       entries.map((entry) =>
@@ -1303,22 +1307,62 @@ export async function writeToolIndexReadinessArtifacts(
       entry.published = true;
     }
   } catch (error) {
+    publicationFailed = true;
+    publicationError = error;
     for (const entry of [...entries].reverse()) {
       if (!entry.published) continue;
-      await operations.remove(entry.finalPath).catch(() => undefined);
+      try {
+        await operations.remove(entry.finalPath);
+      } catch (rollbackError) {
+        rollbackErrors.push(rollbackError);
+      }
       if (entry.hadOriginal) {
-        await operations
-          .rename(entry.backupPath, entry.finalPath)
-          .catch(() => undefined);
+        try {
+          await operations.rename(entry.backupPath, entry.finalPath);
+          entry.backupRestored = true;
+        } catch (rollbackError) {
+          rollbackErrors.push(rollbackError);
+        }
       }
     }
-    throw error;
-  } finally {
-    await Promise.allSettled(
-      entries.flatMap((entry) => [
-        operations.remove(entry.tempPath),
-        operations.remove(entry.backupPath),
-      ]),
+  }
+
+  const cleanupErrors: unknown[] = [];
+  await Promise.all(
+    entries.flatMap((entry) => {
+      const safePaths = [entry.tempPath];
+      if (
+        !publicationFailed ||
+        !entry.hadOriginal ||
+        !entry.published ||
+        entry.backupRestored
+      ) {
+        safePaths.push(entry.backupPath);
+      }
+      return safePaths.map(async (filePath) => {
+        try {
+          await operations.remove(filePath);
+        } catch (cleanupError) {
+          cleanupErrors.push(cleanupError);
+        }
+      });
+    }),
+  );
+
+  if (publicationFailed) {
+    const errors = [publicationError, ...rollbackErrors, ...cleanupErrors];
+    if (errors.length > 1) {
+      throw new AggregateError(
+        errors,
+        "Tool index readiness artifact publication failed and rollback was incomplete",
+      );
+    }
+    throw publicationError;
+  }
+  if (cleanupErrors.length > 0) {
+    throw new AggregateError(
+      cleanupErrors,
+      "Tool index readiness artifacts were published but cleanup failed",
     );
   }
 

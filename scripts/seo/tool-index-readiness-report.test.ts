@@ -1,5 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import {
+  mkdtemp,
+  readFile,
+  readdir,
+  rename,
+  rm,
+  writeFile,
+} from "node:fs/promises";
 import { spawnSync } from "node:child_process";
 import path from "node:path";
 import { tmpdir } from "node:os";
@@ -1064,6 +1071,99 @@ describe("tool index readiness evidence report", () => {
           .map((filePath) => path.basename(filePath))
           .sort(),
       );
+    } finally {
+      await rm(temporaryRoot, { recursive: true, force: true });
+    }
+  });
+
+  it("preserves a recoverable backup and surfaces publication plus rollback errors", async () => {
+    const temporaryRoot = await mkdtemp(
+      path.join(tmpdir(), "tool-index-artifact-rollback-"),
+    );
+    const finalPaths = {
+      json: path.join(temporaryRoot, "tool-index-readiness.json"),
+      csv: path.join(temporaryRoot, "tool-index-readiness.csv"),
+      markdown: path.join(temporaryRoot, "tool-index-readiness.md"),
+    };
+    const previous = {
+      json: "previous-json\n",
+      csv: "previous-csv\n",
+      markdown: "previous-markdown\n",
+    };
+    const publicationError = new Error("injected CSV publication failure");
+    const rollbackError = new Error("injected JSON backup restore failure");
+    const report = buildToolIndexReadinessReport({
+      checkpointDate: "2026-07-13",
+      queryEvidence: {
+        scope: "property-query-only",
+        rowCount: 0,
+        urlJoinAvailable: false,
+      },
+      rows: [
+        {
+          url: "https://www.u2tool.com/en/tools/grammar-checker/",
+          category: "text",
+          evidence: evidence(),
+          demandCoverage: {
+            currentPageRow: true,
+            historicalPageRow: true,
+          },
+          overrideReasons: [],
+        },
+      ],
+    });
+
+    try {
+      await Promise.all([
+        writeFile(finalPaths.json, previous.json),
+        writeFile(finalPaths.csv, previous.csv),
+        writeFile(finalPaths.markdown, previous.markdown),
+      ]);
+
+      let caught: unknown;
+      try {
+        await writeToolIndexReadinessArtifacts(report, temporaryRoot, {
+          rename: async (source, destination) => {
+            if (source.endsWith(".tmp") && destination === finalPaths.csv) {
+              throw publicationError;
+            }
+            if (source.endsWith(".backup") && destination === finalPaths.json) {
+              throw rollbackError;
+            }
+            await rename(source, destination);
+          },
+        });
+      } catch (error) {
+        caught = error;
+      }
+
+      expect(caught).toBeInstanceOf(AggregateError);
+      expect((caught as AggregateError).errors).toEqual([
+        publicationError,
+        rollbackError,
+      ]);
+      await expect(readFile(finalPaths.json, "utf8")).rejects.toThrow(
+        /ENOENT/u,
+      );
+      await expect(
+        Promise.all([
+          readFile(finalPaths.csv, "utf8"),
+          readFile(finalPaths.markdown, "utf8"),
+        ]),
+      ).resolves.toEqual([previous.csv, previous.markdown]);
+
+      const remainingFiles = (await readdir(temporaryRoot)).sort();
+      const backups = remainingFiles.filter((fileName) =>
+        fileName.endsWith(".backup"),
+      );
+      expect(remainingFiles.some((fileName) => fileName.endsWith(".tmp"))).toBe(
+        false,
+      );
+      expect(backups).toHaveLength(1);
+      expect(backups[0]).toMatch(/^tool-index-readiness\.json\..+\.backup$/u);
+      await expect(
+        readFile(path.join(temporaryRoot, backups[0]), "utf8"),
+      ).resolves.toBe(previous.json);
     } finally {
       await rm(temporaryRoot, { recursive: true, force: true });
     }
