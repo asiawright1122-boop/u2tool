@@ -166,7 +166,7 @@ npm run build
 npm run validate:sitemap
 ```
 
-Expected: all commands exit 0; Astro reports zero errors; the build generates `dist/sitemap-tools.xml`. Do not run `validate:search-engine-compliance` before deployment because it compares local manifest expectations with the still-old production sitemap; the online compliance gate runs in Step 4 after production has the new manifest.
+Expected: all commands exit 0; Astro reports zero errors; the SSR build generates `dist/client/sitemap-tools.xml`. Do not run `validate:search-engine-compliance` before deployment because it compares local manifest expectations with the still-old production sitemap; the online compliance gate runs in Step 4 after production has the new manifest.
 
 - [ ] **Step 2: Assert the built sitemap contains the exact cohort and unchanged control**
 
@@ -174,7 +174,7 @@ Expected: all commands exit 0; Astro reports zero errors; the build generates `d
 node --input-type=module <<'NODE'
 import { readFile } from 'node:fs/promises';
 
-const xml = await readFile('dist/sitemap-tools.xml', 'utf8');
+const xml = await readFile('dist/client/sitemap-tools.xml', 'utf8');
 const locales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 const blocks = Array.from(xml.matchAll(/<url>[\s\S]*?<\/url>/g), (match) => match[0]);
 
