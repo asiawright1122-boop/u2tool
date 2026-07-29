@@ -167,3 +167,42 @@ for canonical acceptance.
 
 Do not attribute sitewide movement to this pilot. Measure the ten Grammar
 Checker locale pages and preserve the other five pilots as untreated controls.
+
+## 48-Hour Technical Checkpoint
+
+- Checkpoint execution time: `2026-07-29 23:27:54 Asia/Shanghai (+08:00)`.
+- Worker deployment time: `2026-07-29 23:25:08 Asia/Shanghai (+08:00)`.
+- Deployed Worker version: `7598b0da-ceb5-488c-b3fd-42db8fdcd7b4`.
+- Rollback Worker version: `dbd4ef12-6b4c-413d-9d39-47e0105f4415`.
+- Expansion decision: `HOLD_HEX_PENDING_DAY_7`.
+
+| Pre-deploy gate | Result |
+|---|---|
+| Focused sitemap tests | 12 / 12 passed |
+| Astro check | 370 files, 0 errors, 0 warnings, 13 hints |
+| Production build | passed; SSR sitemap generated at `dist/client/sitemap-tools.xml` |
+| Sitemap validation | passed; tools sitemap contains 5,700 URLs |
+| Built Grammar Checker cohort | 10 / 10 at `2026-07-27` |
+| Untreated UUID Generator control | 1 / 1 remained `2026-06-02` |
+
+| Post-deploy gate | Result |
+|---|---|
+| Cache-busted production sitemap | 10 / 10 Grammar Checker locale paths at `2026-07-27` |
+| Worker SSR health | two rounds passed |
+| Search-engine compliance | passed |
+
+The first cache-busted sitemap probe ran during the immediate deployment
+propagation window and still returned the previous English Grammar Checker
+entry. Without changing code or configuration, follow-up probes across the
+`www`, apex, and Workers domains returned the same new ETag and the expected
+date. The complete ten-locale production assertion then passed.
+
+Google Search Console still reports the Russian page's last crawl as
+`2026-07-07 08:49:40`, before the Grammar Checker release. The old indexed
+Russian title remains `Проверка грамматики онлайн - исправление текста`.
+Consequently, the technical checkpoint passes but the search recovery window
+is not yet mature enough to release Hex Editor; expansion remains held pending
+the Day 7 observation.
+
+No indexing request was submitted, and no sitemap resubmission was performed
+at this checkpoint.
