@@ -45,6 +45,7 @@ scripts/validation/*
 !scripts/validation/validate-tool-theme-adaptation.ts
 !scripts/validation/validate-gsc-loss-metadata.ts
 !scripts/validation/validate-gsc-loss-metadata.test.ts
+!scripts/validation/validate-html-links.ts
 !scripts/validation/run-tool-page-render-contract.mjs
 !scripts/validation/run-with-preview.mjs
 !scripts/validation/gsc-high-value-content.test.ts
