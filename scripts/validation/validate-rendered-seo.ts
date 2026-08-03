@@ -22,6 +22,7 @@ interface RenderedSeoCheck {
   schemaTypes: string[];
   bodyMustInclude?: string[];
   bodyMustNotInclude?: string[];
+  htmlMustInclude?: string[];
   sourceRenderedOnly?: boolean;
   isNoIndex?: boolean;
 }
@@ -1505,6 +1506,26 @@ const visibleLocalizedCtrRecoveryChecks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'Russian Love Calculator recovery content',
+    path: '/ru/tools/love-calculator/',
+    titleIncludes: 'Ловел Калькулятор',
+    descriptionIncludes: 'развлекательный',
+    h1Includes: 'Ловел Калькулятор',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'развлекательный инструмент',
+      'процент, короткое сообщение',
+      'только как развлечение',
+      'поделиться текстом результата',
+    ],
+    bodyMustNotInclude: [
+      'SHA-256',
+      'FLAMES',
+      'психологических исследований',
+    ],
+  },
+  {
     name: 'Portuguese Tile Calculator recovery content',
     path: '/pt/tools/tile-calculator/',
     titleIncludes: 'Azulejos',
@@ -1775,7 +1796,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Creator',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Creator &amp; SEO Generators',
+      'Creator & SEO Generators',
+    ],
+    htmlMustInclude: [
       '/en/tools/youtube-tags-generator/',
       '/en/tools/seo-title-generator/',
       '/en/categories/generators/',
@@ -1789,7 +1812,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Image',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Image Editing &amp; Conversion Tools',
+      'Image Editing & Conversion Tools',
+    ],
+    htmlMustInclude: [
       '/en/tools/image-compressor/',
       '/en/tools/image-converter/',
       '/en/categories/image/',
@@ -1803,7 +1828,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Chart',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Chart Generators &amp; Data Visualization Tools',
+      'Chart Generators & Data Visualization Tools',
+    ],
+    htmlMustInclude: [
       '/en/tools/bar-chart-generator/',
       '/en/tools/line-chart-generator/',
       '/en/categories/charts/',
@@ -1817,7 +1844,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Developer Data',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Developer Data Formatters, Converters &amp; Validators',
+      'Developer Data Formatters, Converters & Validators',
+    ],
+    htmlMustInclude: [
       '/en/tools/json-formatter/',
       '/en/tools/json-to-typescript/',
       '/en/categories/development/',
@@ -1831,7 +1860,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Online Calculators',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Online Calculators for Finance, Math, Work &amp; Daily Life',
+      'Online Calculators for Finance, Math, Work & Daily Life',
+    ],
+    htmlMustInclude: [
       '/en/tools/mortgage-calculator/',
       '/en/tools/percentage-calculator/',
       '/en/categories/finance/',
@@ -1845,7 +1876,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'PDF',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'PDF, Document &amp; Spreadsheet Tools',
+      'PDF, Document & Spreadsheet Tools',
+    ],
+    htmlMustInclude: [
       '/en/tools/pdf-merger/',
       '/en/tools/excel-to-json/',
       '/en/categories/office/',
@@ -1859,7 +1892,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Security',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Security, Password, Hash &amp; JWT Tools',
+      'Security, Password, Hash & JWT Tools',
+    ],
+    htmlMustInclude: [
       '/en/tools/password-generator/',
       '/en/tools/hash-generator/',
       '/en/categories/security/',
@@ -1873,7 +1908,9 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Text',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'ItemList', 'BreadcrumbList'],
     bodyMustInclude: [
-      'Text, Writing &amp; Editing Tools',
+      'Text, Writing & Editing Tools',
+    ],
+    htmlMustInclude: [
       '/en/tools/word-counter/',
       '/en/tools/grammar-checker/',
       '/en/categories/text/',
@@ -1900,11 +1937,13 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'English tools search results',
     path: '/en/tools/?q=json',
+    canonicalPath: '/en/tools/',
     titleIncludes: 'Tools',
     descriptionIncludes: 'tools',
     h1Includes: 'Free Online Tools',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage'],
-    bodyMustInclude: ['data-search-results', 'JSON Formatter', 'https://www.u2tool.com/en/tools/json-formatter/'],
+    bodyMustInclude: ['JSON Formatter'],
+    htmlMustInclude: ['data-search-results', 'https://www.u2tool.com/en/tools/json-formatter/'],
     isNoIndex: true,
   },
   {
@@ -1914,7 +1953,8 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'JSON',
     h1Includes: 'JSON Formatter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: ['Choose the Right JSON Tool', '/en/compare/choose-json-tool/'],
+    bodyMustInclude: ['Choose the Right JSON Tool'],
+    htmlMustInclude: ['/en/compare/choose-json-tool/'],
   },
   ...popularEnglishDepthRecoveryChecks,
   ...longTailToolSupportDepthChecks,
@@ -1927,7 +1967,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'YouTube',
     h1Includes: 'YouTube Tags',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="creator-seo"',
       '/en/tools/creator-seo-generators/',
       '/en/tools/youtube-title-generator/',
@@ -1941,7 +1981,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'image',
     h1Includes: 'Image Compressor',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="image"',
       '/en/tools/image-editing-converters/',
       '/en/tools/image-converter/',
@@ -1954,7 +1994,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'chart',
     h1Includes: 'Bar Chart',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="chart"',
       '/en/tools/chart-generators/',
       '/en/tools/line-chart-generator/',
@@ -1967,7 +2007,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'JSON',
     h1Includes: 'JSON Formatter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="developer-data"',
       '/en/tools/developer-data-formatters/',
       '/en/tools/json-viewer/',
@@ -1980,7 +2020,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'mortgage',
     h1Includes: 'Mortgage',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="online-calculator"',
       '/en/tools/online-calculators/',
       '/en/tools/roi-calculator/',
@@ -1993,7 +2033,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'PDF',
     h1Includes: 'PDF Merger',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="pdf-document"',
       '/en/tools/pdf-document-converters/',
       '/en/tools/pdf-splitter/',
@@ -2006,7 +2046,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'password',
     h1Includes: 'Password Generator',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="security"',
       '/en/tools/security-password-hash-tools/',
       '/en/tools/password-strength/',
@@ -2019,7 +2059,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'word',
     h1Includes: 'Word Counter',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: [
+    htmlMustInclude: [
       'data-tool-cluster="text-writing"',
       '/en/tools/text-writing-editing-tools/',
       '/en/tools/document-word-counter/',
@@ -2032,7 +2072,8 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'JWT',
     h1Includes: 'JWT Decoder',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: ['The JWT Decoder helps developers inspect', '/en/compare/choose-jwt-tool/'],
+    bodyMustInclude: ['The JWT Decoder helps developers inspect'],
+    htmlMustInclude: ['/en/compare/choose-jwt-tool/'],
     bodyMustNotInclude: [
       'The JWT Debugger is a specialized tool',
       'Signature Verification',
@@ -2364,6 +2405,8 @@ const checks: RenderedSeoCheck[] = [
     sourceRenderedOnly: true,
     bodyMustInclude: [
       'Inspect text as bytes',
+    ],
+    htmlMustInclude: [
       '/en/tools/hex-editor/',
       '/en/tools/text-to-hex/',
     ],
@@ -2378,6 +2421,8 @@ const checks: RenderedSeoCheck[] = [
     sourceRenderedOnly: true,
     bodyMustInclude: [
       'Проверить текст как байты',
+    ],
+    htmlMustInclude: [
       '/ru/tools/hex-editor/',
       '/ru/tools/text-to-hex/',
     ],
@@ -4678,6 +4723,29 @@ const checks: RenderedSeoCheck[] = [
     ],
   },
   {
+    name: 'English JSON Flattener recovery content',
+    path: '/en/tools/json-flattener/',
+    titleIncludes: 'JSON Flattener',
+    descriptionIncludes: 'delimiter',
+    h1Includes: 'JSON Flattener',
+    schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    sourceRenderedOnly: true,
+    bodyMustInclude: [
+      'valid pasted JSON',
+      'flat key-value object',
+      'bracketed indexes',
+      'Use Copy',
+    ],
+    bodyMustNotInclude: [
+      'syntax-highlighted',
+      'advanced settings panel',
+      'array index preservation',
+      'download as a .json file',
+      'JSON schema validation',
+      'trie-based reconstruction',
+    ],
+  },
+  {
     name: 'English Inflation Calculator recovery content',
     path: '/en/tools/inflation-calculator/',
     titleIncludes: 'Inflation Calculator',
@@ -4802,7 +4870,7 @@ const checks: RenderedSeoCheck[] = [
   {
     name: 'Spanish Text to Handwriting recovery content',
     path: '/es/tools/text-to-handwriting/',
-    titleIncludes: 'caligrafía',
+    titleIncludes: 'Caligrafía',
     descriptionIncludes: 'PNG',
     h1Includes: 'Texto',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
@@ -5180,6 +5248,45 @@ function assert(condition: unknown, message: string): void {
   }
 }
 
+function decodeHtmlEntities(text: string): string {
+  const namedEntities: Record<string, string> = {
+    amp: '&',
+    apos: "'",
+    gt: '>',
+    lt: '<',
+    nbsp: ' ',
+    quot: '"',
+  };
+
+  return text
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_, decimal: string) => String.fromCodePoint(parseInt(decimal, 10)))
+    .replace(/&([a-z]+);/gi, (entity, name: string) => namedEntities[name.toLowerCase()] ?? entity);
+}
+
+function getVisibleBodyText(html: string): string {
+  const bodyHtml = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? html;
+
+  return decodeHtmlEntities(
+    bodyHtml
+      .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+      .replace(/<!--[\s\S]*?-->/g, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+  );
+}
+
+function getSearchableBodyHtml(html: string): string {
+  const bodyHtml = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? html;
+
+  return bodyHtml
+    .replace(/<script\b[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<!--[\s\S]*?-->/g, ' ');
+}
+
 function extractJsonLdTypes(html: string): string[] {
   const scripts = Array.from(
     html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)
@@ -5228,6 +5335,8 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   const robots = getTagContent(html, 'robots');
   const h1Text = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() || '';
   const schemaTypes = extractJsonLdTypes(html);
+  const visibleBodyText = getVisibleBodyText(html);
+  const searchableBodyHtml = getSearchableBodyHtml(html);
 
   assert(title.includes(check.titleIncludes), `${check.name}: title missing "${check.titleIncludes}"`);
   assert(!/\bU2Tool\s*\|\s*U2Tool\b/i.test(title), `${check.name}: title duplicates U2Tool brand`);
@@ -5255,11 +5364,15 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   }
 
   for (const expected of check.bodyMustInclude || []) {
-    assert(html.includes(expected), `${check.name}: body missing "${expected}"`);
+    assert(visibleBodyText.includes(expected), `${check.name}: body missing "${expected}"`);
   }
 
   for (const forbidden of check.bodyMustNotInclude || []) {
-    assert(!html.includes(forbidden), `${check.name}: body contains forbidden text "${forbidden}"`);
+    assert(!visibleBodyText.includes(forbidden), `${check.name}: body contains forbidden text "${forbidden}"`);
+  }
+
+  for (const expected of check.htmlMustInclude || []) {
+    assert(searchableBodyHtml.includes(expected), `${check.name}: body HTML missing "${expected}"`);
   }
 }
 
