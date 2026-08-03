@@ -4,12 +4,12 @@
 
 This audit checks tool support content against search-engine quality expectations and the actual U2Tool browser-first implementation. The primary recovery risk addressed here is not raw indexability: GSC Coverage showed indexed pages continued to rise while impressions collapsed. The next defensible layer is content trust, overclaiming, and thin support content.
 
-- Tool message files scanned: 5660
-- English tool files scanned: 566
-- Popular English tool files checked for depth: 109
+- Tool message files scanned: 5700
+- English tool files scanned: 570
+- Popular English tool files checked for depth: 113
 - Files with high-confidence implementation overclaims: 0
 - Files with medium-confidence claims for future review: 5
-- Popular English files with depth gaps: 1
+- Popular English files with depth gaps: 5
 
 Runtime mitigation: high-confidence support-content issues are blocked by `assessSupportContentTrust` and replaced by safe fallback support content on tool detail pages.
 
@@ -26,8 +26,11 @@ Runtime mitigation: high-confidence support-content issues are blocked by `asses
 | Code | Severity | Count | Meaning |
 |---|---:|---:|---|
 | `redis-runtime` | medium | 7 | Mentions Redis-specific behavior that should be verified against the actual tool UI. |
+| `thin-detailed-description` | depth | 5 | Popular English tool has a short detailed_description (...). |
+| `thin-faqs` | depth | 4 | Popular English tool has 0 FAQs; expected at least 3. |
+| `thin-usage-examples` | depth | 4 | Popular English tool has 0 usage examples; expected at least 2. |
+| `thin-usage-steps` | depth | 4 | Popular English tool has 0 usage steps; expected at least 3. |
 | `server-side-reference` | medium | 2 | References server-side behavior on a browser-first tool page and should be verified. |
-| `thin-detailed-description` | depth | 1 | Popular English tool has a short detailed_description (...). |
 
 ## High-Confidence Overclaim Samples
 
@@ -41,7 +44,11 @@ These are not automatic noindex problems. They are prioritization targets for co
 
 | Tool | Detailed Chars | Steps | Examples | FAQs | Gap Codes |
 |---|---:|---:|---:|---:|---|
+| `ai-prompt-optimizer` | 0 | 0 | 0 | 0 | `thin-detailed-description`, `thin-usage-steps`, `thin-usage-examples`, `thin-faqs` |
+| `ai-prompt-template-generator` | 0 | 0 | 0 | 0 | `thin-detailed-description`, `thin-usage-steps`, `thin-usage-examples`, `thin-faqs` |
 | `developer-cryptography-toolbox` | 145 | 4 | 3 | 3 | `thin-detailed-description` |
+| `json-to-prompt` | 0 | 0 | 0 | 0 | `thin-detailed-description`, `thin-usage-steps`, `thin-usage-examples`, `thin-faqs` |
+| `rag-chunk-size-calculator` | 0 | 0 | 0 | 0 | `thin-detailed-description`, `thin-usage-steps`, `thin-usage-examples`, `thin-faqs` |
 
 ## Recovery Actions
 

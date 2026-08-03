@@ -225,19 +225,20 @@ These rows have known historic click or impression loss and should stay ahead of
   - description: `Создавайте CSS clip-path из пресетов Triangle, Diamond, Star, Circle и Inset. Редактируйте значение вручную, смотрите превью и копируйте CSS.`
 - The split tool copy now has 4 usage examples and 5 FAQs, including the actual copy behavior for `clip-path: значение;`.
 - The support copy matches the component boundary: preset-and-textarea CSS generation with preview and copy output, not drag-and-drop point editing, SVG path editing, ZIP/SVG export, vendor-prefix management, or browser-support validation.
-- Refreshed `exports/seo/worklists/2026-07-04/` from the already refreshed `exports/seo/seo-geo-audit-matrix-2026-07-04.json`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-07.md`, `exports/seo/seo-geo-audit-matrix-2026-07-07.json`, and `exports/seo/worklists/2026-07-07/`.
 - New matrix/worklist result: `ru/css-clip-path-generator` dropped from the stale `P1 score=86` worklist row to `P1 score=70`; remaining issues are only `gsc_click_loss`, `gsc_impression_loss`, and stale `coverage_crawled-not-indexed`.
 - Verification passed:
   - JSON parse/root-base TDK check for Russian CSS Clip Path Generator;
+  - `npm run report:seo-geo-audit -- --top 80` (`P0=7`, `P1=132`, `P2=2163`, `P3=3398`);
   - `npm run report:seo-geo-worklists`;
   - `npm run validate:gsc-loss-metadata`;
   - `npm run validate:translation-corpus`;
   - `npm run validate:merge-chain-consistency`;
-  - `npm run report:content-trust`;
-  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2657` warning-only findings);
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
   - `npm run validate:gsc-high-value-content`;
-  - local rendered SEO with `PROD_BASE_URL=http://127.0.0.1:4327 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian CSS Clip Path' npm run validate:rendered-seo`.
-- Next execution target: continue from the regenerated `01-gsc-recovery-p0-p1` list, either with `en/tools/css-clip-path-generator/` to finish the Clip Path family or with the next unrepaired high-loss query-intent row selected by batch priority.
+  - local rendered SEO with `PROD_BASE_URL=http://127.0.0.1:4328 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian CSS Clip Path' npm run validate:rendered-seo`.
+- Next execution target: continue from the regenerated `2026-07-07/01-gsc-recovery-p0-p1` list, starting with `ru/tools/hex-editor/` (`20/341` loss, low-ranking signal).
 
 ## 2026-07-04 English CSS Clip Path Generator Query-Intent Checkpoint
 
@@ -1427,3 +1428,902 @@ These rows have known historic click or impression loss and should stay ahead of
 - Post-deploy production smoke at `2026-07-06 15:47:11 CST` confirmed the same ten URLs return `200`, self-canonical HTML, expected localized titles, and no visible repaired residue phrase.
 - Post-deploy `npm run validate:search-engine-compliance` passed against production.
 - Next action: wait for fresh GSC Pages indexing movement or URL Inspection recrawl before taking any GSC-side validation action.
+
+## 2026-07-07 Russian Hex Editor Query-Intent Guard Checkpoint
+
+- Rechecked `ru/tools/hex-editor/` from the regenerated `2026-07-07/01-gsc-recovery-p0-p1` queue (`20/341` click/impression loss, low-ranking signal).
+- Root/base Russian TDK now uses the protected query phrasing and rendered guard terms:
+  - title: `Hex-редактор онлайн - текст в hex и обратно`;
+  - description: `Hex-редактор переводит текст в hex и hex в текст прямо в браузере. Проверяйте UTF-8 hex-байты, копируйте результат и работайте без регистрации.`
+- Split support copy already had 4 usage examples and 6 FAQs; adjusted the detailed description to the rendered guard phrase `Hex-редактор — это браузерный конвертер`.
+- Removed the exact stale RU template phrase `без скачивания и регистрации` from root/base/tool message payloads so source-rendered checks are not polluted by serialized unrelated tool metadata.
+- Verification passed:
+  - JSON parse/root-base TDK check for Russian Hex Editor;
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:merge-chain-consistency`;
+  - local rendered SEO with `PROD_BASE_URL=http://127.0.0.1:4331 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Hex Editor' npm run validate:rendered-seo`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-07.md`, `exports/seo/seo-geo-audit-matrix-2026-07-07.json`, and `exports/seo/worklists/2026-07-07/`.
+- New matrix/worklist result: `ru/hex-editor` remains `P0 score=74` because of historical GSC loss and current low-ranking signal; repo-side issues are clear (`titleLength=43`, `descriptionLength=143`, `supportSignal=365`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- Next execution target: continue the P0 query-intent lane with `en/tools/hex-editor/` (`18/569` loss).
+
+## 2026-07-08 English Hex Editor Query-Intent Verification Checkpoint
+
+- Rechecked `en/tools/hex-editor/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`18/569` click/impression loss).
+- No new copy expansion was needed: root/base TDK are synchronized and already match the protected query lane:
+  - title: `Hex Editor Online - Text to Hex and Hex to Text`;
+  - description: `Convert text to UTF-8 hex bytes and decode hex to text in your browser. Inspect payloads, logs, and small strings without upload.`
+- Split support copy has 4 usage examples and 6 FAQs, includes the rendered guard phrases (`UTF-8 hex bytes`, `API payloads`, `All conversion runs in the browser`, `TextEncoder API`), and avoids unsupported full binary editor claims.
+- Added a local dev-server compatibility switch in `astro.config.mjs`: `DISABLE_CLOUDFLARE_INSPECTOR=1` sets the Cloudflare adapter `inspectorPort` to `false`. Default local debugging behavior is unchanged, but validation can now run in sandboxed environments that block the default inspector listener.
+- Verification passed:
+  - JSON parse/root-base/source guard check for English Hex Editor;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:gsc-loss-metadata`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:merge-chain-consistency`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4335 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Hex Editor' npm run validate:rendered-seo`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-08.md`, `exports/seo/seo-geo-audit-matrix-2026-07-08.json`, and `exports/seo/worklists/2026-07-08/`.
+- New matrix/worklist result: `en/hex-editor` remains `P0 score=68` because of historical GSC loss; repo-side issues are clear (`titleLength=47`, `descriptionLength=129`, `supportSignal=459`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P0 query-intent lane with `de/tools/text-to-handwriting/` (`17/176` loss).
+
+## 2026-07-08 German Text To Handwriting Query-Intent Guard Checkpoint
+
+- Rechecked `de/tools/text-to-handwriting/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`17/176` click/impression loss).
+- Root/base German TDK were already synchronized and safely bounded:
+  - title: `Text in Handschrift umwandeln online kostenlos`;
+  - description: `Wandle Text online in ein handschriftlich wirkendes PNG-Bild um. Wähle Stil, Tintenfarbe, Schriftgröße sowie leeres, liniertes oder kariertes Papier.`
+- Adjusted the split support opening sentence to the rendered guard phrase `Mit dem Text-zu-Handschrift-Converter wandelst du eingegebenen Text direkt im Browser`, while preserving the GSC query terms `Text in Handschrift umwandeln online`, `Text zu Handschrift`, and `Handschrift Generator`.
+- The split support copy remains bounded to the actual component behavior: browser canvas preview, style/ink/font-size/paper controls, PNG download, no OCR, no real handwriting recognition, and no document/PDF export claim.
+- Verification passed:
+  - JSON parse/root-base/source guard check for German Text To Handwriting;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4337 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='German Text to Handwriting' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run validate:gsc-loss-metadata`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files).
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-08.md`, `exports/seo/seo-geo-audit-matrix-2026-07-08.json`, and `exports/seo/worklists/2026-07-08/`.
+- New matrix/worklist result: `de/text-to-handwriting` remains `P0 score=65` because of historical GSC loss; repo-side issues are clear (`titleLength=46`, `descriptionLength=149`, `supportSignal=348`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P0 query-intent lane with `en/tools/ical-parser/` (`15/257` loss).
+
+## 2026-07-08 English iCal Parser Query-Intent Verification Checkpoint
+
+- Rechecked `en/tools/ical-parser/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`15/257` click/impression loss).
+- No new copy expansion was needed: root/base TDK are synchronized and safely bounded:
+  - title: `iCal Parser Online - View ICS Calendar Files`;
+  - description: `View iCal and ICS files online, inspect VEVENT dates, locations, attendees, RRULE fields, and export parsed calendar data as JSON.`
+- Split support copy has 4 usage examples and 6 FAQs, covers `iCal viewer`, `view iCal online`, `view ICS file online`, `ICS calendar viewer`, `VEVENT`, `RRULE`, JSON export, and timezone limitations.
+- The support boundary remains explicit: this page parses pasted or uploaded `.ics` / `.ical` content for browser inspection; it does not sync calendars, send invitations, connect to Google Calendar/Outlook/CalDAV, publish events, or expand complete timezone rulesets.
+- Verification passed:
+  - JSON parse/root-base/source guard check for English iCal Parser;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4338 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='iCal Parser' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/ical-parser` remains `P0 score=66` because of historical GSC loss; repo-side issues are clear (`titleLength=44`, `descriptionLength=130`, `supportSignal=489`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P0 query-intent lane with `ru/tools/barcode-generator/` (`11/244` loss).
+
+## 2026-07-08 Russian Barcode Generator Query-Intent Verification Checkpoint
+
+- Rechecked `ru/tools/barcode-generator/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`11/244` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Генератор штрих-кодов онлайн - U2Tool`;
+  - description: `Генератор штрихкодов создает штрихкод в браузере из введенного текста или числа. Проверьте формат, скопируйте результат и работайте без регистрации.`
+- Split support copy has 5 usage examples and 7 FAQs, includes the protected query phrases `бесплатный генератор штрих-кодов`, `генератор штрихкода`, `штрих код онлайн`, `баркод генератор`, and `баркод онлайн`.
+- The support boundary remains explicit: Code 128, Code 39, EAN-13, and UPC-A SVG preview only; no EPS/PNG/DPI export, raster-image export, styling controls, production print validation, or product-code registration.
+- Verification passed:
+  - JSON parse/root-base/source guard check for Russian Barcode Generator;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4339 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Barcode Generator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/barcode-generator` remains `P0 score=66` because of historical GSC loss; repo-side issues are clear (`titleLength=37`, `descriptionLength=148`, `supportSignal=381`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P0 query-intent lane with `fr/tools/file-size-calculator/` (`11/57` loss).
+
+## 2026-07-08 French File Size Calculator Query-Intent Guard Checkpoint
+
+- Rechecked `fr/tools/file-size-calculator/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`11/57` click/impression loss).
+- Root/base French TDK were already synchronized and safely bounded:
+  - title: `Calculateur et convertisseur de taille de fichier`;
+  - description: `Convertisseur de taille de fichier pour octets, Ko, Mo, Go, To et Po. Convertir Ko en Mo, convertir Mo en Go, et comparer base 1000 ou 1024.`
+- Adjusted the split support opening sentence to the rendered guard phrase `convertit une valeur source en octets`, while preserving the protected query terms `convertisseur de taille de fichier`, `taille de fichier`, `convertir Ko en Mo`, `convertir Mo en Go`, and `base 1000 ou 1024`.
+- The support boundary remains explicit: manual numeric conversion across B/KB/MB/GB/TB/PB, bits and bytes, base 1000 vs 1024; no file upload, no local file-size reading, no checkbox-driven destination-unit UI, no reset/convert button workflow.
+- Verification passed:
+  - JSON parse/root-base/source guard check for French File Size Calculator;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4341 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='French File Size Calculator' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run validate:gsc-loss-metadata`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files).
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-08.md`, `exports/seo/seo-geo-audit-matrix-2026-07-08.json`, and `exports/seo/worklists/2026-07-08/`.
+- New matrix/worklist result: `fr/file-size-calculator` remains `P0 score=64` because of historical GSC loss; repo-side issues are clear (`titleLength=49`, `descriptionLength=140`, `supportSignal=591`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: finish the current P0 query-intent lane with `en/tools/gantt-chart-generator/` (`1/6255` loss, low-ranking signal).
+
+## 2026-07-08 English Gantt Chart Generator Query-Intent Verification Checkpoint
+
+- Rechecked `en/tools/gantt-chart-generator/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`1/6255` click/impression loss, low-ranking signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Gantt Chart Maker Online - Create Gantt Chart Free | U2Tool`;
+  - description: `Create Gantt chart online free from editable tasks, dates, and progress bars. Preview a project timeline and export PNG or SVG.`
+- Split support copy has 5 usage examples and 6 FAQs, includes the protected query phrases `gantt chart maker`, `create gantt chart online`, `create a gantt chart online`, `create gantt chart online free`, `easy gantt chart maker`, and `project timeline maker`.
+- The support boundary remains explicit: editable task rows, start/end dates, progress bars, theme selection, preview, PNG/SVG export; no dependency calculation, resource allocation, critical-path analysis, live project tracking, or full project-management workflow.
+- Verification passed:
+  - JSON parse/root-base/source guard check for English Gantt Chart Generator;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4342 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Gantt' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/gantt-chart-generator` remains `P0 score=81` because of historical GSC impression loss and current low-ranking signal; repo-side issues are clear (`titleLength=59`, `descriptionLength=127`, `supportSignal=454`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- P0 query-intent lane status: the regenerated `2026-07-08` P0 set is now repo-side checked or repaired for `ru/hex-editor`, `en/hex-editor`, `de/text-to-handwriting`, `en/ical-parser`, `ru/barcode-generator`, `fr/file-size-calculator`, and `en/gantt-chart-generator`. Remaining P0 scoring is external GSC performance/indexing movement, not unresolved local TDK/support/content-trust debt.
+- Next execution target: continue into the regenerated `2026-07-08/01-gsc-recovery-p0-p1` P1 queue, starting with the highest-loss unrepaired rows.
+
+## 2026-07-08 English Morse Code Player P1 Verification Checkpoint
+
+- Rechecked `en/tools/morse-code-player/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`9/249` click/impression loss, low-ranking signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Morse Code Player Online - Text to Morse Audio`;
+  - description: `Use this Morse code player online to convert text to Morse code, decode Morse to text, and play live dot-dash audio with speed and frequency controls.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the protected query phrases `morse code player`, `morse code player online`, `morse code play`, `morse player`, and `morse code live`.
+- The support boundary remains explicit: browser text-to-Morse, Morse-to-text, dot-dash audio, playback speed/frequency controls, visualization, copy output; no full alphabet reference chart, certification training, guaranteed radio operation, or professional transmission validation.
+- Verification passed:
+  - JSON parse/root-base/source guard check for English Morse Code Player;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4344 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Morse Code Player' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/morse-code-player` remains `P1 score=71` because of historical GSC loss and current low-ranking signal; repo-side issues are clear (`titleLength=46`, `descriptionLength=150`, `supportSignal=371`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- Next execution target: continue the P1 query-intent lane with `en/tools/html-preview/` (`8/486` loss).
+
+## 2026-07-08 English HTML Preview P1 Verification Checkpoint
+
+- Rechecked `en/tools/html-preview/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`8/486` click/impression loss).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `HTML Viewer Online - Preview HTML and CSS | U2Tool`;
+  - description: `Preview HTML online in a sandboxed iframe for static HTML and CSS snippets. Use the HTML viewer online to edit markup, refresh, and clear.`
+- Split support copy has 5 usage examples and 7 FAQs, includes the protected query phrases `HTML viewer online`, `HTML online viewer`, `HTML preview`, `online HTML preview`, `HTML previewer`, `preview HTML online`, and `sandboxed iframe`.
+- The support boundary remains explicit: small static HTML/CSS snippets, refresh preview, clear editor, sandboxed iframe-style preview; no script execution, JavaScript interactivity support, build step, production browser-testing replacement, or website hosting workflow.
+- Verification passed:
+  - JSON parse/root-base/source guard check for English HTML Preview;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4345 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='HTML Preview' npm run validate:rendered-seo` (also covered the existing Spanish and Russian HTML Preview recovery guards).
+- Current matrix/worklist result: `en/html-preview` remains `P1 score=62` because of historical GSC loss; repo-side issues are clear (`titleLength=50`, `descriptionLength=138`, `supportSignal=409`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/credit-card-validator/` (`8/82` loss).
+
+## 2026-07-08 Russian Credit Card Validator P1 Repair Checkpoint
+
+- Rechecked `ru/tools/credit-card-validator/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`8/82` click/impression loss).
+- Fixed a root-locale disclaimer typo in `src/messages/ru.json` (`действителен ли картон` -> `действительна ли карта`) and synchronized it with `src/messages/ru/base.json`.
+- Root/base Russian TDK remain synchronized and safely bounded:
+  - title: `Проверка кредитной карты онлайн - алгоритм Лухна`;
+  - description: `Проверьте тестовый номер карты онлайн: локальная проверка Лухна, длины и платежной сети Visa/Mastercard без запроса банков.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the protected query phrases `проверка кредитной карты онлайн`, `валидатор кредитных карт`, `алгоритму Лухна`, and `тестовые номера`.
+- The support boundary remains explicit: local Luhn checksum, length, and payment-network pattern only; no bank/provider lookup, CVV check, balance check, real-time authorization, active-account verification, or use of real card data.
+- Verification passed:
+  - JSON parse/root-base/source guard check for Russian Credit Card Validator;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4346 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Credit Card Validator' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-08.md`, `exports/seo/seo-geo-audit-matrix-2026-07-08.json`, and `exports/seo/worklists/2026-07-08/`.
+- New matrix/worklist result: `ru/credit-card-validator` remains `P1 score=62` because of historical GSC loss; repo-side issues are clear (`titleLength=48`, `descriptionLength=123`, `supportSignal=320`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ja/tools/half-doughnut-chart-generator/` (`8/37` loss).
+
+## 2026-07-08 Japanese Half Doughnut Chart P1 Verification Checkpoint
+
+- Rechecked `ja/tools/half-doughnut-chart-generator/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`8/37` click/impression loss).
+- No new copy expansion was needed: root/base Japanese TDK are synchronized and safely bounded:
+  - title: `半円ドーナツチャート生成ツール - PNG/SVG対応`;
+  - description: `半円ドーナツチャートをブラウザで作成。表のラベルと値を編集し、テーマや凡例を調整してPNG/SVGで保存できます。`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `Default、Ocean、Sunset、Forest`, `PNG または SVG`, and `表形式のデータエディタ`.
+- The support boundary remains explicit: table-style label/value editing, theme selection, legend/label toggles, ECharts preview, PNG/SVG download; no JSON import, angle/radius controls, code generation tab, granular pixel-size controls, left/right half selection, or animation/styling overclaims.
+- Verification passed:
+  - JSON parse/root-base/source guard check for Japanese Half Doughnut Chart;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4347 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Japanese Half Doughnut' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ja/half-doughnut-chart-generator` remains `P1 score=58` because of historical GSC loss; repo-side issues are clear (`titleLength=27`, `descriptionLength=57`, `supportSignal=359`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/excel-merger/` (`8/30` loss).
+
+## 2026-07-08 Russian Excel Merger P1 Verification Checkpoint
+
+- Rechecked `ru/tools/excel-merger/` from the regenerated `2026-07-08/01-gsc-recovery-p0-p1` queue (`8/30` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Объединить Excel онлайн - XLSX и XLS файлы`;
+  - description: `Объединяйте несколько Excel файлов в браузере: выберите листы, вертикальный или горизонтальный режим и скачайте итоговый XLSX.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `Excel Merger объединяет выбранные листы из нескольких XLSX или XLS файлов прямо в браузере`, `не выполняет сопоставление по ключам`, and `скачать результат в формате XLSX`.
+- The support boundary remains explicit: browser XLSX/XLS sheet selection, vertical row append or horizontal column append, generated XLSX download; no CSV workflow, backend spreadsheet engine, key-based matching, automatic primary-key detection, 100k-row claim, or complex formatting/formula preservation.
+- Verification passed:
+  - JSON parse/root-base/source guard check for Russian Excel Merger;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4348 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Excel Merger' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/excel-merger` remains `P1 score=58` because of historical GSC loss; repo-side issues are clear (`titleLength=42`, `descriptionLength=126`, `supportSignal=318`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/color-blender/` (`6/64` loss) or switch to the higher-impression P1 low-ranking group.
+
+## 2026-07-09 Russian Color Blender P1 Repair Checkpoint
+
+- Rechecked `ru/tools/color-blender/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`6/64` click/impression loss).
+- Fixed the Russian Color Blender TDK/name merge-layer drift across `src/messages/ru.json` and `src/messages/ru/base.json`:
+  - replaced the remaining `Смешивание цветов онлайн - HEX палитра` title entries with `Смешать цвета онлайн - HEX палитра`;
+  - replaced duplicate `Цветной блендер` / `Смешивание цветов` name entries with `Смешать цвета`, matching the rendered guard and current query intent.
+- Root/base Russian TDK are now synchronized and safely bounded:
+  - title: `Смешать цвета онлайн - HEX палитра`;
+  - description: `Смешайте два HEX-цвета, настройте число шагов, просмотрите плавную палитру и скопируйте каждый промежуточный оттенок.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `Color Blender создает набор промежуточных HEX-цветов`, `Инструмент работает с простым RGB-смешиванием`, and `не экспортирует CSS, SVG или PNG-файлы`.
+- The support boundary remains explicit: two HEX/color-picker inputs, 1-20 intermediate steps, linear RGB interpolation, per-swatch copy, Copy All; no blend modes, transparency controls, CSS/SVG/PNG export, or RGB/HSL input-mode overclaims.
+- Verification passed:
+  - duplicate source-count check for Russian Color Blender TDK/name entries;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4351 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Color Blender' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- New matrix/worklist result: `ru/color-blender` remains `P1 score=52` because of historical GSC loss; repo-side issues are clear (`titleLength=34`, `descriptionLength=117`, `supportSignal=278`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `en/tools/database-connection-tester/` (`6/26` loss, low-ranking plus `coverage_crawled-not-indexed`) or `en/tools/crontab-calendar/` (`6/25` loss).
+
+## 2026-07-09 Database Connection Tester P1/CNI Verification Checkpoint
+
+- Rechecked `en/tools/database-connection-tester/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`6/26` click/impression loss, low-ranking signal, stale `coverage_crawled-not-indexed` from `2026-05-01`).
+- No new copy expansion was needed; the 2026-07-04 repair still holds:
+  - title: `Free Database Connection String Builder Online | U2Tool`;
+  - description: `Build PostgreSQL, MySQL, MongoDB, and key-value database connection strings in the browser. Copy clean config snippets without a live network test.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `Database Connection String Builder helps you build and review database connection settings`, `It does not make a network request`, and `the connection string patterns exposed by the database type selector`.
+- The support boundary remains explicit: local connection-string and code-snippet generation only; no socket opening, live database authentication, credential verification, parser UI flow, or production-secret recommendation.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4352 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Database Connection String Builder' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/database-connection-tester` remains `P1 score=84` because of historical GSC loss, current low-ranking signal, and stale coverage status; repo-side issues are clear (`titleLength=55`, `descriptionLength=147`, `supportSignal=382`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`, `coverage_crawled-not-indexed`).
+- Next execution target: continue the P1 query-intent lane with `en/tools/crontab-calendar/` (`6/25` loss).
+
+## 2026-07-09 Crontab Calendar P1 Repair Checkpoint
+
+- Rechecked `en/tools/crontab-calendar/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`6/25` click/impression loss).
+- Fixed the English Crontab Calendar TDK query-intent drift across `src/messages/en.json` and `src/messages/en/base.json`:
+  - title changed from `Crontab Calendar Online - Cron Schedule Preview` to `Cron Calendar Online - Crontab Schedule Preview`;
+  - description now explicitly includes `next 10 run times` to match the rendered guard and the tool's list-view intent.
+- Root/base English TDK are synchronized and safely bounded:
+  - title: `Cron Calendar Online - Crontab Schedule Preview`;
+  - description: `Preview a 5-field cron expression on a monthly calendar and next 10 run times list. Parse schedules, move between months, and highlight run days.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `Crontab Calendar turns a standard five-field cron expression into a simple browser preview`, `the next 10 run times`, and `does not export iCal or JSON files`.
+- The support boundary remains explicit: standard five-field cron parsing, calendar/list preview, previous/next month navigation, and next 10 run timestamps; no IANA timezone database, iCal/JSON export, conflict detection, server execution, or special macro syntax claims.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4354 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Crontab Calendar' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- New matrix/worklist result: `en/crontab-calendar` remains `P1 score=52` because of historical GSC loss; repo-side issues are clear (`titleLength=47`, `descriptionLength=145`, `supportSignal=372`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with high-impression/low-ranking `en/tools/random-color-generator/` (`5/715` loss).
+
+## 2026-07-09 Random Color Generator P1 Verification Checkpoint
+
+- Rechecked `en/tools/random-color-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/715` click/impression loss, low-ranking signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Free Random Color Generator Online - HEX RGB HSL Palette`;
+  - description: `Generate 1 to 20 random colors, choose HEX, RGB, or HSL output, preview the palette, and copy individual swatches or the full list.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `The Random Color Generator creates a browser-side palette of random colors`, `Set the number of swatches from 1 to 20`, and `HEX, RGB, or HSL`.
+- The support boundary remains explicit: random 1-20 swatches, HEX/RGB/HSL output, per-card copy, Copy All, and palette preview only; no harmony modes, locked colors, seeded palettes, contrast checker, or palette history.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4355 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Random Color Generator' npm run validate:rendered-seo` (covered the recovery content guard plus existing tool-page/refreshed-support checks).
+- Current matrix/worklist result: `en/random-color-generator` remains `P1 score=62` because of historical GSC loss and current low-ranking signal; repo-side issues are clear (`titleLength=56`, `descriptionLength=131`, `supportSignal=323`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/scientific-calculator/` (`5/427` loss).
+
+## 2026-07-09 Russian Scientific Calculator P1 Verification Checkpoint
+
+- Rechecked `ru/tools/scientific-calculator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/427` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Научный калькулятор онлайн - sin, log, RAD/DEG`;
+  - description: `Научный калькулятор онлайн с sin, cos, tan, ln, log, √, xʸ, π, e, факториалом, процентами, RAD/DEG и памятью. Работает в браузере.`
+- Split support copy has 4 usage examples and 5 FAQs, aligned to the real button UI: RAD/DEG, sin/cos/tan, ln/log, √, xʸ, π/e, factorial, percent, sign toggle, memory buttons, and result copy.
+- The support boundary remains explicit: browser-side scientific calculations and quick checks only; no graphing, equation solving, matrices, units, history tape, symbolic math, or critical-engineering guarantee.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4356 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Scientific Calculator' npm run validate:rendered-seo` (covered the tool-page and refreshed-support checks).
+- Current matrix/worklist result: `ru/scientific-calculator` remains `P1 score=52` because of historical GSC loss; repo-side issues are clear (`titleLength=46`, `descriptionLength=130`, `supportSignal=313`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `fr/tools/pie-chart-generator/` (`5/262` loss).
+
+## 2026-07-09 French Pie Chart Generator P1 Verification Checkpoint
+
+- Rechecked `fr/tools/pie-chart-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/262` click/impression loss).
+- No new copy expansion was needed; the 2026-07-04 chart-family repair still holds:
+  - title: `Générateur de camembert en ligne - CSV, PNG et SVG`;
+  - description: `Créez un camembert en ligne depuis une table ou un CSV nom,valeur. Ajustez légende, pourcentages, anneau ou rose, puis exportez en PNG/SVG.`
+- Split support copy has 4 usage examples and 5 FAQs, covering table editing, simple `nom,valeur` CSV import, legend/label/percentage toggles, donut/rose modes, PNG/SVG export, and explicit 2D/API boundaries.
+- The support boundary remains explicit: small table or CSV input, 2D camembert/anneau/rose chart, preview and PNG/SVG download; no 3D projection, API, GET parameters, EXIF metadata, or advanced SVG editing.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4357 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='French Pie Chart' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `fr/pie-chart-generator` remains `P1 score=51` because of historical GSC loss; repo-side issues are clear (`titleLength=50`, `descriptionLength=139`, `supportSignal=408`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `en/tools/crc32-calculator/` (`5/222` loss).
+
+## 2026-07-09 English CRC32 Calculator P1 Verification Checkpoint
+
+- Rechecked `en/tools/crc32-calculator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/222` click/impression loss).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `CRC32 Checksum Calculator Online`;
+  - description: `Calculate CRC32 for text or a local file in your browser. Compare hexadecimal and decimal checksums for integrity and error-detection checks.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrase `generates a standard CRC-32 checksum`, and explains text mode, file mode, hexadecimal/decimal output, local file reading, and one-value CRC-32 scope.
+- The support boundary remains explicit: one text input or one local file at a time, standard CRC-32, hex/decimal copy; no multiple CRC variants, streaming progress, batch processing, remote file verification, or cryptographic-hash guarantee.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4358 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='CRC32 Calculator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/crc32-calculator` remains `P1 score=50` because of historical GSC loss; repo-side issues are clear (`titleLength=32`, `descriptionLength=141`, `supportSignal=356`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ar/tools/credit-card-validator/` (`5/105` loss).
+
+## 2026-07-09 Arabic Credit Card Validator P1 Verification Checkpoint
+
+- Rechecked `ar/tools/credit-card-validator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/105` click/impression loss).
+- No new copy expansion was needed: root/base Arabic TDK are synchronized and safely bounded:
+  - title: `مدقق بطاقات الائتمان أونلاين - فحص لوهن`;
+  - description: `افحص أرقام بطاقات الاختبار أونلاين باستخدام خوارزمية لوهن وفحص الطول والتعرف على شبكة البطاقة محليًا بدون اتصال بالبنوك.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `مدقق بطاقات الائتمان`, `فحص لوهن`, and `خوارزمية لوهن`.
+- The support boundary remains explicit: local test-card number formatting, length check, Luhn check, and card-network pattern detection only; no bank lookup, payment processor check, live authorization, active-card confirmation, balance/funding status, CVV check, or real-card data workflow.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4359 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Arabic Credit Card' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ar/credit-card-validator` remains `P1 score=53` because of historical GSC loss; repo-side issues are clear (`titleLength=39`, `descriptionLength=120`, `supportSignal=325`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `en/tools/percentage-stacked-bar-chart-generator/` (`5/53` loss, low-ranking signal).
+
+## 2026-07-09 English Percentage Stacked Bar Chart P1 Verification Checkpoint
+
+- Rechecked `en/tools/percentage-stacked-bar-chart-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/53` click/impression loss, low-ranking signal).
+- No new copy expansion was needed; the 2026-07-04 chart-family repair still holds:
+  - title: `Free Online Percentage Stacked Bar Chart Generator`;
+  - description: `Build 100% stacked bar charts in your browser. Edit categories and percentage series, switch orientation, and export the chart as PNG or SVG.`
+- Split support copy has 4 usage examples and 5 FAQs, covering direct percentage input, category/series editing, series rename/add/remove, horizontal/vertical layout, legend/theme controls, and PNG/SVG export.
+- The support boundary remains explicit: values should already be percentages that sum near 100% per row; no CSV import, raw-value auto-normalization, embed-code generation, backend storage, or automatic composition analysis.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4360 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Percentage Stacked' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/percentage-stacked-bar-chart-generator` remains `P1 score=57` because of historical GSC loss and current low-ranking signal; repo-side issues are clear (`titleLength=50`, `descriptionLength=141`, `supportSignal=373`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/excel-viewer/` (`5/53` loss).
+
+## 2026-07-09 Russian Excel Viewer P1 Repair Checkpoint
+
+- Rechecked `ru/tools/excel-viewer/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/53` click/impression loss).
+- Fixed a Russian Excel Viewer meta-description guard miss across `src/messages/ru.json` and `src/messages/ru/base.json`:
+  - description changed from `Откройте XLS или XLSX файл...` to `Откройте Excel-файл XLS или XLSX...`, preserving the same browser/local-processing boundary while restoring the expected `Excel` query term.
+- Root/base Russian TDK are synchronized and safely bounded:
+  - title: `Просмотрщик Excel онлайн - U2Tool`;
+  - description: `Откройте Excel-файл XLS или XLSX в браузере, переключайтесь между листами, сортируйте столбцы и фильтруйте строки без загрузки на сервер.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `прокручиваемой таблице`, `сортировать данные по заголовкам столбцов`, and `не экспортирует отфильтрованные данные в CSV`.
+- The support boundary remains explicit: local XLS/XLSX viewing, sheet tabs, scrollable table, column sorting, and text filtering only; no cell editing, saved Excel output, formula validation, CSV export of filtered rows, regex filtering, or Web Worker claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4362 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Excel Viewer' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- New matrix/worklist result: `ru/excel-viewer` remains `P1 score=49` because of historical GSC loss; repo-side issues are clear (`titleLength=33`, `descriptionLength=137`, `supportSignal=299`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ar/tools/screen-resolution-tester/` (`5/45` loss).
+
+## 2026-07-09 Arabic Screen Resolution Tester P1 Verification Checkpoint
+
+- Rechecked `ar/tools/screen-resolution-tester/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/45` click/impression loss).
+- No new copy expansion was needed: root/base Arabic TDK are synchronized and safely bounded:
+  - title: `اختبار دقة الشاشة أونلاين - U2Tool`;
+  - description: `اعرض دقة الشاشة وحجم نافذة العرض ونسبة بكسل الجهاز وعمق الألوان، وافتح نوافذ اختبار بمقاسات شائعة أو مخصصة.`
+- Split support copy has 4 usage examples and 5 FAQs, covering current screen/viewport values, devicePixelRatio, color depth, orientation, custom/common test-window sizes, and viewport indicator updates.
+- The support boundary remains explicit: browser-reported dimensions and approximate new-window tests only; no full device emulation, user-agent switching, browser-engine change, CSS media-query export, or exact OS/window chrome guarantee.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4363 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Arabic Screen Resolution' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ar/screen-resolution-tester` remains `P1 score=49` because of historical GSC loss; repo-side issues are clear (`titleLength=34`, `descriptionLength=107`, `supportSignal=287`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/pdf-to-base64/` (`5/44` loss).
+
+## 2026-07-09 Russian PDF to Base64 P1 Verification Checkpoint
+
+- Rechecked `ru/tools/pdf-to-base64/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/44` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Бесплатный онлайн конвертер PDF в Base64`;
+  - description: `Конвертируйте PDF файлы в кодировку Base64 бесплатно онлайн. Встраивайте PDF в HTML, JSON или URI данных. Безопасная конвертация в браузере без загрузки на серверы.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `PDF to Base64 преобразует выбранный PDF-файл в Base64-строку прямо в браузере` and `Base64 обычно увеличивает размер текста примерно на 33 процента`.
+- The support boundary remains explicit: one local PDF file read through FileReader, optional Data URI prefix, copyable Base64 text, and size comparison only; no PDF compression, metadata removal, signature validation, Base64-to-PDF decode, worker progress, auto-copy, or remote-file verification.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4364 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian PDF to Base64' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/pdf-to-base64` remains `P1 score=49` because of historical GSC loss; repo-side issues are clear (`titleLength=40`, `descriptionLength=164`, `supportSignal=340`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/boxplot-chart-generator/` (`5/22` loss).
+
+## 2026-07-09 Russian Boxplot Chart Generator P1 Verification Checkpoint
+
+- Rechecked `ru/tools/boxplot-chart-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/22` click/impression loss).
+- No new copy expansion was needed; the chart-family boundary still holds:
+  - title: `Генератор boxplot онлайн - квартиль и выбросы`;
+  - description: `Создавайте boxplot в браузере: вводите группы чисел через запятую, смотрите минимум, Q1, медиану, Q3, максимум и экспортируйте PNG/SVG.`
+- Split support copy has 4 usage examples and 5 FAQs, covering comma-separated numeric groups, min/Q1/median/Q3/max calculation, optional 1.5 IQR outliers, horizontal orientation, theme selection, and PNG/SVG export.
+- The support boundary remains explicit: manual small numeric datasets and chart export only; no CSV/JSON import, custom delimiters, manual outlier thresholds, backend persistence, advanced statistical modeling, or automatic data cleaning.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4365 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Boxplot' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/boxplot-chart-generator` remains `P1 score=49` because of historical GSC loss; repo-side issues are clear (`titleLength=45`, `descriptionLength=135`, `supportSignal=320`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/image-frosted-glass/` (`5/16` loss).
+
+## 2026-07-09 Russian Image Frosted Glass P1 Repair Checkpoint
+
+- Rechecked `ru/tools/image-frosted-glass/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`5/16` click/impression loss).
+- Fixed Russian Image Frosted Glass TDK query-intent drift across `src/messages/ru.json` and `src/messages/ru/base.json`:
+  - title changed from `Эффект туманного стекла онлайн - U2Tool` to `Frosted Glass эффект онлайн - размытие PNG`;
+  - description now explicitly includes `Frosted Glass`, while preserving the real blur/canvas/PNG workflow.
+- Root/base Russian TDK are synchronized and safely bounded:
+  - title: `Frosted Glass эффект онлайн - размытие PNG`;
+  - description: `Примените Frosted Glass эффект к изображению: размытие 0-50 пикселей, пресеты Light, Medium и Heavy, canvas-предпросмотр и PNG.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `ползунком от 0 до 50 пикселей`, `браузерный фильтр blur`, and `Скачайте результат как PNG`.
+- The support boundary remains explicit: one uploaded image, whole-image browser blur, 0-50px slider, Light/Medium/Heavy presets, canvas preview, and PNG download only; no region selection, masks, alpha-channel controls, WebGL acceleration, blend modes, transparent-area handling, or server processing.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4366 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Image Frosted Glass' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- New matrix/worklist result: `ru/image-frosted-glass` remains `P1 score=49` because of historical GSC loss; repo-side issues are clear (`titleLength=42`, `descriptionLength=127`, `supportSignal=278`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with high-impression/low-ranking `en/tools/credit-card-validator/` (`4/828` loss).
+
+## 2026-07-09 English Credit Card Validator P1 Verification Checkpoint
+
+- Rechecked `en/tools/credit-card-validator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/828` click/impression loss, low-ranking signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Credit Card Checker Online - Luhn Validator | U2Tool`;
+  - description: `Check credit card numbers online with a local Luhn checksum, length check, and Visa/Mastercard network detection. For test numbers only; no bank lookup.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `Credit Card Checker validates`, `credit card checker`, `check credit card`, `local Luhn checksum`, `does not contact a bank`, and `Use test numbers only`.
+- The support boundary remains explicit: local Luhn checksum, 13-19 digit length checks, card-network pattern detection, and test-data QA only; no bank/payment-processor/card-network lookup, real-time authorization, CVV verification, active-card confirmation, balance check, or real-card workflow.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4367 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='English Credit Card Validator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/credit-card-validator` remains `P1 score=64` because of historical GSC loss and current low-ranking signal; repo-side issues are clear (`titleLength=52`, `descriptionLength=152`, `supportSignal=408`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- Next execution target: continue the P1 query-intent lane with `es/tools/credit-card-validator/` (`4/329` loss) or switch to the `coverage_crawled-not-indexed` overlap rows (`ru/image-splitter`, `es/license-generator`, `es/text-to-handwriting`, `ru/css-clip-path-generator`) for coverage-blocker classification.
+
+## 2026-07-09 Spanish Credit Card Validator P1 Verification Checkpoint
+
+- Rechecked `es/tools/credit-card-validator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/329` click/impression loss).
+- No new copy expansion was needed: root/base Spanish TDK are synchronized and safely bounded:
+  - title: `Validador de Tarjetas de Crédito Online - Luhn`;
+  - description: `Valide tarjetas de crédito online con algoritmo de Luhn, longitud y detección de red Visa/Mastercard. Solo para números de prueba; no verifica bancos.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `validador de tarjetas de crédito`, `validar tarjeta de crédito`, `algoritmo de Luhn`, `No consulta bancos`, and `Use solo números de prueba`.
+- The support boundary remains explicit: local test-card number formatting, 13-19 digit length check, Luhn check, and card-network pattern detection only; no bank lookup, payment processor check, real-time authorization, CVV verification, active-card confirmation, balance/funding status, or real-card workflow.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4368 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Spanish Credit Card Validator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `es/credit-card-validator` remains `P1 score=52` because of historical GSC loss; repo-side issues are clear (`titleLength=46`, `descriptionLength=150`, `supportSignal=401`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: switch to coverage-overlap classification for `ru/tools/image-splitter/` (`4/59` loss plus `coverage_crawled-not-indexed`) and related stale CNI rows.
+
+## 2026-07-09 Russian Image Splitter P1/CNI Classification Checkpoint
+
+- Rechecked `ru/tools/image-splitter/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` and `03-crawled-not-indexed` queues (`4/59` click/impression loss plus stale `coverage_crawled-not-indexed`).
+- Fixed the Russian Image Splitter rendered guard drift:
+  - root/base title changed to `Инструмент разделения изображений онлайн - PNG и ZIP`, restoring the protected `разделения изображений` title phrase;
+  - split support copy now uses the rendered grid notation `2×2, 3×3, 4×4` in the detailed description, usage steps, and FAQ.
+- Root/base Russian TDK are synchronized and safely bounded:
+  - title: `Инструмент разделения изображений онлайн - PNG и ZIP`;
+  - description: `Разделите изображение онлайн на сетку PNG-фрагментов 2x2, 3x3 или вручную, просмотрите линии разреза и скачайте ZIP в браузере.`
+- Split support copy has 4 usage examples and 5 FAQs, includes the rendered guard phrases `2×2, 3×3, 4×4`, `от 1 до 10`, and `ZIP-архив`, and keeps unsupported claims out of the page (`EXIF/IPTC`, `JPEG/BMP`, `exact/fill/contain`, and server-processing wording are absent).
+- CNI classification result: no new local blocker and no repeat indexing action. The 2026-07-04 CNI ledger already has `request-submitted` / `gsc-request-accepted` for `https://www.u2tool.com/ru/tools/image-splitter/`; the submission runbook marks it `already-handled`, and the daily execution status says to monitor recrawl/indexation state.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4371 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Image Splitter' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- New matrix/worklist result: `ru/image-splitter` remains `P1 score=70` because of historical GSC loss plus stale CNI state; repo-side checks are now clear (`titleLength=52`, `descriptionLength=120`, `supportSignal=282`, issues only `gsc_click_loss`, `gsc_impression_loss`, `coverage_crawled-not-indexed`).
+- Next execution target: continue coverage-overlap classification with `es/tools/license-generator/` (`4/30` loss plus `coverage_crawled-not-indexed`), then `es/tools/text-to-handwriting/` and `ru/tools/css-clip-path-generator/`.
+
+## 2026-07-09 Spanish License Generator P1/CNI Verification Checkpoint
+
+- Rechecked `es/tools/license-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` and `03-crawled-not-indexed` queues (`4/30` click/impression loss plus stale `coverage_crawled-not-indexed`).
+- No new copy expansion was needed; the 2026-07-04 repair still holds:
+  - title: `Generador de Licencias Online - MIT, Apache, GPL y BSD`;
+  - description: `Crea un archivo LICENSE con MIT, Apache 2.0, GPLv3 o BSD 3-Clause. Añade autor y año, copia el texto o descárgalo para tu repositorio.`
+- Split support copy has 4 usage examples and 6 usage steps, includes the rendered guard phrases `MIT License, Apache License 2.0, GNU GPLv3 o BSD 3-Clause`, `copiar o descargar como archivo LICENSE`, and `no sustituye asesoría legal`.
+- The support boundary remains explicit: MIT, Apache 2.0, GPLv3, and BSD 3-Clause text drafting from author/year inputs only; no ISC, BSD 2-Clause, Mozilla Public License, full license catalog, compatibility check, trademark review, or legal advice claim.
+- CNI classification result: no new local blocker and no repeat indexing action. The 2026-07-04 CNI ledger already has `request-submitted` / `gsc-request-accepted` for `https://www.u2tool.com/es/tools/license-generator/`; the submission runbook marks it `already-handled`, and the daily execution status says to monitor recrawl/indexation state.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4372 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Spanish License Generator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `es/license-generator` remains `P1 score=70` because of historical GSC loss plus stale CNI state; repo-side checks are clear (`titleLength=54`, `descriptionLength=134`, `supportSignal=381`, issues only `gsc_click_loss`, `gsc_impression_loss`, `coverage_crawled-not-indexed`).
+- Next execution target: continue coverage-overlap classification with `es/tools/text-to-handwriting/` (`4/22` loss plus `coverage_crawled-not-indexed`), then `ru/tools/css-clip-path-generator/`.
+
+## 2026-07-09 Spanish Text to Handwriting P1/CNI Classification Checkpoint
+
+- Rechecked `es/tools/text-to-handwriting/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` and `03-crawled-not-indexed` queues (`4/22` click/impression loss plus stale `coverage_crawled-not-indexed`).
+- Fixed a Spanish Text to Handwriting rendered guard drift:
+  - root/base title changed from `Convertir Texto a Mano Online - PNG Manuscrito` to `Convertir Texto a Caligrafía Online - PNG Manuscrito`, matching the existing `Texto a Caligrafía` page name and the protected rendered title intent.
+  - the rendered guard expectation was aligned to the actual title-case `Caligrafía` phrase.
+- Root/base Spanish TDK are synchronized and safely bounded:
+  - title: `Convertir Texto a Caligrafía Online - PNG Manuscrito`;
+  - description: `Convierte texto en una imagen PNG con apariencia manuscrita. Elige estilo, tinta, tamaño y papel liso, rayado o cuadriculado, y descarga.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `imagen PNG con apariencia de nota manuscrita usando un canvas del navegador`, `Casual, Print y Script`, and `puede descargarse como handwriting.png`.
+- The support boundary remains explicit: browser canvas PNG rendering from typed text, visible Casual/Print/Script styles, ink/font/paper controls, and `handwriting.png` download only; no realistic handwriting guarantee, editable document/PDF output, server processing, or broad visual-content customization claim.
+- CNI classification result: no new local blocker and no repeat indexing action. The 2026-07-04 CNI ledger already has `request-submitted` / `gsc-request-accepted` for `https://www.u2tool.com/es/tools/text-to-handwriting/`; the submission runbook marks it `already-handled`, and the daily execution status says to monitor recrawl/indexation state.
+- Verification passed:
+  - rendered RED reproduced first with `title missing "caligrafía"`;
+  - local rendered SEO turned green with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4373 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Spanish Text to Handwriting' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- New matrix/worklist result: `es/text-to-handwriting` remains `P1 score=70` because of historical GSC loss plus stale CNI state; repo-side checks are now clear (`titleLength=52`, `descriptionLength=137`, `supportSignal=350`, issues only `gsc_click_loss`, `gsc_impression_loss`, `coverage_crawled-not-indexed`).
+- Next execution target: continue coverage-overlap classification with `ru/tools/css-clip-path-generator/` (`4/17` loss plus `coverage_crawled-not-indexed`).
+
+## 2026-07-09 Russian CSS Clip Path Generator P1/CNI Verification Checkpoint
+
+- Rechecked `ru/tools/css-clip-path-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` and `03-crawled-not-indexed` queues (`4/17` click/impression loss plus stale `coverage_crawled-not-indexed`).
+- No new copy expansion was needed; the 2026-07-04 repair still holds:
+  - title: `Бесплатный Генератор CSS Clip Path Онлайн`;
+  - description: `Создавайте CSS clip-path из пресетов Triangle, Diamond, Star, Circle и Inset. Редактируйте значение вручную, смотрите превью и копируйте CSS.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `готовые пресеты Triangle, Diamond, Star, Circle и Inset`, `текстовое поле для ручного редактирования значения clip-path`, and `Скопируйте строку CSS clip-path`.
+- The support boundary remains explicit: preset selection, textarea editing, simple preview, and CSS declaration copy only; no visual drag-and-drop editor, SVG path editing, ZIP/SVG/image export, vendor-prefix management, Retina export, or browser-support validation claim.
+- CNI classification result: no new local blocker and no repeat indexing action. The 2026-07-04 CNI ledger already has `request-submitted` / `gsc-request-accepted` for `https://www.u2tool.com/ru/tools/css-clip-path-generator/`; the submission runbook marks it `already-handled`, and the daily execution status says to monitor recrawl/indexation state.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4375 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian CSS Clip Path' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/css-clip-path-generator` remains `P1 score=70` because of historical GSC loss plus stale CNI state; repo-side checks are clear (`titleLength=41`, `descriptionLength=141`, `supportSignal=291`, issues only `gsc_click_loss`, `gsc_impression_loss`, `coverage_crawled-not-indexed`).
+- Coverage-overlap classification result for this four-row slice: `ru/image-splitter`, `es/license-generator`, `es/text-to-handwriting`, and `ru/css-clip-path-generator` all have current local rendered checks passing, live/preflight evidence from 2026-07-04, and existing `request-submitted` / `gsc-request-accepted` ledger rows. Treat remaining `coverage_crawled-not-indexed` scores as stale external recrawl/indexation state unless fresh URL Inspection contradicts the ledger.
+- Next execution target: continue the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue beyond the classified coverage-overlap slice, prioritizing remaining high-loss rows without repeating indexing requests for already-handled CNI ledger entries.
+
+## 2026-07-09 CNI Lane Cross-Classification Checkpoint
+
+- Cross-checked the regenerated `2026-07-09/03-crawled-not-indexed` queue against the 2026-07-04 CNI action lanes and submission ledger.
+- The top 40 CNI rows by score are all covered by existing 2026-07-04 queues:
+  - many are `request-indexing-submitted` or `already-indexed` in `request-indexing-inspection-ledger.csv`;
+  - the known content-refresh lane remains the 11-row brief set in `docs/GSC_CONTENT_REFRESH_BRIEFS_2026-07-04.md`;
+  - monitor rows remain low-risk mixed/stale CNI observations.
+- Highest-scoring request-indexing rows already handled by ledger include:
+  - `en/ascii-table` (`P1 score=92`, `1/933`, `request-submitted` / `gsc-request-accepted`);
+  - `ru/image-splitter`, `es/license-generator`, `es/text-to-handwriting`, and `ru/css-clip-path-generator` (classified individually above);
+  - `es/word-counter`, `ru/countdown-timer`, `pt/tile-calculator`, `en/sql-query-optimizer`, `en/table-of-contents-generator`, `en/css-clip-path-generator`, `en/wave-generator`, `es/heatmap-chart-generator`, and `ja/cors-tester`.
+- Highest-scoring rows that should stay in the content-refresh/internal-link lane rather than repeat indexing requests:
+  - `en/database-connection-tester`;
+  - `en/merge-conflict-resolver`;
+  - `en/go-formatter`;
+  - `en/compound-interest-calculator`;
+  - `es/image-cropper`;
+  - `es/world-clock`;
+  - `en/tile-calculator`;
+  - `fr/image-resizer`;
+  - `es/love-calculator`;
+  - `es/gif-maker`;
+  - `es/venn-diagram-generator`.
+- Classification rule for the next pass: skip already-submitted/already-indexed CNI rows unless fresh URL Inspection contradicts the ledger; use rendered SEO plus component-boundary checks on the 11 content-refresh rows and only request indexing after content/internal-link fit is revalidated.
+- Next execution target: finish a content-refresh verification sweep for the 11 briefed rows, starting with the highest remaining scores (`en/database-connection-tester`, `en/merge-conflict-resolver`, `en/go-formatter`, `en/compound-interest-calculator`, then the Spanish image/fun/chart pages).
+
+## 2026-07-09 Content-Refresh Lane Verification Checkpoint
+
+- Rechecked the 11-row content-refresh lane from `docs/GSC_CONTENT_REFRESH_BRIEFS_2026-07-04.md` against the regenerated `2026-07-09` matrix and the 2026-07-04 live/internal-link audits.
+- Existing 2026-07-04 evidence still holds for all 11 rows:
+  - `content-refresh-live-preflight.csv` marks every URL `ready`, HTTP `200`, self-canonical, index/follow, and sitemap/hreflang covered;
+  - `content-refresh-internal-link-audit.csv` marks every URL `covered` with category, home/tools/AI, and related-tool links present.
+- Rendered SEO guards passed for the six content-refresh rows that already have dedicated source-rendered checks:
+  - `en/database-connection-tester` with `RENDERED_SEO_CHECK='Database Connection String Builder'`;
+  - `en/merge-conflict-resolver` with `RENDERED_SEO_CHECK='English Merge Conflict Resolver'`;
+  - `en/go-formatter` with `RENDERED_SEO_CHECK='English Go Formatter'`;
+  - `en/compound-interest-calculator` with `RENDERED_SEO_CHECK='Compound Interest Calculator refreshed'`;
+  - `en/tile-calculator` with `RENDERED_SEO_CHECK='Tile Calculator recovery'`;
+  - `fr/image-resizer` with `RENDERED_SEO_CHECK='French Image Resizer'`.
+- The five Spanish content-refresh rows without dedicated rendered guards were checked through component-boundary review, content-trust audit, and local SSR smoke:
+  - `es/image-cropper`: copy matches local Canvas crop area, aspect ratio/width/height controls, preview, and PNG download;
+  - `es/love-calculator`: copy stays entertainment-only and deterministic from two names, with result/share/clear behavior only;
+  - `es/gif-maker`: copy matches multi-image frame ordering, delay/quality/loop settings, preview, and GIF download;
+  - `es/venn-diagram-generator`: copy matches 2/3-set SVG circles, labels, colors, radius/drag composition, and PNG/SVG export;
+  - `es/world-clock`: copy matches city/time-zone cards, add/remove, duplicate prevention, 12/24-hour display, optional seconds, date, UTC offset, and day/night cards.
+- Local SSR smoke passed for the five Spanish rows: each returned HTTP `200`, self-canonical URL, `index, follow` robots meta without `noindex`, and JSON-LD schema output.
+- `npm run report:content-trust` still reports `0` high-confidence overclaim files, so this lane has no current content-trust blocker.
+- Current classification: the content-refresh lane is locally indexable and internally linked; remaining `coverage_crawled-not-indexed` / low-exposure scores are external GSC ranking/indexation movement, not an active route/status blocker. Do not issue duplicate URL Inspection requests from this lane until a fresh inspection says the page is still excluded after the content/internal-link refresh has been deployed and recrawled.
+- Next execution target: resume the normal P1 query-intent queue for rows without already-handled CNI ledger coverage, while keeping the 11 content-refresh rows in monitor/recheck-after-recrawl status.
+
+## 2026-07-09 Russian Email Signature Generator P1 Verification Checkpoint
+
+- Rechecked `ru/tools/email-signature-generator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/181` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Генератор подписей электронной почты онлайн - U2Tool`;
+  - description: `Создайте подпись email из имени, должности, компании, контактов и соцссылок; выберите стиль, цвет и скопируйте HTML или текст.`
+- Split support copy has 4 usage examples and 6 usage steps, includes the rendered guard phrases `Professional, Modern или Minimal`, `HTML и обычного текста`, and `не подключается к Gmail, Outlook или Apple Mail автоматически`.
+- The support boundary remains explicit: local email-signature draft generation from profile/contact/social fields, style/color selection, preview, HTML copy, and plain-text copy only; no automatic Gmail/Outlook/Apple Mail installation, mail sending, or account synchronization claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4384 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Email Signature Generator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/email-signature-generator` remains `P1 score=47` because of historical GSC loss; repo-side checks are clear (`titleLength=52`, `descriptionLength=126`, `supportSignal=256`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/screen-recorder/` (`4/162` loss).
+
+## 2026-07-09 Russian Screen Recorder P1 Verification Checkpoint
+
+- Rechecked `ru/tools/screen-recorder/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/162` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Бесплатная запись экрана онлайн - Без установки`;
+  - description: `Записывайте экран прямо в браузере бесплатно и без установки программ. Сохраняйте готовые видеозаписи в формате WebM.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `разрешение браузера`, `Пауза`, `WebM`, and `getDisplayMedia`.
+- The support boundary remains explicit: browser display-capture permission, screen/window/tab selection, pause/resume/stop, preview, timer, and local WebM download only; no MP4/GIF export, cloud upload, webcam capture, editing suite, or automatic sharing claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4385 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Screen Recorder' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/screen-recorder` remains `P1 score=47` because of historical GSC loss; repo-side checks are clear (`titleLength=47`, `descriptionLength=117`, `supportSignal=263`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `en/tools/countdown-days-calculator/` (`4/154` loss).
+
+## 2026-07-09 English Countdown Days Calculator P1 Verification Checkpoint
+
+- Rechecked `en/tools/countdown-days-calculator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/154` click/impression loss).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Free Countdown Days Calculator online - U2Tool`;
+  - description: `Create named countdowns, use New Year, Christmas, or Valentine presets, and track days, hours, minutes, and seconds in your browser.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `save multiple named countdowns`, `browser's local storage`, and `calendar days and a live time breakdown`.
+- The support boundary remains explicit: named event/date countdowns, New Year/Christmas/Valentine presets, localStorage persistence, live days/hours/minutes/seconds breakdown, and removal only; no business-day calculation, holiday-aware schedules, shared accounts, or device sync claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4386 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='English Countdown Days Calculator' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `en/countdown-days-calculator` remains `P1 score=47` because of historical GSC loss; repo-side checks are clear (`titleLength=46`, `descriptionLength=132`, `supportSignal=302`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `es/tools/html-preview/` (`4/89` loss) or `ru/tools/text-to-ascii-art/` (`4/82` loss).
+
+## 2026-07-09 Spanish HTML Preview P1 Verification Checkpoint
+
+- Rechecked `es/tools/html-preview/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/89` click/impression loss).
+- No new copy expansion was needed: root/base Spanish TDK are synchronized and safely bounded:
+  - title: `Visualizador HTML online - vista previa HTML y CSS | U2Tool`;
+  - description: `Pega HTML y CSS, recarga el iframe sandboxed y revisa una vista previa HTML estática sin ejecutar JavaScript.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `visualizador HTML online`, `vista previa HTML`, `ver HTML online`, `iframe sandboxed`, `Los scripts no se ejecutan`, and `limpiar el editor`.
+- The support boundary remains explicit: small static HTML/CSS snippets, refresh preview, clear editor, and sandboxed iframe rendering only; no JavaScript execution, live browser automation, complete interactive website testing, hosting, or production browser-compatibility claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4387 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Spanish HTML Preview' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `es/html-preview` remains `P1 score=46` because of historical GSC loss; repo-side checks are clear (`titleLength=59`, `descriptionLength=109`, `supportSignal=363`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the P1 query-intent lane with `ru/tools/text-to-ascii-art/` (`4/82` loss), then the remaining 4-click no-CNI rows.
+
+## 2026-07-09 Russian Text to ASCII Art P1 Verification Checkpoint
+
+- Rechecked `ru/tools/text-to-ascii-art/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`4/82` click/impression loss).
+- No new copy expansion was needed: root/base Russian TDK are synchronized and safely bounded:
+  - title: `Текст в ASCII-арт онлайн - баннер из символов`;
+  - description: `Введите до 20 символов, выберите символ заполнения, создайте пятистрочный ASCII-баннер и скопируйте результат.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `до 20 символов`, `block, #, *, @, $, или +`, and `скопировать в буфер обмена`.
+- The support boundary remains explicit: short browser-side text-to-ASCII banner conversion using the built-in standard font, fill-character selection, monospaced output, and clipboard copy only; no TXT download, image export, multi-font picker, size slider, or advanced typography claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4388 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Text to ASCII Art' npm run validate:rendered-seo`.
+- Current matrix/worklist result: `ru/text-to-ascii-art` remains `P1 score=46` because of historical GSC loss; repo-side checks are clear (`titleLength=45`, `descriptionLength=110`, `supportSignal=240`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Next execution target: continue the remaining 4-click no-CNI rows (`ar/image-splitter`, `ar/text-to-handwriting`, `ja/image-splitter`, `ko/hex-base64-converter`) or switch to high-impression P1 rows such as `en/iban-validator`, `en/typing-speed-test`, and `en/dice-roller`.
+
+## 2026-07-09 English IBAN Validator High-Exposure P1 Verification Checkpoint
+
+- Rechecked `en/tools/iban-validator/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`3/2388` click/impression loss, indexed-low-exposure, and low-ranking signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `IBAN Checker Online - Validate IBAN Numbers Free | U2Tool`;
+  - description: `Validate IBAN online with country length and MOD-97 checksum checks. Use the free IBAN checker to format IBAN numbers and copy results.`
+- Split support copy has 6 usage examples and 5 usage steps, includes the protected query phrases `IBAN checker online free`, `IBAN validator online`, `validate IBAN number`, `validate IBAN online`, `online IBAN validator`, `online IBAN checker`, and `IBAN account checker`.
+- The support boundary remains explicit: browser-side IBAN normalization, country code/registered length checks, ISO 7064 MOD-97 checksum, formatted groups of four, country/check-digit/BBAN review, and copy only; no bank lookup, account ownership verification, provider acceptance guarantee, or transfer-success claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4389 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='IBAN Validator' npm run validate:rendered-seo` (also covered existing Spanish and French IBAN recovery guards).
+- Current matrix/worklist result: `en/iban-validator` remains `P1 score=98` because of historical GSC loss, indexed-low-exposure, and low-ranking movement; repo-side checks are clear (`titleLength=57`, `descriptionLength=135`, `supportSignal=493`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_indexed_low_exposure`, `gsc_low_ranking_current`).
+- Next execution target: continue high-exposure P1 verification with `en/tools/typing-speed-test/` (`3/2215` loss, low-ranking signal), then `en/tools/dice-roller/` (`3/837` loss, indexed-low-exposure).
+
+## 2026-07-09 English Typing Speed Test High-Exposure P1 Verification Checkpoint
+
+- Rechecked `en/tools/typing-speed-test/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`3/2215` click/impression loss plus low-ranking signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Free Typing Speed Test Online - WPM Calculator`;
+  - description: `Take a free typing speed test online. Measure WPM, accuracy, correct characters, mistakes, and duration with easy, medium, and hard prompts.`
+- Split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrase `the page highlights each character as correct or incorrect`, and covers WPM, accuracy, correct/incorrect characters, duration, and rating.
+- The support boundary remains explicit: local sample prompts, easy/medium/hard difficulty, character highlighting, WPM/accuracy calculation, and no-account browser execution only; no uploaded text storage, account leaderboard, certification, or advanced typing-course claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4390 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Typing Speed Test' npm run validate:rendered-seo` (also covered existing Portuguese Typing Speed Test recovery guard).
+- Current matrix/worklist result: `en/typing-speed-test` remains `P1 score=69` because of historical GSC loss and low-ranking movement; repo-side checks are clear (`titleLength=46`, `descriptionLength=140`, `supportSignal=325`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`).
+- Next execution target: continue high-exposure P1 verification with `en/tools/dice-roller/` (`3/837` loss, indexed-low-exposure).
+
+## 2026-07-09 English Dice Roller High-Exposure P1 Verification Checkpoint
+
+- Rechecked `en/tools/dice-roller/` from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue (`3/837` click/impression loss plus indexed-low-exposure signal).
+- No new copy expansion was needed: root/base English TDK are synchronized and safely bounded:
+  - title: `Free Dice Roller Online - Virtual D20 D6 D100 Dice`;
+  - description: `Roll virtual D4, D6, D8, D10, D12, D20, and D100 dice online. Set dice count and modifier, then review totals and recent roll history.`
+- Split support copy has 4 usage examples and 6 usage steps, includes the rendered guard phrase `Choose one of the visible dice buttons for D4, D6, D8, D10, D12, D20, or D100`, and covers dice count, modifier, individual results, total, and recent history.
+- The support boundary remains explicit: visible D4/D6/D8/D10/D12/D20/D100 buttons, 1-20 dice per roll, numeric modifier, current result, and clearable recent history only; no custom dice sets, weighted dice, seeding, saved configurations, advanced statistics, or separate history/settings tabs.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4391 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Dice Roller' npm run validate:rendered-seo` (also covered existing Portuguese Dice Roller recovery guard).
+- Current matrix/worklist result: `en/dice-roller` remains `P1 score=73` because of historical GSC loss and indexed-low-exposure movement; repo-side checks are clear (`titleLength=50`, `descriptionLength=134`, `supportSignal=312`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_indexed_low_exposure`).
+- High-exposure P1 mini-batch status: `en/iban-validator`, `en/typing-speed-test`, and `en/dice-roller` are locally checked with rendered guards passing. Remaining score is external GSC low-exposure/low-ranking movement, not unresolved local TDK/support/content-trust debt.
+- Next execution target: continue high-impression P1 rows such as `es/tools/text-summarizer/` (`3/565` loss), `en/tools/screen-recorder/` (`2/1135` loss), `en/tools/calendar-availability-finder/` (`2/577` loss, indexed-low-exposure), or return to remaining 4-click locale rows if click count is preferred over impression volume.
+
+## 2026-07-09 High-Impression P1 Follow-up Checkpoint
+
+- Rechecked the next high-impression P1 rows from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue:
+  - `es/tools/text-summarizer/` (`3/565` click/impression loss);
+  - `en/tools/screen-recorder/` (`2/1135` click/impression loss);
+  - `en/tools/calendar-availability-finder/` (`2/577` click/impression loss plus indexed-low-exposure).
+- Fixed a Spanish Text Summarizer rendered guard drift:
+  - rendered RED reproduced first with `meta description missing "oraciones"`;
+  - root/base Spanish description changed from the generic template copy to `Resume texto largo en el navegador extrayendo oraciones clave. Elige Short, Medium o Long, revisa contadores y copia el resumen.`;
+  - title remains `Resumidor de Texto online gratis - U2Tool`.
+- Spanish Text Summarizer split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `resumen extractivo directamente en el navegador`, `Short, Medium o Long`, and `no genera texto nuevo`.
+- The Spanish Text Summarizer support boundary remains explicit: pasted-text extractive sentence selection in the browser only; no generative AI rewrite, remote transformer/BERT model, file upload, DOCX/PDF parsing, or JSON export claim.
+- No new copy expansion was needed for `en/tools/screen-recorder/`: root/base English TDK are synchronized and safely bounded:
+  - title: `Free Online Screen Recorder - No Installation Required`;
+  - description: `Record your screen directly in the browser. Free online screen recorder with no installation required. Download recordings as WebM.`
+- Screen Recorder split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `browser screen-sharing permission`, `Pause and Resume`, `download the result as a WebM file`, and `getDisplayMedia`.
+- The Screen Recorder support boundary remains explicit: browser display-capture permission, screen/window/tab selection, pause/resume/stop, preview, and WebM download only; no MP4/GIF export, cloud upload, webcam overlay, or trim/editing claim.
+- No new copy expansion was needed for `en/tools/calendar-availability-finder/`: root/base English TDK are synchronized and safely bounded:
+  - title: `Free Calendar Availability Finder Online - Meeting Time Tool`;
+  - description: `Manually enter participants, work hours, busy blocks, and meeting length to find common open slots. No Google Calendar or Outlook sync.`
+- Calendar Availability Finder split support copy has 4 usage examples and 5 usage steps, includes the rendered guard phrases `manual availability calculator`, `does not connect to Google Calendar, Outlook`, and `minimum meeting duration`.
+- The Calendar Availability Finder support boundary remains explicit: manual participants, work hours, busy blocks, minimum meeting duration, open slots, and timeline only; no selected-date-range workflow, Google/Outlook sync, calendar account connection, or booking automation claim.
+- Verification passed:
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4393 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Spanish Text Summarizer recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4393 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Screen Recorder recovery content guard' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4393 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Calendar Availability Finder recovery content guard' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`89` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2476` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata`;
+  - `npm run report:seo-geo-audit -- --top 80`;
+  - `npm run report:seo-geo-worklists -- --input exports/seo/seo-geo-audit-matrix-2026-07-09.json --output-dir exports/seo/worklists/2026-07-09 --limit 120`.
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`.
+- Current matrix/worklist result:
+  - `es/text-summarizer` remains `P1 score=47` because of historical GSC loss; repo-side checks are clear (`titleLength=41`, `descriptionLength=128`, `supportSignal=325`, issues only `gsc_click_loss`, `gsc_impression_loss`);
+  - `en/screen-recorder` remains `P1 score=49` because of historical GSC loss; repo-side checks are clear (`titleLength=54`, `descriptionLength=131`, `supportSignal=275`, issues only `gsc_click_loss`, `gsc_impression_loss`);
+  - `en/calendar-availability-finder` remains `P1 score=68` because of historical GSC loss plus indexed-low-exposure movement; repo-side checks are clear (`titleLength=60`, `descriptionLength=135`, `supportSignal=296`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_indexed_low_exposure`).
+- High-impression follow-up status: these three rows are locally checked with rendered guards passing. Remaining score is external GSC ranking/exposure movement, not unresolved local TDK/support/content-trust debt.
+- Next execution target: continue no-CNI P1 rows with the largest remaining click loss, starting with `en/tools/morse-code-player/` (`9/249` loss, low-ranking signal), `en/tools/html-preview/` (`8/486` loss), and `ru/tools/credit-card-validator/` (`8/82` loss), while keeping already-handled CNI ledger rows in monitor/recheck-after-recrawl status.
+
+## 2026-07-09 No-CNI P1 Regression Verification Checkpoint
+
+- Rechecked the next no-CNI P1 rows from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue:
+  - `en/tools/morse-code-player/` (`9/249` click/impression loss plus low-ranking signal);
+  - `en/tools/html-preview/` (`8/486` click/impression loss);
+  - `ru/tools/credit-card-validator/` (`8/82` click/impression loss).
+- No new copy expansion was needed. These rows were repaired or verified in the 2026-07-08 cohort and still have synchronized root/base TDK:
+  - `en/morse-code-player`: title `Morse Code Player Online - Text to Morse Audio`, description `Use this Morse code player online to convert text to Morse code, decode Morse to text, and play live dot-dash audio with speed and frequency controls.`;
+  - `en/html-preview`: title `HTML Viewer Online - Preview HTML and CSS | U2Tool`, description `Preview HTML online in a sandboxed iframe for static HTML and CSS snippets. Use the HTML viewer online to edit markup, refresh, and clear.`;
+  - `ru/credit-card-validator`: title `Проверка кредитной карты онлайн - алгоритм Лухна`, description `Проверьте тестовый номер карты онлайн: локальная проверка Лухна, длины и платежной сети Visa/Mastercard без запроса банков.`
+- Root/base sync assertion passed for `name`, `description`, `seo_title`, and `seo_description` on all three rows:
+  - `en/morse-code-player` title/description lengths `46/150`;
+  - `en/html-preview` title/description lengths `50/138`;
+  - `ru/credit-card-validator` title/description lengths `48/123`.
+- Split support boundaries remain explicit:
+  - Morse Code Player: browser text-to-Morse, Morse-to-text, dot-dash audio, speed/frequency controls, visualization, and copy output only; no reference-chart, certification, guaranteed radio, or transmission-validator claim.
+  - HTML Preview: small static HTML/CSS snippets, refresh preview, clear editor, and sandboxed iframe-style preview only; no JavaScript execution, build step, hosting workflow, or production browser-testing replacement.
+  - Russian Credit Card Validator: local Luhn checksum, length, and payment-network pattern only; no bank/provider lookup, CVV check, balance check, real-time authorization, active-account verification, or real-card-data encouragement.
+- Verification passed:
+  - root/base JSON sync assertion for the three rows;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4394 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='GSC loss Morse Code Player recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4394 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='HTML Preview refreshed support content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4394 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Credit Card Validator recovery content' npm run validate:rendered-seo`.
+- Current matrix/worklist result:
+  - `en/morse-code-player` remains `P1 score=71` because of historical GSC loss plus low-ranking movement; repo-side checks are clear (`titleLength=46`, `descriptionLength=150`, `supportSignal=371`, issues only `gsc_click_loss`, `gsc_impression_loss`, `gsc_low_ranking_current`);
+  - `en/html-preview` remains `P1 score=62` because of historical GSC loss; repo-side checks are clear (`titleLength=50`, `descriptionLength=138`, `supportSignal=409`, issues only `gsc_click_loss`, `gsc_impression_loss`);
+  - `ru/credit-card-validator` remains `P1 score=62` because of historical GSC loss; repo-side checks are clear (`titleLength=48`, `descriptionLength=123`, `supportSignal=320`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- No-CNI regression status: these three rows are locally checked with rendered guards passing. Remaining score is external GSC ranking/exposure movement, not unresolved local TDK/support/content-trust debt.
+- Next execution target: continue the remaining 4-click no-CNI rows not yet rechecked in this 2026-07-09 pass: `ar/tools/image-splitter/` (`4/55` loss), `ar/tools/text-to-handwriting/` (`4/17` loss), `ja/tools/image-splitter/` (`4/9` loss), and `ko/tools/hex-base64-converter/` (`4/7` loss).
+
+## 2026-07-09 JSON Flattener P1/CNI and Family Trust Repair Checkpoint
+
+- Reconciled the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue against `docs/GSC_RECOVERY_WORKLOG_2026-07-05.md` and this remediation plan. The only remaining uncovered P0/P1 URL was `https://www.u2tool.com/en/tools/json-flattener/` (`1/5` click/impression loss plus stale `coverage_crawled-not-indexed`).
+- The English row exposed a broader JSON Flattener family content-trust problem. Existing support copy in several locales described unsupported behavior such as syntax-highlighted editors, advanced settings panels, array checkbox controls, direct JSON file import/export, JSON Schema validation, and trie-style reconstruction.
+- Repaired the JSON Flattener family across `en`, `zh`, `ja`, `ko`, `es`, `pt`, `fr`, `de`, `ru`, and `ar`:
+  - split support content now matches the actual component: pasted valid JSON, Flatten/Unflatten mode selector, delimiter input, bracketed array indexes such as `tags[0]`, formatted JSON output, and Copy only;
+  - root/base descriptions were synchronized around the same bounded intent;
+  - Spanish root/base titles were synchronized to remove the remaining `seo_title_source_drift` on `es/tools/json-flattener/`.
+- Added source protections:
+  - `json-flattener-unsupported-ui-schema-download-claim` in `src/lib/content-trust.js`;
+  - positive/negative content-trust tests in `src/lib/support-content-fallback.test.ts`;
+  - `en/json-flattener` coverage in `gsc-high-value-content.test.ts`;
+  - `en/json-flattener` metadata coverage in `validate-gsc-loss-metadata.ts`;
+  - a source-rendered guard, `English JSON Flattener recovery content`, in `validate-rendered-seo.ts`.
+- Verification passed:
+  - JSON parse/root-base sync/content-trust assertion for all 10 JSON Flattener locales;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npx vitest run src/lib/support-content-fallback.test.ts --testNamePattern "JSON Flattener|next recovery content batch"`;
+  - `npm run validate:gsc-loss-metadata` (`checks=66`);
+  - `npm run validate:gsc-high-value-content` (`91` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2471` warning-only findings);
+  - `npm run validate:tdk-drift` (`5700` records passed);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:seo-geo-audit -- --top 80`;
+  - `npm run report:seo-geo-worklists`.
+- Current matrix/worklist result after refresh:
+  - `en/json-flattener` remains `P1 score=61` only because of historical GSC click/impression loss plus stale `coverage_crawled-not-indexed`;
+  - `zh`, `ja`, `ko`, `es`, `pt`, `fr`, `de`, `ru`, and `ar` JSON Flattener rows are now `P3 monitor` with no remaining JSON Flattener content-trust issue;
+  - high-confidence content-trust overclaims are `0` across all `5700` split tool message files.
+- Local source-rendered HTTP validation was not rerun in this final checkpoint because the current sandbox denied local port binding with `listen EPERM` even after `DISABLE_CLOUDFLARE_INSPECTOR=1`. The source-rendered guard is in place for the next environment that can start a local/preview server.
+- Execution status: the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue now has no uncovered local content/TDK/content-trust repair rows after counting this checkpoint and the 2026-07-05 worklog. Remaining P0/P1 scores are historical GSC ranking/exposure/CNI monitor signals, not known local repair blockers.
+
+## 2026-07-09 Sandbox Final Verification Note
+
+- Fresh local verification passed after the JSON Flattener repair:
+  - `git diff --check`;
+  - `npm run report:content-trust` (`5700` files scanned, `0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata` (`checks=66`);
+  - `npm run validate:gsc-high-value-content` (`91` tests);
+  - `npm run validate:localized-longtail-support` (`files=90`);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors; warning-only optimization debt remains);
+  - `npm run validate:tdk-drift` (`5700` records passed);
+  - `npm run validate:translation-corpus` (`0` schema errors, `0` coverage gaps);
+  - `npm run validate:merge-chain-consistency` (`0` resolved divergences);
+  - `node --import tsx/esm scripts/maintenance/fill-missing-translation-keys.ts --check` (`0` missing keys);
+  - `npm run validate:llms-discovery`;
+  - `npm run qa:runtime-integrity` (`46` tests);
+  - `npx vitest run src/middleware.test.ts src/lib/tool-stubs-runtime.test.ts` (`100` tests);
+  - the SEO governance vitest subset (`16` files, `247` tests).
+- Fresh coverage recount for `exports/seo/worklists/2026-07-09/01-gsc-recovery-p0-p1.json` found `120` P0/P1 rows and `0` uncovered rows when matched against this plan and `docs/GSC_RECOVERY_WORKLOG_2026-07-05.md`.
+- Environment-limited commands:
+  - `npm run check` and `DISABLE_CLOUDFLARE_INSPECTOR=1 npm run check` both failed before type diagnostics because Cloudflare/Vite attempted local `listen` and the sandbox returned `EPERM`;
+  - `DISABLE_CLOUDFLARE_INSPECTOR=1 npm run build` failed at the same local `listen EPERM` boundary;
+  - `npm run validate:rendered-seo` could not reach production because DNS lookup for `www.u2tool.com` returned `ENOTFOUND`; source-rendered checks were skipped because no localhost source server can bind in this sandbox;
+  - `npm run validate:edge-simulation` could not start `astro preview` because the sandbox denied the Cloudflare inspector/local preview listener.
+
+## 2026-07-09 Full Access Final Verification Note
+
+- Re-ran the previously environment-limited checks after local listen and network access were available:
+  - `npm run check` passed with `0` errors, `0` warnings, and `13` hint-level diagnostics;
+  - `npm run build` completed successfully with the Cloudflare adapter and copied split message assets into `dist/client/messages/`;
+  - `npm run validate:rendered-seo` passed against `https://www.u2tool.com`;
+  - `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4395 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='English JSON Flattener recovery content' npm run validate:rendered-seo` passed against the local source-rendered page;
+  - `npm run validate:edge-simulation` passed all six edge checks: root redirect, legacy blog redirect, comparison slash canonical, comparison guide static HTML, decommissioned category 410, and stale Next.js asset 410.
+- Fixed one rendered SEO validation-script drift discovered after network access was restored:
+  - `English tools search results` now sets `canonicalPath: '/en/tools/'`, matching the existing `buildCanonicalUrl` rule and the live `/en/tools/?q=json` page, which canonicalizes search-query pages back to the tools index while remaining `noindex`.
+
+## 2026-07-09 Remaining 4-Click No-CNI Locale Checkpoint
+
+- Rechecked the remaining 4-click no-CNI rows from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue:
+  - `ar/tools/image-splitter/` (`4/55` click/impression loss);
+  - `ar/tools/text-to-handwriting/` (`4/17` click/impression loss);
+  - `ja/tools/image-splitter/` (`4/9` click/impression loss);
+  - `ko/tools/hex-base64-converter/` (`4/7` click/impression loss).
+- Fixed Image Splitter split-support grid notation drift:
+  - `ar/tools/image-splitter.json` changed preset examples from `2x2`, `3x3`, `4x4`, `2x3`, and `3x2` to `2×2`, `3×3`, `4×4`, `2×3`, and `3×2`;
+  - `ja/tools/image-splitter.json` changed the same grid notation to `2×2`, `3×3`, `4×4`, `2×3`, and `3×2`;
+  - the rendered RED was reproduced first as `body missing "2×2 و3×3 و4×4"`.
+- Fixed a rendered SEO validator false positive discovered on `ko/tools/hex-base64-converter/`:
+  - raw HTML body checks were matching unrelated `0x` strings inside Astro island hydration `props`;
+  - `validate-rendered-seo.ts` now evaluates `bodyMustInclude` and `bodyMustNotInclude` against decoded visible body text after stripping scripts, styles, comments, and tag attributes;
+  - meta tags, canonical, robots, hreflang, social tags, and JSON-LD checks still use the original HTML.
+- Root/base TDK remained synchronized and safely bounded:
+  - `ar/image-splitter`: title/description lengths `44/107`;
+  - `ar/text-to-handwriting`: title/description lengths `39/103`;
+  - `ja/image-splitter`: title/description lengths `25/95`;
+  - `ko/hex-base64-converter`: title/description lengths `28/74`.
+- Verification passed:
+  - root/base JSON sync assertion for the four rows;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4398 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Arabic Image Splitter recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4398 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Arabic Text to Handwriting recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4398 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Japanese Image Splitter recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4398 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Korean Hex Base64 Converter recovery content' npm run validate:rendered-seo`;
+  - `npm run validate:gsc-high-value-content` (`91` tests);
+  - `npm run validate:tdk-integrity -- --top 8` (`0` errors, `2471` warning-only findings);
+  - `npm run validate:translation-corpus`;
+  - `npm run validate:merge-chain-consistency`;
+  - `npm run report:content-trust` (`0` high-confidence overclaim files);
+  - `npm run validate:gsc-loss-metadata` (`checks=66`);
+  - `npm run report:seo-geo-audit -- --top 80`;
+  - `npm run report:seo-geo-worklists -- --input exports/seo/seo-geo-audit-matrix-2026-07-09.json --output-dir exports/seo/worklists/2026-07-09 --limit 120`;
+  - `npm run check` (`0` errors, `0` warnings, `13` hints).
+- Refreshed `docs/SEO_GEO_AUDIT_MATRIX_2026-07-09.md`, `exports/seo/seo-geo-audit-matrix-2026-07-09.json`, and `exports/seo/worklists/2026-07-09/`; priority counts remain `P0=7 P1=132 P2=2163 P3=3398`.
+- Current matrix/worklist result:
+  - `ar/image-splitter` remains `P1 score=46` because of historical GSC loss; repo-side checks are clear (`titleLength=44`, `descriptionLength=107`, `supportSignal=300`, issues only `gsc_click_loss`, `gsc_impression_loss`);
+  - `ar/text-to-handwriting` remains `P1 score=46` because of historical GSC loss; repo-side checks are clear (`titleLength=39`, `descriptionLength=103`, `supportSignal=276`, issues only `gsc_click_loss`, `gsc_impression_loss`);
+  - `ja/image-splitter` remains `P1 score=46` because of historical GSC loss; repo-side checks are clear (`titleLength=25`, `descriptionLength=95`, `supportSignal=484`, issues only `gsc_click_loss`, `gsc_impression_loss`);
+  - `ko/hex-base64-converter` remains `P1 score=46` because of historical GSC loss; repo-side checks are clear (`titleLength=28`, `descriptionLength=74`, `supportSignal=625`, issues only `gsc_click_loss`, `gsc_impression_loss`).
+- Remaining score for this slice is external GSC ranking/exposure movement, not unresolved local TDK/support/content-trust debt.
+- Next execution target: continue the remaining no-CNI P1 rows with 3-click loss, starting with `en/tools/candlestick-chart-generator/` (`3/76` loss), `ru/tools/love-calculator/` (`3/73` loss), and `en/tools/typescript-to-json/` (`3/28` loss).
+
+## 2026-07-09 Remaining 3-Click No-CNI Locale Checkpoint
+
+- Rechecked the next no-CNI P1 rows from the regenerated `2026-07-09/01-gsc-recovery-p0-p1` queue:
+  - `en/tools/candlestick-chart-generator/` (`3/76` click/impression loss);
+  - `ru/tools/love-calculator/` (`3/73` click/impression loss);
+  - `en/tools/typescript-to-json/` (`3/28` click/impression loss).
+- No new copy expansion was required in this checkpoint. The rows were already covered by the 2026-07-05 GSC recovery worklog and now have matching root/base TDK plus bounded split support copy:
+  - `en/candlestick-chart-generator`: editable OHLC rows, chart title, up/down colors, MA5/MA10/MA20, zoom, and PNG/SVG export only; no market feeds, brokerage, predictions, or trading-advice claims;
+  - `ru/love-calculator`: entertainment-only two-name percentage, message, emoji, reset, and browser-supported share/copy only; no psychology, science, relationship analysis, or compatibility guarantees;
+  - `en/typescript-to-json`: lightweight TypeScript interface/type-literal to sample JSON conversion only; no compiler-grade validation, JSON Schema generation, import/export workflow, or file-download claims.
+- Root/base TDK remains synchronized and safely bounded for `name`, `description`, `seo_title`, and `seo_description`:
+  - `en/candlestick-chart-generator`: title/description lengths `48/121`;
+  - `ru/love-calculator`: title/description lengths `33/118`;
+  - `en/typescript-to-json`: title/description lengths `47/149`.
+- Fixed rendered SEO validator drift exposed by the production suite:
+  - `bodyMustInclude` and `bodyMustNotInclude` continue to inspect decoded visible body text, excluding scripts, styles, comments, tags, attributes, and Astro hydration props;
+  - the new `htmlMustInclude` assertion inspects body HTML with scripts, styles, and comments removed, preserving deliberate checks for rendered links and `data-*` attributes;
+  - entity-encoded visible headings now use decoded expectations such as `Creator & SEO Generators`.
+- Verification passed:
+  - root/base JSON sync assertion for the three rows;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4410 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='English Candlestick Chart Generator recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4410 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='Russian Love Calculator recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO with `DISABLE_CLOUDFLARE_INSPECTOR=1 PROD_BASE_URL=http://127.0.0.1:4410 CANONICAL_BASE_URL=https://www.u2tool.com INCLUDE_SOURCE_RENDERED_CHECKS=1 RENDERED_SEO_CHECK='TypeScript to JSON sample-data recovery content' npm run validate:rendered-seo`;
+  - local rendered SEO regression for `Korean Hex Base64 Converter recovery content`, confirming hydration props remain excluded from visible-text assertions;
+  - local rendered SEO for `English Encoding category Hex internal links` and `Russian Encoding category Hex internal links`, confirming links use HTML assertions rather than visible-text assertions;
+  - `npm run validate:rendered-seo` against `https://www.u2tool.com` (all enabled production checks passed);
+  - `npm run check` (`0` errors, `0` warnings, `13` hints);
+  - `git diff --check`.
+- Current local repair state for this slice is closed: remaining P1 score is external GSC ranking/exposure movement, not unresolved local TDK/support/content-trust debt.
+- Next execution target: continue the remaining no-CNI P1 rows below the 3-click slice or switch to the refreshed `coverage_crawled-not-indexed` worklist, with local action only when a row shows source drift, thin support, missing split content, or content-trust overclaim.
