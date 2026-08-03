@@ -1,5 +1,12 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+import {
+  META_DESCRIPTION_MAX_LENGTH,
+  META_DESCRIPTION_MIN_LENGTH,
+  resolveMetaDescription,
+} from '../../src/lib/seo';
+
+type RequiredIntentTerm = string | readonly string[];
 
 interface LossMetadataCheck {
   locale: string;
@@ -7,7 +14,7 @@ interface LossMetadataCheck {
   minDescriptionLength?: number;
   maxDescriptionLength?: number;
   maxTitleLength?: number;
-  requiredTerms: string[];
+  requiredTerms: RequiredIntentTerm[];
   forbiddenFragments?: string[];
 }
 
@@ -31,11 +38,11 @@ const fileSizeTerms: Record<string, string[]> = {
   ar: ['حجم', 'حاسبة'],
 };
 
-const hexEditorTerms: Record<string, string[]> = {
+const hexEditorTerms: Record<string, RequiredIntentTerm[]> = {
   en: ['hex', 'editor'],
   zh: ['十六进制', '编辑器'],
   ja: ['16進', 'エディタ'],
-  ko: ['16진수', '에디터'],
+  ko: ['16진수', ['편집기', '에디터']],
   es: ['hexadecimal', 'editor'],
   pt: ['hexadecimal', 'editor'],
   fr: ['hexadécimal', 'éditeur'],
@@ -271,8 +278,6 @@ const CHECKS: LossMetadataCheck[] = [
   },
 ];
 
-const DEFAULT_MIN_DESCRIPTION_LENGTH = 90;
-const DEFAULT_MAX_DESCRIPTION_LENGTH = 180;
 const DEFAULT_MAX_TITLE_LENGTH = 70;
 
 type BaseMessages = {
@@ -295,6 +300,21 @@ async function loadBaseMessages(locale: string): Promise<BaseMessages> {
 
 function normalize(value: string): string {
   return value.toLowerCase();
+}
+
+function characterCount(value: string): number {
+  return [...value].length;
+}
+
+function includesRequiredTerm(value: string, requiredTerm: RequiredIntentTerm): boolean {
+  const alternatives = typeof requiredTerm === 'string' ? [requiredTerm] : requiredTerm;
+  return alternatives.some(term => value.includes(normalize(term)));
+}
+
+function formatRequiredTerm(requiredTerm: RequiredIntentTerm): string {
+  return typeof requiredTerm === 'string'
+    ? `"${requiredTerm}"`
+    : `one of ${requiredTerm.map(term => `"${term}"`).join(', ')}`;
 }
 
 function pushIssue(
@@ -323,7 +343,12 @@ export async function validateGscLossMetadata(): Promise<LossMetadataIssue[]> {
 
     const title = typeof entry.seo_title === 'string' ? entry.seo_title.trim() : '';
     const description = typeof entry.seo_description === 'string' ? entry.seo_description.trim() : '';
-    const combined = normalize(`${title} ${description}`);
+    const renderedDescription = resolveMetaDescription({
+      description,
+      locale: check.locale,
+      title,
+    });
+    const combined = normalize(`${title} ${renderedDescription}`);
 
     if (!title) {
       pushIssue(issues, check, 'missing seo_title');
@@ -334,34 +359,36 @@ export async function validateGscLossMetadata(): Promise<LossMetadataIssue[]> {
     }
 
     const maxTitleLength = check.maxTitleLength ?? DEFAULT_MAX_TITLE_LENGTH;
-    if (title.length > maxTitleLength) {
-      pushIssue(issues, check, `seo_title length ${title.length} exceeds ${maxTitleLength}: ${title}`);
+    const titleLength = characterCount(title);
+    if (titleLength > maxTitleLength) {
+      pushIssue(issues, check, `seo_title length ${titleLength} exceeds ${maxTitleLength}: ${title}`);
     }
 
-    const minDescriptionLength = check.minDescriptionLength ?? DEFAULT_MIN_DESCRIPTION_LENGTH;
-    const maxDescriptionLength = check.maxDescriptionLength ?? DEFAULT_MAX_DESCRIPTION_LENGTH;
-    if (description.length < minDescriptionLength || description.length > maxDescriptionLength) {
+    const minDescriptionLength = check.minDescriptionLength ?? META_DESCRIPTION_MIN_LENGTH;
+    const maxDescriptionLength = check.maxDescriptionLength ?? META_DESCRIPTION_MAX_LENGTH;
+    const renderedDescriptionLength = characterCount(renderedDescription);
+    if (renderedDescriptionLength < minDescriptionLength || renderedDescriptionLength > maxDescriptionLength) {
       pushIssue(
         issues,
         check,
-        `seo_description length ${description.length} outside ${minDescriptionLength}-${maxDescriptionLength}: ${description}`
+        `rendered seo_description length ${renderedDescriptionLength} outside ${minDescriptionLength}-${maxDescriptionLength}: ${renderedDescription}`
       );
     }
 
     for (const requiredTerm of check.requiredTerms) {
-      if (!combined.includes(normalize(requiredTerm))) {
-        pushIssue(issues, check, `missing required intent term "${requiredTerm}"`);
+      if (!includesRequiredTerm(combined, requiredTerm)) {
+        pushIssue(issues, check, `missing required intent term ${formatRequiredTerm(requiredTerm)}`);
       }
     }
 
     for (const forbidden of check.forbiddenFragments || []) {
-      if (description.includes(forbidden) || title.includes(forbidden)) {
+      if (renderedDescription.includes(forbidden) || title.includes(forbidden)) {
         pushIssue(issues, check, `contains forbidden snippet fragment "${forbidden}"`);
       }
     }
 
-    if (/(.)\1{3,}/.test(description.replace(/\s+/g, ''))) {
-      pushIssue(issues, check, `description contains suspicious repeated characters: ${description}`);
+    if (/(.)\1{3,}/.test(renderedDescription.replace(/\s+/g, ''))) {
+      pushIssue(issues, check, `description contains suspicious repeated characters: ${renderedDescription}`);
     }
   }
 

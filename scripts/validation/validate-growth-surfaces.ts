@@ -29,7 +29,7 @@ const htmlChecks: HtmlGrowthCheck[] = [
   {
     name: 'Homepage discovery promotes text wave',
     path: '/en/',
-    requiredText: ['Text Tools', 'Word Counter', 'Choose the Right Text Tool'],
+    requiredText: ['Tool Categories', 'Text Tools', 'Word Counter', 'Popular Tools'],
     schemaTypes: ['Organization', 'WebSite', 'ItemList'],
     expectedCacheHeader: 'HIT_OR_MISS',
   },

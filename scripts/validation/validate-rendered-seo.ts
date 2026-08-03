@@ -5,8 +5,10 @@ const CANONICAL_BASE_URL = (
   'https://www.u2tool.com'
 ).replace(/\/+$/, '');
 const INCLUDE_SOURCE_RENDERED_CHECKS =
-  process.env.INCLUDE_SOURCE_RENDERED_CHECKS === '1' ||
-  /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(FETCH_BASE_URL);
+  process.env.SKIP_SOURCE_RENDERED_CHECKS !== '1' && (
+    process.env.INCLUDE_SOURCE_RENDERED_CHECKS === '1' ||
+    /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(FETCH_BASE_URL)
+  );
 const RENDERED_SEO_CHECK_FILTER = process.env.RENDERED_SEO_CHECK?.trim().toLowerCase() || '';
 
 // Shared probe helpers — single source of truth (src/lib/seo-probe.ts)
@@ -2346,15 +2348,15 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'UTF-8 hex bytes',
     h1Includes: 'Hex Editor',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
-    bodyMustInclude: ['The online Hex Editor is a browser-based text and hexadecimal converter'],
+    bodyMustInclude: [
+      'Open a local binary file up to 2 MiB',
+      'separate text converter encodes and decodes UTF-8 text',
+    ],
     bodyMustNotInclude: [
-      'hexadecimal grid',
-      '16-byte columnar',
       'Double-click any hex value',
       'Download as Hex File',
       'developer tools panel',
       'memory-mapped I/O',
-      'ASCII preview',
     ],
   },
   {

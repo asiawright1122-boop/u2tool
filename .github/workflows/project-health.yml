@@ -6,6 +6,10 @@ on:
     - cron: '0 9 * * 1'
   workflow_dispatch: # 允许手动触发
 
+permissions:
+  contents: read
+  issues: write
+
 jobs:
   production-verification:
     runs-on: ubuntu-latest
@@ -44,6 +48,28 @@ jobs:
           script: |
             const fs = require('fs');
             const report = fs.readFileSync('docs/PROJECT_HEALTH_REPORT.md', 'utf8');
+
+            const requiredLabels = [
+              { name: 'production-verification', color: 'D93F0B', description: 'Automated production verification failures' },
+              { name: 'automated', color: '6F42C1', description: 'Created or maintained by automation' }
+            ];
+
+            for (const label of requiredLabels) {
+              try {
+                await github.rest.issues.getLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name: label.name
+                });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  ...label
+                });
+              }
+            }
             
             // 创建或更新 issue
             const issues = await github.rest.issues.listForRepo({
@@ -53,7 +79,7 @@ jobs:
               labels: ['production-verification']
             });
             
-            const body = `## ✅ 生产验证报告\n\n${report}\n\n---\n*自动生成于 ${new Date().toISOString()}*`;
+            const body = `## 生产验证失败报告\n\n${report}\n\n---\n*自动生成于 ${new Date().toISOString()}*`;
             
             if (issues.data.length > 0) {
               // 更新现有 issue
