@@ -305,7 +305,7 @@ export function resolveSiteDescription(siteDescription: string | undefined, tool
     return buildSiteDescription(toolCount);
   }
 
-  return candidate;
+  return normalizeCountClaim(candidate, toolCount);
 }
 
 export function getSiteDescription(

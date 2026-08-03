@@ -30,9 +30,16 @@ interface Props {
   faqs: FAQItem[];
   /** Optional custom CSS class */
   class?: string;
+  /** Disable when the page already emits FAQPage JSON-LD in the document head. */
+  includeStructuredData?: boolean;
 }
 
-const { toolName, faqs, class: className = '' } = Astro.props;
+const {
+  toolName,
+  faqs,
+  class: className = '',
+  includeStructuredData = true,
+} = Astro.props;
 
 /**
  * Generate FAQPage JSON-LD structured data.
@@ -59,7 +66,7 @@ const faqJsonLd = faqs.length > 0 ? generateFAQJsonLd(faqs) : null;
 {faqs.length > 0 && (
   <section class={`mt-8 ${className}`} aria-labelledby="faq-heading">
     {/* FAQPage JSON-LD Structured Data */}
-    {faqJsonLd && (
+    {includeStructuredData && faqJsonLd && (
       <script
         is:inline
         type="application/ld+json"
@@ -72,7 +79,7 @@ const faqJsonLd = faqs.length > 0 ? generateFAQJsonLd(faqs) : null;
       id="faq-heading"
       class="text-2xl font-bold text-slate-900 dark:text-white mb-6 tracking-tight"
     >
-      FAQ — {toolName}
+      FAQ: {toolName}
     </h2>
 
     {/* FAQ Accordion using native <details>/<summary> */}

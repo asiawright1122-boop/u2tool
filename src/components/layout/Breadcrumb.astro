@@ -19,9 +19,11 @@ interface BreadcrumbItem {
 interface Props {
   locale: string;
   items: BreadcrumbItem[];
+  /** Disable when the page already emits BreadcrumbList JSON-LD in the document head. */
+  includeStructuredData?: boolean;
 }
 
-const { items } = Astro.props;
+const { items, includeStructuredData = true } = Astro.props;
 
 const BASE_URL = getPublicSiteUrl();
 
@@ -39,7 +41,9 @@ const breadcrumbJsonLd = {
 ---
 
 <!-- JSON-LD Structured Data -->
-<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+{includeStructuredData && (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+)}
 
 <!-- Breadcrumb Navigation -->
 <nav aria-label="Breadcrumb" class="py-3 px-0">

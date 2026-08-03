@@ -16,8 +16,6 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import PopularToolsCarousel from '@/components/PopularToolsCarousel.svelte';
 import CategorySpotlightSection from '@/components/discovery/CategorySpotlightSection.astro';
-import ToolClusterSection from '@/components/discovery/ToolClusterSection.astro';
-import ComparisonGuideSection from '@/components/discovery/ComparisonGuideSection.astro';
 import ToolLaunchSection from '@/components/discovery/ToolLaunchSection.astro';
 import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
@@ -27,59 +25,10 @@ import { locales, getLocalizedPath, isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
-import {
-  buildChartToolClusterGroups,
-  chartToolClusterPath,
-  getChartToolClusterCopy,
-} from '@/lib/chart-tool-cluster';
-import { buildComparisonGuides, getComparisonUiCopy } from '@/lib/comparison-surfaces';
-import {
-  buildAiToolsDirectory,
-  getAiToolsDirectoryCopy,
-} from '@/lib/ai-tools-directory';
-import {
-  AI_TOOLS_DIRECTORY_PATH,
-  getAiToolsDirectoryLabel,
-} from '@/lib/ai-tools-navigation';
-import {
-  buildCreatorSeoClusterGroups,
-  creatorSeoClusterPath,
-  getCreatorSeoClusterCopy,
-} from '@/lib/creator-seo-cluster';
-import {
-  buildDeveloperDataToolClusterGroups,
-  developerDataToolClusterPath,
-  getDeveloperDataToolClusterCopy,
-} from '@/lib/developer-data-tool-cluster';
-import {
-  buildImageToolClusterGroups,
-  getImageToolClusterCopy,
-  imageToolClusterPath,
-} from '@/lib/image-tool-cluster';
-import {
-  buildOnlineCalculatorClusterGroups,
-  getOnlineCalculatorClusterCopy,
-  onlineCalculatorClusterPath,
-} from '@/lib/online-calculator-cluster';
-import {
-  buildPdfDocumentToolClusterGroups,
-  getPdfDocumentToolClusterCopy,
-  pdfDocumentToolClusterPath,
-} from '@/lib/pdf-document-tool-cluster';
-import {
-  buildSecurityToolClusterGroups,
-  getSecurityToolClusterCopy,
-  securityToolClusterPath,
-} from '@/lib/security-tool-cluster';
-import {
-  buildTextWritingToolClusterGroups,
-  getTextWritingToolClusterCopy,
-  textWritingToolClusterPath,
-} from '@/lib/text-writing-tool-cluster';
 import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-launches';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPagePath, buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
+import { buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
 
 export const prerender = false;
 
@@ -148,77 +97,6 @@ const recentLaunchTools = buildRecentToolLaunches(
 );
 const launchItemListData = buildToolLaunchItemList(BASE_URL, recentLaunchTools);
 const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
-const comparisonUiCopy = getComparisonUiCopy(locale);
-const comparisonGuides = buildComparisonGuides(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-).slice(0, 3);
-const aiToolsDirectoryCopy = getAiToolsDirectoryCopy(locale);
-const aiToolsDirectoryLabel = getAiToolsDirectoryLabel(locale);
-const aiToolsDirectoryGroups = buildAiToolsDirectory(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const creatorSeoCopy = getCreatorSeoClusterCopy(locale);
-const creatorSeoGroups = buildCreatorSeoClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const developerDataToolCopy = getDeveloperDataToolClusterCopy(locale);
-const developerDataToolGroups = buildDeveloperDataToolClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const imageToolCopy = getImageToolClusterCopy(locale);
-const imageToolGroups = buildImageToolClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const onlineCalculatorCopy = getOnlineCalculatorClusterCopy(locale);
-const onlineCalculatorGroups = buildOnlineCalculatorClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const pdfDocumentToolCopy = getPdfDocumentToolClusterCopy(locale);
-const pdfDocumentToolGroups = buildPdfDocumentToolClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const securityToolCopy = getSecurityToolClusterCopy(locale);
-const securityToolGroups = buildSecurityToolClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const textWritingToolCopy = getTextWritingToolClusterCopy(locale);
-const textWritingToolGroups = buildTextWritingToolClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
-const chartToolCopy = getChartToolClusterCopy(locale);
-const chartToolGroups = buildChartToolClusterGroups(
-  locale,
-  categoryMessages,
-  toolNames,
-  toolDescriptions
-);
 ---
 
 <BaseLayout
@@ -349,126 +227,6 @@ const chartToolGroups = buildChartToolClusterGroups(
           tools={recentLaunchTools}
         />
 
-        <ToolClusterSection
-          compact
-          theme="sky"
-          dataPrefix="ai-tools-directory-cluster"
-          gridCols={3}
-          toolLimit={6}
-          eyebrow={aiToolsDirectoryCopy.eyebrow}
-          title={aiToolsDirectoryCopy.h1}
-          description={aiToolsDirectoryCopy.description}
-          ctaLabel={aiToolsDirectoryLabel}
-          href={buildLocalizedPagePath(locale, AI_TOOLS_DIRECTORY_PATH)}
-          groups={aiToolsDirectoryGroups}
-          toolCountLabel={aiToolsDirectoryCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="amber"
-          dataPrefix="creator-seo-cluster"
-          gridCols={3}
-          eyebrow={creatorSeoCopy.eyebrow}
-          title={creatorSeoCopy.title}
-          description={creatorSeoCopy.description}
-          ctaLabel={creatorSeoCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, creatorSeoClusterPath)}
-          groups={creatorSeoGroups}
-          toolCountLabel={creatorSeoCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="cyan"
-          dataPrefix="developer-data-tool-cluster"
-          eyebrow={developerDataToolCopy.eyebrow}
-          title={developerDataToolCopy.title}
-          description={developerDataToolCopy.description}
-          ctaLabel={developerDataToolCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, developerDataToolClusterPath)}
-          groups={developerDataToolGroups}
-          toolCountLabel={developerDataToolCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="amber"
-          dataPrefix="image-tool-cluster"
-          eyebrow={imageToolCopy.eyebrow}
-          title={imageToolCopy.title}
-          description={imageToolCopy.description}
-          ctaLabel={imageToolCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, imageToolClusterPath)}
-          groups={imageToolGroups}
-          toolCountLabel={imageToolCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="emerald"
-          dataPrefix="online-calculator-cluster"
-          eyebrow={onlineCalculatorCopy.eyebrow}
-          title={onlineCalculatorCopy.title}
-          description={onlineCalculatorCopy.description}
-          ctaLabel={onlineCalculatorCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, onlineCalculatorClusterPath)}
-          groups={onlineCalculatorGroups}
-          toolCountLabel={onlineCalculatorCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="sky"
-          dataPrefix="pdf-document-tool-cluster"
-          eyebrow={pdfDocumentToolCopy.eyebrow}
-          title={pdfDocumentToolCopy.title}
-          description={pdfDocumentToolCopy.description}
-          ctaLabel={pdfDocumentToolCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, pdfDocumentToolClusterPath)}
-          groups={pdfDocumentToolGroups}
-          toolCountLabel={pdfDocumentToolCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="emerald"
-          dataPrefix="text-writing-tool-cluster"
-          eyebrow={textWritingToolCopy.eyebrow}
-          title={textWritingToolCopy.title}
-          description={textWritingToolCopy.description}
-          ctaLabel={textWritingToolCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, textWritingToolClusterPath)}
-          groups={textWritingToolGroups}
-          toolCountLabel={textWritingToolCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="rose"
-          dataPrefix="security-tool-cluster"
-          eyebrow={securityToolCopy.eyebrow}
-          title={securityToolCopy.title}
-          description={securityToolCopy.description}
-          ctaLabel={securityToolCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, securityToolClusterPath)}
-          groups={securityToolGroups}
-          toolCountLabel={securityToolCopy.toolCountLabel}
-        />
-
-        <ToolClusterSection
-          compact
-          theme="amber"
-          dataPrefix="chart-tool-cluster"
-          eyebrow={chartToolCopy.eyebrow}
-          title={chartToolCopy.title}
-          description={chartToolCopy.description}
-          ctaLabel={chartToolCopy.ctaLabel}
-          href={buildLocalizedPagePath(locale, chartToolClusterPath)}
-          groups={chartToolGroups}
-          toolCountLabel={chartToolCopy.toolCountLabel}
-        />
-
         <CategorySpotlightSection
           eyebrow={siteMessages.name || 'U2Tool'}
           title={(homeMessages.categories as string) || 'Tool Categories'}
@@ -476,14 +234,6 @@ const chartToolGroups = buildChartToolClusterGroups(
           popularLabel={(toolsMessages.popular || 'Popular').toUpperCase()}
           toolsCountLabel={(homeMessages.toolsCount as string) || 'tools'}
           spotlights={discoverySpotlights}
-        />
-
-        <ComparisonGuideSection
-          title={comparisonUiCopy.comparisonSectionTitle}
-          description={comparisonUiCopy.comparisonSectionDescription}
-          guides={comparisonGuides}
-          ctaLabel={comparisonUiCopy.guideCtaLabel}
-          includedToolsLabel={comparisonUiCopy.includedToolsLabel}
         />
 
         <!-- Popular Tools Carousel -->

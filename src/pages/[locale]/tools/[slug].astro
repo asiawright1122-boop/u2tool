@@ -10,7 +10,7 @@
  * - Breadcrumb navigation (static)
  * - Tool header with icon, name, description (static)
  * - Detailed description section (static)
- * - ToolWrapper with client:visible hydration (interactive island)
+ * - ToolWrapper with eager client hydration for the primary interaction
  * - Usage instructions (static)
  * - ToolFAQ with FAQPage structured data (static)
  * - RelatedTools grid (static)
@@ -545,7 +545,7 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
     <div class="max-w-none mx-0">
       {/* Breadcrumb navigation */}
       <div class="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <Breadcrumb locale={locale} items={breadcrumbItems} />
+        <Breadcrumb locale={locale} items={breadcrumbItems} includeStructuredData={false} />
         {isAiDirectoryTool && (
           <a
             href={aiToolsHref}
@@ -576,6 +576,21 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
           {toolName}
         </h1>
         <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed text-lg font-medium">{toolDescription}</p>
+      </div>
+
+      {/* Put the primary task directly after the concise tool header. */}
+      <div class="glass-card p-6 md:p-10 shadow-2xl mb-10 ring-1 ring-white/5">
+        {tool.slug === 'grammar-checker' && typeof messages.languageNotice === 'string' && (
+          <div class="mb-4">
+            <GrammarLanguageNotice locale={locale} text={messages.languageNotice} />
+          </div>
+        )}
+        <ToolWrapper
+          client:load
+          slug={tool.slug}
+          locale={locale}
+          translations={toolTranslations}
+        />
       </div>
 
       {/* Detailed description */}
@@ -659,21 +674,6 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
         />
       )}
 
-      {/* Tool Component — Island Architecture: hydrate only when visible */}
-      <div class="glass-card p-6 md:p-10 shadow-2xl mb-10 transition-all hover:shadow-amber-500/10 ring-1 ring-white/5">
-        {tool.slug === 'grammar-checker' && typeof messages.languageNotice === 'string' && (
-          <div class="mb-4">
-            <GrammarLanguageNotice locale={locale} text={messages.languageNotice} />
-          </div>
-        )}
-        <ToolWrapper
-          client:visible
-          slug={tool.slug}
-          locale={locale}
-          translations={toolTranslations}
-        />
-      </div>
-
       {tool.slug === 'ai-token-calculator' && (
         <AiTokenCalculatorSeoContent locale={locale} />
       )}
@@ -721,7 +721,7 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
       )}
 
       {/* FAQ section with FAQPage structured data */}
-      <ToolFAQ toolName={toolName} faqs={faqs} />
+      <ToolFAQ toolName={toolName} faqs={faqs} includeStructuredData={false} />
 
       {/* Related tools */}
       <RelatedTools

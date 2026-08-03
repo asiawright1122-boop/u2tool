@@ -9,11 +9,19 @@ import {
   getHreflang,
   getToolsPageSeo,
   resolveMetaDescription,
+  resolveSiteDescription,
   withBrand,
 } from './seo';
 import { buildPriorityIndexNowUrls } from './seo-discovery';
 
 describe('seo helpers', () => {
+  it('normalizes stale tool counts in the shared site description', () => {
+    expect(resolveSiteDescription('500+ free online tools with no signup.', 570))
+      .toBe('570+ free online tools with no signup.');
+    expect(resolveSiteDescription('提供 500+ 款免费在线工具。', 570))
+      .toBe('提供 570+ 款免费在线工具。');
+  });
+
   it('reuses localized tools page SEO when available', () => {
     const seo = getToolsPageSeo(
       {

@@ -9,6 +9,7 @@
   import type { Locale } from '@/lib/i18n';
   import { buildAiDiscoveryLink } from '@/lib/ai-discovery/query-link';
   import { createTranslator } from '@/lib/translator';
+  import { searchTools } from '@/components/tools/tools-grid-search';
   import * as Icon from 'lucide-svelte';
 
   interface Props {
@@ -24,6 +25,7 @@
     description: string;
     category: string;
     categoryName: string;
+    href?: string;
   }
 
   let toolsIndex = $state<ToolIndex[]>([]);
@@ -59,7 +61,7 @@
     
     isLoading = true;
     try {
-      const response = await fetch(`/${locale}/tools-index.json/`);
+      const response = await fetch(`/${locale}/tools-index.json`);
       if (response.ok) {
         toolsIndex = await response.json();
         // Auto-open results after loading if there's a query
@@ -80,60 +82,8 @@
     }
   });
 
-  interface SearchResult {
-    slug: string;
-    name: string;
-    description: string;
-    category: string;
-    categoryName: string;
-    score: number;
-  }
-
   const searchResults = $derived(() => {
-    if (!searchQuery.trim() || toolsIndex.length === 0) return [];
-
-    const query = searchQuery.toLowerCase().trim();
-    const results: SearchResult[] = [];
-
-    for (const tool of toolsIndex) {
-      let score = 0;
-      const nameLower = tool.name.toLowerCase();
-      const descLower = tool.description.toLowerCase();
-      const categoryLower = tool.categoryName.toLowerCase();
-
-      if (nameLower.includes(query)) {
-        score += 100;
-        if (nameLower.startsWith(query)) score += 50;
-      }
-
-      if (descLower.includes(query)) {
-        score += 30;
-      }
-
-      if (categoryLower.includes(query)) {
-        score += 20;
-      }
-
-      const queryWords = query.split(/\s+/);
-      for (const word of queryWords) {
-        if (nameLower.includes(word)) score += 10;
-        if (descLower.includes(word)) score += 5;
-        if (categoryLower.includes(word)) score += 3;
-      }
-
-      if (score > 0) {
-        results.push({
-          slug: tool.slug,
-          name: tool.name,
-          description: tool.description,
-          category: tool.category,
-          categoryName: tool.categoryName,
-          score
-        });
-      }
-    }
-
-    return results.sort((a, b) => b.score - a.score).slice(0, 8);
+    return searchTools(toolsIndex, searchQuery, { limit: 8 });
   });
 
   async function handleSearchClick() {
@@ -147,7 +97,7 @@
 
     const results = searchResults();
     if (results.length > 0) {
-      navigateToTool(results[0].slug);
+      navigateToTool(results[0]);
       return;
     }
 
@@ -176,7 +126,7 @@
       selectedIndex = Math.max(selectedIndex - 1, 0);
     } else if (e.key === 'Enter' && results[selectedIndex]) {
       e.preventDefault();
-      navigateToTool(results[selectedIndex].slug);
+      navigateToTool(results[selectedIndex]);
     } else if (e.key === 'Enter' && searchQuery.trim()) {
       e.preventDefault();
       void handleSearchClick();
@@ -186,9 +136,8 @@
     }
   }
 
-  function navigateToTool(slug: string) {
-    const toolPath = getLocalizedPath(locale as Locale, `/tools/${slug}`);
-    window.location.href = toolPath;
+  function navigateToTool(tool: ToolIndex) {
+    window.location.href = tool.href || getLocalizedPath(locale as Locale, `/tools/${tool.slug}`);
   }
 
   function navigateToAiDiscovery(query: string) {
@@ -249,7 +198,7 @@
           {#each searchResults() as result, index}
             <li>
               <button
-                onclick={() => navigateToTool(result.slug)}
+                onclick={() => navigateToTool(result)}
                 class="w-full px-5 py-3 text-left transition-colors duration-200
                        {index === selectedIndex ? 'bg-amber-500/10 dark:bg-amber-500/10' : 'hover:bg-slate-50 dark:hover:bg-white/5'}"
               >
