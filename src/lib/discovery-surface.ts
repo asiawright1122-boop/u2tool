@@ -51,9 +51,9 @@ const recoveryRepresentativeToolSlugsByCategory: Partial<Record<ToolCategory, st
     ...(crawledNotIndexedContentRefreshToolSlugsByCategory.image ?? []),
   ],
   math: ['compound-interest-calculator', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.math ?? [])],
-  network: [...(crawledNotIndexedContentRefreshToolSlugsByCategory.network ?? [])],
+  network: ['ip-lookup', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.network ?? [])],
   office: [...(crawledNotIndexedContentRefreshToolSlugsByCategory.office ?? [])],
-  text: ['document-word-counter'],
+  text: ['grammar-checker', 'document-word-counter'],
 };
 
 function getRepresentativeToolSlugs(category: ToolCategory): string[] {

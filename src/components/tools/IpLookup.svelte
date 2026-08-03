@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { classifyIpAddress } from '@/lib/ip-address';
+
   interface Props {
     locale: string;
     translations: Record<string, unknown>;
@@ -70,8 +72,18 @@
     lookupIp();
   }
   function lookupCustomIp() {
-    if (!ip.trim()) return;
-    lookupIp(ip.trim());
+    const targetIp = ip.trim();
+    if (!targetIp) return;
+    if (!classifyIpAddress(targetIp)) {
+      error = locale === 'ru'
+        ? 'Введите корректный IPv4 или IPv6 адрес.'
+        : locale === 'en'
+          ? 'Enter a valid IPv4 or IPv6 address.'
+          : t('error');
+      info = null;
+      return;
+    }
+    lookupIp(targetIp);
   }
 
 </script>
@@ -141,15 +153,13 @@
               <span class="text-gray-500 dark:text-gray-300">{t('timezone')}:</span>
               <span class="ml-2 text-gray-900 dark:text-white">{info.timezone || '-'}</span>
             </div>
-            {#if info.lat}
-{#if info.lon}
+            {#if Number.isFinite(info.lat) && Number.isFinite(info.lon)}
               <div class="col-span-2">
                 <span class="text-gray-500 dark:text-gray-300">{t('coordinates')}:</span>
                 <span class="ml-2 text-gray-900 dark:text-white font-mono">
                   {info.lat.toFixed(4)}, {info.lon.toFixed(4)}
                 </span>
               </div>
-            {/if}
 {/if}
           </div>
         </div>

@@ -35,6 +35,10 @@
       "answer": "The parser reads timezone identifiers from the ICS content, but it does not expand them through complete timezone rulesets. Verify timezone-sensitive events in the calendar system that will use the file."
     },
     {
+      "question": "Is this a complete ICS validator?",
+      "answer": "No. It is an iCal viewer and parser for inspecting common calendar and VEVENT fields. It can help reveal missing or unexpected output, but it does not certify full RFC 5545 compliance or reproduce every calendar application's timezone behavior."
+    },
+    {
       "question": "Does it change or publish my calendar?",
       "answer": "No. It only parses the pasted or uploaded ICS content for review in the browser. It does not edit, publish, invite guests, or write back to a calendar account."
     }

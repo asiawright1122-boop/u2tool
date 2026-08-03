@@ -21,6 +21,14 @@
       "answer": "It checks the country code, expected country-specific IBAN length, allowed format, and ISO 7064 MOD-97 checksum."
     },
     {
+      "question": "Why is my IBAN invalid?",
+      "answer": "The result identifies the first failed check: basic format, supported country code, country-specific length, or MOD-97 checksum. Correct that part and validate again; a passing structure still does not prove that the bank account exists."
+    },
+    {
+      "question": "How does the MOD-97 checksum work?",
+      "answer": "The validator moves the first four IBAN characters to the end, converts letters to numbers, and calculates the remainder in small chunks. A structurally valid IBAN has a remainder of 1."
+    },
+    {
       "question": "Does this verify a real bank account?",
       "answer": "No. The validator checks IBAN structure and checksum only. It does not contact banks, verify account ownership, or confirm that a payment transfer will succeed."
     },
