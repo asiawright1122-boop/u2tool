@@ -304,6 +304,7 @@ export default defineConfig({
   site: 'https://www.u2tool.com',
   adapter: cloudflare({
     imageService: 'compile',
+    inspectorPort: process.env.DISABLE_CLOUDFLARE_INSPECTOR === '1' ? false : undefined,
   }),
 
   integrations: [
