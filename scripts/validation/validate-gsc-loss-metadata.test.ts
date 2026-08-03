@@ -87,4 +87,13 @@ describe('Production Verification repository contract', () => {
       expect(tracked.status, `${file} is not tracked by Git and will be missing in CI`).toBe(0);
     }
   });
+
+  it('shuts down the smoke-test preview without shelling out to kill port owners', () => {
+    const smokeRunner = fs.readFileSync('scripts/validation/smoke-e2e.ts', 'utf8');
+
+    expect(smokeRunner).toContain("detached: process.platform !== 'win32'");
+    expect(smokeRunner).toContain('process.kill(-serverProcess.pid, signal)');
+    expect(smokeRunner).not.toContain('lsof -t');
+    expect(smokeRunner).not.toContain('execSync(`kill');
+  });
 });

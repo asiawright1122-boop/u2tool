@@ -58,6 +58,39 @@ async function waitForServer(port: number, maxAttempts = 15, delay = 1000): Prom
   return false;
 }
 
+async function stopTemporaryServer(serverProcess: ChildProcess, port: number): Promise<void> {
+  const stopProcessTree = (signal: NodeJS.Signals) => {
+    try {
+      if (process.platform !== 'win32' && serverProcess.pid) {
+        process.kill(-serverProcess.pid, signal);
+      } else {
+        serverProcess.kill(signal);
+      }
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
+        throw error;
+      }
+    }
+  };
+
+  stopProcessTree('SIGTERM');
+  for (let attempts = 0; attempts < 10 && await checkServerActive(port); attempts++) {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+  }
+
+  if (await checkServerActive(port)) {
+    console.warn(`⚠️ Temporary preview process group still owns port ${port}. Forcing shutdown...`);
+    stopProcessTree('SIGKILL');
+    for (let attempts = 0; attempts < 10 && await checkServerActive(port); attempts++) {
+      await new Promise((resolve) => setTimeout(resolve, 200));
+    }
+  }
+
+  if (await checkServerActive(port)) {
+    throw new Error(`Temporary preview server did not release port ${port}.`);
+  }
+}
+
 async function main(): Promise<void> {
   console.log('🏁 Starting E2E Puppeteer client-side smoke tests...');
 
@@ -72,6 +105,7 @@ async function main(): Promise<void> {
     // Launch preview server directly using npx to prevent nested npm process wrappers
     serverProcess = spawn('npx', ['astro', 'preview'], {
       stdio: 'ignore',
+      detached: process.platform !== 'win32',
     });
     isTempServer = true;
 
@@ -80,7 +114,7 @@ async function main(): Promise<void> {
     if (!ready) {
       console.error(`❌ Failed to start temporary Astro preview server on port ${PORT} within timeout.`);
       if (serverProcess) {
-        serverProcess.kill('SIGTERM');
+        await stopTemporaryServer(serverProcess, PORT);
       }
       process.exitCode = 1;
       return;
@@ -339,27 +373,7 @@ async function main(): Promise<void> {
     // Cleanup temporary server if it was spawned by this run
     if (isTempServer && serverProcess) {
       console.log('🛑 Terminating temporary Astro preview server...');
-      serverProcess.kill('SIGTERM');
-      
-      // Wait for process release
-      let attempts = 0;
-      while (await checkServerActive(PORT) && attempts < 10) {
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        attempts++;
-      }
-      
-      // Guarantee process kill in Unix systems via lsof double check
-      try {
-        const { execSync } = await import('node:child_process');
-        const pid = execSync(`lsof -t -i :${PORT}`).toString().trim();
-        if (pid) {
-          console.log(`⚠️ Port ${PORT} still active (PID: ${pid}). Forcing shutdown...`);
-          execSync(`kill -9 ${pid}`);
-        }
-      } catch {
-        // Ignore errors (no process found or syntax fail)
-      }
-      
+      await stopTemporaryServer(serverProcess, PORT);
       console.log('✅ Temporary server stopped successfully.');
     }
   }
