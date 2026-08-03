@@ -500,6 +500,12 @@ export const HIGH_CONFIDENCE_SUPPORT_CONTENT_RULES = [
     slugs: ['sql-to-mongodb-converter'],
   },
   {
+    code: 'json-flattener-unsupported-ui-schema-download-claim',
+    pattern: /syntax[-\s]?highlighted|advanced settings panel|array index preservation|checkbox for array|download(?:s|ing)? (?:as )?(?:a )?\.?json(?: file)?|download(?:able)? JSON|JSON Schema|schema validation|trie[-\s]?based reconstruction|Process JSON/i,
+    message: 'Claims JSON Flattener UI, download, schema validation, or reconstruction behavior that is not present in the current paste/process/copy tool.',
+    slugs: ['json-flattener'],
+  },
+  {
     code: 'financial-forecast-unsupported-cashflow-investor-claim',
     pattern: /Project cash flow|Create investor projections|investor projections|seasonalAdjustment|seasonal adjustment|Monte Carlo|valuation model|accounting software/i,
     message: 'Claims cash-flow, investor, seasonal, valuation, or accounting behavior that is not present in the current revenue/expense/profit forecast calculator.',

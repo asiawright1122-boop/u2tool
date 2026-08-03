@@ -1,17 +1,38 @@
 {
-  "detailed_description": "El JSON Flattener es una herramienta especializada para transformar estructuras JSON complejas en formatos lineales o viceversa, manteniendo la integridad de los datos. Técnicamente, implementa un algoritmo de recorrido recursivo para identificar objetos anidados y arrays, convirtiendo claves jerárquicas en cadenas de texto concatenadas mediante separadores como puntos (.) o corchetes ([]). Esta funcionalidad es crucial para integraciones ETL, donde es necesario mapear datos jerárquicos a tablas relacionales, o en sistemas de logging que requieren normalizar registros heterogéneos. La herramienta soporta operaciones bidireccionales: el 'flattening' simplifica el procesamiento de datos en entornos sin soporte para JSON nativo, mientras que el 'unflattening' reconstruye la estructura original mediante análisis sintáctico de las rutas codificadas. Utiliza técnicas de tokenización para identificar patrones de anidamiento y aplica estrategias de escape para caracteres especiales en claves. Su motor está optimizado para manejar grandes volúmenes de datos mediante streaming, evitando cargas completas en memoria.",
+  "detailed_description": "JSON Flattener convierte JSON valido pegado entre objetos anidados y un objeto plano de clave-valor dentro del navegador. El modo Flatten une claves anidadas con el delimitador que elijas, y los elementos de arrays se escriben con indices entre corchetes como `tags[0]`. El modo Unflatten divide claves planas por el delimitador para reconstruir objetos anidados simples. Sirve para revisar payloads de API, fragmentos de configuracion, campos de logs o mapeos tipo hoja de calculo, pero no carga archivos, no compara contra un esquema externo ni garantiza compatibilidad con todos los formatos de importacion de bases de datos.",
   "usage_steps": [
-    "Pega tu JSON en el área de texto principal o carga un archivo mediante el botón 'Importar JSON'.",
-    "Selecciona la operación deseada en el panel de control: 'Aplanar' o 'Desaplanar'.",
-    "Configura el separador de rutas (punto, barra baja o personalizado) usando el selector 'Delimiter'.",
-    "Activa la opción 'Mantener arrays' si necesitas preservar índices numéricos durante el proceso.",
-    "Haz clic en 'Procesar JSON' para ejecutar la transformación en tiempo real.",
-    "Descarga el resultado con el botón 'Exportar' o copia el contenido del campo de salida."
+    "Pega JSON valido en el campo de entrada.",
+    "Elige Flatten o Unflatten en el selector de modo.",
+    "Cambia el delimitador si necesitas otro caracter distinto del punto.",
+    "Ejecuta la operacion seleccionada y revisa el JSON formateado.",
+    "Usa Copy para llevar la salida actual al portapapeles."
   ],
   "usage_examples": [
-    "Transformar una respuesta de API RESTful con objetos anidados en un formato CSV para análisis en Excel.",
-    "Preparar datos de configuración complejos para su almacenamiento en variables de entorno planas.",
-    "Normalizar logs del sistema en formato JSON para indexación en motores de búsqueda como Elasticsearch.",
-    "Convertir esquemas OpenAPI a una estructura lineal para generación automática de documentación."
+    "Aplanar un perfil de usuario en claves como `user.name` y `user.address.city`.",
+    "Convertir una respuesta pequena de API en rutas JSON listas para mapear campos.",
+    "Usar un delimitador personalizado cuando otra herramienta espera claves con guion bajo.",
+    "Reconstruir claves simples con puntos como un objeto anidado antes de guardar un fragmento."
+  ],
+  "faqs": [
+    {
+      "question": "Como se representan los arrays al aplanar JSON?",
+      "answer": "Los elementos de arrays se escriben con indices entre corchetes como `items[0]`. Los campos de objetos dentro del array siguen usando el delimitador elegido."
+    },
+    {
+      "question": "Unflatten reconstruye arrays?",
+      "answer": "No. Divide las claves por el delimitador para reconstruir objetos. Los indices entre corchetes permanecen como parte del nombre de la clave."
+    },
+    {
+      "question": "Puedo usar archivos JSON directamente?",
+      "answer": "No. La pagina actual trabaja con texto JSON pegado y copia al portapapeles. No incluye entrada de archivos ni controles para guardar archivos."
+    },
+    {
+      "question": "Que debo revisar antes de usar el resultado?",
+      "answer": "Revisa una muestra corta, claves de arrays, caracteres especiales y el delimitador antes de usar el valor transformado."
+    },
+    {
+      "question": "Puedo editar el resultado despues de generarlo?",
+      "answer": "Si. Ajusta el JSON de entrada, el modo o el delimitador, vuelve a generar y copia la salida actualizada despues de revisarla."
+    }
   ]
 }

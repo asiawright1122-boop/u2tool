@@ -3506,6 +3506,15 @@ describe('assessSupportContentTrust', () => {
         expectedCode: 'text-summarizer-unsupported-ai-file-export-claim',
       },
       {
+        slug: 'json-flattener',
+        name: 'JSON Flattener',
+        locale: 'en',
+        detailedDescription:
+          'Uses a syntax-highlighted editor, JSON Schema validation, and trie-based reconstruction.',
+        usageSteps: ['Open the advanced settings panel, enable the array index preservation checkbox, click Process JSON, and download as a .json file.'],
+        expectedCode: 'json-flattener-unsupported-ui-schema-download-claim',
+      },
+      {
         slug: 'inflation-calculator',
         name: 'Inflation Calculator',
         locale: 'en',
@@ -3623,6 +3632,13 @@ describe('assessSupportContentTrust', () => {
         locale: 'es',
         detailedDescription:
           'El Resumidor de Texto crea un resumen extractivo directamente en el navegador.',
+      },
+      {
+        slug: 'json-flattener',
+        name: 'JSON Flattener',
+        locale: 'en',
+        detailedDescription:
+          'JSON Flattener converts valid pasted JSON between nested objects and a flat key-value object in the browser.',
       },
       {
         slug: 'inflation-calculator',

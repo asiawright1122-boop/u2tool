@@ -1,39 +1,38 @@
 {
-  "detailed_description": "The JSON Flattener tool performs structural transformation on hierarchical JSON data by recursively traversing nested objects and arrays, converting them into a single-level key-value map using dot-notation paths. For example, a nested structure like `{\"user\": {\"name\": \"Alice\", \"roles\": [\"admin\", \"dev\"]}}` becomes `{\"user.name\": \"Alice\", \"user.roles.0\": \"admin\", \"user.roles.1\": \"dev\"}`. This process eliminates multi-level nesting through key path concatenation, preserving original data types (strings, numbers, booleans) while normalizing arrays with zero-based index notation. Developers require this tool to interface with systems that demand flat schemas, such as Firestore's document databases, flat-file storage formats, or legacy APIs requiring query string-like parameters. The reverse operation (unflattening) reconstructs nested structures by parsing dot-notation keys and rebuilding object hierarchies. Technically, the tool employs recursive descent parsing for flattening and a trie-based reconstruction algorithm for unflattening, maintaining type integrity through JSON schema validation at each transformation stage.",
+  "detailed_description": "JSON Flattener converts valid pasted JSON between nested objects and a flat key-value object in the browser. Flatten mode joins nested object keys with the delimiter you choose, and array items are written with bracketed indexes such as `tags[0]`. Unflatten mode splits flat keys by the delimiter to rebuild nested objects. The page is useful when you need copy-ready JSON paths for API payload review, configuration snippets, logs, or spreadsheet-style checks, but it does not load files, check your data against a separate schema, or guarantee compatibility with every database import format.",
   "usage_steps": [
-    "Paste valid JSON into the syntax-highlighted input editor",
-    "Select operation mode using the 'Flatten' or 'Unflatten' toggle button",
-    "Adjust delimiter character in the advanced settings panel (default: '.')",
-    "Enable array index preservation via checkbox for array element handling",
-    "Click 'Process JSON' to execute transformation",
-    "Copy the output from the split-pane result window or download as .json file"
+    "Paste valid JSON into the input field.",
+    "Choose Flatten or Unflatten from the mode selector.",
+    "Set the delimiter character if you need something other than a dot.",
+    "Run the selected operation and review the formatted JSON result.",
+    "Use Copy to send the current output to your clipboard."
   ],
   "usage_examples": [
-    "Preparing user profile data with nested address fields for AWS DynamoDB storage that requires flat attribute maps",
-    "Converting complex API responses into query parameters for URL encoding in service-oriented applications communication",
-    "Normalizing telemetry data from IoT devices with hierarchical sensor readings for CSV export",
-    "Reconstructing deeply nested configuration files from flat environment variables during Docker container initialization"
+    "Flatten a nested user profile into `user.name` and `user.address.city` keys for quick review.",
+    "Turn a small API response into copy-ready JSON paths before mapping fields.",
+    "Use a custom delimiter when another tool expects underscore-separated keys.",
+    "Unflatten simple dot-notation keys back into a nested object before saving a snippet."
   ],
   "faqs": [
     {
+      "question": "How are arrays represented when JSON is flattened?",
+      "answer": "Array items are written with bracketed indexes such as `items[0]`. Object fields inside array items keep using the selected delimiter after that index."
+    },
+    {
+      "question": "Does unflatten mode rebuild arrays?",
+      "answer": "No. It splits keys by the delimiter to rebuild nested objects. Bracketed array indexes remain part of the key name, so review array-heavy data carefully."
+    },
+    {
+      "question": "Can I use JSON files directly?",
+      "answer": "No. The current page works with pasted JSON text and clipboard copy. It does not include file input or save-file controls."
+    },
+    {
       "question": "What should I check before using the JSON Flattener output?",
-      "answer": "Review a short sample, special characters, and expected formatting before using the transformed value elsewhere."
+      "answer": "Review a short sample, array keys, special characters, and the delimiter before using the transformed value elsewhere."
     },
     {
       "question": "Can I edit the result after generating it?",
-      "answer": "Yes. Adjust the input values or available options, generate the result again, and then copy, export, or reuse the updated output in your workflow when the page provides those actions."
-    },
-    {
-      "question": "Why might the result differ from another encoding tool?",
-      "answer": "Different tools can use different assumptions, rounding rules, parsing behavior, or export settings. Compare the same input values and review any notes shown in the interface before relying on the result."
-    },
-    {
-      "question": "Can I start with sample or placeholder data?",
-      "answer": "Yes. Use a small example or non-sensitive sample first, confirm the output shape, and then replace it with the real input you want to process."
-    },
-    {
-      "question": "Does this replace manual review?",
-      "answer": "No. It is meant to speed up routine work, but important results should still be checked for accuracy, context, and fit before you publish or share them."
+      "answer": "Yes. Adjust the input JSON, mode, or delimiter, generate the result again, and copy the updated output after reviewing it."
     }
   ]
 }

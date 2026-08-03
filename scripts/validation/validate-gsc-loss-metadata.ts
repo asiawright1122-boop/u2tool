@@ -258,6 +258,17 @@ const CHECKS: LossMetadataCheck[] = [
     slug: 'barcode-generator',
     requiredTerms: ['штрихкод', 'генератор'],
   },
+  {
+    locale: 'en',
+    slug: 'json-flattener',
+    requiredTerms: ['JSON', 'Flatten', 'delimiter', 'copy'],
+    forbiddenFragments: [
+      'syntax-highlighted',
+      'advanced settings',
+      'schema validation',
+      'download',
+    ],
+  },
 ];
 
 const DEFAULT_MIN_DESCRIPTION_LENGTH = 90;

@@ -59,6 +59,7 @@ const highValueCandidates = [
   { locale: 'de', slug: 'gif-splitter' },
   { locale: 'es', slug: 'project-estimation-calculator' },
   { locale: 'en', slug: 'text-to-slug' },
+  { locale: 'en', slug: 'json-flattener' },
   { locale: 'de', slug: 'world-cup-budget-calculator' },
 ] as const;
 
@@ -397,6 +398,17 @@ describe('GSC high-value recovery candidate content', () => {
       locale: 'ko',
       slug: 'image-splitter',
       phrases: ['이미지 분할기 온라인', '행과 열', 'png 조각', 'zip'],
+    },
+    {
+      locale: 'en',
+      slug: 'json-flattener',
+      phrases: [
+        'json flattener',
+        'flat key-value object',
+        'delimiter',
+        'bracketed indexes',
+        'copy',
+      ],
     },
   ])('$locale/$slug covers old GSC query intent without overclaiming', ({ locale, slug, phrases }) => {
     const messages = readToolMessages(locale, slug);

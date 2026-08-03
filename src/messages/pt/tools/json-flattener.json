@@ -1,17 +1,38 @@
 {
-  "detailed_description": "O JSON Flattener é uma ferramenta especializada para transformar objetos JSON com estruturas profundamente aninhadas em formatos lineares ou planos, eliminando hierarquias complexas. Ele opera percorrendo recursivamente todas as chaves e valores do JSON original, convertendo caminhos aninhados em representações com notação de pontos (ex.: 'usuario.endereco.cidade') ou índices de array explícitos. Essa transformação é essencial para integrações com sistemas que exigem dados em formato não hierárquico, como bancos de dados relacionais, APIs REST que utilizam parâmetros query string ou ferramentas de análise de dados que não suportam objetos multidimensionais. O processo é reversível: ao unflattenizar, o algoritmo reconstrói a estrutura original a partir das chaves achatadas, garantindo conversão sem perdas. Funcionalidades como preservação de tipos primitivos (números, booleanos) e tratamento de arrays multidimensionais diferenciam esta ferramenta de conversores genéricos, oferecendo maior precisão para casos de uso específicos em pipelines de processamento de dados ou migração de esquemas.",
+  "detailed_description": "JSON Flattener converte JSON valido colado entre objetos aninhados e um objeto plano de chave-valor no navegador. O modo Flatten une chaves aninhadas com o delimitador escolhido, e itens de arrays aparecem com indices entre colchetes como `tags[0]`. O modo Unflatten divide chaves planas pelo delimitador para reconstruir objetos aninhados simples. Ele ajuda a revisar payloads de API, trechos de configuracao, campos de log e mapeamentos em formato de planilha, mas nao carrega arquivos, nao compara dados com um modelo separado e nao garante compatibilidade com todos os formatos de importacao de banco de dados.",
   "usage_steps": [
-    "Acesse o JSON Flattener na categoria 'Codificação' do site.",
-    "Cole seu JSON no editor de código com suporte a syntax highlighting.",
-    "Selecione a operação desejada: 'Achatamento' ou 'Desachatamento' no menu suspenso 'Modo de Processamento'.",
-    "Ative a opção 'Manter Tipos' para preservar booleanos e números como valores não-string.",
-    "Clique em 'Processar JSON' para aplicar a transformação em tempo real.",
-    "Copie o resultado do campo de saída ou exporte como arquivo .json."
+    "Cole JSON valido no campo de entrada.",
+    "Escolha Flatten ou Unflatten no seletor de modo.",
+    "Defina o delimitador se precisar de outro caractere alem do ponto.",
+    "Execute a operacao selecionada e revise o JSON formatado.",
+    "Use Copy para enviar a saida atual para a area de transferencia."
   ],
   "usage_examples": [
-    "Converter uma resposta de API com objetos aninhados em um formato compatível com armazenamento em planilhas CSV.",
-    "Transformar um arquivo de configuração JSON complexo em um conjunto de variáveis de ambiente com chaves textuais.",
-    "Preparar dados para ingestão em um banco de dados NoSQL que exige documentos com profundidade limitada.",
-    "Simplificar estruturas JSON para facilitar a depuração em aplicativos que utilizam serialização de objetos complexos."
+    "Achatar um perfil de usuario em chaves como `user.name` e `user.address.city`.",
+    "Transformar uma pequena resposta de API em caminhos JSON prontos para mapear campos.",
+    "Usar um delimitador personalizado quando outra ferramenta espera chaves com sublinhado.",
+    "Reverter chaves simples com pontos para um objeto aninhado antes de salvar um trecho."
+  ],
+  "faqs": [
+    {
+      "question": "Como arrays aparecem quando o JSON e achatado?",
+      "answer": "Itens de arrays aparecem com indices entre colchetes, como `items[0]`. Campos de objetos dentro do array continuam usando o delimitador escolhido."
+    },
+    {
+      "question": "O modo Unflatten recria arrays?",
+      "answer": "Nao. Ele divide chaves pelo delimitador para reconstruir objetos. Indices entre colchetes continuam como parte do nome da chave."
+    },
+    {
+      "question": "Posso usar arquivos JSON diretamente?",
+      "answer": "Nao. A pagina atual trabalha com texto JSON colado e copia para a area de transferencia. Nao ha entrada de arquivo nem controles para salvar arquivo."
+    },
+    {
+      "question": "O que devo revisar antes de usar o resultado?",
+      "answer": "Revise uma amostra curta, chaves de arrays, caracteres especiais e o delimitador antes de usar o valor transformado."
+    },
+    {
+      "question": "Posso alterar o resultado depois de gerar?",
+      "answer": "Sim. Ajuste o JSON de entrada, o modo ou o delimitador, gere novamente e copie a saida atualizada depois de revisar."
+    }
   ]
 }

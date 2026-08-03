@@ -1,17 +1,38 @@
 {
-  "detailed_description": "Der JSON Flattener ist ein Spezialtool zur bidirektionalen Transformation verschachtelter JSON-Objekte in eindimensionale Schlüssel-Wert-Paare und umgekehrt. Technisch gesehen analysiert der Parser rekursiv die JSON-Struktur, identifiziert geschachtelte Objekte und Arrays und generiert flache Pfade mithilfe von Trennzeichenstrategien (wie Punktnotation oder Unterstrichen). Bei der Rücktransformation verwendet das Tool eine inverse Mapping-Logik, die Hierarchien anhand der Schlüsselpfade rekonstruiert. Diese Funktionalität ist entscheidend für Szenarien wie die Vorbereitung von Daten für NoSQL-Datenbanken, die keine tiefen Strukturen unterstützen, oder die Normalisierung von API-Antworten für maschinelles Lernen. Das Tool behält dabei Datentypen bei und ermöglicht optionale Behandlung von Arrays durch numerische Indizes oder explizite Gruppierung. Die Implementierung nutzt einen Stapelbasierten Algorithmus zur Vermeidung von Endlosschleifen bei zyklischen Referenzen, was die Verarbeitung komplexer Schemata in Echtzeit ermöglicht.",
+  "detailed_description": "JSON Flattener wandelt gueltig eingefuegtes JSON im Browser zwischen verschachtelten Objekten und einem flachen Schluessel-Wert-Objekt um. Im Flatten-Modus werden verschachtelte Objektschluessel mit dem gewaehlten Trennzeichen verbunden, und Array-Elemente erscheinen mit Klammerindizes wie `tags[0]`. Der Unflatten-Modus teilt flache Schluessel anhand des Trennzeichens und baut einfache verschachtelte Objekte auf. Das hilft beim Pruefen von API-Payloads, Konfigurationsschnipseln, Logfeldern oder tabellenartigen Mappings, laedt aber keine Dateien, prueft nicht gegen ein separates Datenmodell und garantiert keine Kompatibilitaet mit jedem Datenbankimport.",
   "usage_steps": [
-    "Fügen Sie Ihren JSON-Code in die linke Textarea ein oder laden Sie eine JSON-Datei hoch.",
-    "Wählen Sie im Optionsfeld 'Flattening' für Vereinfachung oder 'Unflattening' für Rekonstruktion aus.",
-    "Konfigurieren Sie das Trennzeichen (Standard: Punkt '.') im Eingabefeld 'Delimiter-Strategie'.",
-    "Aktivieren Sie die Checkbox 'Array-Indizes beibehalten', um numerische Positionen in Schlüsselpfade einzubetten.",
-    "Klicken Sie auf 'Transformieren', um den Prozess zu starten und das Ergebnis in der rechten Textarea anzuzeigen.",
-    "Kopieren Sie den transformierten JSON-Code mit dem 'Kopieren'-Button oder laden Sie ihn als .json-Datei herunter."
+    "Fuegen Sie gueltiges JSON in das Eingabefeld ein.",
+    "Waehlen Sie im Modusfeld Flatten oder Unflatten.",
+    "Setzen Sie ein anderes Trennzeichen, falls Sie keinen Punkt verwenden moechten.",
+    "Fuehren Sie die gewaehlte Operation aus und pruefen Sie das formatierte JSON.",
+    "Nutzen Sie Copy, um die aktuelle Ausgabe in die Zwischenablage zu legen."
   ],
   "usage_examples": [
-    "Ein Entwickler transformiert ein verschachteltes GeoJSON-Objekt in flache Schlüssel für eine Elasticsearch-Indexierung.",
-    "Ein Data Engineer vereinfacht komplexe API-Antworten zur direkten Verwendung in Apache Spark DataFrames.",
-    "Ein Systemadministrator konvertiert eine mehrdimensionale Konfigurationsdatei in eine Umgebungsvariablen-kompatible Form.",
-    "Ein Frontend-Entwickler rekonstruiert flache Formulardaten zu einer hierarchischen JSON-Struktur für eine Backend-API."
+    "Ein verschachteltes Nutzerprofil in Schluessel wie `user.name` und `user.address.city` umwandeln.",
+    "Eine kleine API-Antwort in kopierbare JSON-Pfade fuer ein Feldmapping verwandeln.",
+    "Ein eigenes Trennzeichen verwenden, wenn ein anderes Tool Unterstrich-Schluessel erwartet.",
+    "Einfache Punktnotation vor dem Speichern eines Snippets wieder in ein verschachteltes Objekt umwandeln."
+  ],
+  "faqs": [
+    {
+      "question": "Wie werden Arrays beim Flatten dargestellt?",
+      "answer": "Array-Elemente erscheinen mit Klammerindizes wie `items[0]`. Objektfelder innerhalb eines Arrays verwenden danach weiter das gewaehlte Trennzeichen."
+    },
+    {
+      "question": "Baut Unflatten Arrays wieder auf?",
+      "answer": "Nein. Es teilt Schluessel nach dem Trennzeichen und erstellt Objekte. Klammerindizes bleiben Teil des Schluesselnamens."
+    },
+    {
+      "question": "Kann ich JSON-Dateien direkt verwenden?",
+      "answer": "Nein. Die aktuelle Seite arbeitet mit eingefuegtem JSON-Text und Zwischenablagekopie. Es gibt keine Dateieingabe und keine Speichern-Steuerung."
+    },
+    {
+      "question": "Was sollte ich vor der Nutzung pruefen?",
+      "answer": "Pruefen Sie ein kurzes Beispiel, Array-Schluessel, Sonderzeichen und das Trennzeichen, bevor Sie den transformierten Wert weiterverwenden."
+    },
+    {
+      "question": "Kann ich das Ergebnis nach dem Erzeugen aendern?",
+      "answer": "Ja. Aendern Sie Eingabe-JSON, Modus oder Trennzeichen, erzeugen Sie neu und kopieren Sie die aktualisierte Ausgabe nach der Pruefung."
+    }
   ]
 }
