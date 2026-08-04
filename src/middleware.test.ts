@@ -412,8 +412,9 @@ describe('html edge cache middleware', () => {
 
   it('uses Astro v6 Cloudflare cfContext.waitUntil for background cache writes', async () => {
     const cache = installHtmlCache();
+    const pending: Promise<unknown>[] = [];
     const waitUntil = vi.fn((promise: Promise<unknown>) => {
-      void promise;
+      pending.push(promise);
     });
 
     const { response } = await runMiddleware(
@@ -423,8 +424,27 @@ describe('html edge cache middleware', () => {
     );
 
     expect(response.headers.get('x-u2tool-html-cache')).toBe('MISS');
+    // The cache write happens in the background promise (after the empty-body
+    // probe); wait for it before asserting the put.
+    await Promise.all(pending);
     expect(cache.put).toHaveBeenCalledTimes(1);
     expect(waitUntil).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not cache an empty-body 200 response', async () => {
+    const cache = installHtmlCache();
+    const next = vi.fn(async () => new Response('', {
+      status: 200,
+      headers: { 'content-type': 'text/html' },
+    }));
+
+    const { response } = await runMiddleware(
+      new Request('https://www.u2tool.com/en/tools/empty-renderer/'),
+      next
+    );
+
+    expect(response.headers.get('x-u2tool-html-cache')).toBe('MISS');
+    expect(cache.put).not.toHaveBeenCalled();
   });
 
   it('applies security headers to non-html responses without enabling html cache', async () => {

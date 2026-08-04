@@ -393,8 +393,22 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     response.headers.set('x-u2tool-html-cache', shouldUseHtmlCache ? 'MISS' : 'BYPASS');
 
     if (cache && cacheKey && context.request.method === 'GET' && response.status === 200) {
-      const cacheableResponse = response.clone();
-      const putPromise = cache.put(cacheKey, cacheableResponse);
+      // Guard against caching empty bodies (a rendering failure returning 200
+      // with no content would otherwise poison the edge cache for s-maxage).
+      // A Response can only be clone()d once, so probe the single clone and
+      // rebuild the cache entry from its text instead of cloning again.
+      const putPromise = (async () => {
+        const probe = response.clone();
+        const bodyText = await probe.text();
+        if (bodyText.length === 0) {
+          return;
+        }
+        const cacheableResponse = new Response(bodyText, {
+          status: response.status,
+          headers: response.headers,
+        });
+        await cache.put(cacheKey, cacheableResponse);
+      })();
       const cfContext = (context.locals as CloudflareRuntimeLocals).cfContext;
 
       if (cfContext?.waitUntil) {
