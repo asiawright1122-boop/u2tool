@@ -49,7 +49,7 @@ if (isValidLocale(first) && first === second) {
 
 if (segments.length === 1) {
   if (first === 'about') {
-    return Astro.redirect(`/en/${url.search}`, 301);
+    return Astro.redirect(`/en/about/${url.search}`, 301);
   }
 
   const siteInfoRedirect = resolveUnlocalizedSiteInfoRedirect(first);
@@ -114,9 +114,6 @@ if (isValidLocale(first) && second === 'tools' && third === 'category') {
     segments.length > 3 ? `/${first}/categories/${segments.slice(3).join('/')}/` : `/${first}/tools/`,
     301
   );
-}
-if (isValidLocale(first) && second === 'about' && segments.length === 2) {
-  return Astro.redirect(`/${first}/${url.search}`, 301);
 }
 if (isValidLocale(first) && second === 'blog' && third) {
   const target = resolveLegacyBlogRedirect(first, third);
