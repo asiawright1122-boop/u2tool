@@ -287,6 +287,114 @@ export const guidesEs: Guide[] = [
       "project-estimation-calculator",
       "excel-viewer"
     ]
+  },
+  {
+    "slug": "como-crear-diagrama-de-arbol-jerarquico",
+    "title": "Cómo crear un diagrama de árbol jerárquico",
+    "description": "Crea diagramas de árbol para organizar jerarquías: categorías, organigramas y taxonomías. Guía paso a paso con el generador online, gratis y en el navegador.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Qué es un diagrama de árbol",
+        "paragraphs": [
+          "Un diagrama de árbol representa una jerarquía: un nodo raíz, ramas y hojas. Cada nodo tiene un único padre, y la profundidad indica el nivel de detalle. Se usa para organigramas, taxonomías de productos, menús de navegación y estructuras de carpetas."
+        ]
+      },
+      {
+        "title": "Cuándo usarlo",
+        "paragraphs": [
+          "Usa un árbol cuando la información es una jerarquía real: categorías dentro de categorías, roles dentro de departamentos, conceptos dentro de temas. Si los elementos no tienen un orden padre-hijo claro, un gráfico de dispersión o una tabla pueden ser más adecuados."
+        ]
+      },
+      {
+        "title": "Crearlo gratis online",
+        "paragraphs": [
+          "El generador de árboles de U2Tool organiza nodos y relaciones en el navegador: añade el nodo raíz, crea ramas, y la herramienta distribuye el layout automáticamente.",
+          "Personaliza colores y etiquetas, y exporta el resultado como imagen (PNG/SVG) o como datos. Todo se procesa localmente, sin registro y sin subir nada al servidor."
+        ]
+      },
+      {
+        "title": "Buenas prácticas",
+        "paragraphs": [
+          "Limita la profundidad a 3-4 niveles si puedes; más allá, el diagrama se vuelve difícil de leer. Agrupa nodos similares bajo una rama intermedia y usa etiquetas cortas que se entiendan sin leyenda."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Puedo importar mi estructura?",
+        "answer": "Sí, puedes definir nodos y relaciones de forma estructurada y el generador los dibuja automáticamente."
+      },
+      {
+        "question": "¿En qué formatos exporto?",
+        "answer": "Como imagen vectorial (SVG/PDF) o PNG, y también puedes guardar los datos."
+      },
+      {
+        "question": "¿Es gratis?",
+        "answer": "Sí, sin registro ni límites; todo el procesamiento ocurre en tu navegador."
+      }
+    ],
+    "relatedTools": [
+      "tree-chart-generator",
+      "graph-chart-generator",
+      "excel-viewer"
+    ]
+  },
+  {
+    "slug": "que-es-un-grafico-de-dispersion",
+    "title": "Qué es un gráfico de dispersión y cuándo usarlo",
+    "description": "El gráfico de dispersión (scatter) muestra la relación entre dos variables. Cómo leerlo, cuándo usarlo y crearlo gratis online.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Qué muestra un scatter",
+        "paragraphs": [
+          "Un gráfico de dispersión coloca un punto por cada observación, usando el eje X para una variable y el Y para otra. La nube de puntos revela si existe una relación: si los puntos forman una diagonal, hay correlación; si están repartidos sin patrón, no."
+        ]
+      },
+      {
+        "title": "Cuándo usarlo",
+        "paragraphs": [
+          "Úsalo cuando quieras explorar la relación entre dos variables numéricas: horas de estudio y nota, precio y demanda, edad y gasto. También sirve para detectar valores atípicos que no se ven en una tabla.",
+          "No lo uses para comparar categorías (ahí van las barras) ni para mostrar tendencias temporales largas (ahí van las líneas)."
+        ]
+      },
+      {
+        "title": "Crearlo gratis online",
+        "paragraphs": [
+          "El generador de gráficas de U2Tool crea dispersión directamente en el navegador: pega pares de valores, la herramienta escala los ejes y coloca los puntos.",
+          "Añade colores por grupo si tienes varias series, personaliza etiquetas y exporta como imagen o datos, todo localmente y sin registro."
+        ]
+      },
+      {
+        "title": "Cómo interpretarlo",
+        "paragraphs": [
+          "Mira primero la dirección de la nube: ascendente (relación positiva), descendente (negativa) o sin forma (sin relación). Después fíjate en la dispersión: puntos muy pegados a una línea indican relación fuerte; una nube ancha, relación débil.",
+          "Recuerda: correlación no es causalidad. Un scatter muestra asociación, no demuestra que una variable cause la otra."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Qué es la correlación en un scatter?",
+        "answer": "El grado en que los puntos se ajustan a una dirección común. No implica causalidad: solo muestra asociación entre las dos variables."
+      },
+      {
+        "question": "¿Puedo comparar tres variables?",
+        "answer": "Sí, usando el tamaño o el color del punto como tercera dimensión, además de los dos ejes."
+      },
+      {
+        "question": "¿Dónde se procesan mis datos?",
+        "answer": "En tu navegador: el generador no sube los datos a ningún servidor."
+      }
+    ],
+    "relatedTools": [
+      "graph-chart-generator",
+      "line-chart-generator",
+      "tree-chart-generator"
+    ]
   }
 
 ];

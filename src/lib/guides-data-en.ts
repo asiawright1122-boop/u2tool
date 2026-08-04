@@ -187,4 +187,58 @@ export const guidesEn: Guide[] = [
     ],
     relatedTools: ['sankey-chart-generator', 'nested-pie-chart-generator', 'tree-chart-generator'],
   },
+
+  {
+    "slug": "nested-pie-charts-explained",
+    "title": "Nested pie charts explained: when and how to use them",
+    "description": "Nested pie charts (multi-level donuts) show part-to-whole across two levels. When they help, when they confuse, and how to make one free in your browser.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "What a nested pie chart is",
+        "paragraphs": [
+          "A nested pie chart places two or more rings around the same center. The inner ring shows the first level of a breakdown, and the outer ring splits each inner segment further. The classic example is market share by region (inner) and by product within each region (outer)."
+        ]
+      },
+      {
+        "title": "When they work",
+        "paragraphs": [
+          "Use nested pies when you need part-to-whole at two levels and the top level has at most five to seven segments. They are effective in dashboards where viewers already know the metric, because the shape communicates hierarchy at a glance."
+        ]
+      },
+      {
+        "title": "When they fail",
+        "paragraphs": [
+          "Avoid them when the outer ring has many tiny segments: thin slices become unreadable and labels overlap. For precise comparisons across levels, a treemap or a grouped bar chart is often clearer. If you only need one level, a simple pie or donut is better."
+        ]
+      },
+      {
+        "title": "How to make one free",
+        "paragraphs": [
+          "The nested pie generator on U2Tool builds multi-ring charts in the browser: define the two-level breakdown, pick colors, and export as PNG or SVG. Processing stays local, so no data leaves your machine."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is a nested pie the same as a donut?",
+        "answer": "A donut is a single ring with a hole; a nested pie stacks multiple rings to show two levels of a hierarchy."
+      },
+      {
+        "question": "What is the maximum sensible size?",
+        "answer": "Keep the outer ring to roughly 10-15 segments; beyond that slices get too thin to read."
+      },
+      {
+        "question": "Can I export the chart?",
+        "answer": "Yes, as PNG or SVG, and the data structure can be saved too."
+      }
+    ],
+    "relatedTools": [
+      "nested-pie-chart-generator",
+      "sankey-chart-generator",
+      "tree-chart-generator"
+    ]
+  }
+
 ];
