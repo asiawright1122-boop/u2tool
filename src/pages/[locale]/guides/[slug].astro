@@ -5,7 +5,7 @@ import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import { getGuide } from '@/lib/guides';
-import { getToolBySlug } from '@/config/tools';
+import { getToolBySlug, categories } from '@/config/tools';
 import { filterIndexableTools } from '@/lib/index-suppression';
 import { isValidLocale, type Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
@@ -26,7 +26,9 @@ if (!guide) {
 }
 
 const baseMessages = await loadBaseMessages(locale);
+const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
 const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const siteMessages = (baseMessages.site as Record<string, string>) ?? {};
 const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const relatedTools = filterIndexableTools(
@@ -63,7 +65,13 @@ const toolLabel = 'Herramientas relacionadas';
   <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="flex gap-8">
-        <StaticSidebar locale={locale} />
+        <StaticSidebar
+          locale={locale}
+          categories={categories}
+          categoryNames={categoryMessages}
+          navMessages={navMessages}
+          siteName={siteMessages.name || 'U2Tool'}
+        />
         <main class="flex-1 min-w-0 max-w-3xl">
           <nav class="text-sm text-slate-500 dark:text-slate-400 mb-4">
             <a href={`/${locale}`} class="hover:text-amber-600">Home</a>
