@@ -6,7 +6,8 @@ import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
 import Footer from '@/components/layout/Footer.astro';
 import { getGuidesForLocale } from '@/lib/guides';
 import { isValidLocale, type Locale } from '@/lib/i18n';
-import { loadBaseMessages, buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { loadBaseMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 
 export const prerender = false;
 

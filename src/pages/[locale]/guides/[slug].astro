@@ -8,7 +8,8 @@ import { getGuide } from '@/lib/guides';
 import { getToolBySlug } from '@/config/tools';
 import { filterIndexableTools } from '@/lib/index-suppression';
 import { isValidLocale, type Locale } from '@/lib/i18n';
-import { loadBaseMessages, buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
+import { loadBaseMessages } from '@/lib/translations';
+import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 
 export const prerender = false;
 
