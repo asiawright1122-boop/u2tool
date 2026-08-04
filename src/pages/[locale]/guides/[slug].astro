@@ -8,7 +8,7 @@ import { getGuide } from '@/lib/guides';
 import { getToolBySlug } from '@/config/tools';
 import { filterIndexableTools } from '@/lib/index-suppression';
 import { isValidLocale, type Locale } from '@/lib/i18n';
-import { getPublicSiteUrl } from '@/lib/public-env';
+import { loadBaseMessages, buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 
 export const prerender = false;
 
@@ -24,10 +24,10 @@ if (!guide) {
   return Astro.redirect(`/${locale}/guides/`, 301);
 }
 
-const baseUrl = getPublicSiteUrl();
-const canonical = `${baseUrl}/${locale}/guides/${guide.slug}/`;
-const sectionLabel = 'Guides';
-
+const baseMessages = await loadBaseMessages(locale);
+const navMessages = (baseMessages.nav as Record<string, string>) ?? {};
+const headerTranslations = buildHeaderTranslations(baseMessages);
+const mobileNavMessages = buildMobileNavMessages(navMessages);
 const relatedTools = filterIndexableTools(
   locale,
   guide.relatedTools
@@ -58,7 +58,7 @@ const toolLabel = 'Herramientas relacionadas';
   locale={locale}
   canonicalPath={`/guides/${guide.slug}`}
 >
-  <Header locale={locale} section={sectionLabel} />
+  <Header client:load locale={locale} translations={headerTranslations} />
   <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="flex gap-8">
@@ -130,6 +130,6 @@ const toolLabel = 'Herramientas relacionadas';
       </div>
     </div>
   </div>
-  <MobileBottomNav locale={locale} />
+  <MobileBottomNav client:load locale={locale} navMessages={mobileNavMessages} />
   <Footer locale={locale} />
 </BaseLayout>
