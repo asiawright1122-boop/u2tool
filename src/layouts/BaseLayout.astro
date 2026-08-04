@@ -23,7 +23,7 @@ import {
   resolveSiteDescription,
   withBrand,
 } from '@/lib/seo';
-import { getPublicSiteUrl } from '@/lib/public-env';
+import { getPublicSiteUrl, getCfAnalyticsToken } from '@/lib/public-env';
 import { buildThemeInitScript } from '@/lib/theme-contract';
 import '@/styles/global.css';
 
@@ -93,6 +93,7 @@ const resolvedSiteDescription = resolveSiteDescription(siteDescription, tools.le
 const organizationSchema = buildOrganizationSchema(BASE_URL, resolvedSiteDescription);
 const websiteSchema = buildWebsiteSchema(BASE_URL, locale as Locale, resolvedSiteDescription, isHomePage);
 const themeInitScript = buildThemeInitScript();
+const cfAnalyticsToken = getCfAnalyticsToken();
 ---
 
 <!doctype html>
@@ -121,6 +122,17 @@ const themeInitScript = buildThemeInitScript();
 
     <!-- Inline theme-detection script: runs before render to prevent FOUC -->
     <script is:inline set:html={themeInitScript} />
+
+    {
+      cfAnalyticsToken && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: cfAnalyticsToken })}
+        />
+      )
+    }
   </head>
   <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen relative">
     <!-- Immersive Background System -->

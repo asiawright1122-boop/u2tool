@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  buildIndexableToolsSitemapEntries,
   buildPagesSitemapEntries,
   buildPrioritySitemapEntries,
   buildToolsSitemapEntries,
@@ -7,14 +8,20 @@ import {
 import { newestEntryLastmod } from './sitemap-utils';
 
 describe('sitemap entry builders', () => {
-  it('publishes all discoverable localized tool URLs', () => {
-    const entries = buildToolsSitemapEntries();
-    expect(entries.length).toBeGreaterThanOrEqual(5_000);
+  it('publishes only non-suppressed localized tool URLs (M2 index hygiene)', () => {
+    const entries = buildIndexableToolsSitemapEntries();
+    // M2: sitemap is intentionally slimmed from ~5700 tool URLs to the
+    // demand/protected retention cohort (~300).
+    expect(entries.length).toBeGreaterThanOrEqual(300);
+    expect(entries.length).toBeLessThan(5_000);
     expect(entries.some((entry) => entry.path === '/en/tools/gantt-chart-generator/')).toBe(true);
+    // Suppressed (zero GSC demand, no protection) pages stay live but leave
+    // the sitemap so crawl budget concentrates on demand-bearing pages.
+    expect(entries.some((entry) => entry.path === '/en/tools/uuid-generator/')).toBe(false);
   });
 
   it('publishes the Grammar Checker cohort date without redating untreated tools', () => {
-    const entries = buildToolsSitemapEntries();
+    const entries = buildIndexableToolsSitemapEntries();
     const grammarCheckerLocales = ['en', 'zh', 'ja', 'ko', 'es', 'pt', 'fr', 'de', 'ru', 'ar'];
 
     for (const locale of grammarCheckerLocales) {
@@ -22,8 +29,8 @@ describe('sitemap entry builders', () => {
         .toBe('2026-07-27');
     }
 
-    expect(entries.find((entry) => entry.path === '/en/tools/uuid-generator/')?.lastmod)
-      .toBe('2026-06-02');
+    expect(entries.find((entry) => entry.path === '/en/tools/gantt-chart-generator/')?.lastmod)
+      .toBe('2026-07-01');
     expect(newestEntryLastmod(entries)).toBe('2026-07-27');
   });
 

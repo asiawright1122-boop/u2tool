@@ -52,6 +52,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
 import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, resolveMetaDescription, withBrand } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
@@ -129,6 +130,11 @@ const tool = typeof slugCandidate === 'string'
 if (!tool) {
   return Astro.redirect(`/${locale}/tools/`, 302);
 }
+
+// M2 index hygiene: pages with zero GSC demand and no rendered contract are
+// soft-suppressed (robots=noindex) while staying live and reversible.
+const isIndexSuppressed =
+  INDEX_SUPPRESSION[`${locale}/${tool.slug}`] === true;
 
 const capabilityProfile = getToolCapabilityProfile(tool.slug);
 const publicCapabilityProfile = capabilityProfile?.enforcement === 'release-blocking'
@@ -480,6 +486,7 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
   locale={locale}
   canonicalPath={`/tools/${tool.slug}`}
   siteDescription={siteMessages.description}
+  robots={isIndexSuppressed ? 'noindex, nofollow' : undefined}
 >
   {/* SEO: Hreflang tags for all 10 locales + x-default */}
   <HreflangTags path={`/tools/${tool.slug}`} slot="head" />

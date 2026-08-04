@@ -19,13 +19,41 @@ import { getDiscoverableTools, getPriorityTools } from '@/lib/seo-discovery';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { textWritingToolClusterPath } from '@/lib/text-writing-tool-cluster';
 import { buildUrl, buildUrlForLocales, type SitemapUrlEntry } from '@/lib/sitemap-utils';
+import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
 
+/**
+ * Full tool sitemap (pre-M2 view): every discoverable tool in every locale.
+ * Used by index-readiness evaluation to answer "should this page be
+ * indexable?" independently of the suppression list, avoiding a circular
+ * dependency (suppression derives FROM evaluation output).
+ */
 export function buildToolsSitemapEntries(): SitemapUrlEntry[] {
   const entries: SitemapUrlEntry[] = [];
   const discoverableTools = getDiscoverableTools();
 
   for (const locale of locales) {
     for (const tool of discoverableTools) {
+      entries.push(buildUrl(`/${locale}/tools/${tool.slug}`, '0.7', 'weekly', 'tools'));
+    }
+  }
+
+  return entries;
+}
+
+/**
+ * M2 index-hygiene view of the tool sitemap: suppressed (zero GSC demand,
+ * unprotected) pages stay live but are excluded so crawl budget concentrates
+ * on demand-bearing pages. This is what sitemap-tools.xml publishes.
+ */
+export function buildIndexableToolsSitemapEntries(): SitemapUrlEntry[] {
+  const entries: SitemapUrlEntry[] = [];
+  const discoverableTools = getDiscoverableTools();
+
+  for (const locale of locales) {
+    for (const tool of discoverableTools) {
+      if (INDEX_SUPPRESSION[`${locale}/${tool.slug}`] === true) {
+        continue;
+      }
       entries.push(buildUrl(`/${locale}/tools/${tool.slug}`, '0.7', 'weekly', 'tools'));
     }
   }

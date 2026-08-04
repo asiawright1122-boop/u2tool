@@ -20,6 +20,8 @@
     "report:gsc-coverage": "node --import tsx/esm scripts/seo/gsc-coverage-report.ts",
     "report:gsc-daily-cliff": "node --import tsx/esm scripts/seo/gsc-daily-cliff-report.ts",
     "gsc:generate-mappings": "node --import tsx/esm scripts/gsc-recovery/generate-mappings.ts",
+    "gsc:api-pull": "node --import tsx/esm scripts/seo/gsc-api-pull.ts",
+    "seo:index-suppression:generate": "node --import tsx/esm scripts/seo/generate-index-suppression.ts",
     "gsc-recovery:publish": "node --import tsx/esm scripts/gsc-recovery/publish-mappings.ts",
     "report:gsc-drilldown": "node --import tsx/esm scripts/seo/gsc-drilldown-url-report.ts",
     "report:gsc-recovery": "node --import tsx/esm scripts/seo/gsc-recovery-report.ts",
