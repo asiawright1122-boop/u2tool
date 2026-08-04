@@ -25,7 +25,7 @@
 
 | locale/slug | 周展示 | 现状（desc 字数 / faq） | 优化方向 |
 |---|---|---|---|
-| es/timeline-chart-generator | 148 | 1128 / 5 | 全站最高展示，title 加「gratis en línea」等差异化词 |
+| es/timeline-chart-generator | 148 | 1128 / 5 | ✅ 已执行（2026-08-04）：新增 seo_title/seo_description，TDK 校验通过 |
 | ru/grammar-checker | 116 | 425 / 4 | title 聚焦「проверка грамматики онлайн бесплатно」 |
 | es/graph-chart-generator | 81 | 1084 / 4 | 同上，chart 类 es 集群 |
 | de/excel-viewer | 29 | 467 / 4 | 「Excel-Datei online anzeigen」 |
