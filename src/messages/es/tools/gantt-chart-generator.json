@@ -1,6 +1,8 @@
 {
   "capabilities": {
-    "modes": { "localProjectPlanning": "Planificación local de proyectos Gantt" },
+    "modes": {
+      "localProjectPlanning": "Planificación local de proyectos Gantt"
+    },
     "inputs": {
       "taskFields": "Nombres, fechas, progreso, hitos y dependencias de tareas",
       "jsonProject": "Archivo de proyecto JSON local",
@@ -86,8 +88,19 @@
     "Preparar localmente un evento e intercambiar el calendario como CSV."
   ],
   "faqs": [
-    { "question": "¿Puede calcular la ruta crítica?", "answer": "Sí. Suma los días naturales inclusivos de cada cadena, trata los hitos como cero días y resalta una ruta más larga determinista." },
-    { "question": "¿Dónde se guarda el proyecto?", "answer": "Solo en el almacenamiento local de este navegador. No hay cuenta ni sincronización en la nube." },
-    { "question": "¿Se suben los archivos importados?", "answer": "No. Los archivos JSON y CSV se leen localmente en el navegador." }
-  ]
+    {
+      "question": "¿Puede calcular la ruta crítica?",
+      "answer": "Sí. Suma los días naturales inclusivos de cada cadena, trata los hitos como cero días y resalta una ruta más larga determinista."
+    },
+    {
+      "question": "¿Dónde se guarda el proyecto?",
+      "answer": "Solo en el almacenamiento local de este navegador. No hay cuenta ni sincronización en la nube."
+    },
+    {
+      "question": "¿Se suben los archivos importados?",
+      "answer": "No. Los archivos JSON y CSV se leen localmente en el navegador."
+    }
+  ],
+  "seo_title": "Creador de diagramas de Gantt gratis | U2Tool",
+  "seo_description": "Crea diagramas de Gantt gratis en el navegador: tareas, hitos y dependencias, ruta crítica y exportación PNG o SVG, todo local y sin registro."
 }

@@ -1203,10 +1203,6 @@
       "description": "双向转换TOML和JSON格式。",
       "seo_title": "在线免费TOML JSON转换器",
       "seo_description": "免费在线 TOML/JSON 转换器，助您在浏览器本地极速 在线免费将TOML转换为JSON或JSON转换为TOML。带有语法高亮的验证和格式化配置文件。适用于Rust和Python项目。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "minified": "压缩"
     },
     "json-to-java": {
@@ -1238,10 +1234,6 @@
       "description": "将JSON数据转换为Python数据类、Pydantic或TypedDict。",
       "seo_title": "免费在线 JSON 转 Python 转换器",
       "seo_description": "免费在线 JSON 转 Python，助您在浏览器本地极速 转换器快速生成 Python 数据类与模型代码，适合接口开发、数据处理和类型校验。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "pydanticBaseModel": "Pydantic BaseModel",
       "typedDict": "TypedDict",
       "plainClass": "普通类"
@@ -1264,10 +1256,6 @@
       "description": "将 JSON 数据转换为支持序列化的 Kotlin 数据类。",
       "seo_title": "免费在线 JSON 转 Kotlin 转换器",
       "seo_description": "免费在线 JSON 转 Kotlin，助您在浏览器本地极速 转换器快速生成 Kotlin 数据类代码，适合移动开发、后端建模和接口联调。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "moshi": "Moshi",
       "gson": "Gson",
       "kotlinxSerialization": "Kotlinx 序列化"
@@ -1512,10 +1500,6 @@
       "description": "一键生成随机UUID（v4），支持单条或批量复制。",
       "seo_title": "免费在线 UUID 生成器",
       "seo_description": "免费在线 UUID生成器，助您在浏览器本地快速 UUID 生成器一键生成随机 UUID v4，支持批量创建和快速复制，适合数据库主键、接口标识和测试数据。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "count": "count",
       "generate": "生成",
       "copied": "已复制！",
@@ -1527,10 +1511,6 @@
       "description": "安全地编码或解码URL和查询字符串。",
       "seo_title": "免费在线URL编码解码工具 - 安全高效",
       "seo_description": "免费在线 URL编码/解码，助您在浏览器本地极速 工具安全地编码和解码URL及查询字符串。快速、简单、无需安装。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "在这里输入文本...",
       "input": "输入",
       "url": {
@@ -1549,10 +1529,6 @@
       "seo_title": "免费在线密码生成器",
       "seo_description": "免费在线 密码生成器，助您在浏览器本地快速 创建高强度随机密码，自定义长度、大小写、数字和符号组合，适合账号与密钥场景。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
       "selectOption": "请选择至少一个选项",
-
-
-
-
       "copied": "已复制！",
       "copy": "复制",
       "length": "长度",
@@ -1563,10 +1539,6 @@
       "description": "从文本生成MD5、SHA-1、SHA-256哈希值。",
       "seo_title": "免费在线哈希生成器",
       "seo_description": "免费在线 哈希生成器，助您在浏览器本地快速 生成文本摘要值，适合完整性校验、签名前处理和内容比对。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "inputPlaceholder": "在此处输入文本...",
       "input": "输入",
       "hash": {
@@ -1580,10 +1552,6 @@
       "description": "从文本或网址生成二维码。下载为PNG格式。",
       "seo_title": "免费在线二维码生成器",
       "seo_description": "免费在线 二维码生成器，助您在浏览器本地快速 把文本、链接或联系方式快速转换为二维码，支持 PNG 下载，适合分享、打印和营销场景。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "inputPlaceholder": "在此处输入文本...",
       "input": "输入",
       "qr": {
@@ -1596,10 +1564,6 @@
       "description": "在 HEX、RGB 和 HSL 之间转换颜色并复制结果。",
       "seo_title": "免费在线颜色转换器",
       "seo_description": "颜色转换器支持 HEX、RGB、HSL 互转，使用颜色选择器或数值输入更新颜色并复制结果。",
-
-
-
-
       "color": {
         "preview": "预览"
       },
@@ -1611,10 +1575,6 @@
       "description": "将Unix时间戳转换为可读日期，反之亦然。",
       "seo_title": "免费在线时间戳转换器",
       "seo_description": "免费在线 时间戳转换器，支持在浏览器本地极速 完成秒级与毫秒级时间戳和日期时间互转，适合日志排查、接口调试和开发测试。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "timestamp": {
         "currentTime": "currenttime",
         "unixTimestamp": "unixtimestamp",
@@ -1628,10 +1588,6 @@
       "description": "统计文本中的单词、字符、句子和段落。",
       "seo_title": "免费在线单词计数器与字数统计器",
       "seo_description": "免费在线 单词计数器，助您在浏览器本地极速 统计单词、字数、字符数和段落数，适合写作校对、内容编辑和篇幅控制。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "在此输入文本...",
       "input": "输入",
       "wordCounter": {
@@ -1647,10 +1603,6 @@
       "description": "将文本转换为大写、小写、标题大小写等多种格式。",
       "seo_title": "免费在线文本大小写转换器",
       "seo_description": "免费在线 文本大小写转换器，支持在浏览器本地极速 切换大写、小写、标题格式、句子格式和常见开发命名写法，适合写作整理与代码处理。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "uppercase": "uppercase",
       "lowercase": "lowercase",
       "titleCase": "标题case",
@@ -1663,10 +1615,6 @@
       "description": "将特殊字符编码为 HTML 实体或将其解码回来。",
       "seo_title": "免费在线 HTML 实体编码解码工具",
       "seo_description": "免费在线 HTML 编码器/解码器，助您在浏览器本地极速 HTML 实体编码解码工具快速转换特殊字符与 HTML 实体，适合网页开发、XSS 防护和内容清洗。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "在此输入文本...",
       "input": "输入",
       "html": {
@@ -1684,10 +1632,6 @@
       "description": "编写 Markdown 并预览渲染结果，可复制生成的 HTML。",
       "seo_title": "免费在线 Markdown 预览工具",
       "seo_description": "在左右分栏中输入 Markdown，查看渲染效果，复制可导出 HTML，适合自述文档预览和快速清空重写。",
-
-
-
-
       "inputPlaceholder": "在此处输入文本...",
       "markdown": {
         "editor": "编辑器",
@@ -1702,10 +1646,6 @@
       "description": "为您的设计和原型生成占位符文本。",
       "seo_title": "免费在线 Lorem Ipsum 生成器",
       "seo_description": "免费在线 Lorem Ipsum生成器，助您在浏览器本地极速 Lorem Ipsum 生成器快速生成占位文本段落，适合原型设计、界面排版和网页内容占位。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "lorem": {
         "type": "类型",
         "paragraphs": "paragraphs",
@@ -1723,10 +1663,6 @@
       "description": "实时匹配和高亮显示，测试正则表达式。",
       "seo_title": "免费在线正则表达式测试器",
       "seo_description": "免费在线 正则表达式测试器，助您在浏览器本地一键快速 实时测试 Regex 模式，查看匹配结果、高亮片段和捕获组，适合开发调试与文本处理。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
-
       "regex": {
         "pattern": "pattern",
         "global": "global",
@@ -1745,9 +1681,6 @@
       "description": "调试和验证JWT令牌，支持签名验证",
       "seo_title": "免费在线 JWT 调试器与签名验证工具",
       "seo_description": "免费在线 JWT 调试器，助您在浏览器本地极速 解析令牌结构、检查过期时间并验证签名，适合登录排错、认证调试和接口联调。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "token": "JWT令牌",
       "header": "头部",
       "payload": "载荷",
@@ -1781,10 +1714,6 @@
       "description": "比较两段文本并突出显示其中的差异。",
       "seo_title": "免费在线文本差异对比工具",
       "seo_description": "免费在线 文本差异对比，助您在浏览器本地一键快速 工具快速比较两段文本，定位新增、删除和修改内容，适合文档审阅与代码对比。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
-
       "diffChecker": {
         "original": "original",
         "originalPlaceholder": "originalplaceholder",
@@ -1802,10 +1731,6 @@
       "description": "将 JSON 数据转换为 CSV 格式，或将 CSV 转换为 JSON。",
       "seo_title": "Json To Csv - 免费在线转换器工具 | U2Tool",
       "seo_description": "免费在线 JSON转CSV，助您在浏览器本地极速 将JSON转换为CSV或CSV转换为JSON。支持嵌套对象和数组，可自定义分隔符。适合数据导出和电子表格处理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorInvalidJson": "errorinvalidjson",
       "errorInvalidFormat": "errorinvalid格式",
       "input": "输入",
@@ -1826,10 +1751,6 @@
       "base64Output": "Base64输出",
       "htmlImageTag": "HTML图片标签",
       "cssBackground": "CSS背景",
-
-
-
-
       "clear": "清空",
       "copied": "已复制！"
     },
@@ -1871,10 +1792,6 @@
       "thursday": "周四",
       "friday": "周五",
       "saturday": "周六",
-
-
-
-
       "copied": "已复制！",
       "copy": "复制"
     },
@@ -1883,10 +1800,6 @@
       "description": "将文本转换为URL友好的slug格式。",
       "seo_title": "免费在线文本转 Slug 工具",
       "seo_description": "免费在线 文本转URL，助您在浏览器本地极速 文本转 Slug 工具快速生成 URL 友好路径，适合文章链接、站点目录和内容发布。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "在此输入文本...",
       "separator": "分隔符",
       "none": "无",
@@ -1901,10 +1814,6 @@
       "description": "在线转换二进制、八进制、十进制和十六进制数字。",
       "seo_title": "免费在线数制转换器",
       "seo_description": "免费在线 数制转换器，支持在浏览器本地极速 完成二进制、八进制、十进制和十六进制互转，适合编程计算、协议调试和进制教学。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "inputPlaceholder": "在此处输入文本...",
       "errorInvalidInput": "errorinvalidinput",
       "input": "输入",
@@ -1933,10 +1842,6 @@
       "description": "格式化和压缩XML数据，验证XML语法。",
       "seo_title": "免费在线 XML 格式化与压缩工具",
       "seo_description": "免费在线 XML格式化工具，支持在浏览器本地极速 XML 格式化工具快速美化、压缩并校验 XML 语法，适合接口调试、配置文件整理和数据排错。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "xml": {
         "invalidXml": "invalidxml"
       },
@@ -1953,10 +1858,6 @@
       "description": "在简体和繁体中文字符之间进行转换。",
       "seo_title": "免费在线中文转换器（简繁体互转）",
       "seo_description": "免费在线简繁体中文转换器，支持简体中文与繁体中文（港台习惯）的精准双向转换。支持大文本即时处理，完美保留原有段落格式与标点符号，是内容本地化、跨地区发布、学术整理和日常办公交流的必备文字转换工具。",
-
-
-
-
       "input": "输入",
       "chinese": {
         "placeholder": "在此输入文本...",
@@ -1975,10 +1876,6 @@
       "seo_description": "选择长度、重量、温度等单位类别，设置源单位和目标单位，输入数值后查看并复制换算结果。",
       "enterValue": "输入数值",
       "swapUnits": "切换单位",
-
-
-
-
       "copied": "已复制！",
       "copy": "复制",
       "result": "结果"
@@ -1988,10 +1885,6 @@
       "description": "使用线性和径向选项可视化创建CSS渐变。",
       "seo_title": "免费在线 CSS 渐变生成器",
       "seo_description": "免费在线 渐变生成器，助您在浏览器本地快速 CSS 渐变生成器快速创建线性和径向渐变，适合网页背景、按钮样式和视觉装饰。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "gradient": {
         "type": "类型",
         "linear": "linear",
@@ -2009,10 +1902,6 @@
       "description": "在多种格式之间转换文本和 Unicode 编码。",
       "seo_title": "在线免费 Unicode 转换器",
       "seo_description": "免费在线 Unicode 字符编码转换器，支持在普通文本与 Unicode 编码（如常见转义格式）、HTML 实体编码及 CSS 转义字符之间进行快速双向转换。即时解析，格式保留，适合跨平台文本处理、网页乱码排错和国际化字符集开发场景。",
-
-
-
-
       "input": "输入",
       "unicode": {
         "placeholder": "在此输入文本...",
@@ -2037,10 +1926,6 @@
       "original": "原始",
       "minified": "压缩",
       "saved": "保存",
-
-
-
-
       "input": "输入",
       "minify": "压缩",
       "clear": "清除",
@@ -2053,10 +1938,6 @@
       "description": "格式化和美化SQL查询，以提高可读性。",
       "seo_title": "免费在线SQL格式化工具 - 美化查询更易读",
       "seo_description": "免费在线 SQL格式化工具，支持在浏览器本地极速 美化SQL查询，提高代码可读性。立即尝试，让编写SQL变得更简单。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "input": "输入",
       "sql": {
         "loadExample": "load示例"
@@ -2073,10 +1954,6 @@
       "description": "将汉字转换为带声调或不带声调的拼音。",
       "seo_title": "免费在线拼音转换器",
       "seo_description": "免费在线 拼音转换器，支持在浏览器本地极速 把汉字转换为带声调或无声调拼音，适合中文学习、发音标注和文本处理。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "input": "输入",
       "pinyin": {
         "placeholder": "在此输入文本...",
@@ -2094,10 +1971,6 @@
       "description": "选择颜色并获取多种格式的HEX、RGB、HSL值。",
       "seo_title": "免费在线颜色选择器",
       "seo_description": "免费在线 颜色选择器，助您在浏览器本地极速 在线免费选择颜色并获取HEX、RGB、HSL格式的颜色值。具有预设配色板和最近颜色的视觉颜色选择器。适用于设计师。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "colorPicker": {
         "selectColor": "select颜色",
         "presets": "presets",
@@ -2115,10 +1988,6 @@
       "description": "计算宽高比并按比例调整尺寸。",
       "seo_title": "免费在线宽高比计算器",
       "seo_description": "免费在线 宽高比计算器，助您在浏览器本地极速 按比例换算图片和视频尺寸，适合裁剪适配、分辨率调整和媒体制作。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "aspect": {
         "original": "original",
         "width": "宽度",
@@ -2139,10 +2008,6 @@
       "description": "使用格式化和美化选项来格式化和美化CSS代码。",
       "seo_title": "免费在线CSS美化工具 - CSS美化器",
       "seo_description": "免费在线 CSS美化工具，助您在浏览器本地极速 格式化和美化CSS代码，支持在线使用。立即尝试CSS美化器，优化代码更高效。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "indent": "缩进",
       "error": "错误",
       "beautify": "beautify",
@@ -2158,10 +2023,6 @@
       "description": "使用格式化和美化选项来格式化和美化JavaScript代码。",
       "seo_title": "免费在线 JavaScript 美化工具",
       "seo_description": "免费在线 JavaScript美化工具，助您在浏览器本地极速 JavaScript 美化工具快速格式化、缩进和整理 JS 代码，适合调试压缩脚本、代码审阅和前端开发。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "indent": "缩进",
       "error": "错误",
       "beautify": "beautify",
@@ -2177,10 +2038,6 @@
       "description": "实时预览 HTML 代码，支持 CSS 和 JavaScript。",
       "seo_title": "免费在线 HTML 预览 - 实时 HTML 查看器与编辑器 | U2Tool",
       "seo_description": "使用我们的免费 HTML 预览工具实时预览 HTML 代码。支持实时渲染和 CSS、JavaScript 支持。适用于网页开发、学习 HTML 和快速原型设计。",
-
-
-
-
       "refresh": "刷新",
       "htmlCode": "HTML 代码",
       "preview": "预览",
@@ -2192,10 +2049,6 @@
       "description": "查找 IP 地址位置、ISP 及其他信息。",
       "seo_title": "在线免费 IP 地址查找",
       "seo_description": "免费在线 IP 查找，助您在浏览器本地极速 在线免费查找 IP 地址地理位置。获取国家、城市、ISP、时区和坐标。适用于网络故障排除和安全分析。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "lookup": "查询",
       "myIp": "我的 IP",
       "loading": "加载中...",
@@ -2214,10 +2067,6 @@
       "description": "将文本转换为摩尔斯电码或将摩尔斯电码转换为文本。",
       "seo_title": "免费在线摩尔斯电码转换器",
       "seo_description": "免费在线 摩尔斯电码转换器，助您在浏览器本地极速 完成文本与摩尔斯电码互转，适合无线电学习、编码练习和信号识别。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "text": "文本",
       "toMorse": "转摩斯码",
       "textPlaceholder": "输入文本...",
@@ -2233,10 +2082,6 @@
       "description": "在自定义范围内生成随机整数，可选择不重复结果。",
       "seo_title": "免费在线随机数生成器",
       "seo_description": "免费在线 随机数生成器，助您在浏览器本地快速 输入最小值、最大值和数量，生成最多 1000 个随机整数，可选择去重并复制结果。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "min": "min",
       "max": "max",
       "unique": "unique"
@@ -2246,10 +2091,6 @@
       "description": "反转文本中的字符、单词或行的顺序。",
       "seo_title": "免费在线文本反转工具",
       "seo_description": "免费在线 文本反转工具，助您在浏览器本地极速 反转字符、单词或行顺序，适合文本处理、格式测试和内容实验。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "reverseChars": "reversechars",
       "reverseWords": "reversewords",
       "reverseLines": "reverselines",
@@ -2260,10 +2101,6 @@
       "description": "统计文本行数，提供去除重复行、空行和排序的选项。",
       "seo_title": "免费在线行数统计器",
       "seo_description": "免费在线 行数统计器，助您在浏览器本地极速 统计总行数、空行和唯一行，适合数据清理、日志整理和文本分析。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "totalLines": "totallines",
       "nonEmptyLines": "nonemptylines",
       "emptyLines": "emptylines",
@@ -2279,10 +2116,6 @@
       "description": "将字符串转义或反转义为JSON、HTML、URL和JavaScript格式。",
       "seo_title": "在线免费字符串转义工具",
       "seo_description": "免费在线字符串转义与反转义工具，支持 JSON、HTML、URL、JavaScript 及 Java 格式字符串的一键安全转义。精准处理双引号、斜杠等特殊字符，避免代码解析错误与格式破损，即时处理，一键复制，适合开发人员接口编写和配置文件整理。",
-
-
-
-
       "error": "错误",
       "escape": "escape",
       "unescape": "unescape",
@@ -2293,10 +2126,6 @@
       "description": "在YAML和JSON格式之间进行转换。",
       "seo_title": "免费在线 YAML JSON 转换器",
       "seo_description": "免费在线 YAML JSON 转换器，助您在浏览器本地极速 完成 YAML 与 JSON 互转，适合配置文件整理、接口调试和运维准备。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "invalidYaml": "invalidyaml",
       "invalidJson": "invalidjson",
       "yamlPlaceholder": "yamlplaceholder",
@@ -2307,10 +2136,6 @@
       "description": "计算两个日期之间的差异，或对日期进行加减天数。",
       "seo_title": "免费在线日期计算器 - 快速计算日期差",
       "seo_description": "免费在线 日期计算器，可帮助您在浏览器本地 计算日期差或加减天数。立即尝试，快速准确。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "dateDiff": "日期差",
       "startDate": "开始日期",
       "endDate": "结束日期",
@@ -2330,10 +2155,6 @@
       "description": "去除文本中的重复行，保留唯一内容。",
       "seo_title": "免费在线文本去重工具",
       "seo_description": "免费在线 文本去重工具，助您在浏览器本地极速 删除重复行并保留唯一内容，适合数据清洗、日志整理和内容审核。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "caseSensitive": "casesensitive",
       "trimLines": "trimlines",
       "original": "original",
@@ -2346,10 +2167,6 @@
       "description": "混合两种颜色并生成渐变步骤。",
       "seo_title": "免费在线颜色混合器",
       "seo_description": "免费在线 颜色混合器，助您在浏览器本地极速 混合两种颜色并生成渐变步骤，适合界面配色、海报设计和视觉实验。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "color1": "color1",
       "color2": "color2",
       "steps": "steps"
@@ -2359,10 +2176,6 @@
       "description": "按键名排序JSON对象。",
       "seo_title": "免费在线 JSON 排序工具 - 一键搞定 JSON 对象排序",
       "seo_description": "免费在线 JSON排序工具，助您在浏览器本地极速 在线排序 JSON 对象，无需安装。立即使用我们的免费工具，简化 JSON 数据管理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "invalidJson": "invalidjson",
       "ascending": "ascending",
       "descending": "descending",
@@ -2374,10 +2187,6 @@
       "description": "生成自定义尺寸和颜色的占位符图片。",
       "seo_title": "免费在线占位符图片生成器",
       "seo_description": "免费在线 占位符图片生成器，助您在浏览器本地极速 创建自定义尺寸和颜色的占位图，适合原型设计、线框图和页面开发。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "width": "宽度",
       "height": "高度",
       "bgColor": "bg颜色",
@@ -2390,10 +2199,6 @@
       "description": "使用AES加密算法和密码对文本进行加密和解密。",
       "seo_title": "免费在线文本加密工具",
       "seo_description": "免费在线 文本加密，助您在浏览器本地极速 工具快速加密和解密文本内容，适合敏感信息保护、密码传输和本地数据处理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "encryption": {
         "error": "错误",
         "encrypt": "encrypt",
@@ -2411,10 +2216,6 @@
       "description": "计算文件的MD5、SHA-1、SHA-256、SHA-512哈希值。",
       "seo_title": "免费在线文件哈希计算器",
       "seo_description": "免费在线 文件哈希计算器，助您在浏览器本地极速 计算文件哈希值，适合完整性校验、下载验证和篡改排查。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "fileHash": {
         "dropzone": "dropzone",
         "fileName": "file名称",
@@ -2428,10 +2229,6 @@
       "description": "使用可自定义行和列的可视化编辑器生成HTML表格。",
       "seo_title": "在线免费HTML表格生成器",
       "seo_description": "免费在线 HTML表格生成器，助您在浏览器本地快速 使用在线可视化编辑器免费生成HTML表格。自定义行、列、表头和样式。导出干净的HTML代码用于您的网站。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "tableGen": {
         "rows": "rows",
         "cols": "cols",
@@ -2448,10 +2245,6 @@
       "description": "根据JSON Schema验证JSON数据的有效性。",
       "seo_title": "免费在线 JSON Schema 验证器",
       "seo_description": "免费在线 JSON Schema验证器，助您在浏览器本地一键快速 JSON Schema 验证器检查 JSON 数据是否符合 Schema 规则，输出详细错误信息，适合接口联调与数据校验。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
-
       "schemaValidator": {
         "loadExample": "load示例",
         "jsonPlaceholder": "jsonplaceholder",
@@ -2466,10 +2259,6 @@
       "description": "常见的正则表达式模式，用于处理电子邮件、URL、电话号码等。",
       "seo_title": "免费在线正则表达式模式库",
       "seo_description": "免费在线 正则表达式模式库，助您在浏览器本地极速 查找邮箱、URL、电话和日期等常用模式，适合规则编写、表单校验和开发参考。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "regexPatterns": {
         "test": "test",
         "match": "match",
@@ -2483,10 +2272,6 @@
       "description": "支持UTF-8、UTF-16和ASCII编码的文本字节计数。",
       "seo_title": "免费在线字节计数器",
       "seo_description": "免费在线字节计数器，可精准计算指定文本在 ASCII、GBK 等各种常用编码格式下的物理字节数和字符总数。支持大文本即时分析，特别适合数据库字段长度校验、API 数据限制评估以及短信字数限制检测等场景。",
-
-
-
-
       "input": "输入",
       "byteCounter": {
         "placeholder": "在此输入文本...",
@@ -2501,10 +2286,6 @@
       "description": "将JSON数据转换为TypeScript接口定义。",
       "seo_title": "在线免费JSON转TypeScript转换器",
       "seo_description": "免费在线 JSON转TypeScript，助您在浏览器本地极速 在线免费将JSON转换为TypeScript接口和类型。生成类型安全的代码，支持可选属性和嵌套类型。对于TS开发者来说是必不可少的。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "json": {
         "invalidJson": "invalidjson"
       },
@@ -2521,10 +2302,6 @@
       "description": "优化并压缩SVG代码以减少文件大小。",
       "seo_title": "免费在线SVG优化工具，快速压缩SVG代码",
       "seo_description": "免费在线 SVG优化器，助您在浏览器本地极速 SVG优化工具，轻松压缩SVG代码，减少文件大小，提升网站加载速度。立即尝试，让网站更高效。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "input": "输入",
       "svgOptimizer": {
         "placeholder": "在此输入文本...",
@@ -2543,10 +2320,6 @@
       "description": "将文本转换为二进制或二进制转换为文本。",
       "seo_title": "免费在线文本转二进制工具",
       "seo_description": "免费在线 文本转二进制，助您在浏览器本地极速 工具快速完成文本与二进制互转，适合编码学习、字节分析和数据调试。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "textBinary": {
         "toBinary": "tobinary",
         "toText": "totext",
@@ -2563,10 +2336,6 @@
       "description": "将 Markdown 文本转换为 HTML 代码。",
       "seo_title": "免费在线 Markdown 转 HTML 工具",
       "seo_description": "免费在线 Markdown 转 HTML，助您在浏览器本地极速 工具快速转换文档内容并导出代码，适合静态页面、自述文档和博客发布。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "mdToHtml": {
         "mdPlaceholder": "mdplaceholder",
         "preview": "预览"
@@ -2579,10 +2348,6 @@
       "description": "压缩和美化HTML代码以减少文件大小。",
       "seo_title": "免费在线 HTML 压缩器",
       "seo_description": "免费在线 HTML压缩器，助您在浏览器本地极速 HTML 压缩器快速删除空格、注释并压缩页面代码，适合网页性能优化和发布前清理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "error": "错误",
       "minify": "minify",
       "beautify": "beautify",
@@ -2608,10 +2373,6 @@
       "description": "将文本编码为 Base32 或将 Base32 编码的文本解码。",
       "seo_title": "免费在线 Base32 编码解码器",
       "seo_description": "免费在线 Base32 编码/解码器，助您在浏览器本地极速 Base32 编码解码器快速完成文本与密钥字符串的 Base32 转换，适合双重验证密钥和安全数据处理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "error": "错误",
       "encode": "encode",
       "decode": "decode",
@@ -2626,10 +2387,6 @@
       "description": "在 Epoch/Unix 时间戳和日期时间文本之间双向转换。",
       "seo_title": "免费在线时间戳转换器",
       "seo_description": "输入 Unix 时间戳转日期文本，或输入日期时间转秒级 Epoch；可使用当前时间并复制结果。",
-
-
-
-
       "epoch": {
         "current": "current",
         "timestamp": "timestamp",
@@ -2646,10 +2403,6 @@
       "description": "在线转换CSS单位如px、rem、em、pt、vw、vh。",
       "seo_title": "免费CSS单位转换器在线",
       "seo_description": "免费在线 CSS单位转换器，支持在浏览器本地极速 在线免费转换CSS单位（px、em、rem、%、vw、vh）。快速计算响应式值，适用于响应式网页设计。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "cssUnit": {
         "value": "值",
         "unit": "unit",
@@ -2664,10 +2417,6 @@
       "description": "详细的字符、单词、句子、段落统计等。",
       "seo_title": "免费在线文本统计工具",
       "seo_description": "免费在线 文本统计，助您在浏览器本地极速 工具快速统计字数、字符数、句子数和阅读时间，适合写作分析、内容编辑和篇幅控制。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "textStats": {
         "placeholder": "在此输入文本...",
         "chars": "chars",
@@ -2722,17 +2471,14 @@
       "inputPlaceholder": "在此输入文本...",
       "invalidHex": "请输入完整的十六进制字节对。",
       "invalidUtf8": "十六进制字节不是有效的 UTF-8。",
-      "invalidByte": "请输入恰好两位十六进制数字。"
+      "invalidByte": "请输入恰好两位十六进制数字。",
+      "asciiPreview": "只读 ASCII 预览"
     },
     "color-palette": {
       "name": "颜色调色板生成器",
       "description": "生成颜色深浅、互补、类似和三和色调色板。",
       "seo_title": "免费在线颜色调色板生成器",
       "seo_description": "免费在线 颜色调色板生成器，助您在浏览器本地极速 创建互补色、类似色、三元配色和单色方案，适合品牌设计、界面配色和主题搭配。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "palette": {
         "baseColor": "base颜色",
         "hexCode": "hexcode",
@@ -2747,10 +2493,6 @@
       "description": "查询HTTP状态码及其含义。",
       "seo_title": "免费在线HTTP状态码查询工具 - 易查易懂",
       "seo_description": "免费在线 HTTP状态码，助您在浏览器本地极速 查询HTTP状态码及其含义，一站式在线工具，助您轻松解决网络问题。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "httpStatus": {
         "search": "search"
       }
@@ -2760,10 +2502,6 @@
       "description": "将JSON数据转换为YAML格式。",
       "seo_title": "免费在线 JSON 转 YAML 转换器",
       "seo_description": "免费在线 JSON 转 YAML，助您在浏览器本地极速 转换器快速把 JSON 数据转换为 YAML 结构，适合配置文件整理、接口调试和数据转换。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "json": {
         "invalidJson": "invalidjson"
       },
@@ -2777,10 +2515,6 @@
       "seo_title": "免费在线数据URI生成器",
       "seo_description": "免费在线 数据URI生成器，助您在浏览器本地极速 生成数据URI，从文件或文本中提取。将图片、字体和文件转换为base64数据URL。非常适合在CSS和HTML中嵌入资源。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
       "output": "数据URI",
-
-
-
-
       "copied": "已复制！",
       "copy": "复制",
       "clear": "清除"
@@ -2790,10 +2524,6 @@
       "description": "比较两段文本的相似度，计算编辑距离。",
       "seo_title": "免费在线文本相似度比较工具",
       "seo_description": "免费在线文本相似度比较工具，通过高效算法精准比对两段文本或代码，快速找出差异并计算文本相似度。采用清晰的红绿高亮双栏对比视图，支持逐字、逐词和逐行比对，是文案审核、版本对比和代码审查的必备工具。",
-
-
-
-
       "textCompare": {
         "text1": "text1",
         "placeholder": "在此输入文本...",
@@ -2829,10 +2559,6 @@
       "description": "在线计算Linux/Unix文件权限的八进制和符号表示。",
       "seo_title": "免费在线文件权限计算器",
       "seo_description": "免费在线 文件权限计算器，可帮助您在浏览器本地 换算读、写、执行权限，适合服务器配置、脚本部署和权限检查。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "chmod": {
         "octal": "octal",
         "symbolic": "symbolic",
@@ -2848,10 +2574,6 @@
       "description": "在浏览器中生成 Code 128、Code 39、EAN-13 和 UPC-A 的 SVG 条码预览。",
       "seo_title": "免费在线条形码生成器",
       "seo_description": "免费在线 条形码生成器，助您在浏览器本地快速 在线生成适合商品、库存和物流标签草稿的条形码 SVG 预览。输入内容、选择格式并即时查看常见条码渲染结果。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "barcode": {
         "text": "text",
         "format": "格式化"
@@ -2862,10 +2584,6 @@
       "description": "调整音色、语速和音调，将文本转换为语音。",
       "seo_title": "免费在线文本转语音工具，调整语速音高",
       "seo_description": "免费在线 文本转语音，助您在浏览器本地极速 将文本转换为语音，支持调整语速和音高。立即试用我们的在线文本转语音工具。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "tts": {
         "placeholder": "在此输入文本...",
         "voice": "voice",
@@ -2898,10 +2616,6 @@
       "description": "将JSON数据转换为XML格式。",
       "seo_title": "免费在线 JSON to XML 转换工具",
       "seo_description": "免费在线 JSON转XML，助您在浏览器本地极速 将 JSON 数据转换为 XML 格式。我们的在线工具操作简单，快速准确。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "json": {
         "invalidJson": "invalidjson"
       },
@@ -2914,10 +2628,6 @@
       "description": "根据指定的行宽换行。",
       "seo_title": "免费在线文本换行器 - 按行宽自动换行",
       "seo_description": "免费在线 文本换行器，助您在浏览器本地极速 按指定字符数或行宽自动换行，适合文档排版、代码注释和内容整理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "textWrapper": {
         "width": "宽度",
         "chars": "chars",
@@ -2934,10 +2644,6 @@
       "description": "使用可自定义分隔符将 CSV 数据转换为 JSON 格式。",
       "seo_title": "免费在线CSV to JSON转换工具",
       "seo_description": "免费在线 CSV转JSON，助您在浏览器本地极速 将CSV数据转换为JSON格式，自定义分隔符。立即使用我们的在线工具。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "csvToJson": {
         "error": "错误",
         "delimiterTab": "delimitertab",
@@ -2958,10 +2664,6 @@
       "description": "编码和解码HTML实体，包括特殊字符和符号。",
       "seo_title": "在线免费HTML实体转换器",
       "seo_description": "免费在线 HTML实体转换器，助您在浏览器本地极速 在线免费转换HTML实体。将特殊字符编码为HTML实体，解码实体为字符。防止XSS攻击并显示HTML。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "encode": "encode",
       "decode": "decode",
       "input": "输入",
@@ -2978,10 +2680,6 @@
       "description": "根据不同区域格式化数字，支持小数、货币和百分比样式。",
       "seo_title": "免费在线数字格式化器 - 格式化货币百分比和小数",
       "seo_description": "免费在线 数字格式化器，支持在浏览器本地极速 按地区规则格式化数字、货币和百分比，适合国际化页面、财务展示和数据输出。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "numberFormat": {
         "number": "number",
         "style": "样式",
@@ -2997,10 +2695,6 @@
       "description": "使用SHA-1、SHA-256、SHA-512算法生成HMAC签名。",
       "seo_title": "免费在线 HMAC 生成器",
       "seo_description": "免费在线 HMAC生成器，助您在浏览器本地快速 HMAC 生成器快速生成消息认证签名，适合接口验签、请求校验和数据完整性保护。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "hmac": {
         "error": "错误",
         "message": "message",
@@ -3019,10 +2713,6 @@
       "description": "根据长度、字符类型和常见模式检查密码强度。",
       "seo_title": "免费在线密码强度检测器",
       "seo_description": "密码强度检测器根据密码复杂度、常见模式和字符组合提示破解风险与密码优化建议。",
-
-
-
-
       "pwStrength": {
         "password": "password",
         "placeholder": "在此输入文本...",
@@ -3041,10 +2731,6 @@
       "description": "生成与Google Authenticator兼容的时间基一次性密码。",
       "seo_title": "免费在线 TOTP 生成器",
       "seo_description": "免费在线 TOTP（基于时间的一次性密码）生成器，快速计算与谷歌身份验证器兼容的双重验证（2FA）与双重认证动态口令。支持输入 Base32 密钥一键生成 6 位实时安全验证码，全部在浏览器本地完成，绝不上传，确保账号安全。",
-
-
-
-
       "totp": {
         "secret": "secret",
         "secretPlaceholder": "secretplaceholder",
@@ -3064,10 +2750,6 @@
       "description": "解析 User Agent 字符串以识别浏览器、操作系统和设备信息。",
       "seo_title": "免费在线用户代理解析器",
       "seo_description": "免费在线 用户代理解析器，支持在浏览器本地极速 识别浏览器、操作系统和设备类型，适合访问分析、兼容性排查和设备检测。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "uaParser": {
         "userAgent": "useragent",
         "placeholder": "在此输入文本...",
@@ -3084,10 +2766,6 @@
       "description": "计算IP地址范围、子网掩码和可用主机。",
       "seo_title": "免费在线 CIDR 子网计算器",
       "seo_description": "免费在线 CIDR计算器，可帮助您在浏览器本地 CIDR 子网计算器快速计算 IP 网段、子网掩码、网络地址、广播地址和可用主机范围，适合网络规划与排错。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "cidr": {
         "invalid": "invalid",
         "input": "输入",
@@ -3108,10 +2786,6 @@
       "description": "解析和格式化HTTP头信息，并提供每个头的说明。",
       "seo_title": "免费在线 HTTP 头解析器",
       "seo_description": "免费在线 HTTP 头解析器，支持在浏览器本地极速 解析请求头和响应头信息，适合接口调试、缓存排查和安全检查。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "httpHeader": {
         "input": "输入",
         "loadExample": "load示例",
@@ -3125,10 +2799,6 @@
       "description": "计算百分比、百分比变化和增减值。",
       "seo_title": "免费在线百分比计算器 - 快速计算百分比变化",
       "seo_description": "免费在线 百分比计算器，可帮助您在浏览器本地 计算百分比、变化值和增减量。立即尝试，让计算变得简单快捷。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "percent": {
         "whatIsPercent": "whatispercent",
         "of": "of",
@@ -3149,10 +2819,6 @@
       "description": "计算平均数、中位数、众数、标准差、方差等。",
       "seo_title": "免费在线统计计算器",
       "seo_description": "免费在线 统计计算器，可帮助您在浏览器本地 计算均值、中位数、众数、方差和标准差，适合数据分析、课堂作业和研究场景。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "stats": {
         "inputLabel": "inputlabel",
         "inputHint": "inputhint",
@@ -3181,10 +2847,6 @@
       "description": "在浏览器中使用 sin、cos、tan、ln、log、平方根、幂、常数、百分号和记忆键进行计算。",
       "seo_title": "免费在线科学计算器",
       "seo_description": "免费在线 科学计算器，可帮助您在浏览器本地 支持 sin、cos、tan、ln、log、sqrt、power、pi、e、阶乘、百分号、RAD/DEG 和 MC/MR 记忆键。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "sci": {
         "error": "错误",
         "angleMode": "anglemode",
@@ -3197,10 +2859,6 @@
       "description": "按字母、数字或长度对文本行进行排序，提供更多选项。",
       "seo_title": "免费在线文本排序器 - 按字母数字或长度排序",
       "seo_description": "免费在线 文本排序器，助您在浏览器本地极速 按字母、数字、长度或反向规则整理文本行，适合数据清洗、列表整理和内容处理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "sorter": {
         "sortType": "sort类型",
         "alphabetical": "alphabetical",
@@ -3235,10 +2893,6 @@
       "description": "从文本中提取电子邮件、网址、电话号码、IP地址及其他内容。",
       "seo_title": "免费在线文本提取器",
       "seo_description": "免费在线 文本提取器，助您在浏览器本地极速 提取邮箱、网址、电话号码和 IP 信息，适合数据整理、日志分析和内容筛选。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "extractor": {
         "email": "email",
         "url": "url",
@@ -3268,10 +2922,6 @@
       "description": "通过类别一键浏览、搜索和复制 Emoji。",
       "seo_title": "免费在线表情符号选择器",
       "seo_description": "免费在线 表情符号选择器，助您在浏览器本地极速 浏览、搜索并复制常用表情，适合社交发布、内容创作和界面设计。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "emoji": {
         "searchPlaceholder": "searchplaceholder",
         "recent": "recent",
@@ -3298,10 +2948,6 @@
       "jsonPlaceholder": "输入 JSON 数组...",
       "input": "输入",
       "output": "输出",
-
-
-
-
       "inputPlaceholder": "在此粘贴 JSON..."
     },
     "image-compressor": {
@@ -3309,10 +2955,6 @@
       "description": "压缩图片以减小文件大小，同时保持图片质量。",
       "seo_title": "免费在线图片压缩器",
       "seo_description": "免费在线 图片压缩器，助您在浏览器本地极速 减小图片文件大小，适合网页上传、页面提速和图片资源优化。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "quality": "质量",
       "compressed": "已压缩",
       "saved": "已保存",
@@ -3332,10 +2974,6 @@
       "description": "在线转换图像格式，支持PNG、JPEG和WebP格式。",
       "seo_title": "免费在线图像格式转换器",
       "seo_description": "免费在线 图像格式转换器，支持在浏览器本地极速 完成图片格式互转，适合兼容性处理、素材整理和网页资源优化。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
-
       "targetFormat": "目标格式",
       "quality": "质量",
       "converted": "已转换",
@@ -3356,10 +2994,6 @@
       "description": "从任何图像生成不同尺寸的favicon。",
       "seo_title": "免费在线 Favicon 生成器",
       "seo_description": "免费在线 Favicon生成器，助您在浏览器本地快速 Favicon 生成器快速把图片转换为网站图标，适合浏览器标签、书签图标和站点品牌展示。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "sizes": "尺寸",
       "hint": "上传正方形图片效果最佳",
       "processing": "处理中...",
@@ -3378,10 +3012,6 @@
       "description": "支持自由裁剪和固定比例裁剪图片。",
       "seo_title": "在线免费图片裁剪工具 - 自由裁剪与比例裁剪",
       "seo_description": "免费在线 图片裁剪工具，助您在浏览器本地极速 在线按自由比例或预设比例裁剪图片，支持 1:1、4:3、16:9 和自定义尺寸，适合头像、封面和商品图处理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "aspectRatio": "宽高比",
       "selectArea": "选择区域",
       "changeImage": "更换图片",
@@ -3399,10 +3029,6 @@
       "description": "为各种项目类型和语言生成.gitignore文件。",
       "seo_title": "免费在线 .gitignore 生成器",
       "seo_description": "免费在线 .gitignore 生成器，助您在浏览器本地快速 创建项目忽略规则文件，适合 Git 仓库清理、团队协作和多语言项目模板配置。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "languages": "编程语言",
       "frameworks": "框架",
       "os": "操作系统",
@@ -3430,10 +3056,6 @@
       "description": "生成自定义配置和脚本的package.json文件。",
       "seo_title": "免费在线 package.json 生成器",
       "seo_description": "免费在线 package.json生成器，助您在浏览器本地快速 package.json 生成器快速创建脚本、依赖项和项目配置，适合 JavaScript 项目初始化、脚本管理和模板整理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "version": "版本",
       "main": "入口文件",
       "author": "作者",
@@ -3455,10 +3077,6 @@
       "description": "通过移除空白和格式化来压缩JSON，减少文件大小。",
       "seo_title": "免费在线 JSON 压缩器",
       "seo_description": "免费在线 JSON压缩工具，助您在浏览器本地极速 JSON 压缩器快速删除空格并压缩数据内容，适合接口响应优化、配置传输和文件瘦身。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "在此处输入文本...",
       "json": {
         "invalidJson": "invalidjson"
@@ -3485,10 +3103,6 @@
       "swapTimezones": "交换时区",
       "convertedTime": "转换后时间",
       "worldClock": "世界时钟",
-
-
-
-
       "copied": "复制成功!",
       "copy": "复制"
     },
@@ -3529,10 +3143,6 @@
       "removeColumn": "删除列",
       "markdownOutput": "Markdown 输出",
       "preview": "预览",
-
-
-
-
       "clear": "清空",
       "copied": "已复制!",
       "copy": "复制"
@@ -3548,10 +3158,6 @@
       "resultPlaceholder": "结果将显示在此...",
       "aboutTitle": "Base58 介绍",
       "aboutText": "Base58 是一种二进制到文本的编码，用于比特币和其他加密货币。它排除了容易混淆的字符（0, O, I, l），以提高可读性。",
-
-
-
-
       "errorEncoding": "编码错误",
       "errorInvalidInput": "无效输入",
       "input": "输入",
@@ -3565,10 +3171,6 @@
       "description": "填写页面标题、描述和分享字段，生成可复制的 meta 标签。",
       "seo_title": "免费在线元标签生成器 - SEO 页面摘要与分享标签",
       "seo_description": "元标签生成器可填写页面标题、描述和社交分享字段，生成 SEO 与分享标签代码。",
-
-
-
-
       "metaTagGenerator": {
         "pageTitle": "page标题",
         "pageTitlePlaceholder": "page标题placeholder",
@@ -3619,10 +3221,6 @@
       "sitemapUrl": "站点地图URL",
       "crawlDelay": "爬取延迟（秒）",
       "output": "robots.txt",
-
-
-
-
       "copied": "已复制！",
       "copy": "复制",
       "allow-all": "允许全部",
@@ -3633,10 +3231,6 @@
       "description": "预览您的页面在社交媒体上分享时的外观。",
       "seo_title": "免费在线 OpenGraph 预览工具",
       "seo_description": "免费在线 OpenGraph 预览，助您在浏览器本地极速 OpenGraph 预览工具快速查看网页分享卡片效果，适合社交分享调试、元标签检查和发布前预览。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "openGraphPreview": {
         "defaultTitle": "默认标题",
         "defaultDescription": "默认描述",
@@ -3696,10 +3290,6 @@
       "row": "行 {index}",
       "preview": "预览",
       "generatedCss": "生成的CSS",
-
-
-
-
       "copied": "已复制！",
       "copy": "复制"
     },
@@ -3708,10 +3298,6 @@
       "description": "在线CSS Flexbox布局生成器，实时预览。",
       "seo_title": "免费在线 CSS 弹性布局生成器 - 可视化生成布局代码",
       "seo_description": "免费在线 CSS 弹性盒子生成器，助您在浏览器本地快速 在线配置 CSS 弹性布局，实时调整方向、换行、对齐和间距，并一键复制样式代码，适合前端页面开发。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "cssFlexboxGenerator": {
         "direction": "direction",
         "directionRow": "direction行",
@@ -3753,10 +3339,6 @@
       "description": "自定义负载和密钥生成JSON Web Tokens。",
       "seo_title": "免费JWT生成器在线",
       "seo_description": "免费在线 JWT生成器，助您在浏览器本地快速 在线生成带有自定义声明、过期时间和HMAC/RSA签名的JWT令牌，无需注册。创建API认证和授权测试的访问令牌。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "jwt": {
         "invalidPayload": "invalidpayload",
         "error": "错误",
@@ -3839,10 +3421,6 @@
       "every15min": "每15分钟",
       "everySunday": "每周日",
       "at6amAnd6pm": "早上6点和晚上6点",
-
-
-
-
       "invalidCronExpression": "无效的Cron表达式"
     },
     "json-to-graphql": {
@@ -3856,10 +3434,6 @@
       "placeholder": "输入JSON对象...",
       "graphqlOutput": "GraphQL模式",
       "typeInference": "类型推断",
-
-
-
-
       "inputPlaceholder": "输入类型名称...",
       "errorInvalidJson": "无效的JSON输入",
       "convert": "转换",
@@ -3942,10 +3516,6 @@
       "copy": "复制",
       "seo_title": "免费在线 CSS 压缩器",
       "seo_description": "免费在线 CSS压缩器，助您在浏览器本地极速 CSS 压缩器快速删除空格和注释、压缩样式代码并减小文件体积，适合前端发布优化。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "输入CSS代码...",
       "outputPlaceholder": "结果将显示在此处...",
       "originalSize": "原始大小",
@@ -4078,10 +3648,6 @@
       "copy": "复制",
       "seo_title": "在线免费HTML转Markdown转换器",
       "seo_description": "免费在线 HTML转Markdown，助您在浏览器本地极速 在线免费将HTML转换为Markdown格式。保留格式、链接、图片和代码块。适用于迁移到基于Markdown的系统。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "输入HTML代码...",
       "outputPlaceholder": "结果将显示在此处...",
       "link": "链接"
@@ -4168,10 +3734,6 @@
       "copy": "复制",
       "seo_title": "免费在线XML to JSON转换工具 - 快速便捷",
       "seo_description": "免费在线 XML转JSON，助您在浏览器本地极速 工具轻松将XML转换为JSON。无需安装，立即开始。快速、准确、高效。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "inputPlaceholder": "在此粘贴XML...",
       "outputPlaceholder": "结果将在此显示..."
     },
@@ -4299,10 +3861,6 @@
       "description": "选择预设或编辑 clip-path 值，预览形状并复制 CSS。",
       "seo_title": "免费在线CSS剪裁路径生成器",
       "seo_description": "使用预设形状或手写 clip-path，实时预览裁剪效果，复制 clip-path CSS 代码。",
-
-
-
-
       "clipPath": {
         "preview": "预览",
         "presets": "presets",
@@ -4322,10 +3880,6 @@
       "description": "验证和分析UUID字符串。",
       "seo_title": "免费在线UUID验证器",
       "seo_description": "免费在线 UUID验证器，助您在浏览器本地一键快速 验证和分析UUID字符串。检查UUID的格式、版本和变体。从UUID v1和v7中提取时间戳。调试必备。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
-
       "uuidValidator": {
         "input": "输入",
         "placeholder": "在此输入文本...",
@@ -4345,10 +3899,6 @@
       "description": "通过哈希值比较文本。",
       "seo_title": "免费在线文本哈希值比较工具",
       "seo_description": "免费在线 文本哈希值比较工具，助您在浏览器本地极速 生成并对比两段文本的哈希值，适合内容校验、差异确认和完整性验证。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "hashCompare": {
         "text1": "text1",
         "placeholder": "在此输入文本...",
@@ -4364,10 +3914,6 @@
       "description": "从数据中查找并复制 JSON 路径。",
       "seo_title": "免费在线 JSON 路径查找器",
       "seo_description": "免费在线 JSON 路径查找器，助您在浏览器本地极速 定位字段位置并复制路径表达式，适合接口调试、数据提取和结构排查。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "json": {
         "invalidJson": "invalidjson"
       },
@@ -4386,10 +3932,6 @@
       "description": "简单绘图工具，配有画笔和橡皮擦。",
       "seo_title": "在线免费画布绘图工具",
       "seo_description": "免费在线 画布绘图工具，助您在浏览器本地极速 在线免费画布绘图工具，配有画笔和橡皮擦。自定义画笔大小、颜色和透明度。以PNG格式下载作品。适合快速草图。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "canvas": {
         "size": "大小",
         "brush": "brush",
@@ -4403,10 +3945,6 @@
       "description": "对JSON字符串进行转义和反转义处理。",
       "seo_title": "免费在线 JSON 转义工具",
       "seo_description": "免费在线 JSON 转义工具，助您在浏览器本地极速 处理特殊字符、引号和控制字符的转义与反转义，适合接口调试和字符串嵌入。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorProcessing": "errorprocessing",
       "input": "输入",
       "jsonEscape": {
@@ -4423,10 +3961,6 @@
       "description": "使用可视化编辑器创建CSS动画。",
       "seo_title": "免费在线CSS动画生成器",
       "seo_description": "免费在线 CSS动画生成器，助您在浏览器本地快速 使用可视化编辑器在线免费创建CSS动画。设计关键帧、时间函数和动画属性。复制CSS代码用于您的网页项目。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "cssAnimation": {
         "preset": "preset",
         "duration": "duration",
@@ -4443,10 +3977,6 @@
       "description": "统计大写字母、小写字母和其他字符类型。",
       "seo_title": "免费在线文本大小写计数器 - 统计字符类型",
       "seo_description": "免费在线 文本大小写计数器，助您在浏览器本地极速 统计大写字母、小写字母、数字、空格和特殊字符，适合文本分析与内容校对。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "input": "输入",
       "caseCounter": {
         "placeholder": "在此输入文本...",
@@ -4465,10 +3995,6 @@
       "description": "查询任何域名的DNS记录。",
       "seo_title": "免费在线 DNS 查询工具",
       "seo_description": "免费在线 DNS 查询工具，助您在浏览器本地极速 检查域名解析结果和常见记录类型，适合域名排错、邮件配置和网络验证。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "dnsLookup": {
         "ipError": "iperror",
         "error": "错误"
@@ -4479,10 +4005,6 @@
       "description": "自定义尺寸调整图片大小。",
       "seo_title": "免费在线图像缩放器 - 调整图片尺寸与宽高",
       "seo_description": "免费在线 图像缩放器，助您在浏览器本地极速 在线修改图片尺寸、宽高和比例，适合压缩上传前处理、社交媒体配图和网页图片优化。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "imageResizer": {
         "dropzone": "dropzone",
         "original": "original",
@@ -4618,10 +4140,6 @@
       "description": "搜索常见端口号、服务名称和端口范围说明。",
       "seo_title": "免费在线网络端口参考 - 常用端口与服务查询",
       "seo_description": "查询常见网络端口和服务说明，按端口号或服务名搜索，并查看知名、注册和动态端口范围。",
-
-
-
-
       "note": "note",
       "searchPorts": "searchports",
       "searchPlaceholder": "searchplaceholder",
@@ -4644,10 +4162,6 @@
       "description": "为您的网站生成隐私政策。",
       "seo_title": "免费在线隐私政策生成器",
       "seo_description": "免费在线个人隐私政策生成器，快速为您量身打造符合 GDPR、CCPA 以及应用商店审核规范的专业隐私政策协议文本。只需填写简单的网站或应用信息，几步即可生成结构完整的中文隐私声明，支持导出 HTML/Markdown，适合独立开发者使用。",
-
-
-
-
       "privacyPolicyGenerator": {
         "websiteName": "website名称",
         "websiteNamePlaceholder": "website名称placeholder",
@@ -4676,10 +4190,6 @@
       "description": "生成适用于您网站的条款。",
       "seo_title": "免费在线服务条款生成器 - 生成网站服务条款",
       "seo_description": "免费在线 服务条款生成器，助您在浏览器本地快速 生成网站服务条款，涵盖用户协议、责任限制、知识产权和争议解决条款。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "termsGenerator": {
         "websiteName": "website名称",
         "websiteNamePlaceholder": "website名称placeholder",
@@ -4737,10 +4247,6 @@
       "description": "以表格形式查看和解析CSV数据。",
       "seo_title": "免费在线 CSV 查看器 - 快速解析 CSV 数据",
       "seo_description": "免费在线 CSV查看器，助您在浏览器本地极速 免费在线 CSV 查看器轻松查看和解析 CSV 数据。立即尝试，快速高效。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "csvViewer": {
         "defaultInput": "默认input",
         "delimiterComma": "delimitercomma",
@@ -4796,10 +4302,6 @@
       "generate": "生成Nginx配置",
       "copy": "复制到剪贴板",
       "output": "生成的Nginx配置",
-
-
-
-
       "exampleDomain": "example.com"
     },
     "curl-converter": {
@@ -4850,10 +4352,6 @@
       "description": "生成适用于社交媒体分享的 OpenGraph 元标签。",
       "seo_title": "免费在线 OpenGraph 生成器 - 社交分享标签配置",
       "seo_description": "免费在线 OpenGraph生成器，助您在浏览器本地快速 生成页面标题、描述、封面图和分享标签，适合社交分享预览和链接展示优化。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "openGraphGenerator": {
         "siteTitle": "site标题",
         "siteTitlePlaceholder": "site标题placeholder",
@@ -4884,10 +4382,6 @@
       "description": "生成 TwitterCard 元标签，优化社交分享预览。",
       "seo_title": "免费在线 TwitterCard生成器 - 生成分享预览标签",
       "seo_description": "免费在线 TwitterCard生成器，助您在浏览器本地快速 生成分享预览元标签，支持摘要卡、大图卡和播放器卡片，适合社交媒体链接展示优化。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "twitterCardGenerator": {
         "cardType": "card类型",
         "cardSummary": "cardsummary",
@@ -4918,10 +4412,6 @@
       "description": "通过扩展名或描述搜索MIME类型。",
       "seo_title": "免费在线 MIME 类型查询工具",
       "seo_description": "免费在线 MIME类型查找，助您在浏览器本地极速 MIME 类型查询工具快速按扩展名查找媒体类型，适合文件上传配置、响应头检查和网页开发。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "searchPlaceholder": "searchplaceholder"
     },
     "http-status-codes": {
@@ -4995,10 +4485,6 @@
       "description": "生成常见操作的SQL查询。",
       "seo_title": "免费在线 SQL 查询生成器",
       "seo_description": "免费在线 SQL 语句生成器，通过可视化界面快速构建常用的 SELECT、INSERT、UPDATE 和 DELETE 等 SQL 数据库操作语句。支持自定义表名、字段与过滤条件，快速生成无语法错误的纯净 SQL 代码，提升数据库开发与管理效率。",
-
-
-
-
       "sqlGenerator": {
         "commandType": "command类型",
         "tableName": "表格名称",
@@ -5755,10 +5241,6 @@
       "csvFormat": "CSV格式：名称，值（每行一个）",
       "csvImportSuccess": "已导入{count}行数据",
       "csvImportError": "CSV格式无效。预期：名称，值",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -5821,10 +5303,6 @@
       "csvFormat": "CSV格式：指标,值1,值2,...（每行一个）",
       "csvImportSuccess": "已导入{count}行数据",
       "csvImportError": "无效的CSV格式",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -5881,10 +5359,6 @@
       "csvFormat": "CSV格式：x,y（每行一个）",
       "csvImportSuccess": "已导入{count}行",
       "csvImportError": "CSV格式无效",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -5939,10 +5413,6 @@
         "tip4": "启用平滑以显示曲线",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6004,10 +5474,6 @@
         "tip4": "对齐漏斗左/中/右",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6055,10 +5521,6 @@
         "tip4": "添加单位标签",
         "tip5": "导出为 PNG 或 SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6111,10 +5573,6 @@
       },
       "column": "列",
       "row": "行",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6229,10 +5687,6 @@
         "tip4": "启用标签",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6292,10 +5746,6 @@
       "nodeE": "E",
       "nodeF": "F",
       "node": "节点",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6354,10 +5804,6 @@
       "categoryB": "类别B",
       "categoryC": "类别C",
       "item": "项目",
-
-
-
-
       "png": "PNG",
       "svg": "SVG"
     },
@@ -6401,10 +5847,6 @@
         "tip4": "自定义涨跌颜色",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6461,10 +5903,6 @@
         "tip4": "切换为水平",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6567,10 +6005,6 @@
         "tip5": "导出为PNG或SVG"
       },
       "node": "节点",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6628,10 +6062,6 @@
         "tip4": "显示/隐藏标签",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG"
     },
@@ -6694,10 +6124,6 @@
       "weekSat": "周六",
       "weekSun": "周日",
       "item": "项目",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6754,10 +6180,6 @@
         "tip4": "启用平滑线条",
         "tip5": "导出为PNG或SVG"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG"
     },
@@ -6796,10 +6218,6 @@
       "tipsTitle": "提示",
       "tip1": "气泡大小表示第三维度的量级",
       "tip2": "您可以为每个气泡添加名称标签",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -6848,10 +6266,6 @@
       "tipsTitle": "提示",
       "tip1": "辐射布局适合深层层次结构树",
       "tip2": "您可以拖动和缩放以查看大型树形图",
-
-
-
-
       "png": "PNG",
       "svg": "SVG"
     },
@@ -6887,10 +6301,6 @@
       "tipsTitle": "提示",
       "tip1": "主题河流适合可视化多个类别的演变过程",
       "tip2": "每个数据点都需要日期、值和系列名称",
-
-
-
-
       "png": "PNG",
       "svg": "SVG"
     },
@@ -6926,10 +6336,6 @@
       "sampleTask1": "要求",
       "sampleTask2": "设计",
       "sampleTask3": "发展",
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7027,10 +6433,6 @@
       "sampleTitle3": "发射",
       "sampleDesc3": "产品发布",
       "newEvent": "新活动",
-
-
-
-
       "png": "PNG",
       "svg": "SVG"
     },
@@ -7088,10 +6490,6 @@
         "tip3": "非常适合视觉比较多个类别",
         "tip4": "导出为PNG或SVG用于演示"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7149,10 +6547,6 @@
         "tip2": "切换到水平模式以创建水平柱状图",
         "tip3": "添加或删除系列以自定义比较"
       },
-
-
-
-
       "clear": "清空",
       "png": "PNG",
       "svg": "SVG",
@@ -7212,10 +6606,6 @@
         "tip2": "适合可视化随时间变化的组成",
         "tip3": "切换到水平模式以显示水平堆叠柱状图"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7275,10 +6665,6 @@
         "tip2": "启用平滑曲线以获得更精致的外观",
         "tip3": "选择不同的线条样式以获得更好的区分度"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7341,10 +6727,6 @@
         "tip2": "选择阶梯位置以控制阶梯发生的位置",
         "tip3": "启用区域填充以突出显示线下区域"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7407,10 +6789,6 @@
         "tip2": "正值表示增加，负值表示减少",
         "tip3": "非常适合财务分析和预算跟踪"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7467,10 +6845,6 @@
         "tip2": "启用平滑曲线以获得更精致的外观",
         "tip3": "非常适合展示随时间变化的组成变化"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7531,10 +6905,6 @@
         "tip2": "颜色自动区分正负值",
         "tip3": "切换到水平模式以显示水平柱状图"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7587,10 +6957,6 @@
         "tip2": "添加或删除系列以比较不同类别",
         "tip3": "切换为水平模式以显示水平堆积柱状图"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7649,10 +7015,6 @@
         "tip2": "自定义系列名称以匹配您的数据",
         "tip3": "启用平滑线条以获得曲线效果"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7690,10 +7052,6 @@
         "tip2": "自定义环形宽度以产生不同视觉效果",
         "tip3": "启用动画以实现动态加载效果"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7737,10 +7095,6 @@
         "tip2": "启用波浪动画以获得动态液体效果",
         "tip3": "调整百分比以控制填充水平"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7785,10 +7139,6 @@
         "tip2": "点击颜色选择器自定义每个环的颜色",
         "tip3": "调整环宽以获得更好的视觉平衡"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7841,10 +7191,6 @@
         "tip2": "切换标签以显示或隐藏百分比值",
         "tip3": "值将自动转换为百分比"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7901,10 +7247,6 @@
         "tip1": "内环显示主要分类，外环显示子项",
         "tip2": "为每个分类添加子项以进行详细细分"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -7964,10 +7306,6 @@
         "tip2": "切换到水平模式以显示水平条形",
         "tip3": "背景显示最大值以进行比较"
       },
-
-
-
-
       "png": "PNG",
       "svg": "SVG",
       "chartpreview": "图表预览",
@@ -8022,10 +7360,6 @@
       "format24h": "24小时制",
       "totalMinutes": "总分钟数",
       "totalSeconds": "总秒数",
-
-
-
-
       "24h": "24小时制",
       "12h": "12小时制"
     },
@@ -8049,10 +7383,6 @@
       "milliseconds": "Unix (ms)",
       "iso8601": "ISO 8601",
       "unknown": "未知",
-
-
-
-
       "localFormat": "本地格式"
     },
     "regex-visualizer": {
@@ -8377,10 +7707,6 @@
       "description": "使用可定制模板和 PDF 导出功能创建专业发票。",
       "seo_title": "免费在线发票生成器 - 专业模板，一键导出 PDF",
       "seo_description": "免费在线发票生成器与开票模板工具，助您轻松创建专业、规范的电子发票和收据。提供可自定义的表格与多种精美发票模板，支持填写商家及客户信息、项目明细、税率、折扣，并自动计算总价，一键导出为高清 PDF 格式，非常适合自由职业者、小微企业及日常记账使用。",
-
-
-
-
       "invoice": {
         "invoiceNumber": "invoicenumber",
         "currency": "currency",
@@ -8411,10 +7737,6 @@
       "description": "使用多种模板构建专业简历并导出PDF。",
       "seo_title": "免费在线简历生成器 - 创建专业简历",
       "seo_description": "免费在线 简历生成器，助您在浏览器本地快速 使用多种模板快速创建专业简历，并导出 PDF，适合求职、实习申请和个人履历整理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
-
       "editTab": "编辑",
       "previewTab": "预览",
       "exportPDF": "导出 PDF",
@@ -8458,10 +7780,6 @@
       "description": "在画布上创建手写签名，调整画笔和背景并下载 PNG 或 SVG。",
       "seo_title": "免费在线电子签名板 - 手写签名与导出",
       "seo_description": "电子签名板支持手写数字签名、合同签字和授权文件草稿，可调整画笔、撤销清除并下载 PNG 或 SVG。",
-
-
-
-
       "signature": {
         "penColor": "pen颜色",
         "penWidth": "pen宽度",
@@ -8477,10 +7795,6 @@
       "description": "使用番茄工作法提高工作效率。",
       "seo_title": "免费在线番茄钟计时器 - 专注学习与工作",
       "seo_description": "免费在线 番茄钟计时器，助您在浏览器本地极速 帮助您按专注时段和休息时段安排学习与工作，适合备考、写作、编程和任务管理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "pomodoro": {
         "pause": "pause",
         "start": "start",
@@ -8504,10 +7818,6 @@
       "description": "创建结构化会议记录，包含参会人、议程和行动项。",
       "seo_title": "免费在线会议记录模板 - 整理议程与行动项",
       "seo_description": "免费在线 会议记录，助您在浏览器本地极速 会议记录模板可在线整理参会人、会议议程、讨论要点和行动项，适合周会纪要、项目复盘和客户沟通记录。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "meeting": {
         "untitled": "untitled",
         "date": "date",
@@ -8533,10 +7843,6 @@
       "description": "计算两个日期之间的工作日，排除周末和节假日。",
       "seo_title": "免费在线工作日计算器",
       "seo_description": "免费在线 工作日计算器，可帮助您在浏览器本地 计算两个日期之间的工作日天数，支持排除周末和节假日，适合排期、交付和请假统计。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "businessDays": {
         "calculateDays": "calculatedays",
         "calculateEndDate": "calculateenddate",
@@ -8561,10 +7867,6 @@
       "description": "在时薪、日薪、周薪、月薪和年薪之间转换。",
       "seo_title": "免费在线工资计算器 - 时薪月薪年薪换算",
       "seo_description": "免费在线 工资计算器，可帮助您在浏览器本地 在时薪、日薪、周薪、月薪和年薪之间换算，适合薪资估算、兼职核算和收入对比。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
-
       "salary": {
         "amount": "amount",
         "payFrequency": "payfrequency",
@@ -8782,10 +8084,6 @@
       "description": "将 Excel 文件转换为 JSON 格式，支持工作表选择和数据预览。",
       "seo_title": "免费在线 Excel 转 JSON 转换器",
       "seo_description": "免费在线Excel To Json工具，快速、安全、无需注册。支持多种格式，处理速度快，数据安全有保障。立即使用，提升您的工作效率。 适用于开发者、设计师和所有需要办公工具的用户。",
-
-
-
-
       "excelToJson": {
         "invalidFileType": "invalidfile类型",
         "parseError": "parseerror",
@@ -8808,10 +8106,6 @@
       "description": "将 JSON 数据转换为 Excel 电子表格，自动检测列。",
       "seo_title": "免费在线 JSON 转 Excel 转换器",
       "seo_description": "免费在线Json To Excel工具，快速、安全、无需注册。支持多种格式，处理速度快，数据安全有保障。立即使用，提升您的工作效率。 适用于开发者、设计师和所有需要办公工具的用户。",
-
-
-
-
       "jsonToExcel": {
         "invalidJson": "invalidjson",
         "emptyData": "empty数据",
@@ -8876,10 +8170,6 @@
       "description": "将多个 Excel 文件按行或按列合并为一个表格。",
       "seo_title": "免费在线Excel合并器 - 合并多个表格与工作簿",
       "seo_description": "免费在线 Excel合并器，助您在浏览器本地极速 按行追加或按列并排合并多个 Excel 文件，适合报表汇总、数据整合和批量表格处理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "excelMerger": {
         "invalidFileType": "invalidfile类型",
         "parseError": "parseerror",
@@ -8901,10 +8191,6 @@
       "description": "将 PDF 页面转换为高质量的 PNG 或 JPEG 图片。",
       "seo_title": "免费在线 PDF 转图片工具 - 提取页面为图片",
       "seo_description": "免费在线 PDF 转图片，助您在浏览器本地极速 PDF 转图片工具可把 PDF 页面转换为图片文件，适合预览分享、课件制作和文档截图导出。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "pdfToImage": {
         "invalidFileType": "invalidfile类型",
         "parseError": "parseerror",
@@ -8926,10 +8212,6 @@
       "description": "将多张图片转换为单个 PDF 文档，支持页面设置。",
       "seo_title": "免费在线图片转 PDF 工具 - 多图合并为 PDF",
       "seo_description": "免费在线 图片转 PDF，助您在浏览器本地极速 图片转 PDF 工具可将多张图片合并为一个 PDF 文档，支持页面大小、方向和边距设置，适合资料整理、图片归档和打印分享。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "imageToPdf": {
         "invalidFileType": "invalidfile类型",
         "noImages": "noimages",
@@ -8953,10 +8235,6 @@
       "description": "拖拽排序，将多个PDF文件合并成一个文档。",
       "seo_title": "免费在线 PDF 合并工具 - 按顺序合并多个 PDF",
       "seo_description": "免费在线 PDF合并器，助您在浏览器本地极速 PDF 合并工具可按顺序合并多个 PDF 文件，适合资料整理、合同打包和提交归档。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "pdfMerger": {
         "invalidFileType": "invalidfile类型",
         "parseError": "parseerror",
@@ -8978,10 +8256,6 @@
       "description": "按页面选择、页面范围拆分 PDF 文件或提取每一页。",
       "seo_title": "免费在线 PDF 拆分器 - 按页拆分 PDF 文件",
       "seo_description": "免费在线 PDF 拆分器，助您在浏览器本地极速 按页码范围拆分 PDF 文档，适合提取单页、分发章节和资料整理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "pdfSplitter": {
         "invalidFileType": "invalidfile类型",
         "parseError": "parseerror",
@@ -9006,10 +8280,6 @@
       "description": "压缩 PDF 文件以减小文件大小，同时保持质量。",
       "seo_title": "免费在线 PDF 压缩器 - 压缩文件大小并保留清晰度",
       "seo_description": "免费在线 PDF 压缩器，助您在浏览器本地极速 在线压缩 PDF 文件大小，适合邮件发送、资料归档和上传提交，同时尽量保留页面清晰度。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "pdfCompressor": {
         "invalidFileType": "invalidfile类型",
         "compressError": "compresserror",
@@ -9029,10 +8299,6 @@
       "description": "上传 PDF，预览页面缩略图，并按页或批量旋转后保存。",
       "seo_title": "免费在线 PDF 页面旋转器",
       "seo_description": "上传 PDF，预览每页缩略图，单页或全部旋转 90°、180°、270°，然后下载旋转后的文件。",
-
-
-
-
       "pdfRotator": {
         "invalidFileType": "invalidfile类型",
         "parseError": "parseerror",
@@ -9050,10 +8316,6 @@
       "description": "编写和预览 Markdown，实时渲染。支持导出为 MD 或 HTML。",
       "seo_title": "免费在线 Markdown 编辑器 - 实时预览",
       "seo_description": "免费在线 Markdown 编辑器，助您在浏览器本地极速 编写和预览 Markdown。实时渲染、语法高亮，支持导出为 MD 或 HTML。非常适合文档编写和笔记。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorParsingMarkdown": "解析 Markdown 出错",
       "list": "列表",
       "code": "代码",
@@ -9079,10 +8341,6 @@
       "description": "同时查看全球多个城市的当前时间。",
       "seo_title": "免费在线世界时钟工具 - 同时查看全球时间",
       "seo_description": "免费在线 世界时钟，助您在浏览器本地极速 工具，轻松查看全球多个城市的当前时间。立即尝试，享受便捷的全球时间管理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "worldClock": {
         "format24h": "format24h",
         "showSeconds": "showseconds",
@@ -9096,10 +8354,6 @@
       "description": "精确秒表，支持计次功能。追踪多个计次，显示最佳/最差时间。",
       "seo_title": "免费在线秒表 - 精准计次与分段计时",
       "seo_description": "免费在线 秒表，助您在浏览器本地极速 开始、暂停、重置、计次和分段计时，适合运动训练、学习计时、烹饪和实验记录。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "stopwatchUI": {
         "lap": "lap",
         "stop": "stop",
@@ -9117,10 +8371,6 @@
       "description": "设置带有视觉进度和通知的自定义倒计时计时器。",
       "seo_title": "免费在线倒计时计时器 - 设置会议与学习倒计时",
       "seo_description": "免费在线 倒计时计时器，助您在浏览器本地极速 在线设置倒计时计时器，自定义时长、提示音和视觉进度，适合学习专注、演讲计时、烹饪和会议提醒。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "countdownTimer": {
         "timeUp": "timeup",
         "timerFinished": "timerfinished",
@@ -9138,10 +8388,6 @@
       "description": "创建并整理多彩便签。自动保存至浏览器存储。",
       "seo_title": "免费在线便签本 - 创建彩色便签与临时笔记",
       "seo_description": "免费在线 便签本，助您在浏览器本地极速 创建彩色便签、待办清单和临时笔记，内容自动保存在浏览器中，适合日常记录与灵感整理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "notePad": {
         "newNote": "newnote",
         "export": "export",
@@ -9371,10 +8617,6 @@
       "description": "从PDF文件中提取文本内容。支持带页码的多页PDF。",
       "seo_title": "免费在线 PDF 转文本工具 - 提取 PDF 文字内容",
       "seo_description": "免费在线 PDF转文本，助您在浏览器本地极速 PDF 转文本工具可从 PDF 文档中提取文字内容，适合复制编辑、资料整理和内容归档。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "page": "page",
       "errorParsing": "errorparsing",
       "errorInvalidFile": "errorinvalidfile",
@@ -9387,10 +8629,6 @@
       "description": "将Word文档(.docx)转换为纯文本格式。",
       "seo_title": "免费在线 Word转文本 - 提取纯文本内容",
       "seo_description": "免费在线 Word转文本，助您在浏览器本地极速 Word转文本工具可将 Word 文档转换为纯文本内容，适合内容提取、清洗整理和文本归档。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorParsing": "errorparsing",
       "errorInvalidFile": "errorinvalidfile",
       "dropzone": "dropzone",
@@ -9401,10 +8639,6 @@
       "description": "将Word文档(.docx)转换为HTML格式，保留格式。",
       "seo_title": "免费在线 Word转HTML - 保留格式转换文档",
       "seo_description": "免费在线 Word转HTML，助您在浏览器本地极速 Word转HTML工具可将 Word 文档转换为 HTML 代码并尽量保留排版格式，适合网页发布、内容迁移和邮件模板制作。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorParsing": "errorparsing",
       "errorInvalidFile": "errorinvalidfile",
       "dropzone": "dropzone",
@@ -9417,10 +8651,6 @@
       "description": "将 Excel 表格文件转换为 CSV 格式。",
       "seo_title": "免费在线Excel转CSV工具 - 导出表格为CSV文件",
       "seo_description": "免费在线 Excel转CSV，助您在浏览器本地极速 Excel转CSV工具可将 Excel 表格快速转换为 CSV 文件，支持选择工作表，适合数据导入、批量导出和表格清洗。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorParsing": "errorparsing",
       "errorInvalidFile": "errorinvalidfile",
       "dropzone": "dropzone",
@@ -9431,10 +8661,6 @@
       "description": "将CSV文件转换为Excel电子表格格式(.xlsx)。",
       "seo_title": "免费在线 CSV 转 Excel 工具 - 快速转换表格文件",
       "seo_description": "免费在线 CSV转Excel，助您在浏览器本地极速 在线把 CSV 数据转换为 Excel 表格文件，适合报表整理、数据导入和办公文件分发。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "errorParsing": "errorparsing",
       "errorInvalidFile": "errorinvalidfile",
       "errorExport": "errorexport",
@@ -9860,9 +9086,6 @@
       "inverseRate": "反向汇率",
       "quickConversions": "快速转换",
       "disclaimer": "汇率仅供参考，可能不反映实时市场汇率。",
-
-
-
       "lastUpdated": "最后更新",
       "updatedAgo": "{time}前更新",
       "updating": "正在更新汇率...",
@@ -9948,9 +9171,6 @@
       "tax": "税额",
       "totalTax": "总税额",
       "disclaimer": "本计算器基于2024年美国联邦税率阶梯提供估算。请咨询税务专业人士以获得准确的税务建议。",
-
-
-
       "selectCountry": "选择国家",
       "dataYear": "纳税年度",
       "noIncomeTaxTitle": "无个人所得税",
@@ -9991,9 +9211,6 @@
       "mildGain": "轻度增重",
       "weightGain": "增重",
       "caloriesPerDay": "每日卡路里",
-
-
-
       "metric": "公制",
       "imperial": "英制",
       "bmrDescription": "您的BMR是身体在完全休息状态下维持基本生命功能所需的卡路里数量。",
@@ -10021,9 +9238,6 @@
       "liters": "升",
       "ounces": "盎司",
       "tips": "补水小贴士",
-
-
-
       "metric": "公制",
       "imperial": "英制",
       "weight": "体重",
@@ -10057,9 +9271,6 @@
       "good": "良好",
       "minimum": "最少",
       "sleepTips": "睡眠小贴士",
-
-
-
       "wakeUpMode": "起床模式",
       "sleepMode": "睡眠模式",
       "bedtime": "就寝时间",
@@ -10091,9 +9302,6 @@
       "third": "第三",
       "conceptionWindow": "受孕窗口",
       "milestones": "孕期里程碑",
-
-
-
       "milestone4": "里程碑4",
       "milestone4Desc": "里程碑4描述",
       "milestone8": "里程碑8",
@@ -10144,9 +9352,6 @@
       "average": "一般兼容性",
       "needsWork": "需要努力",
       "disclaimer": "本工具仅供娱乐使用",
-
-
-
       "result90": "90% 结果",
       "result80": "80% 结果",
       "result70": "70% 结果",
@@ -10187,9 +9392,6 @@
       "generatedNames": "生成的名字",
       "copyAll": "全部复制",
       "count": "名字数量",
-
-
-
       "anyGender": "任何性别",
       "neutral": "中性",
       "clickToGenerate": "点击生成",
@@ -10217,9 +9419,6 @@
       "noWinner": "尚未有获胜者",
       "pickAgain": "再次选择",
       "items": "项目",
-
-
-
       "\\n": "\\n",
       "itemsPlaceholder": "项目占位符",
       "itemCount": "项目数量"
@@ -10239,9 +9438,6 @@
       "headsCount": "正面次数",
       "tailsCount": "反面次数",
       "resetStats": "重置统计数据",
-
-
-
       "flipCount": "翻转次数",
       "total": "总数",
       "recentFlips": "最近翻转"
@@ -10261,9 +9457,6 @@
       "history": "掷骰历史",
       "clearHistory": "清除历史",
       "modifier": "修正值",
-
-
-
       "selectDice": "选择骰子"
     },
     "team-generator": {
@@ -10277,9 +9470,6 @@
       "team": "团队",
       "shuffle": "再次洗牌",
       "members": "成员",
-
-
-
       "\\n": "\\n",
       "enterMembers": "输入成员",
       "membersPlaceholder": "成员占位符",
@@ -10302,9 +9492,6 @@
       "years": "年",
       "workdays": "工作日",
       "weekends": "周末",
-
-
-
       "newYear": "新年",
       "christmas": "圣诞节",
       "valentines": "情人节",
@@ -10337,9 +9524,6 @@
       "gallons": "加仑",
       "perLiter": "每升",
       "perGallon": "每加仑",
-
-
-
       "metric": "公制",
       "imperial": "英制",
       "tripType": "行程类型",
@@ -10366,9 +9550,6 @@
       "energyUsed": "耗电量",
       "kwh": "度",
       "commonAppliances": "常用电器",
-
-
-
       "appliances": "电器",
       "addAppliance": "添加电器",
       "presets": "预设",
@@ -10489,9 +9670,6 @@
       "convertedSizes": "转换后的尺码",
       "footLength": "脚长",
       "sizeChart": "尺码对照表",
-
-
-
       "men": "男士",
       "women": "女士",
       "selectSystem": "选择系统",
@@ -10514,9 +9692,6 @@
       "uk": "英国",
       "eu": "欧洲",
       "yourSize": "您的尺寸",
-
-
-
       "convertMode": "尺码转换",
       "measureMode": "测量计算",
       "selectUSSize": "选择美国尺码",
@@ -10545,9 +9720,6 @@
       "inches": "英寸",
       "centimeters": "厘米",
       "yourSize": "您的尺码",
-
-
-
       "calculateMode": "计算尺码",
       "convertMode": "尺码转换",
       "underbust": "下胸围",
@@ -10586,9 +9758,6 @@
       "volume": "体积",
       "pricePerUnit": "单价",
       "totalCost": "总成本",
-
-
-
       "selectShape": "选择形状",
       "stairs": "楼梯",
       "steps": "台阶",
@@ -10627,9 +9796,6 @@
       "pricePerGallon": "每加仑价格",
       "gallonsNeeded": "所需加仑",
       "totalCost": "总成本",
-
-
-
       "numberOfWalls": "墙面数量",
       "wallDimensions": "墙面尺寸",
       "wall": "墙面",
@@ -10677,9 +9843,6 @@
       "pricePerTile": "每块价格",
       "tilesNeeded": "所需瓷砖数",
       "totalCost": "总成本",
-
-
-
       "roomDimensions": "房间尺寸",
       "tileDimensions": "瓷砖尺寸",
       "tilePrice": "瓷砖价格",
@@ -10721,9 +9884,6 @@
       "italic": "斜体",
       "boldItalic": "粗斜体",
       "script": "手写体",
-
-
-
       "enterText": "输入您的文本",
       "selectStyle": "选择样式",
       "normal": "正常",
@@ -10750,9 +9910,6 @@
       "type": "类型",
       "dimensions": "尺寸",
       "aspectRatio": "宽高比",
-
-
-
       "selectPlatform": "选择平台",
       "selectType": "选择类型",
       "profilePicture": "头像",
@@ -10783,9 +9940,6 @@
       "frequency": "频率",
       "density": "密度",
       "topKeywords": "热门关键词",
-
-
-
       "enterText": "输入文本",
       "minWordLength": "最小单词长度",
       "topN": "显示前 N 个",
@@ -10812,9 +9966,6 @@
       "summarize": "生成摘要",
       "bullets": "要点",
       "paragraph": "段落",
-
-
-
       "enterText": "输入文本",
       "summaryLength": "摘要长度",
       "outputFormat": "输出格式",
@@ -10845,9 +9996,6 @@
       "simple": "简单",
       "creative": "创意",
       "paraphrase": "改写",
-
-
-
       "enterText": "输入要改写的文本",
       "selectMode": "选择模式",
       "expand": "扩展",
@@ -10874,9 +10022,6 @@
       "schema": "模式",
       "format": "格式化",
       "validate": "验证",
-
-
-
       "enterQuery": "输入查询",
       "formatQuery": "格式化查询",
       "validateQuery": "验证查询",
@@ -10900,9 +10045,6 @@
       "padding": "内边距",
       "background": "背景",
       "export": "导出",
-
-
-
       "enterCode": "输入代码",
       "selectLanguage": "选择语言",
       "selectTheme": "选择主题",
@@ -10928,9 +10070,6 @@
       "hexadecimal": "十六进制",
       "enterNumber": "输入数字",
       "invalidInput": "无效输入",
-
-
-
       "selectBase": "选择进制",
       "converted": "转换结果",
       "inputBase": "输入进制",
@@ -10957,9 +10096,6 @@
       "class": "类别",
       "invalidIp": "无效的IP地址",
       "invalidCidr": "无效的CIDR表示法",
-
-
-
       "enterIP": "输入 IP 地址",
       "cidrNotation": "CIDR 表示法",
       "calculate": "计算",
@@ -11042,9 +10178,6 @@
         "high": "高影响",
         "veryHigh": "极高影响"
       },
-
-
-
       "monthly": "每月",
       "yearly": "每年",
       "month": "月",
@@ -11308,10 +10441,6 @@
       "description": "为演讲和演示练习计时，按语速估算已说字数。",
       "seo_title": "免费在线演讲计时器 - 练习演讲时长",
       "seo_description": "免费在线 演讲计时器，助您在浏览器本地极速 设置目标分钟数和每分钟字数，查看已用时间、剩余时间、进度条和已说字数估算，适合演讲练习、答辩和路演准备。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
-
       "duration": "时长",
       "minutes": "分钟",
       "wordsPerMinute": "每分钟字数",
@@ -11339,9 +10468,6 @@
       "description": "追踪每日习惯，建立连续记录",
       "seo_title": "免费在线习惯追踪器 - 记录每日打卡与连续天数",
       "seo_description": "免费在线 习惯追踪器，可帮助您在浏览器本地 记录每日打卡、完成情况和连续天数，适合学习计划、健身目标和日常自律管理。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "addHabit": "添加习惯",
       "habitName": "习惯名称",
       "habitPlaceholder": "输入习惯名称...",
@@ -11364,9 +10490,6 @@
       "description": "将文字上下翻转、镜像或反转",
       "seo_title": "免费在线翻转文字工具 - 镜像与倒序文本",
       "seo_description": "免费在线 翻转文字，助您在浏览器本地极速 在线翻转文字，支持镜像、倒序和趣味样式转换，适合社交内容、昵称装饰和创意排版。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "inputLabel": "输入文字",
       "inputPlaceholder": "在此输入文字...",
       "upsideDown": "上下颠倒",
@@ -11385,9 +10508,6 @@
       "description": "罗马数字与阿拉伯数字相互转换",
       "seo_title": "免费在线罗马数字转换器 - 阿拉伯数字与罗马数字互转",
       "seo_description": "免费在线 罗马数字转换器，支持在浏览器本地极速 阿拉伯数字与罗马数字互转，适合日期、编号、章节序号和教学练习。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "arabicToRoman": "阿拉伯 → 罗马",
       "romanToArabic": "罗马 → 阿拉伯",
       "arabicNumber": "阿拉伯数字",
@@ -11406,9 +10526,6 @@
       "description": "生成删除线、下划线和划掉的文字",
       "seo_title": "免费在线删除线文字生成器 - 一键生成划线文字",
       "seo_description": "免费在线 删除线文字，助您在浏览器本地极速 删除线文字生成器可生成删除线、下划线和交叉线文本，适合社交文案、昵称装饰和重点强调。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "inputLabel": "输入文字",
       "inputPlaceholder": "在此输入文字...",
       "strikethrough": "删除线",
@@ -11428,9 +10545,6 @@
       "description": "生成上标、下标和小型大写字母文字",
       "seo_title": "免费在线小字生成器 - 生成上标下标与小型大写",
       "seo_description": "免费在线 小字生成器，助您在浏览器本地快速 一键生成上标、下标和小型大写文本，适合社交昵称、个性文案和样式化排版。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "inputLabel": "输入文字",
       "inputPlaceholder": "在此输入文字...",
       "superscript": "上标",
@@ -11447,9 +10561,6 @@
       "description": "二进制与文本相互转换",
       "seo_title": "免费在线二进制转文本工具",
       "seo_description": "免费在线 二进制转文本，助您在浏览器本地极速 工具快速完成二进制与普通文本互转，适合编码学习、数据调试和开发测试。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "binaryToText": "二进制 → 文本",
       "textToBinary": "文本 → 二进制",
       "binaryInput": "二进制输入",
@@ -11473,9 +10584,6 @@
       "description": "分数加减乘除计算",
       "seo_title": "免费在线分数计算器 - 快速轻松计算",
       "seo_description": "免费在线 分数计算器，可帮助您在浏览器本地 免费在线分数计算器轻松进行加、减、乘、除运算。立即尝试，简化您的数学计算。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "fraction1": "分数 1",
       "fraction2": "分数 2",
       "result": "结果",
@@ -11492,9 +10600,6 @@
       "description": "在线随机生成颜色和配色调色板，提供 HEX、RGB、HSL 等格式。",
       "seo_title": "免费在线随机颜色生成器 - 生成 HEX RGB 颜色值",
       "seo_description": "免费在线随机颜色生成器，支持一键生成单个颜色或配色调色板，提供 HEX、RGB 等格式一键复制，适合网页设计和UI开发.",
-
-
-
       "count": "颜色数量",
       "format": "格式",
       "generate": "生成",
@@ -11509,9 +10614,6 @@
       "description": "计算两个值之间的百分比增减",
       "seo_title": "免费在线百分比变化计算器 - 增减百分比与差值",
       "seo_description": "免费在线 百分比变化计算器，可帮助您在浏览器本地 计算两个数值之间的增减百分比和差值，适合价格对比、薪资变化和数据分析。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "oldValue": "原始值",
       "newValue": "新值",
       "oldValuePlaceholder": "输入原始值...",
@@ -11538,9 +10640,6 @@
       "description": "查找所有可能的乱序字母单词",
       "seo_title": "免费在线字母重组求解器",
       "seo_description": "免费在线 字母重组求解器，助您在浏览器本地极速 找出可组成的单词组合，适合单词游戏、谜题练习和字母排列分析。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "inputLabel": "输入字母",
       "inputPlaceholder": "输入字母以解乱序...",
       "results": "结果",
@@ -11555,9 +10654,6 @@
       "description": "重组字母以找到所有可能的单词",
       "seo_title": "免费在线字母重组解密器 - 单词重组查询",
       "seo_description": "免费在线 字母重组解密器，助您在浏览器本地极速 根据输入字母找出可组成的单词，适合单词游戏、拼写练习和词汇学习。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "inputLabel": "输入重组字母",
       "inputPlaceholder": "在此处输入字母...",
       "found": "找到",
@@ -11572,9 +10668,6 @@
       "description": "将纯文本转换为PDF文档",
       "seo_title": "免费在线文本转 PDF 工具 - 纯文本生成文档",
       "seo_description": "免费在线 文本转PDF，助您在浏览器本地极速 文本转 PDF 工具可将纯文本整理为 PDF 文档，支持标题、页面设置和导出，适合笔记归档、文档整理和打印分享。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "title": "标题",
       "optional": "可选",
       "titlePlaceholder": "文档标题...",
@@ -11598,9 +10691,6 @@
       "description": "比较单价以找到最佳性价比",
       "seo_title": "免费在线单价计算器 - 比较商品单价与性价比",
       "seo_description": "免费在线 单价计算器，可帮助您在浏览器本地 按重量、容量和件数比较商品单价与性价比，帮助快速找出更划算的购买方案。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "item": "商品",
       "productName": "产品名称",
       "namePlaceholder": "例如：品牌A",
@@ -11618,9 +10708,6 @@
       "description": "将文本转换为仿生阅读格式以加快阅读速度",
       "seo_title": "免费在线仿生阅读转换器",
       "seo_description": "免费在线 仿生阅读转换器，支持在浏览器本地极速 把普通文本转换为更易聚焦的阅读格式，适合长文阅读、学习整理和注意力辅助。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "inputLabel": "输入文本",
       "inputPlaceholder": "在此粘贴要转换的文本...",
       "fixationStrength": "注视强度",
@@ -11645,9 +10732,6 @@
       "description": "检查文本正读和反读是否相同",
       "seo_title": "免费在线回文检测器 - 检查单词和短语是否回文",
       "seo_description": "免费在线 回文检测器，助您在浏览器本地一键快速 判断单词、句子和短语正反读是否一致，支持忽略空格、大小写和标点。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "inputLabel": "输入文本",
       "inputPlaceholder": "输入单词或短语...",
       "ignoreCase": "忽略大小写",
@@ -11665,9 +10749,6 @@
       "description": "浏览和复制特殊字符和符号",
       "seo_title": "免费在线字符映射表 - 查找并复制特殊字符",
       "seo_description": "免费在线 字符映射表，助您在浏览器本地极速 在线浏览字符映射表，查找特殊字符、符号和 Unicode 字符并一键复制，适合排版、文档编辑和开发测试。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "searchPlaceholder": "搜索字符...",
       "arrows": "箭头",
       "math": "数学",
@@ -11689,9 +10770,6 @@
       "description": "使用自定义分隔符多次重复文本",
       "seo_title": "免费在线文本重复器 - 批量重复文本与分隔符",
       "seo_description": "免费在线 文本重复器，助您在浏览器本地极速 按次数批量重复文本，自定义分隔符和编号，适合测试数据、占位内容和批量文案生成。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "inputLabel": "要重复的文本",
       "inputPlaceholder": "在此输入文本...",
       "repeatCount": "重复次数",
@@ -11716,9 +10794,6 @@
       "description": "生成不同国家和地区的随机测试姓名。",
       "seo_title": "免费在线随机姓名生成器 - 批量创建测试姓名",
       "seo_description": "免费在线 随机姓名生成器，助您在浏览器本地快速 批量生成不同国家和地区的测试姓名，适合注册演示、原型设计、游戏角色和虚拟人物命名。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "country": "国家/文化",
       "english": "英语（美国/英国）",
       "chinese": "中文",
@@ -11743,9 +10818,6 @@
       "description": "生成和检测不可见的Unicode字符",
       "seo_title": "免费在线不可见字符生成器 - 生成与检测隐形字符",
       "seo_description": "免费在线 不可见字符生成器，助您在浏览器本地快速 生成零宽字符、空白字符和隐形 Unicode 文本，也能检测复制内容中的隐藏字符。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "selectCharacter": "选择字符类型",
       "repeatCount": "重复次数",
       "characters": "字符",
@@ -11766,9 +10838,6 @@
       "description": "将JSON数据转换为 Proto / Protobuf 模式定义的在线工具",
       "seo_title": "免费在线 JSON 转 Proto 工具 - 生成 .proto 模式定义",
       "seo_description": "免费在线 JSON转Proto工具，助您在浏览器本地极速 根据 JSON 数据生成 Protobuf 的 .proto 模式定义，适合接口建模、消息结构整理和跨语言开发。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "jsonInput": "JSON输入",
       "protoOutput": "Proto输出",
       "messageName": "消息名称",
@@ -11786,9 +10855,6 @@
       "description": "将SVG矢量图像转换为PNG位图格式",
       "seo_title": "免费在线SVG转PNG工具 - 尽情转换矢量图",
       "seo_description": "免费在线 SVG转PNG转换器，助您在浏览器本地极速 高级在线SVG转PNG转换器，轻松将矢量图像转换为PNG格式。立即免费试用，体验便捷高效。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "uploadSvg": "上传SVG",
       "pasteSvg": "或粘贴SVG代码",
       "width": "宽度",
@@ -11809,9 +10875,6 @@
       "description": "将WebP图片转换为PNG格式",
       "seo_title": "免费在线WebP转PNG转换器 - 图片格式转换",
       "seo_description": "免费在线 WebP转PNG转换器，助您在浏览器本地极速 将WebP转换为PNG。将现代WebP图片转换为广泛兼容的PNG格式。快速、安全、基于浏览器的转换。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "uploadWebp": "上传WebP图片",
       "dropHere": "将WebP文件拖至此处或点击上传",
       "convert": "转换为PNG",
@@ -11829,9 +10892,6 @@
       "description": "将PNG位图图像转换为SVG矢量格式",
       "seo_title": "免费在线PNG转SVG工具，轻松转换位图到矢量",
       "seo_description": "免费在线 免费PNG转SVG转换器，助您在浏览器本地极速 工具将PNG图像转换为SVG格式，保持高质量和可缩放性。立即免费试用。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "uploadPng": "上传PNG图像",
       "colorMode": "颜色模式",
       "blackWhite": "黑白",
@@ -11855,9 +10915,6 @@
       "description": "将HTML内容转换为PDF文档",
       "seo_title": "在线免费 HTML 转 PDF 工具 - 快速轻松转换",
       "seo_description": "免费在线 免费在线HTML转PDF转换器，助您在浏览器本地极速 HTML to PDF 转换工具，轻松将 HTML 内容转换为专业 PDF 文档。立即尝试，免费无限制。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "htmlInput": "HTML内容",
       "cssInput": "CSS样式（可选）",
       "pageSize": "页面大小",
@@ -11883,9 +10940,6 @@
       "description": "将JSON数据转换为HTML表格格式",
       "seo_title": "免费在线JSON转表格转换器 - 可视化JSON数据",
       "seo_description": "免费在线 JSON转表格转换器，助您在浏览器本地极速 将JSON转换为HTML表格。以表格形式可视化JSON数组和对象。导出为HTML或复制到电子表格中。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "jsonInput": "JSON输入",
       "tableOutput": "表格输出",
       "convert": "转换为表格",
@@ -11902,9 +10956,6 @@
       "description": "验证 YAML 语法和结构",
       "seo_title": "免费在线 YAML 校验工具 - 检查 YAML 语法结构",
       "seo_description": "免费在线 YAML 验证器，助您在浏览器本地一键快速 免费在线 YAML 校验工具快速验证 YAML 文件的语法和结构。立即开始检查，确保数据准确无误。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "yamlInput": "YAML 输入",
       "validate": "验证",
       "valid": "有效的 YAML",
@@ -11921,9 +10972,6 @@
       "description": "验证XML语法和正确性",
       "seo_title": "免费在线XML验证工具，确保XML完美无缺",
       "seo_description": "免费在线 XML 语法验证器，在浏览器本地快速检查 XML 文件的语法正确性。即时解析文件结构，精准定位未闭合标签、属性缺失等语法错误，并提供详细的纠错行号与提示，适合接口调试、配置文件校验及 XML 格式化排错。",
-
-
-
       "xmlInput": "XML输入",
       "validate": "验证",
       "valid": "有效的XML",
@@ -11940,9 +10988,6 @@
       "description": "将CSS样式转换为Tailwind CSS类",
       "seo_title": "免费在线 CSS 转 Tailwind 转换器 - 将样式改写为实用类",
       "seo_description": "免费在线 CSS转Tailwind转换器，助您在浏览器本地极速 在线把 CSS 样式转换为 Tailwind 实用类，适合旧项目迁移、组件重构和前端样式整理。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "cssInput": "CSS输入",
       "tailwindOutput": "Tailwind类",
       "convert": "转换为Tailwind",
@@ -11958,9 +11003,6 @@
       "description": "将 Tailwind CSS 类转换为标准 CSS",
       "seo_title": "免费在线 Tailwind CSS 到 CSS 转换器 - 生成标准 CSS",
       "seo_description": "免费在线 Tailwind CSS 到 CSS 转换器，助您在浏览器本地极速 将 Tailwind CSS 类转换为标准 CSS。从 Tailwind 工具中提取 CSS。非常适合理解 Tailwind 的输出。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "tailwindInput": "Tailwind CSS 类",
       "cssOutput": "CSS 输出",
       "convert": "转换为 CSS",
@@ -11976,9 +11018,6 @@
       "description": "实时预览编辑SVG代码",
       "seo_title": "免费在线SVG编辑器 - 实时预览修改代码",
       "seo_description": "免费在线 SVG编辑器，助您在浏览器本地极速 免费在线SVG编辑器，轻松编辑和修改SVG代码。实时预览效果，立即开始创作。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "svgCode": "SVG代码",
       "preview": "预览",
       "upload": "上传SVG",
@@ -12003,9 +11042,6 @@
       "description": "从JSON模式生成HTML表单",
       "seo_title": "免费在线 JSON 转表单生成器 - 根据 JSON Schema 生成 HTML 表单",
       "seo_description": "免费在线 JSON转表单生成器，助您在浏览器本地极速 根据 JSON Schema 自动生成 HTML 表单，适合后台配置页、问卷录入和接口参数收集。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "jsonSchema": "JSON模式",
       "formPreview": "表单预览",
       "htmlOutput": "HTML输出",
@@ -12024,9 +11060,6 @@
       "description": "使用自定义请求和头部测试REST API",
       "seo_title": "免费在线 API 测试器",
       "seo_description": "免费在线 API测试器，助您在浏览器本地一键快速 API 测试器发送常见 HTTP 请求，自定义请求头和请求体，适合接口调试、联调排错和返回结果检查。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "url": "URL",
       "method": "方法",
       "headers": "请求头",
@@ -12050,9 +11083,6 @@
       "description": "生成内容安全策略头部",
       "seo_title": "免费在线 CSP 生成器",
       "seo_description": "免费在线 CSP生成器，助您在浏览器本地快速 CSP 生成器快速创建网站内容安全策略响应头，适合 XSS 防护、资源加载限制和安全加固。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "directives": "指令",
       "defaultSrc": "default-src",
       "scriptSrc": "script-src",
@@ -12076,9 +11106,6 @@
       "description": "为脚本和样式生成子资源完整性哈希",
       "seo_title": "免费在线 SRI 哈希生成器",
       "seo_description": "免费在线 SRI哈希生成器，助您在浏览器本地快速 SRI 哈希生成器快速为脚本和样式生成完整性哈希，适合前端安全、CDN 资源校验和发布前加固。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "resourceUrl": "资源URL",
       "resourceContent": "或粘贴内容",
       "algorithm": "算法",
@@ -12107,9 +11134,6 @@
       "description": "测试CORS配置和头部",
       "seo_title": "免费在线 CORS 测试器 - 检查跨域响应头",
       "seo_description": "免费在线 CORS（跨域资源共享）测试与排错工具，快速检测目标 API 是否支持跨域访问。支持配置自定义请求头、常见请求方法与来源设置，即时显示浏览器返回的跨域响应头信息，帮助开发者快速解决跨域报错问题。",
-
-
-
       "url": "测试URL",
       "origin": "来源",
       "method": "方法",
@@ -12137,9 +11161,6 @@
       "description": "将JSON转换为Zod验证模式",
       "seo_title": "免费在线JSON转Zod转换器 - 生成Zod模式",
       "seo_description": "免费在线 JSON转Zod模式，助您在浏览器本地极速 将JSON转换为Zod验证模式。从JSON数据生成类型安全的Zod模式。TypeScript验证的完美选择。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "jsonInput": "JSON输入",
       "zodOutput": "Zod模式",
       "convert": "转换为Zod",
@@ -12158,9 +11179,6 @@
       "description": "从简单 TypeScript 接口生成示例 JSON 数据",
       "seo_title": "免费在线 TypeScript 转 JSON 示例生成器",
       "seo_description": "在浏览器中把简单 TypeScript interface 或 type 转成示例 JSON，适合 API 文档、mock 数据和测试 fixture。",
-
-
-
       "tsInput": "TypeScript输入",
       "jsonOutput": "JSON模式",
       "convert": "转换为JSON",
@@ -12179,9 +11197,6 @@
       "description": "将Markdown转换为演示幻灯片",
       "seo_title": "免费在线Markdown转幻灯片转换器 - 创建演示文稿",
       "seo_description": "免费在线 Markdown转幻灯片，助您在浏览器本地极速 将Markdown转换为演示幻灯片。从Markdown文本创建精美的幻灯片。导出为HTML进行演示。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "markdownInput": "Markdown输入",
       "preview": "预览",
       "convert": "转换",
@@ -12212,9 +11227,6 @@
       "description": "将 AI 自动生成的文本转换为听起来更自然、更像人类写的",
       "seo_title": "免费在线 AI 文本人性化工具 - 使 AI 文本听起来更自然",
       "seo_description": "免费在线 AI 文本人性化工具，助您在浏览器本地极速 将 AI 自动生成的文本转换为听起来更自然、更像人类写的。去除机器化模式，添加自然流畅，绕过 AI 检测。免费在线工具。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "enterText": "输入 AI 自动生成的文本",
       "characters": "字符",
       "options": "转换选项",
@@ -12250,9 +11262,6 @@
       "description": "使用同义词改写文本，生成不同表达版本",
       "seo_title": "免费在线文本改写器 - 生成同义改写文本",
       "seo_description": "免费在线 文本改写器，助您在浏览器本地极速 通过同义词替换生成多种改写版本，适合文案改写、内容扩写和表达变体参考。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "spin": "旋转文本",
       "inputPlaceholder": "输入要旋转的文本...",
       "uniqueness": "独特性",
@@ -12266,9 +11275,6 @@
       "description": "使用Flesch-Kincaid等多种评分标准分析文本可读性",
       "seo_title": "免费在线可读性检测工具 - 分析文本可读性评分",
       "seo_description": "免费在线 可读性检测工具，助您在浏览器本地一键快速 多种可读性评分标准，分析句长、词长和阅读难度，适合文章、博客和网页文案优化。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "inputPlaceholder": "输入要分析可读性的文本...",
       "statistics": "统计",
       "words": "单词",
@@ -12308,9 +11314,6 @@
       "description": "在线编写和编译 TypeScript 代码",
       "seo_title": "免费在线 TypeScript 沙箱 - TS 到 JS 编译器",
       "seo_description": "免费在线 TypeScript 在线沙箱，助您在浏览器本地极速 在线编写 TypeScript 代码，实时查看编译后的 JavaScript 输出。免费在线编译工具，无需注册。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "inputPlaceholder": "输入 TypeScript 代码...",
       "compile": "编译",
       "target": "目标"
@@ -12320,9 +11323,6 @@
       "description": "根据 PEP 8 风格指南格式化 Python 代码",
       "seo_title": "在线 Python 代码格式化工具 - 免费、无需注册",
       "seo_description": "免费在线 Python 代码格式化工具，支持在浏览器本地极速 遵循 PEP 8 规范。自动美化代码缩进、空格和换行，无需安装任何软件。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "inputPlaceholder": "输入 Python 代码...",
       "indentSize": "缩进大小"
     },
@@ -12331,9 +11331,6 @@
       "description": "以 gofmt 风格格式化 Go 代码",
       "seo_title": "免费在线 Go 代码格式化工具",
       "seo_description": "免费在线 Go 代码格式化工具，支持在浏览器本地极速 整理缩进、换行和结构，适合代码审查、提交前清理和开发调试。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "inputPlaceholder": "输入 Go 代码..."
     },
     "rust-formatter": {
@@ -12341,9 +11338,6 @@
       "description": "在线格式化 Rust 代码，遵循 rustfmt 风格",
       "seo_title": "免费在线 Rust 代码格式化工具",
       "seo_description": "免费在线 Rust 代码格式化工具，支持在浏览器本地极速 整理缩进、换行和代码结构，适合代码审查、提交前清理和风格统一。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "inputPlaceholder": "输入 Rust 代码..."
     },
     "yaml-formatter": {
@@ -12351,9 +11345,6 @@
       "description": "在线格式化和验证 YAML，支持自定义选项",
       "seo_title": "免费在线 YAML 格式化工具 - 一站式解决方案",
       "seo_description": "免费在线 YAML 格式化工具，支持在浏览器本地极速 格式化和验证 YAML 文件，提供自定义选项。立即使用我们的在线工具提高工作效率。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "inputPlaceholder": "输入 YAML 内容...",
       "indentSize": "缩进大小"
     },
@@ -12362,9 +11353,6 @@
       "description": "在线生成SVG背景图案",
       "seo_title": "免费在线SVG图案生成器 - 背景图案",
       "seo_description": "免费在线 SVG 图案生成器，助您在浏览器本地快速 用于网页背景。创建几何图案、条纹、圆点等设计，导出 SVG 或 CSS 背景。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "pattern": "图案",
       "size": "大小",
       "color": "颜色",
@@ -12384,9 +11372,6 @@
       "description": "使用可视化编辑器创建CSS文本阴影",
       "seo_title": "免费在线文本阴影生成器 - 实时预览 CSS 文字阴影",
       "seo_description": "免费在线 文本阴影生成器，助您在浏览器本地快速 多层阴影、模糊半径和颜色调节，实时预览效果并复制 CSS 代码。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "preview": "预览",
       "previewText": "预览文本",
       "shadows": "阴影",
@@ -12406,9 +11391,6 @@
       "description": "使用边框技术生成 CSS 三角形",
       "seo_title": "在线免费 CSS 三角形生成工具",
       "seo_description": "免费在线 CSS 三角形生成器，助您在浏览器本地快速 使用边框技术。创建任意方向、大小和颜色的三角形，即时复制纯 CSS 代码。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "preview": "预览",
       "size": "大小",
       "color": "颜色",
@@ -12428,9 +11410,6 @@
       "description": "生成响应式长宽比容器的CSS代码",
       "seo_title": "免费在线长宽比盒子生成器",
       "seo_description": "免费在线 长宽比盒子生成器，助您在浏览器本地快速 生成响应式 CSS 容器代码，适合视频嵌入、图片占位和自适应布局。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "preview": "预览",
       "width": "宽度",
       "height": "高度",
@@ -12444,9 +11423,6 @@
       "description": "估算打字文档所需时间",
       "seo_title": "免费在线打字时间计算器 - 快速估算文档打字时长",
       "seo_description": "免费在线 在线打字时间计算器，可帮助您在浏览器本地 估算任何文档的打字时间。立即尝试，提高工作效率。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "wordCount": "字数",
       "typingSpeed": "打字速度 (WPM)",
       "beginner": "初学者",
@@ -12470,9 +11446,6 @@
       "description": "计算每日、每周、每年的屏幕使用时间",
       "seo_title": "免费在线屏幕使用时间计算器",
       "seo_description": "免费在线 屏幕使用时间计算器，可帮助您在浏览器本地 统计每天、每周和每月的设备使用时长，适合数字习惯管理、家长监控和健康作息评估。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "hoursPerDay": "每天小时数",
       "wakeHours": "清醒时间",
       "daily": "每日",
@@ -12499,9 +11472,6 @@
       "description": "根据文件大小和网络速度估算下载所需时间。",
       "seo_title": "免费在线下载时间计算器 - 按带宽估算文件下载时长",
       "seo_description": "免费在线 下载时间计算器，可帮助您在浏览器本地 根据文件大小和网络速度估算下载时长，适合带宽评估、大文件传输规划和网络体验参考。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "fileSize": "文件大小",
       "downloadSpeed": "下载速度",
       "connection": "连接",
@@ -12517,9 +11487,6 @@
       "description": "解析和查看 iCalendar (.ics) 文件",
       "seo_title": "免费在线 iCal 解析器 - 读取 ICS 日历文件",
       "seo_description": "免费在线 iCal（.ics）日历文件解析与预览工具，快速提取日历文件中的所有日程事件、开始结束时间、地点及描述信息。以直观明了的列表或卡片视图展示行程安排，支持导出为 JSON 格式，方便进行日程管理与数据二次开发。",
-
-
-
       "parse": "解析",
       "uploadFile": "上传文件",
       "icsContent": "iCal 内容",
@@ -12537,9 +11504,6 @@
       "description": "解析和查看 vCard (.vcf) 联系人文件",
       "seo_title": "免费在线 vCard解析工具 - 查看和解析联系人文件",
       "seo_description": "免费在线 vcard解析工具，用于解析 .vcf 格式电子名片并快速读取通讯录。一键提取文件中的姓名、电话、邮箱、公司及地址信息，并以结构化列表清晰展现。支持导出为 JSON 或 CSV，极大简化了联系人数据的迁移与整理。",
-
-
-
       "parse": "解析",
       "uploadFile": "上传文件",
       "vcardContent": "vCard 内容",
@@ -12553,9 +11517,6 @@
       "description": "为您的项目生成 Dockerfile 配置",
       "seo_title": "免费在线 Dockerfile 生成器",
       "seo_description": "免费在线 Dockerfile 生成器，助您在浏览器本地快速 生成容器镜像构建配置，适合应用打包、镜像构建和部署准备。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "baseImage": "基础镜像",
       "workdir": "工作目录",
       "envVars": "环境变量",
@@ -12577,9 +11538,6 @@
       "description": "为 JavaScript/TypeScript 项目生成 ESLint 配置文件",
       "seo_title": "免费在线 ESLint 配置生成器",
       "seo_description": "免费在线 ESLint 配置生成器，助您在浏览器本地快速 创建 JavaScript 和 TypeScript 项目的代码检查规则，适合团队规范、前端工程和自动校验流程。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "browser": "浏览器",
       "off": "关闭",
       "warn": "警告",
@@ -12597,9 +11555,6 @@
       "description": "生成 Prettier 配置文件以格式化代码",
       "seo_title": "免费在线 Prettier 配置生成器",
       "seo_description": "免费在线 Prettier 配置生成器，助您在浏览器本地快速 创建代码格式规则，适合团队协作、统一缩进和 prettierrc 配置整理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "none": "无",
       "all": "全部",
       "always": "总是",
@@ -12627,9 +11582,6 @@
       "description": "为您的项目生成 TypeScript 配置文件",
       "seo_title": "免费在线 TSConfig 生成器",
       "seo_description": "免费在线 TSConfig 生成器，助您在浏览器本地快速 创建 tsconfig.json 配置文件，适合 TypeScript 项目初始化、编译选项整理和团队规范统一。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "presets": "预设",
       "target": "目标",
       "module": "模块",
@@ -12645,9 +11597,6 @@
       "description": "生成 EditorConfig 文件以保持一致的编码风格",
       "seo_title": "免费在线 EditorConfig 生成器",
       "seo_description": "免费在线 EditorConfig 生成器，助您在浏览器本地快速 创建统一的编辑器编码风格配置，适合团队协作、缩进规范和换行规则管理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "root": "根配置（停止搜索父目录）",
       "defaultSettings": "默认设置",
       "indentStyle": "缩进风格",
@@ -12667,9 +11616,6 @@
       "description": "为GitHub项目生成专业的README.md文件",
       "seo_title": "免费在线 GitHub README 生成器 - 快速创建项目说明",
       "seo_description": "免费在线 GitHub 项目README生成器，助您在浏览器本地快速 在线为 GitHub 项目生成 README 文档，快速整理徽章、功能、安装步骤和使用说明，适合开源仓库与项目展示。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "projectNamePlaceholder": "我的精彩项目",
       "descriptionPlaceholder": "项目简介...",
       "authorPlaceholder": "张三",
@@ -12695,9 +11641,6 @@
       "description": "生成遵循 Keep a Changelog 格式的 CHANGELOG.md 文件",
       "seo_title": "免费在线更新日志生成器 - 按版本生成更新记录",
       "seo_description": "使用更新日志生成器和变更日志生成器整理 Git 提交、版本号、发布日期、新增、修复和变更类型，生成适合发布说明和版本归档的更新日志。",
-
-
-
       "projectNamePlaceholder": "我的项目",
       "projectUrlPlaceholder": "https://github.com/用户名/仓库名",
       "versionPlaceholder": "1.0.0",
@@ -12716,9 +11659,6 @@
       "description": "为您的项目生成开源许可证文件",
       "seo_title": "免费在线许可证生成器 - 生成开源项目许可证",
       "seo_description": "免费在线开源协议与许可证生成器，帮您快速为开源项目与软件发布选择并生成合适的法律声明文件。内置 MIT、GPL v3、BSD 等多种主流开源许可证，一键填充作者与年份，支持导出 Markdown 和普通文本格式，是保护开源源码版权的必备工具。",
-
-
-
       "authorPlaceholder": "张三",
       "yearPlaceholder": "2024",
       "selectLicense": "选择许可证",
@@ -12736,9 +11676,6 @@
       "description": "使用 ROT13 密码进行文本编码和解码",
       "seo_title": "免费在线 ROT13 编码解码器",
       "seo_description": "免费在线 ROT13 编码器，助您在浏览器本地极速 ROT13 编码解码器快速处理文本转换，适合凯撒密码学习、字母替换演示和轻量混淆。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "info": "说明",
       "inputPlaceholder": "请输入内容...",
       "encode": "编码",
@@ -12753,9 +11690,6 @@
       "description": "使用关键词进行维吉尼亚密码加密和解密",
       "seo_title": "免费在线维吉尼亚密码加密解密工具",
       "seo_description": "免费在线 维吉尼亚密码，助您在浏览器本地极速 工具通过关键词对文本进行加密与解密，适合密码学学习、课堂演示和古典密码练习。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "info": "说明",
       "encrypt": "加密",
       "decrypt": "解密",
@@ -12773,9 +11707,6 @@
       "description": "计算和验证文件校验和（MD5、SHA-1、SHA-256、SHA-512）",
       "seo_title": "免费在线文件校验和验证器",
       "seo_description": "免费在线文件哈希校验和验证工具，在浏览器本地快速计算并比对文件的 MD5 等各种常用安全哈希值。保障文件传输与下载的完整性，防范木马篡改，数据处理 100% 在本地完成，充分保障您的隐私和安全。",
-
-
-
       "selectFile": "选择文件",
       "clickToUpload": "点击上传",
       "maxSize": "最大大小",
@@ -12795,9 +11726,6 @@
       "description": "计算通货膨胀对购买力随时间的影响",
       "seo_title": "免费在线通货膨胀计算器 - 计算购买力",
       "seo_description": "免费在线 通货膨胀计算器，可帮助您在浏览器本地 估算金额在不同年份的购买力变化，适合历史价格对比、储蓄规划和长期投资测算。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "info": "说明",
       "amount": "金额",
       "annualRate": "年利率",
@@ -12820,9 +11748,6 @@
       "description": "计算利润率和加价百分比",
       "seo_title": "免费在线利润率计算器 - 利润率和加价",
       "seo_description": "免费在线 利润率计算器，可帮助您在浏览器本地 根据成本价和销售价计算毛利率、加价率和利润金额，适合定价分析、零售核算和财务规划。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "info": "说明",
       "cost": "成本",
       "sellingPrice": "售价",
@@ -12843,9 +11768,6 @@
       "description": "根据成本和目标加价率计算销售价格",
       "seo_title": "免费在线加价计算器 - 根据成本计算销售价格",
       "seo_description": "免费在线 加价计算器，可帮助您在浏览器本地 根据成本和目标加价率计算销售价格、利润金额和利润率，适合零售定价、批发报价和利润规划。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "info": "说明",
       "cost": "成本",
       "markupPercentage": "加价百分比",
@@ -12865,9 +11787,6 @@
       "description": "为社交媒体帖子生成相关标签",
       "seo_title": "免费在线标签生成器 - 生成社交媒体话题标签",
       "seo_description": "免费在线 标签生成器，助您在浏览器本地快速 根据主题批量生成社交媒体话题标签，适合短视频、图文和博客平台发布，帮助提升内容曝光与检索覆盖。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "topic": "主题",
       "topicPlaceholder": "输入主题...",
       "platform": "平台",
@@ -12890,9 +11809,6 @@
       "description": "使用HTML和纯文本创建专业的电子邮件签名",
       "seo_title": "免费在线电子邮件签名生成器 - 专业签名",
       "seo_description": "免费在线电子邮件签名生成器，助您轻松定制专业美观的 HTML 电子邮箱签名。提供多种精美模板，支持自定义头像、联系方式、社交链接及主题配色，一键复制生成的签名代码，完美兼容各种主流邮件客户端及网页版邮箱。",
-
-
-
       "namePlaceholder": "张三",
       "titlePlaceholder": "软件工程师",
       "companyPlaceholder": "某某公司",
@@ -12921,9 +11837,6 @@
       "description": "使用自定义偏移量对文本进行凯撒密码加密和解密",
       "seo_title": "免费在线凯撒密码工具 - 加密和解密文本",
       "seo_description": "免费在线 凯撒密码，助您在浏览器本地极速 免费在线工具对文本进行凯撒密码加密和解密。您可以选择1-25之间的任意偏移量。了解由朱利叶斯·凯撒使用的最古老的加密方法之一。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "info": "说明",
       "encrypt": "加密",
       "decrypt": "解密",
@@ -12938,9 +11851,6 @@
       "description": "计算企业的盈亏平衡点",
       "seo_title": "在线盈亏平衡计算器 - 企业分析工具",
       "seo_description": "免费在线 盈亏平衡计算器，可帮助您在浏览器本地 根据固定成本、变动成本和销售价格计算盈亏平衡点，适合成本分析、定价决策和经营规划。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "info": "说明",
       "fixedCosts": "固定成本",
       "fixedCostsHint": "固定成本提示",
@@ -12968,9 +11878,6 @@
       "description": "创建现代玻璃拟态 UI 效果，可自定义模糊、透明度和边框。",
       "seo_title": "免费在线玻璃拟态生成器 - 生成磨砂玻璃 CSS 效果",
       "seo_description": "免费在线 玻璃拟态生成器，助您在浏览器本地快速 在线生成磨砂玻璃 CSS 样式，自定义模糊、透明度、边框和阴影，适合网页界面、卡片组件和视觉设计。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "previewText": "漂亮的磨砂玻璃效果",
       "blur": "模糊",
       "transparency": "透明度",
@@ -12983,9 +11890,6 @@
       "description": "生成柔和的新拟态界面效果，可自定义阴影、圆角和颜色。",
       "seo_title": "免费在线新拟态生成器 - 生成柔和立体界面样式",
       "seo_description": "免费在线 新拟态生成器，助您在浏览器本地快速 生成柔和的新拟态界面样式，自定义阴影、形状、距离和颜色，适合按钮、卡片和表单组件设计。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "backgroundColor": "背景颜色",
       "shape": "形状",
       "shapes": {
@@ -13004,9 +11908,6 @@
       "description": "创建随机有机 Blob 形状作为背景和装饰的 SVG",
       "seo_title": "免费在线 Blob 形状生成器",
       "seo_description": "免费在线 Blob 形状生成器，助您在浏览器本地快速 创建有机曲线图形和装饰元素，适合网页背景、海报设计和视觉点缀。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "complexity": "Complexity",
       "contrast": "Contrast",
       "size": "Size",
@@ -13019,9 +11920,6 @@
       "description": "生成 SVG 波浪图案用于网页分隔和背景",
       "seo_title": "免费在线波浪生成器 - 制作 SVG 波浪分隔图",
       "seo_description": "免费在线 波浪生成器，助您在浏览器本地快速 创建 SVG 波浪背景、页眉分隔和装饰曲线，支持自定义高度、频率和图层，适合网页设计。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "height": "Height",
       "frequency": "Frequency",
       "amplitude": "Amplitude",
@@ -13036,9 +11934,6 @@
       "description": "创建具有多个颜色点的网格渐变背景。",
       "seo_title": "免费在线网格渐变生成器 - 制作多色渐变背景",
       "seo_description": "免费在线 网格渐变生成器，助您在浏览器本地快速 创建多色渐变背景和柔和色块过渡，适合网页首屏、海报背景和视觉设计。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "colorPoints": "Color Points",
       "point": "Point",
       "blur": "Blur",
@@ -13049,9 +11944,6 @@
       "description": "生成噪点纹理和颗粒效果用于背景",
       "seo_title": "免费在线噪点纹理生成器",
       "seo_description": "免费在线 噪点纹理生成器，助您在浏览器本地快速 创建随机噪点、颗粒背景和纹理叠加效果，适合海报设计、网页背景和界面装饰。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "noiseType": "Noise Type",
       "types": {
         "random": "Random",
@@ -13072,9 +11964,6 @@
       "description": "生成符合规范的 Git 提交信息",
       "seo_title": "免费在线 Git 提交信息生成器",
       "seo_description": "免费在线 Git 提交信息生成器，助您在浏览器本地快速 生成规范化提交说明，帮助保持提交历史清晰一致，适合团队协作与版本管理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "type": "Type",
       "scope": "Scope",
       "scopePlaceholder": "e.g., auth, api, ui",
@@ -13101,9 +11990,6 @@
       "description": "计算网络带宽需求和数据传输时间",
       "seo_title": "免费在线带宽计算器",
       "seo_description": "免费在线 带宽计算器，可帮助您在浏览器本地 根据文件大小和传输时间估算所需网络带宽，适合下载规划、备份传输和容量评估。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "fileSize": "File Size",
       "transferTime": "Transfer Time",
       "timeUnits": {
@@ -13121,9 +12007,6 @@
       "description": "计算文件传输时间和所需带宽",
       "seo_title": "免费在线数据传输计算器，快速计算文件传输时间",
       "seo_description": "免费在线 数据传输计算器，可帮助您在浏览器本地 根据文件大小和网络带宽估算传输时间，适合下载规划、上传评估和网络容量测算。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "fileSize": "File Size",
       "connectionSpeed": "Connection Speed",
       "presetSpeeds": "Preset Speeds",
@@ -13143,9 +12026,6 @@
       "description": "计算屏幕的 PPI 和像素密度",
       "seo_title": "免费在线像素密度计算器 - 计算 PPI 与屏幕清晰度",
       "seo_description": "免费在线像素密度计算器，支持根据屏幕分辨率和屏幕尺寸一键计算 PPI、像素间距及长宽比，是选购屏幕、UI设计和移动端开发的得力助手，数据完全本地计算。",
-
-
-
       "width": "Width",
       "height": "Height",
       "diagonal": "Diagonal",
@@ -13176,9 +12056,6 @@
       "description": "计算打印和显示的 DPI 值",
       "seo_title": "免费在线DPI计算器 - 快速计算打印分辨率",
       "seo_description": "免费在线 DPI 计算器，可帮助您在浏览器本地 DPI计算器，轻松计算打印所需的分辨率或目标DPI。立即尝试，优化您的打印效果。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "calculateDpi": "Calculate DPI",
       "calculatePixels": "Calculate Pixels",
       "imageResolution": "Image Resolution",
@@ -13216,9 +12093,6 @@
       "description": "将cURL命令转换为Python、JavaScript、Go、PHP等多种编程语言的代码",
       "seo_title": "免费在线cURL到代码转换器 - Python, JS, Go | U2Tool",
       "seo_description": "免费在线 cURL到代码生成器，助您在浏览器本地快速 立即将cURL命令转换为Python、JavaScript、Go、PHP代码。免费在线API开发工具。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13241,9 +12115,6 @@
       "description": "全面HTTP状态码参考，包含解释和解决方案",
       "seo_title": "免费在线HTTP状态码工具 - 详尽参考与解决方案",
       "seo_description": "免费在线 HTTP状态码参考，助您在浏览器本地极速 一站式HTTP状态码大全，包含详尽解释与实用解决方案。立即访问我们的免费在线工具，提高网站性能。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13267,9 +12138,6 @@
       "description": "无需验证即可解码和检查 JWT 令牌负载",
       "seo_title": "免费在线 JWT 负载解码器",
       "seo_description": "免费在线 JWT 负载解码器，助您在浏览器本地极速 查看令牌载荷内容，适合接口调试、声明检查和认证排查。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13296,9 +12164,6 @@
       "description": "将图片转换为 Base64 字符串，或将 Base64 转换为图片",
       "seo_title": "免费在线Base64图像转换器 - 编码/解码 | U2Tool",
       "seo_description": "免费在线 Base64 图片转换器，支持在浏览器本地极速 将图像转换为Base64数据URI，并将Base64解码回图像。免费工具，用于在HTML/CSS中嵌入图像。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13348,9 +12213,6 @@
       "description": "将URL查询参数解析为键值对",
       "seo_title": "免费在线 URL 查询字符串解析工具 - 快速分析",
       "seo_description": "免费在线 URL查询字符串解析器，支持在浏览器本地极速 解析和分析 URL 查询参数，获取关键信息。立即使用我们的在线工具，快速获得 JSON 格式输出。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13380,9 +12242,6 @@
       "description": "构建并格式化HTTP请求头，用于API测试",
       "seo_title": "免费在线HTTP请求头构建工具 - API测试必备",
       "seo_description": "免费在线 HTTP请求头构建器，助您在浏览器本地快速 构建和格式化HTTP请求头，优化API测试体验。立即尝试我们的在线工具。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13426,9 +12285,6 @@
       "description": "使用自定义有效载荷测试和调试webhook端点",
       "seo_title": "Webhook测试工具在线工具 - U2Tool",
       "seo_description": "使用 Webhook 测试工具构造自定义请求，查看响应结果并进行回调验证，适合接口联调和事件通知测试。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13482,9 +12338,6 @@
       "description": "格式化并美化API响应（JSON、XML），提高可读性",
       "seo_title": "免费在线API响应格式化工具 - 简单美化JSON/XML",
       "seo_description": "免费在线 API响应格式化工具，支持在浏览器本地极速 美化JSON和XML数据，提高可读性。立即试用，让数据展示更清晰。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13535,9 +12388,6 @@
       "description": "将SQL查询转换为MongoDB查询语法",
       "seo_title": "SQL到MongoDB转换器在线工具 - U2Tool",
       "seo_description": "将 SQL 查询语句转换为 MongoDB 查询条件，检查筛选条件、比较运算和字段映射，适合数据库迁移和开发调试。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13576,9 +12426,6 @@
       "description": "从JSON数据生成协议缓冲区定义",
       "seo_title": "免费在线 JSON 转 Protobuf 转换器 - 生成协议定义",
       "seo_description": "免费在线 JSON转Protobuf转换器，支持在浏览器本地极速 JSON 转 Protobuf 转换器可根据 JSON 数据结构生成协议定义文件，适合接口建模、消息协议设计和数据结构迁移。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13627,9 +12474,6 @@
       "description": "为多种语言生成正则表达式模式的代码片段",
       "seo_title": "免费在线正则表达式转代码生成器",
       "seo_description": "免费在线 正则表达式转代码生成器，助您在浏览器本地快速 把 Regex 模式转换为 Python、JavaScript、Java 和 Go 代码片段，适合开发集成与自动化。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13671,9 +12515,6 @@
       "description": "从Swagger/OpenAPI规范生成API客户端代码",
       "seo_title": "免费在线 Swagger 代码生成器",
       "seo_description": "免费在线 Swagger到代码生成器，助您在浏览器本地快速 Swagger 代码生成器根据 OpenAPI 规范生成 API 客户端代码，适合接口开发、SDK 生成和联调准备。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13712,9 +12553,6 @@
       "description": "生成数据库架构变更的迁移脚本",
       "seo_title": "免费在线数据库迁移生成器",
       "seo_description": "免费在线 数据库迁移生成器，助您在浏览器本地快速 生成数据库表结构变更脚本，适合版本升级、数据迁移和发布前校验。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13767,9 +12605,6 @@
       "description": "生成 .env 文件和环境变量配置",
       "seo_title": "免费在线环境变量生成器",
       "seo_description": "免费在线 环境变量生成器，助您在浏览器本地快速 创建环境变量模板和配置示例，适合本地开发、部署准备和密钥占位管理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13811,9 +12646,6 @@
       "description": "为多容器应用生成 Docker Compose 配置",
       "seo_title": "免费在线 Docker Compose 高级生成器",
       "seo_description": "免费在线 Docker Compose 生成器，助您在浏览器本地快速 Docker Compose 高级生成器快速生成多服务、多网络和卷配置，适合复杂本地开发环境、测试集群和部署编排。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13844,9 +12676,6 @@
       "description": "生成 Kubernetes 部署清单（YAML）",
       "seo_title": "免费在线 Kubernetes 清单生成器",
       "seo_description": "免费在线 Kubernetes 清单生成器，助您在浏览器本地快速 创建部署配置文件，适合集群部署、资源编排和发布准备。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13905,9 +12734,6 @@
       "description": "分析代码复杂度指标（圈复杂度，代码行数）",
       "seo_title": "免费在线代码复杂度分析工具",
       "seo_description": "免费在线 代码复杂度分析工具，助您在浏览器本地一键快速 检查圈复杂度、代码行数和可维护性指标，帮助识别高风险函数并指导重构。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -13967,9 +12793,6 @@
       "description": "检查软件包依赖项以发现已知的安全漏洞",
       "seo_title": "免费在线依赖性漏洞检测工具",
       "seo_description": "免费在线 依赖性漏洞检测工具，助您在浏览器本地一键快速 扫描 npm 与 pip 依赖，识别已知漏洞、过期软件包和高风险版本问题。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14015,9 +12838,6 @@
       "description": "分析代码性能，识别性能瓶颈",
       "seo_title": "免费在线代码性能分析器",
       "seo_description": "免费在线 代码性能分析器，助您在浏览器本地一键快速 定位执行瓶颈和耗时函数，适合性能调优、基准测试和代码比较。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14056,9 +12876,6 @@
       "description": "检测代码模式中的潜在内存泄漏",
       "seo_title": "免费在线内存泄漏检测器",
       "seo_description": "免费在线 内存泄漏检测器，助您在浏览器本地一键快速 识别事件监听、定时器和对象引用问题，适合代码排查与性能优化。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14102,9 +12919,6 @@
       "description": "查找重复代码块并提出重构建议",
       "seo_title": "免费在线代码重复检测工具",
       "seo_description": "免费在线 代码重复检测工具，助您在浏览器本地极速 查找重复代码块和相似逻辑，帮助减少复制粘贴、推进重构并提升可维护性。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14156,9 +12970,6 @@
       "description": "识别代码中的未使用导入和依赖关系",
       "seo_title": "免费在线未使用导入查找器",
       "seo_description": "免费在线 未使用导入查找器，助您在浏览器本地极速 识别未使用导入和依赖项，适合代码清理、包体积优化和重构排查。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14202,9 +13013,6 @@
       "description": "查找并移除无法访问或无效的代码",
       "seo_title": "免费在线无效代码分析器",
       "seo_description": "免费在线 无效代码分析器，助您在浏览器本地一键快速 识别未调用函数、冗余逻辑和可删除代码，帮助清理项目并提升可维护性。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14286,9 +13094,6 @@
       "description": "可视化数据库架构和表关系",
       "seo_title": "免费在线数据库架构可视化工具",
       "seo_description": "免费在线 数据库架构可视化工具，助您在浏览器本地极速 直观查看表结构、字段关系和数据模型，适合数据库设计梳理、文档整理和团队协作。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14333,10 +13138,6 @@
       "description": "静态检查 SQL 代码中的拼接、插值和参数绑定风险。",
       "seo_title": "SQL注入测试工具在线工具 - U2Tool",
       "seo_description": "粘贴 SQL 或后端代码片段，静态检查字符串拼接、模板插值、请求参数和 multipleStatements 风险，并查看分数与修复建议。",
-
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14375,9 +13176,6 @@
       "description": "测试数据库连接字符串和配置",
       "seo_title": "免费在线数据库连接测试工具 - 检查连接字符串与配置",
       "seo_description": "免费在线数据库连接测试工具与排错助手，提供针对各种常见数据库的连接字符串模板、端口联通性与认证配置测试建议。帮助开发者快速诊断网络连接故障、防火墙阻拦和配置错误，轻松定位数据库连不上问题。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14419,9 +13217,6 @@
       "description": "分析查询执行计划并提出优化建议",
       "seo_title": "免费在线查询执行计划工具",
       "seo_description": "免费在线 查询执行计划工具，可帮助您在浏览器本地 分析 SQL 执行路径，适合性能优化、索引排查和慢查询分析。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14460,9 +13255,6 @@
       "description": "为数据库生成备份计划和脚本",
       "seo_title": "免费在线数据库备份计划工具",
       "seo_description": "免费在线 数据库备份计划工具，可帮助您在浏览器本地 生成数据库备份计划、执行频率和脚本模板，适合日常备份、容灾准备和运维排期。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14493,9 +13285,6 @@
       "description": "生成遵循最佳实践的常规提交信息",
       "seo_title": "免费在线 Git 提交信息生成器",
       "seo_description": "免费在线 Git 提交信息生成器，助您在浏览器本地快速 生成符合常规提交规范的提交信息，适合版本管理、协作开发和变更日志整理。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14541,9 +13330,6 @@
       "description": "验证Git分支名称是否符合命名规范",
       "seo_title": "Git分支命名验证器在线工具 - U2Tool",
       "seo_description": "在浏览器中使用Git分支命名验证器快速处理输入、输出和结果，无需注册或安装，适合日常检查和整理。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14595,9 +13381,6 @@
       "description": "使用可视化差异功能帮助解决Git合并冲突",
       "seo_title": "免费在线 Git 合并冲突解决器",
       "seo_description": "免费在线 Git合并冲突解决器，助您在浏览器本地极速 Git 合并冲突解决器快速对比冲突内容并生成合并结果，适合分支合并、代码审查和版本协作。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14639,9 +13422,6 @@
       "description": "可视化Git提交历史和分支结构",
       "seo_title": "在线免费Git历史可视化工具 - 支持JSON、Base64",
       "seo_description": "免费在线 Git历史可视化工具，助您在浏览器本地极速 Git提交历史和分支结构。在线免费工具，支持JSON、Base64导出。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14686,9 +13466,6 @@
       "description": "从Git提交中生成各种格式的变更日志",
       "seo_title": "变更日志生成器在线工具 - U2Tool",
       "seo_description": "使用更新日志生成器和变更日志生成器整理 Git 提交、版本号、发布日期、新增、修复和变更类型，生成适合发布说明和版本归档的更新日志。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14737,9 +13514,6 @@
       "description": "管理和组织Git标签以发布版本",
       "seo_title": "免费在线 Git 标签管理器",
       "seo_description": "免费在线 Git标签管理器，助您在浏览器本地极速 Git 标签管理器快速创建和整理发布标签，适合版本发布、语义化版本管理和团队协作。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14787,9 +13561,6 @@
       "description": "将Markdown文档转换为带样式选项的HTML",
       "seo_title": "Markdown转HTML转换器在线工具 - U2Tool",
       "seo_description": "在浏览器中使用Markdown转HTML转换器快速处理输入、输出和结果，无需注册或安装，适合日常检查和整理。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14842,9 +13613,6 @@
       "description": "从标题和结构生成文档大纲",
       "seo_title": "免费在线文档大纲生成器 - 自动提取标题结构",
       "seo_description": "免费在线 文档大纲生成器，助您在浏览器本地快速 按标题层级整理章节结构并生成导航大纲，适合论文、方案、说明文档和长文阅读。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14887,9 +13655,6 @@
       "description": "从文档标题创建目录",
       "seo_title": "免费在线目录生成器 - 从标题快速生成目录",
       "seo_description": "免费在线目录生成器，可快速提取长文档和 HTML 网页中的各级文档标题层级，自动生成结构清晰、带锚点链接的文章目录代码。支持一键生成并导出 Markdown 与 HTML 格式，让您的长文档排版与阅读更加高效便捷。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14935,9 +13700,6 @@
       "description": "统计单词、字符、句子和段落",
       "seo_title": "免费在线文档字数统计工具 - 统计字数与段落",
       "seo_description": "免费在线文档字数统计工具，可在浏览器中安全统计文档字数、字符数、句子数和段落数量，提供阅读时间估算和常用词频分析，100%本地处理，全方位保障您的隐私。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -14973,9 +13735,6 @@
       "description": "使用多种选项格式化和清理文档文本",
       "seo_title": "免费在线文档格式化工具 - 清理排版与段落结构",
       "seo_description": "免费在线 文档格式化工具，支持在浏览器本地极速 清理文档文本中的空格、换行和段落结构，适合整理笔记、报告初稿和复制后的杂乱内容。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15027,9 +13786,6 @@
       "description": "格式化APA、MLA、芝加哥等风格的引用",
       "seo_title": "免费在线引用格式化工具",
       "seo_description": "免费在线 引用格式化工具，支持在浏览器本地极速 整理论文、书籍和网站引用，适合参考文献生成、论文写作和学术排版。无需下载与注册，一键轻松搞定格式转换，数据处理 100% 本地运行，安全可靠，是您日常开发与格式整理的必备效率工具。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15091,9 +13847,6 @@
       "description": "使用PERT和故事点计算项目工作量估算",
       "seo_title": "免费在线项目估算计算器",
       "seo_description": "免费在线 项目估算计算器，可帮助您在浏览器本地 评估任务工时、项目周期和故事点工作量，适合需求拆分、迭代规划和交付排期。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15127,9 +13880,6 @@
       "description": "计算并跟踪敏捷团队的冲刺速度",
       "seo_title": "免费在线敏捷团队冲刺速度计算器 - 统计故事点速度",
       "seo_description": "免费在线 敏捷团队冲刺速度计算器，可帮助您在浏览器本地 统计每次冲刺完成的故事点，分析平均速度与趋势，适合敏捷迭代计划和交付预测。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15161,9 +13911,6 @@
       "description": "跨项目规划和优化资源分配",
       "seo_title": "免费在线资源分配规划器 - 跨项目分配团队资源",
       "seo_description": "免费在线 资源分配规划器，可帮助您在浏览器本地 按项目、任务和成员规划团队资源，查看负载与可用性，帮助优化排期和人力利用率。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15197,9 +13944,6 @@
       "description": "识别和评估项目风险，制定缓解策略",
       "seo_title": "免费在线项目风险分析器 - 识别风险并制定缓解策略",
       "seo_description": "免费在线 项目风险分析器，助您在浏览器本地一键快速 识别、评估和排序项目风险，生成风险矩阵与缓解策略，适合项目管理、交付评估和复盘。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15261,9 +14005,6 @@
       "description": "跟踪项目里程碑和截止日期",
       "seo_title": "免费在线里程碑追踪器 - 跟踪项目里程碑与截止日期",
       "seo_description": "免费在线 里程碑追踪器，可帮助您在浏览器本地 跟踪项目节点、截止日期和完成进度，适合产品发布、项目管理和交付排期。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15315,9 +14056,6 @@
       "description": "规划团队容量和工作负载分配",
       "seo_title": "免费在线团队容量规划器 - 规划工作负载与可用工时",
       "seo_description": "免费在线 团队容量规划器，可帮助您在浏览器本地 结合成员工时、会议和假期计算可用容量，帮助安排任务分配、排期和资源平衡。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15354,9 +14092,6 @@
       "description": "从笔记中生成结构化会议纪要",
       "seo_title": "免费在线会议纪要生成器 - 整理会议记录与行动项",
       "seo_description": "免费在线 会议纪要生成器，助您在浏览器本地快速 根据会议笔记整理纪要、决议和行动项，适合团队例会、项目复盘和客户沟通记录。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15417,9 +14152,6 @@
       "description": "跨时区安排会议",
       "seo_title": "免费在线时区会议调度器 - 安排跨时区会议时间",
       "seo_description": "免费在线 时区会议调度器，可帮助您在浏览器本地 同步多个城市时区时间，帮助安排跨时区会议、远程协作和国际团队沟通。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15445,9 +14177,6 @@
       "description": "创建结构化会议议程，分配时间",
       "seo_title": "免费在线会议议程构建器 - 生成会议议程与时间安排",
       "seo_description": "免费在线 会议议程构建器，助您在浏览器本地快速 整理会议主题、议程项目、主讲人和时长分配，适合周会、客户会和评审会。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15504,9 +14233,6 @@
       "description": "查找日历间的共同可用时间",
       "seo_title": "免费在线日历可用时间查找器 - 查找共同空闲时段",
       "seo_description": "免费在线 日历可用时间查找器，助您在浏览器本地极速 对比多个日历的忙闲时间，快速找出共同空闲时段，适合会议安排、面试预约和跨团队排期。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15536,9 +14262,6 @@
       "description": "查找并预订可用的会议室",
       "seo_title": "免费在线会议室查找工具 - 查找可用会议室与预订时段",
       "seo_description": "免费在线 会议室查找工具，助您在浏览器本地极速 按时间、容量和设施筛选可用会议室，适合会议预订、培训安排和办公排期。该工具完全免费使用、无需安装注册，界面精美且响应迅速，全部数据在本地处理，全方位保障您的隐私与数据安全性。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15592,9 +14315,6 @@
       "description": "描述",
       "seo_title": "免费在线发票模板生成器 - 快速创建专业发票",
       "seo_description": "免费在线 发票模板生成器，助您在浏览器本地快速 创建专业发票，支持多种格式。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15664,9 +14384,6 @@
       "description": "生成报销、差旅和日常支出的费用报告。",
       "seo_title": "免费在线费用报告生成器 - 生成报销与支出汇总",
       "seo_description": "免费在线 费用报告生成器，助您在浏览器本地快速 在线整理报销、差旅和日常支出明细，适合财务归档、团队报销和预算跟踪。工具完全免费、即用即走，支持自定义配置并实时预览渲染，可一键导出高清格式文件，是您提升工作效率与创作的得力助手。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15742,9 +14459,6 @@
       "description": "分析预算与实际支出的差异",
       "seo_title": "预算差异分析器在线工具 - U2Tool",
       "seo_description": "使用预算差异分析器比较预算、实际支出、费用差异和执行率，快速识别超支、节省和需要复盘的类别。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",
@@ -15807,9 +14521,6 @@
       "description": "描述",
       "seo_title": "免费在线成本效益分析器 - 评估投入与收益",
       "seo_description": "免费在线 成本效益分析器，助您在浏览器本地一键快速 对比项目成本与预期收益，分析净收益、回收周期和投资价值，适合立项评估、预算审批和方案比较。提供精确的实时分析报告与专业诊断建议，全部数据 100% 安全保密，帮助您迅速排查安全隐患、排除故障并提升应用性能。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "过程",
@@ -15885,9 +14596,6 @@
       "description": "根据历史数据估算收入、成本和现金流。",
       "seo_title": "免费在线财务预测计算器 - 估算收入与现金流",
       "seo_description": "免费在线 财务预测计算器，可帮助您在浏览器本地 根据历史数据估算收入、成本、利润和现金流变化，适合商业计划、预算编制和经营分析。内置实用计算引擎与便捷模板，支持数据快速导入并自动生成分析结果，极大地简化了您的规划排期与日常计算流程。",
-
-
-
       "input": "输入",
       "output": "输出",
       "process": "处理",

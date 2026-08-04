@@ -1,6 +1,8 @@
 {
   "capabilities": {
-    "modes": { "localProjectPlanning": "Local Gantt project planning" },
+    "modes": {
+      "localProjectPlanning": "Local Gantt project planning"
+    },
     "inputs": {
       "taskFields": "Task names, dates, progress, milestones, and dependencies",
       "jsonProject": "Local JSON project file",
@@ -23,8 +25,8 @@
     "limits": {
       "noCollaboration": "No collaboration or team sharing",
       "noCloudSync": "No cloud synchronization",
-      "noResourceManagement": "No resource allocation or management",
-      "noEnterpriseWorkflow": "No enterprise approval workflow",
+      "noResourceManagement": "No resource planning",
+      "noEnterpriseWorkflow": "No approval workflows",
       "noLiveMultiUser": "No live multi-user project status"
     }
   },
@@ -72,7 +74,7 @@
   "noTasks": "Add a task or apply a template to begin.",
   "localOnlyTitle": "Local project data",
   "localOnlyDescription": "Imports, exports, calculations, and saved projects stay in this browser. Nothing is uploaded or synchronized.",
-  "detailed_description": "Create a local Gantt project with task dates, progress, milestones, and dependency links. The browser calculates a deterministic critical path, highlights its tasks, and warns about cycles, missing dependencies, or invalid dates. Save and restore one project in this browser, start from a software release, marketing campaign, or event preparation template, and exchange project data with local JSON or CSV files. PNG and SVG chart export remain available. The tool does not provide collaboration, cloud synchronization, resource allocation, enterprise approval workflows, or live multi-user status.",
+  "detailed_description": "Use this easy gantt chart maker and project timeline maker to create gantt chart online free in your browser: add tasks with dates, progress, milestones, and dependency links, and the tool calculates a deterministic critical path, highlights its tasks, and warns about cycles, missing dependencies, or invalid dates. Create a gantt chart online from a software release, marketing campaign, or event preparation template, save and restore one project in this browser, and exchange project data with local JSON or CSV files. PNG and SVG chart export remain available. The tool is a local, single-user chart builder; it does not include server, account, or team features.",
   "usage_steps": [
     "Choose a built-in template or add tasks manually.",
     "Set each task name, dates, progress, milestone status, and dependencies.",
@@ -84,13 +86,29 @@
   "usage_examples": [
     "Plan a software release from scope through testing and a zero-day launch milestone.",
     "Link campaign brief, production, and launch tasks and review the longest dependency chain.",
-    "Prepare an event schedule locally and exchange it as CSV with a spreadsheet workflow."
+    "Prepare an event schedule locally and exchange it as CSV with a spreadsheet workflow.",
+    "Build a two-week plan, link finish-to-start dependencies, and confirm the highlighted critical path before exporting SVG."
   ],
   "faqs": [
-    { "question": "Can the tool calculate a critical path?", "answer": "Yes. It sums inclusive calendar-day task durations across dependencies, treats milestones as zero days, and highlights one deterministic longest path." },
-    { "question": "Where is a saved project stored?", "answer": "It is stored only in this browser's local storage. There is no account or cloud synchronization." },
-    { "question": "Are imported files uploaded?", "answer": "No. JSON and CSV files are read locally in the browser and are not uploaded." },
-    { "question": "Can I export the chart?", "answer": "Yes. PNG and SVG chart export are available, and project data can be exported as JSON or CSV." },
-    { "question": "Does it manage resources or team status?", "answer": "No. It does not allocate resources, provide collaboration, run enterprise approvals, or show live multi-user status." }
+    {
+      "question": "Can the tool calculate a critical path?",
+      "answer": "Yes. It sums inclusive calendar-day task durations across dependencies, treats milestones as zero days, and highlights one deterministic longest path."
+    },
+    {
+      "question": "Where is a saved project stored?",
+      "answer": "It is stored only in this browser's local storage. There is no account or cloud synchronization."
+    },
+    {
+      "question": "Are imported files uploaded?",
+      "answer": "No. JSON and CSV files are read locally in the browser and are not uploaded."
+    },
+    {
+      "question": "Can I export the chart?",
+      "answer": "Yes. PNG and SVG chart export are available, and project data can be exported as JSON or CSV."
+    },
+    {
+      "question": "Does it manage resources or team status?",
+      "answer": "No. The tool is a local single-user builder with no server, account, or team features."
+    }
   ]
 }

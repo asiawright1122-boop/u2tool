@@ -1,7 +1,11 @@
 {
   "capabilities": {
-    "modes": { "localEnglishRules": "Reglas locales de gramática inglesa" },
-    "inputs": { "plainText": "Texto sin formato en inglés" },
+    "modes": {
+      "localEnglishRules": "Reglas locales de gramática inglesa"
+    },
+    "inputs": {
+      "plainText": "Texto sin formato en inglés"
+    },
     "outputs": {
       "highlightedIssues": "Problemas gramaticales resaltados",
       "correctedText": "Texto corregido"
@@ -18,7 +22,7 @@
       "noServerProcessing": "Sin procesamiento en el servidor"
     }
   },
-  "detailed_description": "La interfaz en español revisa texto en inglés con reglas estáticas locales para erratas frecuentes, palabras repetidas, concordancia sencilla y puntuación. Las reglas se ejecutan en el navegador, resaltan coincidencias y permiten aplicar sugerencias. No utiliza IA ni procesamiento en servidor; revisa el texto inglés corregido según su contexto.",
+  "detailed_description": "La interfaz en español revisa texto en inglés con reglas estáticas locales para erratas frecuentes, palabras repetidas, concordancia sencilla y puntuación. Las reglas se ejecutan en el navegador, resaltan coincidencias y permiten aplicar sugerencias. No utiliza IA ni procesamiento en servidor; revisa el texto inglés corregido según su contexto. El corrector resalta cada coincidencia dentro del texto y ofrece una sustitución concreta con una breve explicación. El texto se procesa en tu dispositivo: no se envía a ningún servidor y no hay límite de longitud. Cuando una regla no está segura de la corrección, marca el fragmento como «revisar» en lugar de reemplazarlo a ciegas, así puedes decidir en contexto.",
   "usage_steps": [
     "Pega texto en inglés en el campo de entrada",
     "Revisa las coincidencias de reglas resaltadas en la vista previa",
@@ -51,5 +55,7 @@
       "question": "Sustituye la revisión manual?",
       "answer": "No. Son reglas estáticas limitadas, no IA; revisa manualmente la precisión y el contexto de cualquier texto inglés importante."
     }
-  ]
+  ],
+  "seo_title": "Corrector de gramática online gratis | U2Tool",
+  "seo_description": "Corrige la gramática del texto en inglés online gratis en el navegador: resalta errores, sugiere correcciones y procesa todo localmente."
 }

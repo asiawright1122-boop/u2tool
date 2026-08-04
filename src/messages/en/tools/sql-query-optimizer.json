@@ -2,7 +2,7 @@
   "name": "SQL Query Optimizer",
   "description": "Analyze SQL text locally with dialect-aware heuristics and optional pasted EXPLAIN tokens.",
   "seo_title": "Local SQL Query Optimizer and EXPLAIN Review | U2Tool",
-  "seo_description": "Analyze pasted SQL locally, choose a database dialect, review evidence-backed findings and index candidates, format SQL, and inspect pasted EXPLAIN tokens without connecting to a database or executing queries.",
+  "seo_description": "Analyze pasted SQL locally, choose a dialect, review evidence-backed findings and index candidates, format SQL, and inspect pasted EXPLAIN tokens without a database.",
   "databaseDialect": "Database dialect",
   "dialects": {
     "generic": "Generic SQL",

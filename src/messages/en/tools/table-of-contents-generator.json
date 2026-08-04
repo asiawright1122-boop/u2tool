@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Table of Contents Generator turns a structured Title | Page list into a readable table of contents. Indent a line with two spaces to create a child level, then choose dotted, lined, simple, or numbered styling. You can keep or hide page numbers, adjust indentation, and copy plain text or HTML output. The tool starts from the list you type and does not update source files for you.",
+  "detailed_description": "Table of Contents Generator turns a structured Title | Page list into a readable table of contents. Indent a line with two spaces to create a child level, then choose dotted, lined, simple, or numbered styling. You can keep or hide page numbers, adjust indentation, and copy plain text or HTML output. The tool starts from the list you type and does not update source files for you. The generator accepts plain Title | Page text, indentation-based hierarchy, or pasted headings, and outputs a ready-to-copy table of contents in Markdown or HTML. Styling options (dotted, lined, simple, numbered) make it suitable for README files, documentation sites, and printed handouts. Generated output is a draft: verify the page numbers or links match the final document before publishing.",
   "usage_steps": [
     "Enter one item per line using the Title | Page format.",
     "Add two leading spaces to create a nested entry.",
@@ -34,5 +34,7 @@
       "question": "What should I check before using the Table of Contents Generator output?",
       "answer": "Review the generated output, available options, and target context before publishing, deploying, or sharing it."
     }
-  ]
+  ],
+  "seo_title": "Table of Contents Generator Online | U2Tool",
+  "seo_description": "Generate a clean table of contents from headings free in your browser. Extract H1-H6, create nested lists, and copy as Markdown or HTML."
 }

@@ -28,7 +28,7 @@
       "utf8TextConverter": "Text conversion uses UTF-8"
     }
   },
-  "detailed_description": "Open a local binary file up to 2 MiB and inspect it in a paged 16-byte grid with zero-padded offsets. Edit hex bytes, inspect the read-only printable-ASCII preview, search the full file, reset changes, and download a modified copy; all file processing stays in the browser. The separate text converter encodes and decodes UTF-8 text and hexadecimal byte pairs.",
+  "detailed_description": "Use this free online hex editor to open a local binary file up to 2 MiB and inspect it in a paged 16-byte grid with zero-padded offsets. Edit hex bytes, review the read-only printable-ASCII preview, search the full file with hex byte pairs or ASCII text, reset changes, and download a modified copy; all file processing stays in the browser with no upload. The built-in text converter handles text to hex and hex to text for UTF-8 hex byte pairs, which is handy for encoding checks, binary inspection, and debugging serialized payloads. Byte edits are applied to the in-memory copy only; the original file is never touched and every change is visible in the byte grid before you download.",
   "usage_steps": [
     "1. Choose a local file no larger than 2 MiB.",
     "2. Edit a two-digit hex byte and review the derived ASCII preview.",
@@ -38,7 +38,9 @@
   ],
   "usage_examples": [
     "Inspect a small binary fixture and change one known byte.",
-    "Find repeated ASCII headers, move between matches, and save a modified copy."
+    "Find repeated ASCII headers, move between matches, and save a modified copy.",
+    "Convert a UTF-8 hex string back to readable text to verify an encoded payload.",
+    "Change a checksum byte in a fixture and confirm the ASCII preview reflects the edit."
   ],
   "faqs": [
     {
@@ -56,6 +58,10 @@
     {
       "question": "Which text encoding is used?",
       "answer": "The Text Converter uses UTF-8 for text-to-hex and hex-to-text conversion."
+    },
+    {
+      "question": "Can I convert text to hex and back?",
+      "answer": "Yes. Text Converter mode turns UTF-8 text into hex byte pairs (text to hex) and decodes hex byte pairs back into readable text (hex to text)."
     }
   ]
 }

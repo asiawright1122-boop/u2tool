@@ -1,5 +1,5 @@
 {
-  "detailed_description": "YouTube説明文生成ツール は、video title、keyword、audience、CTA、resource links から構造化された YouTube description 草稿を作ります。intro、learning bullets、links、CTA、hashtags を含み、YouTube Studio で編集する前の型を整えます。",
+  "detailed_description": "YouTube説明文生成ツール は、video title、keyword、audience、CTA、resource links から構造化された YouTube description 草稿を作ります。intro、learning bullets、links、CTA、hashtags を含み、YouTube Studio で編集する前の型を整えます。 キーワードを指定すると、導入文・学習ポイント・関連リンク・CTA・ハッシュタグの構成に沿って本文が組み立てられます。出力はYouTube Studioにそのまま貼り付けて編集できる形で、動画の概要欄をゼロから書く手間を省きます。生成結果はあくまで下書きなので、動画の内容と一致するように必ず確認・編集してから公開してください。",
   "usage_steps": [
     "動画タイトル、keyword、audience、CTA、resource link を 1 行ずつ入力します。",
     "intro、learning bullets、links、CTA、hashtags を確認します。",
@@ -28,5 +28,7 @@
       "question": "公開前に何を確認しますか？",
       "answer": "動画内容との一致、リンク、hashtags の関連性、claim の正確性を確認します。"
     }
-  ]
+  ],
+  "seo_title": "YouTube概要欄ジェネレーター無料 | U2Tool",
+  "seo_description": "YouTube動画の概要欄を無料で生成。キーワード、視聴者、CTAを指定して、構造化された説明文をブラウザ内で作成。"
 }

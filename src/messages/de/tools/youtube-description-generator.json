@@ -1,5 +1,5 @@
 {
-  "detailed_description": "YouTube-Beschreibungsgenerator macht aus video title, keyword, audience, CTA und resource links einen strukturierten YouTube description Entwurf. Enthalten sind intro, learning bullets, links, CTA und hashtags für die Bearbeitung in YouTube Studio.",
+  "detailed_description": "YouTube-Beschreibungsgenerator macht aus video title, keyword, audience, CTA und resource links einen strukturierten YouTube description Entwurf. Enthalten sind intro, learning bullets, links, CTA und hashtags für die Bearbeitung in YouTube Studio. Der Generator baut den Entwurf aus Intro, Lernpunkten, Links, CTA und Hashtags auf, sodass Sie die Beschreibung direkt in YouTube Studio übernehmen und anpassen können. Sie können Ton und Format wählen, um den Stil an Ihren Kanal anzupassen. Die Ausgabe ist ein Entwurf: Prüfen Sie, dass sie den Inhalt des Videos korrekt beschreibt, bevor Sie sie veröffentlichen.",
   "usage_steps": [
     "Gib Titel, keyword, audience, CTA und je Zeile einen resource link ein.",
     "Prüfe intro, learning bullets, links, CTA und hashtags.",
@@ -28,5 +28,7 @@
       "question": "Kann ich das Ergebnis direkt nutzen?",
       "answer": "Nutze es als Arbeitsgrundlage und passe es an echte Daten an."
     }
-  ]
+  ],
+  "seo_title": "YouTube-Beschreibungs-Generator kostenlos | U2Tool",
+  "seo_description": "Erstellen Sie kostenlos YouTube-Beschreibungen im Browser: Keywords, Zielgruppe und CTA angeben und eine strukturierte Beschreibung generieren."
 }
