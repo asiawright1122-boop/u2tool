@@ -9231,7 +9231,7 @@
       "name": "Excel Viewer",
       "description": "Open XLS, XLSX, and XLSM workbook data locally with sheet tabs, formula text, sorting, filtering, and CSV export.",
       "seo_title": "Local Excel Viewer for XLS, XLSX and XLSM | U2Tool",
-      "seo_description": "Inspect Excel workbook data locally in your browser. Switch sheets, view cell addresses and cached formula results, sort or filter one column, and export the selected sheet as CSV. Files are never uploaded.",
+      "seo_description": "Inspect Excel workbook data locally in your browser. Switch sheets, view cell addresses and cached formula results, sort or filter one column, and export the selected sheet as CSV.",
       "excelViewer": {
         "invalidFileType": "Choose an XLS, XLSX, or XLSM workbook.",
         "fileTooLarge": "This file is larger than the 10 MiB browser limit.",
@@ -9881,7 +9881,7 @@
       "name": "Screen Resolution Tester",
       "description": "Test and display screen resolution and viewport information.",
       "seo_title": "Free Screen Resolution Tester Online - Check Display & Viewport Size",
-      "seo_description": "Free online screen resolution tester tool. Check your current screen resolution, viewport size, device pixel ratio, and color depth. Test common device resolutions for responsive web design. Essential tool for web developers and designers.",
+      "seo_description": "Free online screen resolution tester tool. Check your current screen resolution, viewport size, device pixel ratio, and color depth.",
       "currentResolution": "Current Screen Resolution",
       "currentScreen": "Current Screen Info",
       "screenResolution": "Screen Resolution",
@@ -11405,7 +11405,7 @@
     "percentage-change-calculator": {
       "name": "Percentage Change Calculator",
       "description": "Calculate percentage increase or decrease between values",
-      "seo_title": "Free Percentage Change Calculator Online - Calculate % Increase/Decrease",
+      "seo_title": "Free Percentage Change Calculator Online - Calculate %",
       "seo_description": "Free online percentage change calculator. Calculate percentage increase or decrease between two values. Easy percent change calculator tool.",
       "oldValue": "Original Value",
       "newValue": "New Value",
@@ -11797,7 +11797,7 @@
     "css-to-tailwind": {
       "name": "CSS to Tailwind Converter",
       "description": "Convert CSS styles to Tailwind CSS classes",
-      "seo_title": "Free CSS to Tailwind Converter Online - Transform CSS to Utility Classes",
+      "seo_title": "Free CSS to Tailwind Converter Online - Transform CSS to Utility",
       "seo_description": "Convert CSS to Tailwind CSS classes online for free. Transform traditional CSS into utility-first Tailwind classes. Speed up your migration to Tailwind.",
       "cssInput": "CSS Input",
       "tailwindOutput": "Tailwind Classes",
@@ -12110,7 +12110,7 @@
       "name": "Grammar Checker",
       "description": "Check English text locally for common grammar, spelling, and punctuation issues",
       "seo_title": "Free English Grammar Checker Online - Local Rule Review",
-      "seo_description": "Review English text with browser-local static rules for common grammar, spelling, and punctuation issues. Highlight matches and apply suggested fixes without AI or server processing.",
+      "seo_description": "Review English text with browser-local static rules for common grammar, spelling, and punctuation issues. Highlight matches and apply suggested fixes without AI or server",
       "inputPlaceholder": "Enter English text to check...",
       "languageNotice": "This local checker is designed for English text.",
       "foundErrors": "Errors Found",
@@ -12134,7 +12134,7 @@
       "name": "Python Formatter",
       "description": "Format Python code according to PEP 8 style guide",
       "seo_title": "Free Python Formatter Online - PEP 8 Code Formatter",
-      "seo_description": "Free online Python code formatter following PEP 8 style guidelines. Automatically format and beautify your Python code with proper indentation, spacing, and line breaks. No installation required.",
+      "seo_description": "Free online Python code formatter following PEP 8 style guidelines. Automatically format and beautify your Python code with proper indentation, spacing, and line breaks.",
       "inputPlaceholder": "Enter Python code...",
       "indentSize": "Indent Size"
     },
@@ -12328,7 +12328,7 @@
       "name": "Dockerfile Generator",
       "description": "Generate Dockerfile configurations for your projects",
       "seo_title": "Free Dockerfile Generator Online - Create Docker Configurations",
-      "seo_description": "Generate Dockerfile configurations easily with our free online tool. Create optimized Docker images with base image selection, commands, ports, and environment variables. No installation required.",
+      "seo_description": "Generate Dockerfile configurations easily with our free online tool. Create optimized Docker images with base image selection, commands, ports, and environment variables.",
       "baseImage": "Base Image",
       "workdir": "Working Directory",
       "envVars": "Environment Variables",
@@ -12349,7 +12349,7 @@
       "name": "ESLint Config Generator",
       "description": "Generate ESLint configuration files for JavaScript/TypeScript projects",
       "seo_title": "Free ESLint Config Generator Online - Create .eslintrc Configuration",
-      "seo_description": "Generate ESLint configuration files easily with our free online tool. Choose from popular style guides like Airbnb, Standard, or Google. Configure rules for React, Vue, TypeScript, and more.",
+      "seo_description": "Generate ESLint configuration files easily with our free online tool. Choose from popular style guides like Airbnb, Standard, or Google.",
       "browser": "Browser",
       "off": "Off",
       "warn": "Warn",
@@ -12365,7 +12365,7 @@
     "prettier-config-generator": {
       "name": "Prettier Config Generator",
       "description": "Generate a .prettierrc JSON file from common Prettier options.",
-      "seo_title": "Free Prettier Config Generator Online - Create .prettierrc Configuration",
+      "seo_title": "Free Prettier Config Generator Online - Create .",
       "seo_description": "Create a .prettierrc JSON config online. Set print width, tabs, quotes, semicolons, trailing commas, line endings, prose wrap, and copy or download the result.",
       "none": "None",
       "all": "All",
@@ -12408,7 +12408,7 @@
       "name": "EditorConfig Generator",
       "description": "Generate EditorConfig files for consistent coding styles",
       "seo_title": "Free EditorConfig Generator Online - Create .editorconfig Files",
-      "seo_description": "Generate EditorConfig files easily with our free online tool. Configure indent style, indent size, end of line, charset, and more. Ensure consistent coding styles across different editors and IDEs.",
+      "seo_description": "Generate EditorConfig files easily with our free online tool. Configure indent style, indent size, end of line, charset, and more.",
       "root": "Root (stop searching parent directories)",
       "defaultSettings": "Default Settings",
       "indentStyle": "Indent Style",
@@ -12427,7 +12427,7 @@
       "name": "GitHub README Generator",
       "description": "Generate professional README.md files for GitHub projects",
       "seo_title": "Free GitHub README Generator Online - Create Professional README Files",
-      "seo_description": "Generate professional README.md files for your GitHub projects with our free online tool. Add badges, features, installation instructions, usage examples, and more. Make your projects stand out.",
+      "seo_description": "Generate professional README.md files for your GitHub projects with our free online tool. Add badges, features, installation instructions, usage examples, and more.",
       "projectNamePlaceholder": "My Awesome Project",
       "descriptionPlaceholder": "A brief description of your project...",
       "authorPlaceholder": "John Doe",
@@ -12452,7 +12452,7 @@
       "name": "Changelog Generator",
       "description": "Generate CHANGELOG.md files following Keep a Changelog format",
       "seo_title": "Free Changelog Generator Online - Create CHANGELOG.md Files",
-      "seo_description": "Generate CHANGELOG.md files following the Keep a Changelog format with our free online tool. Track Added, Changed, Deprecated, Removed, Fixed, and Security changes for each version.",
+      "seo_description": "Generate CHANGELOG.md files following the Keep a Changelog format with our free online tool. Track Added, Changed, Deprecated, Removed, Fixed, and Security changes for each",
       "projectNamePlaceholder": "My Project",
       "projectUrlPlaceholder": "https://github.com/user/repo",
       "versionPlaceholder": "1.0.0",
@@ -12470,7 +12470,7 @@
       "name": "License Generator",
       "description": "Generate open source license files for your projects",
       "seo_title": "Free License Generator Online - Create Open Source License Files",
-      "seo_description": "Generate open source license files with our free online tool. Choose from MIT, Apache 2.0, GPL 3.0, BSD, ISC, and more. Add your name and year automatically. Perfect for GitHub projects.",
+      "seo_description": "Generate open source license files with our free online tool. Choose from MIT, Apache 2.0, GPL 3.0, BSD, ISC, and more. Add your name and year automatically.",
       "authorPlaceholder": "John Doe",
       "yearPlaceholder": "2024",
       "selectLicense": "select License",
@@ -12487,7 +12487,7 @@
       "name": "ROT13 Encoder",
       "description": "Encode and decode text using ROT13 cipher",
       "seo_title": "Free ROT13 Encoder/Decoder Online - Caesar Cipher Tool",
-      "seo_description": "Encode and decode text using ROT13 cipher with our free online tool. ROT13 is a simple letter substitution cipher that replaces each letter with the letter 13 positions after it in the alphabet.",
+      "seo_description": "Encode and decode text using ROT13 cipher with our free online tool. ROT13 is a simple letter substitution cipher that replaces each letter with the letter 13 positions after it",
       "info": "info",
       "inputPlaceholder": "input Placeholder",
       "encode": "encode",
@@ -13835,7 +13835,7 @@
       "name": "SQL Query Optimizer",
       "description": "Analyze SQL text locally with dialect-aware heuristics and optional pasted EXPLAIN tokens.",
       "seo_title": "Local SQL Query Optimizer and EXPLAIN Review | U2Tool",
-      "seo_description": "Analyze pasted SQL locally, choose a database dialect, review evidence-backed findings and index candidates, format SQL, and inspect pasted EXPLAIN tokens without connecting to a database or executing queries.",
+      "seo_description": "Analyze pasted SQL locally, choose a database dialect, review evidence-backed findings and index candidates, format SQL, and inspect pasted EXPLAIN tokens without connecting to a",
       "databaseDialect": "Database dialect",
       "dialects": {
         "generic": "Generic SQL",
@@ -16057,7 +16057,7 @@
       "name": "Calorie Deficit Calculator",
       "description": "Estimate daily calorie deficit, weekly deficit, and projected weight change from intake and maintenance calories.",
       "seo_title": "Free Calorie Deficit Calculator Online",
-      "seo_description": "Estimate daily calorie deficit, weekly deficit, and projected weight change from intake and maintenance calories. Free browser-based calorie deficit calculator with no signup required."
+      "seo_description": "Estimate daily calorie deficit, weekly deficit, and projected weight change from intake and maintenance calories."
     },
     "cover-letter-generator": {
       "name": "Cover Letter Generator",
@@ -16266,8 +16266,8 @@
     "loan-amortization-calculator": {
       "name": "Real Loan Rate & Amortization Calculator",
       "description": "Reveal the real APR/APY from daily or monthly rates, and optimize your prepayment plans with dynamic amortizations.",
-      "seo_title": "Real Loan Interest Rate & Amortization Calculator - Prepayment Optimizer",
-      "seo_description": "Free online real loan interest rate calculator to reveal true APR/APY from daily/monthly fees using IRR. Compare prepayments (monthly, yearly, or one-time) with interactive charts to see saved interest and early payoff years."
+      "seo_title": "Real Loan Interest Rate & Amortization Calculator - Prepayment",
+      "seo_description": "Free online real loan interest rate calculator to reveal true APR/APY from daily/monthly fees using IRR. Compare prepayments (monthly, yearly, or one-time) with interactive charts"
     },
     "retirement-pension-calculator": {
       "name": "Retirement & Pension Optimizer",
@@ -16278,19 +16278,19 @@
     "net-worth-allocator-tracker": {
       "name": "Multi-Currency Net Worth & Asset Allocation Tracker",
       "description": "A Swiss-private-banking style net worth tracker with multi-currency conversion, multi-category asset liability management, and stock/real estate price volatility stress testing sliders.",
-      "seo_title": "Multi-Currency Net Worth & Asset Allocation Tracker - Swiss Private Banking Style",
-      "seo_description": "Free online Multi-Currency Net Worth & Asset Allocation Tracker in a Swiss private banking style. Categorize assets and liabilities, convert currency with dynamic FX rates, and drag price fluctuation sliders to stress-test your net worth."
+      "seo_title": "Multi-Currency Net Worth & Asset Allocation Tracker - Swiss Private",
+      "seo_description": "Free online Multi-Currency Net Worth & Asset Allocation Tracker in a Swiss private banking style. Categorize assets and liabilities, convert currency with dynamic FX rates, and"
     },
     "developer-cryptography-toolbox": {
       "name": "Developer Cryptography & Hash Toolbox",
       "description": "Local high-performance hash generator and encryption suite with dynamic microsecond benchmark dashboards.",
-      "seo_title": "Developer Cryptography & Hash Toolbox - Free Online Local Encryption & Benchmarks",
+      "seo_title": "Developer Cryptography & Hash Toolbox - Free Online Local Encryption",
       "seo_description": "Free online cryptography suite for MD5, SHA256, bcrypt, AES & RSA. Features local benchmarks, dark-gold style, and 100% secure client-side calculation."
     },
     "world-cup-simulator": {
       "name": "2026 World Cup Monte Carlo Simulator",
       "description": "Free 2026 World Cup simulator. Run 10k Monte Carlo simulations with Elo ratings, custom host/heritage sliders, and sleek gold ECharts. 100% offline.",
-      "seo_title": "2026 World Cup Monte Carlo Probability Simulator Online - Run 10,000 Matches, Adjust Elo Ratings & Custom Heritage Sliders to Forecast Tournament Results",
+      "seo_title": "2026 World Cup Monte Carlo Probability Simulator Online - Run 10,000",
       "seo_description": "Simulate the 2026 FIFA World Cup with 10,000 Monte Carlo runs. Adjust team Elo ratings with home advantage and heritage sliders to forecast winning odds."
     },
     "world-cup-budget-calculator": {
@@ -16303,13 +16303,13 @@
       "name": "2026 World Cup Multi-City & Multi-Timezone Calendar Planner",
       "description": "Free FIFA World Cup 2026 calendar planner. Convert times across 4 North American timezones and 16 cities for all 104 matches. Features dynamic Webcal sync and offline .ics file downloads.",
       "seo_title": "2026 World Cup Timezone Calendar Planner - Webcal & ICS Sync",
-      "seo_description": "Free FIFA World Cup 2026 timezone calendar planner. Convert kick-off times across 4 timezones and 16 host cities. Generate dynamic Webcal subscription links and offline .ics calendar files."
+      "seo_description": "Free FIFA World Cup 2026 timezone calendar planner. Convert kick-off times across 4 timezones and 16 host cities. Generate dynamic Webcal subscription links and offline ."
     },
     "world-cup-visa-assistant": {
       "name": "2026 World Cup Multi-Border & Visa Guide",
       "description": "Free 2026 World Cup border transit and visa assistant. Smart evaluation of travel permits, ESTA, eTA, and exemptions across US, Canada, and Mexico borders.",
-      "seo_title": "2026 World Cup Border & Visa Assistant - US, Canada, Mexico Transit Guide",
-      "seo_description": "Free border transit and visa assistant for FIFA World Cup 2026. Calculate visa requirements, online authorizations (ESTA/eTA), and border rules across host nations with a dynamically generated checklist."
+      "seo_title": "2026 World Cup Border & Visa Assistant - US, Canada, Mexico Transit",
+      "seo_description": "Free border transit and visa assistant for FIFA World Cup 2026. Calculate visa requirements, online authorizations (ESTA/eTA), and border rules across host nations with a"
     },
     "world-cup-group-calculator": {
       "name": "World Cup 2026 Calculator",

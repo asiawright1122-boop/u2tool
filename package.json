@@ -126,7 +126,8 @@
     "submit:indexnow": "node scripts/submit-indexnow.js",
     "submit:indexnow:dry": "node scripts/submit-indexnow.js --dry-run",
     "validate:sitemap": "node scripts/validate-sitemap-fix.js",
-    "validate:tool-page-render-contract": "node scripts/validation/run-tool-page-render-contract.mjs"
+    "validate:tool-page-render-contract": "node scripts/validation/run-tool-page-render-contract.mjs",
+    "seo:slim-seo-copy": "node --import tsx/esm scripts/seo/slim-seo-copy.ts"
   },
   "dependencies": {
     "dompurify": "^3.4.12",
