@@ -61,3 +61,75 @@
 - 第 1 批（下周）：es 3 篇 + de 2 篇 + ru 2 篇 + ja 2 篇（9 篇，都是 ★）
 - 第 2 批（第 3 周）：剩余 16 篇
 - 每篇上线后 2 周，GSC 观察是否出现印象（信息型词在 Bing 可能更快见效）
+
+---
+
+# 第三批选题：内容集群（Topical Clusters）
+
+> 定位：不再是散点长尾，而是**集群化**——围绕有 GSC 展示信号的工具形成主题权威
+> （图表 / Excel 转换 / 文本语法 / 生成器写作 / 开发者 / 计算器），篇与篇互相链接，
+> 并回链到保留工具页。所有关联工具已验证保留（可索引）。
+> 数据基础：2026-07-13 checkpoint，charts 集群 41 个有展示工具（最强需求信号）。
+
+## 集群 A · 图表类型深潜（charts，需求最强）
+
+| 语言 | 选题 | 类型 | 关联工具（保留） | 优先级 |
+|---|---|---|---|---|
+| es | Cómo crear un diagrama de árbol jerárquico | how-to | tree-chart-generator | ★★★ |
+| es | Qué es un gráfico de dispersión y cuándo usarlo | guide | graph-chart-generator | ★★★ |
+| es | Cómo elegir el tipo de gráfico correcto (guía completa) | guide | graph-chart-generator | ★★ |
+| de | Sunburst-Diagramm verstehen und erstellen | guide | sunburst-chart-generator | ★★ |
+| de | Baumdiagramm online erstellen | how-to | tree-chart-generator | ★★ |
+| ru | Круговые диаграммы: когда использовать | guide | pie-chart-generator | ★★ |
+| ru | Ящичковые диаграммы для анализа данных | guide | boxplot-chart-generator | ★★ |
+| en | Nested pie charts explained | guide | nested-pie-chart-generator | ★★ |
+| en | Sankey diagrams for conversion tracking | guide | sankey-chart-generator | ★★ |
+
+## 集群 B · Excel 与数据转换（office/converters）
+
+| 语言 | 选题 | 类型 | 关联工具 | 优先级 |
+|---|---|---|---|---|
+| es | Cómo convertir CSV a vCard | how-to | csv-to-vcard-converter | ★★ |
+| de | CSV zu vCard konvertieren | how-to | csv-to-vcard-converter | ★★ |
+| ru | Как открыть файл vCard | how-to | vcard-parser | ★★ |
+| en | How to open iCal files | how-to | ical-parser | ★★ |
+| en | CSV to vCard for your contacts | how-to | csv-to-vcard-converter | ★★ |
+
+## 集群 C · 文本与语法（text，ru 需求强）
+
+| 语言 | 选题 | 类型 | 关联工具 | 优先级 |
+|---|---|---|---|---|
+| ru | Как улучшить текст: проверка грамматики онлайн | guide | grammar-checker | ★★★ |
+| es | Cómo corregir la gramática del inglés | how-to | grammar-checker | ★★ |
+| ja | 英文法チェックの基本 | how-to | grammar-checker | ★★ |
+| en | How to capitalize titles correctly | guide | title-capitalization-tool | ★★ |
+
+## 集群 D · 生成器与写作（generators）
+
+| 语言 | 选题 | 类型 | 关联工具 | 优先级 |
+|---|---|---|---|---|
+| es | Cómo escribir títulos SEO | how-to | seo-title-generator | ★★ |
+| de | YouTube-Beschreibungen schreiben | how-to | youtube-description-generator | ★★ |
+| ja | YouTube概要欄の書き方 | how-to | youtube-description-generator | ★★ |
+| en | How to write a table of contents | how-to | table-of-contents-generator | ★★ |
+
+## 集群 E · 开发者与 AI（development）
+
+| 语言 | 选题 | 类型 | 关联工具 | 优先级 |
+|---|---|---|---|---|
+| ja | llms.txt の書き方と活用法 | guide | llms-txt-generator | ★★ |
+| en | SQL index basics: when to add an index | guide | sql-query-optimizer | ★★ |
+
+## 集群 F · 计算器（finance/math）
+
+| 语言 | 选题 | 类型 | 关联工具 | 优先级 |
+|---|---|---|---|---|
+| es | Cómo calcular el precio por unidad | how-to | unit-price-calculator | ★★ |
+| ja | 株式利益の計算方法 | how-to | stock-profit-calculator | ★★ |
+
+## 执行说明
+
+1. **先做 ★★★（4 篇）**：es tree + es scatter + ru grammar + 任一集群 A；验证展示后再批量。
+2. 每篇内链 2-3 个**同集群**保留工具 + 1-2 个同语言其他集群工具，形成集群互链（guides.test.ts 自动校验 related 可索引）。
+3. 集群页（可选）：当某集群 ≥4 篇时，可做「图表指南总览」类 hub 页回链各篇（第三批后评估）。
+4. 节奏：每周 5-6 篇精做（同前两批质量红线：真实步骤、TDK 合规、不链被抑制页）。
