@@ -1,0 +1,135 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import { getGuide } from '@/lib/guides';
+import { getToolBySlug } from '@/config/tools';
+import { filterIndexableTools } from '@/lib/index-suppression';
+import { isValidLocale, type Locale } from '@/lib/i18n';
+import { getPublicSiteUrl } from '@/lib/public-env';
+
+export const prerender = false;
+
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/guides/', 301);
+}
+const locale: Locale = localeCandidate;
+
+const slugCandidate = Astro.params.slug;
+const guide = typeof slugCandidate === 'string' ? getGuide(slugCandidate, locale) : undefined;
+if (!guide) {
+  return Astro.redirect(`/${locale}/guides/`, 301);
+}
+
+const baseUrl = getPublicSiteUrl();
+const canonical = `${baseUrl}/${locale}/guides/${guide.slug}/`;
+const sectionLabel = 'Guides';
+
+const relatedTools = filterIndexableTools(
+  locale,
+  guide.relatedTools
+    .map((toolSlug) => getToolBySlug(toolSlug))
+    .filter((tool) => tool !== undefined),
+);
+
+const guideLabels: Record<string, string> = {
+  es: 'Guías',
+  de: 'Ratgeber',
+  ru: 'Руководства',
+  ja: 'ガイド',
+};
+const guideLabel = guideLabels[locale] ?? 'Guides';
+const backCopy: Record<string, string> = {
+  es: 'Volver a las guías',
+  de: 'Zurück zu den Ratgebern',
+  ru: 'Назад к руководствам',
+  ja: 'ガイド一覧に戻る',
+};
+const backLabel = backCopy[locale] ?? 'Back to guides';
+const toolLabel = 'Herramientas relacionadas';
+---
+
+<BaseLayout
+  title={guide.title}
+  description={guide.description}
+  locale={locale}
+  canonicalPath={`/guides/${guide.slug}`}
+>
+  <Header locale={locale} section={sectionLabel} />
+  <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex gap-8">
+        <StaticSidebar locale={locale} />
+        <main class="flex-1 min-w-0 max-w-3xl">
+          <nav class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+            <a href={`/${locale}`} class="hover:text-amber-600">Home</a>
+            <span class="mx-2">/</span>
+            <a href={`/${locale}/guides/`} class="hover:text-amber-600">{guideLabel}</a>
+            <span class="mx-2">/</span>
+            <span class="text-slate-700 dark:text-slate-300">{guide.title}</span>
+          </nav>
+
+          <p class="text-sm uppercase tracking-wide text-amber-600 dark:text-amber-500 mb-2">{guide.eyebrow}</p>
+          <h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-4xl mb-3">
+            {guide.title}
+          </h1>
+          <p class="text-slate-500 dark:text-slate-400 text-sm mb-8">{guide.updated}</p>
+
+          <article class="space-y-8">
+            {guide.sections.map((section) => (
+              <section>
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">{section.title}</h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-3">{paragraph}</p>
+                ))}
+              </section>
+            ))}
+
+            {guide.faqs.length > 0 && (
+              <section>
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
+                  {locale === 'es' ? 'Preguntas frecuentes' : locale === 'de' ? 'Häufige Fragen' : locale === 'ru' ? 'Частые вопросы' : 'よくある質問'}
+                </h2>
+                <div class="space-y-3">
+                  {guide.faqs.map((faq) => (
+                    <div class="rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 p-4">
+                      <h3 class="font-semibold text-slate-900 dark:text-white mb-1">{faq.question}</h3>
+                      <p class="text-slate-600 dark:text-slate-300 text-sm">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </article>
+
+          {relatedTools.length > 0 && (
+            <section class="mt-10">
+              <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">{toolLabel}</h2>
+              <div class="flex flex-wrap gap-2">
+                {relatedTools.map((tool) => (
+                  <a
+                    href={`/${locale}/tools/${tool.slug}/`}
+                    class="rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:border-amber-500/60 hover:text-amber-600 transition-colors"
+                  >
+                    {tool.name}
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <div class="mt-10">
+            <a href={`/${locale}/guides/`} class="text-sm text-amber-600 hover:underline">
+              ← {backLabel}
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <MobileBottomNav locale={locale} />
+  <Footer locale={locale} />
+</BaseLayout>

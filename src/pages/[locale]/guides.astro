@@ -1,0 +1,81 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.svelte';
+import StaticSidebar from '@/components/layout/StaticSidebar.astro';
+import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
+import Footer from '@/components/layout/Footer.astro';
+import { getGuidesForLocale } from '@/lib/guides';
+import { isValidLocale, type Locale } from '@/lib/i18n';
+
+export const prerender = false;
+
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/guides/', 301);
+}
+
+const locale: Locale = localeCandidate;
+const guides = getGuidesForLocale(locale);
+const title = guides.length > 0 ? 'Guides y tutoriales' : 'Guides';
+const description = 'Guías prácticas paso a paso para tareas de productividad, conversión y visualización, con herramientas que funcionan en el navegador.';
+
+const sectionLabel = 'Guides';
+const guideLabels: Record<string, string> = {
+  es: 'Guías',
+  de: 'Ratgeber',
+  ru: 'Руководства',
+  ja: 'ガイド',
+};
+const guideLabel = guideLabels[locale] ?? 'Guides';
+const introCopy: Record<string, string> = {
+  es: 'Guías paso a paso para hacer el trabajo sin instalar nada: todo se procesa en el navegador.',
+  de: 'Schritt-für-Schritt-Anleitungen für Aufgaben, die ganz im Browser erledigt werden.',
+  ru: 'Пошаговые руководства, которые выполняются прямо в браузере, без установки программ.',
+  ja: 'ブラウザだけで完結する作業の手順を、ステップごとに解説します。',
+};
+const intro = introCopy[locale] ?? 'Guides to get work done entirely in the browser.';
+---
+
+<BaseLayout title={title} description={description} locale={locale} canonicalPath="/guides">
+  <Header locale={locale} section={sectionLabel} />
+  <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex gap-8">
+        <StaticSidebar locale={locale} />
+        <main class="flex-1 min-w-0">
+          <nav class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+            <a href={`/${locale}`} class="hover:text-amber-600">Home</a>
+            <span class="mx-2">/</span>
+            <span>{guideLabel}</span>
+          </nav>
+          <h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white md:text-4xl mb-3">
+            {guideLabel}
+          </h1>
+          <p class="text-slate-600 dark:text-slate-300 mb-8 max-w-2xl">{intro}</p>
+
+          {guides.length === 0 && (
+            <p class="text-slate-500 dark:text-slate-400">
+              No hay guías disponibles en este idioma todavía.
+            </p>
+          )}
+
+          <div class="grid gap-4 md:grid-cols-2">
+            {guides.map((guide) => (
+              <a
+                href={`/${locale}/guides/${guide.slug}/`}
+                class="group block rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 p-5 hover:border-amber-500/60 transition-colors"
+              >
+                <h2 class="font-bold text-slate-900 dark:text-white group-hover:text-amber-600 mb-1">
+                  {guide.title}
+                </h2>
+                <p class="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">{guide.description}</p>
+              </a>
+            ))}
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <MobileBottomNav locale={locale} />
+  <Footer locale={locale} />
+</BaseLayout>

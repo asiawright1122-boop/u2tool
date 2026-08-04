@@ -7,6 +7,7 @@ import {
 } from '@/lib/ai-model-comparisons';
 import { aiToolTopicSlugs, getAiToolTopicPath } from '@/lib/ai-tool-topics';
 import { chartToolClusterPath } from '@/lib/chart-tool-cluster';
+import { guideSlugsForLocale } from '@/lib/guides';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { creatorSeoClusterPath } from '@/lib/creator-seo-cluster';
 import { developerDataToolClusterPath } from '@/lib/developer-data-tool-cluster';
@@ -136,6 +137,11 @@ export function buildPagesSitemapEntries(): SitemapUrlEntry[] {
     entries.push(buildUrl(`/${locale}/compare`, '0.8', 'weekly', 'pages'));
     for (const slug of comparisonSurfaceSlugs) {
       entries.push(buildUrl(`/${locale}/compare/${slug}`, '0.7', 'weekly', 'pages'));
+    }
+
+    entries.push(buildUrl(`/${locale}/guides`, '0.6', 'weekly', 'pages'));
+    for (const guideSlug of guideSlugsForLocale(locale)) {
+      entries.push(buildUrl(`/${locale}/guides/${guideSlug}`, '0.6', 'weekly', 'pages'));
     }
 
     for (const slug of siteInfoPageSlugs) {
