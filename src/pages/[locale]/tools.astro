@@ -20,6 +20,7 @@ import HreflangTags from '@/components/seo/HreflangTags.astro';
 import { tools, categories } from '@/config/tools';
 import { isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
+import { filterIndexableTools } from '@/lib/index-suppression';
 import { loadBaseUiMessages } from '@/lib/translations';
 import { buildCategoryDiscoveryItemList, buildCategoryDiscoverySpotlights } from '@/lib/discovery-surface';
 import {
@@ -268,7 +269,7 @@ const toolsCollectionData = {
         <ToolsGrid
           locale={locale}
           categories={categories}
-          tools={tools.map((tool) => ({
+          tools={filterIndexableTools(locale, tools).map((tool) => ({
             slug: tool.slug,
             category: tool.category,
             icon: tool.icon,

@@ -53,6 +53,7 @@ import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
+import { filterIndexableTools } from '@/lib/index-suppression';
 import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, resolveMetaDescription, withBrand } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
 import { assessSupportContentTrust } from '@/lib/content-trust';
@@ -372,7 +373,9 @@ const toolTranslations = buildToolWrapperTranslations({
   toolsCommon,
 });
 // Build a minimal translations map for related tool names
-const relatedToolSlugs = new Set(getRelatedToolsForTool(tool, 6).map((relatedTool) => relatedTool.slug));
+const relatedToolSlugs = new Set(
+  filterIndexableTools(locale, getRelatedToolsForTool(tool, 6)).map((relatedTool) => relatedTool.slug),
+);
 
 // Extract tool names from base messages
 const allToolTranslations: Record<string, Record<string, unknown>> = {};

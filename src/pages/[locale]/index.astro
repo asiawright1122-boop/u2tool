@@ -21,6 +21,7 @@ import HreflangTags from '@/components/seo/HreflangTags.astro';
 import StructuredData from '@/components/seo/StructuredData.astro';
 import { tools, categories, getPopularTools } from '@/config/tools';
 import { getIconSvg } from '@/lib/icon-svg';
+import { filterIndexableTools } from '@/lib/index-suppression';
 import { locales, getLocalizedPath, isValidLocale } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages } from '@/lib/translations';
@@ -51,8 +52,8 @@ const headerTranslations = buildHeaderTranslations(baseMessages);
 const mobileNavMessages = buildMobileNavMessages(navMessages);
 const homePageSeo = getHomePageSeo(baseMessages, tools.length, locale);
 
-const popularTools = getPopularTools();
-const recentTools = tools.slice(-4).reverse();
+const popularTools = filterIndexableTools(locale, getPopularTools());
+const recentTools = filterIndexableTools(locale, tools.slice(-4).reverse());
 const basePath = `/${locale}`;
 
 const BASE_URL = getPublicSiteUrl();
