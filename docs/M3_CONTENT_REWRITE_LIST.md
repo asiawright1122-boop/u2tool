@@ -26,30 +26,30 @@
 | locale/slug | 周展示 | 现状（desc 字数 / faq） | 优化方向 |
 |---|---|---|---|
 | es/timeline-chart-generator | 148 | 1128 / 5 | ✅ 已执行（2026-08-04）：新增 seo_title/seo_description，TDK 校验通过 |
-| ru/grammar-checker | 116 | 425 / 4 | title 聚焦「проверка грамматики онлайн бесплатно」 |
-| es/graph-chart-generator | 81 | 1084 / 4 | 同上，chart 类 es 集群 |
-| de/excel-viewer | 29 | 467 / 4 | 「Excel-Datei online anzeigen」 |
-| en/sql-query-optimizer | 27 | 440 / 5 | 「SQL query optimizer (EXPLAIN)」 |
-| es/gantt-chart-generator | 26 | 625 / 3 | gantt es 集群 |
-| de/timeline-chart-generator | 25 | 1089 / 5 | de chart 集群 |
-| es/tree-chart-generator | 25 | 1247 / 0 | desc 长但 faq 缺，标题与描述对齐 |
-| en/nested-pie-chart-generator | 21 | 572 / 0 | 补 FAQ 同时优化 SERP 摘要 |
-| en/sankey-chart-generator | 21 | 483 / 0 | 同上 |
+| ru/grammar-checker | 116 | 425 / 4 | ✅ 已执行：seo 字段 + desc 补至 768 + faqs 至 5 |
+| es/graph-chart-generator | 81 | 1084 / 4 | ✅ 已执行：seo 字段 |
+| de/excel-viewer | 29 | 467 / 4 | ✅ 已执行：desc 精简至 ≤180 |
+| en/sql-query-optimizer | 27 | 440 / 5 | ✅ 已执行：desc 精简至 ≤180 |
+| es/gantt-chart-generator | 26 | 625 / 3 | ✅ 已执行：seo 字段 |
+| de/timeline-chart-generator | 25 | 1089 / 0 | ✅ 已执行：seo 字段 |
+| es/tree-chart-generator | 25 | 1247 / 0 | ✅ 已执行：seo 字段 |
+| en/nested-pie-chart-generator | 21 | 572 / 0 | ✅ 已执行：seo 字段 |
+| en/sankey-chart-generator | 21 | 483 / 0 | ✅ 已执行：seo 字段 |
 
 ### T2 · 内容补强（有展示但内容薄）
 
 | locale/slug | 周展示 | 短板 | 补强点 |
 |---|---|---|---|
-| ja/fake-name-generator | 11 | desc=150 | 补 Introduction + 用例（日文名生成场景） |
-| es/seo-title-generator | 10 | desc=159 | 补使用步骤 + FAQ |
-| es/grammar-checker | 7 | desc=346 | 补 FAQ 至 ≥5 |
-| ja/grammar-checker | 4 | desc=136 | 补 Introduction + FAQ |
-| en/hex-editor | 6 | desc=360 | 补编辑用例（大文件、ASCII 预览） |
-| ja/youtube-description-generator | 5 | desc=178 | 补步骤 + 示例 |
-| ja/aspect-ratio | 5 | desc=379 / faq=0 | 补 FAQ |
-| de/youtube-description-generator | 4 | desc=248 | 补 Introduction |
-| es/linkedin-headline-generator | 4 | desc=306 | 补用例 |
-| en/table-of-contents-generator | 5 | desc=382 | 补 FAQ |
+| ja/fake-name-generator | 11 | desc=150 | ✅ 已执行：seo 字段 + desc 补至 294 |
+| es/seo-title-generator | 10 | desc=159 | ✅ 已执行：seo 字段 + desc 补至 564 |
+| es/grammar-checker | 7 | desc=346 | ✅ 已执行：seo 字段 + desc 补至 712 |
+| ja/grammar-checker | 4 | desc=136 | ✅ 已执行：seo 字段 + desc 补至 288 |
+| en/hex-editor | 6 | desc=360 | ✅ 已执行：desc 补至 688 + examples 4 + faqs 5（同时修复预存测试） |
+| ja/youtube-description-generator | 5 | desc=178 | ✅ 已执行：seo 字段 + desc 补至 342 |
+| ja/aspect-ratio | 5 | desc=379 / faq=0 | ✅ 已执行：seo 字段 + desc 补至 515 + faqs 3 |
+| de/youtube-description-generator | 4 | desc=248 | ✅ 已执行：seo 字段 + desc 补至 613 |
+| es/linkedin-headline-generator | 4 | desc=306 | ✅ 已执行：seo 字段 + desc 补至 632 |
+| en/table-of-contents-generator | 5 | desc=382 | ✅ 已执行：seo 字段 + desc 补至 779 |
 
 ### T3 · 长尾内容（待 T1/T2 验证后评估）
 
