@@ -91,4 +91,146 @@ export const guidesDe: Guide[] = [
     ],
     relatedTools: ['timeline-chart-generator', 'waterfall-chart-generator', 'excel-viewer'],
   },
+
+  {
+    "slug": "wasserfall-diagramm-erstellen",
+    "title": "Wasserfall-Diagramm in Excel vs online erstellen",
+    "description": "Wasserfall-Diagramme online oder in Excel erstellen: Plus- und Minuswerte, kumulative Summen und wann sich der Online-Generator mehr lohnt.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was ein Wasserfall-Diagramm zeigt",
+        "paragraphs": [
+          "Ein Wasserfall-Diagramm (Brücken- oder Treppendiagramm) zeigt, wie sich ein Startwert durch positive und negative Beiträge zu einem Endwert entwickelt. Klassische Fälle: Gewinn-zu-Gewinn-Brücken, Budgetveränderungen oder Bestandsverläufe."
+        ]
+      },
+      {
+        "title": "In Excel erstellen",
+        "paragraphs": [
+          "Excel hat kein natives Wasserfall-Diagramm in älteren Versionen; Sie müssen Hilfsspalten für die schwebenden Summen anlegen und ein gestapeltes Säulendiagramm anpassen. In aktuellen Excel-Versionen gibt es den Typ „Wasserfall“ direkt.",
+          "Der Nachteil: Sie pflegen die Hilfsspalten und achten auf die Reihenfolge der Kumulierung. Bei häufigen Änderungen ist das fehleranfällig."
+        ]
+      },
+      {
+        "title": "Online-Generator als Alternative",
+        "paragraphs": [
+          "Ein Online-Wasserfall-Generator verarbeitet positive und negative Werte direkt: Sie geben die Beträge ein, und die kumulative Summe wird automatisch berechnet. Farben, Beschriftungen und Export sind integriert, und alles läuft lokal im Browser."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Was ist eine kumulative Summe im Wasserfall?",
+        "answer": "Der Wert nach jedem Schritt: Startwert plus alle bisherigen Beiträge. Das Diagramm zeigt so, wie sich der Endwert zusammensetzt."
+      },
+      {
+        "question": "Kann ich das Diagramm exportieren?",
+        "answer": "Ja, als Bild (PNG/SVG) – praktisch für Berichte und Präsentationen."
+      },
+      {
+        "question": "Wann lohnt sich der Online-Generator?",
+        "answer": "Wenn Sie schnell ein Diagramm für ein Meeting brauchen oder die Daten sich häufig ändern, ohne Hilfsspalten in Excel zu pflegen."
+      }
+    ],
+    "relatedTools": [
+      "waterfall-chart-generator",
+      "excel-viewer",
+      "sunburst-chart-generator"
+    ]
+  },
+  {
+    "slug": "waehrungsrechner-verstehen",
+    "title": "Währungsrechner: Wechselkurse richtig verstehen",
+    "description": "So nutzen Sie einen Währungsrechner richtig: Kurse vergleichen, Gebühren erkennen und umrechnen – mit Beispielen, die im Browser laufen.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was ein Wechselkurs bedeutet",
+        "paragraphs": [
+          "Der Wechselkurs sagt, wie viel eine Währung in einer anderen wert ist. Ein Kurs von 1,10 USD/EUR bedeutet: 1 Euro kostet 1,10 US-Dollar. Umgekehrt erhalten Sie für 1 Dollar etwa 0,91 Euro.",
+          "Wichtig: Es gibt immer zwei Richtungen. Ein Rechner, der beide Richtungen zeigt, vermeidet Verwechslungen."
+        ]
+      },
+      {
+        "title": "Gebühren nicht vergessen",
+        "paragraphs": [
+          "Banken und Zahlungsdienste schlagen oft eine Marge auf den Referenzkurs auf. Der tatsächlich erhaltene Betrag kann daher unter dem Rechner-Ergebnis liegen. Rechnen Sie mit einem Aufschlag von 1–3 % für Vergleiche."
+        ]
+      },
+      {
+        "title": "Im Browser umrechnen",
+        "paragraphs": [
+          "Ein Online-Währungsrechner rechnet Beträge sofort um und zeigt beide Richtungen. Aktuelle Kurse und eine lokale Verarbeitung ohne Anmeldung sind dabei hilfreich – prüfen Sie bei wichtigen Transaktionen zusätzlich die Kursquelle."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist der Online-Kurs der gleiche wie bei der Bank?",
+        "answer": "Meist nicht: Banken verwenden eigene An- und Verkaufskurse mit Marge. Der Referenzkurs ist ein Richtwert."
+      },
+      {
+        "question": "Wie rechne ich ohne Rechner um?",
+        "answer": "Multiplizieren Sie den Betrag mit dem Kurs in der passenden Richtung. Für 50 EUR bei 1,10 USD/EUR: 50 × 1,10 = 55 USD."
+      },
+      {
+        "question": "Welche Währungen kann ich vergleichen?",
+        "answer": "Der Rechner unterstützt die gängigen Währungen inklusive historischer Vergleiche; für exotische Währungen prüfen Sie die Verfügbarkeit."
+      }
+    ],
+    "relatedTools": [
+      "currency-converter",
+      "excel-viewer",
+      "csv-to-vcard-converter"
+    ]
+  },
+  {
+    "slug": "json-pfade-finden",
+    "title": "JSON-Pfade finden: Tipps und Beispiele",
+    "description": "So finden Sie Pfade in verschachtelten JSON-Daten: Punktnotation, Arrays und Praxistipps, mit dem JSON-Pfad-Finder direkt im Browser.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was ein JSON-Pfad ist",
+        "paragraphs": [
+          "Ein JSON-Pfad beschreibt, wo sich ein Wert in einem verschachtelten Dokument befindet, zum Beispiel user.address.city. Er hilft, APIs zu verstehen und Daten zu extrahieren, ohne das ganze Dokument manuell zu durchsuchen."
+        ]
+      },
+      {
+        "title": "Punktnotation und Arrays",
+        "paragraphs": [
+          "Objekte werden mit Punkten getrennt, Arrays mit Indizes: orders[0].items[2].price. Ein Pfad-Finder zeigt alle möglichen Pfade eines Dokuments, sodass Sie sofort sehen, welche Felder existieren und wie tief die Verschachtelung ist."
+        ]
+      },
+      {
+        "title": "Praxistipps",
+        "paragraphs": [
+          "Kopieren Sie den Pfad, den Sie brauchen, und verwenden Sie ihn in Ihrem Code oder in Tests. Bei großen Dokumenten hilft die Suche nach Feldnamen, statt sich durch jeden Knoten zu klicken."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Was bedeutet Punktnotation?",
+        "answer": "Felder eines Objekts werden mit einem Punkt verbunden, etwa a.b.c für das Feld c im Objekt b im Objekt a."
+      },
+      {
+        "question": "Wie adressiere ich Array-Elemente?",
+        "answer": "Mit einem Index in eckigen Klammern: items[0] ist das erste Element des Arrays items."
+      },
+      {
+        "question": "Läuft der Finder lokal?",
+        "answer": "Ja, die Analyse erfolgt in Ihrem Browser; das Dokument wird nicht hochgeladen."
+      }
+    ],
+    "relatedTools": [
+      "json-path-finder",
+      "excel-viewer",
+      "csv-to-vcard-converter"
+    ]
+  }
+
 ];

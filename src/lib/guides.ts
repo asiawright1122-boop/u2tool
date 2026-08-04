@@ -3,6 +3,7 @@ import { guidesEs } from './guides-data-es';
 import { guidesDe } from './guides-data-de';
 import { guidesRu } from './guides-data-ru';
 import { guidesJa } from './guides-data-ja';
+import { guidesEn } from './guides-data-en';
 import type { Locale } from './i18n';
 
 /**
@@ -10,6 +11,7 @@ import type { Locale } from './i18n';
  * guides page (no machine fallback — content is intentionally hand-written).
  */
 const guidesByLocale: Partial<Record<Locale, Record<string, Guide>>> = {
+  en: Object.fromEntries(guidesEn.map((guide) => [guide.slug, guide])),
   es: Object.fromEntries(guidesEs.map((guide) => [guide.slug, guide])),
   de: Object.fromEntries(guidesDe.map((guide) => [guide.slug, guide])),
   ru: Object.fromEntries(guidesRu.map((guide) => [guide.slug, guide])),

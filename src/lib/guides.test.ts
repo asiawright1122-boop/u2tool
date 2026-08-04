@@ -10,17 +10,16 @@ const CJK_DESC_MIN = 40;
 const CJK_DESC_MAX = 120;
 
 describe('guides catalog', () => {
-  it('exposes hand-written guides only for supported locales', () => {
+  it('exposes hand-written guides for supported locales', () => {
+    expect(getGuidesForLocale('en').length).toBeGreaterThanOrEqual(2);
     expect(getGuidesForLocale('es').length).toBeGreaterThanOrEqual(2);
     expect(getGuidesForLocale('de').length).toBeGreaterThanOrEqual(2);
     expect(getGuidesForLocale('ru').length).toBeGreaterThanOrEqual(2);
     expect(getGuidesForLocale('ja').length).toBeGreaterThanOrEqual(2);
-    // en is intentionally absent: guides target the low-competition markets first.
-    expect(getGuidesForLocale('en')).toHaveLength(0);
   });
 
   it('keeps slugs unique per locale and resolves lookups', () => {
-    for (const locale of ['es', 'de', 'ru', 'ja'] as const) {
+    for (const locale of ['en', 'es', 'de', 'ru', 'ja'] as const) {
       const slugs = guideSlugsForLocale(locale);
       expect(new Set(slugs).size).toBe(slugs.length);
       for (const slug of slugs) {
@@ -31,7 +30,7 @@ describe('guides catalog', () => {
   });
 
   it('publishes complete, TDK-safe copy per guide', () => {
-    for (const locale of ['es', 'de', 'ru', 'ja'] as const) {
+    for (const locale of ['en', 'es', 'de', 'ru', 'ja'] as const) {
       const cjk = locale === 'ja';
       for (const guide of getGuidesForLocale(locale)) {
         expect(guide.title.length).toBeGreaterThan(8);
@@ -58,7 +57,7 @@ describe('guides catalog', () => {
   });
 
   it('links only existing, indexable tool pages', () => {
-    for (const locale of ['es', 'de', 'ru', 'ja'] as const) {
+    for (const locale of ['en', 'es', 'de', 'ru', 'ja'] as const) {
       for (const guide of getGuidesForLocale(locale)) {
         expect(guide.relatedTools.length).toBeGreaterThanOrEqual(2);
         for (const toolSlug of guide.relatedTools) {

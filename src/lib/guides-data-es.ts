@@ -140,4 +140,153 @@ export const guidesEs: Guide[] = [
     ],
     relatedTools: ['timeline-chart-generator', 'gantt-chart-generator', 'line-chart-generator'],
   },
+
+  {
+    "slug": "tipos-de-graficas-lineas-barras-dispersion",
+    "title": "Tipos de gráficas: líneas, barras y dispersión (guía)",
+    "description": "Elige la gráfica correcta: líneas para tendencias, barras para comparar, dispersión para relaciones. Guía práctica con ejemplos y cuándo usar cada una.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Cuándo usar cada tipo",
+        "paragraphs": [
+          "Una gráfica de líneas muestra la evolución de una variable a lo largo del tiempo: precios, tráfico, temperatura. Es la mejor opción cuando lo que importa es la tendencia y los puntos de cambio.",
+          "Las barras comparan cantidades entre categorías discretas: ventas por mes, población por país, duración por tarea. Su fuerza está en la comparación directa, no en la evolución.",
+          "El gráfico de dispersión (scatter) revela relaciones entre dos variables: edad y gasto, horas de estudio y nota. Cada punto es un caso; el patrón general muestra correlación o su ausencia."
+        ]
+      },
+      {
+        "title": "Cómo crearlas gratis online",
+        "paragraphs": [
+          "El generador de gráficas de U2Tool crea líneas, barras y dispersión directamente en el navegador. Pega tus datos (o usa una plantilla), elige el tipo y personaliza colores, etiquetas y ejes.",
+          "La herramienta ajusta los ejes automáticamente y permite exportar el resultado como imagen o datos, sin registro y sin subir nada al servidor."
+        ]
+      },
+      {
+        "title": "Errores comunes al elegir",
+        "paragraphs": [
+          "Usar barras para series temporales largas: las líneas se leen mejor cuando hay muchos puntos. Usar líneas con categorías sin orden natural: las barras son más claras. Y mezclar escalas distintas en un mismo gráfico sin avisar, que confunde al lector."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Cuál es la diferencia entre barras y líneas?",
+        "answer": "Las barras comparan categorías; las líneas muestran la evolución en el tiempo. Si el eje horizontal tiene un orden temporal, suele ser mejor una línea."
+      },
+      {
+        "question": "¿Cuándo usar un gráfico de dispersión?",
+        "answer": "Cuando quieres ver la relación entre dos variables numéricas. Si los puntos forman una nube diagonal, hay correlación; si están dispersos, no."
+      },
+      {
+        "question": "¿Puedo exportar la gráfica?",
+        "answer": "Sí, el generador exporta como imagen (PNG/SVG) o como datos, todo procesado localmente en tu navegador."
+      }
+    ],
+    "relatedTools": [
+      "graph-chart-generator",
+      "line-chart-generator",
+      "excel-viewer"
+    ]
+  },
+  {
+    "slug": "ver-archivo-excel-sin-excel",
+    "title": "Cómo ver un archivo Excel sin Excel (online)",
+    "description": "Abre archivos XLS, XLSX y XLSM en el navegador sin instalar nada: cambia de hoja, consulta valores y exporta a CSV, con tus datos siempre en tu dispositivo.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Cuándo necesitas un visor de Excel",
+        "paragraphs": [
+          "Recibes una hoja de cálculo y solo necesitas consultarla: un valor, una comparación, una columna. Instalar Excel o abrir la nube con tu cuenta personal es demasiado para eso.",
+          "Un visor en el navegador resuelve el caso sin instalar programas y sin subir el archivo a un servidor, lo que importa cuando el contenido es sensible."
+        ]
+      },
+      {
+        "title": "Pasos para verlo en línea",
+        "paragraphs": [
+          "Abre el visor de Excel de U2Tool y selecciona tu archivo local (XLS, XLSX o XLSM, hasta 2 MiB). El archivo se procesa en tu navegador: no se envía a ningún servidor.",
+          "Cambia de hoja para revisar la estructura, mira las celdas y sus valores, y ordena o filtra una columna cuando necesites comparar.",
+          "Si necesitas continuar el trabajo en otra herramienta, exporta la hoja seleccionada como CSV y ábrela en tu aplicación de tablas."
+        ]
+      },
+      {
+        "title": "Alternativas según el caso",
+        "paragraphs": [
+          "Para convertir datos (JSON, CSV) hacia Excel, usa el conversor correspondiente. Para revisar archivos muy grandes o con fórmulas complejas, un visor local es el límite práctico: el visor muestra los valores calculados, no re-evalúa fórmulas."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es seguro para datos confidenciales?",
+        "answer": "Sí. El archivo se procesa completamente en tu navegador y no se sube a ningún servidor."
+      },
+      {
+        "question": "¿Qué formatos soporta?",
+        "answer": "XLS, XLSX y XLSM, con un tamaño máximo de 2 MiB."
+      },
+      {
+        "question": "¿Puedo exportar los datos?",
+        "answer": "Sí, puedes exportar la hoja seleccionada como CSV para seguir trabajando en Excel, LibreOffice o Google Sheets."
+      }
+    ],
+    "relatedTools": [
+      "excel-viewer",
+      "json-to-excel",
+      "csv-to-vcard-converter"
+    ]
+  },
+  {
+    "slug": "estimar-factura-electricidad",
+    "title": "Cómo estimar tu factura de electricidad",
+    "description": "Calcula el costo de tu consumo eléctrico: potencia, horas de uso y tarifa. Guía paso a paso para estimar la factura y detectar los mayores consumos.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Qué necesitas para estimar",
+        "paragraphs": [
+          "La factura eléctrica depende de tres números: la potencia de cada aparato (vatios), cuántas horas al día lo usas, y el precio por kWh de tu tarifa.",
+          "Con esos tres datos, el consumo mensual de un aparato se calcula como potencia × horas × días ÷ 1000. Suma todos los aparatos y multiplica por tu tarifa para obtener la estimación mensual."
+        ]
+      },
+      {
+        "title": "Pasos prácticos",
+        "paragraphs": [
+          "Anota los electrodomésticos que más usas: refrigerador, climatización, lavadora, horno, ordenador. Busca su potencia en la etiqueta (W o kW).",
+          "Calcula el consumo mensual de cada uno y súmalo. Compara con tu factura real: si la estimación es muy inferior, hay consumo que no estás contando.",
+          "Identifica el mayor consumo y decide dónde actuar: reducir horas de uso o cambiar el aparato suele tener más impacto que pequeños ahorros dispersos."
+        ]
+      },
+      {
+        "title": "Hacerlo en línea",
+        "paragraphs": [
+          "Usa una calculadora de costos para repetir el cálculo con distintas tarifas o escenarios. También puedes aplicar el mismo método de estimación a presupuestos de proyectos con la calculadora de estimación de proyectos."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿La tarifa es el precio del kWh?",
+        "answer": "Sí, es el precio que pagas por cada kilovatio-hora; aparece en tu factura. Puede variar por tramos horarios."
+      },
+      {
+        "question": "¿Cuánto consume un aparato en reposo?",
+        "answer": "Menos que en uso, pero los aparatos en stand-by suman. Una estimación razonable es multiplicar la potencia en reposo por las horas conectado."
+      },
+      {
+        "question": "¿La estimación es exacta?",
+        "answer": "No sustituye la factura real, pero es muy útil para comparar tarifas y detectar consumos altos. Cuantos más aparatos incluyas, más precisa será."
+      }
+    ],
+    "relatedTools": [
+      "currency-converter",
+      "project-estimation-calculator",
+      "excel-viewer"
+    ]
+  }
+
 ];
