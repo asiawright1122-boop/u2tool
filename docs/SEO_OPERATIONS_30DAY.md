@@ -32,8 +32,10 @@
 
 ### 3. GSC 提交（加速索引收敛）
 - 在 Search Console 重新提交 `https://www.u2tool.com/sitemap.xml`（sitemap 内容已大幅收缩）
-- 对保留的 318 页 + 新 About 页，可通过 GSC「网页检查→请求编入索引」批量处理（有配额限制）
-- IndexNow 已提交 620 个 priority URL 到 Bing（2026-08-04，脚本意外触发但无害）
+- **保留页批量请求编入索引**：URL 清单见 `docs/GSC_SUBMIT_URLS.txt`（318 个保留页，按语言分组）。
+  在 GSC → 网址检查 → 粘贴 URL → 请求编入索引（有配额，每天 10-30 条，分多天做完，优先 en/es/ru/ja）
+- Bing 深化：Bing Webmaster Tools 验证站点 → 提交 sitemap.xml（IndexNow 已覆盖 620 个 priority URL，但完整 sitemap 应一并提交）
+- IndexNow 已提交 620 个 priority URL 到 Bing（2026-08-04）
 
 ## 2-4 周节奏（数据反馈循环）
 
