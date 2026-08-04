@@ -1,6 +1,6 @@
 import { defaultLocale, type Locale } from './i18n';
 
-export const siteInfoPageSlugs = ['privacy', 'terms', 'contact'] as const;
+export const siteInfoPageSlugs = ['privacy', 'terms', 'contact', 'about'] as const;
 export type SiteInfoPageSlug = (typeof siteInfoPageSlugs)[number];
 
 export interface SiteInfoPageCopy {
@@ -110,6 +110,38 @@ const siteInfoPagesByLocale = {
       primaryLink: { href: '/tools', label: 'Browse tools' },
       secondaryLink: { href: '/privacy', label: 'Privacy Policy' },
     },
+    about: {
+      title: 'About U2Tool',
+      description: 'U2Tool is an independent collection of free browser-first utilities. Learn how tools are built, tested, and maintained.',
+      eyebrow: 'About the project',
+      updated: 'Updated August 4, 2026',
+      sections: [
+        {
+          title: 'Why U2Tool exists',
+          paragraphs: [
+            'U2Tool is an independent collection of free online utilities for formatting, converting, generating, validating, and inspecting everyday work artifacts. The project started from a simple observation: most of these tasks do not require an account, a server round-trip, or an upload. A page that opens, works, and explains itself is enough.',
+            'The site is built to be boring in the good sense: tools should finish the job quickly, run locally in your browser where possible, and not hide the result behind a signup wall.',
+          ],
+        },
+        {
+          title: 'How tools are built and verified',
+          paragraphs: [
+            'Every tool ships with a capability profile that states what it can and cannot do. Claims such as "100% client-side" or "no upload" are checked against the shipped code before release, and the same checks run in CI on every change.',
+            'Tools are tested with real inputs, including malformed data, empty input, and large batches. Localized pages are validated so that copy, headings, and SEO metadata stay aligned across the ten supported languages.',
+            'Search performance is reviewed from Google Search Console data on a regular cadence. Pages without demonstrated demand are soft-supressed (noindex) instead of being left to accumulate, so crawl budget concentrates on what people actually search for.',
+          ],
+        },
+        {
+          title: 'What changed recently',
+          paragraphs: [
+            'August 2026: added usage analytics, reorganized the tool index around search demand, and moved 5,300+ zero-demand tool pages to a soft-suppressed state while keeping them live and reversible.',
+            'July 2026: expanded AI-related generators, restored sitemap lastmod metadata for the grammar checker cohort, and improved localized copy coverage.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'Browse tools' },
+      secondaryLink: { href: '/contact', label: 'Contact us' },
+    },
   },
   zh: {
     privacy: {
@@ -197,6 +229,38 @@ const siteInfoPagesByLocale = {
       ],
       primaryLink: { href: '/tools', label: '浏览工具' },
       secondaryLink: { href: '/privacy', label: '隐私政策' },
+    },
+    about: {
+      title: '关于 U2Tool',
+      description: 'U2Tool 是一个独立的免费在线工具集合，坚持浏览器优先。了解工具如何构建、测试与维护。',
+      eyebrow: '关于项目',
+      updated: '2026 年 8 月 4 日更新',
+      sections: [
+        {
+          title: '为什么做 U2Tool',
+          paragraphs: [
+            'U2Tool 是一个独立的免费在线工具集合，覆盖格式化、转换、生成、校验与检查等日常任务。项目的出发点很简单：大多数这类任务不需要注册账号，也不需要把数据上传到服务器——页面打开就能用、用完成果就在眼前，就够了。',
+            '我们希望这个站"朴素而可靠"：工具能快速完成任务，尽可能在浏览器本地运行，不把结果藏在注册墙后面。',
+          ],
+        },
+        {
+          title: '工具如何构建与验证',
+          paragraphs: [
+            '每个工具都配有能力画像，明确声明它能做什么、不能做什么。"纯浏览器端""不上传"这类声明在发布前会对照实际代码校验，并且每次改动都会在 CI 中重复检查。',
+            '工具用真实输入测试，包括异常数据、空输入和大批量数据；多语言页面会校验文案、标题与 SEO 元数据在十种语言间保持一致。',
+            '搜索表现按固定节奏从 Google Search Console 数据评审。没有真实搜索需求的页面会被软抑制（noindex）而不是放任堆积，让抓取预算集中在用户真正搜索的内容上。',
+          ],
+        },
+        {
+          title: '近期更新',
+          paragraphs: [
+            '2026 年 8 月：接入访问统计，按搜索需求重组工具索引，5300+ 个零需求工具页进入软抑制状态（页面仍可访问、可随时恢复）。',
+            '2026 年 7 月：扩充 AI 相关生成器，恢复 grammar checker 批次页面的 sitemap lastmod 元数据，改进多语言文案覆盖。',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: '浏览工具' },
+      secondaryLink: { href: '/contact', label: '联系我们' },
     },
   },
   ja: {
@@ -286,6 +350,37 @@ const siteInfoPagesByLocale = {
       primaryLink: { href: '/tools', label: 'ツールを見る' },
       secondaryLink: { href: '/privacy', label: 'プライバシーポリシー' },
     },
+    about: {
+      title: 'U2Tool について',
+      description: 'U2Tool はブラウザで完結する無料ツールの独立コレクションです。ツールの作り方と運用方針を紹介します。',
+      eyebrow: 'プロジェクトについて',
+      updated: '2026年8月4日更新',
+      sections: [
+        {
+          title: 'U2Tool の目的',
+          paragraphs: [
+            'U2Tool は、フォーマット・変換・生成・検証など日常的な作業のための無料オンラインツール集です。アカウント登録もサーバーへのアップロードも不要で、ページを開けばすぐ使えることを目指しています。',
+            'できるだけブラウザ内で完結し、結果を登録の壁の後ろに隠さない、シンプルで信頼できるツールを目指します。',
+          ],
+        },
+        {
+          title: '検証と品質管理',
+          paragraphs: [
+            '各ツールには能力プロファイルがあり、「ブラウザ内で完結」「アップロードなし」などの主張はリリース前に実際のコードと突き合わせて検証し、CI でも毎回チェックします。',
+            '検索パフォーマンスは Google Search Console のデータに基づいて定期的にレビューし、需要のないページは noindex でソフト抑制します。',
+          ],
+        },
+        {
+          title: '最近の更新',
+          paragraphs: [
+            '2026年8月：アクセス解析を導入し、検索需要に基づいてツールインデックスを再編。需要のない5,300以上のページをソフト抑制しました。',
+            '2026年7月：AI関連ジェネレータを拡充し、多言語コピーのカバレッジを改善しました。',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'ツールを見る' },
+      secondaryLink: { href: '/contact', label: 'お問い合わせ' },
+    },
   },
   ko: {
     privacy: {
@@ -373,6 +468,37 @@ const siteInfoPagesByLocale = {
       ],
       primaryLink: { href: '/tools', label: '도구 둘러보기' },
       secondaryLink: { href: '/privacy', label: '개인정보 처리방침' },
+    },
+    about: {
+      title: 'U2Tool 소개',
+      description: 'U2Tool은 브라우저에서 바로 사용할 수 있는 무료 도구 모음입니다. 도구가 어떻게 만들어지고 유지되는지 소개합니다.',
+      eyebrow: '프로젝트 소개',
+      updated: '2026년 8월 4일 업데이트',
+      sections: [
+        {
+          title: 'U2Tool이 만들어진 이유',
+          paragraphs: [
+            'U2Tool은 포맷, 변환, 생성, 검증 등 일상적인 작업을 위한 무료 온라인 도구 모음입니다. 회원가입도 서버 업로드도 필요 없는, 페이지를 열면 바로 쓸 수 있는 도구를 지향합니다.',
+            '가능한 한 브라우저에서 처리하고 결과를 회원가입 뒤에 숨기지 않는, 단순하고 신뢰할 수 있는 도구를 목표로 합니다.',
+          ],
+        },
+        {
+          title: '검증과 품질 관리',
+          paragraphs: [
+            '각 도구에는 능력 프로필이 있어 "100% 브라우저 처리", "업로드 없음" 같은 주장을 릴리스 전에 실제 코드와 대조해 검증하고, CI에서도 매번 확인합니다.',
+            '검색 성과는 Google Search Console 데이터로 정기적으로 검토하며, 수요가 없는 페이지는 noindex로 소프트 억제합니다.',
+          ],
+        },
+        {
+          title: '최근 업데이트',
+          paragraphs: [
+            '2026년 8월: 방문 통계를 도입하고 검색 수요에 따라 도구 인덱스를 재편했습니다. 수요가 없는 5,300개 이상의 페이지를 소프트 억제했습니다.',
+            '2026년 7월: AI 관련 생성기를 확장하고 다국어 카피 범위를 개선했습니다.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: '도구 둘러보기' },
+      secondaryLink: { href: '/contact', label: '문의하기' },
     },
   },
   es: {
@@ -462,6 +588,37 @@ const siteInfoPagesByLocale = {
       primaryLink: { href: '/tools', label: 'Explorar herramientas' },
       secondaryLink: { href: '/privacy', label: 'Política de privacidad' },
     },
+    about: {
+      title: 'Acerca de U2Tool',
+      description: 'U2Tool es una colección independiente de utilidades gratuitas que funcionan en el navegador. Conoce cómo se construyen y verifican las herramientas.',
+      eyebrow: 'Sobre el proyecto',
+      updated: 'Actualizado el 4 de agosto de 2026',
+      sections: [
+        {
+          title: 'Por qué existe U2Tool',
+          paragraphs: [
+            'U2Tool es una colección independiente de utilidades gratuitas para formatear, convertir, generar, validar e inspeccionar datos. La idea es simple: la mayoría de estas tareas no requieren cuenta ni envío de datos al servidor.',
+            'Buscamos herramientas que funcionen en el navegador, terminen rápido el trabajo y no oculten el resultado detrás de un registro.',
+          ],
+        },
+        {
+          title: 'Cómo se construyen y verifican',
+          paragraphs: [
+            'Cada herramienta tiene un perfil de capacidades; afirmaciones como "100% en el navegador" o "sin subidas" se verifican contra el código antes de publicarse y en cada cambio mediante CI.',
+            'El rendimiento de búsqueda se revisa con datos de Google Search Console; las páginas sin demanda se marcan con noindex en lugar de acumularse.',
+          ],
+        },
+        {
+          title: 'Cambios recientes',
+          paragraphs: [
+            'Agosto 2026: analítica de visitas, reorganización del índice por demanda de búsqueda y supresión suave de más de 5.300 páginas sin demanda.',
+            'Julio 2026: ampliación de generadores de IA y mejora de la cobertura de contenido localizado.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'Explorar herramientas' },
+      secondaryLink: { href: '/contact', label: 'Contacto' },
+    },
   },
   pt: {
     privacy: {
@@ -549,6 +706,36 @@ const siteInfoPagesByLocale = {
       ],
       primaryLink: { href: '/tools', label: 'Explorar ferramentas' },
       secondaryLink: { href: '/privacy', label: 'Política de privacidade' },
+    },
+    about: {
+      title: 'Sobre o U2Tool',
+      description: 'O U2Tool é uma coleção independente de utilitários gratuitos que rodam no navegador. Saiba como as ferramentas são construídas e mantidas.',
+      eyebrow: 'Sobre o projeto',
+      updated: 'Atualizado em 4 de agosto de 2026',
+      sections: [
+        {
+          title: 'Por que o U2Tool existe',
+          paragraphs: [
+            'O U2Tool é uma coleção independente de utilitários gratuitos para formatar, converter, gerar, validar e inspecionar dados. A maioria dessas tarefas não exige conta nem upload de dados ao servidor.',
+          ],
+        },
+        {
+          title: 'Como as ferramentas são verificadas',
+          paragraphs: [
+            'Cada ferramenta possui um perfil de capacidades; declarações como "100% no navegador" ou "sem upload" são verificadas no código antes da publicação e a cada mudança via CI.',
+            'O desempenho de busca é revisado com dados do Google Search Console; páginas sem demanda recebem noindex em vez de se acumularem.',
+          ],
+        },
+        {
+          title: 'Mudanças recentes',
+          paragraphs: [
+            'Agosto de 2026: analítica de visitas, reorganização do índice por demanda de busca e supressão suave de mais de 5.300 páginas sem demanda.',
+            'Julho de 2026: expansão de geradores de IA e melhoria da cobertura de conteúdo localizado.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'Explorar ferramentas' },
+      secondaryLink: { href: '/contact', label: 'Contato' },
     },
   },
   fr: {
@@ -638,6 +825,37 @@ const siteInfoPagesByLocale = {
       primaryLink: { href: '/tools', label: 'Parcourir les outils' },
       secondaryLink: { href: '/privacy', label: 'Politique de confidentialité' },
     },
+    about: {
+      title: "À propos d'U2Tool",
+      description: "U2Tool est une collection indépendante d'utilitaires gratuits qui fonctionnent dans le navigateur. Découvrez comment les outils sont construits et vérifiés.",
+      eyebrow: "À propos du projet",
+      updated: 'Mis à jour le 4 août 2026',
+      sections: [
+        {
+          title: "Pourquoi U2Tool existe",
+          paragraphs: [
+            "U2Tool est une collection indépendante d'utilitaires gratuits pour formater, convertir, générer, valider et inspecter des données. La plupart de ces tâches ne nécessitent ni compte ni envoi de données au serveur.",
+            'Nous visons des outils simples et fiables : rapides, exécutés dans le navigateur, sans cacher le résultat derrière une inscription.',
+          ],
+        },
+        {
+          title: 'Comment les outils sont vérifiés',
+          paragraphs: [
+            'Chaque outil possède un profil de capacités ; les affirmations comme « 100 % dans le navigateur » ou « sans téléversement » sont vérifiées contre le code avant publication et à chaque changement via CI.',
+            'La performance de recherche est examinée avec les données de Google Search Console ; les pages sans demande passent en noindex au lieu de s\'accumuler.',
+          ],
+        },
+        {
+          title: 'Changements récents',
+          paragraphs: [
+            'Août 2026 : analytique de visites, réorganisation de l\'index selon la demande de recherche et suppression douce de plus de 5 300 pages sans demande.',
+            'Juillet 2026 : extension des générateurs IA et amélioration de la couverture du contenu localisé.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'Explorer les outils' },
+      secondaryLink: { href: '/contact', label: 'Contact' },
+    },
   },
   de: {
     privacy: {
@@ -725,6 +943,37 @@ const siteInfoPagesByLocale = {
       ],
       primaryLink: { href: '/tools', label: 'Tools durchsuchen' },
       secondaryLink: { href: '/privacy', label: 'Datenschutzerklärung' },
+    },
+    about: {
+      title: 'Über U2Tool',
+      description: 'U2Tool ist eine unabhängige Sammlung kostenloser Browser-Tools. Erfahren Sie, wie die Tools entwickelt, getestet und gepflegt werden.',
+      eyebrow: 'Über das Projekt',
+      updated: 'Aktualisiert am 4. August 2026',
+      sections: [
+        {
+          title: 'Warum U2Tool existiert',
+          paragraphs: [
+            'U2Tool ist eine unabhängige Sammlung kostenloser Online-Werkzeuge zum Formatieren, Konvertieren, Generieren, Validieren und Prüfen von Daten. Die meisten Aufgaben erfordern weder ein Konto noch einen Upload zum Server.',
+            'Wir setzen auf einfache, zuverlässige Tools: schnell, im Browser ausgeführt und ohne das Ergebnis hinter einer Registrierung zu verstecken.',
+          ],
+        },
+        {
+          title: 'Wie Tools geprüft werden',
+          paragraphs: [
+            'Jedes Tool hat ein Fähigkeitsprofil; Aussagen wie „100 % im Browser“ oder „kein Upload“ werden vor der Veröffentlichung und bei jeder Änderung per CI gegen den Code geprüft.',
+            'Die Suchleistung wird regelmäßig anhand von Google Search Console-Daten überprüft; Seiten ohne Nachfrage werden per noindex weich deaktiviert.',
+          ],
+        },
+        {
+          title: 'Aktuelle Änderungen',
+          paragraphs: [
+            'August 2026: Besuchsanalytik, Neuordnung des Index nach Suchnachfrage und weiche Deaktivierung von über 5.300 Seiten ohne Nachfrage.',
+            'Juli 2026: Ausbau der KI-Generatoren und bessere Abdeckung lokalisierter Inhalte.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'Werkzeuge durchsuchen' },
+      secondaryLink: { href: '/contact', label: 'Kontakt' },
     },
   },
   ru: {
@@ -814,6 +1063,37 @@ const siteInfoPagesByLocale = {
       primaryLink: { href: '/tools', label: 'Открыть инструменты' },
       secondaryLink: { href: '/privacy', label: 'Политика конфиденциальности' },
     },
+    about: {
+      title: 'О U2Tool',
+      description: 'U2Tool — независимый набор бесплатных браузерных утилит. Узнайте, как инструменты создаются и поддерживаются.',
+      eyebrow: 'О проекте',
+      updated: 'Обновлено 4 августа 2026',
+      sections: [
+        {
+          title: 'Зачем нужен U2Tool',
+          paragraphs: [
+            'U2Tool — независимый набор бесплатных онлайн-утилит для форматирования, конвертации, генерации, валидации и проверки данных. Большинство задач не требуют аккаунта или загрузки данных на сервер.',
+            'Мы стремимся к простым и надёжным инструментам: быстрым, работающим в браузере и не прячущим результат за регистрацией.',
+          ],
+        },
+        {
+          title: 'Как проверяются инструменты',
+          paragraphs: [
+            'У каждого инструмента есть профиль возможностей; утверждения вроде «100 % в браузере» или «без загрузки» проверяются по коду перед публикацией и при каждом изменении через CI.',
+            'Поисковые показатели регулярно анализируются по данным Google Search Console; страницы без спроса помечаются noindex вместо накопления.',
+          ],
+        },
+        {
+          title: 'Последние изменения',
+          paragraphs: [
+            'Август 2026: аналитика посещений, реорганизация индекса по поисковому спросу и мягкое отключение более 5 300 страниц без спроса.',
+            'Июль 2026: расширение ИИ-генераторов и улучшение покрытия локализованного контента.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'Обзор инструментов' },
+      secondaryLink: { href: '/contact', label: 'Связаться' },
+    },
   },
   ar: {
     privacy: {
@@ -901,6 +1181,37 @@ const siteInfoPagesByLocale = {
       ],
       primaryLink: { href: '/tools', label: 'تصفح الأدوات' },
       secondaryLink: { href: '/privacy', label: 'سياسة الخصوصية' },
+    },
+    about: {
+      title: 'عن U2Tool',
+      description: 'U2Tool مجموعة مستقلة من الأدوات المجانية التي تعمل في المتصفح. تعرّف على كيفية بناء الأدوات وصيانتها.',
+      eyebrow: 'عن المشروع',
+      updated: 'تم التحديث في 4 أغسطس 2026',
+      sections: [
+        {
+          title: 'لماذا يوجد U2Tool',
+          paragraphs: [
+            'U2Tool مجموعة مستقلة من الأدوات المجانية عبر الإنترنت لتنسيق البيانات وتحويلها وتوليدها والتحقق منها. معظم هذه المهام لا تتطلب حساباً أو رفع البيانات إلى الخادم.',
+            'نهدف إلى أدوات بسيطة وموثوقة: سريعة، تعمل في المتصفح، ولا تخفي النتيجة خلف التسجيل.',
+          ],
+        },
+        {
+          title: 'كيف يتم التحقق من الأدوات',
+          paragraphs: [
+            'لكل أداة ملف قدرات؛ ادعاءات مثل «100% في المتصفح» أو «بدون رفع» تُتحقق من الكود قبل النشر وفي كل تغيير عبر CI.',
+            'يتم مراجعة أداء البحث بانتظام من بيانات Google Search Console؛ الصفحات بدون طلب تُعلَّم بـ noindex بدلاً من التراكم.',
+          ],
+        },
+        {
+          title: 'التغييرات الأخيرة',
+          paragraphs: [
+            'أغسطس 2026: إضافة تحليلات الزيارات، وإعادة تنظيم فهرس الأدوات حسب طلب البحث، والإيقاف الناعم لأكثر من 5,300 صفحة بدون طلب.',
+            'يوليو 2026: توسيع مولّدات الذكاء الاصطناعي وتحسين تغطية المحتوى المترجم.',
+          ],
+        },
+      ],
+      primaryLink: { href: '/tools', label: 'تصفح الأدوات' },
+      secondaryLink: { href: '/contact', label: 'اتصل بنا' },
     },
   },
 } satisfies Record<Locale, Record<SiteInfoPageSlug, SiteInfoPageCopy>>;

@@ -1,0 +1,15 @@
+---
+import SiteInfoPage from '@/components/pages/SiteInfoPage.astro';
+import { isValidLocale, type Locale } from '@/lib/i18n';
+
+export const prerender = false;
+
+const localeCandidate = Astro.params.locale;
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
+  return Astro.redirect('/en/about/', 301);
+}
+
+const locale: Locale = localeCandidate;
+---
+
+<SiteInfoPage locale={locale} pageSlug="about" />

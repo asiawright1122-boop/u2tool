@@ -21,6 +21,7 @@ const currentYear = new Date().getFullYear();
 
 const homePath = getLocalizedPath(locale as Locale, '/');
 const toolsPath = getLocalizedPath(locale as Locale, '/tools');
+const aboutPath = getLocalizedPath(locale as Locale, '/about');
 const privacyPath = getLocalizedPath(locale as Locale, '/privacy');
 const termsPath = getLocalizedPath(locale as Locale, '/terms');
 const contactPath = getLocalizedPath(locale as Locale, '/contact');
@@ -70,6 +71,13 @@ const contactPath = getLocalizedPath(locale as Locale, '/contact');
           Platform
         </h3>
         <ul class="space-y-4">
+          <li>
+            <a href={aboutPath}
+               class="text-sm font-bold text-slate-400 hover:text-amber-600 dark:text-slate-600 dark:hover:text-amber-500 transition-all duration-300 flex items-center gap-2 group/link">
+              <span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-800 transition-all group-hover/link:w-3 group-hover/link:bg-amber-500"></span>
+              About
+            </a>
+          </li>
           <li>
             <a href={privacyPath}
                class="text-sm font-bold text-slate-400 hover:text-amber-600 dark:text-slate-600 dark:hover:text-amber-500 transition-all duration-300 flex items-center gap-2 group/link">
