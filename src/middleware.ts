@@ -212,7 +212,7 @@ function resolveCanonicalRedirect(request: Request): string | null {
 
   if (segments.length === 1) {
     if (first === 'about') {
-      return `/en/${url.search}`;
+      return `/en/about/${url.search}`;
     }
 
     const siteInfoRedirect = resolveUnlocalizedSiteInfoRedirect(first);
@@ -262,10 +262,6 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   if (isValidLocale(first)) {
-    if (second === 'about' && segments.length === 2) {
-      return `/${first}/${url.search}`;
-    }
-
     if (second === 'tools' && third === 'category') {
       return segments.length > 3 ? `/${first}/categories/${segments.slice(3).join('/')}/` : `/${first}/tools/`;
     }

@@ -212,8 +212,8 @@ describe('html edge cache middleware', () => {
     expect(next).not.toHaveBeenCalled();
   });
 
-  it('redirects legacy about pages to the localized homepage', async () => {
-    const next = vi.fn(async () => new Response('should not run'));
+  it('routes localized about pages and redirects bare /about to English about', async () => {
+    const next = vi.fn(async () => new Response('rendered'));
 
     const unlocalized = await runMiddleware(
       new Request('https://www.u2tool.com/about'),
@@ -224,11 +224,13 @@ describe('html edge cache middleware', () => {
       next
     );
 
+    // Bare /about (no locale prefix) canonicalizes to the English about page.
     expect(unlocalized.response.status).toBe(301);
-    expect(unlocalized.response.headers.get('location')).toBe('/en/');
-    expect(localized.response.status).toBe(301);
-    expect(localized.response.headers.get('location')).toBe('/ru/');
-    expect(next).not.toHaveBeenCalled();
+    expect(unlocalized.response.headers.get('location')).toBe('/en/about/');
+    // Localized about pages render normally now that the page exists.
+    expect(localized.response.status).toBe(200);
+    expect(localized.response.headers.get('location')).toBeNull();
+    expect(next).toHaveBeenCalled();
   });
 
   it('collapses repeated locale prefixes in GSC-discovered tool URLs', async () => {
