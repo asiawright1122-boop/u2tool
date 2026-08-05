@@ -239,6 +239,59 @@ export const guidesEn: Guide[] = [
       "sankey-chart-generator",
       "tree-chart-generator"
     ]
+  },
+  {
+    "slug": "sankey-diagrams-for-conversion-tracking",
+    "title": "Sankey diagrams for conversion tracking",
+    "description": "Sankey diagrams map flows between stages: where users drop off, where value moves. How to read them, when they beat funnels, and how to make one free.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "What a Sankey diagram shows",
+        "paragraphs": [
+          "A Sankey diagram draws flows as arrows whose width is proportional to quantity. In conversion tracking, each stage is a node and the arrows show how many users moved from one stage to the next — and how many dropped out."
+        ]
+      },
+      {
+        "title": "Why it beats a funnel table",
+        "paragraphs": [
+          "A funnel table shows totals per step but hides the paths between them. A Sankey reveals the actual journeys: how many went A to B directly, how many detoured through C, and where the biggest leaks are."
+        ]
+      },
+      {
+        "title": "When to use it",
+        "paragraphs": [
+          "Use Sankey for multi-path flows: checkout funnels with alternative payment routes, user journeys across pages, or budget allocations across projects. Avoid it for simple linear funnels, where a plain funnel chart is clearer."
+        ]
+      },
+      {
+        "title": "How to make one free",
+        "paragraphs": [
+          "The Sankey generator on U2Tool draws the flow in the browser: define nodes and the amounts between them, and the width of each arrow is computed automatically.",
+          "Colors, labels and layout are adjustable; export as PNG or SVG. Everything runs locally, no account needed."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many stages work best?",
+        "answer": "Five to ten stages keep the diagram readable; more than that, group similar steps into one node."
+      },
+      {
+        "question": "Can I show multiple entry points?",
+        "answer": "Yes, that is exactly where Sankey shines: each entry path becomes its own arrow into the flow."
+      },
+      {
+        "question": "Is my data uploaded anywhere?",
+        "answer": "No. The generator processes everything in your browser."
+      }
+    ],
+    "relatedTools": [
+      "sankey-chart-generator",
+      "bar-chart-generator",
+      "calendar-heatmap-generator"
+    ]
   }
 
 ];

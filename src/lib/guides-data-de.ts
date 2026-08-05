@@ -231,6 +231,112 @@ export const guidesDe: Guide[] = [
       "excel-viewer",
       "csv-to-vcard-converter"
     ]
+  },
+  {
+    "slug": "sunburst-diagramm-verstehen-und-erstellen",
+    "title": "Sunburst-Diagramm verstehen und erstellen",
+    "description": "Sunburst-Diagramme zeigen hierarchische Daten in konzentrischen Ringen. Wann sie helfen, wann nicht, und wie Sie eins kostenlos im Browser erstellen.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was ein Sunburst-Diagramm ist",
+        "paragraphs": [
+          "Ein Sunburst-Diagramm stellt eine Hierarchie als konzentrische Ringe dar: Der innerste Ring ist die oberste Ebene, jeder äußere Ring verfeinert die Segmente darunter. Es ist ein Kreisdiagramm, das um mehrere Ebenen erweitert wurde."
+        ]
+      },
+      {
+        "title": "Wann es sinnvoll ist",
+        "paragraphs": [
+          "Sunburst-Diagramme eignen sich für Hierarchien mit wenigen obersten Segmenten (3-7) und mäßiger Tiefe, etwa Dateisysteme, Produktkategorien oder Organisationsstrukturen. Sie zeigen auf einen Blick, welcher Zweig dominiert."
+        ]
+      },
+      {
+        "title": "Wann nicht",
+        "paragraphs": [
+          "Bei vielen kleinen Segmenten werden äußere Ringe unlesbar. Für reine Teil-Ganze-Vergleiche einer Ebene ist ein Kreis- oder Balkendiagramm besser, für genaue Vergleiche ein Treemap."
+        ]
+      },
+      {
+        "title": "Gratis online erstellen",
+        "paragraphs": [
+          "Der Sunburst-Generator von U2Tool baut die Ringe direkt im Browser: Sie geben die Hierarchieebenen an, und die Ebenen werden automatisch skaliert und beschriftet.",
+          "Farben und Beschriftungen sind anpassbar, der Export erfolgt als PNG oder SVG. Alles läuft lokal, ohne Anmeldung und ohne Datenübertragung an einen Server."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist ein Sunburst dasselbe wie ein Kreisdiagramm?",
+        "answer": "Nein. Ein Kreisdiagramm zeigt eine Ebene; ein Sunburst stapelt mehrere Ebenen als Ringe, um eine Hierarchie darzustellen."
+      },
+      {
+        "question": "Welche Dateiformate kann ich exportieren?",
+        "answer": "PNG oder SVG, zusätzlich können Sie die Datenstruktur speichern."
+      },
+      {
+        "question": "Wird mein Diagramm auf einen Server hochgeladen?",
+        "answer": "Nein, die Verarbeitung erfolgt vollständig in Ihrem Browser."
+      }
+    ],
+    "relatedTools": [
+      "sunburst-chart-generator",
+      "tree-chart-generator",
+      "graph-chart-generator"
+    ]
+  },
+  {
+    "slug": "baumdiagramm-online-erstellen",
+    "title": "Baumdiagramm online erstellen",
+    "description": "Hierarchien als Baumdiagramm darstellen: Organigramme, Taxonomien, Strukturen. Schritt für Schritt mit dem kostenlosen Generator im Browser.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was ein Baumdiagramm ist",
+        "paragraphs": [
+          "Ein Baumdiagramm zeigt eine Hierarchie mit einer Wurzel, Ästen und Blättern. Jeder Knoten hat genau einen Vorgänger; die Tiefe gibt die Detailstufe an. Typisch sind Organigramme, Menüstrukturen und Taxonomien."
+        ]
+      },
+      {
+        "title": "Wann Sie es nutzen",
+        "paragraphs": [
+          "Nutzen Sie einen Baum, wenn Ihre Daten eine echte Hierarchie haben: Kategorien in Kategorien, Rollen in Abteilungen, Konzepte in Themen. Ohne Eltern-Kind-Beziehung sind Streudiagramme oder Tabellen oft besser."
+        ]
+      },
+      {
+        "title": "So erstellen Sie es kostenlos",
+        "paragraphs": [
+          "Der Baumgenerator von U2Tool ordnet Knoten und Verbindungen automatisch im Browser an: Wurzel anlegen, Äste ergänzen, Layout wird automatisch verteilt.",
+          "Beschriften und einfärben können Sie direkt, der Export erfolgt als Bild (PNG/SVG) oder als Daten. Keine Anmeldung, alles lokal."
+        ]
+      },
+      {
+        "title": "Tipps für lesbare Bäume",
+        "paragraphs": [
+          "Halten Sie die Tiefe möglichst bei 3-4 Ebenen. Fassen Sie ähnliche Knoten unter einer Zwischenebene zusammen und verwenden Sie kurze, selbsterklärende Beschriftungen."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Kann ich eine eigene Struktur importieren?",
+        "answer": "Ja, Sie können Knoten und Beziehungen strukturiert angeben; das Layout wird automatisch gezeichnet."
+      },
+      {
+        "question": "In welchen Formaten exportiere ich?",
+        "answer": "Als Vektor (SVG/PDF) oder PNG; die Daten können zusätzlich gespeichert werden."
+      },
+      {
+        "question": "Ist das wirklich kostenlos?",
+        "answer": "Ja, ohne Registrierung und ohne Limit; die Verarbeitung läuft im Browser."
+      }
+    ],
+    "relatedTools": [
+      "tree-chart-generator",
+      "sunburst-chart-generator",
+      "calendar-heatmap-generator"
+    ]
   }
 
 ];

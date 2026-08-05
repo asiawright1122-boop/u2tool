@@ -395,6 +395,58 @@ export const guidesEs: Guide[] = [
       "line-chart-generator",
       "tree-chart-generator"
     ]
+  },
+  {
+    "slug": "como-elegir-el-tipo-de-grafico-correcto",
+    "title": "Cómo elegir el tipo de gráfico correcto",
+    "description": "Guía para elegir el gráfico adecuado: comparar, mostrar tendencias, distribuciones o relaciones. Reglas prácticas y ejemplos, con generadores gratis.",
+    "eyebrow": "Guía completa",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "La pregunta que lo decide todo",
+        "paragraphs": [
+          "Antes de elegir un gráfico, define la pregunta: ¿comparo valores entre categorías (barras)? ¿muestro un cambio en el tiempo (líneas)? ¿reparto un total (circular)? ¿exploro la relación entre dos variables (dispersión)? Cada pregunta tiene un gráfico natural."
+        ]
+      },
+      {
+        "title": "Reglas rápidas",
+        "paragraphs": [
+          "Barras para comparar categorías. Líneas para tendencias temporales. Circular solo para 2-6 partes de un todo. Dispersión para relaciones entre variables numéricas. Árbol o sunburst para jerarquías. Y cuando dudes entre dos, elige el más simple de leer."
+        ]
+      },
+      {
+        "title": "Errores comunes",
+        "paragraphs": [
+          "Ejes truncados que exageran diferencias. Demasiadas series en un gráfico de líneas. Gráficos 3D que distorsionan proporciones. Doble eje Y que confunde. Si el gráfico necesita una leyenda larga para entenderse, probablemente es el tipo equivocado."
+        ]
+      },
+      {
+        "title": "Crea el gráfico gratis",
+        "paragraphs": [
+          "Los generadores de U2Tool cubren barras, líneas, dispersión, circulares, árboles y más, todos en el navegador: pega tus datos y exporta como imagen o datos. Sin registro, sin subir nada al servidor."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Qué gráfico para comparar 5 categorías?",
+        "answer": "Barras horizontales: se leen rápido y las etiquetas caben bien."
+      },
+      {
+        "question": "¿Barras o líneas para evolución temporal?",
+        "answer": "Líneas si el tiempo es continuo y hay muchos puntos; barras si son pocos períodos discretos."
+      },
+      {
+        "question": "¿Cuándo evitar la gráfica circular?",
+        "answer": "Con más de 6 categorías o cuando hay que comparar valores parecidos: las diferencias de ángulo son difíciles de juzgar."
+      }
+    ],
+    "relatedTools": [
+      "graph-chart-generator",
+      "tree-chart-generator",
+      "line-chart-generator"
+    ]
   }
 
 ];
