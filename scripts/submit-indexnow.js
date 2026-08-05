@@ -220,8 +220,35 @@ function resolveIndexNowKey(siteUrl) {
   return candidate;
 }
 
+/**
+ * Reads the generated (locale, slug) index-suppression keys.
+ *
+ * This script runs under plain node, so it cannot import the TypeScript map.
+ * The generated file has a stable `'locale/slug': true,` shape, so it is parsed
+ * textually. An empty parse is treated as a hard error: silently falling back
+ * to "nothing suppressed" would resubmit every noindex page.
+ */
+function loadSuppressedKeys() {
+  const generatedPath = path.join(repoRoot, 'src/config/index-suppression.generated.ts');
+  const source = fs.readFileSync(generatedPath, 'utf8');
+  const keys = new Set();
+  for (const match of source.matchAll(/'([^']+)':\s*true/g)) {
+    keys.add(match[1]);
+  }
+
+  if (keys.size === 0) {
+    throw new Error(
+      `Parsed zero suppression keys from ${generatedPath}. Refusing to submit ` +
+        'unfiltered URLs — check whether the generated file shape changed.'
+    );
+  }
+
+  return keys;
+}
+
 function buildPriorityUrls(siteUrl, selectedLocales, limit) {
   const urls = new Set();
+  const suppressedKeys = loadSuppressedKeys();
   const addPath = (path) => {
     urls.add(`${siteUrl}${path.endsWith('/') ? path : `${path}/`}`);
   };
@@ -244,6 +271,11 @@ function buildPriorityUrls(siteUrl, selectedLocales, limit) {
     }
 
     for (const slug of PRIORITY_TOOL_SLUGS) {
+      // A suppressed page renders robots=noindex. Submitting it spends the
+      // per-run quota asking an engine to index a page that then refuses.
+      if (suppressedKeys.has(`${locale}/${slug}`)) {
+        continue;
+      }
       addPath(`/${locale}/tools/${slug}`);
     }
   }

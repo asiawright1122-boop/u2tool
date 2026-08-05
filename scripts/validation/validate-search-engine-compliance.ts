@@ -1,7 +1,7 @@
 import {
+  buildIndexableToolsSitemapEntries,
   buildPagesSitemapEntries,
   buildPrioritySitemapEntries,
-  buildToolsSitemapEntries,
 } from '../../src/lib/sitemap-entry-builders';
 import { resolveSitemapLastmod } from '../../src/lib/sitemap-lastmod';
 import { newestEntryLastmod } from '../../src/lib/sitemap-utils';
@@ -225,7 +225,7 @@ async function validateSitemaps(): Promise<void> {
   assertExpectedLastmod(
     indexLastmods,
     `${CANONICAL_BASE_URL}/sitemap-tools.xml`,
-    newestEntryLastmod(buildToolsSitemapEntries())
+    newestEntryLastmod(buildIndexableToolsSitemapEntries())
   );
 
   const priorityLocs = extractLocs(priorityXml);

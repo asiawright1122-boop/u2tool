@@ -86,6 +86,11 @@ export function buildPrioritySitemapEntries(): SitemapUrlEntry[] {
     }
 
     for (const tool of priorityTools) {
+      // A suppressed page renders robots=noindex, so publishing it here would
+      // contradict the page itself. Same guard as the tools sitemap above.
+      if (INDEX_SUPPRESSION[`${locale}/${tool.slug}`] === true) {
+        continue;
+      }
       entries.push(buildUrl(`/${locale}/tools/${tool.slug}`, '0.9', 'daily', 'tools'));
     }
   }
