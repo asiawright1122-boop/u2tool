@@ -396,6 +396,110 @@ export const guidesEn: Guide[] = [
       "ical-parser",
       "excel-viewer"
     ]
+  },
+  {
+    "slug": "how-to-capitalize-titles-correctly",
+    "title": "How to capitalize titles correctly",
+    "description": "Title case rules for headlines, book titles and headings: which words get capitalized, which stay lowercase, and a free tool to do it for you.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "The basic rule",
+        "paragraphs": [
+          "In title case, the first and last words are always capitalized, and so are the major words in between: nouns, verbs, adjectives and adverbs. Minor words — articles (a, an, the), short conjunctions (and, or, but) and short prepositions (in, on, at, for) — stay lowercase."
+        ]
+      },
+      {
+        "title": "Where styles disagree",
+        "paragraphs": [
+          "Styles differ on prepositions: APA capitalizes prepositions of four or more letters (from, with, about), while Chicago keeps all prepositions lowercase regardless of length. Pick one style and stay consistent."
+        ]
+      },
+      {
+        "title": "Hyphenated words",
+        "paragraphs": [
+          "In a hyphenated compound, capitalize both parts (State-of-the-Art) in most styles, though the second part of an open or suspended compound can vary. When in doubt, follow the style guide of your publication."
+        ]
+      },
+      {
+        "title": "Do it automatically",
+        "paragraphs": [
+          "The title capitalization tool on U2Tool converts your heading to title case in the browser: paste the text, choose a style, and copy the result. It also handles sentence case, so you can compare both before publishing."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is every word capitalized?",
+        "answer": "No. Articles, short conjunctions and short prepositions stay lowercase unless they start or end the title."
+      },
+      {
+        "question": "Which style should I use?",
+        "answer": "Match your audience: academic writing often uses APA, books and magazines use Chicago or AP. Consistency matters more than the choice."
+      },
+      {
+        "question": "What about German and other languages?",
+        "answer": "Rules differ by language; the tool supports the common English title case rules, and sentence case for other conventions."
+      }
+    ],
+    "relatedTools": [
+      "title-capitalization-tool",
+      "word-counter",
+      "grammar-checker"
+    ]
+  },
+  {
+    "slug": "how-to-write-a-table-of-contents",
+    "title": "How to write a table of contents",
+    "description": "Structure a clear table of contents: headings, hierarchy and numbering. Why it helps readers and SEO, plus a free generator in the browser.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "What a table of contents is for",
+        "paragraphs": [
+          "A table of contents gives readers a map of the document: they scan the headings, find the section they need and jump straight there. It also tells you whether your structure is balanced — if one section dwarfs the rest, the outline needs work."
+        ]
+      },
+      {
+        "title": "Build a clean hierarchy",
+        "paragraphs": [
+          "Use one level of headings for main sections and a second for subsections; two levels are enough for most documents. Each heading should be a complete phrase that says what the section covers, not a vague label."
+        ]
+      },
+      {
+        "title": "Numbering and links",
+        "paragraphs": [
+          "Numbered lists (1., 1.1, 1.2) work well for long technical documents; unnumbered TOCs feel lighter for articles. In online content, make each entry a link that jumps to the heading — this is what search engines also use to understand structure."
+        ]
+      },
+      {
+        "title": "Generate it free",
+        "paragraphs": [
+          "The table of contents generator on U2Tool builds a linked TOC from your headings in the browser: paste the outline, choose numbering, and copy the result. It works for Markdown and HTML so you can drop it into any page."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many levels should a TOC have?",
+        "answer": "Two levels for most documents, three at most. Deeper structures are hard to scan."
+      },
+      {
+        "question": "Do headings help SEO?",
+        "answer": "Yes: clear heading hierarchy helps search engines interpret the page structure and can enable rich results."
+      },
+      {
+        "question": "Should every heading be in the TOC?",
+        "answer": "Include levels one and two; skip sub-subsections unless the document is very long."
+      }
+    ],
+    "relatedTools": [
+      "table-of-contents-generator",
+      "title-capitalization-tool",
+      "word-counter"
+    ]
   }
 
 ];

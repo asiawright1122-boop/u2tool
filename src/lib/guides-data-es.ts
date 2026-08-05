@@ -500,6 +500,111 @@ export const guidesEs: Guide[] = [
       "excel-viewer",
       "json-to-excel"
     ]
+  },
+  {
+    "slug": "como-corregir-la-gramatica-del-ingles",
+    "title": "Cómo corregir la gramática del inglés",
+    "description": "Corrige la gramática de tus textos en inglés: errores de concordancia, tiempos verbales y puntuación. Herramientas gratis en el navegador.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Qué errores busca la corrección",
+        "paragraphs": [
+          "Al escribir en inglés los fallos típicos son la concordancia sujeto-verbo (he go por he goes), los tiempos verbales mezclados y la puntuación. Una corrección automática señala estos puntos para que los revises con contexto."
+        ]
+      },
+      {
+        "title": "Cómo funciona la corrección online",
+        "paragraphs": [
+          "La herramienta analiza el texto por oraciones, compara las formas verbales con el sujeto y marca los lugares dudosos. No traduce: detecta errores dentro de lo que escribiste, por eso conviene escribir frases completas y bien formadas."
+        ]
+      },
+      {
+        "title": "Corrige gratis en el navegador",
+        "paragraphs": [
+          "El corrector de gramática de U2Tool procesa tu texto localmente: pega el párrafo, revisa las marcas y aplica los cambios que quieras. Nada se envía a un servidor.",
+          "Después de corregir, relee el texto completo: la máquina encuentra errores mecánicos, pero el sentido final lo decides tú."
+        ]
+      },
+      {
+        "title": "Hábitos que reducen errores",
+        "paragraphs": [
+          "Escribe oraciones cortas, revisa cada verbo con su sujeto y deja reposar el texto antes de releerlo. La corrección automática es el último filtro, no el primero."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Corrige también la ortografía?",
+        "answer": "Sí, marca faltas de ortografía además de problemas de gramática y puntuación."
+      },
+      {
+        "question": "Puedo usarlo para textos largos?",
+        "answer": "Sí, aunque es más práctico revisar por párrafos para no perder el contexto de cada corrección."
+      },
+      {
+        "question": "Mis textos se guardan en algún sitio?",
+        "answer": "No: el análisis ocurre en tu navegador y los datos no salen del dispositivo."
+      }
+    ],
+    "relatedTools": [
+      "grammar-checker",
+      "text-deduplicator",
+      "word-counter"
+    ]
+  },
+  {
+    "slug": "como-escribir-titulos-seo",
+    "title": "Cómo escribir títulos SEO",
+    "description": "Escribe títulos que llamen la atención y posicionen: longitud, palabra clave, gancho y formato. Con generador de títulos gratis en el navegador.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Qué hace bueno un título",
+        "paragraphs": [
+          "Un buen título hace dos cosas: dice de qué trata el contenido y da una razón para abrirlo. La palabra clave debe aparecer cerca del inicio, y el beneficio o la promesa clara en el resto."
+        ]
+      },
+      {
+        "title": "Longitud y formato",
+        "paragraphs": [
+          "En los resultados de Google se ven unos 60 caracteres; lo que exceda se corta. Los números y las palabras concretas (guía, gratis, paso a paso, ejemplos) suelen mejorar el clic. Evita promesas vagas como increíble o definitivo."
+        ]
+      },
+      {
+        "title": "Genera ideas y variantes",
+        "paragraphs": [
+          "El generador de títulos de U2Tool produce varias fórmulas a partir de tu tema: pregunta, lista, cómo, guía. Probar 5-10 variantes y elegir la más clara rinde más que forzar una sola."
+        ]
+      },
+      {
+        "title": "El título no lo es todo",
+        "paragraphs": [
+          "El título promete; la introducción debe cumplir rápido. Si el contenido no responde a la promesa, el clic no se repite y el CTR se resiente."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Cuántos caracteres debe tener?",
+        "answer": "Entre 50 y 60 caracteres es la zona segura para que no se corte en los resultados."
+      },
+      {
+        "question": "Pongo la palabra clave al principio?",
+        "answer": "Si es natural, sí: el inicio tiene más peso visual y en el resaltado de la búsqueda."
+      },
+      {
+        "question": "Funciona para redes sociales?",
+        "answer": "Los mismos principios sirven, aunque las redes tienen otros límites de longitud y más libertad de tono."
+      }
+    ],
+    "relatedTools": [
+      "seo-title-generator",
+      "linkedin-headline-generator",
+      "grammar-checker"
+    ]
   }
 
 ];

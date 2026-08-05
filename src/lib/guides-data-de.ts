@@ -390,6 +390,58 @@ export const guidesDe: Guide[] = [
       "excel-viewer",
       "word-to-txt"
     ]
+  },
+  {
+    "slug": "youtube-beschreibungen-schreiben",
+    "title": "YouTube-Beschreibungen schreiben",
+    "description": "Beschreibungen, die klicken und gefunden werden: Aufbau, Keywords und Zeitstempel. Mit Generator für Beschreibungstexte im Browser.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was eine gute Beschreibung leistet",
+        "paragraphs": [
+          "Die Beschreibung hat zwei Aufgaben: dem Zuschauer vor dem Abspielen zu sagen, worum es geht, und über Keywords in der Suche gefunden zu werden. Die ersten zwei Zeilen werden am meisten gelesen — setzen Sie dort die Kernaussage hin."
+        ]
+      },
+      {
+        "title": "Aufbau in der Praxis",
+        "paragraphs": [
+          "Zeile 1: Worum geht es im Video. Danach ergänzende Details, dann Zeitstempel und relevante Links, sauber gegliedert. Hashtags auf 3-5 begrenzen; Text und Links abwechseln, damit es lesbar bleibt."
+        ]
+      },
+      {
+        "title": "Mit dem Generator starten",
+        "paragraphs": [
+          "Der YouTube-Beschreibungs-Generator von U2Tool erstellt aus Ihrem Thema einen Entwurf. Nutzen Sie ihn als Ausgangspunkt, passen Sie den Text an Ihre Stimme an und prüfen Sie, dass jede Aussage zum Video passt."
+        ]
+      },
+      {
+        "title": "Typische Fehler",
+        "paragraphs": [
+          "Keywords überladen, Links ohne Bezug zum Video, leere Beschreibungen. All das schadet sowohl dem Zuschauererlebnis als auch der Auffindbarkeit."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Wie lang sollte die Beschreibung sein?",
+        "answer": "So lang wie nötig: eine kurze Zusammenfassung plus Zeitstempel und Links reichen meist."
+      },
+      {
+        "question": "Wo platziere ich Keywords?",
+        "answer": "Natürlich in den ersten beiden Zeilen und in den Abschnittsüberschriften."
+      },
+      {
+        "question": "Kann ich den generierten Text direkt verwenden?",
+        "answer": "Als Entwurf ja; prüfen Sie Fakten und passen Sie den Stil an, bevor Sie veröffentlichen."
+      }
+    ],
+    "relatedTools": [
+      "youtube-description-generator",
+      "linkedin-headline-generator",
+      "linkedin-summary-generator"
+    ]
   }
 
 ];
