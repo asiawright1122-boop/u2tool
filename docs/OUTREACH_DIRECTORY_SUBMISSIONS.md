@@ -99,6 +99,7 @@
 | IndexNow 提交 | ✅ | 2159 URL POST api.indexnow.org → HTTP 200（Bing 收录加速，key 已验证：u2tool2026indexnowkey） |
 | sitemap ping | ⚠️ 已废弃 | Google/Bing 的 ping 端点已下线（404/410）；现代靠 sitemap 自动发现 + IndexNow |
 | awesome-free-tools PR | ✅ | github.com/mathewlewallen/awesome-free-tools/pull/131（Design 分类） |
+| 主仓库全部开源 | ✅ | github.com/asiawright1122-boop/u2tool（PUBLIC，MIT，570 工具 + 10 语言 + SEO 基建全公开，CI 部署正常） |
 | 自建开源仓库 ×2 | ✅ | github.com/asiawright1122-boop/u2tool-csv-vcard + u2tool-ical-parser（均 public/MIT/Pages 200/topics） |
 
 ## 📌 只能人工的部分（无法自动化）
