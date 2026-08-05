@@ -34,22 +34,22 @@
 ## 目录提交（按优先级）
 
 ### A 级：高权重、接受工具站收录（本周）
-| 站点 | URL | 类型 | 备注 |
-|---|---|---|---|
-| AlternativeTo | alternativeto.net | 产品目录 | 提交 U2Tool 为「工具集」产品，可关联同类 |
-| Toolify.ai | toolify.ai | AI 工具目录 | 提交 AI 工具子集（ai-token-calculator 等） |
-| There's An AI For That | theresanaiforthat.com | AI 目录 | 同上 |
-| Futurepedia | futurepedia.io | AI 目录 | 同上 |
-| Free-for.dev (GitHub) | github.com/ripienaar/free-for-dev | 免费资源列表 | PR 提交（需遵守仓库格式） |
-| Awesome Selfhosted | github.com/awesome-selfhosted | 列表 | 仅当开源部分工具后 |
-| SaaSHub | saashub.com | SaaS 目录 | 免费工具也可收录 |
-| Slant | slant.co | 推荐社区 | 「最好的在线工具」类目回答 |
+| 站点 | URL | 提交入口 | 账号 | 备注 |
+|---|---|---|---|---|
+| AlternativeTo | alternativeto.net | 登录后右上角 Add product | 邮箱注册 | 提交 U2Tool 为「工具集」，可关联同类工具 |
+| Toolify.ai | toolify.ai | toolify.ai/submit | 邮箱/Google | AI 工具子集（ai-token-calculator 等）；403 为反爬，浏览器打开即可 |
+| There's An AI For That | theresanaiforthat.com | theresanaiforthat.com/submit-tool/ | 邮箱 | 同上；403 为反爬 |
+| Futurepedia | futurepedia.io | futurepedia.io/submit-tool（已验证 200） | 邮箱 | 同上 |
+| Free-for.dev (GitHub) | github.com/ripienaar/free-for-dev | ❌ 已排除 | — | CONTRIBUTING 明确不收 toolbox/转换器/计算器类，提交会被拒 |
+| Awesome Selfhosted | github.com/awesome-selfhosted | ❌ 已排除 | — | 仅收自托管软件，u2tool 是托管服务 |
+| SaaSHub | saashub.com | saashub.com/submit | 邮箱 | 免费工具可收录；403 为反爬 |
+| Slant | slant.co | 搜索工具类目 → 添加推荐 | 邮箱 | 在「best online tools」类目回答中推荐 |
 
 ### B 级：开发者/产品社区（1-2 周）
 | 站点 | URL | 类型 | 备注 |
 |---|---|---|---|
-| Product Hunt | producthunt.com | 产品发布 | 精选一个工具或 U2Tool 本体，配演示图 |
-| BetaList | betalist.com | 产品发布 | 同上 |
+| Product Hunt | producthunt.com | producthunt.com/posts/new | GitHub 登录 | 精选一个工具（chart 生成器）或 U2Tool 本体，配演示图；开源后更易过审 |
+| BetaList | betalist.com | betalist.com/submit（已验证 200） | 邮箱 | 同上 |
 | Hacker News | news.ycombinator.com | 社区 | Show HN：开源部分工具 + 说明 |
 | Indie Hackers | indiehackers.com | 社区 | 产品进展帖 |
 | dev.to | dev.to | 开发者博客 | 写「我用 Astro 做了 570 个工具」类技术文 |
@@ -74,9 +74,15 @@
 4. **锚文本**：用自然锚文本（「free online tools」「U2Tool」），避免全用关键词锚文本。
 5. **不要购买外链**：PBN/付费目录会给新站带来风险，远超收益。
 
+## 提交顺序建议（先做高价值）
+
+1. **本周**：AlternativeTo → Toolify.ai → Futurepedia → There's An AI For That（A 级产品目录，证据链完整：开源主仓 + 2 工具仓 + 732 内容 URL）
+2. **下周**：SaaSHub → Slant → BetaList → Product Hunt（社区/发布类，配开源仓库链接）
+3. **穿插**：中文目录（优工具导航等）+ es/de/ru/ja 本地目录
+
 ## 待办记录（提交后勾选）
 
-- [ ] AlternativeTo
+- [ ] AlternativeTo（Add product）
 - [ ] Toolify.ai
 - [ ] TAAFT / Futurepedia
 - [ ] Free-for-dev PR
