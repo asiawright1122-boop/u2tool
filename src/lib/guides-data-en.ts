@@ -500,6 +500,58 @@ export const guidesEn: Guide[] = [
       "title-capitalization-tool",
       "word-counter"
     ]
+  },
+  {
+    "slug": "sql-index-basics-when-to-add-an-index",
+    "title": "SQL index basics: when to add an index",
+    "description": "Database indexes speed up queries but cost writes. When they help, when they hurt, and how to check a query plan before adding one.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "What an index does",
+        "paragraphs": [
+          "An index is a sorted copy of one or more columns that lets the database find rows without scanning the whole table. Lookups on indexed columns drop from a full scan to a few page reads — the difference between milliseconds and seconds on large tables."
+        ]
+      },
+      {
+        "title": "When an index pays off",
+        "paragraphs": [
+          "Index columns you filter on frequently (WHERE), join on, or order by. The classic wins are primary keys, foreign keys, and columns in hot queries. A query that runs once a day on 100 rows needs no index; one that runs every request on millions of rows does."
+        ]
+      },
+      {
+        "title": "When it hurts",
+        "paragraphs": [
+          "Every index slows INSERT, UPDATE and DELETE because the index must be kept in sync, and it consumes disk and memory. Indexes on low-selectivity columns (yes/no flags) often do not help. Measure: explain the query, look for full scans, and index only what the plan shows is slow."
+        ]
+      },
+      {
+        "title": "Check before you add",
+        "paragraphs": [
+          "The SQL query optimizer on U2Tool parses EXPLAIN output and highlights full scans and missing indexes in your browser. Paste the plan, see which step dominates, and add an index only where it changes the plan."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many indexes is too many?",
+        "answer": "There is no fixed number. The rule is to index hot query paths and drop unused ones; check each index with your workload, not with a checklist."
+      },
+      {
+        "question": "Do indexes help writes?",
+        "answer": "No, they make writes slower. That is why you index read-heavy paths and avoid indexing columns you barely filter on."
+      },
+      {
+        "question": "Can an index make a query slower?",
+        "answer": "Rarely, but a poorly chosen index can make the planner pick a worse plan. Always verify with EXPLAIN after adding one."
+      }
+    ],
+    "relatedTools": [
+      "sql-query-optimizer",
+      "compound-interest-calculator",
+      "excel-viewer"
+    ]
   }
 
 ];

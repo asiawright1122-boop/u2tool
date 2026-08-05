@@ -605,6 +605,58 @@ export const guidesEs: Guide[] = [
       "linkedin-headline-generator",
       "grammar-checker"
     ]
+  },
+  {
+    "slug": "como-calcular-el-precio-por-unidad",
+    "title": "Cómo calcular el precio por unidad",
+    "description": "Compara ofertas por precio por unidad: la fórmula, qué incluir y una calculadora gratis en el navegador para no dejarte engañar.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Por qué comparar por unidad",
+        "paragraphs": [
+          "Dos envases del mismo producto casi nunca cuestan lo mismo por litro o por kilo. El precio por unidad divide el precio entre la cantidad y permite comparar ofertas sin hacer cuentas mentales en el pasillo."
+        ]
+      },
+      {
+        "title": "La fórmula",
+        "paragraphs": [
+          "Precio por unidad = precio total ÷ cantidad. La cantidad es el volumen, peso o número de piezas que indica el envase. Compara siempre con la misma unidad: litros con litros, kilos con kilos."
+        ]
+      },
+      {
+        "title": "Qué vigilar",
+        "paragraphs": [
+          "Algunos envases usan unidades engañosas (gramos frente a kilogramos, piezas frente a docenas). Convierte todo a la misma unidad antes de comparar, y recuerda que el precio por unidad no incluye calidad ni desperdicio."
+        ]
+      },
+      {
+        "title": "Calcula gratis",
+        "paragraphs": [
+          "La calculadora de precio por unidad de U2Tool hace el cálculo en el navegador: introduce precio y cantidad, y obtén el precio por unidad al instante. También sirve para comparar dos ofertas lado a lado."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Qué es mejor, litro o kilo como unidad?",
+        "answer": "El que corresponda al producto: líquidos en litros, sólidos en kilos. Lo importante es usar la misma unidad en las dos ofertas."
+      },
+      {
+        "question": "Cuenta el descuento en el precio por unidad?",
+        "answer": "Sí: usa el precio final con descuento dividido entre la cantidad para ver el precio real por unidad."
+      },
+      {
+        "question": "La calculadora guarda mis datos?",
+        "answer": "No: todo se calcula en tu navegador y los números no salen de tu dispositivo."
+      }
+    ],
+    "relatedTools": [
+      "unit-price-calculator",
+      "excel-viewer",
+      "grammar-checker"
+    ]
   }
 
 ];
