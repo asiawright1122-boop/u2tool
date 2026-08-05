@@ -87,3 +87,27 @@
 - [ ] Reddit（2 个社区）
 - [ ] GitHub 开源（建议：chart 生成器或 AI 工具相关仓库）
 - [ ] 中文导航（2-3 站）
+
+---
+
+# 自动化部分（2026-08-05 已完成）
+
+## ✅ 已自动完成
+
+| 项目 | 状态 | 说明 |
+|---|---|---|
+| IndexNow 提交 | ✅ | 2159 URL POST api.indexnow.org → HTTP 200（Bing 收录加速，key 已验证：u2tool2026indexnowkey） |
+| sitemap ping | ⚠️ 已废弃 | Google/Bing 的 ping 端点已下线（404/410）；现代靠 sitemap 自动发现 + IndexNow |
+| awesome-free-tools PR | ✅ | github.com/mathewlewallen/awesome-free-tools/pull/131（Design 分类） |
+| 自建开源仓库 | ✅ | github.com/asiawright1122-boop/u2tool-csv-vcard（public，MIT，Pages demo 200，5 topics） |
+
+## 📌 只能人工的部分（无法自动化）
+
+目录站表单提交（Toolfolio、Futurepedia 等）、社区发帖（HN/Reddit/PH）、媒体联系——
+都需要账号注册/人工审核/社区规则，自动发帖会触发 spam 惩罚。执行清单见本文件上文。
+
+## 外链仓库后续
+
+- 可继续抽更多单文件工具（chart 生成器、iCal 解析器等）建立仓库矩阵
+- 每个仓库 README 均回链 u2tool.com 对应工具页
+- 仓库可作为 E-E-A-T 证据用于所有目录提交
