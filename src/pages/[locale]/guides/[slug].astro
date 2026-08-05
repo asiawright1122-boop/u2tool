@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import StructuredData from '@/components/seo/StructuredData.astro';
 import Header from '@/components/layout/Header.svelte';
 import StaticSidebar from '@/components/layout/StaticSidebar.astro';
 import MobileBottomNav from '@/components/layout/MobileBottomNav.svelte';
@@ -7,6 +8,7 @@ import Footer from '@/components/layout/Footer.astro';
 import { getGuide } from '@/lib/guides';
 import { getToolBySlug, categories } from '@/config/tools';
 import { filterIndexableTools } from '@/lib/index-suppression';
+import { getPublicSiteUrl } from '@/lib/public-env';
 import { isValidLocale, type Locale } from '@/lib/i18n';
 import { loadBaseMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
@@ -53,6 +55,47 @@ const backCopy: Record<string, string> = {
 };
 const backLabel = backCopy[locale] ?? 'Back to guides';
 const toolLabel = 'Herramientas relacionadas';
+
+// ---------------------------------------------------------------------------
+// Structured data: FAQPage + BreadcrumbList
+// ---------------------------------------------------------------------------
+const BASE_URL = getPublicSiteUrl();
+const guideUrl = `${BASE_URL}/${locale}/guides/${guide.slug}/`;
+
+const faqPageData = guide.faqs.length > 0
+  ? {
+      mainEntity: guide.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    }
+  : null;
+
+const breadcrumbData = {
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `${BASE_URL}/${locale}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: guideLabel,
+      item: `${BASE_URL}/${locale}/guides/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: guide.title,
+    },
+  ],
+};
 ---
 
 <BaseLayout
@@ -61,6 +104,8 @@ const toolLabel = 'Herramientas relacionadas';
   locale={locale}
   canonicalPath={`/guides/${guide.slug}`}
 >
+  {faqPageData && <StructuredData type="FAQPage" data={faqPageData} slot="head" />}
+  <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
   <Header client:load locale={locale} translations={headerTranslations} />
   <div class="min-h-screen bg-slate-50 dark:bg-slate-950">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
