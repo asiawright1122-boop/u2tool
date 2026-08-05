@@ -99,7 +99,7 @@
 | IndexNow 提交 | ✅ | 2159 URL POST api.indexnow.org → HTTP 200（Bing 收录加速，key 已验证：u2tool2026indexnowkey） |
 | sitemap ping | ⚠️ 已废弃 | Google/Bing 的 ping 端点已下线（404/410）；现代靠 sitemap 自动发现 + IndexNow |
 | awesome-free-tools PR | ✅ | github.com/mathewlewallen/awesome-free-tools/pull/131（Design 分类） |
-| 自建开源仓库 | ✅ | github.com/asiawright1122-boop/u2tool-csv-vcard（public，MIT，Pages demo 200，5 topics） |
+| 自建开源仓库 ×2 | ✅ | github.com/asiawright1122-boop/u2tool-csv-vcard + u2tool-ical-parser（均 public/MIT/Pages 200/topics） |
 
 ## 📌 只能人工的部分（无法自动化）
 
@@ -108,6 +108,6 @@
 
 ## 外链仓库后续
 
-- 可继续抽更多单文件工具（chart 生成器、iCal 解析器等）建立仓库矩阵
+- 仓库矩阵已有 2 个：csv-vcard（联系人）+ ical-parser（日历）；可继续抽 chart 生成器、base64 工具等
 - 每个仓库 README 均回链 u2tool.com 对应工具页
 - 仓库可作为 E-E-A-T 证据用于所有目录提交
