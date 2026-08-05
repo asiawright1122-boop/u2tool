@@ -292,6 +292,110 @@ export const guidesEn: Guide[] = [
       "bar-chart-generator",
       "calendar-heatmap-generator"
     ]
+  },
+  {
+    "slug": "how-to-open-ical-files",
+    "title": "How to open iCal files",
+    "description": "iCal (.ics) files hold calendar events. How to open one on iPhone, Google Calendar and Outlook, plus a free browser tool to read the raw data.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "What an iCal file is",
+        "paragraphs": [
+          "An .ics file stores calendar data in the iCalendar format: events, dates, times and attendees. It is how calendars export and import events — from a booking confirmation to a shared team calendar."
+        ]
+      },
+      {
+        "title": "Open it on your phone",
+        "paragraphs": [
+          "iPhone: open the .ics file and tap Add All to create the events in Calendar. Android: opening the file prompts you to import into Google Calendar or your default calendar app."
+        ]
+      },
+      {
+        "title": "Open it on the web",
+        "paragraphs": [
+          "Google Calendar: click the gear icon, Import & export, then Upload to import the file into a chosen calendar. Outlook on the web: Calendar → Add calendar → Upload from file."
+        ]
+      },
+      {
+        "title": "Read the raw data",
+        "paragraphs": [
+          "If you need to inspect what is actually inside — event titles, times, repeated rules — the iCal parser on U2Tool renders the events as a readable list in your browser, with no upload to a server."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Why will my calendar not import the file?",
+        "answer": "The file may be malformed or use an unsupported extension. Check that it starts with BEGIN:VCALENDAR and ends with END:VCALENDAR."
+      },
+      {
+        "question": "Can I convert iCal to another format?",
+        "answer": "Most calendars import .ics directly; for contacts you would convert CSV to vCard instead."
+      },
+      {
+        "question": "Is my data uploaded?",
+        "answer": "No, the parser processes the file entirely in your browser."
+      }
+    ],
+    "relatedTools": [
+      "ical-parser",
+      "csv-to-vcard-converter",
+      "excel-viewer"
+    ]
+  },
+  {
+    "slug": "csv-to-vcard-for-your-contacts",
+    "title": "CSV to vCard: move your contacts between apps",
+    "description": "Convert a CSV contact list to vCard (.vcf) so you can import it into any phone, Gmail or Outlook. Free browser conversion, no upload.",
+    "eyebrow": "Guide",
+    "updated": "Updated August 4, 2026",
+    "sections": [
+      {
+        "title": "Why convert CSV to vCard",
+        "paragraphs": [
+          "CSV files are great for editing contact lists in a spreadsheet, but phones and email apps import contacts as vCards. Converting turns your editable list into a portable .vcf that any device understands."
+        ]
+      },
+      {
+        "title": "What your CSV needs",
+        "paragraphs": [
+          "Column headers for first name, last name, phone and email are enough. The converter maps each row to a card; empty cells are simply skipped, so you do not need to clean every field."
+        ]
+      },
+      {
+        "title": "Convert for free in the browser",
+        "paragraphs": [
+          "The CSV to vCard converter on U2Tool runs entirely in your browser: paste the CSV, check the column mapping, and download a single .vcf containing every contact. Nothing is uploaded."
+        ]
+      },
+      {
+        "title": "Import on any device",
+        "paragraphs": [
+          "Android and iPhone: open the .vcf and confirm the import into contacts. Gmail: Contacts → Import. Outlook: Contacts → Manage → Import from file. The same file works everywhere."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can one file hold all my contacts?",
+        "answer": "Yes, each CSV row becomes a card and the result is a single .vcf with all of them."
+      },
+      {
+        "question": "Do I need exact columns?",
+        "answer": "Only name plus phone or email. Extra columns such as company or address are used when present."
+      },
+      {
+        "question": "Is this private?",
+        "answer": "Yes, all processing happens locally in your browser; your contacts never leave your device."
+      }
+    ],
+    "relatedTools": [
+      "csv-to-vcard-converter",
+      "ical-parser",
+      "excel-viewer"
+    ]
   }
 
 ];

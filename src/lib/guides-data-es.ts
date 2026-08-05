@@ -447,6 +447,59 @@ export const guidesEs: Guide[] = [
       "tree-chart-generator",
       "line-chart-generator"
     ]
+  },
+  {
+    "slug": "como-convertir-csv-a-vcard",
+    "title": "Cómo convertir CSV a vCard",
+    "description": "Convierte una lista de contactos en CSV a tarjetas vCard (VCF) para importarlas en el móvil u Outlook. Pasos y herramientas gratis en el navegador.",
+    "eyebrow": "Guía práctica",
+    "updated": "Actualizado el 4 de agosto de 2026",
+    "sections": [
+      {
+        "title": "Qué es una vCard",
+        "paragraphs": [
+          "Una vCard (archivo .vcf) es el formato estándar para contactos: lo leen los móviles, Gmail, Outlook y las apps de agenda. Si tienes contactos en una hoja de cálculo o en un CSV, convertirlos a vCard permite importarlos todos de una vez."
+        ]
+      },
+      {
+        "title": "Prepara tu CSV",
+        "paragraphs": [
+          "Asegúrate de que tu CSV tenga columnas claras: nombre, apellido, teléfono, correo. El conversor usa esas columnas para rellenar cada tarjeta; si una columna está vacía, el campo simplemente no se añade."
+        ]
+      },
+      {
+        "title": "Convierte gratis online",
+        "paragraphs": [
+          "El conversor CSV a vCard de U2Tool procesa el archivo en el navegador: pega el CSV, revisa el mapeo de columnas y descarga el archivo .vcf con todos los contactos.",
+          "Nada se sube a un servidor, y puedes generar una vCard única o una con todos los contactos."
+        ]
+      },
+      {
+        "title": "Importa en tu teléfono",
+        "paragraphs": [
+          "En Android: abre el archivo .vcf y elige la app de contactos. En iPhone: envíate el archivo y ábrelo para añadir los contactos. En Gmail: entra en Contactos, Importar, y selecciona el archivo."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Qué columnas necesita el CSV?",
+        "answer": "Basta con nombre y teléfono o correo. Columnas como apellido, empresa o dirección también se aprovechan si existen."
+      },
+      {
+        "question": "Puedo convertir varios contactos a la vez?",
+        "answer": "Sí: cada fila del CSV se convierte en una tarjeta, y el resultado es un solo archivo .vcf con todos."
+      },
+      {
+        "question": "Es seguro?",
+        "answer": "Sí: el procesamiento ocurre en tu navegador y los datos no salen de tu dispositivo."
+      }
+    ],
+    "relatedTools": [
+      "csv-to-vcard-converter",
+      "excel-viewer",
+      "json-to-excel"
+    ]
   }
 
 ];

@@ -337,6 +337,59 @@ export const guidesDe: Guide[] = [
       "sunburst-chart-generator",
       "calendar-heatmap-generator"
     ]
+  },
+  {
+    "slug": "csv-zu-vcard-konvertieren",
+    "title": "CSV zu vCard konvertieren",
+    "description": "Kontakte aus CSV in vCard-Dateien (VCF) umwandeln und ins Handy oder Outlook importieren. Kostenlos und direkt im Browser.",
+    "eyebrow": "Ratgeber",
+    "updated": "Aktualisiert am 4. August 2026",
+    "sections": [
+      {
+        "title": "Was ist eine vCard",
+        "paragraphs": [
+          "Eine vCard (.vcf) ist das Standardformat für Kontakte: Smartphones, Gmail, Outlook und Adressbuch-Apps lesen es. Wenn Ihre Kontakte in einer Tabelle oder CSV liegen, macht die Konvertierung in vCard den Import in einem Schritt möglich."
+        ]
+      },
+      {
+        "title": "CSV vorbereiten",
+        "paragraphs": [
+          "Stellen Sie sicher, dass Ihr CSV klare Spalten hat: Vorname, Nachname, Telefon, E-Mail. Der Konverter übernimmt diese Spalten in jede Karte; leere Felder werden einfach weggelassen."
+        ]
+      },
+      {
+        "title": "Kostenlos online konvertieren",
+        "paragraphs": [
+          "Der CSV-zu-vCard-Konverter von U2Tool arbeitet im Browser: CSV einfügen, Spaltenzuordnung prüfen, .vcf mit allen Kontakten herunterladen.",
+          "Es wird nichts hochgeladen; Sie erhalten entweder eine einzelne oder eine Sammel-vCard."
+        ]
+      },
+      {
+        "title": "Auf dem Handy importieren",
+        "paragraphs": [
+          "Android: .vcf-Datei öffnen und Kontakte-App wählen. iPhone: Datei an sich selbst senden und öffnen. Gmail: unter Kontakte auf Importieren klicken und die Datei auswählen."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Welche Spalten braucht die CSV?",
+        "answer": "Name plus Telefon oder E-Mail reichen. Nachname, Firma und Adresse werden ebenfalls übernommen, falls vorhanden."
+      },
+      {
+        "question": "Kann ich viele Kontakte auf einmal umwandeln?",
+        "answer": "Ja, jede Zeile der CSV wird zu einer Karte; das Ergebnis ist eine Sammeldatei .vcf."
+      },
+      {
+        "question": "Ist die Konvertierung sicher?",
+        "answer": "Ja, alles läuft in Ihrem Browser; die Daten verlassen das Gerät nicht."
+      }
+    ],
+    "relatedTools": [
+      "csv-to-vcard-converter",
+      "excel-viewer",
+      "word-to-txt"
+    ]
   }
 
 ];
