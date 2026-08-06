@@ -171,6 +171,13 @@
 /:locale/about /:locale/about/ 301
 /:locale/compare /:locale/compare/ 301
 /:locale/compare/:slug /:locale/compare/:slug/ 301
+
+# Deprecated localized ranking pages. These must precede /:locale/tools/:tool
+# below: that rule matches "ranking" as a tool slug and only appends a trailing
+# slash, which costs an extra hop before the Worker resolves the real target.
+/:locale/tools/ranking /:locale/tools/ 301
+/:locale/tools/ranking/ /:locale/tools/ 301
+
 /:locale/tools/:tool /:locale/tools/:tool/ 301
 
 # Legacy category URLs that were historically exposed under /tools/category/.
@@ -181,6 +188,11 @@
 /:locale/tools/category/:category/ /:locale/categories/:category/ 301
 
 # Deprecated ranking pages no longer exist as standalone routes.
+# The bare forms must be listed explicitly: the /*  splat requires a segment
+# after "ranking/", so without these two lines /tools/ranking falls through to
+# the /tools/:tool catch-all below and needs a second hop.
+/tools/ranking /en/tools/ 301
+/tools/ranking/ /en/tools/ 301
 /tools/ranking/* /en/tools/ 301
 
 # One-segment legacy tool URLs retain direct canonical redirects without

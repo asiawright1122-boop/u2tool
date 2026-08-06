@@ -2,6 +2,7 @@ import { categories, getPopularTools, tools, type Tool } from '@/config/tools';
 import { aiToolTopicSlugs, getAiToolTopicPath } from '@/lib/ai-tool-topics';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
 import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
+import { isIndexSuppressed } from '@/lib/index-suppression';
 import { locales, type Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { withPageUrlTrailingSlash } from '@/lib/seo';
@@ -184,6 +185,13 @@ export function buildPriorityRoutePaths(locale: Locale): string[] {
   }
 
   for (const tool of getPriorityTools()) {
+    // A suppressed page renders robots=noindex. Submitting it to IndexNow asks
+    // the engine to index a page that then refuses indexing, which wastes the
+    // per-run quota. Priority status is a crawl-order hint, not an
+    // indexability override.
+    if (isIndexSuppressed(locale, tool.slug)) {
+      continue;
+    }
     paths.add(`/${locale}/tools/${tool.slug}`);
   }
 

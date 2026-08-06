@@ -13,6 +13,7 @@ import {
   withBrand,
 } from './seo';
 import { buildPriorityIndexNowUrls } from './seo-discovery';
+import { isIndexSuppressed } from './index-suppression';
 
 describe('seo helpers', () => {
   it('normalizes stale tool counts in the shared site description', () => {
@@ -243,7 +244,9 @@ describe('seo helpers', () => {
     expect(urls).toContain('https://www.u2tool.com/en/tools/ascii-table/');
     expect(urls).toContain('https://www.u2tool.com/en/tools/iban-validator/');
     expect(urls).toContain('https://www.u2tool.com/en/tools/compound-interest-calculator/');
-    expect(urls).toContain('https://www.u2tool.com/es/tools/document-word-counter/');
+    // es/document-word-counter was suppressed by the 2026-08-04 index-hygiene
+    // pass and now renders noindex, so it is no longer submitted.
+    expect(urls).not.toContain('https://www.u2tool.com/es/tools/document-word-counter/');
   });
 
   it('keeps crawled-not-indexed content-refresh pages in priority discovery', () => {
@@ -264,19 +267,42 @@ describe('seo helpers', () => {
     expect(urls).toContain('https://www.u2tool.com/en/tools/tile-calculator/');
   });
 
-  it('keeps AI toolkit routes in priority discovery', () => {
+  it('keeps AI topic hub routes in priority discovery', () => {
     const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
       selectedLocales: ['en', 'zh'],
     });
 
-    expect(urls).toContain('https://www.u2tool.com/en/tools/ai-token-calculator/');
-    expect(urls).toContain('https://www.u2tool.com/en/tools/ai-prompt-template-generator/');
-    expect(urls).toContain('https://www.u2tool.com/en/tools/rag-chunk-size-calculator/');
+    // The AI hub pages are not tool detail pages, so index suppression
+    // (which is tool-scoped) never removes them.
     expect(urls).toContain('https://www.u2tool.com/en/ai/prompt-tools/');
     expect(urls).toContain('https://www.u2tool.com/en/ai/rag-tools/');
     expect(urls).toContain('https://www.u2tool.com/zh/ai/ai-crawler-tools/');
-    expect(urls).toContain('https://www.u2tool.com/zh/tools/ai-robots-txt-generator/');
-    expect(urls).toContain('https://www.u2tool.com/zh/tools/llms-txt-generator/');
+  });
+
+  it('drops suppressed AI tool pages from priority discovery', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
+      selectedLocales: ['en', 'zh'],
+    });
+
+    // These were prioritized on 2026-07-07, then suppressed by the 2026-08-04
+    // index-hygiene pass. They render noindex, so submitting them to IndexNow
+    // would spend quota asking an engine to index a page that refuses.
+    // To resubmit them, un-suppress them at the source and regenerate.
+    expect(urls).not.toContain('https://www.u2tool.com/en/tools/ai-token-calculator/');
+    expect(urls).not.toContain('https://www.u2tool.com/en/tools/ai-prompt-template-generator/');
+    expect(urls).not.toContain('https://www.u2tool.com/en/tools/rag-chunk-size-calculator/');
+    expect(urls).not.toContain('https://www.u2tool.com/zh/tools/ai-robots-txt-generator/');
+    expect(urls).not.toContain('https://www.u2tool.com/zh/tools/llms-txt-generator/');
+  });
+
+  it('never submits a suppressed tool URL to IndexNow', () => {
+    const urls = buildPriorityIndexNowUrls('https://www.u2tool.com');
+    const suppressed = urls.filter((url) => {
+      const match = /u2tool\.com\/([a-z]{2})\/tools\/([^/]+)\//.exec(url);
+      return match ? isIndexSuppressed(match[1], match[2]) : false;
+    });
+
+    expect(suppressed).toEqual([]);
   });
 });
 

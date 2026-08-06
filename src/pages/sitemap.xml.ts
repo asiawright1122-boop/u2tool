@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
 import {
+  buildIndexableToolsSitemapEntries,
   buildPagesSitemapEntries,
   buildPrioritySitemapEntries,
-  buildToolsSitemapEntries,
 } from '@/lib/sitemap-entry-builders';
 import {
   buildSitemapIndexEntry,
@@ -15,7 +15,9 @@ export const prerender = true;
 export const GET: APIRoute = () => {
   const priorityEntries = buildPrioritySitemapEntries();
   const pageEntries = buildPagesSitemapEntries();
-  const toolEntries = buildToolsSitemapEntries();
+  // Must match what sitemap-tools.xml actually publishes (the indexable
+  // cohort), otherwise the index advertises a lastmod the child does not carry.
+  const toolEntries = buildIndexableToolsSitemapEntries();
 
   return generateSitemapIndexResponse([
     buildSitemapIndexEntry('/sitemap-priority.xml', newestEntryLastmod(priorityEntries)),

@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
 import {
   buildIndexableToolsSitemapEntries,
   buildPagesSitemapEntries,
@@ -42,5 +43,24 @@ describe('sitemap entry builders', () => {
 
   it('derives the priority child date from the represented entries', () => {
     expect(newestEntryLastmod(buildPrioritySitemapEntries())).toBe('2026-07-08');
+  });
+
+  it('never publishes a suppressed tool URL in any sitemap child', () => {
+    // A suppressed page renders robots=noindex; listing it in a sitemap sends
+    // the crawler a directly contradictory signal.
+    const published = [...buildPrioritySitemapEntries(), ...buildIndexableToolsSitemapEntries()];
+
+    const suppressed = published.filter((entry) => {
+      const match = /^\/([a-z]{2})\/tools\/([^/]+)\/$/.exec(entry.path);
+      return match ? INDEX_SUPPRESSION[`${match[1]}/${match[2]}`] === true : false;
+    });
+
+    expect(suppressed.map((entry) => entry.path)).toEqual([]);
+  });
+
+  it('still publishes priority tools that are indexable', () => {
+    const entries = buildPrioritySitemapEntries();
+    expect(entries.some((entry) => entry.path === '/en/tools/json-formatter/')).toBe(true);
+    expect(entries.some((entry) => entry.path === '/en/tools/base64/')).toBe(false);
   });
 });
