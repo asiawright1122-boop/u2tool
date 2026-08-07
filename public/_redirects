@@ -165,18 +165,44 @@
 /zh/compare/url-parser/whois-lookup /zh/tools/url-parser/ 301
 /zh/compare/xml-to-json/timestamp-converter /zh/tools/xml-to-json/ 301
 
+# Deprecated ranking pages no longer exist as standalone routes. They must be
+# listed here, above the first placeholder rule, and spelled out per locale.
+#
+# Cloudflare only honours a rule over a broader competing one when the rule is
+# static AND appears before every rule containing a placeholder or splat. Being
+# merely adjacent to the rule it needs to beat is not enough: an earlier attempt
+# placed `/tools/ranking` directly above `/tools/:tool` and it never fired in
+# production, because that position is already past the first placeholder rule
+# below. A `/:locale/...` form cannot win either, hence the explicit locales.
+/tools/ranking /en/tools/ 301
+/tools/ranking/ /en/tools/ 301
+/en/tools/ranking /en/tools/ 301
+/en/tools/ranking/ /en/tools/ 301
+/zh/tools/ranking /zh/tools/ 301
+/zh/tools/ranking/ /zh/tools/ 301
+/ja/tools/ranking /ja/tools/ 301
+/ja/tools/ranking/ /ja/tools/ 301
+/ko/tools/ranking /ko/tools/ 301
+/ko/tools/ranking/ /ko/tools/ 301
+/es/tools/ranking /es/tools/ 301
+/es/tools/ranking/ /es/tools/ 301
+/pt/tools/ranking /pt/tools/ 301
+/pt/tools/ranking/ /pt/tools/ 301
+/fr/tools/ranking /fr/tools/ 301
+/fr/tools/ranking/ /fr/tools/ 301
+/de/tools/ranking /de/tools/ 301
+/de/tools/ranking/ /de/tools/ 301
+/ru/tools/ranking /ru/tools/ 301
+/ru/tools/ranking/ /ru/tools/ 301
+/ar/tools/ranking /ar/tools/ 301
+/ar/tools/ranking/ /ar/tools/ 301
+
 /:locale/privacy /:locale/privacy/ 301
 /:locale/terms /:locale/terms/ 301
 /:locale/contact /:locale/contact/ 301
 /:locale/about /:locale/about/ 301
 /:locale/compare /:locale/compare/ 301
 /:locale/compare/:slug /:locale/compare/:slug/ 301
-
-# Deprecated localized ranking pages. These must precede /:locale/tools/:tool
-# below: that rule matches "ranking" as a tool slug and only appends a trailing
-# slash, which costs an extra hop before the Worker resolves the real target.
-/:locale/tools/ranking /:locale/tools/ 301
-/:locale/tools/ranking/ /:locale/tools/ 301
 
 /:locale/tools/:tool /:locale/tools/:tool/ 301
 
@@ -187,12 +213,8 @@
 /:locale/tools/category/:category /:locale/categories/:category/ 301
 /:locale/tools/category/:category/ /:locale/categories/:category/ 301
 
-# Deprecated ranking pages no longer exist as standalone routes.
-# The bare forms must be listed explicitly: the /*  splat requires a segment
-# after "ranking/", so without these two lines /tools/ranking falls through to
-# the /tools/:tool catch-all below and needs a second hop.
-/tools/ranking /en/tools/ 301
-/tools/ranking/ /en/tools/ 301
+# Sub-paths under a deprecated ranking page. The bare /tools/ranking forms are
+# declared in the static block above, which is the only position where they win.
 /tools/ranking/* /en/tools/ 301
 
 # One-segment legacy tool URLs retain direct canonical redirects without
