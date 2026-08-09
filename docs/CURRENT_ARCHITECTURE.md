@@ -32,6 +32,24 @@ It handles legacy build asset requests before passing all other requests to Astr
 
 It also normalizes `/api/ai-discovery/events` and `/api/ai-discovery/events/` at the Worker entrypoint and delegates those requests to the shared AI Discovery telemetry handler. This avoids API requests being affected by page-level trailing-slash and canonical redirect behavior.
 
+## Dormant Cloudflare Pages project
+
+A Cloudflare Pages project named `u2tool` still exists in the account and is bound to `u2tool.com` and `www.u2tool.com`. It is fully shadowed by the Worker route and serves no production traffic. Verified 2026-08-08:
+
+| Property | Value |
+| --- | --- |
+| Bound domains | `u2tool.pages.dev`, `u2tool.com`, `www.u2tool.com` |
+| Deploy trigger | Git integration, not any file in `.github/workflows/` |
+| `pages_build_output_dir` | `dist` |
+| Pages response | 404 at `/` and `/en/tools/` |
+| Actual production server | Worker |
+
+Two consequences. Every push builds twice, since the Git integration fires independently of `deploy-cloudflare.yml`. And the project is broken rather than merely idle: `pages_build_output_dir` is `dist`, but Astro `output: 'server'` emits `dist/client` and `dist/server`, so the directory Pages serves contains no `index.html` and no `_redirects`.
+
+To confirm which side serves a request, check the `x-u2tool-html-cache` response header. `src/middleware.ts` sets it; Pages cannot produce it.
+
+The bindings are deliberately left in place. Unbinding a Pages custom domain may remove the DNS record that the binding created, and a proxied record hides its CNAME chain behind the zone's anycast IPs, so `u2tool.com` and `www.u2tool.com` cannot be classified from public DNS alone. If those records are Pages-managed, unbinding takes the site offline. Read-only inspection cannot rule that out, so any cleanup must start by identifying each record's origin in the dashboard. Deleting the project carries the same unresolved risk.
+
 ## Middleware responsibilities
 
 `src/middleware.ts` is the canonical request-normalization layer.

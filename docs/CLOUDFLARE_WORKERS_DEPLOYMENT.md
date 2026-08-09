@@ -46,13 +46,15 @@
 
 ## Cloudflare 侧需要确认的项目
 
-到 Cloudflare Dashboard 里确认以下几点：
+这一节原本列的三项待确认，已于 2026-08-08 查清，结论如下。
 
-1. 这个域名现在是不是仍然挂在旧的 Pages 项目上
-2. `u2tool.com` / `www.u2tool.com` 有没有绑定到 Worker `u2tool`
-3. Worker 是否位于正确的账号下
+1. **旧 Pages 项目仍然存在，且仍绑着这两个域名**，但它被 Worker route 完整遮蔽，不服务任何生产流量。它自身是坏的（全 404），详见 `CURRENT_ARCHITECTURE.md` 的「Dormant Cloudflare Pages project」一节。
+2. `u2tool.com` / `www.u2tool.com` **确认由 Worker 服务**：`www` 返回 200 且带 `x-u2tool-html-cache` 响应头，apex 301 到 `www`。
+3. Worker 位于账号 `7043fe8c0352dc1df818f5fe4d60f2ad`（`asiawright1122@gmail.com`），与部署所用凭据一致。
 
-如果域名还指向旧 Pages 项目，那么即使 GitHub Action 成功执行了 `wrangler deploy`，公网访问的也还是旧页面。
+所以下面这个坑**当前不成立**——公网访问到的是 Worker 的新站，不是旧 Pages 页面。判断服务方的方法：看响应头有没有 `x-u2tool-html-cache`，那是 `src/middleware.ts` 设的，Pages 产不出来。
+
+保留这一节是因为 Pages 绑定尚未解除，一旦 Worker route 失效，Pages 会静默接管这两个域名并对整站返回 404。
 
 ## 推荐上线方式
 
