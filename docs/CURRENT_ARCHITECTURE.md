@@ -48,7 +48,13 @@ Two consequences. Every push builds twice, since the Git integration fires indep
 
 To confirm which side serves a request, check the `x-u2tool-html-cache` response header. `src/middleware.ts` sets it; Pages cannot produce it.
 
-The bindings are deliberately left in place. Unbinding a Pages custom domain may remove the DNS record that the binding created, and a proxied record hides its CNAME chain behind the zone's anycast IPs, so `u2tool.com` and `www.u2tool.com` cannot be classified from public DNS alone. If those records are Pages-managed, unbinding takes the site offline. Read-only inspection cannot rule that out, so any cleanup must start by identifying each record's origin in the dashboard. Deleting the project carries the same unresolved risk.
+The bindings must stay in place. Confirmed in the dashboard on 2026-08-13: both `u2tool.com` and `www.u2tool.com` are `CNAME` records pointing at `u2tool.pages.dev`, proxied. These are the Pages custom-domain records, so they are the zone's only apex and `www` resolution. Unbinding either custom domain, or deleting the project, removes the record and takes the whole site offline. This is not a residual risk to investigate further; it is the resolved answer.
+
+The proxied flag is also load-bearing in both directions. A Worker route only runs on a proxied record, so the orange cloud is what lets the Worker shadow Pages at all, and apex resolution depends on Cloudflare's CNAME flattening.
+
+If Worker routes are ever removed or a deploy fails, traffic falls through to Pages and every path returns 404 — a hard, immediately visible outage rather than a silent loss of the middleware's redirect and canonical logic.
+
+Decoupling would mean replacing each `CNAME` with a Worker-only placeholder record (for example `AAAA` to `100::`, proxied) *before* removing the Pages custom domain, so the hostname never lacks a record. That needs DNS write access and a short window where ordering mistakes are site-wide, so it is not worth doing while the current setup serves correctly.
 
 ## Middleware responsibilities
 

@@ -56,3 +56,32 @@ jobs:
 
       - name: Deploy Worker
         run: npx wrangler deploy
+
+      # A 200 alone is not enough: the dormant Pages project is bound to the same
+      # hostnames, so if the Worker routes stop matching, Pages answers instead.
+      # Only the Worker can set x-u2tool-html-cache (src/middleware.ts), so its
+      # presence — HIT, MISS or BYPASS alike — is what proves the Worker served us.
+      - name: Verify Worker serves production
+        run: |
+          # errexit is on by default in Actions; disable it so a failed curl retries
+          # instead of aborting the step.
+          set +e
+          set -u
+          url="https://www.u2tool.com/en/tools/"
+          attempts=5
+          for attempt in $(seq 1 "$attempts"); do
+            headers="$(curl -sS -m 15 -D - -o /dev/null "$url" 2>&1)"
+            # Not named `status`: that is a readonly variable in zsh, which breaks
+            # copy-pasting this loop into a local shell for debugging.
+            http_status="$(printf '%s\n' "$headers" | grep -i '^HTTP/' | tail -n 1 | awk '{print $2}')"
+            if [ "$http_status" = "200" ] && printf '%s\n' "$headers" | grep -qi '^x-u2tool-html-cache:'; then
+              echo "OK: $url returned 200 and was served by the Worker"
+              exit 0
+            fi
+            echo "Attempt $attempt/$attempts failed (status=${http_status:-no response})"
+            if [ "$attempt" -lt "$attempts" ]; then sleep 10; fi
+          done
+          echo "::error::Worker liveness check failed for $url"
+          echo "A 200 without x-u2tool-html-cache means the dormant Pages project is serving production."
+          echo "See the 'Dormant Cloudflare Pages project' section in docs/CURRENT_ARCHITECTURE.md"
+          exit 1
