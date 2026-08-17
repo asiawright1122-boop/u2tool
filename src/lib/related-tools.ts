@@ -11,14 +11,22 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   office: ['world-clock'],
 };
 
+export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
+  network: ['ip-lookup', 'ip-validator'],
+};
+
 export const crawledNotIndexedContentRefreshToolSlugs = Object.freeze(
   Object.values(crawledNotIndexedContentRefreshToolSlugsByCategory).flat()
 );
 
 function sortSameCategoryRecoveryTools(currentTool: Tool, candidates: Tool[]): Tool[] {
   const originalIndexBySlug = new Map(candidates.map((tool, index) => [tool.slug, index]));
+  const prioritySlugs = [
+    ...(organicRecoveryToolSlugsByCategory[currentTool.category] ?? []),
+    ...(crawledNotIndexedContentRefreshToolSlugsByCategory[currentTool.category] ?? []),
+  ];
   const recoveryRankBySlug = new Map(
-    (crawledNotIndexedContentRefreshToolSlugsByCategory[currentTool.category] ?? [])
+    prioritySlugs
       .filter((slug) => slug !== currentTool.slug)
       .map((slug, index): [string, number] => [slug, index])
   );

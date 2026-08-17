@@ -51,7 +51,11 @@ const recoveryRepresentativeToolSlugsByCategory: Partial<Record<ToolCategory, st
     ...(crawledNotIndexedContentRefreshToolSlugsByCategory.image ?? []),
   ],
   math: ['compound-interest-calculator', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.math ?? [])],
-  network: ['ip-lookup', ...(crawledNotIndexedContentRefreshToolSlugsByCategory.network ?? [])],
+  network: [
+    'ip-lookup',
+    'ip-validator',
+    ...(crawledNotIndexedContentRefreshToolSlugsByCategory.network ?? []),
+  ],
   office: [...(crawledNotIndexedContentRefreshToolSlugsByCategory.office ?? [])],
   text: ['grammar-checker', 'document-word-counter'],
 };

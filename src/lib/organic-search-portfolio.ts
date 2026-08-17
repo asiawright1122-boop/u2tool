@@ -27,6 +27,44 @@ export interface OrganicSearchProfile {
 
 export const organicSearchProfiles: readonly OrganicSearchProfile[] = [
   {
+    locale: 'ko',
+    slug: 'html-preview',
+    tier: 'P0',
+    status: 'active-recovery',
+    primaryIntent: '정적 HTML과 CSS를 확인하는 HTML 뷰어 온라인',
+    demandEvidence:
+      'The documented checkpoint records 3 clicks at position 7.33, with queries including html 뷰어 and html 실행.',
+    evidenceBlock:
+      'Live sandboxed HTML/CSS preview with an explicit no-JavaScript boundary and localized viewer examples.',
+    scores: {
+      demand: 25,
+      functionalCompleteness: 20,
+      uniqueEvidence: 14,
+      achievableCompetition: 10,
+      trustAndRisk: 9,
+      localization: 5,
+    },
+  },
+  {
+    locale: 'ru',
+    slug: 'ip-validator',
+    tier: 'P0',
+    status: 'active-recovery',
+    primaryIntent: 'Проверка формата одного IPv4 или IPv6 адреса',
+    demandEvidence:
+      'The recovery report records 169 page impressions, up 120, with growing Russian IP-check query variants.',
+    evidenceBlock:
+      'Local IPv4/IPv6 validation, address-family details, and a clear boundary from geolocation and CIDR analysis.',
+    scores: {
+      demand: 27,
+      functionalCompleteness: 25,
+      uniqueEvidence: 17,
+      achievableCompetition: 9,
+      trustAndRisk: 10,
+      localization: 5,
+    },
+  },
+  {
     locale: 'ru',
     slug: 'ip-lookup',
     tier: 'P0',
@@ -86,18 +124,18 @@ export const organicSearchProfiles: readonly OrganicSearchProfile[] = [
   {
     locale: 'ru',
     slug: 'grammar-checker',
-    tier: 'P0',
-    status: 'active-recovery',
+    tier: 'P1',
+    status: 'governance-hold',
     primaryIntent: 'Проверка английского текста на частые ошибки через русский интерфейс',
     demandEvidence:
-      'GSC surfaced Russian grammar-checker queries, but the page must narrow them to English input to match the released engine.',
+      'The complete release baseline contains only one current impression at position 91, and the production Worker identity gate is unresolved.',
     evidenceBlock:
       'Highlighted local-rule matches, individual/all fixes, corrected English text, and a unique English-input notice.',
     scores: {
-      demand: 18,
+      demand: 6,
       functionalCompleteness: 25,
-      uniqueEvidence: 17,
-      achievableCompetition: 6,
+      uniqueEvidence: 15,
+      achievableCompetition: 3,
       trustAndRisk: 7,
       localization: 5,
     },
@@ -182,8 +220,9 @@ export function getOrganicSearchProfile(
 }
 
 export const organicRecoveryPrioritySlugs: readonly string[] = [
+  'html-preview',
+  'ip-validator',
   'ip-lookup',
   'iban-validator',
   'ical-parser',
-  'grammar-checker',
 ] as const;

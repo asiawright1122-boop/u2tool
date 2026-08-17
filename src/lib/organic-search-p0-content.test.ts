@@ -10,7 +10,35 @@ function readTool(locale: string, slug: string): string {
   );
 }
 
+function readBaseTool(locale: string, slug: string): Record<string, unknown> {
+  const base = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), 'src/messages', locale, 'base.json'), 'utf8')
+  ) as { tools: Record<string, Record<string, unknown>> };
+  return base.tools[slug] ?? {};
+}
+
 describe('organic search P0 content contracts', () => {
+  it('aligns Korean HTML viewer metadata and support copy with the sandboxed runtime', () => {
+    const metadata = readBaseTool('ko', 'html-preview');
+    const content = readTool('ko', 'html-preview');
+
+    expect(metadata.seo_title).toMatch(/HTML 뷰어 온라인/i);
+    expect(metadata.seo_description).toMatch(/HTML과 CSS/);
+    expect(metadata.seo_description).toMatch(/JavaScript를 실행하지/);
+    expect(content).toMatch(/HTML 뷰어 온라인/i);
+    expect(content).toMatch(/JavaScript 실행 환경이 아닙니다/);
+  });
+
+  it('separates Russian IP validation from geolocation lookup intent', () => {
+    const content = readTool('ru', 'ip-validator');
+
+    expect(content).toMatch(/проверка IP адреса/i);
+    expect(content).toMatch(/IPv4 или IPv6/);
+    expect(content).toMatch(/один адрес/i);
+    expect(content).toMatch(/поиск IP адреса/i);
+    expect(content).toMatch(/не обрабатывает списки адресов|не поддерживает CIDR/i);
+  });
+
   it('keeps Russian IP lookup aligned with the observed query family and real provider', () => {
     const content = readTool('ru', 'ip-lookup');
 
@@ -39,7 +67,7 @@ describe('organic search P0 content contracts', () => {
   it('keeps Russian grammar search intent scoped to English input', () => {
     const content = readTool('ru', 'grammar-checker');
 
-    expect(content).toMatch(/проверку английского текста/i);
+    expect(content).toMatch(/провер(?:яет|ку) английск(?:ий|ого) текст/i);
     expect(content).toMatch(/не проверяет русскую грамматику/i);
     expect(content).toMatch(/не использует ИИ и серверную обработку/i);
   });

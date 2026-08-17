@@ -4,6 +4,7 @@ import {
   crawledNotIndexedContentRefreshToolSlugs,
   crawledNotIndexedContentRefreshToolSlugsByCategory,
   getRelatedToolsForTool,
+  organicRecoveryToolSlugsByCategory,
 } from './related-tools';
 
 function mustGetTool(slug: string) {
@@ -21,6 +22,16 @@ describe('related tools recovery ordering', () => {
     for (const [category, slugs] of Object.entries(crawledNotIndexedContentRefreshToolSlugsByCategory)) {
       for (const slug of slugs) {
         expect(mustGetTool(slug).category, `${slug} should be listed under ${category}`).toBe(category);
+      }
+    }
+  });
+
+  it('only references organic recovery tools in their real categories', () => {
+    for (const [category, slugs] of Object.entries(organicRecoveryToolSlugsByCategory)) {
+      for (const slug of slugs) {
+        expect(mustGetTool(slug).category, `${slug} should be listed under ${category}`).toBe(
+          category
+        );
       }
     }
   });
@@ -55,11 +66,27 @@ describe('related tools recovery ordering', () => {
     const imageRelatedSlugs = getRelatedToolsForTool(mustGetTool('image-compressor')).map((tool) => tool.slug);
     const mathRelatedSlugs = getRelatedToolsForTool(mustGetTool('scientific-calculator')).map((tool) => tool.slug);
 
-    expect(networkRelatedSlugs[0]).toBe('database-connection-tester');
+    expect(networkRelatedSlugs.slice(0, 3)).toEqual([
+      'ip-lookup',
+      'ip-validator',
+      'database-connection-tester',
+    ]);
     expect(imageRelatedSlugs.slice(0, 3)).toEqual(['image-resizer', 'image-cropper', 'gif-maker']);
     expect(mathRelatedSlugs.slice(0, 2)).toEqual(['compound-interest-calculator', 'tile-calculator']);
     expect(networkRelatedSlugs).not.toContain('image-resizer');
     expect(imageRelatedSlugs).not.toContain('compound-interest-calculator');
     expect(mathRelatedSlugs).not.toContain('image-resizer');
+  });
+
+  it('cross-links the Russian IP validation and lookup workflow', () => {
+    const lookupRelatedSlugs = getRelatedToolsForTool(mustGetTool('ip-lookup')).map(
+      (tool) => tool.slug
+    );
+    const validatorRelatedSlugs = getRelatedToolsForTool(mustGetTool('ip-validator')).map(
+      (tool) => tool.slug
+    );
+
+    expect(lookupRelatedSlugs[0]).toBe('ip-validator');
+    expect(validatorRelatedSlugs[0]).toBe('ip-lookup');
   });
 });

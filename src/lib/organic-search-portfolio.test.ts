@@ -19,12 +19,13 @@ describe('organic search portfolio', () => {
     }
   });
 
-  it('puts the four approved recovery slugs first', () => {
+  it('puts the five evidence-backed recovery slugs first', () => {
     expect(organicRecoveryPrioritySlugs).toEqual([
+      'html-preview',
+      'ip-validator',
       'ip-lookup',
       'iban-validator',
       'ical-parser',
-      'grammar-checker',
     ]);
   });
 

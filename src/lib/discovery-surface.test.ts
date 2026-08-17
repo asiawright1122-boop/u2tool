@@ -34,6 +34,8 @@ const toolNames = {
   'json-to-csv': 'JSON to CSV',
   'compound-interest-calculator': 'Compound Interest Calculator',
   'database-connection-tester': 'Database Connection Tester',
+  'ip-lookup': 'IP Lookup',
+  'ip-validator': 'IP Validator',
   'csv-to-vcard-converter': 'CSV to vCard Converter',
   'document-word-counter': 'Document Word Counter',
   'gantt-chart-generator': 'Gantt Chart Generator',
@@ -111,6 +113,7 @@ describe('discovery surface governance', () => {
     expect(slugsByCategory.get('image')).toContain('image-cropper');
     expect(slugsByCategory.get('image')).toContain('gif-maker');
     expect(slugsByCategory.get('network')).toContain('database-connection-tester');
+    expect(slugsByCategory.get('network')?.slice(0, 2)).toEqual(['ip-lookup', 'ip-validator']);
     expect(slugsByCategory.get('finance')).toContain('iban-validator');
     expect(slugsByCategory.get('math')).toContain('compound-interest-calculator');
     expect(slugsByCategory.get('math')).toContain('tile-calculator');
