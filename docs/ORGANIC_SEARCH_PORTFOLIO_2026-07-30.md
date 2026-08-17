@@ -5,6 +5,8 @@
 - Implementation branch: `codex/organic-traffic-recovery`; not deployed.
 - Data basis: the complete repository GSC reports generated through 2026-07-02. No newer complete GSC window was used, so this update does not claim current traffic movement.
 - First active batch: Korean HTML Preview plus the Russian IP Validator/Lookup workflow.
+- Indexability gate: Korean HTML Preview remains indexable; the two Russian IP pages are removed from suppression, all three carry a truthful 2026-08-17 sitemap refresh date, and their SSR contracts require index/follow plus indexable related-tool links.
+- Release state: the implementation is committed for review only. No production deployment, sitemap resubmission, or indexing request has been made.
 - Grammar and Hex remain governance holds and are excluded from the active traffic queue.
 
 ## Safety boundary

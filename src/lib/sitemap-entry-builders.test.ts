@@ -32,7 +32,7 @@ describe('sitemap entry builders', () => {
 
     expect(entries.find((entry) => entry.path === '/en/tools/gantt-chart-generator/')?.lastmod)
       .toBe('2026-07-01');
-    expect(newestEntryLastmod(entries)).toBe('2026-07-27');
+    expect(newestEntryLastmod(entries)).toBe('2026-08-17');
   });
 
   it('keeps AI and ordinary page buckets distinct', () => {
@@ -42,7 +42,7 @@ describe('sitemap entry builders', () => {
   });
 
   it('derives the priority child date from the represented entries', () => {
-    expect(newestEntryLastmod(buildPrioritySitemapEntries())).toBe('2026-07-08');
+    expect(newestEntryLastmod(buildPrioritySitemapEntries())).toBe('2026-08-17');
   });
 
   it('never publishes a suppressed tool URL in any sitemap child', () => {
@@ -62,5 +62,16 @@ describe('sitemap entry builders', () => {
     const entries = buildPrioritySitemapEntries();
     expect(entries.some((entry) => entry.path === '/en/tools/json-formatter/')).toBe(true);
     expect(entries.some((entry) => entry.path === '/en/tools/base64/')).toBe(false);
+  });
+
+  it('publishes the active organic recovery routes with their real refresh date', () => {
+    const paths = new Set([
+      ...buildPrioritySitemapEntries(),
+      ...buildIndexableToolsSitemapEntries(),
+    ].map((entry) => `${entry.path}|${entry.lastmod}`));
+
+    expect(paths).toContain('/ko/tools/html-preview/|2026-08-17');
+    expect(paths).toContain('/ru/tools/ip-validator/|2026-08-17');
+    expect(paths).toContain('/ru/tools/ip-lookup/|2026-08-17');
   });
 });

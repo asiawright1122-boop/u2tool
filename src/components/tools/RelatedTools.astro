@@ -26,6 +26,8 @@ interface Props {
   locale: string;
   /** Tool translations map: { [slug]: { name, description } } */
   toolTranslations: Record<string, Record<string, unknown>>;
+  /** Optional pre-filtered related tools supplied by the page's index policy. */
+  relatedTools?: Tool[];
   /** Maximum number of related tools to display (default: 6) */
   maxCount?: number;
   /** Label for the "Related Tools" heading */
@@ -36,11 +38,14 @@ const {
   currentTool,
   locale,
   toolTranslations,
+  relatedTools: providedRelatedTools,
   maxCount = 6,
   headingLabel = 'Related Tools',
 } = Astro.props;
 
-const relatedTools = getRelatedToolsForTool(currentTool, maxCount);
+const relatedTools = (
+  providedRelatedTools ?? getRelatedToolsForTool(currentTool, maxCount)
+).slice(0, maxCount);
 
 /**
  * Get the localized tool name from translations, falling back to slug.
@@ -75,6 +80,7 @@ function getToolName(slug: string): string {
           return (
             <a
               href={getLocalizedPath(locale as Locale, `/tools/${tool.slug}`)}
+              data-sibling-tool={tool.slug}
               class="flex flex-col items-center p-4 bg-white/40 dark:bg-slate-900/40 border border-slate-200/60 dark:border-slate-800 rounded-2xl hover:border-amber-500/50 hover:shadow-xl dark:hover:border-amber-500/50 transition-all duration-300 group backdrop-blur-sm"
               title={toolName}
             >
