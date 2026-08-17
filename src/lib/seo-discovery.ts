@@ -6,6 +6,7 @@ import { isIndexSuppressed } from '@/lib/index-suppression';
 import { locales, type Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { withPageUrlTrailingSlash } from '@/lib/seo';
+import { organicRecoveryPrioritySlugs } from '@/lib/organic-search-portfolio';
 
 const discoveryToolBlocklist = new Set<string>([
   // Add temporarily suppressed tool slugs here when a route should stay out of search feeds.
@@ -51,6 +52,7 @@ const highValueToolBlocklistOverrides = new Set<string>([
 ]);
 
 const explicitPriorityToolSlugs = [
+  ...organicRecoveryPrioritySlugs,
   'json-formatter',
   'base64',
   'url-encoder',

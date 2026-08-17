@@ -38,6 +38,7 @@ const sampleHtml = String.raw`<!doctype html>
   <head>
     <title>YouTube Tags Generator | U2Tool</title>
     <meta name="description" content="Generate YouTube tags quickly.">
+    <meta name="robots" content="index, follow, max-snippet:-1">
     <link rel="canonical" href="https://www.u2tool.com/en/tools/youtube-tags-generator/">
     <script type="application/ld+json">{"@type":"Organization","name":"U2Tool"}</script>
     <script type="application/ld+json">{"@type":["SoftwareApplication","FAQPage"],"name":"YouTube Tags Generator"}</script>
@@ -179,6 +180,9 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/password-generator',
       'en/word-counter',
       'en/markdown-editor',
+      'ko/html-preview',
+      'ru/ip-validator',
+      'ru/ip-lookup',
       'en/grammar-checker',
       'en/hex-editor',
       'en/sql-query-optimizer',
@@ -201,6 +205,7 @@ describe('extractToolPageRenderContract', () => {
       title: 'YouTube Tags Generator | U2Tool',
       description: 'Generate YouTube tags quickly.',
       canonical: 'https://www.u2tool.com/en/tools/youtube-tags-generator/',
+      robots: 'index, follow, max-snippet:-1',
       h1: 'YouTube Tags Generator',
       jsonLdTypes: ['FAQPage', 'Organization', 'SoftwareApplication'],
       toolClusters: ['creator-seo'],
@@ -597,6 +602,47 @@ describe('compareToolPageRenderContract', () => {
 
     expect(failures).toContain(
       'en/youtube-tags-generator canonical: expected to end with "/en/tools/youtube-tags-generator/" but found "https://www.u2tool.com/en/tools/wrong-tool/"'
+    );
+  });
+
+  it('fails an indexable recovery route when robots drifts to noindex', () => {
+    const expectation = {
+      locale: 'ru',
+      slug: 'ip-validator',
+      expectedTitleIncludes: 'YouTube Tags Generator',
+      expectedDescriptionIncludes: 'YouTube tags',
+      expectedH1Includes: 'YouTube Tags Generator',
+      expectedCanonicalPath: '/en/tools/youtube-tags-generator/',
+      expectedIndexable: true,
+      expectedJsonLdTypes: ['Organization', 'SoftwareApplication', 'FAQPage'],
+    };
+    const html = sampleHtml.replace(
+      'content="index, follow, max-snippet:-1"',
+      'content="noindex, nofollow"',
+    );
+
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(html),
+        html,
+      ),
+    ).toContain(
+      'ru/ip-validator robots: expected index, follow but found "noindex, nofollow"',
+    );
+
+    const nofollowHtml = sampleHtml.replace(
+      'content="index, follow, max-snippet:-1"',
+      'content="index, nofollow"',
+    );
+    expect(
+      compareToolPageRenderContract(
+        expectation,
+        extractToolPageRenderContract(nofollowHtml),
+        nofollowHtml,
+      ),
+    ).toContain(
+      'ru/ip-validator robots: expected index, follow but found "index, nofollow"',
     );
   });
 

@@ -18,6 +18,7 @@ export interface ToolPageRenderExpectation {
   expectedDescriptionIncludes: string;
   expectedH1Includes: string;
   expectedCanonicalPath?: string;
+  expectedIndexable?: boolean;
   expectedJsonLdTypes: string[];
   expectedToolCluster?: string;
   minClusterGroups?: number;
@@ -38,6 +39,7 @@ export interface ToolPageRenderContract {
   title: string;
   description: string;
   canonical: string;
+  robots: string;
   h1: string;
   jsonLdTypes: string[];
   toolClusters: string[];
@@ -193,6 +195,48 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     minFaqQuestions: 1,
   },
   {
+    locale: 'ko',
+    slug: 'html-preview',
+    reason: 'Korean HTML viewer recovery intent and runtime boundary',
+    expectedTitleIncludes: 'HTML 뷰어 온라인',
+    expectedDescriptionIncludes: 'HTML과 CSS',
+    expectedH1Includes: 'HTML 미리보기',
+    expectedCanonicalPath: '/ko/tools/html-preview/',
+    expectedIndexable: true,
+    expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    minSiblingToolLinks: 1,
+    minFaqQuestions: 6,
+    bodyMustInclude: ['JavaScript를 실행하지 않으며', 'HTML 뷰어와 HTML 실행 도구'],
+  },
+  {
+    locale: 'ru',
+    slug: 'ip-validator',
+    reason: 'Russian IP validation recovery intent and lookup boundary',
+    expectedTitleIncludes: 'Проверка IP адреса',
+    expectedDescriptionIncludes: 'IPv4',
+    expectedH1Includes: 'Проверка IP адреса',
+    expectedCanonicalPath: '/ru/tools/ip-validator/',
+    expectedIndexable: true,
+    expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    minSiblingToolLinks: 2,
+    minFaqQuestions: 5,
+    bodyMustInclude: ['Чем проверка IP адреса отличается от поиска IP адреса'],
+  },
+  {
+    locale: 'ru',
+    slug: 'ip-lookup',
+    reason: 'Russian IP geolocation recovery intent and validation boundary',
+    expectedTitleIncludes: 'Поиск IP адреса',
+    expectedDescriptionIncludes: 'геолокация',
+    expectedH1Includes: 'Поиск IP адреса',
+    expectedCanonicalPath: '/ru/tools/ip-lookup/',
+    expectedIndexable: true,
+    expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    minSiblingToolLinks: 2,
+    minFaqQuestions: 5,
+    bodyMustInclude: ['Проверяет ли поиск IP адреса формат IPv4 и IPv6'],
+  },
+  {
     locale: 'en',
     slug: 'grammar-checker',
     reason: 'release-blocking English grammar capability disclosure',
@@ -301,7 +345,7 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     locale: 'ru',
     slug: 'grammar-checker',
     reason: 'localized UI with explicit English-input boundary',
-    expectedTitleIncludes: 'английской грамматики',
+    expectedTitleIncludes: 'Проверка грамматики онлайн бесплатно',
     expectedDescriptionIncludes: 'английского текста',
     expectedH1Includes: 'Проверка грамматики',
     expectedCanonicalPath: '/ru/tools/grammar-checker/',
@@ -356,6 +400,7 @@ export function extractToolPageRenderContract(
     title: decodeHtmlEntities(getTagContent(html, 'title')),
     description: decodeHtmlEntities(getTagContent(html, 'description')),
     canonical: getTagContent(html, 'canonical'),
+    robots: getTagContent(html, 'robots'),
     h1: decodeHtmlEntities(stripTags(firstMatch(html, /<h1\b[^>]*>([\s\S]*?)<\/h1>/i))),
     jsonLdTypes: extractJsonLdTypes(html),
     toolClusters: uniqueSorted(attributeValues(html, 'data-tool-cluster')),
@@ -401,6 +446,24 @@ export function compareToolPageRenderContract(
     failures.push(
       `${route} canonical: expected to end with ${JSON.stringify(expectation.expectedCanonicalPath)} but found ${JSON.stringify(contract.canonical)}`
     );
+  }
+
+  if (
+    expectation.expectedIndexable === true
+  ) {
+    const robotsDirectives = new Set(
+      contract.robots.toLowerCase().split(',').map((directive) => directive.trim()),
+    );
+    if (
+      !robotsDirectives.has('index') ||
+      !robotsDirectives.has('follow') ||
+      robotsDirectives.has('noindex') ||
+      robotsDirectives.has('nofollow')
+    ) {
+      failures.push(
+        `${route} robots: expected index, follow but found ${JSON.stringify(contract.robots)}`
+      );
+    }
   }
 
   for (const schemaType of expectation.expectedJsonLdTypes) {
