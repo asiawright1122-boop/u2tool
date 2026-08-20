@@ -193,6 +193,21 @@ describe('seo helpers', () => {
     expect(withBrand('Free Tools')).toBe('Free Tools | U2Tool');
   });
 
+  it('keeps latin branded titles within the SERP safe boundary', () => {
+    const long = 'AI Tools Directory - Token Cost, Prompt Templates and RAG Tools';
+    const branded = withBrand(long);
+    expect(branded.length).toBeLessThanOrEqual(70);
+    expect(branded.endsWith(' | U2Tool')).toBe(true);
+    expect(branded).not.toContain('  ');
+  });
+
+  it('keeps CJK branded titles within the SERP safe boundary', () => {
+    const long = 'AI 爬虫工具集 - Robots.txt 规则和 llms.txt 生成器';
+    const branded = withBrand(long);
+    expect(branded.length).toBeLessThanOrEqual(35);
+    expect(branded.endsWith(' | U2Tool')).toBe(true);
+  });
+
   it('builds a valid search action URL template', () => {
     expect(buildWebsiteSearchUrlTemplate('https://www.u2tool.com', 'en'))
       .toBe('https://www.u2tool.com/en/tools/?q={search_term_string}');

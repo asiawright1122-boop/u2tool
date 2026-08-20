@@ -233,7 +233,34 @@ export function getHreflang(locale: Locale): string {
 }
 
 export function withBrand(title: string, brand = 'U2Tool'): string {
-  return title.includes(brand) ? title : `${title} | ${brand}`;
+  const branded = title.includes(brand) ? title : `${title} | ${brand}`;
+  const limit = isCjkTitle(title) ? CJK_TITLE_LIMIT : LATIN_TITLE_LIMIT;
+  if (branded.length <= limit) {
+    return branded;
+  }
+
+  const brandSuffix = ` | ${brand}`;
+  // If the title already carries the brand, strip it so the suffix survives
+  // the truncation instead of being cut mid-word ("… | U2To…").
+  const brandIndex = title.indexOf(brand);
+  const content = brandIndex >= 0
+    ? title.slice(0, brandIndex).replace(/[\s|]+$/, '')
+    : title;
+  const contentLimit = Math.max(1, limit - brandSuffix.length);
+  let cut = content.slice(0, contentLimit);
+  if (!isCjkTitle(content)) {
+    // Non-CJK scripts cut at a word boundary to avoid mid-word breaks.
+    cut = cut.replace(/\s+\S*$/, '');
+  }
+  cut = cut.replace(/[\s|]+$/, '');
+  return `${cut}${brandSuffix}`;
+}
+
+const LATIN_TITLE_LIMIT = 70;
+const CJK_TITLE_LIMIT = 35;
+
+function isCjkTitle(title: string): boolean {
+  return /[\u4E00-\u9FFF\u3040-\u30FF\uAC00-\uD7AF]/.test(title);
 }
 
 export function buildWebsiteSearchUrlTemplate(baseUrl: string, locale: Locale = 'en'): string {
