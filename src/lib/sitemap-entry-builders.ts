@@ -17,7 +17,6 @@ import { onlineCalculatorClusterPath } from '@/lib/online-calculator-cluster';
 import { pdfDocumentToolClusterPath } from '@/lib/pdf-document-tool-cluster';
 import { securityToolClusterPath } from '@/lib/security-tool-cluster';
 import { getPriorityTools } from '@/lib/seo-discovery';
-import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { textWritingToolClusterPath } from '@/lib/text-writing-tool-cluster';
 import { buildUrl, buildUrlForLocales, type SitemapUrlEntry } from '@/lib/sitemap-utils';
@@ -70,11 +69,13 @@ export function buildPrioritySitemapEntries(): SitemapUrlEntry[] {
   for (const locale of locales) {
     entries.push(buildUrl(`/${locale}`, '1.0', 'daily', 'pages'));
 
-    if (isAiDiscoveryEnabled()) {
-      entries.push(buildUrl(`/${locale}/ai`, '0.8', 'daily', 'ai'));
-      for (const topicSlug of aiToolTopicSlugs) {
-        entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.8', 'weekly', 'ai'));
-      }
+    // /ai and AI topic hubs are first-class content pages (always rendered
+    // with index,follow and full meta), so they enter the priority sitemap
+    // regardless of the runtime PUBLIC_AI_DISCOVERY_ENABLED flag, which only
+    // gates the discovery API/telemetry features.
+    entries.push(buildUrl(`/${locale}/ai`, '0.8', 'daily', 'ai'));
+    for (const topicSlug of aiToolTopicSlugs) {
+      entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.8', 'weekly', 'ai'));
     }
 
     entries.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', 'pages'));
@@ -107,14 +108,12 @@ export function buildPagesSitemapEntries(): SitemapUrlEntry[] {
   for (const locale of locales) {
     entries.push(buildUrl(`/${locale}`, '1.0', 'daily', 'pages'));
 
-    if (isAiDiscoveryEnabled()) {
-      entries.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', 'ai'));
-      for (const topicSlug of aiToolTopicSlugs) {
-        entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.7', 'weekly', 'ai'));
-      }
+    entries.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', 'ai'));
+    for (const topicSlug of aiToolTopicSlugs) {
+      entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.7', 'weekly', 'ai'));
     }
 
-    if (isAiDiscoveryEnabled() && isPublishedAiModelComparisonLocale(locale)) {
+    if (isPublishedAiModelComparisonLocale(locale)) {
       entries.push(buildUrlForLocales(
         `/${locale}${aiModelComparisonIndexPath}`,
         '0.7',

@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
 import {
   buildIndexableToolsSitemapEntries,
@@ -39,13 +39,11 @@ describe('sitemap entry builders', () => {
   });
 
   it('keeps AI and ordinary page buckets distinct', () => {
-    // The AI discovery bucket is published only when the production flag is
-    // enabled; pin it so this unit test matches the deployed topology.
-    vi.stubEnv('PUBLIC_AI_DISCOVERY_ENABLED', 'true');
+    // /ai and AI topic hubs are always emitted (they are first-class content
+    // pages), independent of the runtime PUBLIC_AI_DISCOVERY_ENABLED flag.
     const entries = buildPagesSitemapEntries();
     expect(entries.find((entry) => entry.path === '/en/ai/')?.lastmod).toBe('2026-07-08');
     expect(entries.find((entry) => entry.path === '/en/')?.lastmod).toBe('2026-06-02');
-    vi.unstubAllEnvs();
   });
 
   it('derives the priority child date from the represented entries', () => {

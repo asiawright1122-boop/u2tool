@@ -1,7 +1,6 @@
 import { categories, getPopularTools, tools, type Tool } from '@/config/tools';
 import { aiToolTopicSlugs, getAiToolTopicPath } from '@/lib/ai-tool-topics';
 import { comparisonSurfaceSlugs } from '@/lib/comparison-surfaces';
-import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { isIndexSuppressed } from '@/lib/index-suppression';
 import { locales, type Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
@@ -157,9 +156,9 @@ export function buildPriorityRoutePaths(locale: Locale): string[] {
   paths.add(`/${locale}/tools`);
   paths.add(`/${locale}/compare`);
 
-  if (isAiDiscoveryEnabled()) {
-    paths.add(`/${locale}/ai`);
-  }
+  // /ai is a first-class content hub (always index,follow) so it stays in the
+  // priority route set regardless of the runtime discovery feature flag.
+  paths.add(`/${locale}/ai`);
 
   for (const topicSlug of aiToolTopicSlugs) {
     paths.add(`/${locale}${getAiToolTopicPath(topicSlug)}`);
@@ -223,9 +222,7 @@ export function buildPriorityIndexNowUrls(
     add(`/${locale}`);
     add(`/${locale}/tools`);
     add(`/${locale}/compare`);
-    if (isAiDiscoveryEnabled()) {
-      add(`/${locale}/ai`);
-    }
+    add(`/${locale}/ai`);
   }
 
   // Tier 2: topic/category/comparison pages across all locales
