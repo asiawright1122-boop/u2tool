@@ -27,6 +27,9 @@ import {
   writeToolIndexReadinessArtifacts,
 } from "./tool-index-readiness-report";
 import type { IndexReadinessEvidence } from "../../src/lib/tool-index-readiness";
+import { INDEX_READINESS_OVERRIDES } from "../../src/config/index-readiness-overrides";
+import { PILOT_TOOL_SLUGS } from "../../src/config/tool-capabilities";
+import { getPriorityTools } from "../../src/lib/seo-discovery";
 
 function evidence(
   overrides: Partial<IndexReadinessEvidence> = {},
@@ -1341,19 +1344,23 @@ describe("tool index readiness evidence report", () => {
         ),
       ).size,
     ).toBe(5_700);
-    // Priority counts follow getPriorityTools()/PILOT_TOOL_SLUGS at the time
-    // the report runs: 6 pilot tools × 10 locales = 60 and 148 p1 tools × 10
-    // locales = 1480. Keep in sync when the priority or pilot registry grows.
+    // Priority is reassigned from the live registries (PILOT_TOOL_SLUGS and
+    // getPriorityTools()) rather than the checkpoint snapshot, so assert the
+    // assignment rule instead of fixed cohort sizes — the registry grows over
+    // time and the checkpoint's priority column may lag it.
+    const pilotSlugs = new Set(PILOT_TOOL_SLUGS);
+    const prioritySlugs = new Set(getPriorityTools().map(({ slug }) => slug));
     expect(
-      input.rows.filter(
-        ({ evidence: rowEvidence }) => rowEvidence.priority === "pilot",
+      input.rows.every(
+        ({ evidence: rowEvidence }) =>
+          rowEvidence.priority ===
+          (pilotSlugs.has(rowEvidence.slug)
+            ? "pilot"
+            : prioritySlugs.has(rowEvidence.slug)
+              ? "p1"
+              : "catalog"),
       ),
-    ).toHaveLength(60);
-    expect(
-      input.rows.filter(
-        ({ evidence: rowEvidence }) => rowEvidence.priority === "p1",
-      ),
-    ).toHaveLength(1_480);
+    ).toBe(true);
     expect(
       input.rows.every(
         ({ evidence: rowEvidence }) =>
@@ -1365,13 +1372,20 @@ describe("tool index readiness evidence report", () => {
           rowEvidence.technical.renderedStatus === null,
       ),
     ).toBe(true);
-    // protectedControl cohorts: 5 ES chart tools (es) + jwt-debugger across
-    // all 10 locales. Keep in sync with index-readiness-overrides.ts.
+    // protectedControl rows mirror the protected overrides registry exactly.
+    const protectedPairs = new Set(
+      INDEX_READINESS_OVERRIDES.filter((override) => override.protectedControl)
+        .map((override) => `${override.locale}/${override.slug}`),
+    );
+    const protectedRows = input.rows.filter(
+      ({ evidence: rowEvidence }) => rowEvidence.protectedControl,
+    );
+    expect(protectedRows.length).toBe(protectedPairs.size);
     expect(
-      input.rows.filter(
-        ({ evidence: rowEvidence }) => rowEvidence.protectedControl,
+      protectedRows.every(({ evidence: rowEvidence }) =>
+        protectedPairs.has(`${rowEvidence.locale}/${rowEvidence.slug}`),
       ),
-    ).toHaveLength(15);
+    ).toBe(true);
   }, 60_000);
 
   it("renders recommendation-only JSON, CSV, and Markdown with complete review queues", () => {

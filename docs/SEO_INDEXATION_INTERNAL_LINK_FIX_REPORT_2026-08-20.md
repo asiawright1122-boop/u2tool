@@ -68,7 +68,15 @@
 - **sitemap lastmod 漂移（P1-3）**: 校验中观察到 pages sitemap 在 index 中的 lastmod 为 07-08、本地契约预期的普通页 lastmod 为 06-02。差异根因是 env 门控下的条目集合不同，已通过统一 env 消除误报；但部署侧仍需确认线上构建参数与本地一致（线上构建产物 lastmod 落后于本地会掩盖内容刷新，新版 lastmod 治理见 `docs/superpowers/specs/2026-07-13-sitemap-lastmod-recovery-design.md`）。
 - **本地浏览器测试**: 6 个组件测试（ExcelViewer / GanttChartGenerator / GrammarChecker / HexEditor / SqlQueryOptimizer / TypingSpeedTest）依赖 puppeteer Chrome，本地缺少浏览器二进制而 suite 失败，属测试环境问题，非代码缺陷。
 
-## 7. 遗留项
+## 7. 遗留项闭环（2026-08-20 复核）
 
-- 生产部署后应以线上 `sitemap-tools.xml`（应含 1706 条）与 `jwt-decoder` / `jwt-debugger` 的 noindex 状态复核一次（校验器默认查线上，需 `PROD_BASE_URL` 指向线上后重跑）。
-- `getPriorityTools()` 持续增长使 `tool-index-readiness-report` 的 p1 数字为硬编码快照，后续 priority 名单变更记得同步该测试。
+### 已解决：线上部署复核
+- 线上 `sitemap-tools.xml` 已含 **1706 条**，其中 `jwt-decoder` / `jwt-debugger` / `uuid-generator`（p1 恢复）已在 sitemap，页面均为 `index, follow`；仍被抑的 `text-cleaner` 保持 `noindex, nofollow`。
+- 线上搜索面复核通过：`/en/tools/?q=word` 页面与被抑工具相关的内链为零；`/en/tools-index.json` 已过滤 `text-cleaner` / `text-reverser` 等并含 `jwt-decoder`。
+- `validate:technical-seo` / `validate:search-engine-compliance` / `validate:internal-link-canonicals` 三组校验经本地产物验证全绿。
+
+### 已解决：测试硬编码快照
+- `tool-index-readiness-report.test.ts` 中写死的 pilot/p1/protectedControl 数量改为动态规则验证：priority 按 `PILOT_TOOL_SLUGS` 与 `getPriorityTools()` 的分配规则断言，protectedControl 与 `INDEX_READINESS_OVERRIDES` 注册表逐条对照。未来 priority / pilot / overrides 名单变更不再需要同步测试数字。
+
+### 待部署侧确认（代码无缺陷）
+- `/en/ai/` 线上页面可达且 `index, follow`，但未进入 `priority` / `pages` sitemap，导致 `technical-seo`（2 项）与 `search-engine-compliance`（1 项）线上失败。根因是**线上构建未启用 `PUBLIC_AI_DISCOVERY_ENABLED=true`**；本地产物在该 env 下验证全绿，代码与校验器均按「ai 应收录」设计。请部署时在构建环境设置 `PUBLIC_AI_DISCOVERY_ENABLED=true` 并重新发布，即可消除线上 3 项 FAIL。
