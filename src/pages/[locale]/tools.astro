@@ -111,6 +111,7 @@ for (const tool of tools) {
 }
 
 const baseUrl = getPublicSiteUrl();
+const indexableTools = filterIndexableTools(locale, tools);
 const discoverySpotlights = buildCategoryDiscoverySpotlights(
   locale,
   categoryMessages,
@@ -193,7 +194,7 @@ const chartToolGroups = buildChartToolClusterGroups(
 );
 const initialSearchResults = searchQuery
   ? searchTools(
-      tools.map((tool) => ({
+      indexableTools.map((tool) => ({
           slug: tool.slug,
           href: buildLocalizedPageUrl(baseUrl, locale, `/tools/${tool.slug}`),
           name: toolNames[tool.slug] || tool.slug,
@@ -269,7 +270,7 @@ const toolsCollectionData = {
         <ToolsGrid
           locale={locale}
           categories={categories}
-          tools={filterIndexableTools(locale, tools).map((tool) => ({
+          tools={indexableTools.map((tool) => ({
             slug: tool.slug,
             category: tool.category,
             icon: tool.icon,

@@ -6,6 +6,7 @@ import {
   type AiModelComparisonSlug,
 } from './ai-model-comparisons';
 import { getLocalizedPath, type Locale } from './i18n';
+import { filterIndexableTools } from './index-suppression';
 
 export type AiToolsDirectoryClusterId =
   | 'cost-model-planning'
@@ -273,19 +274,22 @@ export function buildAiToolsDirectory(
 
   return AI_TOOLS_DIRECTORY_DEFINITIONS.map((definition) => {
     const clusterCopy = copyBundle.clusters[definition.id] ?? englishCopy.clusters[definition.id];
-    const clusterTools = definition.slugs
-      .map((slug) => toolBySlug.get(slug))
-      .filter((tool): tool is Tool => Boolean(tool))
-      .map((tool) => ({
-        category: tool.category,
-        categoryName: categoryNames[tool.category] || tool.category,
-        description: toolDescriptions[tool.slug] || '',
-        href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-        icon: tool.icon,
-        isFeatured: tool.slug === definition.featuredSlug,
-        name: toolNames[tool.slug] || tool.slug,
-        slug: tool.slug,
-      }));
+    const clusterTools = filterIndexableTools(
+      locale,
+      definition.slugs
+        .map((slug) => toolBySlug.get(slug))
+        .filter((tool): tool is Tool => Boolean(tool))
+        .map((tool) => ({
+          category: tool.category,
+          categoryName: categoryNames[tool.category] || tool.category,
+          description: toolDescriptions[tool.slug] || '',
+          href: getLocalizedPath(locale, `/tools/${tool.slug}`),
+          icon: tool.icon,
+          isFeatured: tool.slug === definition.featuredSlug,
+          name: toolNames[tool.slug] || tool.slug,
+          slug: tool.slug,
+        })),
+    );
     const featuredTool = clusterTools.find((tool) => tool.isFeatured);
 
     return {

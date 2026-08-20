@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { tools } from '@/config/tools';
+import { isIndexSuppressed } from './index-suppression';
 import {
   buildImageToolClusterGroupForTool,
   buildImageToolClusterGroups,
@@ -37,8 +38,12 @@ describe('image tool cluster', () => {
     const groups = buildImageToolClusterGroups('en', categoryNames, toolNames, toolDescriptions);
     const groupedSlugs = groups.flatMap((group) => group.tools.map((tool) => tool.slug));
 
+    // Suppressed (noindex) tools are intentionally excluded from discovery
+    // surfaces, so only indexable cluster slugs are expected in the output.
+    const indexableSlugs = imageToolClusterSlugs.filter((slug) => !isIndexSuppressed('en', slug));
+
     expect(new Set(groupedSlugs).size).toBe(groupedSlugs.length);
-    expect(groupedSlugs.toSorted()).toEqual([...imageToolClusterSlugs].toSorted());
+    expect(groupedSlugs.toSorted()).toEqual([...indexableSlugs].toSorted());
   });
 
   it('can build the reverse-link group for image tools only', () => {

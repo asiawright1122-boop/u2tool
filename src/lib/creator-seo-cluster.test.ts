@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { tools } from '@/config/tools';
+import { isIndexSuppressed } from './index-suppression';
 import {
   buildCreatorSeoClusterGroupForTool,
   buildCreatorSeoClusterGroups,
@@ -49,8 +50,12 @@ describe('creator SEO cluster', () => {
     const groups = buildCreatorSeoClusterGroups('en', categoryNames, toolNames, toolDescriptions);
     const groupedSlugs = groups.flatMap((group) => group.tools.map((tool) => tool.slug));
 
+    // Suppressed (noindex) tools are intentionally excluded from discovery
+    // surfaces, so only indexable cluster slugs are expected in the output.
+    const indexableSlugs = creatorSeoClusterSlugs.filter((slug) => !isIndexSuppressed('en', slug));
+
     expect(new Set(groupedSlugs).size).toBe(groupedSlugs.length);
-    expect(groupedSlugs.toSorted()).toEqual([...creatorSeoClusterSlugs].toSorted());
+    expect(groupedSlugs.toSorted()).toEqual([...indexableSlugs].toSorted());
   });
 
   it('keeps adjacent creator and marketing generators inside the cluster', () => {

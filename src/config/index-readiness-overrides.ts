@@ -49,4 +49,84 @@ export const INDEX_READINESS_OVERRIDES: IndexReadinessOverride[] = [
       'Spanish chart recovery comparison cohort increased from 14 to 25 impressions; preserve through the active GSC gate.',
     expiresOn: '2026-08-24',
   },
+  {
+    locale: 'ar',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'de',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'en',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'es',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'fr',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'ja',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'ko',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'pt',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'ru',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
+  {
+    locale: 'zh',
+    slug: 'jwt-debugger',
+    protectedControl: true,
+    reason:
+      'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-01',
+  },
 ];

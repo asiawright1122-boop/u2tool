@@ -245,8 +245,9 @@ describe('seo helpers', () => {
     expect(urls).toContain('https://www.u2tool.com/en/tools/iban-validator/');
     expect(urls).toContain('https://www.u2tool.com/en/tools/compound-interest-calculator/');
     // es/document-word-counter was suppressed by the 2026-08-04 index-hygiene
-    // pass and now renders noindex, so it is no longer submitted.
-    expect(urls).not.toContain('https://www.u2tool.com/es/tools/document-word-counter/');
+    // pass, then recovered by the 2026-08-20 priority fix (demand=null no
+    // longer treated as zero demand), so it is indexable again and submitted.
+    expect(urls).toContain('https://www.u2tool.com/es/tools/document-word-counter/');
   });
 
   it('keeps crawled-not-indexed content-refresh pages in priority discovery', () => {
@@ -279,20 +280,20 @@ describe('seo helpers', () => {
     expect(urls).toContain('https://www.u2tool.com/zh/ai/ai-crawler-tools/');
   });
 
-  it('drops suppressed AI tool pages from priority discovery', () => {
+  it('submits recovered AI tool pages to priority discovery', () => {
     const urls = buildPriorityIndexNowUrls('https://www.u2tool.com/', {
       selectedLocales: ['en', 'zh'],
     });
 
-    // These were prioritized on 2026-07-07, then suppressed by the 2026-08-04
-    // index-hygiene pass. They render noindex, so submitting them to IndexNow
-    // would spend quota asking an engine to index a page that refuses.
-    // To resubmit them, un-suppress them at the source and regenerate.
-    expect(urls).not.toContain('https://www.u2tool.com/en/tools/ai-token-calculator/');
-    expect(urls).not.toContain('https://www.u2tool.com/en/tools/ai-prompt-template-generator/');
-    expect(urls).not.toContain('https://www.u2tool.com/en/tools/rag-chunk-size-calculator/');
-    expect(urls).not.toContain('https://www.u2tool.com/zh/tools/ai-robots-txt-generator/');
-    expect(urls).not.toContain('https://www.u2tool.com/zh/tools/llms-txt-generator/');
+    // These were suppressed by the 2026-08-04 index-hygiene pass, then
+    // recovered by the 2026-08-20 priority fix (product priority p1 retains
+    // indexability even when GSC demand data is missing). They now render
+    // indexable pages, so submitting them to IndexNow is valid.
+    expect(urls).toContain('https://www.u2tool.com/en/tools/ai-token-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/ai-prompt-template-generator/');
+    expect(urls).toContain('https://www.u2tool.com/en/tools/rag-chunk-size-calculator/');
+    expect(urls).toContain('https://www.u2tool.com/zh/tools/ai-robots-txt-generator/');
+    expect(urls).toContain('https://www.u2tool.com/zh/tools/llms-txt-generator/');
   });
 
   it('never submits a suppressed tool URL to IndexNow', () => {

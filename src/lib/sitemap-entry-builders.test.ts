@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
 import {
   buildIndexableToolsSitemapEntries,
@@ -12,13 +12,16 @@ describe('sitemap entry builders', () => {
   it('publishes only non-suppressed localized tool URLs (M2 index hygiene)', () => {
     const entries = buildIndexableToolsSitemapEntries();
     // M2: sitemap is intentionally slimmed from ~5700 tool URLs to the
-    // demand/protected retention cohort (~300).
+    // demand/protected retention cohort (~1700).
     expect(entries.length).toBeGreaterThanOrEqual(300);
     expect(entries.length).toBeLessThan(5_000);
     expect(entries.some((entry) => entry.path === '/en/tools/gantt-chart-generator/')).toBe(true);
+    // Restored p1 tools re-enter the sitemap under the evidence-priority
+    // retention policy.
+    expect(entries.some((entry) => entry.path === '/en/tools/uuid-generator/')).toBe(true);
     // Suppressed (zero GSC demand, no protection) pages stay live but leave
     // the sitemap so crawl budget concentrates on demand-bearing pages.
-    expect(entries.some((entry) => entry.path === '/en/tools/uuid-generator/')).toBe(false);
+    expect(entries.some((entry) => entry.path === '/en/tools/text-cleaner/')).toBe(false);
   });
 
   it('publishes the Grammar Checker cohort date without redating untreated tools', () => {
@@ -36,9 +39,13 @@ describe('sitemap entry builders', () => {
   });
 
   it('keeps AI and ordinary page buckets distinct', () => {
+    // The AI discovery bucket is published only when the production flag is
+    // enabled; pin it so this unit test matches the deployed topology.
+    vi.stubEnv('PUBLIC_AI_DISCOVERY_ENABLED', 'true');
     const entries = buildPagesSitemapEntries();
     expect(entries.find((entry) => entry.path === '/en/ai/')?.lastmod).toBe('2026-07-08');
     expect(entries.find((entry) => entry.path === '/en/')?.lastmod).toBe('2026-06-02');
+    vi.unstubAllEnvs();
   });
 
   it('derives the priority child date from the represented entries', () => {
@@ -61,7 +68,11 @@ describe('sitemap entry builders', () => {
   it('still publishes priority tools that are indexable', () => {
     const entries = buildPrioritySitemapEntries();
     expect(entries.some((entry) => entry.path === '/en/tools/json-formatter/')).toBe(true);
-    expect(entries.some((entry) => entry.path === '/en/tools/base64/')).toBe(false);
+    // base64 is a priority tool that is no longer suppressed and must publish.
+    expect(entries.some((entry) => entry.path === '/en/tools/base64/')).toBe(true);
+    // The only remaining suppressed priority tool (en) stays out of the
+    // priority sitemap.
+    expect(entries.some((entry) => entry.path === '/en/tools/ip-validator/')).toBe(false);
   });
 
   it('publishes the active organic recovery routes with their real refresh date', () => {

@@ -208,8 +208,8 @@ const indexCopyByLocale: Record<AiModelComparisonLocale, AiModelComparisonIndexC
     pricingNote:
       'These pages compare listed text token prices only. They exclude cache discounts, search fees, audio pricing, currency conversion, enterprise terms, and model quality.',
     seoDescription:
-      'Compare OpenAI, Claude, Gemini, DeepSeek, Grok, Perplexity, Mistral, Cohere, Qwen, and Kimi API token costs with source-backed pricing tables and scenario estimates.',
-    seoTitle: 'AI Model Cost Comparisons - GPT, Claude, Gemini, Mistral and Qwen Pricing',
+      'Compare OpenAI, Claude, Gemini, DeepSeek, Grok and more AI API token costs with source-backed pricing tables and scenario estimates.',
+    seoTitle: 'AI Model Cost Comparison - GPT, Claude, Gemini, Mistral, Qwen',
     toolCtaLabel: 'Estimate your own token cost',
   },
   zh: {
@@ -220,8 +220,8 @@ const indexCopyByLocale: Record<AiModelComparisonLocale, AiModelComparisonIndexC
     pricingNote:
       '这些页面只对比文本 token 标价，不包含缓存折扣、搜索费用、音频价格、汇率换算、企业合同价格或模型质量评价。',
     seoDescription:
-      '对比 OpenAI、Claude、Gemini、DeepSeek、Grok、Perplexity、Mistral、Cohere、Qwen 和 Kimi API token 成本，包含带来源的价格表和场景估算。',
-    seoTitle: 'AI 模型费用对比 - GPT、Claude、Gemini、Mistral 与 Qwen 价格',
+      '对比 OpenAI、Claude、Gemini、DeepSeek、Grok 等常见模型的 API token 成本，包含带来源的价格表和场景估算。',
+    seoTitle: 'AI 模型费用对比 - GPT、Claude、Gemini、Mistral、Qwen',
     toolCtaLabel: '估算自己的 Token 成本',
   },
 };

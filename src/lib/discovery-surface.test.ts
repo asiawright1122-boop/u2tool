@@ -113,7 +113,9 @@ describe('discovery surface governance', () => {
     expect(slugsByCategory.get('image')).toContain('image-cropper');
     expect(slugsByCategory.get('image')).toContain('gif-maker');
     expect(slugsByCategory.get('network')).toContain('database-connection-tester');
-    expect(slugsByCategory.get('network')?.slice(0, 2)).toEqual(['ip-lookup', 'ip-validator']);
+    // ip-validator is suppressed (noindex) under the current index policy, so
+    // the network spotlight leads with indexable ip-lookup instead.
+    expect(slugsByCategory.get('network')?.[0]).toBe('ip-lookup');
     expect(slugsByCategory.get('finance')).toContain('iban-validator');
     expect(slugsByCategory.get('math')).toContain('compound-interest-calculator');
     expect(slugsByCategory.get('math')).toContain('tile-calculator');

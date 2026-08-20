@@ -197,8 +197,12 @@ async function validateSitemaps(): Promise<void> {
     resolveSitemapLastmod('/en/tools/sql-query-optimizer/', 'tools')
   );
   assert(
-    !toolLastmods.has(`${CANONICAL_BASE_URL}/en/tools/uuid-generator/`),
-    'tools sitemap: suppressed UUID Generator should be absent'
+    toolLastmods.has(`${CANONICAL_BASE_URL}/en/tools/uuid-generator/`),
+    'tools sitemap: restored p1 UUID Generator should be present'
+  );
+  assert(
+    !toolLastmods.has(`${CANONICAL_BASE_URL}/en/tools/text-cleaner/`),
+    'tools sitemap: suppressed catalog tool should be absent'
   );
   assertExpectedLastmod(
     pageLastmods,

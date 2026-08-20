@@ -1,5 +1,6 @@
 import type { APIRoute } from 'astro';
 import { tools } from '@/config/tools';
+import { filterIndexableTools } from '@/lib/index-suppression';
 import { discoveryCategoryPriority } from '@/lib/discovery-surface';
 import { getLocalizedPath, locales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
@@ -16,7 +17,7 @@ export const GET: APIRoute = async ({ params, url }) => {
     discoveryCategoryPriority.map((category, index) => [category, index])
   );
 
-  const toolsIndex = [...tools]
+  const toolsIndex = [...filterIndexableTools(locale, tools)]
     .sort((left, right) => {
       const leftPriority = categoryPriority.get(left.category) ?? Number.MAX_SAFE_INTEGER;
       const rightPriority = categoryPriority.get(right.category) ?? Number.MAX_SAFE_INTEGER;

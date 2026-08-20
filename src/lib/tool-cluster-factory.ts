@@ -12,6 +12,7 @@
 
 import { tools } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
+import { filterIndexableTools } from './index-suppression';
 import { buildLocalizedPageUrl, getHreflang, resolveMetaDescription } from './seo';
 import type { ToolClusterCopy, ToolClusterGroup, ToolClusterItem } from './tool-cluster-types';
 
@@ -85,18 +86,22 @@ export function buildClusterItems(
 ): ToolClusterItem[] {
   const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
 
-  return slugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  // Only indexable (non-suppressed) tools may appear on discovery surfaces.
+  return filterIndexableTools(
+    locale,
+    slugs
+      .map((slug) => toolBySlug.get(slug))
+      .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
+      .map((tool) => ({
+        category: tool.category,
+        categoryName: categoryNames[tool.category] || tool.category,
+        description: toolDescriptions[tool.slug] || '',
+        href: getLocalizedPath(locale, `/tools/${tool.slug}`),
+        icon: tool.icon,
+        name: toolNames[tool.slug] || tool.slug,
+        slug: tool.slug,
+      })),
+  );
 }
 
 /**

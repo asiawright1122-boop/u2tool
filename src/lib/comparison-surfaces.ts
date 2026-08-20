@@ -1,5 +1,6 @@
 import { tools, type ToolCategory } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
+import { filterIndexableTools } from './index-suppression';
 import type { DiscoveryCandidate } from './ai-discovery/types';
 import {
   phaseTwentyOneComparisonCopy,
@@ -1267,24 +1268,27 @@ function buildSurfaceTools(
   return definition.workflows.map((workflow) => ({
     slug: workflow.id,
     title: copy.workflows[workflow.id],
-    tools: workflow.toolSlugs
-      .map((slug) => {
-        const tool = toolBySlug.get(slug);
-        if (!tool) {
-          return null;
-        }
+    tools: filterIndexableTools(
+      locale,
+      workflow.toolSlugs
+        .map((slug) => {
+          const tool = toolBySlug.get(slug);
+          if (!tool) {
+            return null;
+          }
 
-        return {
-          slug,
-          name: getToolName(toolNames, slug),
-          description: getToolDescription(toolDescriptions, slug),
-          href: getLocalizedPath(locale, `/tools/${slug}`),
-          category: tool.category,
-          categoryName: categoryNames[tool.category] || tool.category,
-          workflowTitle: copy.workflows[workflow.id],
-        } satisfies ComparisonSurfaceTool;
-      })
-      .filter((tool): tool is ComparisonSurfaceTool => Boolean(tool)),
+          return {
+            slug,
+            name: getToolName(toolNames, slug),
+            description: getToolDescription(toolDescriptions, slug),
+            href: getLocalizedPath(locale, `/tools/${slug}`),
+            category: tool.category,
+            categoryName: categoryNames[tool.category] || tool.category,
+            workflowTitle: copy.workflows[workflow.id],
+          } satisfies ComparisonSurfaceTool;
+        })
+        .filter((tool): tool is ComparisonSurfaceTool => Boolean(tool)),
+    ),
   }));
 }
 

@@ -7,8 +7,13 @@
  * Retention set (stays indexable):
  *   1. Pages with any GSC demand (current OR historical clicks/impressions > 0)
  *   2. Pages covered by a rendered contract (pilot cohort)
+ *   3. Pages with product priority `pilot` or `p1` (authoritative retention
+ *      signals — null demand means missing evidence, NOT zero demand)
+ *   4. Pages protected via sitemap-lastmod overrides / index-readiness
+ *      overrides
  *
- * Everything else (zero demand, template content) becomes a suppression entry:
+ * Everything else (zero demand, catalog tier, template content) becomes a
+ * suppression entry:
  *   - [locale]/tools/[slug].astro sets robots=noindex for those pages
  *   - sitemap-tools.xml excludes them
  *
@@ -36,6 +41,14 @@ interface ReadinessRow {
   url: string;
   evidence?: {
     locale?: string;
+    /**
+     * Product-authored page value tier. `pilot` and `p1` are authoritative
+     * retention signals: a high-priority tool page must stay indexable even
+     * while its GSC demand data is missing/null (evidence gap), because the
+     * absence of a checkpoint row is "unknown demand", NOT "zero demand".
+     * `catalog` pages with null demand continue to be suppressed.
+     */
+    priority?: 'pilot' | 'p1' | 'catalog';
     demand?: {
       currentClicks: number;
       currentImpressions: number;
@@ -92,6 +105,21 @@ function hasDemand(demand: DemandEvidence | undefined): boolean {
   );
 }
 
+/**
+ * Product-authored priority tiers that keep a page indexable regardless of
+ * demand data availability. `pilot` (rendered-contract cohort) and `p1`
+ * (high-priority flagship/featured tools) are deliberate retention signals;
+ * checkpoint rows for these carry null demand because GSC rows are missing
+ * (evidence gap), which must NOT be treated as zero demand. `catalog` pages
+ * are not protected here and still fall through to the demand/rendered/
+ * protected judgement below.
+ */
+function isPreservedByPriority(
+  priority: NonNullable<ReadinessRow['evidence']>['priority'] | undefined,
+): boolean {
+  return priority === 'pilot' || priority === 'p1';
+}
+
 function deriveSuppression(
   rows: ReadinessRow[],
   rendered: RenderedContract[],
@@ -111,7 +139,12 @@ function deriveSuppression(
     const key = `${locale}/${slug}`;
     const entry = { locale, slug };
 
-    if (hasDemand(row.evidence?.demand) || renderedKeys.has(key) || protectedKeys.has(key)) {
+    if (
+      hasDemand(row.evidence?.demand) ||
+      isPreservedByPriority(row.evidence?.priority) ||
+      renderedKeys.has(key) ||
+      protectedKeys.has(key)
+    ) {
       retention.push(entry);
     } else {
       suppression.push(entry);
@@ -173,8 +206,9 @@ function renderOutputFile(
     `// Checkpoint: ${checkpointDate}`,
     `// Readiness JSON SHA-256: ${sourceSha256}`,
     '//',
-    '// Retention rule: pages with any GSC demand (current/historical) or a',
-    '// rendered contract stay indexable. Everything else is suppressed.',
+    '// Retention rule: pages with any GSC demand (current/historical), a',
+    '// rendered contract, a product priority of pilot/p1, or an explicit',
+    '// protected override stay indexable. Everything else is suppressed.',
     '// A suppressed page still renders (no 404) but carries robots=noindex and',
     '// is excluded from sitemap-tools.xml. Regenerate after content work.',
     'export const INDEX_SUPPRESSION: Record<string, boolean> = {',

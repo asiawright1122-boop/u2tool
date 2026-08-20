@@ -1,5 +1,6 @@
 import { categories, getPopularTools, getToolsByCategory, type ToolCategory } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
+import { filterIndexableTools } from './index-suppression';
 import { crawledNotIndexedContentRefreshToolSlugsByCategory } from './related-tools';
 
 export interface DiscoverySpotlightTool {
@@ -101,12 +102,15 @@ export function buildCategoryDiscoverySpotlights(
         name: categoryNames[category.id] || category.id,
         popularCount: categoryTools.filter((tool) => tool.popular).length,
         toolCount: categoryTools.length,
-        tools: representativeSlugs.map((slug) => ({
-          slug,
-          name: toolNames[slug] || slug,
-          description: toolDescriptions[slug] || '',
-          href: getLocalizedPath(locale, `/tools/${slug}`),
-        })),
+        tools: filterIndexableTools(
+          locale,
+          representativeSlugs.map((slug) => ({
+            slug,
+            name: toolNames[slug] || slug,
+            description: toolDescriptions[slug] || '',
+            href: getLocalizedPath(locale, `/tools/${slug}`),
+          })),
+        ),
       };
     });
 }

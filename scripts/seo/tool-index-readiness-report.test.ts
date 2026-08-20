@@ -1341,6 +1341,9 @@ describe("tool index readiness evidence report", () => {
         ),
       ).size,
     ).toBe(5_700);
+    // Priority counts follow getPriorityTools()/PILOT_TOOL_SLUGS at the time
+    // the report runs: 6 pilot tools × 10 locales = 60 and 148 p1 tools × 10
+    // locales = 1480. Keep in sync when the priority or pilot registry grows.
     expect(
       input.rows.filter(
         ({ evidence: rowEvidence }) => rowEvidence.priority === "pilot",
@@ -1350,7 +1353,7 @@ describe("tool index readiness evidence report", () => {
       input.rows.filter(
         ({ evidence: rowEvidence }) => rowEvidence.priority === "p1",
       ),
-    ).toHaveLength(1_470);
+    ).toHaveLength(1_480);
     expect(
       input.rows.every(
         ({ evidence: rowEvidence }) =>
@@ -1362,11 +1365,13 @@ describe("tool index readiness evidence report", () => {
           rowEvidence.technical.renderedStatus === null,
       ),
     ).toBe(true);
+    // protectedControl cohorts: 5 ES chart tools (es) + jwt-debugger across
+    // all 10 locales. Keep in sync with index-readiness-overrides.ts.
     expect(
       input.rows.filter(
         ({ evidence: rowEvidence }) => rowEvidence.protectedControl,
       ),
-    ).toHaveLength(5);
+    ).toHaveLength(15);
   }, 60_000);
 
   it("renders recommendation-only JSON, CSV, and Markdown with complete review queues", () => {

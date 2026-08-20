@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { tools } from '@/config/tools';
+import { isIndexSuppressed } from './index-suppression';
 import {
   buildChartToolClusterGroupForTool,
   buildChartToolClusterGroups,
@@ -37,8 +38,12 @@ describe('chart tool cluster', () => {
     const groups = buildChartToolClusterGroups('en', categoryNames, toolNames, toolDescriptions);
     const groupedSlugs = groups.flatMap((group) => group.tools.map((tool) => tool.slug));
 
+    // Suppressed (noindex) tools are intentionally excluded from discovery
+    // surfaces, so only indexable cluster slugs are expected in the output.
+    const indexableSlugs = chartToolClusterSlugs.filter((slug) => !isIndexSuppressed('en', slug));
+
     expect(new Set(groupedSlugs).size).toBe(groupedSlugs.length);
-    expect(groupedSlugs.toSorted()).toEqual([...chartToolClusterSlugs].toSorted());
+    expect(groupedSlugs.toSorted()).toEqual([...indexableSlugs].toSorted());
   });
 
   it('can build the reverse-link group for chart tools only', () => {
@@ -57,7 +62,10 @@ describe('chart tool cluster', () => {
       toolDescriptions
     );
 
-    expect(chartGroup?.tools.map((tool) => tool.slug)).toContain('line-chart-generator');
+    // 'percentage-stacked-bar-chart-generator' shares bar's compare-trends
+    // group and is indexable, so it must appear; suppressed siblings (line,
+    // pie, area, radar, etc.) are filtered out.
+    expect(chartGroup?.tools.map((tool) => tool.slug)).toContain('percentage-stacked-bar-chart-generator');
     expect(jsonGroup).toBeNull();
   });
 });

@@ -1,5 +1,6 @@
 import { tools } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
+import { filterIndexableTools } from './index-suppression';
 
 export const recentLongTailToolSlugs = [
   'ai-token-calculator',
@@ -41,18 +42,22 @@ export function buildRecentToolLaunches(
 ): ToolLaunchItem[] {
   const toolBySlug = new Map(tools.map((tool) => [tool.slug, tool]));
 
-  return recentLongTailToolSlugs
-    .map((slug) => toolBySlug.get(slug))
-    .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
-    .map((tool) => ({
-      category: tool.category,
-      categoryName: categoryNames[tool.category] || tool.category,
-      description: toolDescriptions[tool.slug] || '',
-      href: getLocalizedPath(locale, `/tools/${tool.slug}`),
-      icon: tool.icon,
-      name: toolNames[tool.slug] || tool.slug,
-      slug: tool.slug,
-    }));
+  // Only indexable (non-suppressed) tools may appear on discovery surfaces.
+  return filterIndexableTools(
+    locale,
+    recentLongTailToolSlugs
+      .map((slug) => toolBySlug.get(slug))
+      .filter((tool): tool is (typeof tools)[number] => Boolean(tool))
+      .map((tool) => ({
+        category: tool.category,
+        categoryName: categoryNames[tool.category] || tool.category,
+        description: toolDescriptions[tool.slug] || '',
+        href: getLocalizedPath(locale, `/tools/${tool.slug}`),
+        icon: tool.icon,
+        name: toolNames[tool.slug] || tool.slug,
+        slug: tool.slug,
+      })),
+  );
 }
 
 export function buildToolLaunchItemList(
