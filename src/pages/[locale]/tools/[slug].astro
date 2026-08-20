@@ -496,6 +496,9 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
   {/* SEO: Hreflang tags for all 10 locales + x-default */}
   <HreflangTags path={`/tools/${tool.slug}`} slot="head" />
 
+  {/* SEO: LLM-readable full site text */}
+  <link rel="alternate" type="text/plain" title="LLM full version" href={`${BASE_URL}/llms-full.txt`} slot="head" />
+
   {/* SEO: SoftwareApplication structured data */}
   <StructuredData type="SoftwareApplication" data={softwareAppData} slot="head" />
 

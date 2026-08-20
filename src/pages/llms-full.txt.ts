@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { buildLlmsContent } from '@/lib/llms-content';
 
+export const prerender = false;
 export const GET: APIRoute = async ({ request }) => {
   const llmsContent = await buildLlmsContent('en', new URL(request.url), { isFull: true });
 
