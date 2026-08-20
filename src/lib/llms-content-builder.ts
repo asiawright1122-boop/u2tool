@@ -1,6 +1,7 @@
 import { categories, getPopularTools, getToolsByCategory, tools } from '../config/tools';
 import { buildComparisonGuides } from './comparison-surfaces';
 import { buildCategoryDiscoverySpotlights } from './discovery-surface';
+import { isIndexSuppressed } from './index-suppression';
 import { locales } from './i18n';
 import type { Locale } from './i18n';
 import { getPublicSiteUrl } from './public-env';
@@ -322,7 +323,7 @@ export function buildLlmsContentFromMessages(
         })
         .join('\n');
 
-      return `### ${spotlight.name}\n- Category URL: ${canonicalUrl(baseUrl, spotlight.href)}\n- Coverage: ${spotlight.toolCount} tools\n${allToolsMarkdown}`;
+      return `### ${spotlight.name}\n- Category URL: ${canonicalUrl(baseUrl, spotlight.href)}\n- Coverage: ${categoryTools.length} tools\n${allToolsMarkdown}`;
     })
     .filter(Boolean)
     .join('\n\n');
@@ -348,6 +349,7 @@ export function buildLlmsContentFromMessages(
     .join('\n\n');
 
   const popularToolsText = popularTools
+    .filter((tool) => !isIndexSuppressed(locale, tool.slug))
     .map((tool) => `- **${tool.name}** (${tool.slug}): ${tool.description} (${canonicalUrl(baseUrl, `/${locale}/tools/${tool.slug}`)})`)
     .join('\n');
 

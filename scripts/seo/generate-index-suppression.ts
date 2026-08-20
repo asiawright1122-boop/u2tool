@@ -137,11 +137,20 @@ function loadProtectedKeys(): Set<string> {
   }
 
   // 2. index-readiness overrides: explicit locale/slug governance entries.
+  //    Entries with an expired `expiresOn` date are skipped so that protection
+  //    lifts automatically once the governance window closes.
   const overridesPath = path.join('src', 'config', 'index-readiness-overrides.ts');
   if (fs.existsSync(overridesPath)) {
     const source = fs.readFileSync(overridesPath, 'utf8');
-    const entries = [...source.matchAll(/\{\s*locale:\s*'([a-z]{2})'\s*,\s*slug:\s*'([^']+)'/gu)];
+    const entries = [...source.matchAll(
+      /\{\s*locale:\s*'([a-z]{2})'\s*,\s*slug:\s*'([^']+)'[^}]*?(?:expiresOn:\s*'(\d{4}-\d{2}-\d{2})')?/gu,
+    )];
+    const today = new Date().toISOString().slice(0, 10);
     for (const entry of entries) {
+      const expiresOn = entry[3];
+      if (expiresOn && expiresOn < today) {
+        continue;
+      }
       protectedKeys.add(`${entry[1]}/${entry[2]}`);
     }
   }

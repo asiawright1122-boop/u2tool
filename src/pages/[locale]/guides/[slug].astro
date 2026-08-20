@@ -39,6 +39,11 @@ const relatedTools = filterIndexableTools(
     .map((toolSlug) => getToolBySlug(toolSlug))
     .filter((tool) => tool !== undefined),
 );
+const toolsMessages = (baseMessages.tools as Record<string, Record<string, unknown>>) ?? {};
+const toolNames: Record<string, string> = {};
+for (const tool of relatedTools) {
+  toolNames[tool.slug] = (toolsMessages[tool.slug]?.name as string | undefined) || tool.slug;
+}
 
 const guideLabels: Record<string, string> = {
   es: 'Guías',
@@ -168,7 +173,7 @@ const breadcrumbData = {
                     href={`/${locale}/tools/${tool.slug}/`}
                     class="rounded-full border border-slate-200 dark:border-white/10 px-4 py-2 text-sm text-slate-700 dark:text-slate-300 hover:border-amber-500/60 hover:text-amber-600 transition-colors"
                   >
-                    {tool.name}
+                    {toolNames[tool.slug]}
                   </a>
                 ))}
               </div>

@@ -82,8 +82,9 @@ Sitemap: ${BASE_URL}/sitemap-priority.xml
 Sitemap: ${BASE_URL}/sitemap-pages.xml
 Sitemap: ${BASE_URL}/sitemap-tools.xml
 
-# LLM discovery manifest
+# LLM discovery manifest (referenced in llms.txt standard, not a sitemap)
 # ${BASE_URL}/llms.txt
+# ${BASE_URL}/llms-full.txt
 `;
 
   return new Response(robotsTxt, {

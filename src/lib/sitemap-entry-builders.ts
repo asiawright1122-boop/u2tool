@@ -1,4 +1,4 @@
-import { categories } from '@/config/tools';
+import { categories, tools } from '@/config/tools';
 import {
   aiModelComparisonIndexPath,
   aiModelComparisonLocales,
@@ -16,7 +16,8 @@ import { locales } from '@/lib/i18n';
 import { onlineCalculatorClusterPath } from '@/lib/online-calculator-cluster';
 import { pdfDocumentToolClusterPath } from '@/lib/pdf-document-tool-cluster';
 import { securityToolClusterPath } from '@/lib/security-tool-cluster';
-import { getDiscoverableTools, getPriorityTools } from '@/lib/seo-discovery';
+import { getPriorityTools } from '@/lib/seo-discovery';
+import { isAiDiscoveryEnabled } from '@/lib/ai-discovery/feature-flag';
 import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { textWritingToolClusterPath } from '@/lib/text-writing-tool-cluster';
 import { buildUrl, buildUrlForLocales, type SitemapUrlEntry } from '@/lib/sitemap-utils';
@@ -30,7 +31,7 @@ import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
  */
 export function buildToolsSitemapEntries(): SitemapUrlEntry[] {
   const entries: SitemapUrlEntry[] = [];
-  const discoverableTools = getDiscoverableTools();
+  const discoverableTools = tools;
 
   for (const locale of locales) {
     for (const tool of discoverableTools) {
@@ -48,7 +49,7 @@ export function buildToolsSitemapEntries(): SitemapUrlEntry[] {
  */
 export function buildIndexableToolsSitemapEntries(): SitemapUrlEntry[] {
   const entries: SitemapUrlEntry[] = [];
-  const discoverableTools = getDiscoverableTools();
+  const discoverableTools = tools;
 
   for (const locale of locales) {
     for (const tool of discoverableTools) {
@@ -69,9 +70,11 @@ export function buildPrioritySitemapEntries(): SitemapUrlEntry[] {
   for (const locale of locales) {
     entries.push(buildUrl(`/${locale}`, '1.0', 'daily', 'pages'));
 
-    entries.push(buildUrl(`/${locale}/ai`, '0.8', 'daily', 'ai'));
-    for (const topicSlug of aiToolTopicSlugs) {
-      entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.8', 'weekly', 'ai'));
+    if (isAiDiscoveryEnabled()) {
+      entries.push(buildUrl(`/${locale}/ai`, '0.8', 'daily', 'ai'));
+      for (const topicSlug of aiToolTopicSlugs) {
+        entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.8', 'weekly', 'ai'));
+      }
     }
 
     entries.push(buildUrl(`/${locale}/tools`, '0.9', 'daily', 'pages'));
@@ -104,12 +107,14 @@ export function buildPagesSitemapEntries(): SitemapUrlEntry[] {
   for (const locale of locales) {
     entries.push(buildUrl(`/${locale}`, '1.0', 'daily', 'pages'));
 
-    entries.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', 'ai'));
-    for (const topicSlug of aiToolTopicSlugs) {
-      entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.7', 'weekly', 'ai'));
+    if (isAiDiscoveryEnabled()) {
+      entries.push(buildUrl(`/${locale}/ai`, '0.6', 'weekly', 'ai'));
+      for (const topicSlug of aiToolTopicSlugs) {
+        entries.push(buildUrl(`/${locale}${getAiToolTopicPath(topicSlug)}`, '0.7', 'weekly', 'ai'));
+      }
     }
 
-    if (isPublishedAiModelComparisonLocale(locale)) {
+    if (isAiDiscoveryEnabled() && isPublishedAiModelComparisonLocale(locale)) {
       entries.push(buildUrlForLocales(
         `/${locale}${aiModelComparisonIndexPath}`,
         '0.7',

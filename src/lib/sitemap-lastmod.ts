@@ -1,6 +1,6 @@
 import manifestJson from '@/config/sitemap-lastmod.json';
 import { locales } from '@/lib/i18n';
-import { getDiscoverableTools } from '@/lib/seo-discovery';
+import { tools } from '@/config/tools';
 
 export type SitemapLastmodBucket = 'pages' | 'ai' | 'tools';
 
@@ -11,7 +11,7 @@ export interface SitemapLastmodManifest {
 
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 const SUPPORTED_LOCALES = new Set<string>(locales);
-const DISCOVERABLE_TOOL_SLUGS = new Set(getDiscoverableTools().map((tool) => tool.slug));
+const DISCOVERABLE_TOOL_SLUGS = new Set(tools.map((tool) => tool.slug));
 
 function assertDate(value: string, label: string, today: string): void {
   const parsed = new Date(`${value}T00:00:00Z`);

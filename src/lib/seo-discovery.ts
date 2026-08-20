@@ -8,10 +8,6 @@ import { getPublicSiteUrl } from '@/lib/public-env';
 import { withPageUrlTrailingSlash } from '@/lib/seo';
 import { organicRecoveryPrioritySlugs } from '@/lib/organic-search-portfolio';
 
-const discoveryToolBlocklist = new Set<string>([
-  // Add temporarily suppressed tool slugs here when a route should stay out of search feeds.
-]);
-
 const highValueToolBlocklistOverrides = new Set<string>([
   'json-formatter',
   'base64',
@@ -127,17 +123,8 @@ const explicitPriorityToolSlugs = [
 
 export const maxIndexNowUrlsPerRun = 1000;
 
-export function isToolBlockedFromDiscovery(toolOrSlug: Pick<Tool, 'slug'> | string): boolean {
-  const slug = typeof toolOrSlug === 'string' ? toolOrSlug : toolOrSlug.slug;
-  return discoveryToolBlocklist.has(slug) && !highValueToolBlocklistOverrides.has(slug);
-}
-
-export function getDiscoverableTools(): Tool[] {
-  return tools.filter((tool) => !isToolBlockedFromDiscovery(tool));
-}
-
 export function getPriorityTools(): Tool[] {
-  const discoverableToolMap = new Map(getDiscoverableTools().map((tool) => [tool.slug, tool]));
+  const toolMap = new Map(tools.map((tool) => [tool.slug, tool]));
   const orderedSlugs = [
     ...explicitPriorityToolSlugs,
     ...highValueToolBlocklistOverrides,
@@ -151,7 +138,7 @@ export function getPriorityTools(): Tool[] {
       continue;
     }
 
-    const tool = discoverableToolMap.get(slug);
+    const tool = toolMap.get(slug);
     if (!tool) {
       continue;
     }
@@ -200,6 +187,15 @@ export function buildPriorityRoutePaths(locale: Locale): string[] {
   return Array.from(paths);
 }
 
+/**
+ * Build IndexNow URLs in priority tiers so that when the per-run limit is hit,
+ * the highest-priority paths (homepages, tool indexes) are preserved across
+ * ALL locales instead of filling the quota with one locale's full set.
+ *
+ * Tier 1: locale homepages + tool/compare hubs + AI hub
+ * Tier 2: AI topics + comparison slugs + category pages
+ * Tier 3: priority tool pages (in priority order, across locales)
+ */
 export function buildPriorityIndexNowUrls(
   baseUrl = getPublicSiteUrl(),
   options: {
@@ -207,21 +203,57 @@ export function buildPriorityIndexNowUrls(
     selectedLocales?: readonly Locale[];
   } = {}
 ): string[] {
-  const urls = new Set<string>();
   const normalizedBaseUrl = baseUrl.replace(/\/+$/, '');
   const selectedLocales = options.selectedLocales ?? locales;
+  const limit = options.limit ?? maxIndexNowUrlsPerRun;
+  const seen = new Set<string>();
+  const result: string[] = [];
 
+  const add = (path: string): void => {
+    const url = withPageUrlTrailingSlash(`${normalizedBaseUrl}${path}`);
+    if (seen.has(url)) return;
+    seen.add(url);
+    if (result.length < limit) {
+      result.push(url);
+    }
+  };
+
+  // Tier 1: hub pages across all locales
   for (const locale of selectedLocales) {
-    for (const path of buildPriorityRoutePaths(locale)) {
-      urls.add(withPageUrlTrailingSlash(`${normalizedBaseUrl}${path}`));
+    add(`/${locale}`);
+    add(`/${locale}/tools`);
+    add(`/${locale}/compare`);
+    if (isAiDiscoveryEnabled()) {
+      add(`/${locale}/ai`);
     }
   }
 
-  return Array.from(urls).slice(0, options.limit ?? maxIndexNowUrlsPerRun);
+  // Tier 2: topic/category/comparison pages across all locales
+  for (const locale of selectedLocales) {
+    for (const topicSlug of aiToolTopicSlugs) {
+      add(`/${locale}${getAiToolTopicPath(topicSlug)}`);
+    }
+    for (const slug of comparisonSurfaceSlugs) {
+      add(`/${locale}/compare/${slug}`);
+    }
+    for (const category of categories) {
+      add(`/${locale}/categories/${category.id}`);
+    }
+  }
+
+  // Tier 3: priority tool pages across all locales (interleaved)
+  const priorityTools = getPriorityTools();
+  for (const tool of priorityTools) {
+    for (const locale of selectedLocales) {
+      if (isIndexSuppressed(locale, tool.slug)) continue;
+      add(`/${locale}/tools/${tool.slug}`);
+    }
+  }
+
+  return result;
 }
 
 export const seoDiscoveryConfig = {
-  discoveryToolBlocklist,
   highValueToolBlocklistOverrides,
   explicitPriorityToolSlugs,
 };
