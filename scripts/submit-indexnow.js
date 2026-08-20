@@ -38,6 +38,7 @@ const PRIORITY_TOOL_SLUGS = [
   'json-formatter',
   'base64',
   'url-encoder',
+  'jwt-decoder',
   'xml-formatter',
   'uuid-generator',
   'password-generator',

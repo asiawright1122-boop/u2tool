@@ -71,6 +71,7 @@
     "validate:internal-link-canonicals": "node --import tsx/esm scripts/validation/validate-internal-link-canonicals.ts",
     "validate:html-links": "node --import tsx/esm scripts/validation/validate-html-links.ts",
     "validate:search-engine-compliance": "node --import tsx/esm scripts/validation/validate-search-engine-compliance.ts",
+    "validate:indexnow-priority-drift": "vitest run scripts/validation/indexnow-priority-drift.test.ts",
     "validate:robots-txt": "node --import tsx/esm scripts/validation/validate-robots-txt.ts",
     "validate:decommissioned-routes": "node --import tsx/esm scripts/validation/validate-decommissioned-routes.ts",
     "validate:hreflang-scc": "node --import tsx/esm scripts/validation/validate-hreflang-scc.ts",
