@@ -1834,7 +1834,7 @@ const checks: RenderedSeoCheck[] = [
     ],
     htmlMustInclude: [
       '/en/tools/bar-chart-generator/',
-      '/en/tools/line-chart-generator/',
+      '/en/tools/waterfall-chart-generator/',
       '/en/categories/charts/',
     ],
   },
@@ -1865,7 +1865,7 @@ const checks: RenderedSeoCheck[] = [
       'Online Calculators for Finance, Math, Work & Daily Life',
     ],
     htmlMustInclude: [
-      '/en/tools/mortgage-calculator/',
+      '/en/tools/loan-calculator/',
       '/en/tools/percentage-calculator/',
       '/en/categories/finance/',
     ],
@@ -1881,8 +1881,8 @@ const checks: RenderedSeoCheck[] = [
       'PDF, Document & Spreadsheet Tools',
     ],
     htmlMustInclude: [
-      '/en/tools/pdf-merger/',
-      '/en/tools/excel-to-json/',
+      '/en/tools/pdf-to-image/',
+      '/en/tools/excel-viewer/',
       '/en/categories/office/',
     ],
   },
@@ -1999,7 +1999,7 @@ const checks: RenderedSeoCheck[] = [
     htmlMustInclude: [
       'data-tool-cluster="chart"',
       '/en/tools/chart-generators/',
-      '/en/tools/line-chart-generator/',
+      '/en/tools/waterfall-chart-generator/',
     ],
   },
   {
@@ -2012,33 +2012,33 @@ const checks: RenderedSeoCheck[] = [
     htmlMustInclude: [
       'data-tool-cluster="developer-data"',
       '/en/tools/developer-data-formatters/',
-      '/en/tools/json-viewer/',
+      '/en/tools/xml-formatter/',
     ],
   },
   {
     name: 'Online calculator cluster backlink',
-    path: '/en/tools/mortgage-calculator/',
-    titleIncludes: 'Mortgage',
-    descriptionIncludes: 'mortgage',
-    h1Includes: 'Mortgage',
+    path: '/en/tools/loan-calculator/',
+    titleIncludes: 'Loan',
+    descriptionIncludes: 'loan',
+    h1Includes: 'Loan',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     htmlMustInclude: [
       'data-tool-cluster="online-calculator"',
       '/en/tools/online-calculators/',
-      '/en/tools/roi-calculator/',
+      '/en/tools/percentage-calculator/',
     ],
   },
   {
     name: 'PDF document tool cluster backlink',
-    path: '/en/tools/pdf-merger/',
-    titleIncludes: 'PDF Merger',
+    path: '/en/tools/pdf-to-image/',
+    titleIncludes: 'PDF to Image',
     descriptionIncludes: 'PDF',
-    h1Includes: 'PDF Merger',
+    h1Includes: 'PDF to Image',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     htmlMustInclude: [
       'data-tool-cluster="pdf-document"',
       '/en/tools/pdf-document-converters/',
-      '/en/tools/pdf-splitter/',
+      '/en/tools/excel-viewer/',
     ],
   },
   {
@@ -2051,7 +2051,7 @@ const checks: RenderedSeoCheck[] = [
     htmlMustInclude: [
       'data-tool-cluster="security"',
       '/en/tools/security-password-hash-tools/',
-      '/en/tools/password-strength/',
+      '/en/tools/hash-generator/',
     ],
   },
   {
@@ -2349,8 +2349,8 @@ const checks: RenderedSeoCheck[] = [
     h1Includes: 'Hex Editor',
     schemaTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
     bodyMustInclude: [
-      'Open a local binary file up to 2 MiB',
-      'separate text converter encodes and decodes UTF-8 text',
+      'Use this free online hex editor to open a local binary file up to 2 MiB',
+      'The built-in text converter handles text to hex and hex to text for UTF-8',
     ],
     bodyMustNotInclude: [
       'Double-click any hex value',
@@ -5240,7 +5240,7 @@ const checks: RenderedSeoCheck[] = [
     descriptionIncludes: 'JWT',
     h1Includes: 'Choose the Right JWT Tool',
     schemaTypes: ['Organization', 'WebSite', 'CollectionPage', 'BreadcrumbList'],
-    bodyMustInclude: ['JWT Decoder', 'JWT Generator'],
+    bodyMustInclude: ['JWT Decoder', 'JWT Debugger'],
   },
 ];
 
