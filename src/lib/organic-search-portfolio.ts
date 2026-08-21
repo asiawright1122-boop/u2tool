@@ -143,18 +143,18 @@ export const organicSearchProfiles: readonly OrganicSearchProfile[] = [
   {
     locale: 'en',
     slug: 'gantt-chart-generator',
-    tier: 'P1',
-    status: 'capability-first',
+    tier: 'P0',
+    status: 'active-recovery',
     primaryIntent: 'Create and export a simple Gantt chart without signup',
     demandEvidence:
       'Largest documented page-level impression loss at 6,256 impressions.',
     evidenceBlock:
-      'Current task/date/progress chart and PNG/SVG export; dependency, critical-path, and CSV claims remain blocked.',
+      'Local-only task editor with names/dates/progress, milestones, dependency edges, critical-path highlighting, project templates and color themes; PNG/SVG chart export; JSON/CSV project import/export and browser-local persistence. Dependencies, critical-path, and CSV/JSON exchange claims are implemented and guarded by release-blocking capability evidence. Explicit limits: no collaboration, cloud sync, resource allocation, enterprise workflow, or live multi-user status.',
     scores: {
       demand: 30,
-      functionalCompleteness: 12,
-      uniqueEvidence: 8,
-      achievableCompetition: 4,
+      functionalCompleteness: 24,
+      uniqueEvidence: 15,
+      achievableCompetition: 6,
       trustAndRisk: 10,
       localization: 5,
     },
