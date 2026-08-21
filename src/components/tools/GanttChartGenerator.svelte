@@ -266,15 +266,19 @@
   }
 
   async function exportChart(format: 'png' | 'svg'): Promise<void> {
-    const chart = chartRef?.getEchartsInstance?.();
-    if (!chart) {
+    if (!chartRef) {
+      errorMessage = t('chartNotReady');
+      return;
+    }
+    const echartInstance = chartRef?.getEchartsInstance?.();
+    if (!echartInstance) {
       errorMessage = t('chartNotReady');
       return;
     }
     const link = document.createElement('a');
     link.download = `gantt-chart.${format}`;
     if (format === 'png') {
-      link.href = chart.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: chartTheme.backgroundColor });
+      link.href = echartInstance.getDataURL({ type: 'png', pixelRatio: 2, backgroundColor: chartTheme.backgroundColor });
       link.click();
       return;
     }
@@ -282,8 +286,8 @@
     const echarts = (await import('@/lib/echarts/custom-svg-runtime')).default;
     const svgChart = echarts.init(document.createElement('div'), undefined, {
       renderer: 'svg',
-      width: Math.max(chart.getWidth(), 1),
-      height: Math.max(chart.getHeight(), 1),
+      width: Math.max(echartInstance.getWidth(), 1),
+      height: Math.max(echartInstance.getHeight(), 1),
     });
     try {
       svgChart.setOption(getChartOption(), true);

@@ -487,6 +487,26 @@ describe('validate-live-redirects', () => {
       expect(report.issues.some((i) => i.kind === 'noindex')).toBe(false);
     });
 
+    it('flags noindex by default, but allows it when noindexExpected (suppressed tool)', () => {
+      const noindexHtml = '<html><head><meta name="robots" content="noindex,nofollow"><title>Tool</title></head><body><h1>Tool</h1></body></html>';
+      const strict = auditHtmlSafety(noindexHtml, 'en');
+      expect(strict.safe).toBe(false);
+      expect(strict.issues.some((i) => i.kind === 'noindex')).toBe(true);
+
+      const tolerant = auditHtmlSafety(noindexHtml, 'en', { noindexExpected: true });
+      expect(tolerant.safe).toBe(true);
+      expect(tolerant.issues.length).toBe(0);
+    });
+
+    it('noindexExpected does NOT suppress soft-404 or reasoning-trace detection', () => {
+      const badHtml = '<html><head><meta name="robots" content="noindex"><title>Page Not Found</title></head><body><h1>Oops</h1><p>chain-of-thought: step 1</p></body></html>';
+      const report = auditHtmlSafety(badHtml, 'en', { noindexExpected: true });
+      expect(report.safe).toBe(false);
+      expect(report.issues.some((i) => i.kind === 'soft-404')).toBe(true);
+      expect(report.issues.some((i) => i.kind === 'reasoning-trace')).toBe(true);
+      expect(report.issues.some((i) => i.kind === 'noindex')).toBe(false);
+    });
+
     it('never throws on malformed HTML', () => {
       // Must Have 2: 纯函数绝不因畸形 HTML 崩溃
       const malformed = '<<<><h1>not closed' + String.fromCharCode(0) + '<<<';

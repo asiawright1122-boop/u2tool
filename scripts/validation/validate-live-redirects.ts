@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { locales } from '../../src/lib/i18n';
 import { REASONING_TRACE_PATTERNS } from '../../src/lib/safety-patterns';
+import { isIndexSuppressed } from '../../src/lib/index-suppression';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -128,10 +129,16 @@ function snippet(text: string, keyword: string): string {
  * 对终点 HTML 做安全审计（纯函数，无 I/O）：
  *   1. 软 404：仅扫 <h1>/<title>，防正文误报
  *   2. 推理痕迹泄露：复用 REASONING_TRACE_PATTERNS（ADR 0002 单一真源）
- *   3. noindex：robots meta 退出索引 = 工具页 SEO 失败
+ *   3. noindex：robots meta 退出索引。若该终点是有意被 M2 索引
+ *      抑制的工具页（noindexExpected），则视为预期状态而非缺陷；
+ *      软 404 / 推理痕迹检测不受此选项影响。
  * 永不抛错；畸形 HTML 只会产生较少匹配，不会崩溃。
  */
-export function auditHtmlSafety(html: string, locale: string): SafetyReport {
+export function auditHtmlSafety(
+  html: string,
+  locale: string,
+  opts: { noindexExpected?: boolean } = {}
+): SafetyReport {
   const issues: SafetyIssue[] = [];
 
   // 1. 软 404（仅 heading/title）
@@ -154,8 +161,11 @@ export function auditHtmlSafety(html: string, locale: string): SafetyReport {
     }
   }
 
-  // 3. noindex robots meta
-  if (/<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)) {
+  // 3. noindex robots meta（有意抑制的工具页 noindex 属预期策略，跳过）
+  if (
+    !opts.noindexExpected &&
+    /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html)
+  ) {
     issues.push({ kind: 'noindex', label: 'robots noindex', context: '<meta robots noindex>' });
   }
 
@@ -442,6 +452,22 @@ function inferLocaleFromUrl(url: string): string {
 }
 
 /**
+ * 从终点 URL 提取工具 slug（/en/tools/mortgage-calculator/ → mortgage-calculator）。
+ * 非工具路径返回 null。
+ */
+function extractToolSlugFromUrl(url: string): string | null {
+  const m = url.match(/\/tools\/([^/?#]+)\/?$/i);
+  return m ? m[1] : null;
+}
+
+/** 判断终点 URL 对应的工具页是否被 M2 索引抑制（noindex 属预期策略） */
+function isTerminalToolSuppressed(url: string): boolean {
+  const slug = extractToolSlugFromUrl(url);
+  if (!slug) return false;
+  return isIndexSuppressed(inferLocaleFromUrl(url), slug);
+}
+
+/**
  * 获取终点 URL 的响应体（自动跟随重定向到最终页面）。
  * 仅在 --online 模式下被调用；失败返回 null 而非抛错，审计随之跳过。
  * 注意：不复用 fetchWithRetry（它强制 redirect:'manual'），这里需要
@@ -517,7 +543,8 @@ async function main(): Promise<void> {
       const body = await fetchTerminalBody(terminalUrl, WAF_BYPASS_TOKEN);
       if (body !== null) {
         const locale = inferLocaleFromUrl(terminalUrl);
-        const report = auditHtmlSafety(body, locale);
+        const noindexExpected = isTerminalToolSuppressed(terminalUrl);
+        const report = auditHtmlSafety(body, locale, { noindexExpected });
         res.safetyReport = report;
         if (!report.safe) {
           // 安全失败降级整条探测为失败
