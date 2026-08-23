@@ -45,6 +45,31 @@ describe('developer-data-tool-cluster', () => {
     expect(groupedSlugs.toSorted()).toEqual([...indexableSlugs].toSorted());
   });
 
+  it('keeps the ICS read/write pair in the same convert-models group', () => {
+    // ical-parser reads .ics files and ics-file-generator writes them. They are
+    // the two halves of one calendar-format workflow, and the cluster group is
+    // what renders the sibling links between them, so the pairing must hold.
+    expect(getDeveloperDataToolClusterGroupIdForSlug('ical-parser')).toBe('convert-models');
+    expect(getDeveloperDataToolClusterGroupIdForSlug('ics-file-generator')).toBe('convert-models');
+
+    // Suppressed tools are dropped from discovery surfaces, so both halves must
+    // stay indexable for the sibling links to actually render.
+    expect(isIndexSuppressed('en', 'ical-parser')).toBe(false);
+    expect(isIndexSuppressed('en', 'ics-file-generator')).toBe(false);
+
+    const group = buildDeveloperDataToolClusterGroupForTool(
+      'en',
+      'ics-file-generator',
+      categoryNames,
+      toolNames,
+      toolDescriptions
+    );
+    const groupedSlugs = group?.tools.map((tool) => tool.slug) ?? [];
+
+    expect(groupedSlugs).toContain('ical-parser');
+    expect(groupedSlugs).toContain('ics-file-generator');
+  });
+
   it('builds a detail-card group for cluster tools only', () => {
     const developerGroup = buildDeveloperDataToolClusterGroupForTool(
       'en',

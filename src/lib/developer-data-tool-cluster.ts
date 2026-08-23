@@ -44,6 +44,7 @@ export const developerDataToolClusterSlugs = [
   'json-to-table',
   'json-to-protobuf-converter',
   'ical-parser',
+  'ics-file-generator',
   'json-path-tester',
   'json-path-finder',
   'json-schema-validator',
@@ -124,6 +125,7 @@ const groupSlugs: Array<{
       'json-to-table',
       'json-to-protobuf-converter',
       'ical-parser',
+      'ics-file-generator',
     ],
   },
   {
