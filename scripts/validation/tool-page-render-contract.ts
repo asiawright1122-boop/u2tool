@@ -372,9 +372,12 @@ export const TOOL_PAGE_RENDER_MATRIX: ToolPageRenderExpectation[] = [
     expectedCanonicalPath: '/en/tools/ical-parser/',
     expectedIndexable: true,
     expectedJsonLdTypes: ['Organization', 'WebSite', 'SoftwareApplication', 'HowTo', 'BreadcrumbList', 'FAQPage'],
+    expectedToolCluster: 'developer-data',
+    minClusterGroups: 1,
     minSiblingToolLinks: 4,
     minFaqQuestions: 6,
     bodyMustInclude: [
+      'data-tool-cluster="developer-data"',
       'VEVENT',
       'RRULE',
       'attendees',
