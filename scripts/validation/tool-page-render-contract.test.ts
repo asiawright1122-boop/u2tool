@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 
 import { getPilotToolCapabilityProfiles } from '../../src/config/tool-capabilities';
 import { locales } from '../../src/lib/i18n';
+import { organicSearchProfiles } from '../../src/lib/organic-search-portfolio';
 import { buildToolWrapperTranslations } from '../../src/lib/tool-page-translations';
 import {
   loadBaseUiMessages,
@@ -189,10 +190,29 @@ describe('TOOL_PAGE_RENDER_MATRIX', () => {
       'en/excel-viewer',
       'en/typing-speed-test',
       'en/gantt-chart-generator',
+      'en/iban-validator',
+      'en/ical-parser',
       'ru/grammar-checker',
       'ja/json-formatter',
       'ar/password-generator',
     ]);
+  });
+
+  it('covers every active-recovery P0 route from the organic search portfolio', () => {
+    const coveredRoutes = new Set(
+      TOOL_PAGE_RENDER_MATRIX.map((entry) => `${entry.locale}/${entry.slug}`)
+    );
+    const p0Routes = organicSearchProfiles
+      .filter((profile) => profile.tier === 'P0' && profile.status === 'active-recovery')
+      .map((profile) => `${profile.locale}/${profile.slug}`);
+
+    expect(p0Routes.length).toBeGreaterThan(0);
+
+    const uncovered = p0Routes.filter((route) => !coveredRoutes.has(route));
+    expect(
+      uncovered,
+      `active-recovery P0 routes must have render-contract coverage: ${uncovered.join(', ')}`
+    ).toEqual([]);
   });
 });
 

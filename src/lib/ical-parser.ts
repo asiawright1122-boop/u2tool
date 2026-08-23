@@ -272,7 +272,14 @@ export function parseRRule(rrule: string): string {
   }
   
   if (rules.INTERVAL && rules.INTERVAL !== '1') {
-    result = `Every ${rules.INTERVAL} ${rules.FREQ?.toLowerCase().replace('ly', 's') || 'times'}`;
+    const intervalUnits: Record<string, string> = {
+      DAILY: 'days',
+      WEEKLY: 'weeks',
+      MONTHLY: 'months',
+      YEARLY: 'years',
+    };
+    const unit = intervalUnits[rules.FREQ ?? ''] ?? 'times';
+    result = `Every ${rules.INTERVAL} ${unit}`;
   }
   
   if (rules.COUNT) {
