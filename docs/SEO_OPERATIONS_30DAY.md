@@ -42,7 +42,7 @@
   1. 重新生成清单：`npm run seo:gsc-submit-batches:generate [-- --batch-size 20]`
   2. 校验清单与 sitemap-tools.xml 一致性：`npm run validate:gsc-submit-list`（已纳入 qa:production:postbuild）
   3. GSC → 网址检查 → 逐个粘贴 URL → 请求编入索引（有配额，每天约 10-30 条，分 ~87 天做完，优先 en/es/ru/ja）
-- Bing 深化：Bing Webmaster Tools 验证站点 → 提交 sitemap.xml（IndexNow 已覆盖 620 个 priority URL，但完整 sitemap 应一并提交）
+- Bing 深化（2026-08-24 核验）：Bing Webmaster Tools **已验证接入**。剩余手动动作是**提交 sitemap**：在 Bing Webmaster → Sitemaps 提交 `https://www.u2tool.com/sitemap.xml`（索引，会自动解析子 sitemap；勿提交废弃的 `sitemap-index.xml`，其 302 到首页）。线下核验：`sitemap.xml`/`sitemap-priority.xml`/`sitemap-pages.xml`/`sitemap-tools.xml` 全部 HTTP 200，robots.txt 已声明 4 份。
 - **IndexNow 使用边界（2026-08-24）**：IndexNow 是"实时变更通知"协议，只推**近期真实变更/新增**的页，不符"批量收录"语义，勿全量推 1724（有滥用限流风险）。2026-08-04 已推 620 个 priority URL；2026-08-24 追加推送"近期变更通知"20 条（P0-1 恢复的旗舰工具 jwt-decoder/jwt-debugger/hex-editor 等 + 8-17 维护页），Bing 200 / Yandex 202 均接受，线上抽查均 `index, follow`。变更清单可复用 `exports/seo/indexnow-change-notify-*.txt`，命令：
   `npm run submit:indexnow:dry -- --urls-file=<file>`（预览）/ `npm run submit:indexnow -- --urls-file=<file>`（推送，发往 Bing + Yandex）
 
