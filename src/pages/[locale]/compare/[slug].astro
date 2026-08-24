@@ -19,7 +19,7 @@ import {
 import { loadBaseUiMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPagePath, getHreflang, resolveMetaDescription } from '@/lib/seo';
+import { buildLocalizedPagePath, getHreflang, resolveMetaDescription, withBrand } from '@/lib/seo';
 
 export const prerender = true;
 
@@ -106,14 +106,14 @@ const collectionData = {
   <HreflangTags path={`/compare/${guide.slug}`} slot="head" />
   <StructuredData type="BreadcrumbList" data={breadcrumbData} slot="head" />
   <StructuredData type="CollectionPage" data={collectionData} slot="head" />
-  <meta property="og:title" content={`${guide.title} | U2Tool`} slot="head" />
+  <meta property="og:title" content={withBrand(guide.title)} slot="head" />
   <meta property="og:description" content={pageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
   <meta property="og:url" content={`${BASE_URL}${guide.href}`} slot="head" />
   <meta property="og:site_name" content="U2Tool" slot="head" />
   <meta name="twitter:card" content="summary_large_image" slot="head" />
-  <meta name="twitter:title" content={`${guide.title} | U2Tool`} slot="head" />
+  <meta name="twitter:title" content={withBrand(guide.title)} slot="head" />
   <meta name="twitter:description" content={pageDescription} slot="head" />
   <meta name="twitter:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
 

@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import {
   META_DESCRIPTION_MAX_LENGTH,
@@ -330,5 +333,35 @@ describe('default robots helper', () => {
   });
   it('returns index, follow when no search params', () => {
     expect(getDefaultRobots(false)).toBe('index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
+  });
+});
+
+describe('og/twitter title branding guard', () => {
+  const srcRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+
+  function collectAstroFiles(dir: string, out: string[] = []): string[] {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        collectAstroFiles(full, out);
+      } else if (entry.isFile() && entry.name.endsWith('.astro')) {
+        out.push(full);
+      }
+    }
+    return out;
+  }
+
+  it('does not append the brand manually to og:title/twitter:title (must route through withBrand)', () => {
+    const offenders: string[] = [];
+    // Rejects any og:title/twitter:title whose content is a template literal that
+    // hard-codes the "| U2Tool" suffix, which bypasses withBrand() length gating.
+    const forbidden = /(og:title|twitter:title)"[^>]*content={\$\{[^}]*\|\s*U2Tool/;
+    for (const file of collectAstroFiles(srcRoot)) {
+      const lineMatches = fs.readFileSync(file, 'utf8').split('\n').map((line, index) => ({ line, index }));
+      for (const { line, index } of lineMatches.filter((m) => forbidden.test(m.line))) {
+        offenders.push(`${path.relative(srcRoot, file)}:${index + 1}: ${line.trim()}`);
+      }
+    }
+    expect(offenders).toEqual([]);
   });
 });

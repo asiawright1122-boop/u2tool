@@ -32,7 +32,7 @@ import {
   buildMobileNavMessages,
 } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl, resolveMetaDescription } from '@/lib/seo';
+import { buildLocalizedPageUrl, resolveMetaDescription, withBrand } from '@/lib/seo';
 
 export const prerender = false;
 
@@ -83,7 +83,7 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
 ---
 
 <BaseLayout
-  title={`${aiPageTitle} | U2Tool`}
+  title={aiPageTitle}
   description={aiPageDescription}
   locale={locale}
   canonicalPath="/ai"
@@ -91,7 +91,7 @@ const comparisonGuides = buildComparisonGuides(locale, categoryMessages, toolNam
 >
   <HreflangTags path="/ai" slot="head" />
   <StructuredData type="ItemList" data={aiDirectoryItemListData} slot="head" />
-  <meta property="og:title" content={`${aiPageTitle} | U2Tool`} slot="head" />
+  <meta property="og:title" content={withBrand(aiPageTitle)} slot="head" />
   <meta property="og:description" content={aiPageDescription} slot="head" />
   <meta property="og:image" content={`${BASE_URL}/og-default.svg`} slot="head" />
   <meta property="og:type" content="website" slot="head" />
