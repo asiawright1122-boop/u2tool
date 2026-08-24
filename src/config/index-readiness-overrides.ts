@@ -129,4 +129,68 @@ export const INDEX_READINESS_OVERRIDES: IndexReadinessOverride[] = [
       'Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
     expiresOn: '2026-10-01',
   },
+  {
+    locale: 'en',
+    slug: 'python-formatter',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 866-char description, 5 FAQ). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'api-response-formatter',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 682-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-to-zod',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 710-char description). Frequent search sibling of already-visible json-to-typescript. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-to-python',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 746-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-schema-generator',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 687-char description). Complement of already-visible json-schema-validator. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-path-finder',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 975-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'string-escape',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1349-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'html-entity',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1279-char description). Complement of already-visible html-encoder. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
 ];
