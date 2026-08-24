@@ -1,4 +1,8 @@
 import { assertValidLastmods } from './sitemap-lastmod-xml';
+import {
+  buildToolsSitemapEntries,
+  buildIndexableToolsSitemapEntries,
+} from '../../src/lib/sitemap-entry-builders';
 
 const BASE_URL = (process.env.PROD_BASE_URL || 'https://www.u2tool.com').replace(/\/+$/, '');
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -43,6 +47,20 @@ async function fetchWithRetry(url: string, init: RequestInit = {}, attempts = 3)
 
 function extractLocs(xml: string): string[] {
   return Array.from(xml.matchAll(/<loc>(.*?)<\/loc>/g)).map((match) => match[1]);
+}
+
+/** Normalizes a live sitemap <loc> (full URL or bare path) into a trailing-slash
+ * pathname, matching the `path` shape produced by sitemap-entry-builders. */
+function normalizeLocPath(loc: string): string {
+  let pathname = loc.trim();
+  try {
+    pathname = new URL(pathname).pathname;
+  } catch {
+    if (!pathname.startsWith('/')) {
+      pathname = `/${pathname}`;
+    }
+  }
+  return `${pathname.replace(/\/{2,}/g, '/').replace(/\/+$/, '')}/`;
 }
 
 function extractLastmods(xml: string): string[] {
@@ -141,9 +159,31 @@ async function validateSitemapConsistency(): Promise<void> {
   const toolLocs = extractLocs(toolsXml);
   assert(new Set(priorityLocs).size === priorityLocs.length, 'priority sitemap contains duplicate URLs');
   assert(new Set(toolLocs).size === toolLocs.length, 'tools sitemap contains duplicate URLs');
-  assert(toolLocs.length >= 1000, `tools sitemap has unexpectedly few URLs: ${toolLocs.length}`);
   assert(priorityLocs.every((url) => url.endsWith('/') || url.endsWith('.xml')), 'priority sitemap contains non-canonical URLs without trailing slash');
   assert(toolLocs.every((url) => url.endsWith('/')), 'tools sitemap contains non-canonical tool URLs without trailing slash');
+
+  // Semantic coverage (replaces the old hard-coded `>= 1000` floor): the
+  // published tools sitemap must be exactly the indexable tool set the build
+  // expects — every indexable tool present (coverage, catches the P0-1
+  // suppression-collapse class), and no suppressed tool leaked (index
+  // hygiene). See docs/SEO_GLOBAL_AUDIT_2026-08-20.md item P2-5.
+  const indexablePaths = new Set(buildIndexableToolsSitemapEntries().map((entry) => entry.path));
+  const suppressedPaths = buildToolsSitemapEntries()
+    .map((entry) => entry.path)
+    .filter((path) => !indexablePaths.has(path));
+  const liveToolPaths = toolLocs.map(normalizeLocPath);
+
+  const missingIndexable = [...indexablePaths].filter((path) => !liveToolPaths.includes(path));
+  assert(
+    missingIndexable.length === 0,
+    `tools sitemap missing ${missingIndexable.length} indexable tools: ${missingIndexable.slice(0, 5).join(', ')}`
+  );
+
+  const leakedSuppressed = suppressedPaths.filter((path) => liveToolPaths.includes(path));
+  assert(
+    leakedSuppressed.length === 0,
+    `tools sitemap leaked ${leakedSuppressed.length} suppressed tools: ${leakedSuppressed.slice(0, 5).join(', ')}`
+  );
 }
 
 async function validateRootRedirectionAndLoopback(): Promise<void> {
