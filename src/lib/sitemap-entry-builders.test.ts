@@ -73,6 +73,39 @@ describe('sitemap entry builders', () => {
     expect(entries.some((entry) => entry.path === '/en/tools/ip-validator/')).toBe(false);
   });
 
+  // Batch 2 of the priority-annotation-gap recovery: 10 content-rich
+  // developer-data tools were demoted to catalog tier by the 2026-07-13
+  // checkpoint despite strong independent health signals. Each now carries a
+  // protectedControl override and has its en noindex suppression lifted, so
+  // each must re-enter the indexable (M2 hygiene) sitemap at /en/, and the
+  // suppression registry must agree.
+  const BATCH2_RESTORED_TOOLS = [
+    'json-minifier',
+    'js-beautifier',
+    'yaml-formatter',
+    'csv-to-json',
+    'json-to-csharp',
+    'json-to-java',
+    'regex-escape',
+    'json-flattener',
+    'text-to-hex',
+    'hex-base64-converter',
+  ] as const;
+
+  it.each(BATCH2_RESTORED_TOOLS)(
+    're-publishes the Batch 2 recovery tool %s in the indexable en sitemap',
+    (slug) => {
+      const entries = buildIndexableToolsSitemapEntries();
+      expect(entries.some((entry) => entry.path === `/en/tools/${slug}/`)).toBe(true);
+    },
+  );
+
+  it('lifts the en noindex suppression for every Batch 2 recovery tool', () => {
+    for (const slug of BATCH2_RESTORED_TOOLS) {
+      expect(INDEX_SUPPRESSION[`en/${slug}`]).toBeFalsy();
+    }
+  });
+
   it('publishes the active organic recovery routes with their real refresh date', () => {
     const paths = new Set([
       ...buildPrioritySitemapEntries(),

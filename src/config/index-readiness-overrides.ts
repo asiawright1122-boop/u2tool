@@ -193,4 +193,84 @@ export const INDEX_READINESS_OVERRIDES: IndexReadinessOverride[] = [
       'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1279-char description). Complement of already-visible html-encoder. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
     expiresOn: '2026-10-15',
   },
+  {
+    locale: 'en',
+    slug: 'json-minifier',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 672-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'js-beautifier',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 662-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'yaml-formatter',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 504-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'csv-to-json',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 425-char description). Reverse of already-visible json-to-csv. Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-to-csharp',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 642-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-to-java',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 546-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'regex-escape',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1035-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'json-flattener',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 594-char description, 5 FAQ). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'text-to-hex',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1004-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
+  {
+    locale: 'en',
+    slug: 'hex-base64-converter',
+    protectedControl: true,
+    reason:
+      'Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1149-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.',
+    expiresOn: '2026-10-15',
+  },
 ];
