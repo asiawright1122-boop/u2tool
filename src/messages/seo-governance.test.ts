@@ -994,6 +994,10 @@ const prioritySeoKeywords = {
       title: ['嵌套饼图生成器', '嵌套饼图'],
       description: ['嵌套饼图生成器', '子分类', '占比'],
     },
+    'nightingale-rose-chart-generator': {
+      title: ['夜莺玫瑰图生成器', '夜莺玫瑰图'],
+      description: ['夜莺玫瑰图生成器', '极坐标', '分类'],
+    },
     'note-pad': {
       title: ['便签本', '便签'],
       description: ['便签本', '待办', '笔记'],
@@ -1285,6 +1289,10 @@ const prioritySeoKeywords = {
     'phone-formatter': {
       title: ['电话号码', '格式化'],
       description: ['国家区号', '表单校验', '客户数据'],
+    },
+    'pie-chart-generator': {
+      title: ['饼图生成器', '饼图'],
+      description: ['饼图生成器', '分类占比', '构成关系'],
     },
     'salary-calculator': {
       title: ['工资计算器', '时薪', '年薪'],
