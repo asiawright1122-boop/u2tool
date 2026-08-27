@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Le convertisseur JSON vers SQL permet de transformer des tableaux JSON en requêtes SQL INSERT et génère également des instructions CREATE TABLE associées. Ce outil est essentiel pour les développeurs qui doivent migrer des données structurées depuis des sources JSON (comme des API ou des fichiers de logs) vers une base de données relationnelle. En analysant automatiquement la structure des objets JSON, l'outil infère les types de données (VARCHAR, INTEGER, DATE, etc.), identifie les clés primaires potentielles et construit un schéma relationnel optimisé. La conversion inclut la gestion des valeurs imbriquées via le dénormalisation des objets enfants en colonnes relationnelles. Les utilisateurs peuvent ajuster manuellement les mappages de types ou spécifier des contraintes d'intégrité avant génération. Cette solution technique élimine les erreurs de saisie manuelle et accélère le processus de peuplement initial de bases de données.",
+  "detailed_description": "Le convertisseur JSON vers SQL transforme des tableaux JSON en requêtes SQL INSERT valides et génère automatiquement les structures de table (CREATE TABLE). L'outil analyse les propriétés des objets JSON, déduit les types de données correspondants (TEXT, INT, REAL, BOOLEAN) et produit des scripts SQL propres pour MySQL, PostgreSQL, SQLite ou SQL Server directement dans votre navigateur.",
   "usage_steps": [
-    "Chargez votre fichier JSON via le bouton 'Importer un fichier' ou collez le contenu directement dans l'éditeur de code.",
-    "Activez l'option 'Inférer les types de données' pour une détection automatique des colonnes (DATE, FLOAT, TEXT).",
-    "Sélectionnez la clé primaire parmi les champs proposés dans le menu déroulant 'Clé primaire'.",
-    "Personnalisez les noms des colonnes en cliquant sur les champs dans la section 'Mapping des attributs'.",
-    "Cochez 'Générer le CREATE TABLE' si vous souhaitez obtenir la structure de la table en plus des INSERT.",
-    "Cliquez sur 'Exporter SQL' pour télécharger le script complet ou copiez-le dans votre IDE via le bouton 'Copier dans le presse-papier'."
+    "1. Collez vos données JSON (tableau ou objet) dans la zone d'entrée.",
+    "2. Définissez le nom de la table cible selon vos besoins.",
+    "3. Vérifiez les instructions SQL INSERT et CREATE TABLE générées.",
+    "4. Cliquez sur 'Copier' pour intégrer le script SQL dans votre base de données."
   ],
   "usage_examples": [
-    "Un développeur Web convertit les réponses d'une API REST en données de test pour une base PostgreSQL en quelques clics.",
-    "Un data analyst transforme des logs JSON de serveurs en table MySQL pour analyse historique des erreurs.",
-    "Un ingénieur DevOps génère automatiquement des scripts de seed pour initialiser une base de données en environnement de staging.",
-    "Un étudiant structure les données d'un projet académique en créant directement les tables SQLite à partir de jeux de données JSON."
+    "Convertir des réponses d'API REST au format JSON en scripts d'insertion SQL pour une base PostgreSQL.",
+    "Générer des fichiers de seed pour initialiser rapidement une base de données de développement.",
+    "Migrer des exports de documents NoSQL vers des tables relationnelles."
+  ],
+  "faqs": [
+    {
+      "question": "Quel format JSON est accepté ?",
+      "answer": "La structure idéale est un tableau d'objets JSON homogènes représentant les lignes de votre table."
+    },
+    {
+      "question": "Les caractères spéciaux sont-ils protégés ?",
+      "answer": "Oui. Les apostrophes et caractères réservés sont automatiquement échappés pour éviter toute erreur de syntaxe SQL."
+    },
+    {
+      "question": "Mes données transitent-elles par un serveur ?",
+      "answer": "Non. Tout le traitement est exécuté localement dans votre navigateur, préservant la confidentialité de vos informations."
+    }
   ]
 }
