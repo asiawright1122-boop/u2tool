@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Le convertisseur SQL vers JSON permet de transformer des requêtes SQL INSERT en structures JSON conformes, en préservant les relations de données et les typages spécifiques. Cet outil cible principalement les développeurs confrontés à des migrations de bases relationnelles vers des systèmes NoSQL, la création d'API RESTful ou l'alimentation d'applications front-end nécessitant des données structurées. Techniquement, l'outil effectue une analyse lexicale des requêtes SQL pour extraire les noms de colonnes, les valeurs insérées et les métadonnées associées (comme les types de données DATE, TIMESTAMP ou BLOB), puis les convertit en paires clé/valeur JSON en appliquant des règles de mappage précises (par exemple, DATE devient une chaîne ISO 8601). Il gère notamment les cas complexes comme les requêtes multiples, les identifiants entre guillemets, ou les valeurs NULL. L'algorithme utilise un parseur AST (Abstract Syntax Tree) pour garantir une interprétation exacte des requêtes, même avec des syntaxes propres à MySQL, PostgreSQL ou SQLite. Ce processus élimine les erreurs manuelles lors de la réécriture de données et optimise le temps de développement lors de la création de jeux de test ou de la transformation de logs de base de données en payloads API.",
+  "detailed_description": "Le convertisseur SQL vers JSON transforme des requêtes SQL INSERT en structures de données JSON conformes et prêtes à l'emploi. Il extrait automatiquement les noms de colonnes et les valeurs associées, tout en appliquant les bons types de données pour les nombres, les chaînes de texte, les valeurs booléennes et les champs NULL. C'est l'outil idéal pour préparer des fixtures de test, migrer des jeux de données relationnels vers du NoSQL ou alimenter des API front-end directement dans le navigateur.",
   "usage_steps": [
-    "Collez vos requêtes SQL INSERT dans la zone de saisie multiligne étiquetée 'Requêtes SQL'.",
-    "Activez/désactivez les options de transformation via les commutateurs : 'Conserver les guillemets', 'Format date ISO 8601', 'Clés en minuscules'.",
-    "Cliquez sur 'Analyser SQL' pour déclencher le parsing lexical et la génération de l'arbre syntaxique abstrait.",
-    "Revoyez l'aperçu JSON généré, affichant les objets structurés avec types de données préservés (number, boolean, null).",
-    "Personnalisez les paramètres avancés comme l'indentation (2/4 espaces) ou le format de timestamp via le menu déroulant 'Options de sortie'.",
-    "Copiez le résultat finalisé via le bouton 'Copier dans le presse-papiers' ou téléchargez-le au format .json."
+    "1. Collez vos instructions SQL INSERT dans la zone de texte principale.",
+    "2. L'outil analyse la syntaxe et associe automatiquement colonnes et valeurs.",
+    "3. Vérifiez la structure du tableau JSON généré dans la zone de résultat.",
+    "4. Cliquez sur 'Copier' pour transférer le JSON dans votre presse-papiers."
   ],
   "usage_examples": [
-    "Transformer des données de test depuis une sauvegarde SQL vers un format utilisable dans un projet React nécessitant des fichiers JSON statiques.",
-    "Migrer une table PostgreSQL contenant des géodonnées (types POINT) vers une collection MongoDB en maintenant le format GeoJSON.",
-    "Convertir des logs d'audit (dates, utilisateurs, actions) depuis des requêtes INSERT en payloads exploitables par un système ELK (Elasticsearch, Logstash, Kibana).",
-    "Générer un jeu de données d'exemple pour une API REST Express.js à partir de requêtes SQL existantes sans écrire de code de transformation manuel."
+    "Transformer des enregistrements SQL de sauvegarde en données JSON pour une application web.",
+    "Créer des données mock pour des tests d'API à partir d'un fichier de dump SQL.",
+    "Convertir des tables de base de données relationnelles pour les importer dans MongoDB."
+  ],
+  "faqs": [
+    {
+      "question": "Quelles syntaxes SQL sont prises en charge ?",
+      "answer": "L'outil gère les instructions standard SQL INSERT INTO avec clauses VALUES simples ou multilignes."
+    },
+    {
+      "question": "Les valeurs NULL sont-elles préservées ?",
+      "answer": "Oui. Les mots-clés NULL de SQL sont fidèlement convertis en valeurs null natives en JSON."
+    },
+    {
+      "question": "Mes données SQL sont-elles envoyées sur un serveur ?",
+      "answer": "Non. L'ensemble de la conversion est exécuté localement dans votre navigateur web, garantissant la confidentialité de vos données."
+    }
   ]
 }

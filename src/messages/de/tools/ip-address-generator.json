@@ -1,34 +1,37 @@
 {
-  "detailed_description": "Der IP-Adresse-Generator erstellt zufällige Beispieladressen im Browser. Sie können IPv4, IPv6, private IPv4 oder öffentliche IPv4 auswählen und über den Regler 1 bis 100 Adressen erzeugen. Die Ergebnisse erscheinen als Liste; einzelne Adressen können per Klick kopiert werden, oder die komplette Liste wird über den Kopieren-Button in die Zwischenablage übernommen. Private IPv4-Adressen stammen aus den üblichen Bereichen 10.x.x.x, 172.16-31.x.x und 192.168.x.x. Öffentliche IPv4-Adressen schließen private, Loopback- und reservierte Bereiche grob aus. Das Tool bietet keine CIDR-Eingabe, keine MAC-Übersetzung, keinen CSV-Export, keine Netzwerksimulation und keine kryptografische Zusicherung.",
+  "detailed_description": "Der IP-Adressen-Generator erstellt synthetische Netzwerkadressen direkt im Browser für Netzwerktests, Dokumentationen und UI-Mockups. Du kannst zwischen Standard-IPv4, IPv6, privaten IPv4 (RFC 1918) oder öffentlichen IPv4-Adressen wählen und die Anzahl zwischen 1 und 100 Adressen flexibel anpassen. Die Adressen erscheinen übersichtlich in einer Liste und können einzeln per Klick oder komplett in die Zwischenablage kopiert werden. Die Generierung erfolgt vollständig clientseitig im Browser.",
   "usage_steps": [
-    "Wählen Sie IPv4, IPv6, private IPv4 oder öffentliche IPv4.",
-    "Stellen Sie die Anzahl zwischen 1 und 100 ein.",
-    "Klicken Sie auf Generieren, um die Liste zu erstellen.",
-    "Klicken Sie auf eine einzelne Adresse, um sie zu kopieren.",
-    "Nutzen Sie Kopieren, um die ganze Liste zu übernehmen."
+    "1. Wähle den gewünschten Adresstyp (IPv4, IPv6, private IPv4 oder öffentliche IPv4).",
+    "2. Stelle die Anzahl der zu generierenden IP-Adressen ein (1 bis 100).",
+    "3. Klicke auf 'Generieren', um die Adressliste zu erstellen.",
+    "4. Klicke auf eine einzelne IP-Adresse oder nutze 'Alle kopieren', um die Liste in die Zwischenablage zu übernehmen."
   ],
   "usage_examples": [
-    "Eine kurze Liste privater IPv4-Adressen für Testdaten erzeugen.",
-    "Einige IPv6-Beispieladressen für Dokumentation erstellen.",
-    "Öffentliche IPv4-Beispiele für UI-Mockups generieren.",
-    "Eine Liste von Adressen in ein Testdokument kopieren."
+    "Generierung einer Liste privater IPv4-Adressen (10.x, 192.168.x) für lokale Netzwerkkonfigurationen.",
+    "Erstellung von standardkonformen IPv6-Beispieladressen für technische Dokumentationen.",
+    "Erzeugung synthetischer öffentlicher IP-Adressen für UI-Mockups und Logging-Demos.",
+    "Schnelles Kopieren von Dummy-IPs für Entwicklungs- und Testumgebungen."
   ],
   "faqs": [
     {
-      "question": "Kann ich einen CIDR-Bereich eingeben?",
-      "answer": "Nein. Die Oberfläche bietet nur die vier Typen IPv4, IPv6, private IPv4 und öffentliche IPv4."
+      "question": "Welche IP-Protokolle und Typen werden unterstützt?",
+      "answer": "Das Tool unterstützt reguläre IPv4, vollständige 128-Bit-IPv6, private IPv4-Bereiche (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) sowie öffentliche IPv4-Adressen."
     },
     {
-      "question": "Wie viele IP-Adressen kann ich erzeugen?",
-      "answer": "Der Regler erlaubt 1 bis 100 Adressen."
+      "question": "Wie viele IP-Adressen können auf einmal erzeugt werden?",
+      "answer": "Du kannst zwischen 1 und 100 IP-Adressen in einem Durchgang generieren."
     },
     {
-      "question": "Kann ich die Ergebnisse exportieren?",
-      "answer": "Es gibt keinen Datei-Export. Sie können einzelne Adressen oder die komplette Liste kopieren."
+      "question": "Werden die generierten IP-Adressen online geprüft oder angepingt?",
+      "answer": "Nein. Das Tool erzeugt rein synthetische Beispieladressen ohne aktive Netzwerkverbindungen oder Pings."
     },
     {
-      "question": "Sind die öffentlichen IPv4-Adressen garantiert routbar?",
-      "answer": "Nein. Das Tool filtert einige private und reservierte Bereiche aus, garantiert aber keine tatsächliche Routbarkeit."
+      "question": "Werden Daten an einen externen Server übertragen?",
+      "answer": "Nein. Die Adressgenerierung findet ausschließlich lokal in deinem Webbrowser statt."
+    },
+    {
+      "question": "Eignen sich die privaten IP-Adressen für Firewall- und Router-Tests?",
+      "answer": "Ja. Sie entsprechen den standardisierten privaten Adressbereichen nach RFC 1918."
     }
   ]
 }

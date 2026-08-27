@@ -1,38 +1,38 @@
 {
-  "detailed_description": "Le répéteur de texte duplique votre texte autant de fois que nécessaire. Choisissez parmi différents séparateurs et ajoutez optionnellement une numérotation. Répéteur de Texte sert à vérifier rapidement les entrées, les réglages et le résultat. Utilisez la sortie comme brouillon, relisez le format, les nombres, les caractères et le contexte, puis confirmez les résultats importants dans votre propre flux de travail avant de les partager, publier ou appliquer.",
+  "detailed_description": "Le Répéteur de Texte duplique et multiplie des chaînes de caractères directement dans votre navigateur. Définissez le nombre de répétitions souhaité (de 1 à 1000), choisissez parmi plusieurs types de séparateurs (saut de ligne, espace, virgule, point-virgule ou tabulation) et activez si besoin une numérotation séquentielle automatique (1., 2., 3.). Le résultat affiche le nombre exact de caractères et de lignes en temps réel, prêt à être copié ou téléchargé au format TXT.",
   "usage_steps": [
-    "Entrez le texte à répéter",
-    "Définissez le nombre de répétitions",
-    "Choisissez le type de séparateur",
-    "Ajoutez optionnellement une numérotation",
-    "Copiez ou téléchargez le résultat"
+    "1. Saisissez ou collez le texte que vous souhaitez dupliquer dans la zone de texte.",
+    "2. Indiquez le nombre de répétitions souhaité (de 1 à 1000) ou utilisez les boutons rapides.",
+    "3. Choisissez le séparateur de votre choix (saut de ligne, espace, virgule, point-virgule, tabulation).",
+    "4. Activez l'option de numérotation pour indexer chaque ligne répétée.",
+    "5. Consultez le décompte en direct et cliquez sur 'Copier' ou 'Télécharger' pour récupérer le fichier TXT."
   ],
   "usage_examples": [
-    "Créer des données de test",
-    "Remplir du contenu de placeholder",
-    "Générer des motifs",
-    "Vérifier une entrée courte avant de traiter le contenu complet."
+    "Générer 50 lignes identiques pour tester le défilement et la capacité d'une zone de texte.",
+    "Répéter un mot-clé séparé par des virgules pour créer une liste structurée.",
+    "Créer des listes numérotées pour des brouillons d'articles ou des maquettes d'interface.",
+    "Exporter un fichier texte volumineux avec des motifs récurrents pour des tests de mise en page."
   ],
   "faqs": [
     {
-      "question": "Que vérifier avant d’utiliser le résultat de Répéteur de Texte ?",
-      "answer": "Vérifiez les entrées, les réglages, le format et le contexte. Pour un résultat important, relisez les nombres, les caractères et le sens avant partage ou publication."
+      "question": "Quel est le nombre maximal de répétitions ?",
+      "answer": "Vous pouvez dupliquer un texte de 1 à 1000 fois en une seule exécution."
     },
     {
-      "question": "Puis-je modifier le résultat après génération ?",
-      "answer": "Oui. Ajustez l’entrée ou les options disponibles, relancez le traitement, puis utilisez la sortie mise à jour après relecture."
+      "question": "Quels séparateurs sont disponibles ?",
+      "answer": "Sauts de ligne, espaces simples, virgules, points-virgules, tabulations ou répétition continue sans séparateur."
     },
     {
-      "question": "Pourquoi le résultat peut-il différer d’un autre outil ?",
-      "answer": "Les outils peuvent gérer l’arrondi, l’analyse, la mise en forme ou l’affichage différemment. Comparez avec la même entrée et tenez compte des limites de l’interface."
+      "question": "Peut-on numéroter chaque répétition automatiquement ?",
+      "answer": "Oui. L'option de numérotation ajoute un préfixe incrémental (1., 2., 3., etc.) devant chaque élément."
     },
     {
-      "question": "Puis-je commencer avec une entrée courte ?",
-      "answer": "Oui. Commencez avec une entrée courte ou un contenu non sensible pour confirmer la forme de la sortie avant d’utiliser le contenu réel."
+      "question": "Le résultat peut-il être téléchargé sous forme de fichier ?",
+      "answer": "Oui. Vous pouvez télécharger le résultat généré directement au format repeated-text.txt."
     },
     {
-      "question": "L’outil remplace-t-il une relecture manuelle ?",
-      "answer": "Non. Il accélère les tâches répétitives, mais les résultats importants doivent rester vérifiés pour l’exactitude, le contexte et l’adéquation."
+      "question": "Mes textes sont-ils envoyés à un serveur ?",
+      "answer": "Non. Tout le traitement s'effectue localement dans la mémoire de votre navigateur sans aucun transfert externe."
     }
   ]
 }
