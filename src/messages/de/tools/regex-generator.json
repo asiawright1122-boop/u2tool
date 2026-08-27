@@ -1,39 +1,38 @@
 {
-  "detailed_description": "Der Regex Generator ist ein spezialisierter Editor zur Erstellung und Validierung regulärer Ausdrücke, der durch präzise Musteranalyse und dynamische Vorschläge die Komplexität von Regex-Entwicklung reduziert. Das Tool analysiert Eingabemuster durch Tokenisierung und generiert optimierte Regex-Formeln mit Unterstützung für fortgeschrittene Konstrukte wie Lookahead-Assertions, Capture Groups und Quantifier-Control. Entwickler profitieren durch die integrierte Testumgebung, die in Echtzeit Match-Visualisierungen und Fehlermeldungen bei syntaktischen Inkonsistenzen liefert. Besonders nützlich ist das Tool bei der Validierung von Benutzereingaben (z.B. E-Mail-Formate), der Extraktion strukturierter Daten aus unstrukturierten Texten oder der Implementierung komplexer Such-und-Ersatz-Operationen. Die Kernel-Engine kombiniert maschinelles Lernen mit bewährten Regex-Optimierungsstrategien, um kontextsensitive Vorschläge zu generieren und gleichzeitig Overhead durch ungültige Muster zu vermeiden.",
+  "detailed_description": "Der Regex-Generator hilft Entwicklern beim schnellen Entwerfen und Validieren regulärer Ausdrücke für gängige Such- und Validierungsanwendungsfälle. Das Tool bietet strukturierte Vorlagen für häufige Muster wie E-Mail-Adressen, URLs, Datumsangaben, Telefonnummern und benutzerdefinierte Token. Entwickler können die Ausdrücke interaktiv anpassen, Flags wie Case-Insensitive oder Multiline einstellen und das Ergebnis direkt für JavaScript, Python oder PCRE kopieren.",
   "usage_steps": [
-    "Wählen Sie ein Basismuster aus der Kategorieauswahl (z.B. 'E-Mail', 'URL', 'Datum') als Ausgangspunkt für Ihre Regex.",
-    "Geben Sie Testdaten in das 'Input Sample'-Feld ein, um kontextbasierte Mustererkennung zu aktivieren.",
-    "Aktivieren Sie spezifische Regex-Flags (z.B. 'Multiline', 'Case Insensitive') über die Schaltflächenleiste.",
-    "Nutzen Sie den 'Pattern Optimizer', um automatisch kompakte Regex-Varianten mit Benchmark-Vergleich zu erhalten.",
-    "Verfolgen Sie Match-Positionen in der Echtzeit-Highlighting-Vorschau unterhalb des Editorfensters.",
-    "Exportieren Sie den validierten Regex-Code direkt als JavaScript-String oder PCRE-kompatiblen Ausdruck."
+    "1. Wähle ein passendes Basismuster aus den verfügbaren Kategorien.",
+    "2. Gib optionale Beispieltexte ein, um die Übereinstimmungen live zu prüfen.",
+    "3. Aktiviere gewünschte Regex-Flags wie 'g' (global) oder 'i' (case-insensitive).",
+    "4. Passe Quantifizierer und Zeichenklassen nach deinen Anforderungen an.",
+    "5. Kopiere den fertigen regulären Ausdruck für deinen Quellcode."
   ],
   "usage_examples": [
-    "Validierung von Benutzereingaben in Formularen durch automatische Erzeugung präziser Regex-Muster für Telefonnummern mit Landesvorwahlen.",
-    "Extraktion strukturierter Logdaten (z.B. IP-Adressen, Timestamps) aus Serverlogs durch intelligente Token-Zuordnung.",
-    "Implementierung von Such-und-Ersatz-Funktionen in Texteditoren mit gruppenbasierter Capturing-Unterstützung.",
-    "Sanitizing von CSV-Importdaten durch Erkennung und Maskierung spezieller Zeichen in definierten Spaltenbereichen."
+    "Generierung eines regulären Ausdrucks zur Validierung von internationalen Telefonnummern in Webformularen.",
+    "Erstellung von Suchmustern zum Extrahieren von IP-Adressen und Zeitstempeln aus Logdateien.",
+    "Entwurf von Regex-Mustern für Suchen-und-Ersetzen-Operationen in Texteditoren.",
+    "Validierung von Dateinamen und Pfadstrukturen vor dem Hochladen."
   ],
   "faqs": [
     {
-      "question": "Was sollte ich vor der Nutzung von Regex Generator prüfen?",
-      "answer": "Prüfe Eingaben, Einstellungen, Format und Kontext. Bei wichtigen Ergebnissen solltest du Zahlen, Zeichen und Bedeutung vor dem Teilen oder Veröffentlichen noch einmal kontrollieren."
+      "question": "Welche Regex-Engines werden unterstützt?",
+      "answer": "Die generierten Ausdrücke basieren auf standardkonformen regulären Ausdrücken, die mit JavaScript, Python, PHP und Go kompatibel sind."
     },
     {
-      "question": "Kann ich das Ergebnis nachträglich ändern?",
-      "answer": "Ja. Passe die Eingabe oder verfügbare Optionen an, führe die Verarbeitung erneut aus und verwende die aktualisierte Ausgabe erst nach einer Prüfung."
+      "question": "Kann ich die Regex-Flags frei wählen?",
+      "answer": "Ja. Du kannst Flags wie global (g), case-insensitive (i) und multiline (m) individuell aktivieren."
     },
     {
-      "question": "Warum kann das Ergebnis von einem anderen Werkzeug abweichen?",
-      "answer": "Werkzeuge können Rundung, Analyse, Formatierung oder Darstellung unterschiedlich behandeln. Vergleiche mit derselben Eingabe und beachte die Grenzen der Oberfläche."
+      "question": "Werden meine Eingaben online gespeichert?",
+      "answer": "Nein. Alle Mustererstellungen und Validierungen laufen lokal in deinem Webbrowser ab."
     },
     {
-      "question": "Kann ich mit einer kurzen Eingabe beginnen?",
-      "answer": "Ja. Beginne mit einer kurzen oder nicht sensiblen Eingabe, um die Form der Ausgabe zu prüfen, bevor du den eigentlichen Inhalt verwendest."
+      "question": "Eignet sich das Tool für komplexe Lookaround-Ausdrücke?",
+      "answer": "Ja. Du kannst sowohl einfache Zeichenklassen als auch erweiterte Gruppenkonstrukte anpassen."
     },
     {
-      "question": "Ersetzt das Werkzeug eine manuelle Prüfung?",
-      "answer": "Nein. Es beschleunigt wiederkehrende Arbeit, aber wichtige Ergebnisse sollten auf Genauigkeit, Kontext und Eignung geprüft werden."
+      "question": "Kann ich den Ausdruck direkt in JavaScript verwenden?",
+      "answer": "Ja. Der generierte Ausdruck kann direkt als RegExp-Literal oder String in deinen Code übernommen werden."
     }
   ]
 }
