@@ -104,6 +104,10 @@
     {
       "question": "O que o CSV inclui?",
       "answer": "Inclui cabeçalhos e valores escalares da planilha selecionada sem modificar a pasta original."
+    },
+    {
+      "question": "Quais formatos de arquivo são suportados?",
+      "answer": "Suporta arquivos XLS (Excel 97-2003), XLSX e XLSM de até 10 MiB diretamente no navegador."
     }
   ]
 }

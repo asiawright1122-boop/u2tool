@@ -1,15 +1,38 @@
 {
-  "detailed_description": "La Calculadora de Propinas facilita el cálculo de propinas y la división de facturas entre varias personas. Con porcentajes de propina predefinidos y opciones personalizadas, puedes determinar rápidamente el monto de la propina, el monto total de la factura y la parte que le corresponde a cada persona. Perfecta para cenar con amigos o calcular gratificaciones por servicios.",
+  "detailed_description": "La Calculadora de Propinas facilita el cálculo de gratificaciones y la división equitativa de cuentas entre varias personas. Con porcentajes de propina predefinidos habituales y opciones totalmente personalizadas, permite determinar al instante el monto exacto de la propina, el monto total a pagar y el desglose individual por comensal. Es ideal para restaurantes, bares, servicios de entrega o viajes compartidos sin complicaciones de cálculo mental.",
   "usage_steps": [
-    "Ingresa el monto de la factura",
-    "Elige un porcentaje de propina o ingresa una cantidad personalizada",
-    "Especifica cuántas personas están dividiendo la factura",
-    "Ver el monto de la propina y el total",
-    "Ver el desglose por persona"
+    "1. Ingresa el monto total de la cuenta o consumo antes de propina.",
+    "2. Selecciona un porcentaje predefinido o introduce un porcentaje personalizado según la calidad del servicio.",
+    "3. Indica el número de personas entre las que se va a dividir la cuenta.",
+    "4. Consulta el monto total de la propina y el total general acumulado.",
+    "5. Revisa la cantidad exacta que le corresponde pagar a cada persona de manera equitativa."
   ],
   "usage_examples": [
-    "Calcula propinas de restaurantes rápidamente",
-    "Divide facturas equitativamente entre amigos",
-    "Determina cantidades de propina apropiadas para diferentes niveles de servicio"
+    "Calcular una propina del 10% o 15% en un restaurante y dividir el total entre 4 comensales.",
+    "Ajustar una propina personalizada para un servicio de entrega a domicilio o catering.",
+    "Determinar la cuota individual exacta en cenas de grupo para evitar diferencias al pagar.",
+    "Revisar el total a pagar con propina incluida antes de solicitar la cuenta."
+  ],
+  "faqs": [
+    {
+      "question": "¿Cómo se calcula la propina por persona?",
+      "answer": "La herramienta suma el monto de la cuenta más la propina total elegida y divide el resultado exactamente entre el número de personas indicado."
+    },
+    {
+      "question": "¿Cuál es el porcentaje de propina habitual?",
+      "answer": "Depende del país y del tipo de servicio; en muchos lugares se sitúa entre el 10% y el 15% para un servicio satisfactorio."
+    },
+    {
+      "question": "¿Puedo ingresar un porcentaje de propina personalizado?",
+      "answer": "Sí. Puedes escribir cualquier porcentaje entero o decimal para adaptarlo al estándar local o a tu criterio."
+    },
+    {
+      "question": "¿Mis datos financieros o importes se guardan en algún sitio?",
+      "answer": "No. Todos los cálculos se efectúan en la memoria local de tu navegador sin registrar ni enviar ninguna cifra."
+    },
+    {
+      "question": "¿Permite redondear las cantidades por persona?",
+      "answer": "Los cálculos muestran cifras con precisión decimal exacta para que cada comensal aporte su parte justa."
+    }
   ]
 }

@@ -25,9 +25,9 @@
     "limits": {
       "noCollaboration": "Sin colaboración ni uso compartido en equipo",
       "noCloudSync": "Sin sincronización en la nube",
-      "noResourceManagement": "Sin asignación ni gestión de recursos",
+      "noResourceManagement": "Sin gestión de recursos",
       "noEnterpriseWorkflow": "Sin flujo de aprobación empresarial",
-      "noLiveMultiUser": "Sin estado multiusuario en vivo"
+      "noLiveMultiUser": "Sin estado multiusuario en tiempo real"
     }
   },
   "milestone": "Hito",
@@ -74,7 +74,7 @@
   "noTasks": "Añade una tarea o aplica una plantilla para empezar.",
   "localOnlyTitle": "Datos locales del proyecto",
   "localOnlyDescription": "Las importaciones, exportaciones, cálculos y proyectos guardados permanecen en este navegador. Nada se sube ni sincroniza.",
-  "detailed_description": "Crea en el navegador un proyecto Gantt con fechas, progreso, hitos y dependencias. La herramienta calcula una ruta crítica determinista, resalta sus tareas y avisa de ciclos, dependencias ausentes o fechas no válidas. Puedes guardar y restaurar un proyecto en este navegador, comenzar con una plantilla de lanzamiento de software, campaña de marketing o preparación de evento e intercambiar datos mediante archivos JSON o CSV locales. Se mantienen las exportaciones del gráfico en PNG y SVG. No ofrece colaboración, sincronización en la nube, asignación de recursos, aprobaciones empresariales ni estado multiusuario en vivo.",
+  "detailed_description": "Crea en el navegador un proyecto Gantt con fechas, progreso, hitos y dependencias. La herramienta calcula una ruta crítica determinista, resalta sus tareas y avisa de ciclos, dependencias ausentes o fechas no válidas. Puedes guardar y restaurar un proyecto en este navegador, comenzar con una plantilla de lanzamiento de software, campaña de marketing o preparación de evento e intercambiar datos mediante archivos JSON o CSV locales. Se mantienen las exportaciones del gráfico en PNG y SVG. No incluye funciones de colaboración en la nube, flujos de aprobación empresarial ni sincronización multiusuario en vivo.",
   "usage_steps": [
     "Elige una plantilla integrada o añade tareas manualmente.",
     "Define nombre, fechas, progreso, hito y dependencias de cada tarea.",

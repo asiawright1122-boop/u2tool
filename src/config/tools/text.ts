@@ -52,6 +52,6 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'ai-text-humanizer', category: 'text', icon: 'type', component: 'AiTextHumanizer' },
   { slug: 'text-spinner', category: 'text', icon: 'type', component: 'TextSpinner' },
   { slug: 'readability-checker', category: 'text', icon: 'type', component: 'ReadabilityChecker' },
-  { slug: 'grammar-checker', category: 'text', icon: 'type', component: 'GrammarChecker' },
+  { slug: 'grammar-checker', category: 'text', icon: 'type', component: 'GrammarChecker', popular: true },
   { slug: 'document-word-counter', category: 'text', icon: 'type', component: 'DocumentWordCounter' },
 ];

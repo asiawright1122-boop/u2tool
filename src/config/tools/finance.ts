@@ -11,7 +11,7 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'position-size-calculator', category: 'finance', icon: 'target', component: 'PositionSizeCalculator' },
   { slug: 'mortgage-calculator', category: 'finance', icon: 'wallet', component: 'MortgageCalculator' },
   { slug: 'tax-calculator', category: 'finance', icon: 'wallet', component: 'TaxCalculator' },
-  { slug: 'iban-validator', category: 'finance', icon: 'wallet', component: 'IbanValidator' },
+  { slug: 'iban-validator', category: 'finance', icon: 'wallet', component: 'IbanValidator', popular: true },
   { slug: 'vat-calculator', category: 'finance', icon: 'wallet', component: 'VatCalculator' },
   { slug: 'bic-swift-lookup', category: 'finance', icon: 'wallet', component: 'BicSwiftLookup' },
   { slug: 'credit-card-validator', category: 'finance', icon: 'wallet', component: 'CreditCardValidator' },

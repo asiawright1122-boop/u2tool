@@ -24,7 +24,7 @@ export const CHARTS_TOOLS: Tool[] = [
   { slug: 'bubble-chart-generator', category: 'charts', icon: 'circle-dot', component: 'BubbleChartGenerator' },
   { slug: 'tree-chart-generator', category: 'charts', icon: 'git-fork', component: 'TreeChartGenerator' },
   { slug: 'theme-river-generator', category: 'charts', icon: 'waves', component: 'ThemeRiverGenerator' },
-  { slug: 'gantt-chart-generator', category: 'charts', icon: 'gantt-chart', component: 'GanttChartGenerator' },
+  { slug: 'gantt-chart-generator', category: 'charts', icon: 'gantt-chart', component: 'GanttChartGenerator', popular: true },
   { slug: 'venn-diagram-generator', category: 'charts', icon: 'circle', component: 'VennDiagramGenerator' },
   { slug: 'timeline-chart-generator', category: 'charts', icon: 'clock', component: 'TimelineChartGenerator' },
   { slug: 'nightingale-rose-chart-generator', category: 'charts', icon: 'flower-2', component: 'NightingaleRoseChartGenerator' },

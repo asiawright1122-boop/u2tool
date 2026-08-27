@@ -38,7 +38,9 @@
   ],
   "usage_examples": [
     "Modifiez un octet connu dans un petit fichier binaire de test.",
-    "Recherchez un en-tête ASCII répété et enregistrez une copie modifiée."
+    "Recherchez un en-tête ASCII répété et enregistrez une copie modifiée.",
+    "Inspectez les signatures d'en-tête de fichiers binaires tels que PNG ou ZIP.",
+    "Convertissez des chaînes de texte au format hexadécimal pour le débogage."
   ],
   "faqs": [
     {
@@ -56,6 +58,10 @@
     {
       "question": "Quel encodage est utilisé ?",
       "answer": "Le convertisseur de texte utilise UTF-8."
+    },
+    {
+      "question": "Comment enregistrer les modifications ?",
+      "answer": "Cliquez sur le bouton de téléchargement pour exporter directement le fichier binaire modifié sur votre appareil."
     }
   ]
 }

@@ -16,24 +16,24 @@
   ],
   "faqs": [
     {
-      "question": "Qué debo revisar antes de usar el resultado de Cortador de Imágenes?",
-      "answer": "Revisa los datos introducidos, las opciones seleccionadas y si el resultado encaja con tu objetivo. En materiales importantes, comprueba cifras, formato y contexto antes de compartir o publicar."
+      "question": "¿Mis imágenes se suben a algún servidor externo?",
+      "answer": "No. Todo el recorte y procesamiento de la imagen se realiza localmente en tu navegador web mediante HTML5 Canvas para garantizar total privacidad."
     },
     {
-      "question": "Puedo modificar el resultado después de generarlo?",
-      "answer": "Sí. Cambia la entrada o las opciones disponibles, vuelve a procesar y usa la versión actualizada después de revisarla."
+      "question": "¿Qué formatos de imagen son compatibles?",
+      "answer": "Admite los formatos de imagen web estándar más comunes, incluidos PNG, JPEG, JPG, WebP y GIF."
     },
     {
-      "question": "Por qué el resultado puede diferir de otra herramienta de imagen?",
-      "answer": "Cada herramienta puede aplicar reglas distintas de redondeo, análisis, formato o visualización. Compara con la misma entrada y revisa las limitaciones de la interfaz."
+      "question": "¿En qué formato se descarga la imagen recortada?",
+      "answer": "La imagen resultante se exporta y descarga en formato PNG de alta calidad conservando la nitidez de los píxeles recortados."
     },
     {
-      "question": "Puedo empezar con una entrada corta?",
-      "answer": "Sí. Empieza con una entrada breve o contenido no sensible para confirmar la forma del resultado antes de pasar a la entrada real."
+      "question": "¿Puedo recortar con una relación de aspecto fija como 1:1 o 16:9?",
+      "answer": "Sí. Puedes alternar entre recorte de proporción libre o fijar relaciones de aspecto populares para fotos de perfil, miniaturas o banners."
     },
     {
-      "question": "Sustituye la revisión manual?",
-      "answer": "No. Acelera tareas repetitivas, pero los resultados importantes deben revisarse por precisión, contexto y adecuación antes de usarlos."
+      "question": "¿Se reduce la calidad de la imagen al recortar?",
+      "answer": "El recorte conserva la resolución original de los píxeles dentro del área seleccionada sin compresión con pérdida agresiva."
     }
   ]
 }

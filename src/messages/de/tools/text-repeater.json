@@ -1,35 +1,39 @@
 {
-  "detailed_description": "Der Text-Wiederholer wiederholt eingegebenen Text direkt im Browser. Sie können eine Wiederholungszahl von 1 bis 1000 wählen, Trennzeichen wie neue Zeile, Leerzeichen, Komma, Semikolon, Tab oder kein Trennzeichen nutzen und optional eine fortlaufende Nummerierung mit 1., 2., 3. hinzufügen. Schnellbuttons für 5, 10, 25, 50 und 100 Wiederholungen setzen die Anzahl schneller. Das Ergebnis zeigt Zeichen- und Zeilenzähler, kann kopiert oder als repeated-text.txt heruntergeladen werden. Das Tool erzeugt keine Zufallswerte, verarbeitet keine Variablenvorlagen und konvertiert den Text nicht in andere Formate.",
+  "detailed_description": "Der Text-Wiederholer multipliziert eingegebene Zeichenketten direkt im Browser. Du kannst eine Wiederholungszahl von 1 bis 1000 wählen, Trennzeichen wie Zeilenumbruch, Leerzeichen, Komma, Semikolon, Tabulator oder kein Trennzeichen nutzen und optional eine fortlaufende Nummerierung hinzufügen. Schnellwahltasten für 5, 10, 25, 50 und 100 Wiederholungen erleichtern die Auswahl. Das Tool zeigt Live-Zähler für Zeichen und Zeilen und erlaubt das Kopieren oder Herunterladen als repeated-text.txt.",
   "usage_steps": [
-    "Geben Sie den Text ein, der wiederholt werden soll.",
-    "Legen Sie die Anzahl der Wiederholungen fest oder nutzen Sie einen Schnellbutton.",
-    "Wählen Sie ein Trennzeichen: neue Zeile, Leerzeichen, Komma, Semikolon, Tab oder keines.",
-    "Aktivieren Sie die Nummerierung, wenn jede Wiederholung einen Index bekommen soll.",
-    "Prüfen Sie Zeichen- und Zeilenzähler.",
-    "Kopieren Sie das Ergebnis oder laden Sie es als TXT-Datei herunter."
+    "1. Gib den gewünschten Text oder das Zeichen in das Eingabefeld ein.",
+    "2. Lege die Anzahl der Wiederholungen fest oder nutze eine der Schnellwahltasten.",
+    "3. Wähle das passende Trennzeichen (Zeilenumbruch, Leerzeichen, Komma, Semikolon oder Tabulator).",
+    "4. Aktiviere optional die automatische Nummerierung für indizierte Listen.",
+    "5. Überprüfe die Zeichen- und Zeilenanzahl in der Echtzeit-Vorschau.",
+    "6. Kopiere das Ergebnis in die Zwischenablage oder lade es als TXT-Datei herunter."
   ],
   "usage_examples": [
-    "50 gleiche Zeilen für einen Textarea-Test erzeugen.",
-    "Ein Wort mit Kommas als temporäre Liste wiederholen.",
-    "Nummerierte Beispielsätze für einen Entwurf erstellen.",
-    "Eine TXT-Datei mit wiederholtem Text für manuelle Fixtures herunterladen."
+    "50 identische Zeilen für das Testen von UI-Textfeldern und Scrollbalken erstellen.",
+    "Ein Schlagwort mit Kommas getrennt als strukturierte Testliste wiederholen.",
+    "Nummerierte Textzeilen für Entwürfe, Dokumentationen oder Gliederungen anlegen.",
+    "Eine Textdatei mit wiederholten Mustern für manuelle Formatierungstests herunterladen."
   ],
   "faqs": [
     {
-      "question": "Wie viele Wiederholungen sind möglich?",
-      "answer": "Das Eingabefeld begrenzt die Anzahl auf 1 bis 1000 Wiederholungen."
+      "question": "Wie viele Wiederholungen sind maximal möglich?",
+      "answer": "Du kannst einen Text zwischen 1 und 1000 Mal in einem Durchgang wiederholen."
     },
     {
-      "question": "Welche Trennzeichen gibt es?",
-      "answer": "Neue Zeile, Leerzeichen, Komma, Semikolon, Tab oder kein Trennzeichen."
+      "question": "Welche Trennzeichen werden unterstützt?",
+      "answer": "Zeilenumbrüche, Leerzeichen, Kommas, Semikolons, Tabulatoren sowie nahtlose Wiederholung ohne Trennzeichen."
     },
     {
-      "question": "Kann jede Wiederholung nummeriert werden?",
-      "answer": "Ja. Die Option Nummerierung fügt 1., 2., 3. und so weiter vor jede Wiederholung."
+      "question": "Kann jeder Eintrag automatisch nummeriert werden?",
+      "answer": "Ja. Die Option 'Nummerierung' stellt jedem Eintrag fortlaufende Indizes wie 1., 2., 3. voran."
     },
     {
-      "question": "Kann ich das Ergebnis herunterladen?",
-      "answer": "Ja. Der Download-Button speichert das Ergebnis als repeated-text.txt."
+      "question": "Kann das Ergebnis als Datei exportiert werden?",
+      "answer": "Ja. Mit dem Download-Button kannst du den gesamten generierten Text direkt als .txt-Datei speichern."
+    },
+    {
+      "question": "Werden meine Texte an einen Server übertragen?",
+      "answer": "Nein. Die gesamte Textverarbeitung findet lokal im Speicher deines Browsers statt."
     }
   ]
 }

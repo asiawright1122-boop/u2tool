@@ -1,34 +1,38 @@
 {
-  "detailed_description": "El generador de números aleatorios produce enteros dentro del rango que definas. Escribe un valor mínimo, un valor máximo y una cantidad, y genera hasta 1000 resultados. La opción Valores únicos evita duplicados cuando el rango contiene suficientes números disponibles. Los resultados aparecen en la página y pueden copiarse como una lista de texto simple. La herramienta sirve para juegos, actividades de clase, datos de prueba, sorteos sencillos y muestreos rápidos. No ofrece decimales, UUID, semillas repetibles, exportaciones estructuradas ni aleatoriedad para usos de seguridad.",
+  "detailed_description": "El generador de números aleatorios produce números enteros dentro del rango personalizado que definas. Escribe un valor mínimo, un valor máximo y una cantidad, y genera hasta 1000 resultados instantáneos. La opción de valores únicos evita duplicados cuando el rango contiene suficientes números disponibles. Los resultados aparecen en la página y pueden copiarse como una lista de texto simple con un solo clic. La herramienta sirve para juegos de mesa, actividades educativas, sorteos sencillos, rifas y muestreos rápidos directamente en el navegador.",
   "usage_steps": [
-    "Introduce el valor mínimo y el valor máximo del rango.",
-    "Elige cuántos números quieres generar, hasta 1000.",
-    "Activa Valores únicos si no quieres duplicados.",
-    "Haz clic en Generar para mostrar los números.",
-    "Usa Copiar para llevar la lista al portapapeles."
+    "1. Introduce el valor mínimo y el valor máximo del rango deseado.",
+    "2. Elige cuántos números quieres generar (hasta 1000 por tirada).",
+    "3. Activa la casilla de valores únicos si deseas evitar números repetidos.",
+    "4. Haz clic en Generar para mostrar los números en pantalla.",
+    "5. Pulsa el botón Copiar para llevar la lista completa al portapapeles."
   ],
   "usage_examples": [
-    "Elegir un número entre 1 y 100 para un juego o actividad de clase.",
-    "Crear 20 números únicos para repartir participantes.",
-    "Generar valores de prueba simples para una hoja de cálculo.",
-    "Copiar una lista corta de enteros en un documento rápidamente."
+    "Elegir un número ganador entre 1 y 100 para un sorteo, rifa o juego de mesa.",
+    "Crear 20 números únicos para asignar turnos de participación en un aula o evento.",
+    "Generar secuencias numéricas de ejemplo para rellenar tablas o hojas de cálculo.",
+    "Copiar una lista rápida de números enteros aleatorios para prototipos o dinámicas grupales."
   ],
   "faqs": [
     {
-      "question": "¿Puedo generar números únicos?",
-      "answer": "Sí, siempre que la cantidad solicitada no supere los valores disponibles en el rango."
+      "question": "¿Puedo generar números sin repeticiones?",
+      "answer": "Sí. Al activar la opción de valores únicos, la herramienta garantiza que no haya duplicados, siempre que la cantidad solicitada quepa en el rango."
     },
     {
-      "question": "¿Cuál es la cantidad máxima?",
-      "answer": "El campo de cantidad está limitado a 1000 resultados."
+      "question": "¿Cuál es la cantidad máxima de números por tirada?",
+      "answer": "Puedes generar desde 1 hasta 1000 números enteros en una sola ejecución."
     },
     {
-      "question": "¿Sirve para contraseñas o claves de seguridad?",
-      "answer": "No. Usa una herramienta de seguridad dedicada para secretos, contraseñas o claves."
+      "question": "¿Permite generar números negativos o decimales?",
+      "answer": "Admite rangos con números enteros negativos y positivos. Para decimales continuos se recomienda usar generadores de coma flotante dedicados."
     },
     {
-      "question": "¿Puedo repetir la misma serie más tarde?",
-      "answer": "No. Esta versión no incluye una semilla repetible."
+      "question": "¿Sirve para generar claves criptográficas o contraseñas?",
+      "answer": "No. Para contraseñas y claves de seguridad utiliza nuestro Generador de Contraseñas con Web Crypto API."
+    },
+    {
+      "question": "¿Los números generados se guardan o envían a un servidor?",
+      "answer": "No. Toda la generación aleatoria se efectúa localmente en la memoria de tu navegador con total privacidad."
     }
   ]
 }

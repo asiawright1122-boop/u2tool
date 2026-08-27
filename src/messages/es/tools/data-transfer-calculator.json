@@ -1,16 +1,39 @@
 {
-  "detailed_description": "El Calculador de Transferencia de Datos estimará cuánto tiempo llevará transferir archivos basándose en la velocidad de su conexión. Ingrese el tamaño de su archivo y la velocidad de red para obtener estimaciones precisas del tiempo de transferencia. Incluye velocidades predeterminadas para tipos comunes de conexión como 4G, 5G, WiFi y Ethernet para cálculos rápidos.",
+  "detailed_description": "La Calculadora de Transferencia de Datos estima con precisión matemática cuánto tiempo tomará descargar, subir o migrar archivos según el ancho de banda disponible y la velocidad real de conexión. Permite ingresar el tamaño total del archivo o paquete de datos y especificar la velocidad de red en Mbps, Gbps o MB/s. Incluye valores preestablecidos representativos para conexiones móviles (4G, 5G), enlaces Wi-Fi hogareños y redes de fibra óptica o Gigabit Ethernet.",
   "usage_steps": [
-    "Ingrese el tamaño del archivo a transferir",
-    "Seleccione la unidad de tamaño (KB, MB, GB, TB)",
-    "Ingrese su velocidad de conexión",
-    "O haga clic en un botón de velocidad predeterminada",
-    "Visualice el tiempo de transferencia estimado",
-    "Copie los resultados para referencia"
+    "1. Introduce el tamaño total del archivo o conjunto de datos a transferir.",
+    "2. Selecciona la unidad de medida adecuada (KB, MB, GB, TB o PB).",
+    "3. Ingresa tu velocidad de conexión estimada o descarga/subida promedio.",
+    "4. Alternativamente, pulsa sobre uno de los perfiles de red preconfigurados (4G, 5G, Wi-Fi, Fibra).",
+    "5. Consulta el desglose temporal estimado en días, horas, minutos y segundos.",
+    "6. Copia los resultados para planificar ventanas de mantenimiento o tiempos de descarga."
   ],
   "usage_examples": [
-    "Estimación de tiempos de descarga de archivos grandes",
-    "Planificación de horarios de migración de datos",
-    "Comparación de tiempos de transferencia entre redes"
+    "Estimar el tiempo necesario para descargar copias de seguridad de bases de datos de varios gigabytes.",
+    "Planificar ventanas de migración de servidores y sincronización de almacenamiento en la nube.",
+    "Comparar cuánto tardaría transferir un paquete de video en una conexión 4G frente a fibra óptica.",
+    "Calcular tiempos de descarga para juegos, imágenes ISO de sistemas o archivos multimedia pesados."
+  ],
+  "faqs": [
+    {
+      "question": "¿Por qué hay diferencia entre megabytes (MB) y megabits (Mbps)?",
+      "answer": "Las velocidades de conexión de los proveedores de internet se miden en megabits por segundo (Mbps), mientras que el tamaño de los archivos suele expresarse en megabytes (MB). 1 Byte equivale a 8 bits."
+    },
+    {
+      "question": "¿El cálculo contempla la sobrecarga de la red o congestión?",
+      "answer": "El cálculo ofrece el tiempo teórico exacto a velocidad constante. En redes reales, factores como latencia, congestión y protocolos de transporte pueden añadir entre un 5% y 15% de tiempo adicional."
+    },
+    {
+      "question": "¿Puedo calcular tiempos para transferencias en terabytes (TB)?",
+      "answer": "Sí. Admite desde kilobytes hasta petabytes para abarcar tanto descargas cotidianas como grandes migraciones de centros de datos."
+    },
+    {
+      "question": "¿Requiere conexión a internet para calcular?",
+      "answer": "No. La calculadora funciona localmente en tu navegador ejecutando fórmulas matemáticas directas sin enviar peticiones a servidores."
+    },
+    {
+      "question": "¿Qué perfiles de conexión incluye?",
+      "answer": "Incluye velocidades típicas para conexiones móviles 3G, 4G LTE, 5G, Wi-Fi estándar y conexiones cableadas Gigabit Ethernet."
+    }
   ]
 }

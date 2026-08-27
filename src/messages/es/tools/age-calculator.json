@@ -1,15 +1,38 @@
 {
-  "detailed_description": "La Calculadora de Edad ofrece cálculos precisos de edad en años, meses y días. Además de la cálculo básico de edad, muestra los días totales vividos, semanas, meses y horas. También calcula cuántos días faltan hasta tu próximo cumpleaños, ideal para el conteo regresivo de cumpleaños y verificación de edad.",
+  "detailed_description": "La Calculadora de Edad ofrece cálculos precisos de edad cronológica en años, meses y días. Además del cálculo básico de edad, muestra los días totales vividos, semanas completas, meses y horas transcurridas. También calcula cuántos días exactos faltan hasta tu próximo cumpleaños, ideal para el conteo regresivo de cumpleaños, cálculo de diferencias temporales y verificación rápida de edad sin compartir datos personales en línea.",
   "usage_steps": [
-    "Ingresa tu fecha de nacimiento",
-    "Opcionalmente cambia la fecha de referencia (por defecto es hoy)",
-    "Verifica tu edad exacta en años, meses y días",
-    "Mira los días, semanas, meses y horas vividos en total",
-    "Revisa los días hasta tu próximo cumpleaños"
+    "1. Selecciona o escribe tu fecha de nacimiento en el selector.",
+    "2. Opcionalmente cambia la fecha de referencia si deseas calcular la edad en un momento histórico o futuro (por defecto es hoy).",
+    "3. Consulta tu edad cronológica desglosada en años, meses y días.",
+    "4. Revisa los totales acumulados de días, semanas, meses y horas vividos.",
+    "5. Comprueba los días restantes y el día de la semana de tu próximo cumpleaños."
   ],
   "usage_examples": [
-    "Calcula la edad exacta para documentos oficiales",
-    "Descubre cuántos días faltan hasta tu próximo cumpleaños",
-    "Calcula la diferencia de edad entre dos fechas"
+    "Calcular la edad cronológica exacta requerida para trámites oficiales y formularios.",
+    "Comprobar cuántos días y semanas faltan para tu próximo cumpleaños.",
+    "Calcular la diferencia de edad exacta entre dos fechas de nacimiento de familiares o amigos.",
+    "Descubrir cuántos días y horas totales has vivido desde tu nacimiento."
+  ],
+  "faqs": [
+    {
+      "question": "¿Cómo se calcula la edad exacta?",
+      "answer": "La herramienta compara la fecha de nacimiento con la fecha de referencia considerando los días exactos de cada mes y los años bisiestos."
+    },
+    {
+      "question": "¿Mis fechas de nacimiento se envían a algún servidor?",
+      "answer": "No. Todos los cálculos se realizan localmente en tu navegador web de forma totalmente privada."
+    },
+    {
+      "question": "¿Puedo calcular la edad en una fecha pasada o futura?",
+      "answer": "Sí. Puedes modificar la fecha de referencia para saber qué edad tenías en un evento específico o qué edad tendrás en una fecha futura."
+    },
+    {
+      "question": "¿El cálculo tiene en cuenta los años bisiestos?",
+      "answer": "Sí. El motor de fechas contempla los años bisiestos de 366 días para garantizar la máxima precisión en días totales."
+    },
+    {
+      "question": "¿Qué métricas adicionales muestra?",
+      "answer": "Muestra el total de meses, semanas, días y horas vividas, junto con la cuenta regresiva para tu siguiente aniversario."
+    }
   ]
 }

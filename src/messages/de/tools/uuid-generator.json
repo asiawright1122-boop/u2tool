@@ -1,17 +1,37 @@
 {
-  "detailed_description": "Der UUID Generator erstellt zufällige Universally Unique Identifiers (UUIDs) der Version 4 gemäß dem RFC 4122-Standard. Diese 128-Bit-IDs werden durch kryptografisch sichere Pseudozufallszahlengeneratoren (CSPRNG) erzeugt, die auf Betriebssystem-Entropy-Quellen wie /dev/urandom (Linux) oder CryptGenRandom (Windows) basieren. Die UUIDs folgen dem Format xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx, wobei die 4 im dritten Segment die Version kennzeichnet und die y-Bits (10xx) die Variante definieren. Entwickler benötigen dieses Tool für eindeutige Schlüssel in verteilten Systemen, Session-IDs in Webanwendungen, Testdaten für Datenbanken oder API-Endpunkte, die UUIDs erfordern. Die Generierung erfolgt clientseitig im Browser mittels JavaScript's crypto.getRandomValues(), garantiert also keine Serverübertragung sensibler Daten. Das Tool unterstützt Bulk-Generierung mit anpassbarer Menge (1-1000) und formatierten Ausgabemöglichkeiten (mit/ohne Bindestriche, als JSON-Array oder CSV).",
+  "detailed_description": "Der UUID-Generator erstellt zufällige Universally Unique Identifiers (UUID v4) direkt im Browser. Die 128-Bit-Bezeichner werden mit der kryptografisch sicheren Web Crypto API generiert und folgen dem Standardformat xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx. Entwickler nutzen dieses Tool für Primärschlüssel in Datenbanken, eindeutige Request-IDs in APIs, Session-Identifier und verteilte Systeme. Die Generierung erfolgt vollständig lokal ohne Serverübertragung mit anpassbarer Anzahl und praktischen Formatierungsoptionen.",
   "usage_steps": [
-    "Wählen Sie im 'Anzahl'-Feld die gewünschte UUID-Menge (1–1000) über den Schieberegler.",
-    "Aktivieren Sie die Checkbox 'Ohne Bindestriche', um UUIDs im kompakten 32-Zeichen-Format zu generieren.",
-    "Klicken Sie auf 'Generieren'-Button, um den CSPRNG-Algorithmus zu starten.",
-    "Wählen Sie im 'Format'-Dropdown zwischen Standardausgabe, JSON-Array oder CSV-Liste.",
-    "Nutzen Sie das Klemmbrettsymbol neben einer UUID, um sie einzeln zu kopieren.",
-    "Klicken Sie auf 'Alle kopieren', um die vollständige Liste in die Zwischenablage zu übernehmen."
+    "1. Wähle die gewünschte Anzahl an UUIDs aus.",
+    "2. Wähle optional, ob Bindestriche beibehalten oder Großbuchstaben verwendet werden sollen.",
+    "3. Klicke auf 'Generieren', um die neuen Identifikatoren sofort zu berechnen.",
+    "4. Nutze 'Kopieren', um einzelne UUIDs oder die gesamte Liste in die Zwischenablage zu übernehmen."
   ],
   "usage_examples": [
-    "Erzeugung von 100 eindeutigen MongoDB-Dokument-IDs für Lasttests auf einem NoSQL-Cluster.",
-    "Generierung von API-Schlüsseln für authentication flows-Clients in einer service-oriented applications-Architektur.",
-    "Erstellung von temporären Session-Tokens für eine stateless Web-Anwendung mit JWT-Authentifizierung.",
-    "Massenproduktion von Test-UUIDs für ETL-Prozesse in Data-Warehouse-Systemen mit dimensionalen Modellen."
+    "Generierung von UUIDs als Primärschlüssel für Datenbankeinträge in PostgreSQL oder MongoDB.",
+    "Erstellung von eindeutigen Korrelations-IDs für Microservices- und API-Tracing.",
+    "Erzeugung von Test-IDs für Softwaretests und Schnittstellensimulationen.",
+    "Schnelles Kopieren einer einzelnen v4-UUID für Konfigurationsdateien."
+  ],
+  "faqs": [
+    {
+      "question": "Welche UUID-Version wird erzeugt?",
+      "answer": "Das Tool generiert standardmäßig zufallsbasierte UUIDs der Version 4 (RFC 4122)."
+    },
+    {
+      "question": "Wie sicher sind die generierten UUIDs?",
+      "answer": "Die Generierung nutzt die kryptografisch sichere Funktion crypto.getRandomValues() deines Browsers für maximale Entropie."
+    },
+    {
+      "question": "Werden die UUIDs auf einem Server gespeichert?",
+      "answer": "Nein. Alle UUIDs werden ausschließlich lokal im Browser erzeugt und niemals übertragen."
+    },
+    {
+      "question": "Wie hoch ist die Wahrscheinlichkeit einer Kollision?",
+      "answer": "Bei 128 Bit Entropie ist die Wahrscheinlichkeit einer doppelten UUID praktisch vernachlässigbar gering."
+    },
+    {
+      "question": "Kann ich UUIDs ohne Bindestriche generieren?",
+      "answer": "Ja. Du kannst das kompakte 32-Zeichen-Format ohne Bindestriche sowie Großschreibung aktivieren."
+    }
   ]
 }

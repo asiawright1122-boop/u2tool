@@ -1,16 +1,39 @@
 {
-  "detailed_description": "Generador de Gradientes Mesh crea fondos de fondo con múltiples colores utilizando gradientes radiales posicionados en diferentes puntos. A diferencia de los gradientes lineales, los gradientes mesh crean transiciones de color orgánicas y fluídas que añaden profundidad e interés visual a tus diseños. Personaliza la posición y el color de cada punto para crear efectos de gradiente únicos.",
+  "detailed_description": "El Generador de Gradientes Mesh crea fondos visuales modernos con múltiples puntos de color utilizando gradientes radiales interactivos en CSS. A diferencia de los gradientes lineales estándar, los gradientes mesh generan transiciones de color orgánicas, suaves y fluidas que aportan profundidad estética y elegancia visual a sitios web, landing pages, aplicaciones y presentaciones. Permite personalizar coordenadas, radios y colores en tiempo real con exportación instantánea de CSS puro.",
   "usage_steps": [
-    "Haz clic en las paletas de color para cambiar los colores",
-    "Arrastra los deslizadores X e Y para posicionar cada punto de color",
-    "Ajusta el enfoque para suavizar el gradiente",
-    "Haz clic en Randomizar para nuevas combinaciones de colores",
-    "Previsualiza el resultado en tiempo real",
-    "Copia el código CSS para tu proyecto"
+    "1. Selecciona o modifica los colores de los diferentes puntos de control en la paleta interactiva.",
+    "2. Ajusta las coordenadas horizontales (X) y verticales (Y) para ubicar cada foco de color en el lienzo.",
+    "3. Modifica el radio de difusión y desenfoque para lograr transiciones más suaves o contrastadas.",
+    "4. Utiliza la función de generación aleatoria si deseas explorar combinaciones armónicas de forma rápida.",
+    "5. Previsualiza el fondo en vivo a pantalla completa.",
+    "6. Copia el código CSS generado listo para pegar en tu hoja de estilos."
   ],
   "usage_examples": [
-    "Crear fondos de sección hero vibrantes",
-    "Diseñar fondos de tarjetas coloridos",
-    "Construir superposiciones de gradiente para imágenes"
+    "Diseñar fondos envolventes y vibrantes para secciones hero de sitios web y páginas de destino.",
+    "Crear fondos modernos para tarjetas de productos, banners publicitarios o elementos destacados de UI.",
+    "Generar superposiciones degradadas sutiles para fondos de aplicaciones móviles o presentaciones.",
+    "Exportar código CSS limpio sin dependencias de bibliotecas externas para estilizar componentes web."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué compatibilidad tiene el código CSS generado?",
+      "answer": "El código utiliza gradientes radiales estándar de CSS3 compatibles con todos los navegadores modernos (Chrome, Firefox, Safari, Edge)."
+    },
+    {
+      "question": "¿Se necesitan imágenes o archivos externos para usar el gradiente?",
+      "answer": "No. Se genera código CSS puro que se renderiza directamente en el navegador sin consumir recursos de imagen."
+    },
+    {
+      "question": "¿Puedo añadir mis propios códigos de color HEX?",
+      "answer": "Sí. Puedes seleccionar colores visualmente o introducir códigos hexadecimales exactos para respetar tu guía de marca."
+    },
+    {
+      "question": "¿El rendimiento de la página se ve afectado por estos gradientes?",
+      "answer": "Los gradientes en CSS son sumamente ligeros y acelerados por hardware en la mayoría de navegadores modernos."
+    },
+    {
+      "question": "¿Puedo exportar el gradiente como imagen?",
+      "answer": "La herramienta está optimizada para copiar el código CSS, el cual reproduce el gradiente con nitidez vectorial en cualquier resolución."
+    }
   ]
 }

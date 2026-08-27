@@ -1,34 +1,38 @@
 {
-  "detailed_description": "Der Zufallszahlengenerator erstellt ganze Zahlen innerhalb eines Bereichs, den du festlegst. Gib Mindestwert, Höchstwert und Menge ein und erzeuge bis zu 1000 Ergebnisse. Aktiviere eindeutige Werte, wenn keine Zahl doppelt vorkommen soll und der Bereich groß genug ist. Die Ergebnisse erscheinen direkt auf der Seite und können als einfache Liste kopiert werden. Das Tool eignet sich für Spiele, Unterricht, einfache Testdaten, Verlosungen und schnelle Stichproben. Es erzeugt keine Dezimalzahlen, UUIDs, wiederholbaren Startwerte, strukturierten Exportdateien oder sicherheitskritische Zufallswerte.",
+  "detailed_description": "Der Zufallszahlengenerator erstellt ganze Zahlen innerhalb eines frei definierten Bereichs direkt im Browser. Gib Mindestwert, Höchstwert und gewünschte Anzahl ein und erzeuge bis zu 1000 Ergebnisse auf Knopfdruck. Aktiviere eindeutige Werte, wenn keine Zahl doppelt vorkommen soll. Die generierten Zahlen erscheinen übersichtlich auf der Seite und können mit einem Klick als Textliste kopiert werden. Das Tool eignet sich ideal für Gesellschaftsspiele, Verlosungen, Unterrichtsaktivitäten, Würfelsimulationen und schnelle Stichproben.",
   "usage_steps": [
-    "Gib den Mindestwert und Höchstwert des Bereichs ein.",
-    "Wähle die gewünschte Anzahl von Zahlen, maximal 1000.",
-    "Aktiviere Eindeutige Werte, wenn Duplikate vermieden werden sollen.",
-    "Klicke auf Generieren, um die Zahlen anzuzeigen.",
-    "Nutze Kopieren, um die Ergebnisliste in die Zwischenablage zu übernehmen."
+    "1. Gib den Mindestwert und Höchstwert deines gewünschten Zahlenbereichs ein.",
+    "2. Wähle die gewünschte Anzahl von Zufallszahlen (bis zu 1000 pro Durchlauf).",
+    "3. Aktiviere die Option 'Eindeutige Werte', wenn Duplikate ausgeschlossen werden sollen.",
+    "4. Klicke auf 'Generieren', um die Zahlenreihe sofort zu berechnen.",
+    "5. Nutze 'Kopieren', um die gesamte Liste in die Zwischenablage zu übernehmen."
   ],
   "usage_examples": [
-    "Eine Zahl zwischen 1 und 100 für ein Spiel oder eine Unterrichtsaktivität ziehen.",
-    "20 eindeutige Teilnehmernummern für eine einfache Auslosung erzeugen.",
-    "Einfache Ganzzahlen als Testwerte für eine Tabelle erstellen.",
-    "Eine kurze Zahlenliste schnell in ein Dokument kopieren."
+    "Eine Zufallszahl zwischen 1 und 100 für ein Gewinnspiel oder eine Verlosung ziehen.",
+    "20 eindeutige Losnummern für die Zuweisung von Teilnehmern generieren.",
+    "Zufällige Testzahlen für Tabellenkalkulationen oder statistische Übungen erstellen.",
+    "Eine Reihe von Zufallswerten für Programmier- und Layout-Demos kopieren."
   ],
   "faqs": [
     {
-      "question": "Kann ich eindeutige Zahlen erzeugen?",
-      "answer": "Ja, solange die gewünschte Menge nicht größer ist als die Anzahl verfügbarer Werte im Bereich."
+      "question": "Kann ich Zahlen ohne Wiederholungen erzeugen?",
+      "answer": "Ja. Mit der Option für eindeutige Werte wird sichergestellt, dass jede Zahl nur einmal vorkommt, sofern der Bereich groß genug ist."
     },
     {
-      "question": "Wie viele Zahlen kann ich maximal erzeugen?",
-      "answer": "Das Mengenfeld ist auf 1000 Ergebnisse begrenzt."
+      "question": "Wie viele Zahlen können auf einmal generiert werden?",
+      "answer": "Du kannst zwischen 1 und 1000 ganze Zahlen in einem einzigen Durchlauf generieren."
     },
     {
-      "question": "Ist das für Passwörter oder Schlüssel geeignet?",
-      "answer": "Nein. Für Geheimnisse, Passwörter oder Schlüssel solltest du ein spezielles Sicherheitstool verwenden."
+      "question": "Werden negative Zahlen unterstützt?",
+      "answer": "Ja. Du kannst sowohl negative als auch positive Ganzzahlen als Bereichsgrenzen festlegen."
     },
     {
-      "question": "Kann ich dieselbe Folge später reproduzieren?",
-      "answer": "Nein. Diese Version bietet keinen wiederholbaren Startwert."
+      "question": "Werden Daten an einen externen Server gesendet?",
+      "answer": "Nein. Die Zufallsgenerierung erfolgt vollständig lokal im Speicher deines Webbrowsers."
+    },
+    {
+      "question": "Eignet sich das Tool für kryptografische Passwörter?",
+      "answer": "Nein. Für kryptografisch sichere Passwörter und Schlüssel nutze bitte unseren Passwort-Generator mit Web Crypto API."
     }
   ]
 }

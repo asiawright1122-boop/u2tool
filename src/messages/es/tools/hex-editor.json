@@ -38,7 +38,9 @@
   ],
   "usage_examples": [
     "Cambia un byte conocido en un pequeño archivo binario de prueba.",
-    "Busca una cabecera ASCII repetida y guarda una copia modificada."
+    "Busca una cabecera ASCII repetida y guarda una copia modificada.",
+    "Inspecciona firmas de archivos binarios como PNG o ZIP en sus primeros bytes.",
+    "Convierte cadenas de texto en formato hexadecimal para depuración de protocolos."
   ],
   "faqs": [
     {
@@ -56,6 +58,10 @@
     {
       "question": "¿Qué codificación usa el texto?",
       "answer": "El convertidor de texto usa UTF-8."
+    },
+    {
+      "question": "¿Cómo puedo guardar los cambios realizados?",
+      "answer": "Haz clic en el botón de descarga para exportar el archivo binario con los bytes modificados directamente a tu equipo."
     }
   ]
 }
