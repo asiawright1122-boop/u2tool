@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Der MAC-Adressgenerator ist ein technisches Werkzeug zur Erzeugung valider, zufälliger Media Access Control (MAC)-Adressen unter Berücksichtigung spezifischer Netzwerkanforderungen. Die 48-Bit-Adresse wird nach IEEE-802-Standards generiert, wobei die ersten 24 Bit (Organizationally Unique Identifier/OUI) entweder standardisiert oder benutzerdefiniert festgelegt werden können. Das Tool ermöglicht die Manipulation des zweiten niederwertigsten Bits des ersten Oktetts zur Steuerung von Unicast-/Multicast-Zuordnungen sowie das Setzen des Lokal Administrated Address (LAA)-Bits zur Kennzeichnung nicht-flüchtiger, manuell zugewiesener Adressen. Die Zufallsquelle nutzt kryptografisch sichere Algorithmen (z.B. SHA-256-Hashing über systeminterne Entropiequellen) zur Gewährleistung von Unvorhersagbarkeit. Entwickler benötigen dieses Tool für Netzwerk-Simulationen, Sicherheitstests (z.B. MAC-Spoofing-Analysen), IoT-Gerätesimulationen oder zur Überwindung von MAC-basierten Zugriffsbeschränkungen. Die präzise Kontrolle über die Adressstruktur erlaubt das Testen von Edge Cases in Netzwerkkonfigurationen sowie die Erstellung reproduzierbarer Testumgebungen für Switch-Flood-Angriffe oder ARP-Caching-Verhalten.",
+  "detailed_description": "Der MAC-Adressen-Generator erstellt standardkonforme 48-Bit-MAC-Adressen direkt im Browser für Netzwerktests, Dokumentationen und Simulationen. Du kannst zwischen Doppelpunkt- (00:1A:2B:3C:4D:5E), Bindestrich- oder punktierten Formaten wählen sowie Groß- und Kleinschreibung anpassen. Das Tool generiert Adresslisten schnell und sicher auf deinem Gerät.",
   "usage_steps": [
-    "Wählen Sie im OUI-Modus 'Standard' (zufälliger Herstellercode) oder 'Benutzerdefiniert' mit Eingabe eines 3-Oktett-Präfixes.",
-    "Aktivieren Sie den 'Multicast'-Switch, um das individuelle/Gruppenadressbit im ersten Oktett zu setzen.",
-    "Haken Sie 'LAA-Modus' an, um lokal verwaltete Adressen (mit gesetztem U/L-Bit) zu generieren.",
-    "Geben Sie die Anzahl der zu erstellenden Adressen (1–1000) in das Zahlenfeld ein.",
-    "Wählen Sie das Ausgabeformat: Doppelpunkte, Bindestriche oder keine Trennzeichen.",
-    "Klicken Sie auf 'Generieren', um die CSV-Datei mit Metadaten (OUI-Hersteller, Bit-Muster) herunterzuladen."
+    "1. Wähle die gewünschte Anzahl an MAC-Adressen.",
+    "2. Wähle das Trennzeichen (Doppelpunkt, Bindestrich oder keines).",
+    "3. Klicke auf 'Generieren', um die Adressliste zu erstellen.",
+    "4. Nutze 'Kopieren', um die Adressen in die Zwischenablage zu übernehmen."
   ],
   "usage_examples": [
-    "Testen von Netzwerksimulatoren durch Erzeugung von 500 eindeutigen MACs für virtuelle Endgeräte in NS-3.",
-    "Durchführen von Sicherheitsaudits durch automatisierte MAC-Spoofing-Tests in Unternehmensnetzwerken.",
-    "Erstellen von Testdatensätzen für IEEE 802.1AR-Compliant Device Identity-Validierung in IoT-Systemen.",
-    "Lehreinheit zur Analyse von ARP-Verkehrsmustern durch gezielte Generierung von multicast-fähigen MAC-Adressen."
+    "Generierung von Test-MAC-Adressen für virtuelle Netzwerkadapter und Router-Konfigurationen.",
+    "Erstellung von Dummy-Hardware-Adressen für Dokumentationen und Schulungsunterlagen.",
+    "Erzeugung synthetischer MAC-Listen für DHCP-Reservierungstests."
+  ],
+  "faqs": [
+    {
+      "question": "Welche Trennzeichenformate sind verfügbar?",
+      "answer": "Unterstützt werden Doppelpunkte (00:11:22:33:44:55), Bindestriche (00-11-22-33-44-55) und die kompakte Schreibweise ohne Trennzeichen."
+    },
+    {
+      "question": "Wie viele MAC-Adressen können auf einmal erzeugt werden?",
+      "answer": "Du kannst bis zu 100 MAC-Adressen in einem einzigen Durchlauf generieren."
+    },
+    {
+      "question": "Werden Daten an einen externen Server übertragen?",
+      "answer": "Nein. Die gesamte Adressgenerierung findet lokal im Speicher deines Webbrowsers statt."
+    }
   ]
 }

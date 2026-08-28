@@ -1,35 +1,28 @@
 {
-  "detailed_description": "Regex Escape hilft dabei, Sonderzeichen für reguläre Ausdrücke zu escapen oder bereits escapte Zeichen wieder zu unescapen. Geben Sie Text ein, wählen Sie den Modus Escape oder Unescape und klicken Sie auf die passende Aktion. Das Tool behandelt typische Regex-Metazeichen wie Backslash, Punkt, Stern, Plus, Fragezeichen, Klammern, eckige Klammern, geschweifte Klammern, Dollar, Caret und Pipe. Es gibt einen Beispieltext, einen Swap-Button, Kopieren der Ausgabe und Tasten zum Einfügen einzelner Sonderzeichen. Es wählt keinen Regex-Dialekt, prüft keine Patterns gegen Testdaten und schützt nicht vor SQL-Injection oder anderen Sicherheitsproblemen.",
+  "detailed_description": "Regex Escape maskiert reservierte Sonderzeichen für reguläre Ausdrücke oder stellt bereits maskierte Zeichen wieder her. Das Tool behandelt typische Regex-Metazeichen wie Backslash, Punkt, Stern, Plus, Fragezeichen, runde/eckige/geschweifte Klammern, Dollarzeichen, Zirkumflex und Pipe. Es ermöglicht das schnelle Vorbereiten von wörtlichen Suchbegriffen für JavaScript-, Python- oder PCRE-Code direkt im Browser.",
   "usage_steps": [
-    "Wählen Sie Escape oder Unescape als Modus.",
-    "Fügen Sie den Text oder die bereits escapte Zeichenfolge in das Eingabefeld ein.",
-    "Nutzen Sie bei Bedarf Beispiel laden oder die Sonderzeichen-Tasten.",
-    "Klicken Sie auf Escapen oder Unescapen.",
-    "Prüfen Sie die Ausgabe und kopieren Sie sie bei Bedarf.",
-    "Nutzen Sie Swap, wenn die Ausgabe wieder zur Eingabe werden soll."
+    "1. Wähle zwischen 'Escapen' (Maskieren) oder 'Unescapen' (Demaskieren).",
+    "2. Füge den Text oder String in das Eingabefeld ein.",
+    "3. Klicke auf die Aktionsschaltfläche, um die Sonderzeichen umzuwandeln.",
+    "4. Kopiere das maskierte Literal direkt in deinen Quellcode."
   ],
   "usage_examples": [
-    "Einen Dateinamen wie report.final(1).txt für eine Regex-Suche escapen.",
-    "Einen Suchtext mit Klammern, Dollarzeichen oder Punkt als Literal verwenden.",
-    "Eine bereits escapte Zeichenfolge wieder lesbarer machen.",
-    "Sonderzeichen per Button in das Eingabefeld einfügen und das Ergebnis kopieren."
+    "Dateinamen mit Punkten und Klammern wie 'report.v1(final).pdf' für eine Regex-Literalsuche maskieren.",
+    "Suchbegriffe mit Dollarzeichen oder Pluszeichen als reine Textliterale in regulären Ausdrücken nutzen.",
+    "Bereits maskierte Regex-Muster lesbar demaskieren."
   ],
   "faqs": [
     {
-      "question": "Welche Zeichen werden escapet?",
-      "answer": "Escapet werden typische Regex-Metazeichen wie Backslash, ^, $, ., |, ?, *, +, Klammern und geschweifte oder eckige Klammern."
+      "question": "Welche Zeichen werden maskiert?",
+      "answer": "Maskiert werden alle gängigen Regex-Metazeichen: \\, ^, $, ., |, ?, *, +, (, ), [, ], {, }."
     },
     {
-      "question": "Kann das Tool Regex testen?",
-      "answer": "Nein. Diese Seite escapet oder unescapet Zeichen; sie führt keine Regex-Suche gegen Testdaten aus."
+      "question": "Ist das Tool für dynamische RegExp-Konstruktoren in JavaScript nützlich?",
+      "answer": "Ja. Es eignet sich ideal, um Benutzereingaben sicher in new RegExp(pattern) einzubinden, ohne dass Sonderzeichen als Operatoren interpretiert werden."
     },
     {
-      "question": "Gibt es verschiedene Regex-Dialekte?",
-      "answer": "Nein. Die Oberfläche bietet keinen Dialekt-Schalter und arbeitet mit einer einfachen Liste typischer Sonderzeichen."
-    },
-    {
-      "question": "Ist das ein Sicherheitstool?",
-      "answer": "Nein. Es hilft beim Formatieren von Regex-Literalen, ersetzt aber keine Sicherheitsprüfung oder Eingabevalidierung."
+      "question": "Werden meine Texte online übertragen?",
+      "answer": "Nein. Alle Escape- und Unescape-Operationen laufen vollständig lokal im Webbrowser ab."
     }
   ]
 }

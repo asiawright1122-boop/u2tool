@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Die Regex Patterns Library ist ein interaktives Entwicklungs-Tool, das standardisierte reguläre Ausdrücke für häufige Validierungs- und Transformationsaufgaben bereitstellt. Technisch gesehen bietet sie präzise definierte Muster für E-Mail-Adressen (RFC 5322-konform), URLs (mit und ohne Protokoll), internationale Telefonnummern (ITU-E.164-Format), IP-Adressen (IPv4/IPv6), Datumsformate (ISO 8601) und mehr. Entwickler benötigen dieses Tool, um komplexe Textverarbeitungsaufgaben zu lösen, ohne jedes Mal komplexe Regex-Logik von Grund auf neu entwickeln zu müssen. Es verhindert häufige Fehler wie unvollständige Zeichensatzeinschlüsse oder ineffiziente Backtracking-Verfahren. Die Bibliothek funktioniert durch eine semantische Zuordnung von Anwendungsfällen zu optimierten Regex-Patterns, inklusive Erklärungen zu Lookahead-Assertions, Capture Groups und Lazy Quantifiern. Jedes Pattern ist mit Testfällen hinterlegt, die Grenzfälle wie TLD-Längenbeschränkungen bei Domains oder optionale Ländercodes bei Telefonnummern abdecken.",
+  "detailed_description": "Die Regex-Muster-Bibliothek bietet eine strukturierte Sammlung bewährter regulärer Ausdrücke für gängige Validierungs- und Extraktionsaufgaben. Entwickler finden hier sofort einsatzbereite Muster für E-Mail-Adressen, URLs, Datumsformate, Telefonnummern, IP-Adressen, Passwörter und numerische Werte mit praktischer Kopierfunktion und Erläuterungen.",
   "usage_steps": [
-    "Wählen Sie eine Kategorie aus dem erweiterten Dropdown-Menü (z.B. 'Kommunikation' für E-Mails oder 'Telekommunikation' für Telefonnummern)",
-    "Aktivieren Sie den Schalter 'Erweiterte Optionen' zur Anpassung von Modifiers wie case-insensitive oder multiline-Modus",
-    "Geben Sie Testdaten in das mehrzeilige Eingabefeld ein, um Echtzeit-Match-Feedback zu erhalten",
-    "Klicken Sie auf das 'Analyse'-Icon, um die Capture Groups und Match-Positionen visuell dargestellt zu bekommen",
-    "Nutzen Sie den 'Code-Generator', um das Pattern in verschiedenen Sprachen (JavaScript, Python, PHP) mit Escape-Sequenzen zu exportieren",
-    "Importieren Sie eigene Regex-Muster über den 'Custom Pattern'-Tab zur Validierung gegen die eingebaute Testdatenbank"
+    "1. Wähle die gewünschte Validierungskategorie aus der Übersicht.",
+    "2. Prüfe das reguläre Muster und die zugehörigen Testfälle.",
+    "3. Kopiere den regulären Ausdruck mit einem Klick in deine Zwischenablage.",
+    "4. Binde das Muster direkt in deine JavaScript-, Python- oder Backend-Validierung ein."
   ],
   "usage_examples": [
-    "Validierung von Benutzereingaben in einem Webformular mit mehrsprachiger Unterstützung für internationale E-Mail-Adressen",
-    "Normalisierung von Telefonnummern in einer CRM-Datenbank durch Entfernung nichtnumerischer Zeichen und Formatierung nach E.164",
-    "Extraktion spezifischer URL-Parameter aus Webserver-Logs zur Analyse von Traffic-Quellen mit komplexen Query-String-Patterns",
-    "Sanitization von Benutzernamen in einem Chat-System durch Ausschluss steuerungszeichensensitiver Unicode-Blöcke"
+    "Validierung von E-Mail-Adressen in Webformularen vor dem Absenden.",
+    "Überprüfung von Passwortstärken auf Mindestlänge und Sonderzeichen.",
+    "Extraktion von URLs und Domains aus unstrukturierten Texten."
+  ],
+  "faqs": [
+    {
+      "question": "Sind die regulären Ausdrücke mit gängigen Programmiersprachen kompatibel?",
+      "answer": "Ja. Die bereitgestellten Muster entsprechen standardkonformen regulären Ausdrücken und funktionieren in JavaScript, Python, PHP, Java und C#."
+    },
+    {
+      "question": "Kann ich die Muster anpassen?",
+      "answer": "Ja. Du kannst jedes Muster kopieren und in unserem Regex-Tester weiter an deine individuellen Anforderungen anpassen."
+    },
+    {
+      "question": "Werden meine Eingaben auf einem Server verarbeitet?",
+      "answer": "Nein. Die gesamte Nutzung der Musterbibliothek erfolgt rein clientseitig im Webbrowser."
+    }
   ]
 }

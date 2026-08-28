@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Der Regex Tester ist ein spezialisierter Code-Analyzer, der Entwicklern ermöglicht, reguläre Ausdrücke in Echtzeit zu validieren und zu optimieren. Technisch basiert das Tool auf der JavaScript RegExp-Engine, erweitert durch Unterstützung für moderne Regex-Features wie Lookbehind Assertions, Unicode Property Escapes (\\p{L}) und Named Capture Groups. Bei Eingabe eines Musters wird dieses sofort gegen einen definierten Textkörper geprüft, wobei Treffer mit farbkodierten Hervorhebungen und Gruppenanalysen visualisiert werden. Die integrierte Debugging-Schnittstelle zeigt Match-Positionen, Backreference-Inhalte und Fehlerursachen bei ungültiger Syntax an. Entwickler benötigen dieses Tool, um komplexe Muster für Aufgaben wie Protokollparser, Datenextraktion aus unstrukturierten Texten oder Validierung spezifischer Zeichenkettentypen (z.B. IBAN-Formate) zu entwickeln. Die Echtzeitfeedback-Schleife reduziert die Testzyklen bei der Regex-Optimierung erheblich, während die visuelle Darstellung von Match-Objekten das Verständnis der Ausdruckslogik verbessert. Unterstützt werden alle Standard-Regex-Flags (g/m/s/u/i/y) sowie benutzerdefinierte Zeichensätze durch erweiterte Eingabefelder.",
+  "detailed_description": "Der Regex-Tester ermöglicht Entwicklern das interaktive Testen und Debuggen regulärer Ausdrücke in Echtzeit direkt im Browser. Basierend auf der JavaScript-RegExp-Engine bietet das Tool sofortige farbliche Hervorhebung aller Treffer (Matches), Unterstützung für Capture-Gruppen und bequeme Flag-Umschaltung (global, case-insensitive, multiline). Es hilft, reguläre Ausdrücke schnell und fehlerfrei für Webanwendungen, Parser und Datenextraktionen zu optimieren.",
   "usage_steps": [
-    "Geben Sie Ihren Regex-Ausdruck in das 'Pattern'-Feld ein, z.B. \"\\d{2}-\\d{3}\" für Postleitzahlenmuster.",
-    "Aktivieren Sie die gewünschten Flags über die Schaltflächen (g/m/s/u/i/y) für globale Suche, Multiline-Unterstützung etc.",
-    "Fügen Sie Testdaten im 'Input'-Bereich hinzu, z.B. einen Textblock mit gemischten Postleitzahlenformaten.",
-    "Beobachten Sie die sofortige farbliche Hervorhebung aller Matches und der zugehörigen Capture-Gruppen in der Vorschau.",
-    "Nutzen Sie den 'Replace'-Tab, um Substitutionen mit Backreferences (z.B. \"$2-$1\") zu testen und Ergebnisse live zu sehen.",
-    "Konsultieren Sie das Fehlerprotokoll unterhalb des Pattern-Felds bei ungültiger Syntax, das präzise Zeilen- und Zeichenpositionen anzeigt."
+    "1. Gib deinen regulären Ausdruck in das Muster-Feld ein.",
+    "2. Aktiviere gewünschte Flags wie 'g' (global), 'i' (Groß-/Kleinschreibung ignorieren) oder 'm' (mehrzeilig).",
+    "3. Füge deinen Beispieltext in das Testfeld ein.",
+    "4. Prüfe die farblich hervorgehobenen Treffer und extrahierten Gruppen in der Live-Vorschau."
   ],
   "usage_examples": [
-    "Validierung von benutzerdefinierten IBAN-Formaten durch Testen von Regex-Mustern für Ländercodes und Prüfziffern.",
-    "Extraktion von Hashtags aus Social-Media-Texten mit komplexen Mustern, die mehrere Sprachen und Emoji-Kombinationen berücksichtigen.",
-    "Debugging von Log-Parser-Regexen, die Zeitstempel im Format \"[23/Jul/2024:12:34:56 +0200]\" verarbeiten müssen.",
-    "Optimierung von Passwort-Regexen mit mehrfachen Lookahead-Assertions für Mindestlänge, Sonderzeichen und Zeichenvielfalt."
+    "Testen eines regulären Ausdrucks zur Validierung von Datums- und Uhrzeitformaten.",
+    "Überprüfung von Extraktionsmustern für URLs, E-Mails oder Hashtags aus Fließtexten.",
+    "Debugging von Erfassungsgruppen (Capture Groups) vor dem Einbau in JavaScript- oder Python-Code."
+  ],
+  "faqs": [
+    {
+      "question": "Auf welcher Regex-Engine basiert der Tester?",
+      "answer": "Der Tester nutzt die native JavaScript-RegExp-Engine deines Browsers für maximale Genauigkeit bei Web- und Node.js-Projekten."
+    },
+    {
+      "question": "Werden Capture Groups visualisiert?",
+      "answer": "Ja. Vollständige Treffer und nummerierte oder benannte Erfassungsgruppen werden übersichtlich dargestellt."
+    },
+    {
+      "question": "Werden meine Testtexte an einen Server gesendet?",
+      "answer": "Nein. Alle Auswertungen und Musterprüfungen finden ausschließlich lokal in deinem Webbrowser statt."
+    }
   ]
 }

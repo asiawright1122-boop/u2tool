@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Der JSON-zu-PHP-Konverter transformiert strukturierte JSON-Daten in syntaktisch korrekte PHP-Arrays. Technisch gesehen analysiert das Tool die Eingabedaten mithilfe eines JSON-Parsers, überprüft die Datentypen (Strings, Zahlen, Booleans, Arrays) und generiert entsprechende PHP-Array-Syntax unter Berücksichtigung von assoziativen Strukturen. Der Konverter unterstützt verschachtelte Objekte durch rekursive Verarbeitung und gewährleistet bei Bedarf die Umwandlung von Groß-/Kleinschreibung in PHP-konforme Schlüssel. Entwickler benötigen dieses Tool, um beispielsweise API-Antworten (z.B. von REST-Services) direkt in PHP-Code zu integrieren, Testdaten für Frameworks wie Laravel zu generieren oder Legacy-Systeme mit modernen JSON-basierten Schnittstellen zu verbinden. Die Implementierung verwendet eine Kombination aus json_decode() zur Validierung und einem benutzerdefinierten Array-Renderer, der zusätzlich PHP-Escaping-Regeln anwendet. Besonders bei komplexen Datenstrukturen mit gemischten Datentypen vermeidet der Konverter Fehler durch automatische Typumwandlung und bietet Optionen zur Anpassung des Ausgabeformats (z.B. Einrückungstiefe, Konstanten-Definition).",
+  "detailed_description": "Der JSON-zu-PHP-Konverter wandelt JSON-Daten direkt im Browser in syntaktisch saubere PHP-Arrays um. Das Tool unterstützt die moderne Kurzschreibweise für Arrays ([]), verschachtelte assoziative Arrays, Strings, Zahlen, Booleans und Nullwerte. Es ist ideal für Laravel-, Symfony- und WordPress-Entwickler, die API-Antworten oder Konfigurationen schnell als PHP-Code einbinden möchten.",
   "usage_steps": [
-    "1. Öffnen Sie das Tool im Browser und identifizieren Sie das große Eingabefeld für JSON-Daten.",
-    "2. Fügen Sie Ihren validen JSON-Code in das Textfeld ein oder laden Sie eine .json-Datei über den 'Datei auswählen'-Button hoch.",
-    "3. Aktivieren Sie die Checkbox 'Pretty Print' für formatierte Ausgabe oder 'Konstanten definieren', um Arrays als define()-Blöcke zu generieren.",
-    "4. Passen Sie bei Bedarf die Einrückungstiefe (1-4 Leerzeichen) und den Schlüssel-Stil (Anführungszeichen beibehalten oder entfernen).",
-    "5. Klicken Sie auf 'Konvertieren', um die PHP-Array-Syntax im Ergebnisbereich anzuzeigen.",
-    "6. Kopieren Sie den generierten PHP-Code über den 'In Zwischenablage kopieren'-Button oder laden Sie ihn als .php-Datei herunter."
+    "1. Füge dein JSON-Objekt oder Array in das Eingabefeld ein.",
+    "2. Das Tool analysiert die Syntax und erzeugt das entsprechende PHP-Array.",
+    "3. Prüfe die Einrückung und Array-Struktur in der PHP-Vorschau.",
+    "4. Nutze 'Kopieren', um den PHP-Code direkt in dein Projekt einzufügen."
   ],
   "usage_examples": [
-    "Backend-Entwickler wandeln eine JSON-API-Spezifikation in ein PHP-Array, um sie als Stub für eine Service-Klasse zu verwenden.",
-    "Ein Migrationsskript für eine Legacy-Datenbank generiert PHP-Konfigurationsarrays aus exportierten JSON-Datensätzen.",
-    "Frontend-Entwickler konvertieren Mock-JSON-Daten in PHP-Arrays, um lokale Tests ohne externe API-Abhängigkeiten durchzuführen.",
-    "Bei der Integration von NoSQL-Datenbanken wird JSON-Exportmaterial in PHP-Arrays transformiert, die direkt in Doctrine-Entitäten geladen werden können."
+    "Schnelle Umwandlung von JSON-API-Payloads in PHP-Arrays für Laravel-Controller oder Unit-Tests.",
+    "Konvertierung von Konfigurationsdateien in PHP-Array-Dateien für WordPress oder Symfony.",
+    "Erstellung von Test-Fixtures für PHPUnit aus JSON-Mockdaten."
+  ],
+  "faqs": [
+    {
+      "question": "Wird die moderne PHP-Array-Syntax unterstützt?",
+      "answer": "Ja. Das Tool verwendet standardmäßig die moderne Kurzschreibweise mit eckigen Klammern []."
+    },
+    {
+      "question": "Werden verschachtelte Objekte in assoziative Arrays konvertiert?",
+      "answer": "Ja. Verschachtelte JSON-Objekte werden rekursiv in saubere assoziative PHP-Arrays überführt."
+    },
+    {
+      "question": "Werden meine Daten an einen Server gesendet?",
+      "answer": "Nein. Die gesamte Konvertierung erfolgt clientseitig in deinem Webbrowser."
+    }
   ]
 }

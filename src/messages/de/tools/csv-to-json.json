@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Der CSV-zu-JSON-Konverter wandelt strukturierte Tabellendaten aus CSV-Dateien in ein hierarchisches JSON-Format um. Technisch erfolgt dies durch Parsing des CSV-Inhalts mittels regulärer Ausdrücke zur Trennzeichenerkennung (z.B. Komma, Semikolon, Tabulator) und anschließender Serialisierung in ein JSON-Objektbaum. Besonders bei komplexen Daten mit verschachtelten Arrays oder Objekten ermöglicht das Tool präzise Typzuordnungen (String, Number, Boolean) durch kontextbasierte Mustervergleiche. Entwickler benötigen diese Funktionalität für Datenmigrationen in NoSQL-Datenbanken wie MongoDB, API-Tests mit JSON-basierten Endpoints oder die Vorbereitung von Daten für Visualisierungsframeworks wie ECharts-based browser chart rendering. Das Tool verarbeitet Daten clientseitig im Browser mit Web Workers für große Dateien, unterstützt MIME-Typ-Prüfung und bietet eine Live-Vorschau der konvertierten Struktur. Besonders nützlich ist die automatische Erkennung von Kopfzeilen und die Option zur manuellen Anpassung von Feldnamen für JSON-Schlüssel.",
+  "detailed_description": "Der CSV-zu-JSON-Konverter wandelt tabellarische CSV-Daten schnell und unkompliziert in strukturierte JSON-Arrays um. Das Tool erkennt Kopfzeilen als JSON-Schlüssel und konvertiert Zahlen, boolesche Werte und Texte automatisch in die passenden Datentypen. Es eignet sich ideal für Entwickler, die Tabellenexporte für Web-APIs, Frontend-Komponenten oder NoSQL-Datenbanken wie MongoDB vorbereiten möchten.",
   "usage_steps": [
-    "Laden Sie die CSV-Datei über den Dateiuploader oder ziehen Sie sie per Drag-and-Drop in den Arbeitsbereich.",
-    "Wählen Sie das explizite Trennzeichen aus dem Auswahlfeld: Komma, Semikolon, Tabulator oder benutzerdefiniertes Zeichen.",
-    "Aktivieren Sie die Checkbox 'Erste Zeile als Header' für automatische Schlüsselgenerierung im JSON-Objekt.",
-    "Passen Sie bei Bedarf die Datentypen der Spalten manuell im Typzuordnungs-Editor an (z.B. von String zu Number).",
-    "Klicken Sie auf 'Konvertieren', um den JSON-Code in der Ergebnisansicht zu generieren.",
-    "Kopieren Sie den Ergebniscode über den 'Copy to Clipboard'-Button oder laden Sie die JSON-Datei herunter."
+    "1. Füge deinen CSV-Text in das Eingabefeld ein.",
+    "2. Das Tool erkennt automatisch Trennzeichen (Komma, Semikolon oder Tabulator) und Kopfzeilen.",
+    "3. Prüfe das generierte JSON-Array in der Ausgabevorschau.",
+    "4. Nutze 'Kopieren', um das formatierte JSON sofort in deine Anwendung zu übernehmen."
   ],
   "usage_examples": [
-    "Migration von Kundendaten aus Excel-Tabellen (CSV) in eine MongoDB-Datenbank mit verschachtelten Dokumentenstrukturen.",
-    "Erstellung von Testdatensätzen für API-Endpunkte, die JSON-Eingaben im POST-Request erwarten.",
-    "Konvertierung von Zeitreihendaten für Echtzeitvisualisierungen mit der JavaScript-Bibliothek Chart.js.",
-    "Vorbereitung von maschinellem Lernmaterial in Python, das JSON-Arrays für Scikit-learn-Modelle benötigt."
+    "Konvertierung von Excel- oder Google-Sheets-CSV-Exporten in JSON für Frontend-Projekte.",
+    "Erstellung von Mockdaten für REST-APIs aus tabellarischen Listen.",
+    "Schnelle Vorbereitung von Tabellendaten für NoSQL-Datenbankimporte."
+  ],
+  "faqs": [
+    {
+      "question": "Werden Zahlen und boolesche Werte automatisch typisiert?",
+      "answer": "Ja. Das Tool erkennt numerische Werte und Wahrheitswerte (true/false) und wandelt sie in native JSON-Typen um."
+    },
+    {
+      "question": "Welche CSV-Trennzeichen werden unterstützt?",
+      "answer": "Kommas, Semikolons und Tabulatoren werden nahtlos unterstützt."
+    },
+    {
+      "question": "Werden meine CSV-Dateien auf einen Server hochgeladen?",
+      "answer": "Nein. Die gesamte Konvertierung erfolgt vollständig lokal im Speicher deines Webbrowsers."
+    }
   ]
 }

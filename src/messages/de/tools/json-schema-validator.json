@@ -1,17 +1,28 @@
 {
-  "detailed_description": "Der JSON Schema Validator ist ein leistungsstarkes Werkzeug, das Entwicklern dabei hilft, JSON-Daten anhand von JSON-Schemas zu validieren. Diese Validierung ist entscheidend, um die Integrität und Konsistenz von Daten in Webanwendungen und APIs zu gewährleisten. JSON-Schemas definieren die Struktur und die Eigenschaften von JSON-Dokumenten, einschließlich Typen, Anforderungen, und Muster. Der Validator überprüft, ob ein JSON-Dokument den in einem Schema festgelegten Regeln entspricht, was hilfreich ist, um Fehler frühzeitig im Entwicklungslauf zu erkennen und zu beheben. Dies ist besonders nützlich in komplexen Systemen, wo Daten aus verschiedenen Quellen zusammengeführt werden, und die Sicherheit und Konsistenz der Daten kritisch sind. Der JSON Schema Validator unterstützt auch erweiterte Funktionen wie benutzerdefinierte Validierungsregeln und die Möglichkeit, mehrere Schemas gleichzeitig zu überprüfen, was die Effizienz der Entwicklung und Testprozesse erheblich verbessert.",
+  "detailed_description": "Der JSON-Schema-Validator überprüft JSON-Dokumente gegen definierte JSON-Schemas direkt im Browser. Das Tool validiert Datentypen, erforderliche Pflichtfelder, reguläre Ausdrücke, Zahlenbereiche und verschachtelte Objektstrukturen. Entwickler können Schemadefinitionen und JSON-Nutzdaten interaktiv testen, um Integrationsfehler in APIs und Konfigurationen frühzeitig zu erkennen.",
   "usage_steps": [
-    "Öffnen Sie die JSON Schema Validator-Seite und navigieren Sie zum Eingabebereich.",
-    "Klicken Sie auf den Button 'JSON-Daten einfügen' und fügen Sie das zu validierende JSON-Dokument ein.",
-    "Wählen Sie im Dropdown-Menü 'JSON-Schema auswählen' das gewünschte Schema aus oder fügen Sie ein benutzerdefiniertes Schema ein.",
-    "Klicken Sie auf 'Validierungsoptionen' und aktivieren Sie die gewünschten Einstellungen, wie z.B. 'Fehlerdetails anzeigen' oder 'Warnungen einschließen'.",
-    "Starten Sie die Validierung, indem Sie auf den Button 'Validieren' klicken.",
-    "Bewerten Sie die Validierungsergebnisse, die im Abschnitt 'Ergebnisse' angezeigt werden, und beheben Sie eventuelle Fehler."
+    "1. Füge dein JSON-Schema in das Schema-Eingabefeld ein.",
+    "2. Füge das zu prüfende JSON-Dokument in das Datenfeld ein.",
+    "3. Klicke auf 'Validieren', um die Konformitätsprüfung auszuführen.",
+    "4. Lies detaillierte Fehlermeldungen und Pfadangaben ab, falls Abweichungen vorliegen."
   ],
   "usage_examples": [
-    "Ein Entwickler erstellt eine neue API und muss sicherstellen, dass die eingegebenen Daten den erwarteten Strukturen entsprechen. Der JSON Schema Validator hilft, die API-Anfragen zu validieren, bevor sie in den Produktionscode integriert werden.",
-    "Ein Team arbeitet an einem Projekt, bei dem Daten aus verschiedenen Systemen integriert werden. Der JSON Schema Validator wird verwendet, um zu garantieren, dass die Daten aus jeder Quelle die erforderlichen Validierungsregeln erfüllen, bevor sie in die zentrale Datenbank eingefügt werden.",
-    "Ein Software-Architekt erstellt ein JSON-Schema für eine komplexe Datenstruktur und muss sicherstellen, dass es korrekt implementiert wurde. Der JSON Schema Validator überprüft die Konformität von Testdaten, um mögliche Probleme im Schema zu identifizieren.",
-    "Eine Firma führt regelmäßig Datenmigrationen durch und muss sicherstellen, dass die migrierten Daten korrekt formatiert sind. Der JSON Schema Validator wird verwendet, um die migrierten Daten zu validieren und so potenzielle Fehler zu vermeiden, die zur Verzögerung von Projekten führen könnten."
+    "Validierung von REST-API-Payloads gegen OpenAPI- und JSON-Schema-Spezifikationen.",
+    "Überprüfung von komplexen Konfigurationsdateien vor dem Deployment.",
+    "Testen von JSON-Mockdaten auf Vollständigkeit aller Pflichtfelder."
+  ],
+  "faqs": [
+    {
+      "question": "Welche JSON-Schema-Drafts werden unterstützt?",
+      "answer": "Das Tool unterstützt die gängigen Spezifikationen wie Draft-07, Draft 2019-09 und Draft 2020-12."
+    },
+    {
+      "question": "Zeigt der Validator genaue Fehlerpfade an?",
+      "answer": "Ja. Bei Abweichungen werden der genaue JSON-Pfad und die verletzte Validierungsregel übersichtlich dargestellt."
+    },
+    {
+      "question": "Werden meine Schemas oder Daten übertragen?",
+      "answer": "Nein. Die Validierung läuft vollständig lokal in deinem Webbrowser ab."
+    }
   ]
 }
