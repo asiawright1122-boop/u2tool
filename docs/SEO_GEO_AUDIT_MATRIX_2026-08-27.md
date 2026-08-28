@@ -1,6 +1,6 @@
 # SEO/GEO Audit Matrix - 2026-08-27
 
-Generated: 2026-08-27T08:03:32.952Z
+Generated: 2026-08-27T15:17:55.001Z
 
 ## Scope
 
@@ -14,8 +14,8 @@ Generated: 2026-08-27T08:03:32.952Z
 |---|---:|---|
 | P0 | 7 | Lost clicks/major exposure or critical technical/content-trust risk. |
 | P1 | 132 | Large exposure loss or high-confidence SEO cleanup target. |
-| P2 | 1595 | Medium cleanup debt suitable for batch repair. |
-| P3 | 3966 | Monitor or low-risk backlog. |
+| P2 | 1591 | Medium cleanup debt suitable for batch repair. |
+| P3 | 3970 | Monitor or low-risk backlog. |
 
 ## GSC Recovery Queue
 
@@ -79,7 +79,7 @@ Generated: 2026-08-27T08:03:32.952Z
 | P1 | 49 | `https://www.u2tool.com/en/tools/screen-recorder/` | 2 | 1135 | query-intent TDK/support refresh | gsc_click_loss, gsc_impression_loss |
 | P1 | 68 | `https://www.u2tool.com/en/tools/calendar-availability-finder/` | 2 | 577 | query-intent TDK/support refresh | gsc_click_loss, gsc_impression_loss, gsc_indexed_low_exposure |
 | P1 | 66 | `https://www.u2tool.com/fr/tools/image-resizer/` | 2 | 275 | query-intent TDK/support refresh | gsc_click_loss, gsc_impression_loss, coverage_crawled-not-indexed |
-| P2 | 57 | `https://www.u2tool.com/es/tools/text-repeater/` | 2 | 232 | query-intent TDK/support refresh | gsc_click_loss, gsc_impression_loss, generic-data-generator-latin |
+| P2 | 41 | `https://www.u2tool.com/es/tools/text-repeater/` | 2 | 232 | query-intent TDK/support refresh | gsc_click_loss, gsc_impression_loss |
 | P2 | 45 | `https://www.u2tool.com/fr/tools/random-generator/` | 2 | 231 | query-intent TDK/support refresh | gsc_click_loss, gsc_impression_loss, faq_short |
 
 ## Top P0/P1 Rows
@@ -223,21 +223,21 @@ Generated: 2026-08-27T08:03:32.952Z
 
 | Issue | Rows |
 |---|---:|
-| `faq_short` | 4667 |
-| `usage_examples_short` | 1570 |
+| `faq_short` | 4661 |
+| `usage_examples_short` | 1573 |
 | `seo_title_source_drift` | 1272 |
 | `coverage_crawled-not-indexed` | 965 |
 | `gsc_impression_loss` | 926 |
-| `usage_steps_short` | 847 |
+| `usage_steps_short` | 852 |
 | `support_thin_critical` | 643 |
 | `support_thin` | 548 |
 | `gsc_click_loss` | 370 |
 | `gsc_low_ranking_current` | 133 |
 | `coverage_blocked-4xx_slash_redirect_pending` | 131 |
 | `seo_description_source_drift` | 42 |
-| `generic-data-generator-latin` | 27 |
 | `gsc_indexed_low_exposure` | 23 |
-| `generic-data-generator-ko` | 10 |
+| `generic-data-generator-latin` | 17 |
+| `generic-data-generator-ko` | 8 |
 
 ### P0/P1 By Locale
 
@@ -273,24 +273,16 @@ Generated: 2026-08-27T08:03:32.952Z
 
 | Priority | URL | Issues |
 |---|---|---|
-| P2 | `https://www.u2tool.com/es/tools/text-repeater/` | gsc_click_loss, gsc_impression_loss, generic-data-generator-latin |
-| P2 | `https://www.u2tool.com/es/tools/fake-data-generator/` | gsc_click_loss, gsc_impression_loss, generic-data-generator-latin |
-| P2 | `https://www.u2tool.com/de/tools/ip-address-generator/` | gsc_low_ranking_current, faq_short, generic-data-generator-latin, coverage_crawled-not-indexed |
-| P2 | `https://www.u2tool.com/ja/tools/random-generator/` | gsc_impression_loss, generic-data-generator-ja, coverage_crawled-not-indexed |
-| P2 | `https://www.u2tool.com/de/tools/crc32-calculator/` | faq_short, generic-data-generator-latin, coverage_crawled-not-indexed |
-| P2 | `https://www.u2tool.com/es/tools/random-generator/` | faq_short, generic-data-generator-latin, coverage_crawled-not-indexed |
 | P2 | `https://www.u2tool.com/de/tools/fake-data-generator/` | generic-data-generator-latin, coverage_crawled-not-indexed |
-| P2 | `https://www.u2tool.com/de/tools/regex-generator/` | generic-data-generator-latin, coverage_crawled-not-indexed |
 | P2 | `https://www.u2tool.com/ja/tools/fake-data-generator/` | generic-data-generator-ja, coverage_crawled-not-indexed |
 | P2 | `https://www.u2tool.com/es/tools/json-to-yaml/` | seo_title_source_drift, faq_short, generic-data-generator-latin |
 | P2 | `https://www.u2tool.com/ja/tools/anagram-solver/` | seo_title_source_drift, faq_short, generic-data-generator-ja |
-| P2 | `https://www.u2tool.com/ja/tools/sql-to-json/` | seo_title_source_drift, faq_short, generic-data-generator-ja |
 | P2 | `https://www.u2tool.com/ko/tools/text-reverser/` | seo_title_source_drift, faq_short, generic-data-generator-ko |
 | P2 | `https://www.u2tool.com/ko/tools/text-wrapper/` | seo_title_source_drift, faq_short, generic-data-generator-ko |
-| P3 | `https://www.u2tool.com/de/tools/random-generator/` | gsc_impression_loss, faq_short, generic-data-generator-latin |
+| P3 | `https://www.u2tool.com/de/tools/sql-to-json/` | usage_steps_short, usage_examples_short, faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/ja/tools/fake-name-generator/` | seo_title_source_drift, generic-data-generator-ja |
 | P3 | `https://www.u2tool.com/ja/tools/json-formatter/` | seo_title_source_drift, generic-data-generator-ja |
-| P3 | `https://www.u2tool.com/ko/tools/text-repeater/` | seo_title_source_drift, generic-data-generator-ko |
+| P3 | `https://www.u2tool.com/de/tools/random-generator/` | gsc_impression_loss, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/de/tools/csv-to-json/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/de/tools/fake-name-generator/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/de/tools/json-schema-validator/` | faq_short, generic-data-generator-latin |
@@ -302,17 +294,16 @@ Generated: 2026-08-27T08:03:32.952Z
 | P3 | `https://www.u2tool.com/de/tools/regex-escape/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/de/tools/regex-patterns/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/de/tools/regex-tester/` | faq_short, generic-data-generator-latin |
-| P3 | `https://www.u2tool.com/de/tools/sql-to-json/` | faq_short, generic-data-generator-latin |
-| P3 | `https://www.u2tool.com/de/tools/text-repeater/` | faq_short, generic-data-generator-latin |
-| P3 | `https://www.u2tool.com/de/tools/uuid-generator/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/es/tools/regex-patterns/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/fr/tools/json-to-sql/` | faq_short, generic-data-generator-latin |
-| P3 | `https://www.u2tool.com/fr/tools/sql-to-json/` | faq_short, generic-data-generator-latin |
 | P3 | `https://www.u2tool.com/ja/tools/mac-address-generator/` | faq_short, generic-data-generator-ja |
 | P3 | `https://www.u2tool.com/ja/tools/net-worth-allocator-tracker/` | generic-data-generator-ja |
 | P3 | `https://www.u2tool.com/ko/tools/csv-to-json/` | faq_short, generic-data-generator-ko |
 | P3 | `https://www.u2tool.com/ko/tools/fake-name-generator/` | faq_short, generic-data-generator-ko |
 | P3 | `https://www.u2tool.com/ko/tools/ip-address-generator/` | faq_short, generic-data-generator-ko |
+| P3 | `https://www.u2tool.com/ko/tools/ip-lookup/` | faq_short, generic-data-generator-ko |
+| P3 | `https://www.u2tool.com/ko/tools/net-worth-allocator-tracker/` | generic-data-generator-ko |
+| P3 | `https://www.u2tool.com/ko/tools/regex-patterns/` | faq_short, generic-data-generator-ko |
 
 ## Recommended Execution Order
 
