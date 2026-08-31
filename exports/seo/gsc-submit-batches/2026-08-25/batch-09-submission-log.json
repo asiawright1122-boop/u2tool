@@ -64,13 +64,13 @@
     },
     {
       "url": "https://www.u2tool.com/en/tools/nested-pie-chart-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-08-31 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/excel-viewer/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-08-31 提交成功 (检查状态: DUPLICATE_CANONICAL)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/pdf-to-image/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 12,
-    "pending": 8,
+    "submitted": 14,
+    "pending": 6,
     "currentBatch": "batch-09",
     "quotaHit": true,
-    "quotaHitAt": "2026-08-31T14:27:31.753Z",
-    "completedBatch": "batch-09 (12/20 - Quota Exhausted)"
+    "quotaHitAt": "2026-08-31T14:51:43.511Z",
+    "completedBatch": "batch-09 (14/20 - Quota Exhausted)"
   }
 }
