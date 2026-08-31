@@ -24,6 +24,6 @@ export const NETWORK_TOOLS: Tool[] = [
   { slug: 'data-transfer-calculator', category: 'network', icon: 'globe', component: 'DataTransferCalculator' },
   { slug: 'http-status-code-reference', category: 'network', icon: 'globe', component: 'HttpStatusCodeReference' },
   { slug: 'url-query-string-parser', category: 'network', icon: 'globe', component: 'UrlQueryStringParser' },
-  { slug: 'database-connection-tester', category: 'network', icon: 'globe', component: 'DatabaseConnectionTester' },
+  { slug: 'database-connection-tester', category: 'network', icon: 'globe', component: 'DatabaseConnectionTester', popular: true },
   { slug: 'ip-geolocation', category: 'network', icon: 'globe', component: 'IpGeolocation', popular: true },
 ];
