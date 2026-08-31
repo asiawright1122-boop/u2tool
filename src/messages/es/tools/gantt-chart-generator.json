@@ -85,7 +85,8 @@
   "usage_examples": [
     "Planificar una versión de software desde el alcance hasta un hito de publicación de cero días.",
     "Enlazar el brief, la producción y el lanzamiento de una campaña y revisar la cadena más larga.",
-    "Preparar localmente un evento e intercambiar el calendario como CSV."
+    "Preparar localmente un evento e intercambiar el calendario como CSV.",
+    "Supervisar los porcentajes de avance de cada fase operativa y exportar el informe gráfico en PNG para presentaciones."
   ],
   "faqs": [
     {
@@ -99,6 +100,14 @@
     {
       "question": "¿Se suben los archivos importados?",
       "answer": "No. Los archivos JSON y CSV se leen localmente en el navegador."
+    },
+    {
+      "question": "¿Cómo se exporta el cronograma en formato de imagen?",
+      "answer": "Puedes hacer clic en los botones de exportación PNG o SVG para descargar una instantánea visual de alta resolución lista para adjuntar en informes."
+    },
+    {
+      "question": "¿Qué ocurre si existen dependencias circulares entre tareas?",
+      "answer": "El sistema detecta automáticamente cualquier referencia circular o fecha incoherente y muestra un aviso visual en la sección de alertas del proyecto."
     }
   ],
   "seo_title": "Creador de diagramas de Gantt gratis | U2Tool",
