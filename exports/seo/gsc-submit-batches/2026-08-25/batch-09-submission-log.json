@@ -49,8 +49,8 @@
     },
     {
       "url": "https://www.u2tool.com/en/tools/timeline-chart-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限"
+      "status": "SUCCESS",
+      "detail": "2026-08-31 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/waterfall-chart-generator/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 9,
-    "pending": 11,
+    "submitted": 10,
+    "pending": 10,
     "currentBatch": "batch-09",
     "quotaHit": true,
-    "quotaHitAt": "2026-08-31T13:41:40.220Z",
-    "completedBatch": "batch-09 (Partial - Quota Exhausted)"
+    "quotaHitAt": "2026-08-31T14:04:37.368Z",
+    "completedBatch": "batch-09 (10/20 - Quota Exhausted)"
   }
 }
