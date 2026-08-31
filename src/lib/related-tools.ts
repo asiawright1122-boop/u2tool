@@ -2,17 +2,20 @@ import { getPopularTools, getToolBySlug, getToolsByCategory, tools, type Tool, t
 import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './ai-tools-directory';
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['venn-diagram-generator'],
-  development: ['merge-conflict-resolver', 'go-formatter'],
+  charts: ['timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
+  development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
   fun: ['love-calculator'],
   image: ['image-resizer', 'image-cropper', 'gif-maker'],
   math: ['compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
-  office: ['world-clock'],
+  office: ['image-to-pdf', 'json-to-excel', 'world-clock'],
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  network: ['ip-lookup', 'ip-validator'],
+  charts: ['timeline-chart-generator', 'gantt-chart-generator'],
+  development: ['sql-query-optimizer'],
+  network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
+  office: ['image-to-pdf', 'json-to-excel'],
 };
 
 export const crawledNotIndexedContentRefreshToolSlugs = Object.freeze(
