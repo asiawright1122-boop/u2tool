@@ -3960,7 +3960,6 @@ export const INDEX_SUPPRESSION: Record<string, boolean> = {
   'zh/word-to-html': true,
   'zh/word-to-txt': true,
   'zh/word-unscrambler': true,
-  'zh/wordcloud-generator': true,
   'zh/world-cup-budget-calculator': true,
   'zh/world-cup-group-calculator': true,
   'zh/world-cup-simulator': true,
