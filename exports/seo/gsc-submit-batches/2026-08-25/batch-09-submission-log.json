@@ -74,42 +74,42 @@
     },
     {
       "url": "https://www.u2tool.com/en/tools/pdf-to-image/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/world-clock/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "detail": "2026-09-01 GSC 触发每日配额上限"
     },
     {
       "url": "https://www.u2tool.com/en/tools/excel-to-csv/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "status": "ALREADY_INDEXED",
+      "detail": "2026-09-01 检查确认：网址已收录到 Google。"
     },
     {
       "url": "https://www.u2tool.com/en/tools/calendar-availability-finder/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
     },
     {
       "url": "https://www.u2tool.com/en/tools/screen-recorder/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
     },
     {
       "url": "https://www.u2tool.com/en/tools/cover-letter-generator/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-08-31 GSC 触发每日配额上限 (超出了配额)，将在下一日配额重置后继续自动提交"
+      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 14,
-    "pending": 6,
+    "submitted": 16,
+    "pending": 4,
     "currentBatch": "batch-09",
     "quotaHit": true,
-    "quotaHitAt": "2026-08-31T14:51:43.511Z",
-    "completedBatch": "batch-09 (14/20 - Quota Exhausted)"
+    "quotaHitAt": "2026-09-01T02:30:43.103Z",
+    "completedBatch": "batch-09 (16/20 - Quota Exhausted)"
   }
 }
