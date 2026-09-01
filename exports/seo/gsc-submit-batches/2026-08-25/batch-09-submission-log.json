@@ -94,8 +94,8 @@
     },
     {
       "url": "https://www.u2tool.com/en/tools/screen-recorder/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/cover-letter-generator/",
@@ -105,11 +105,13 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 19,
-    "pending": 1,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-09",
-    "quotaHit": true,
+    "quotaHit": false,
     "quotaHitAt": "2026-09-01T06:16:30.953Z",
-    "completedBatch": "batch-09 (19/20 - 95% Completed)"
+    "completedBatch": "batch-09",
+    "status": "ALL_COMPLETED_100_PERCENT",
+    "completedAt": "2026-09-01T07:12:49.991Z"
   }
 }
