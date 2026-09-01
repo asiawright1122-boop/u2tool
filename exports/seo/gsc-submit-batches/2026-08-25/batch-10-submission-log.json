@@ -9,53 +9,53 @@
     },
     {
       "url": "https://www.u2tool.com/en/tools/linkedin-summary-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/ics-file-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/calorie-calculator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/countdown-days-calculator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/calorie-deficit-calculator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)，排入下周期自动提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-01 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/macro-calculator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)，排入下周期自动提交"
+      "status": "ALREADY_INDEXED",
+      "detail": "2026-09-01 检查确认：网址已收录到 Google。"
     },
     {
       "url": "https://www.u2tool.com/en/tools/one-rep-max-calculator/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)，排入下周期自动提交"
+      "detail": "2026-09-01 GSC 频控/配额上限冷却中"
     },
     {
       "url": "https://www.u2tool.com/en/tools/currency-converter/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)，排入下周期自动提交"
+      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
     },
     {
       "url": "https://www.u2tool.com/en/tools/stock-average-calculator/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)，排入下周期自动提交"
+      "detail": "2026-09-01 检查状态: NOT_INDEXED，排入下周期自动提交"
     },
     {
       "url": "https://www.u2tool.com/en/tools/stock-profit-calculator/",
       "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-01 GSC 触发每日配额上限 (超出了配额)，排入下周期自动提交"
+      "detail": "2026-09-01 检查状态: NOINDEX_STALE，排入下周期自动提交"
     },
     {
       "url": "https://www.u2tool.com/en/tools/market-cap-calculator/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 1,
-    "pending": 19,
+    "submitted": 7,
+    "pending": 13,
     "currentBatch": "batch-10",
     "quotaHit": true,
-    "quotaHitAt": "2026-09-01T07:17:13.990Z",
-    "completedBatch": "batch-10 (1/20 - In Progress / Quota Hit)"
+    "quotaHitAt": "2026-09-01T13:24:54.577Z",
+    "completedBatch": "batch-10 (7/20 - In Progress / Quota Hit)"
   }
 }
