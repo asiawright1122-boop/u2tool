@@ -13,7 +13,9 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['timeline-chart-generator', 'gantt-chart-generator'],
+  converters: ['ical-parser', 'csv-to-vcard-converter'],
   development: ['sql-query-optimizer'],
+  encoding: ['morse-code-player', 'hex-editor'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel'],
 };

@@ -55,6 +55,8 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'graph-chart-generator': ['graph chart', 'network graph generator', 'node link diagram', 'graph visualization online'],
     'timeline-chart-generator': ['timeline chart generator', 'timeline chart', 'project timeline', 'interactive timeline'],
     'database-connection-tester': ['test database connection online', 'mysql connection tester', 'postgres connection test', 'database ping'],
+    'ical-parser': ['ical parser', 'ics viewer online', 'ical viewer', 'view ics file', 'parse ics calendar'],
+    'morse-code-player': ['morse code player', 'morse player online', 'play morse code audio', 'text to morse audio'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

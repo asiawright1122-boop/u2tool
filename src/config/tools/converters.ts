@@ -55,7 +55,7 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'json-to-zod', category: 'converters', icon: 'arrow-left-right', component: 'JsonToZod' },
   { slug: 'typescript-to-json', category: 'converters', icon: 'arrow-left-right', component: 'TypescriptToJson' },
   { slug: 'markdown-to-slides', category: 'converters', icon: 'arrow-left-right', component: 'MarkdownToSlides' },
-  { slug: 'ical-parser', category: 'converters', icon: 'arrow-left-right', component: 'IcalParser' },
+  { slug: 'ical-parser', category: 'converters', icon: 'arrow-left-right', component: 'IcalParser', popular: true },
   { slug: 'vcard-parser', category: 'converters', icon: 'arrow-left-right', component: 'VcardParser' },
   { slug: 'json-to-protobuf-converter', category: 'converters', icon: 'arrow-left-right', component: 'JsonToProtobufConverter' },
   { slug: 'markdown-to-html-converter', category: 'converters', icon: 'arrow-left-right', component: 'MarkdownToHtmlConverter' },

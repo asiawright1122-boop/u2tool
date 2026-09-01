@@ -29,7 +29,7 @@ export const ENCODING_TOOLS: Tool[] = [
   { slug: 'ascii-table', category: 'encoding', icon: 'binary', component: 'AsciiTable' },
   { slug: 'text-to-hex', category: 'encoding', icon: 'binary', component: 'TextToHex' },
   { slug: 'json-merger', category: 'encoding', icon: 'binary', component: 'JsonMerger' },
-  { slug: 'morse-code-player', category: 'encoding', icon: 'binary', component: 'MorseCodePlayer' },
+  { slug: 'morse-code-player', category: 'encoding', icon: 'binary', component: 'MorseCodePlayer', popular: true },
   { slug: 'binary-to-text', category: 'encoding', icon: 'binary', component: 'BinaryToText' },
   { slug: 'rot13-encoder', category: 'encoding', icon: 'binary', component: 'Rot13Encoder' },
   { slug: 'caesar-cipher', category: 'encoding', icon: 'binary', component: 'CaesarCipher' },
