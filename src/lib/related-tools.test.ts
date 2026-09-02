@@ -72,8 +72,9 @@ describe('related tools recovery ordering', () => {
       'ip-subnet-calculator',
       'database-connection-tester',
     ]);
-    expect(imageRelatedSlugs.slice(0, 4)).toEqual([
+    expect(imageRelatedSlugs.slice(0, 5)).toEqual([
       'dpi-calculator',
+      'aspect-ratio-resizer',
       'text-to-handwriting',
       'barcode-generator',
       'image-resizer',

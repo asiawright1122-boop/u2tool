@@ -75,6 +75,8 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'dpi-calculator': ['dpi calculator', 'calculate dpi', 'ppi calculator', 'print resolution calculator', 'image dpi'],
     'ip-subnet-calculator': ['ip subnet calculator', 'subnet mask calculator', 'cidr subnet calculator', 'ipv4 subnet calculator'],
     'api-tester': ['api tester', 'test api online', 'http client online', 'rest api tester', 'send http request'],
+    'wordcloud-generator': ['wordcloud generator', 'word cloud maker', 'create word cloud online', 'tag cloud generator'],
+    'aspect-ratio-resizer': ['aspect ratio resizer', 'resize image aspect ratio', 'image aspect ratio changer', 'aspect ratio converter'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

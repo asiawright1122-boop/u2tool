@@ -33,7 +33,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'text-to-image', category: 'image', icon: 'image', component: 'TextToImage' },
   { slug: 'text-to-handwriting', category: 'image', icon: 'image', component: 'TextToHandwriting', popular: true },
   { slug: 'social-media-size-guide', category: 'image', icon: 'image', component: 'SocialMediaSizeGuide' },
-  { slug: 'aspect-ratio-resizer', category: 'image', icon: 'image', component: 'AspectRatioResizer' },
+  { slug: 'aspect-ratio-resizer', category: 'image', icon: 'image', component: 'AspectRatioResizer', popular: true },
   { slug: 'svg-to-png', category: 'image', icon: 'image', component: 'SvgToPng' },
   { slug: 'webp-to-png', category: 'image', icon: 'image', component: 'WebpToPng' },
   { slug: 'png-to-svg', category: 'image', icon: 'image', component: 'PngToSvg' },

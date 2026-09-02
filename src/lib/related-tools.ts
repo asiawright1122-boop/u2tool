@@ -2,13 +2,13 @@ import { getPopularTools, getToolBySlug, getToolsByCategory, tools, type Tool, t
 import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './ai-tools-directory';
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
+  charts: ['wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
   converters: ['file-size-calculator'],
   development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
   encoding: ['ascii-table'],
   finance: ['margin-calculator'],
   fun: ['dice-roller', 'love-calculator'],
-  image: ['text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
+  image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel', 'world-clock'],
@@ -16,14 +16,14 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['timeline-chart-generator', 'gantt-chart-generator'],
+  charts: ['wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
   converters: ['bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer'],
   encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['margin-calculator'],
   fun: ['dice-roller', 'love-calculator'],
   generators: ['css-grid-generator', 'mesh-gradient-generator'],
-  image: ['text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
+  image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
   math: ['gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],
   office: ['calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
