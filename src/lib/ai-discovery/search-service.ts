@@ -63,6 +63,8 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'ascii-table': ['ascii table', 'ascii code chart', 'ascii character codes', 'ascii to hex', 'extended ascii table'],
     'gpa-calculator': ['gpa calculator', 'calculate gpa', 'college gpa calculator', 'high school gpa calculator', 'cumulative gpa'],
     'compound-interest-calculator': ['compound interest calculator', 'interest calculator', 'investment growth calculator', 'compound interest', 'calculate compound interest'],
+    'typing-speed-test': ['typing speed test', 'typing test online', 'words per minute', 'wpm test', 'check typing speed'],
+    'dice-roller': ['dice roller', 'roll a dice online', 'random dice', 'd6 dice roll', 'virtual dice'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

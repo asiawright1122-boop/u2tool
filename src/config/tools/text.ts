@@ -30,7 +30,7 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'text-template', category: 'text', icon: 'type', component: 'TextTemplate' },
   { slug: 'char-frequency', category: 'text', icon: 'type', component: 'CharFrequency' },
   { slug: 'markdown-editor', category: 'text', icon: 'type', component: 'MarkdownEditor' },
-  { slug: 'typing-speed-test', category: 'text', icon: 'type', component: 'TypingSpeedTest' },
+  { slug: 'typing-speed-test', category: 'text', icon: 'type', component: 'TypingSpeedTest', popular: true },
   { slug: 'instagram-font-generator', category: 'text', icon: 'type', component: 'InstagramFontGenerator' },
   { slug: 'keyword-density-checker', category: 'text', icon: 'type', component: 'KeywordDensityChecker' },
   { slug: 'ai-prompt-generator', category: 'text', icon: 'sparkle', component: 'AiPromptGenerator', popular: true },

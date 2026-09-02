@@ -6,11 +6,12 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   converters: ['file-size-calculator'],
   development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
   encoding: ['ascii-table'],
-  fun: ['love-calculator'],
+  fun: ['dice-roller', 'love-calculator'],
   image: ['text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel', 'world-clock'],
+  text: ['typing-speed-test'],
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
@@ -18,10 +19,12 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   converters: ['ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['sql-query-optimizer'],
   encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
+  fun: ['dice-roller', 'love-calculator'],
   image: ['text-to-handwriting', 'barcode-generator'],
   math: ['gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel'],
+  text: ['typing-speed-test'],
 };
 
 export const crawledNotIndexedContentRefreshToolSlugs = Object.freeze(
