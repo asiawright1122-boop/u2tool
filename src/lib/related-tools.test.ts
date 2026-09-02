@@ -72,7 +72,7 @@ describe('related tools recovery ordering', () => {
       'database-connection-tester',
     ]);
     expect(imageRelatedSlugs.slice(0, 3)).toEqual(['text-to-handwriting', 'barcode-generator', 'image-resizer']);
-    expect(mathRelatedSlugs.slice(0, 2)).toEqual(['compound-interest-calculator', 'tile-calculator']);
+    expect(mathRelatedSlugs.slice(0, 3)).toEqual(['gpa-calculator', 'compound-interest-calculator', 'tile-calculator']);
     expect(networkRelatedSlugs).not.toContain('image-resizer');
     expect(imageRelatedSlugs).not.toContain('compound-interest-calculator');
     expect(mathRelatedSlugs).not.toContain('image-resizer');

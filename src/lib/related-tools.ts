@@ -8,7 +8,7 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   encoding: ['ascii-table'],
   fun: ['love-calculator'],
   image: ['text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
-  math: ['compound-interest-calculator', 'tile-calculator'],
+  math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel', 'world-clock'],
 };
@@ -19,6 +19,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   development: ['sql-query-optimizer'],
   encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
   image: ['text-to-handwriting', 'barcode-generator'],
+  math: ['gpa-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel'],
 };
