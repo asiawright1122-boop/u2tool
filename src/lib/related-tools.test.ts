@@ -79,7 +79,13 @@ describe('related tools recovery ordering', () => {
       'barcode-generator',
       'image-resizer',
     ]);
-    expect(mathRelatedSlugs.slice(0, 3)).toEqual(['gpa-calculator', 'compound-interest-calculator', 'tile-calculator']);
+    expect(mathRelatedSlugs.slice(0, 5)).toEqual([
+      'screen-time-calculator',
+      'download-time-calculator',
+      'gpa-calculator',
+      'compound-interest-calculator',
+      'tile-calculator',
+    ]);
     expect(networkRelatedSlugs).not.toContain('image-resizer');
     expect(imageRelatedSlugs).not.toContain('compound-interest-calculator');
     expect(mathRelatedSlugs).not.toContain('image-resizer');

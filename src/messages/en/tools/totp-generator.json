@@ -12,5 +12,19 @@
     "Create a random secret to test a simple authenticator setup flow.",
     "Copy a generated code into a temporary test form before it expires.",
     "Watch the countdown to know when the displayed code will refresh."
+  ],
+  "faqs": [
+    {
+      "question": "How does TOTP authentication work?",
+      "answer": "Time-based One-Time Passwords (TOTP, RFC 6238) calculate a 6-digit verification code using a shared Base32 secret key and the current Unix epoch timestamp divided into 30-second windows."
+    },
+    {
+      "question": "Is it safe to generate TOTP codes in this web tool?",
+      "answer": "Yes. All HMAC-SHA1 computations and secret key generation run strictly within your local browser runtime. Secrets are never transmitted to or logged on any server."
+    },
+    {
+      "question": "Can I use this tool to recover accounts when my phone is unavailable?",
+      "answer": "If you have your backup Base32 secret key safely stored, you can enter it here to instantly generate the current verification token."
+    }
   ]
 }

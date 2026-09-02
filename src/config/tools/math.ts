@@ -26,7 +26,7 @@ export const MATH_TOOLS: Tool[] = [
   { slug: 'fraction-calculator', category: 'math', icon: 'calculator', component: 'FractionCalculator' },
   { slug: 'percentage-change-calculator', category: 'math', icon: 'calculator', component: 'PercentageChangeCalculator' },
   { slug: 'unit-price-calculator', category: 'math', icon: 'calculator', component: 'UnitPriceCalculator' },
-  { slug: 'screen-time-calculator', category: 'math', icon: 'calculator', component: 'ScreenTimeCalculator' },
+  { slug: 'screen-time-calculator', category: 'math', icon: 'calculator', component: 'ScreenTimeCalculator', popular: true },
   { slug: 'typing-time-calculator', category: 'math', icon: 'calculator', component: 'TypingTimeCalculator' },
-  { slug: 'download-time-calculator', category: 'math', icon: 'calculator', component: 'DownloadTimeCalculator' },
+  { slug: 'download-time-calculator', category: 'math', icon: 'calculator', component: 'DownloadTimeCalculator', popular: true },
 ];

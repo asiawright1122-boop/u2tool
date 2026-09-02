@@ -1,12 +1,29 @@
 {
   "detailed_description": "Screen Time Calculator helps you understand and manage your digital device usage. Enter your daily screen time for different devices and activities, and the tool calculates your total daily, weekly, monthly, and yearly screen time. It also shows what percentage of your waking hours you spend on screens and provides health recommendations based on guidelines from health organizations. Whether you're trying to reduce screen time, track productivity, or understand your digital habits, this calculator provides valuable insights.",
   "usage_steps": [
-    "Enter daily screen hours",
-    "View calculated totals",
-    "Read health suggestions"
+    "Enter your average daily screen hours for mobile, computer, TV, or gaming devices",
+    "View automatically calculated daily, weekly, monthly, and annual screen time aggregates",
+    "Review your screen time as a percentage of your estimated total waking hours",
+    "Read actionable digital wellbeing suggestions based on ergonomic guidelines"
   ],
   "usage_examples": [
-    "Track phone usage",
-    "Set screen time goals"
+    "Track combined smartphone and work computer hours to evaluate daily digital exposure",
+    "Calculate cumulative annual screen hours to set realistic reduction targets",
+    "Analyze family device usage against pediatric screen time guidelines",
+    "Compare work-related screen hours versus leisure media consumption"
+  ],
+  "faqs": [
+    {
+      "question": "How is the waking hours percentage calculated?",
+      "answer": "It assumes an average of 16 waking hours per day (based on 8 hours of sleep) and calculates the percentage of that time spent in front of screens."
+    },
+    {
+      "question": "Does this tool track my actual device activity in the background?",
+      "answer": "No. The calculator operates strictly as a private estimating worksheet in your browser without tracking or accessing your device diagnostics."
+    },
+    {
+      "question": "What are the recommended daily screen time limits?",
+      "answer": "Health organizations generally suggest limiting non-work recreational screen time to under 2 hours daily, with regular 20-20-20 rule breaks during work."
+    }
   ]
 }

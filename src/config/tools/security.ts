@@ -7,7 +7,7 @@ export const SECURITY_TOOLS: Tool[] = [
   { slug: 'file-hash', category: 'security', icon: 'file-lock-2', component: 'FileHash' },
   { slug: 'hmac-generator', category: 'security', icon: 'shield-check', component: 'HmacGenerator' },
   { slug: 'password-strength', category: 'security', icon: 'shield-check', component: 'PasswordStrength' },
-  { slug: 'totp-generator', category: 'security', icon: 'shield-check', component: 'TotpGenerator' },
+  { slug: 'totp-generator', category: 'security', icon: 'shield-check', component: 'TotpGenerator', popular: true },
   { slug: 'jwt-generator', category: 'security', icon: 'shield-check', component: 'JwtGenerator' },
   { slug: 'text-hash-comparator', category: 'security', icon: 'shield-check', component: 'TextHashComparator' },
   { slug: 'string-obfuscator', category: 'security', icon: 'shield-check', component: 'StringObfuscator' },

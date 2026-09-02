@@ -1,12 +1,29 @@
 {
   "detailed_description": "Download Time Calculator estimates how long it will take to download files based on file size and internet connection speed. Enter your file size in any unit (KB, MB, GB, TB) and select your connection speed or enter a custom value. The tool shows estimated download times for various connection types including 3G, 4G, 5G, DSL, cable, and fiber. Perfect for planning large downloads, estimating backup times, or understanding how connection speed affects your downloads. Includes a comparison table for quick reference.",
   "usage_steps": [
-    "Enter file size",
-    "Select or enter connection speed",
-    "View download time"
+    "Enter the file size value and select the appropriate storage unit (MB, GB, TB)",
+    "Select your internet connection type or enter a custom download speed in Mbps or MB/s",
+    "Review calculated download durations across ideal and realistic network efficiency levels",
+    "Compare estimated transfer times across multiple connection tiers (4G, 5G, Cable, Fiber)"
   ],
   "usage_examples": [
-    "Plan large downloads",
-    "Compare connection speeds"
+    "Estimate how long a 50 GB game install will take on a 100 Mbps fiber connection",
+    "Calculate the time required to upload or download a 5 GB video file on mobile 5G",
+    "Plan scheduled server database backup download windows during off-peak hours",
+    "Compare effective download durations across 10 Mbps, 50 Mbps, and 1 Gbps broadband tiers"
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between Mbps and MB/s?",
+      "answer": "Mbps stands for megabits per second (used by internet service providers), while MB/s stands for megabytes per second (used for file sizes). 1 byte equals 8 bits, so an 80 Mbps connection yields approximately 10 MB/s theoretical throughput."
+    },
+    {
+      "question": "Why do actual downloads often take longer than calculated?",
+      "answer": "Real-world transfer speeds are affected by server bandwidth caps, Wi-Fi interference, protocol overhead (TCP/IP), and network congestion."
+    },
+    {
+      "question": "Does this tool work for upload speed estimation as well?",
+      "answer": "Yes. You can enter your upload bandwidth to estimate file upload durations for cloud backups or media publishing."
+    }
   ]
 }

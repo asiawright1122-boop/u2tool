@@ -24,9 +24,10 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   fun: ['dice-roller', 'love-calculator'],
   generators: ['css-grid-generator', 'mesh-gradient-generator'],
   image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
-  math: ['gpa-calculator', 'compound-interest-calculator'],
+  math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],
   office: ['calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
+  security: ['totp-generator'],
   text: ['typing-speed-test'],
 };
 
