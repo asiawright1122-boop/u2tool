@@ -11,5 +11,23 @@
     "Example 2: Flatten nested profile fields into dot-notated columns for a spreadsheet handoff.",
     "Example 3: Turn sample analytics JSON into a quick Excel file for a teammate.",
     "Example 4: Export configuration records from JSON into one worksheet for manual checking."
+  ],
+  "faqs": [
+    {
+      "question": "How does this tool handle nested JSON objects?",
+      "answer": "Nested objects are automatically flattened using dot notation for column headers, allowing complex hierarchical JSON to be cleanly represented in standard tabular format."
+    },
+    {
+      "question": "Is my JSON data processed privately?",
+      "answer": "Yes. All parsing, flattening, and Excel file generation happen entirely in your browser without sending any data over the network."
+    },
+    {
+      "question": "Can I specify custom worksheet and file names?",
+      "answer": "Yes. You can customize both the sheet name and the downloaded .xlsx filename before exporting."
+    },
+    {
+      "question": "Does it support both JSON objects and arrays?",
+      "answer": "Yes. You can input either a top-level JSON array of objects or a single JSON object."
+    }
   ]
 }

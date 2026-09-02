@@ -1,1 +1,30 @@
-{}
+{
+  "detailed_description": "The AI Prompt Template Generator builds reusable, parameterized prompt templates featuring variable placeholders (e.g., {{variable}}), clear behavioral constraints, output format definitions, sample variable values, and a review checklist. Running completely in your browser without external server calls or AI API tokens, it standardizes prompt libraries for team workflows, AI agents, and content pipelines.",
+  "usage_steps": [
+    "Enter the core task description using double-curly braces for variables (e.g., 'Summarize {{notes}} for {{audience}}')",
+    "List the variable names to extract and generate structured placeholders",
+    "Specify desired tone, output format specifications, and operational constraints",
+    "Toggle example values to preview populated prompt instances alongside the raw template",
+    "Review the variable documentation table and copy the reusable template or sample prompt"
+  ],
+  "usage_examples": [
+    "Create a customer support response template with {{issue}}, {{user_tier}}, and {{resolution}} variables",
+    "Build a weekly sprint report prompt template with {{completed_tasks}}, {{blockers}}, and {{next_steps}}",
+    "Standardize a blog post generator template with {{topic}}, {{target_audience}}, and {{keywords}}",
+    "Generate code documentation prompt templates with {{function_signature}} and {{edge_cases}}"
+  ],
+  "faqs": [
+    {
+      "question": "How are variables defined in the prompt template?",
+      "answer": "Variables use the standard double-curly brace syntax like {{variable_name}}, which is automatically recognized and indexed into a dedicated variable table."
+    },
+    {
+      "question": "Is the prompt template generation done locally?",
+      "answer": "Yes. All template formatting, variable parsing, and checklist generation run deterministically in your browser without making server requests or consuming LLM API credits."
+    },
+    {
+      "question": "Can I preview how the template looks with actual data?",
+      "answer": "Yes. You can enable the 'Include example values' option to view both the parameterized template and a populated concrete prompt example."
+    }
+  ]
+}

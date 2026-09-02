@@ -29,5 +29,19 @@
     "Catch a repeated word in an English email",
     "Find common English misspellings such as teh or recieve",
     "Review simple agreement and punctuation patterns in an English draft"
+  ],
+  "faqs": [
+    {
+      "question": "Does this grammar checker use external AI or cloud APIs?",
+      "answer": "No. The checker operates completely in your browser using deterministic static linguistic rules, so your text is never transmitted or logged externally."
+    },
+    {
+      "question": "Can I apply fixes individually or all at once?",
+      "answer": "Yes. You can review each highlighted issue and apply specific suggestions individually or click 'Apply All' to resolve all detected pattern fixes simultaneously."
+    },
+    {
+      "question": "What types of grammar errors does it detect?",
+      "answer": "It detects common spelling errors, duplicate words, basic subject-verb agreement issues, redundant spaces, and basic punctuation flaws in English text."
+    }
   ]
 }

@@ -50,7 +50,7 @@
   "verifyPassword": "Verify Password:",
   "verifyHash": "Verify Hash:",
   "plaintextPayload": "Plaintext Payload",
-  "detailed_description": "Developer Cryptography & Hash Toolbox — Local high-performance hash generator and encryption suite with dynamic microsecond benchmark dashboards.",
+  "detailed_description": "The Developer Cryptography & Hash Toolbox provides an all-in-one local cryptographic workbench for web developers and security engineers. It features instant digest generation (MD5, SHA-256), configurable bcrypt password hashing and verification, AES-GCM symmetric encryption/decryption, 2048-bit RSA key pair generation with digital signing and verification, and real-time microsecond performance benchmarking across algorithms. All operations execute strictly within the browser using Web Crypto APIs without external network transmission.",
   "usage_steps": [
     "Enter the raw payload string in the master input area",
     "Select the target cryptographic algorithm (such as AES, RSA, or bcrypt)",

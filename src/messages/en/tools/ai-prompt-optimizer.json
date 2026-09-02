@@ -1,1 +1,30 @@
-{}
+{
+  "detailed_description": "The AI Prompt Optimizer transforms rough, ambiguous draft ideas into structured, reusable prompts with clear roles, objectives, constraints, output formats, and pre-send validation checklists. Operating entirely locally in the browser with deterministic template frameworks, it helps you craft higher-yield prompts for LLMs without sending your text or API keys to external servers.",
+  "usage_steps": [
+    "Enter your rough prompt idea or draft requirement into the input box",
+    "Select your target goal (such as Writing, Coding, SEO, Translation, Image, or Data Analysis)",
+    "Specify optional audience, tone, preferred output format, and execution constraints",
+    "Review the automatically structured prompt, draft gaps, and send checklist",
+    "Copy the optimized prompt directly to your clipboard for use in ChatGPT, Claude, or other LLMs"
+  ],
+  "usage_examples": [
+    "Structure an SEO brief prompt with strict keyword density and heading constraints",
+    "Turn a rough coding feature request into a well-specified prompt with error-handling requirements",
+    "Refine a creative writing prompt with exact tone, character perspective, and narrative formatting",
+    "Generate a structured data extraction prompt with JSON output schema requirements"
+  ],
+  "faqs": [
+    {
+      "question": "Does this tool call external AI models or APIs?",
+      "answer": "No. The AI Prompt Optimizer runs entirely client-side using deterministic prompt-engineering frameworks, keeping your prompts fast, free, and completely private."
+    },
+    {
+      "question": "Which goals and domains are supported?",
+      "answer": "It provides tailored prompt frameworks for writing, software development, SEO content, language translation, image generation, and data analysis."
+    },
+    {
+      "question": "What is the pre-send checklist?",
+      "answer": "The send checklist provides actionable verification criteria (such as edge-case handling, formatting constraints, and context completeness) to ensure optimal responses from the LLM."
+    }
+  ]
+}

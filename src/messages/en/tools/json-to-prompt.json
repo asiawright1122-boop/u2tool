@@ -1,1 +1,30 @@
-{}
+{
+  "detailed_description": "The JSON to Prompt converter transforms JSON data, API payloads, and config snippets into structured LLM prompts grounded directly in your data structure. It automatically analyzes keys, array counts, nested types, and top-level schema shapes to help AI models interpret complex JSON without hallucinations. All parsing and schema extraction run strictly locally in your browser.",
+  "usage_steps": [
+    "Paste valid JSON, an API response payload, or configuration snippet into the editor",
+    "Specify your AI task (e.g., 'Extract key trends', 'Generate TypeScript interfaces', or 'Summarize errors')",
+    "Configure optional audience perspective and desired output format",
+    "Toggle 'Include schema summary' to inject automatic shape metadata into the prompt",
+    "Copy the fully structured prompt to use in your preferred LLM"
+  ],
+  "usage_examples": [
+    "Instruct an LLM to generate strict TypeScript types from an API JSON response",
+    "Create an analytical summary prompt from billing export JSON data",
+    "Ask an AI to write mock unit test fixtures matching a complex configuration JSON",
+    "Generate SQL table schema migration scripts directly from sample JSON entity records"
+  ],
+  "faqs": [
+    {
+      "question": "Is my JSON payload transmitted to any external AI service?",
+      "answer": "No. The JSON parsing, key analysis, and prompt generation occur entirely in your browser without sending your data to any remote server."
+    },
+    {
+      "question": "How does including the schema summary improve AI responses?",
+      "answer": "The schema summary gives the AI explicit structural context—including top-level types, recognized keys, and nested array properties—drastically reducing hallucinations and missed fields."
+    },
+    {
+      "question": "Can I process large or nested JSON structures?",
+      "answer": "Yes. It supports deep nested objects and arrays of arbitrary complexity, automatically detecting object properties and array collections."
+    }
+  ]
+}

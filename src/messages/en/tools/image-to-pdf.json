@@ -13,5 +13,23 @@
     "Turn screenshots into a PDF handout for a support ticket",
     "Create a simple PDF from scanned form images",
     "Arrange diagrams or reference images into one shareable file"
+  ],
+  "faqs": [
+    {
+      "question": "Which image formats can I convert to PDF?",
+      "answer": "You can upload and convert PNG, JPEG, JPG, and WebP images."
+    },
+    {
+      "question": "Are my images uploaded to any remote server?",
+      "answer": "No. The entire conversion is executed locally in your browser using pdf-lib, ensuring complete privacy."
+    },
+    {
+      "question": "Can I reorder the images before generating the PDF?",
+      "answer": "Yes. You can reorder images using the up and down arrow buttons next to each uploaded item."
+    },
+    {
+      "question": "What page layout and size options are available?",
+      "answer": "You can choose between A4, US Letter, and Fit to Image page sizes, along with portrait or landscape orientation and custom page margins."
+    }
   ]
 }

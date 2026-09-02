@@ -1,1 +1,30 @@
-{}
+{
+  "detailed_description": "The RAG Chunk Size Calculator helps AI engineers and developers model chunking strategies for Retrieval-Augmented Generation (RAG) pipelines. It computes estimated chunk counts, overlap duplication overhead, embedded token volumes, top-K retrieved context sizes, and context window utilization before indexing documents. All calculations run instantly in the browser without sending data or telemetry externally.",
+  "usage_steps": [
+    "Enter the total token size of your document or corpus",
+    "Set your target chunk size (in tokens) and chunk overlap size",
+    "Specify your retrieval Top K parameter, target model context window, and prompt/response token reserve",
+    "Review the resulting chunk count, total embedded tokens, retrieved context usage percentage, and architectural warnings",
+    "Copy the summary plan to document your embedding pipeline configuration"
+  ],
+  "usage_examples": [
+    "Plan chunk sizing (512 tokens with 50-token overlap) for a 100,000-token technical manual",
+    "Verify whether Top K=5 retrieval fits comfortably within an 8k context window with prompt reserves",
+    "Estimate vector database storage and embedding API costs by calculating total embedded tokens with overlap",
+    "Identify context window overflow risks when retrieving high Top-K passages"
+  ],
+  "faqs": [
+    {
+      "question": "Why is chunk overlap important in RAG pipelines?",
+      "answer": "Chunk overlap ensures that semantic context spanning chunk boundaries is preserved, preventing fragmented sentences or missed concepts during vector similarity retrieval."
+    },
+    {
+      "question": "What is the recommended overlap percentage?",
+      "answer": "A common rule of thumb is 10% to 20% of the chunk size (e.g., 50 to 100 tokens for a 512-token chunk), balancing semantic continuity against embedding redundancy."
+    },
+    {
+      "question": "How does Top K affect context window usage?",
+      "answer": "Top K determines how many chunks are injected into the LLM prompt. The calculator multiplies Top K by chunk size to ensure the retrieved context plus your system prompt and response budget fit safely within the model's maximum context window."
+    }
+  ]
+}

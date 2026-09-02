@@ -13,6 +13,24 @@
     "Visualize traffic sources by channel type in the outer ring and specific referrers inside.",
     "Export a two-ring chart as PNG for a report or SVG for further editing."
   ],
+  "faqs": [
+    {
+      "question": "What is a nested pie chart?",
+      "answer": "A nested pie chart (or multi-level donut chart) displays concentric rings representing hierarchical categorical data, where the outer ring represents main categories and the inner ring shows detailed subcategories."
+    },
+    {
+      "question": "Can I customize the colors and legend?",
+      "answer": "Yes. You can select from multiple preset color palettes and toggle the chart legend visibility."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can export the generated chart as high-resolution PNG or vector SVG."
+    },
+    {
+      "question": "How many hierarchy levels are supported?",
+      "answer": "The generator currently supports two hierarchical levels (categories and subcategories), ideal for clear data storytelling without visual clutter."
+    }
+  ],
   "seo_title": "Nested Pie Chart Generator Online | U2Tool",
   "seo_description": "Create nested pie (multi-level donut) charts free in your browser. Add levels, style colors and labels, and export the chart as an image or data."
 }
