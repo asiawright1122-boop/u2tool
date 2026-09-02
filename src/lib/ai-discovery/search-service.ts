@@ -62,6 +62,7 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'file-size-calculator': ['file size calculator', 'calculate file size', 'bytes to mb converter', 'storage calculator'],
     'ascii-table': ['ascii table', 'ascii code chart', 'ascii character codes', 'ascii to hex', 'extended ascii table'],
     'gpa-calculator': ['gpa calculator', 'calculate gpa', 'college gpa calculator', 'high school gpa calculator', 'cumulative gpa'],
+    'compound-interest-calculator': ['compound interest calculator', 'interest calculator', 'investment growth calculator', 'compound interest', 'calculate compound interest'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

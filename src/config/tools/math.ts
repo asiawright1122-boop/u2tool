@@ -15,7 +15,7 @@ export const MATH_TOOLS: Tool[] = [
   { slug: 'age-calculator', category: 'math', icon: 'calculator', component: 'AgeCalculator' },
   { slug: 'tip-calculator', category: 'math', icon: 'calculator', component: 'TipCalculator' },
   { slug: 'discount-calculator', category: 'math', icon: 'calculator', component: 'DiscountCalculator' },
-  { slug: 'compound-interest-calculator', category: 'math', icon: 'calculator', component: 'CompoundInterestCalculator' },
+  { slug: 'compound-interest-calculator', category: 'math', icon: 'calculator', component: 'CompoundInterestCalculator', popular: true },
   { slug: 'binary-calculator', category: 'math', icon: 'calculator', component: 'BinaryCalculator' },
   { slug: 'hex-calculator', category: 'math', icon: 'calculator', component: 'HexCalculator' },
   { slug: 'aspect-ratio-calculator-enhanced', category: 'math', icon: 'calculator', component: 'AspectRatioCalculatorEnhanced' },

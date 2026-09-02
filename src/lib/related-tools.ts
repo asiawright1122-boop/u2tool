@@ -19,7 +19,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   development: ['sql-query-optimizer'],
   encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
   image: ['text-to-handwriting', 'barcode-generator'],
-  math: ['gpa-calculator'],
+  math: ['gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel'],
 };
