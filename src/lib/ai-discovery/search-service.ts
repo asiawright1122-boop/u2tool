@@ -71,6 +71,7 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'tsconfig-generator': ['tsconfig generator', 'generate tsconfig json', 'typescript config generator', 'tsconfig builder'],
     'css-grid-generator': ['css grid generator', 'grid layout generator', 'css grid builder', 'interactive css grid'],
     'mesh-gradient-generator': ['mesh gradient generator', 'css mesh gradient', 'gradient generator', 'modern gradient builder'],
+    'margin-calculator': ['margin calculator', 'calculate profit margin', 'markup calculator', 'profit margin calculator', 'gross margin'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

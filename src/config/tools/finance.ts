@@ -17,7 +17,7 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'credit-card-validator', category: 'finance', icon: 'wallet', component: 'CreditCardValidator' },
   { slug: 'inflation-calculator', category: 'finance', icon: 'wallet', component: 'InflationCalculator' },
   { slug: 'break-even-calculator', category: 'finance', icon: 'wallet', component: 'BreakEvenCalculator' },
-  { slug: 'margin-calculator', category: 'finance', icon: 'wallet', component: 'MarginCalculator' },
+  { slug: 'margin-calculator', category: 'finance', icon: 'wallet', component: 'MarginCalculator', popular: true },
   { slug: 'markup-calculator', category: 'finance', icon: 'wallet', component: 'MarkupCalculator' },
   { slug: 'invoice-template-generator', category: 'finance', icon: 'wallet', component: 'InvoiceTemplateGenerator' },
   { slug: 'expense-report-generator', category: 'finance', icon: 'wallet', component: 'ExpenseReportGenerator' },
