@@ -89,8 +89,8 @@
     },
     {
       "url": "https://www.u2tool.com/en/tools/etsy-fee-calculator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-02 GSC 频控/配额上限冷却中"
+      "status": "SUCCESS",
+      "detail": "2026-09-02 提交成功 (旧 noindex 残留 -> 已请求重新评估与编入索引)"
     },
     {
       "url": "https://www.u2tool.com/en/tools/freelance-rate-calculator/",
@@ -105,11 +105,10 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 19,
-    "pending": 1,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-10",
     "quotaHit": false,
-    "quotaHitAt": "2026-09-02T02:24:07.398Z",
-    "completedBatch": "batch-10 (18/20 - 90% Completed)"
+    "completedBatch": "batch-10 (20/20 - 100% Completed)"
   }
 }
