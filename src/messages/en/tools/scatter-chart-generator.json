@@ -11,5 +11,19 @@
     "Compare ad spend and conversion rate by campaign to spot efficient outliers.",
     "Plot request volume against response time to see where systems begin to slow down.",
     "Visualize price and rating data to compare products in a catalog or marketplace."
+  ],
+  "faqs": [
+    {
+      "question": "What is a scatter chart best used for?",
+      "answer": "A scatter chart is ideal for visualizing the correlation or relationship between two continuous variables, uncovering clusters, trends, and anomalous outliers across individual data points."
+    },
+    {
+      "question": "Can I add labels to individual scatter points?",
+      "answer": "Yes. You can provide custom labels for data points to identify specific items or categories on the plot."
+    },
+    {
+      "question": "Can I export the chart as vector SVG?",
+      "answer": "Yes. You can export the generated scatter plot as either high-resolution PNG or vector SVG suitable for reports, papers, and presentations."
+    }
   ]
 }

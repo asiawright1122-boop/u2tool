@@ -1,14 +1,30 @@
 {
-  "detailed_description": "Gauge Chart Generator is a practical online tool that helps you quickly complete various tasks. Using Gauge Chart Generator, you can easily process various data without installing any software or plugins. This tool has a simple interface and is easy to use, allowing you to get started quickly and use it efficiently. Whether you are a developer, designer, or general user, Gauge Chart Generator can help you improve work efficiency. All processing is done locally in your browser, ensuring your data security and will not be uploaded to any server. Use Gauge Chart Generator immediately to experience fast, secure, and free online tool services.",
+  "detailed_description": "The Gauge Chart Generator creates interactive speedometer-style gauge charts in your browser using Apache ECharts. Customize current values, minimum and maximum ranges, measurement units (such as %, mph, °C, or ms), pointer visibility, progress track fills, and color gradients (Ocean, Sunset, Forest, and Default). Perfect for visualizing KPIs, performance metrics, goal completions, battery levels, and live dashboard mockups. All rendering and export (PNG/SVG) happen directly on your device with complete privacy.",
   "usage_steps": [
-    "Open the Gauge Chart Generator tool page",
-    "Enter or paste the content you want to process in the input box",
-    "Adjust tool options and settings as needed",
-    "Click the process button to view the results",
-    "Copy or download the processed results"
+    "Enter the current value and set the minimum and maximum scale bounds",
+    "Specify your custom measurement unit label (e.g., %, RPM, ms, or score)",
+    "Select a color theme gradient and toggle pointer or progress track options",
+    "Set an optional chart title and review the real-time gauge preview",
+    "Download the finished high-resolution gauge chart as PNG or SVG"
   ],
   "usage_examples": [
-    "Use Gauge Chart Generator to process your data",
-    "Get processing results quickly without waiting"
+    "Visualize customer satisfaction (CSAT) score on a 0 to 100 percentage dial",
+    "Display server CPU or memory utilization in a performance dashboard report",
+    "Show quarterly revenue target completion percentage for an executive slide",
+    "Create speedometer and tachometer visuals for product presentations"
+  ],
+  "faqs": [
+    {
+      "question": "What is a gauge chart best used for?",
+      "answer": "A gauge chart (or speedometer chart) is ideal for displaying a single key metric against a defined scale or target, showing immediate progress, health, or threshold status at a glance."
+    },
+    {
+      "question": "Can I set custom minimum and maximum values?",
+      "answer": "Yes. You can configure arbitrary minimum and maximum values (e.g., 0 to 100, -50 to 50, or 0 to 1000) to fit your specific measurement scale."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can export the rendered gauge visual directly as high-resolution PNG or vector SVG format."
+    }
   ]
 }

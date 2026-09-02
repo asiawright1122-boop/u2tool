@@ -81,6 +81,8 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'download-time-calculator': ['download time calculator', 'file download time', 'calculate download speed', 'transfer time calculator'],
     'totp-generator': ['totp generator', 'generate totp online', '2fa code generator', 'authenticator code online', 'time based otp'],
     'video-to-base64': ['video to base64', 'convert video to base64', 'video base64 converter', 'mp4 to base64'],
+    'gauge-chart-generator': ['gauge chart generator', 'speedometer chart', 'gauge chart online', 'meter chart', 'kpi gauge'],
+    'scatter-chart-generator': ['scatter chart generator', 'scatter plot online', 'scatter graph maker', 'xy scatter plot', 'correlation chart'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],
