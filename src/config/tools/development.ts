@@ -49,7 +49,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'dockerfile-generator', category: 'development', icon: 'code-2', component: 'DockerfileGenerator' },
   { slug: 'eslint-config-generator', category: 'development', icon: 'code-2', component: 'EslintConfigGenerator' },
   { slug: 'prettier-config-generator', category: 'development', icon: 'code-2', component: 'PrettierConfigGenerator' },
-  { slug: 'tsconfig-generator', category: 'development', icon: 'code-2', component: 'TsconfigGenerator' },
+  { slug: 'tsconfig-generator', category: 'development', icon: 'code-2', component: 'TsconfigGenerator', popular: true },
   { slug: 'editorconfig-generator', category: 'development', icon: 'code-2', component: 'EditorconfigGenerator' },
   { slug: 'commit-message-generator', category: 'development', icon: 'code-2', component: 'CommitMessageGenerator' },
   { slug: 'typescript-playground', category: 'development', icon: 'code-2', component: 'TypescriptPlayground' },

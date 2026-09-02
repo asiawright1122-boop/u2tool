@@ -17,9 +17,10 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['timeline-chart-generator', 'gantt-chart-generator'],
   converters: ['bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
-  development: ['sql-query-optimizer'],
+  development: ['tsconfig-generator', 'sql-query-optimizer'],
   encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
   fun: ['dice-roller', 'love-calculator'],
+  generators: ['css-grid-generator', 'mesh-gradient-generator'],
   image: ['gif-maker', 'text-to-handwriting', 'barcode-generator'],
   math: ['gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],

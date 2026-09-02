@@ -11,5 +11,19 @@
     "Create a 3-column responsive card layout with equal widths using 1fr 1fr 1fr",
     "Build a dashboard layout with a sidebar (250px) and main content area (1fr)",
     "Design an image gallery grid with 4 columns and 20px gaps"
+  ],
+  "faqs": [
+    {
+      "question": "What CSS grid units are supported?",
+      "answer": "The generator supports fractional units (fr), pixels (px), and percentages (%), giving you full flexibility for fixed and responsive column and row tracks."
+    },
+    {
+      "question": "Is the generated CSS cross-browser compatible?",
+      "answer": "Yes. The generated CSS uses modern CSS Grid Layout Level 1 standards, fully supported by all modern browsers including Chrome, Firefox, Safari, and Edge."
+    },
+    {
+      "question": "Can I copy both the container and item CSS?",
+      "answer": "Yes. You can copy the complete CSS rules for the grid container (display: grid, grid-template-columns, gap, justify-items) directly into your stylesheet."
+    }
   ]
 }
