@@ -13,5 +13,19 @@
     "Switch to decimal mode to compare a storage-device size against manufacturer units.",
     "Estimate how many megabytes or gigabytes a media file represents before upload.",
     "Convert a package size to total bytes for a technical note or test case."
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between binary (1024) and decimal (1000) units?",
+      "answer": "Binary units use base-2 (1 KiB = 1024 Bytes), commonly used by operating systems like Windows and Linux. Decimal units use base-10 (1 KB = 1000 Bytes), standard for hard drive manufacturers and networking."
+    },
+    {
+      "question": "Which storage units are supported?",
+      "answer": "The calculator converts between Bytes (B), Kilobytes (KB/KiB), Megabytes (MB/MiB), Gigabytes (GB/GiB), Terabytes (TB/TiB), Petabytes (PB/PiB), and bit equivalents."
+    },
+    {
+      "question": "Can I convert from bits to bytes?",
+      "answer": "Yes. The results panel automatically displays bit-based equivalents (bits, kilobits, megabits, gigabits) alongside byte-based storage units."
+    }
   ]
 }

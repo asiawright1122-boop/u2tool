@@ -3,9 +3,10 @@ import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './a
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
+  converters: ['file-size-calculator'],
   development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
   fun: ['love-calculator'],
-  image: ['image-resizer', 'image-cropper', 'gif-maker'],
+  image: ['text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
   math: ['compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel', 'world-clock'],
@@ -13,9 +14,10 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['timeline-chart-generator', 'gantt-chart-generator'],
-  converters: ['ical-parser', 'csv-to-vcard-converter'],
+  converters: ['ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['sql-query-optimizer'],
   encoding: ['morse-code-player', 'hex-editor'],
+  image: ['text-to-handwriting', 'barcode-generator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
   office: ['image-to-pdf', 'json-to-excel'],
 };

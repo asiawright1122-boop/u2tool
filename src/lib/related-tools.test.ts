@@ -39,14 +39,14 @@ describe('related tools recovery ordering', () => {
   it('promotes development content-refresh pages into related-tool links', () => {
     const relatedSlugs = getRelatedToolsForTool(mustGetTool('regex-tester')).map((tool) => tool.slug);
 
-    expect(relatedSlugs.slice(0, 2)).toEqual(['merge-conflict-resolver', 'go-formatter']);
+    expect(relatedSlugs.slice(0, 3)).toEqual(['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter']);
   });
 
   it('keeps sibling recovery pages visible when the current page is itself in the recovery set', () => {
     const relatedSlugs = getRelatedToolsForTool(mustGetTool('go-formatter')).map((tool) => tool.slug);
 
     expect(relatedSlugs).not.toContain('go-formatter');
-    expect(relatedSlugs[0]).toBe('merge-conflict-resolver');
+    expect(relatedSlugs[0]).toBe('sql-query-optimizer');
   });
 
   it('prioritizes same-workflow AI tools on AI tool pages', () => {
@@ -71,7 +71,7 @@ describe('related tools recovery ordering', () => {
       'ip-validator',
       'database-connection-tester',
     ]);
-    expect(imageRelatedSlugs.slice(0, 3)).toEqual(['image-resizer', 'image-cropper', 'gif-maker']);
+    expect(imageRelatedSlugs.slice(0, 3)).toEqual(['text-to-handwriting', 'barcode-generator', 'image-resizer']);
     expect(mathRelatedSlugs.slice(0, 2)).toEqual(['compound-interest-calculator', 'tile-calculator']);
     expect(networkRelatedSlugs).not.toContain('image-resizer');
     expect(imageRelatedSlugs).not.toContain('compound-interest-calculator');

@@ -6,7 +6,7 @@ This audit checks tool support content against search-engine quality expectation
 
 - Tool message files scanned: 5700
 - English tool files scanned: 570
-- Popular English tool files checked for depth: 125
+- Popular English tool files checked for depth: 128
 - Files with high-confidence implementation overclaims: 0
 - Files with medium-confidence claims for future review: 6
 - Popular English files with depth gaps: 0

@@ -34,7 +34,7 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'json-to-php', category: 'converters', icon: 'arrow-left-right', component: 'JsonToPhp' },
   { slug: 'json-to-tsv', category: 'converters', icon: 'arrow-left-right', component: 'JsonToTsv' },
   { slug: 'csv-viewer', category: 'converters', icon: 'arrow-left-right', component: 'CsvViewer' },
-  { slug: 'file-size-calculator', category: 'converters', icon: 'arrow-left-right', component: 'FileSizeCalculator' },
+  { slug: 'file-size-calculator', category: 'converters', icon: 'arrow-left-right', component: 'FileSizeCalculator', popular: true },
   { slug: 'color-name-finder', category: 'converters', icon: 'arrow-left-right', component: 'ColorNameFinder' },
   { slug: 'json-to-dart', category: 'converters', icon: 'arrow-left-right', component: 'JsonToDart' },
   { slug: 'sql-to-json', category: 'converters', icon: 'arrow-left-right', component: 'SqlToJson' },
