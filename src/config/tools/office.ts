@@ -40,7 +40,7 @@ export const OFFICE_TOOLS: Tool[] = [
   { slug: 'meeting-minutes-generator', category: 'office', icon: 'file-text', component: 'MeetingMinutesGenerator' },
   { slug: 'timezone-meeting-scheduler', category: 'office', icon: 'file-text', component: 'TimezoneMeetingScheduler' },
   { slug: 'meeting-agenda-builder', category: 'office', icon: 'file-text', component: 'MeetingAgendaBuilder' },
-  { slug: 'calendar-availability-finder', category: 'office', icon: 'file-text', component: 'CalendarAvailabilityFinder' },
+  { slug: 'calendar-availability-finder', category: 'office', icon: 'file-text', component: 'CalendarAvailabilityFinder', popular: true },
   { slug: 'meeting-room-finder', category: 'office', icon: 'file-text', component: 'MeetingRoomFinder' },
   { slug: 'screen-recorder', category: 'office', icon: 'file-text', component: 'ScreenRecorder', popular: true },
   { slug: 'cover-letter-generator', category: 'office', icon: 'file-text', component: 'CoverLetterGenerator', popular: true },

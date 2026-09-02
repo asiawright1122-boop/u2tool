@@ -16,14 +16,14 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['timeline-chart-generator', 'gantt-chart-generator'],
-  converters: ['ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
+  converters: ['bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['sql-query-optimizer'],
   encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
   fun: ['dice-roller', 'love-calculator'],
-  image: ['text-to-handwriting', 'barcode-generator'],
+  image: ['gif-maker', 'text-to-handwriting', 'barcode-generator'],
   math: ['gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester'],
-  office: ['image-to-pdf', 'json-to-excel'],
+  office: ['calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
   text: ['typing-speed-test'],
 };
 

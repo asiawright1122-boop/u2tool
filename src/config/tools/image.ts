@@ -24,7 +24,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'image-frosted-glass', category: 'image', icon: 'image', component: 'ImageFrostedGlass' },
   { slug: 'image-to-ico', category: 'image', icon: 'image', component: 'ImageToIco' },
   { slug: 'youtube-thumbnail-generator', category: 'image', icon: 'image', component: 'YoutubeThumbnailGenerator', popular: true },
-  { slug: 'gif-maker', category: 'image', icon: 'image', component: 'GifMaker' },
+  { slug: 'gif-maker', category: 'image', icon: 'image', component: 'GifMaker', popular: true },
   { slug: 'gif-splitter', category: 'image', icon: 'image', component: 'GifSplitter' },
   { slug: 'gif-compressor', category: 'image', icon: 'image', component: 'GifCompressor' },
   { slug: 'image-to-webp', category: 'image', icon: 'image', component: 'ImageToWebp' },

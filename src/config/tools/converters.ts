@@ -42,7 +42,7 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'batch-timestamp-converter', category: 'converters', icon: 'arrow-left-right', component: 'BatchTimestampConverter' },
   { slug: 'shoe-size-converter', category: 'converters', icon: 'arrow-left-right', component: 'ShoeSizeConverter' },
   { slug: 'ring-size-calculator', category: 'converters', icon: 'arrow-left-right', component: 'RingSizeCalculator' },
-  { slug: 'bra-size-calculator', category: 'converters', icon: 'arrow-left-right', component: 'BraSizeCalculator' },
+  { slug: 'bra-size-calculator', category: 'converters', icon: 'arrow-left-right', component: 'BraSizeCalculator', popular: true },
   { slug: 'number-system-converter', category: 'converters', icon: 'arrow-left-right', component: 'NumberSystemConverter' },
   { slug: 'metric-imperial-converter', category: 'converters', icon: 'arrow-left-right', component: 'MetricImperialConverter' },
   { slug: 'roman-numeral-converter', category: 'converters', icon: 'arrow-left-right', component: 'RomanNumeralConverter' },
