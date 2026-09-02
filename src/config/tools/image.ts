@@ -39,7 +39,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'png-to-svg', category: 'image', icon: 'image', component: 'PngToSvg' },
   { slug: 'svg-editor', category: 'image', icon: 'image', component: 'SvgEditor' },
   { slug: 'pixel-density-calculator', category: 'image', icon: 'image', component: 'PixelDensityCalculator' },
-  { slug: 'dpi-calculator', category: 'image', icon: 'image', component: 'DpiCalculator' },
+  { slug: 'dpi-calculator', category: 'image', icon: 'image', component: 'DpiCalculator', popular: true },
   { slug: 'base64-image-converter', category: 'image', icon: 'image', component: 'Base64ImageConverter' },
   { slug: 'passport-photo-maker', category: 'image', icon: 'image', component: 'PassportPhotoMaker', popular: true },
 ];

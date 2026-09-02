@@ -45,7 +45,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'color-blindness-simulator', category: 'development', icon: 'code-2', component: 'ColorBlindnessSimulator' },
   { slug: 'yaml-validator', category: 'development', icon: 'code-2', component: 'YamlValidator' },
   { slug: 'xml-validator', category: 'development', icon: 'code-2', component: 'XmlValidator' },
-  { slug: 'api-tester', category: 'development', icon: 'code-2', component: 'ApiTester' },
+  { slug: 'api-tester', category: 'development', icon: 'code-2', component: 'ApiTester', popular: true },
   { slug: 'dockerfile-generator', category: 'development', icon: 'code-2', component: 'DockerfileGenerator' },
   { slug: 'eslint-config-generator', category: 'development', icon: 'code-2', component: 'EslintConfigGenerator' },
   { slug: 'prettier-config-generator', category: 'development', icon: 'code-2', component: 'PrettierConfigGenerator' },

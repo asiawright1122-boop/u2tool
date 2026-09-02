@@ -16,7 +16,7 @@ export const NETWORK_TOOLS: Tool[] = [
   { slug: 'port-reference', category: 'network', icon: 'globe', component: 'PortScanner' },
   { slug: 'mac-address-generator', category: 'network', icon: 'globe', component: 'MacAddressGenerator' },
   { slug: 'ip-validator', category: 'network', icon: 'globe', component: 'IpValidator' },
-  { slug: 'ip-subnet-calculator', category: 'network', icon: 'globe', component: 'IpSubnetCalculator' },
+  { slug: 'ip-subnet-calculator', category: 'network', icon: 'globe', component: 'IpSubnetCalculator', popular: true },
   { slug: 'subnet-calculator-enhanced', category: 'network', icon: 'globe', component: 'SubnetCalculatorEnhanced' },
   { slug: 'email-validator', category: 'network', icon: 'globe', component: 'EmailValidator' },
   { slug: 'cors-tester', category: 'network', icon: 'globe', component: 'CorsTester' },
