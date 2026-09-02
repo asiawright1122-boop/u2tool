@@ -60,6 +60,7 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'hex-editor': ['hex editor online', 'hex viewer', 'binary editor', 'edit hex bytes online', 'online hex editor'],
     'barcode-generator': ['barcode generator', 'create barcode online', 'free barcode maker', 'generate barcode image'],
     'file-size-calculator': ['file size calculator', 'calculate file size', 'bytes to mb converter', 'storage calculator'],
+    'ascii-table': ['ascii table', 'ascii code chart', 'ascii character codes', 'ascii to hex', 'extended ascii table'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

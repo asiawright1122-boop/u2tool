@@ -26,7 +26,7 @@ export const ENCODING_TOOLS: Tool[] = [
   { slug: 'pdf-to-base64', category: 'encoding', icon: 'binary', component: 'PdfToBase64' },
   { slug: 'audio-to-base64', category: 'encoding', icon: 'binary', component: 'AudioToBase64' },
   { slug: 'video-to-base64', category: 'encoding', icon: 'binary', component: 'VideoToBase64' },
-  { slug: 'ascii-table', category: 'encoding', icon: 'binary', component: 'AsciiTable' },
+  { slug: 'ascii-table', category: 'encoding', icon: 'binary', component: 'AsciiTable', popular: true },
   { slug: 'text-to-hex', category: 'encoding', icon: 'binary', component: 'TextToHex' },
   { slug: 'json-merger', category: 'encoding', icon: 'binary', component: 'JsonMerger' },
   { slug: 'morse-code-player', category: 'encoding', icon: 'binary', component: 'MorseCodePlayer', popular: true },
