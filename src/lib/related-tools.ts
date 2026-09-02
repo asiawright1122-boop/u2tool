@@ -19,7 +19,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   charts: ['wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
   converters: ['bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer'],
-  encoding: ['ascii-table', 'morse-code-player', 'hex-editor'],
+  encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['margin-calculator'],
   fun: ['dice-roller', 'love-calculator'],
   generators: ['css-grid-generator', 'mesh-gradient-generator'],

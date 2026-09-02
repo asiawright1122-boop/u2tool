@@ -11,5 +11,19 @@
     "Copy a short test video as Base64 for trying an API payload format.",
     "Compare the original file size with the larger Base64 text output before deciding whether to use it.",
     "Remove the data URI prefix when only the raw Base64 text is needed."
+  ],
+  "faqs": [
+    {
+      "question": "Which video formats are supported?",
+      "answer": "You can upload common web video formats including MP4, WebM, OGG, and MOV up to 10 MB."
+    },
+    {
+      "question": "Are uploaded videos stored or sent to a server?",
+      "answer": "No. The entire Base64 encoding process occurs locally within your browser using the HTML5 FileReader API. Your video files never leave your device."
+    },
+    {
+      "question": "Why is the Base64 output larger than the original video file?",
+      "answer": "Base64 encoding converts binary bytes into 6-bit ASCII characters, which inherently introduces approximately 33% overhead compared to raw binary data."
+    }
   ]
 }
