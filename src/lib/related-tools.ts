@@ -11,7 +11,7 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
-  office: ['image-to-pdf', 'json-to-excel', 'world-clock'],
+  office: ['excel-viewer', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   text: ['typing-speed-test'],
 };
 
@@ -26,7 +26,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],
-  office: ['calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
+  office: ['excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
   security: ['totp-generator'],
   text: ['typing-speed-test'],
 };
