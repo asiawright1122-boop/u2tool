@@ -13,5 +13,19 @@
     "Choose which task to start next from a small set of labelled options",
     "Randomly pick a team member's name from a short list during a meeting",
     "Decide between a handful of possible blog post topics with a quick spin"
+  ],
+  "faqs": [
+    {
+      "question": "How does the Decision Wheel ensure fairness?",
+      "answer": "The wheel uses browser-based cryptographic random number generation to calculate the final stopping angle, ensuring every slice has an equal probability of winning."
+    },
+    {
+      "question": "Can I customize the options and colors?",
+      "answer": "Yes. You can add, edit, or remove option slices in real time. The canvas dynamically assigns distinct vibrant colors to each slice."
+    },
+    {
+      "question": "Are my decision lists stored on a server?",
+      "answer": "No. All list management and animations run entirely in your local browser session without sending data over the network."
+    }
   ]
 }
