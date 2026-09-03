@@ -86,6 +86,8 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'decision-wheel': ['decision wheel', 'wheel spinner online', 'random choice picker', 'عجلة الحظ', 'عجلة القرارات'],
     'fake-name-generator': ['fake name generator', 'random name generator', 'nickname generator', 'ニックネーム 生成', 'ニックネーム生成'],
     'love-calculator': ['love calculator', 'calculadora de amor', 'calculadora de la amor', 'love compatibility test', 'name love match'],
+    'funnel-chart-generator': ['funnel chart generator', 'funnel-diagramm', 'funnel chart online', 'conversion funnel generator', 'trichterdiagramm'],
+    'tree-chart-generator': ['tree chart generator', 'baumdiagramm erstellen online', 'tree diagram online', 'hierarchy tree generator', 'baumdiagramm generator'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

@@ -11,5 +11,19 @@
     "Compare lead, qualified lead, proposal, and closed deal counts in a sales pipeline chart.",
     "Sketch a product onboarding funnel and check the displayed conversion rate between steps.",
     "Download a manually prepared funnel chart as SVG for a report or slide deck."
+  ],
+  "faqs": [
+    {
+      "question": "What is a funnel chart used for?",
+      "answer": "A funnel chart visualizes sequential stages in a linear process (such as a sales pipeline, marketing conversion flow, or customer onboarding funnel), highlighting conversion and drop-off rates at each step."
+    },
+    {
+      "question": "Can I sort the funnel in ascending or descending order?",
+      "answer": "Yes. You can toggle sorting between descending (standard funnel), ascending (inverse pyramid), or custom data order."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can export your completed funnel visualization directly as a high-resolution PNG image or scalable vector SVG."
+    }
   ]
 }

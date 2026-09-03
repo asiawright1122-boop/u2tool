@@ -12,5 +12,19 @@
     "Create a radial tree from a short hierarchy of categories and subcategories.",
     "Adjust orientation for a simple left-to-right or top-to-bottom tree preview.",
     "Download a PNG or SVG chart for a presentation draft."
+  ],
+  "faqs": [
+    {
+      "question": "What is a tree chart best used for?",
+      "answer": "A tree chart is ideal for visualizing hierarchical relationships, organization structures, category taxonomies, and parent-child dependencies in a clear branch layout."
+    },
+    {
+      "question": "Can I switch between orthogonal and radial layouts?",
+      "answer": "Yes. You can switch between orthogonal (tree branching left-to-right or top-to-bottom) and radial (circular concentric branching) visual layouts."
+    },
+    {
+      "question": "Are my tree node hierarchies processed securely?",
+      "answer": "Yes. All node data parsing and chart rendering execute completely in your local browser without transmitting any structure or labels over the network."
+    }
   ]
 }
