@@ -22,7 +22,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
-  generators: ['css-grid-generator', 'mesh-gradient-generator'],
+  generators: ['fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator'],
   image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],

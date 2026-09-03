@@ -84,6 +84,8 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'gauge-chart-generator': ['gauge chart generator', 'speedometer chart', 'gauge chart online', 'meter chart', 'kpi gauge'],
     'scatter-chart-generator': ['scatter chart generator', 'scatter plot online', 'scatter graph maker', 'xy scatter plot', 'correlation chart'],
     'decision-wheel': ['decision wheel', 'wheel spinner online', 'random choice picker', 'عجلة الحظ', 'عجلة القرارات'],
+    'fake-name-generator': ['fake name generator', 'random name generator', 'nickname generator', 'ニックネーム 生成', 'ニックネーム生成'],
+    'love-calculator': ['love calculator', 'calculadora de amor', 'calculadora de la amor', 'love compatibility test', 'name love match'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

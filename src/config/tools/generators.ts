@@ -33,7 +33,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'chinese-lorem-ipsum', category: 'generators', icon: 'zap', component: 'ChineseLoremIpsum' },
   { slug: 'gdpr-consent-generator', category: 'generators', icon: 'zap', component: 'GdprConsentGenerator' },
   { slug: 'random-color-generator', category: 'generators', icon: 'zap', component: 'RandomColorGenerator' },
-  { slug: 'fake-name-generator', category: 'generators', icon: 'zap', component: 'FakeNameGenerator' },
+  { slug: 'fake-name-generator', category: 'generators', icon: 'zap', component: 'FakeNameGenerator', popular: true },
   { slug: 'invisible-character-generator', category: 'generators', icon: 'zap', component: 'InvisibleCharacterGenerator' },
   { slug: 'json-to-form', category: 'generators', icon: 'zap', component: 'JsonToForm' },
   { slug: 'github-readme-generator', category: 'generators', icon: 'zap', component: 'GithubReadmeGenerator' },

@@ -13,5 +13,19 @@
     "A game developer testing character relationship mechanics using algorithmic name pairings",
     "A behavioral researcher conducting blind studies on name-based attraction bias",
     "A wedding planner creating interactive name-compatibility displays for reception entertainment"
+  ],
+  "faqs": [
+    {
+      "question": "How does the Love Calculator determine compatibility scores?",
+      "answer": "The calculator processes the characters in both names using a deterministic algorithm, ensuring reproducible, consistent percentage scores for identical name pairs."
+    },
+    {
+      "question": "Is this tool intended for serious relationship or psychological advice?",
+      "answer": "No. The Love Calculator is purely designed for lighthearted entertainment, party games, fiction writing, and social fun."
+    },
+    {
+      "question": "Are the names stored or transmitted to external servers?",
+      "answer": "No. All name comparisons and percentage calculations execute completely in your browser without storing or uploading user inputs."
+    }
   ]
 }
