@@ -13,5 +13,19 @@
     "Un scientifique en climatologie visualise des données de température et d'humidité sur une année, en utilisant des interpolations linéaires pour identifier des tendances saisonnières.",
     "Un développeur de tableau de bord web intègre un graphique SVG responsive générant des données en temps réel depuis une API, en exploitant le code exporté par l'outil.",
     "Un chef de projet compare les délais réels et prévus de différentes phases en configurant des lignes de référence horizontales et des annotations contextuelles sur l'axe X."
+  ],
+  "faqs": [
+    {
+      "question": "Qu'est-ce qu'un graphique en ligne (diagramme en ligne) ?",
+      "answer": "Un graphique en ligne relie une série de points de données par des segments continus, idéal pour visualiser des tendances temporelles, des évolutions de métriques ou des comparaisons de séries."
+    },
+    {
+      "question": "Puis-je exporter le graphique en format vectoriel ?",
+      "answer": "Oui. Vous pouvez télécharger le résultat directement en SVG vectoriel haute qualité pour vos documents ou en PNG haute résolution."
+    },
+    {
+      "question": "Mes données sont-elles traitées de manière sécurisée ?",
+      "answer": "Oui. Tout le rendu et le traitement s'exécutent localement dans votre navigateur sans aucun envoi vers des serveurs externes."
+    }
   ]
 }

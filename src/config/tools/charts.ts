@@ -1,9 +1,9 @@
 import type { Tool } from './types';
 
 export const CHARTS_TOOLS: Tool[] = [
-  { slug: 'bar-chart-generator', category: 'charts', icon: 'bar-chart-3', component: 'BarChartGenerator' },
-  { slug: 'line-chart-generator', category: 'charts', icon: 'trending-up', component: 'LineChartGenerator' },
-  { slug: 'pie-chart-generator', category: 'charts', icon: 'pie-chart', component: 'PieChartGenerator' },
+  { slug: 'bar-chart-generator', category: 'charts', icon: 'bar-chart-3', component: 'BarChartGenerator', popular: true },
+  { slug: 'line-chart-generator', category: 'charts', icon: 'trending-up', component: 'LineChartGenerator', popular: true },
+  { slug: 'pie-chart-generator', category: 'charts', icon: 'pie-chart', component: 'PieChartGenerator', popular: true },
   { slug: 'radar-chart-generator', category: 'charts', icon: 'radar', component: 'RadarChartGenerator' },
   { slug: 'scatter-chart-generator', category: 'charts', icon: 'scatter-chart', component: 'ScatterChartGenerator', popular: true },
   { slug: 'area-chart-generator', category: 'charts', icon: 'area-chart', component: 'AreaChartGenerator' },

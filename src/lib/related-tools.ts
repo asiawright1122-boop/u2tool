@@ -16,7 +16,7 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
+  charts: ['line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
   converters: ['bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer'],
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],

@@ -11,5 +11,19 @@
     "Show monthly traffic, signups, or revenue in a weekly or monthly performance report.",
     "Track bug count or response time changes across several releases.",
     "Visualize progress through a funnel or roadmap sequence in internal documentation."
+  ],
+  "faqs": [
+    {
+      "question": "What is a line chart best used for?",
+      "answer": "A line chart connects sequential data points over time or ranked categories, making trends, accelerations, and directional changes immediately clear."
+    },
+    {
+      "question": "Can I customize the line styling and colors?",
+      "answer": "Yes. You can customize line colors, data point markers, curve smoothness, and chart title."
+    },
+    {
+      "question": "Which image formats can I export?",
+      "answer": "You can export the finished chart as high-resolution PNG or vector SVG suitable for slides and web embedding."
+    }
   ]
 }

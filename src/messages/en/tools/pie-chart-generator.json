@@ -13,5 +13,19 @@
     "An educational researcher visualizes student major distributions using exploded segments to highlight specific departments",
     "A UX designer prototypes interactive dashboard components by exporting SVG charts with tooltip event listeners pre-attached",
     "A government agency generates public report infographics with multi-layered legends positioned dynamically around the chart circumference"
+  ],
+  "faqs": [
+    {
+      "question": "What is a pie chart best used for?",
+      "answer": "A pie chart represents proportional shares of a whole, showing relative percentages across categorical components such as market share, budget distribution, or survey results."
+    },
+    {
+      "question": "Can I switch between standard pie and donut formats?",
+      "answer": "Yes. You can toggle the inner radius to display a classic filled pie chart or a modern hollow donut (doughnut) chart."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can export the chart directly as high-resolution PNG or vector SVG suitable for presentations and publications."
+    }
   ]
 }

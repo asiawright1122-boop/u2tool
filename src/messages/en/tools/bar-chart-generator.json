@@ -13,6 +13,20 @@
     "Import a small `category,value` CSV exported from a spreadsheet for a quick visual check.",
     "Download the PNG version of a draft chart for a slide deck or document."
   ],
+  "faqs": [
+    {
+      "question": "What is a bar chart best used for?",
+      "answer": "A bar chart compares discrete categories using vertical or horizontal rectangular bars, where lengths are directly proportional to the values they represent."
+    },
+    {
+      "question": "Can I switch between vertical and horizontal bar layouts?",
+      "answer": "Yes. You can toggle between standard vertical column charts and horizontal bar charts, which is particularly useful for longer category labels."
+    },
+    {
+      "question": "Can I import data from CSV files?",
+      "answer": "Yes. You can import a basic two-column CSV file with category and value headers to instantly populate the bar chart."
+    }
+  ],
   "sampleData": {
     "productA": "Product A",
     "productB": "Product B",
