@@ -64,38 +64,38 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-to-slug/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/chinese-converter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-deduplicator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-statistics/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-to-ascii-art/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/reading-time-calculator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "ALREADY_INDEXED",
+      "detail": "2026-09-04 检查确认：网址已收录到 Google。"
     },
     {
       "url": "https://www.u2tool.com/es/tools/list-randomizer/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/typing-speed-test/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 12,
-    "pending": 8,
+    "submitted": 18,
+    "pending": 2,
     "currentBatch": "batch-11",
     "quotaHit": true,
-    "quotaHitAt": "2026-09-04T12:15:00.000Z",
-    "completedBatch": "batch-11 (12/20 - 60% Completed, Quota Hit)"
+    "quotaHitAt": "2026-09-04T12:45:00.000Z",
+    "completedBatch": "batch-11 (18/20 - 90% Completed, Quota Hit)"
   }
 }
