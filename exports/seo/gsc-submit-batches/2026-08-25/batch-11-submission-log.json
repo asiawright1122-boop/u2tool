@@ -94,22 +94,21 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/list-randomizer/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/typing-speed-test/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 18,
-    "pending": 2,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-11",
-    "quotaHit": true,
-    "quotaHitAt": "2026-09-04T12:45:00.000Z",
-    "completedBatch": "batch-11 (18/20 - 90% Completed, Quota Hit)"
+    "quotaHit": false,
+    "completedBatch": "batch-11 (20/20 - 100% Completed)"
   }
 }
