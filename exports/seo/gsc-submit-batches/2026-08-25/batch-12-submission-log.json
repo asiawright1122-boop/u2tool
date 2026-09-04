@@ -9,53 +9,53 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/ai-prompt-optimizer/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/ai-prompt-template-generator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-summarizer/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/ai-text-humanizer/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/grammar-checker/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/document-word-counter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/json-formatter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/base64/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/html-encoder/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/jwt-decoder/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 GSC 频控冷却中 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/xml-formatter/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 1,
-    "pending": 19,
+    "submitted": 10,
+    "pending": 10,
     "currentBatch": "batch-12",
     "quotaHit": true,
-    "quotaHitAt": "2026-09-04T13:00:00.000Z",
-    "completedBatch": "batch-12 (1/20 - 5% Completed, Quota Hit)"
+    "quotaHitAt": "2026-09-04T13:30:00.000Z",
+    "completedBatch": "batch-12 (10/20 - 50% Completed, Quota Hit)"
   }
 }
