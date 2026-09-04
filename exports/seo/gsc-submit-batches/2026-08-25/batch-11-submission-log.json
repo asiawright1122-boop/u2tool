@@ -49,66 +49,67 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/case-converter/",
-      "status": "PENDING",
-      "detail": "2026-09-04 频控冷却中，稍后重试"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (旧 noindex 残留 -> 已请求重新评估与编入索引)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/markdown-preview/",
-      "status": "PENDING",
-      "detail": "待下一轮提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/diff-checker/",
-      "status": "PENDING",
-      "detail": "待下一轮提交"
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-to-slug/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/chinese-converter/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-deduplicator/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-statistics/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/text-to-ascii-art/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/reading-time-calculator/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/list-randomizer/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     },
     {
       "url": "https://www.u2tool.com/es/tools/typing-speed-test/",
       "status": "PENDING",
-      "detail": "待下一轮提交"
+      "detail": "待下一轮配额恢复后提交"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 9,
-    "pending": 11,
+    "submitted": 11,
+    "pending": 9,
     "currentBatch": "batch-11",
-    "quotaHit": false,
-    "completedBatch": "batch-11 (9/20 - 45% Completed)"
+    "quotaHit": true,
+    "quotaHitAt": "2026-09-04T12:00:00.000Z",
+    "completedBatch": "batch-11 (11/20 - 55% Completed, Quota Hit)"
   }
 }
