@@ -1,0 +1,115 @@
+{
+  "generatedAt": "2026-09-04T01:00:00.000Z",
+  "batch": "batch-12",
+  "submissions": [
+    {
+      "url": "https://www.u2tool.com/es/tools/ai-prompt-generator/",
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/ai-prompt-optimizer/",
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/ai-prompt-template-generator/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/text-summarizer/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/ai-text-humanizer/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/grammar-checker/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/document-word-counter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/json-formatter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/base64/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/html-encoder/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/jwt-decoder/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/xml-formatter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/unicode-converter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/string-escape/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/hex-editor/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/ascii-table/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/morse-code-player/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/uuid-generator/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/lorem-ipsum/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/gradient-generator/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "submitted": 1,
+    "pending": 19,
+    "currentBatch": "batch-12",
+    "quotaHit": true,
+    "quotaHitAt": "2026-09-04T13:00:00.000Z",
+    "completedBatch": "batch-12 (1/20 - 5% Completed, Quota Hit)"
+  }
+}
