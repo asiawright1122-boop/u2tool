@@ -12,5 +12,19 @@
     "Generate intermediate colors for a simple UI gradient mockup.",
     "Copy a set of HEX values for a palette note or design handoff.",
     "Compare how changing the step count affects the spacing between two colors."
+  ],
+  "faqs": [
+    {
+      "question": "How does Color Blender calculate color gradients?",
+      "answer": "It performs linear RGB interpolation between the start and end colors, calculating exact intermediate HEX codes across your chosen step count (1 to 20 steps)."
+    },
+    {
+      "question": "Can I copy individual or all generated colors?",
+      "answer": "Yes. Clicking any color swatch copies its individual HEX value, or you can use 'Copy All' to export the entire color ramp as a list."
+    },
+    {
+      "question": "Does this tool require internet access or uploads?",
+      "answer": "No. All color blending calculations execute completely client-side in your browser."
+    }
   ]
 }

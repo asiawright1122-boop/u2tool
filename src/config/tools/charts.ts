@@ -40,7 +40,7 @@ export const CHARTS_TOOLS: Tool[] = [
   { slug: 'ring-progress-chart-generator', category: 'charts', icon: 'loader', component: 'RingProgressChartGenerator' },
   { slug: 'liquid-fill-chart-generator', category: 'charts', icon: 'droplets', component: 'LiquidFillChartGenerator' },
   { slug: 'multi-ring-chart-generator', category: 'charts', icon: 'target', component: 'MultiRingChartGenerator' },
-  { slug: 'half-doughnut-chart-generator', category: 'charts', icon: 'semicircle', component: 'HalfDoughnutChartGenerator' },
+  { slug: 'half-doughnut-chart-generator', category: 'charts', icon: 'semicircle', component: 'HalfDoughnutChartGenerator', popular: true },
   { slug: 'nested-pie-chart-generator', category: 'charts', icon: 'pie-chart', component: 'NestedPieChartGenerator', popular: true },
   { slug: 'pictorial-bar-chart-generator', category: 'charts', icon: 'bar-chart-horizontal', component: 'PictorialBarChartGenerator' },
 ];

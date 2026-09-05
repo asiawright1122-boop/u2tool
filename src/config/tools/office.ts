@@ -11,7 +11,7 @@ export const OFFICE_TOOLS: Tool[] = [
   { slug: 'excel-to-json', category: 'office', icon: 'file-text', component: 'ExcelToJson' },
   { slug: 'json-to-excel', category: 'office', icon: 'file-text', component: 'JsonToExcel', popular: true },
   { slug: 'excel-viewer', category: 'office', icon: 'file-text', component: 'ExcelViewer', popular: true },
-  { slug: 'excel-merger', category: 'office', icon: 'file-text', component: 'ExcelMerger' },
+  { slug: 'excel-merger', category: 'office', icon: 'file-text', component: 'ExcelMerger', popular: true },
   { slug: 'pdf-to-image', category: 'office', icon: 'file-text', component: 'PdfToImage' },
   { slug: 'image-to-pdf', category: 'office', icon: 'file-text', component: 'ImageToPdf', popular: true },
   { slug: 'pdf-merger', category: 'office', icon: 'file-text', component: 'PdfMerger' },

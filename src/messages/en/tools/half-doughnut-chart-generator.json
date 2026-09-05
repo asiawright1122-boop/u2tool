@@ -11,5 +11,19 @@
     "Show completed versus remaining work in a compact project status card.",
     "Visualize how a budget is split between a few major categories on a dashboard.",
     "Summarize survey responses in a layout where vertical space is limited."
+  ],
+  "faqs": [
+    {
+      "question": "What is a half doughnut chart?",
+      "answer": "A half doughnut chart (or semi-circle doughnut chart) renders a 180-degree arch showing categorical distributions, perfect for compact dashboard gauges and status meters."
+    },
+    {
+      "question": "Can I adjust the ring thickness and colors?",
+      "answer": "Yes. You can customize the inner/outer radius to tune ring thickness, select vibrant color palettes, and toggle legend labels."
+    },
+    {
+      "question": "Which export formats are available?",
+      "answer": "You can export the rendered half doughnut chart directly as a high-resolution PNG image or scalable vector SVG."
+    }
   ]
 }

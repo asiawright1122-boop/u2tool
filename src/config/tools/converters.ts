@@ -7,7 +7,7 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'unit-converter', category: 'converters', icon: 'scale', component: 'UnitConverter', popular: true },
   { slug: 'yaml-json', category: 'converters', icon: 'file-json', component: 'YamlJson' },
   { slug: 'date-calculator', category: 'converters', icon: 'calendar', component: 'DateCalculator' },
-  { slug: 'color-blender', category: 'converters', icon: 'blend', component: 'ColorBlender' },
+  { slug: 'color-blender', category: 'converters', icon: 'blend', component: 'ColorBlender', popular: true },
   { slug: 'json-to-typescript', category: 'converters', icon: 'file-type', component: 'JsonToTypescript', popular: true },
   { slug: 'markdown-to-html', category: 'converters', icon: 'code', component: 'MarkdownToHtml', popular: true },
   { slug: 'epoch-converter', category: 'converters', icon: 'timer', component: 'EpochConverter' },

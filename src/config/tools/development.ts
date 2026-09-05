@@ -33,7 +33,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'htaccess-to-nginx', category: 'development', icon: 'repeat', component: 'HtaccessToNginx' },
   { slug: 'css-variables-generator', category: 'development', icon: 'variable', component: 'CssVariablesGenerator' },
   { slug: 'regex-escape', category: 'development', icon: 'lock', component: 'RegexEscape' },
-  { slug: 'crc32-calculator', category: 'development', icon: 'hash', component: 'Crc32Calculator' },
+  { slug: 'crc32-calculator', category: 'development', icon: 'hash', component: 'Crc32Calculator', popular: true },
   { slug: 'env-parser', category: 'development', icon: 'binary', component: 'EnvParser' },
   { slug: 'json-schema-generator', category: 'development', icon: 'braces', component: 'JsonSchemaGenerator' },
   { slug: 'regex-visualizer', category: 'development', icon: 'eye', component: 'RegexVisualizer' },

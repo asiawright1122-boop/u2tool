@@ -39,7 +39,7 @@ describe('related tools recovery ordering', () => {
   it('promotes development content-refresh pages into related-tool links', () => {
     const relatedSlugs = getRelatedToolsForTool(mustGetTool('regex-tester')).map((tool) => tool.slug);
 
-    expect(relatedSlugs.slice(0, 5)).toEqual(['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter']);
+    expect(relatedSlugs.slice(0, 6)).toEqual(['api-tester', 'tsconfig-generator', 'crc32-calculator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter']);
   });
 
   it('keeps sibling recovery pages visible when the current page is itself in the recovery set', () => {

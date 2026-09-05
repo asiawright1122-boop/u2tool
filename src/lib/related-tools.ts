@@ -2,8 +2,8 @@ import { getPopularTools, getToolBySlug, getToolsByCategory, tools, type Tool, t
 import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './ai-tools-directory';
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
-  converters: ['file-size-calculator'],
+  charts: ['half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
+  converters: ['color-blender', 'file-size-calculator'],
   development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
   encoding: ['ascii-table'],
   finance: ['margin-calculator'],
@@ -11,14 +11,14 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
-  office: ['excel-viewer', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
+  office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   text: ['typing-speed-test'],
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
-  converters: ['bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
-  development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer'],
+  charts: ['half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
+  converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
+  development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'crc32-calculator'],
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
@@ -26,7 +26,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],
-  office: ['excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
+  office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
   security: ['totp-generator'],
   text: ['typing-speed-test'],
 };
