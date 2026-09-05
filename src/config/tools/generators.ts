@@ -53,7 +53,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'aspect-ratio-box-generator', category: 'generators', icon: 'zap', component: 'AspectRatioBoxGenerator' },
   { slug: 'changelog-generator-advanced', category: 'generators', icon: 'zap', component: 'ChangelogGeneratorAdvanced' },
   { slug: 'document-outline-generator', category: 'generators', icon: 'zap', component: 'DocumentOutlineGenerator' },
-  { slug: 'table-of-contents-generator', category: 'generators', icon: 'zap', component: 'TableOfContentsGenerator' },
+  { slug: 'table-of-contents-generator', category: 'generators', icon: 'zap', component: 'TableOfContentsGenerator', popular: true },
   { slug: 'youtube-title-generator', category: 'generators', icon: 'text', component: 'YoutubeTitleGenerator', popular: true },
   { slug: 'email-subject-line-generator', category: 'generators', icon: 'text', component: 'EmailSubjectLineGenerator', popular: true },
   { slug: 'instagram-bio-generator', category: 'generators', icon: 'text', component: 'InstagramBioGenerator', popular: true },
