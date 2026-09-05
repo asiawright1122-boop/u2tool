@@ -59,18 +59,18 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/xml-formatter/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/unicode-converter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/string-escape/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/hex-editor/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 11,
-    "pending": 9,
+    "submitted": 13,
+    "pending": 7,
     "currentBatch": "batch-12",
     "quotaHit": true,
-    "quotaHitAt": "2026-09-04T13:45:00.000Z",
-    "completedBatch": "batch-12 (11/20 - 55% Completed, Quota Hit)"
+    "quotaHitAt": "2026-09-04T14:15:00.000Z",
+    "completedBatch": "batch-12 (13/20 - 65% Completed, Quota Hit)"
   }
 }
