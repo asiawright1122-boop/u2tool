@@ -94,22 +94,21 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/stable-diffusion-prompt-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 频控冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/youtube-tags-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 频控冷却中 (旧 noindex 残留待重新评估)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (旧 noindex 残留 -> 已请求重新评估与编入索引)"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 18,
-    "pending": 2,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-13",
-    "quotaHit": true,
-    "quotaHitAt": "2026-09-04T15:45:00.000Z",
-    "completedBatch": "batch-13 (18/20 - 90% Completed, Quota Hit)"
+    "quotaHit": false,
+    "completedBatch": "batch-13 (20/20 - 100% Completed)"
   }
 }
