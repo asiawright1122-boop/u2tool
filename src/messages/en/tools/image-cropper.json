@@ -13,5 +13,19 @@
     "Prepare a 16:9 image crop for a presentation slide.",
     "Create a vertical 9:16 crop from a wider source image.",
     "Download a quick PNG crop for a documentation screenshot."
+  ],
+  "faqs": [
+    {
+      "question": "What aspect ratios are supported?",
+      "answer": "You can select preset ratios including 1:1 (square), 4:3, 16:9 (widescreen), and 9:16 (vertical story), or use freeform cropping."
+    },
+    {
+      "question": "Are my images uploaded to any remote server?",
+      "answer": "No. All image loading, canvas cropping, and PNG export happen locally inside your browser, guaranteeing total privacy."
+    },
+    {
+      "question": "Can I specify exact pixel dimensions for the crop?",
+      "answer": "Yes. You can manually enter target width and height values in pixels to achieve precise output dimensions."
+    }
   ]
 }

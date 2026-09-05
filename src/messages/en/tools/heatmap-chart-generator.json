@@ -11,5 +11,19 @@
     "Show feature adoption by user segment and month in a product review.",
     "Compare survey responses across departments and question themes.",
     "Visualize staffing coverage by day and shift in an operations dashboard."
+  ],
+  "faqs": [
+    {
+      "question": "What is a heatmap chart best used for?",
+      "answer": "A heatmap chart visualizes 2D matrix data using color intensity scales, making it effortless to identify hot spots, peak activity periods, and cross-category correlation patterns."
+    },
+    {
+      "question": "Can I customize the color gradient?",
+      "answer": "Yes. You can select from diverse preset color palettes (including classic heat ramps and modern multi-hue gradients) to match your reporting needs."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can export the rendered heatmap directly as high-resolution PNG or vector SVG suitable for presentations and technical documentation."
+    }
   ]
 }

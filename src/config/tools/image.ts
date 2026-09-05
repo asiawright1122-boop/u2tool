@@ -9,7 +9,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'image-compressor', category: 'image', icon: 'image', component: 'ImageCompressor', popular: true },
   { slug: 'image-converter', category: 'image', icon: 'image', component: 'ImageConverter', popular: true },
   { slug: 'favicon-generator', category: 'image', icon: 'image', component: 'FaviconGenerator', popular: true },
-  { slug: 'image-cropper', category: 'image', icon: 'image', component: 'ImageCropper' },
+  { slug: 'image-cropper', category: 'image', icon: 'image', component: 'ImageCropper', popular: true },
   { slug: 'canvas-drawing', category: 'image', icon: 'image', component: 'CanvasDrawing' },
   { slug: 'image-resizer', category: 'image', icon: 'image', component: 'ImageResizer' },
   { slug: 'image-watermark', category: 'image', icon: 'image', component: 'ImageWatermark' },

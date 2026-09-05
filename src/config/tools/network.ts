@@ -19,7 +19,7 @@ export const NETWORK_TOOLS: Tool[] = [
   { slug: 'ip-subnet-calculator', category: 'network', icon: 'globe', component: 'IpSubnetCalculator', popular: true },
   { slug: 'subnet-calculator-enhanced', category: 'network', icon: 'globe', component: 'SubnetCalculatorEnhanced' },
   { slug: 'email-validator', category: 'network', icon: 'globe', component: 'EmailValidator' },
-  { slug: 'cors-tester', category: 'network', icon: 'globe', component: 'CorsTester' },
+  { slug: 'cors-tester', category: 'network', icon: 'globe', component: 'CorsTester', popular: true },
   { slug: 'bandwidth-calculator', category: 'network', icon: 'globe', component: 'BandwidthCalculator' },
   { slug: 'data-transfer-calculator', category: 'network', icon: 'globe', component: 'DataTransferCalculator' },
   { slug: 'http-status-code-reference', category: 'network', icon: 'globe', component: 'HttpStatusCodeReference' },

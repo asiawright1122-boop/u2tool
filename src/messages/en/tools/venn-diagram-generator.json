@@ -13,5 +13,19 @@
     "A biologist visualizing gene set intersections from RNA-seq experiments with weighted circles representing expression levels",
     "An IT architect mapping infrastructure overlaps between cloud providers using manually entered JSON data",
     "A statistics professor creating textbook diagrams with LaTeX-embedded labels and precise set notation"
+  ],
+  "faqs": [
+    {
+      "question": "What is a Venn diagram used for?",
+      "answer": "A Venn diagram visualizes set relationships, overlaps, intersections, and differences between two or more discrete categories or data collections."
+    },
+    {
+      "question": "How many sets can I compare?",
+      "answer": "The generator supports 2-set and 3-set visual overlap diagrams with customizable set names, element sizes, and individual intersection counts."
+    },
+    {
+      "question": "Can I export the Venn diagram as vector SVG?",
+      "answer": "Yes. You can export the generated Venn diagram as a high-resolution PNG or vector SVG suitable for academic papers, slides, and web publishing."
+    }
   ]
 }

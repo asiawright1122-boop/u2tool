@@ -18,17 +18,17 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
+  charts: ['heatmap-chart-generator', 'venn-diagram-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
   converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crc32-calculator'],
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
   generators: ['table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator'],
-  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
+  image: ['image-cropper', 'image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
   lifestyle: ['countdown-days-calculator'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator'],
-  network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],
+  network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator', 'cors-tester'],
   office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],
   security: ['totp-generator'],
   text: ['typing-speed-test'],

@@ -66,10 +66,11 @@ describe('related tools recovery ordering', () => {
     const imageRelatedSlugs = getRelatedToolsForTool(mustGetTool('image-compressor')).map((tool) => tool.slug);
     const mathRelatedSlugs = getRelatedToolsForTool(mustGetTool('scientific-calculator')).map((tool) => tool.slug);
 
-    expect(networkRelatedSlugs.slice(0, 4)).toEqual([
+    expect(networkRelatedSlugs.slice(0, 5)).toEqual([
       'ip-lookup',
       'ip-validator',
       'ip-subnet-calculator',
+      'cors-tester',
       'database-connection-tester',
     ]);
     expect(imageRelatedSlugs.slice(0, 6)).toEqual([

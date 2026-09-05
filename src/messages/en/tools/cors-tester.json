@@ -13,5 +13,19 @@
     "Compare how GET and POST requests behave for the same endpoint.",
     "Test a staging endpoint with the current site origin before wiring it into frontend code.",
     "Use the visible error message to distinguish browser blocking from a successful CORS response."
+  ],
+  "faqs": [
+    {
+      "question": "How does this CORS Tester check endpoints?",
+      "answer": "It performs both preflight HTTP OPTIONS requests and target HTTP method requests directly from your browser, inspecting returned Access-Control-* headers in real time."
+    },
+    {
+      "question": "Can I customize the Origin header?",
+      "answer": "Yes. You can edit the Origin field to simulate cross-origin requests coming from staging, production, or custom local domains."
+    },
+    {
+      "question": "Why did my request fail with a CORS error?",
+      "answer": "Browser security restricts responses from servers that do not explicitly return 'Access-Control-Allow-Origin' headers matching the requesting origin."
+    }
   ]
 }
