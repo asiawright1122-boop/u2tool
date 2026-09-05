@@ -79,37 +79,36 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/ascii-table/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (旧 noindex 残留 -> 已请求重新评估与编入索引)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/morse-code-player/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/uuid-generator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/lorem-ipsum/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/gradient-generator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 15,
-    "pending": 5,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-12",
-    "quotaHit": true,
-    "quotaHitAt": "2026-09-04T14:45:00.000Z",
-    "completedBatch": "batch-12 (15/20 - 75% Completed, Quota Hit)"
+    "quotaHit": false,
+    "completedBatch": "batch-12 (20/20 - 100% Completed)"
   }
 }
