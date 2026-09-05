@@ -39,8 +39,8 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/seo-title-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 频控冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/tweet-generator/",
@@ -49,13 +49,13 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/ai-robots-txt-generator/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 频控冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/mcp-server-config-generator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/color-converter/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 8,
-    "pending": 12,
+    "submitted": 10,
+    "pending": 10,
     "currentBatch": "batch-14",
     "quotaHit": true,
-    "quotaHitAt": "2026-09-04T17:45:00.000Z",
-    "completedBatch": "batch-14 (8/20 - 40% Completed, Quota Hit)"
+    "quotaHitAt": "2026-09-04T18:00:00.000Z",
+    "completedBatch": "batch-14 (10/20 - 50% Completed, Quota Hit)"
   }
 }
