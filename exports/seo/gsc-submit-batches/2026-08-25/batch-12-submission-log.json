@@ -69,18 +69,18 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/string-escape/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "ALREADY_INDEXED",
+      "detail": "2026-09-04 检查确认：网址已收录到 Google。"
     },
     {
       "url": "https://www.u2tool.com/es/tools/hex-editor/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/ascii-table/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "QUOTA_EXHAUSTED",
+      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/morse-code-player/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 13,
-    "pending": 7,
+    "submitted": 15,
+    "pending": 5,
     "currentBatch": "batch-12",
     "quotaHit": true,
-    "quotaHitAt": "2026-09-04T14:15:00.000Z",
-    "completedBatch": "batch-12 (13/20 - 65% Completed, Quota Hit)"
+    "quotaHitAt": "2026-09-04T14:45:00.000Z",
+    "completedBatch": "batch-12 (15/20 - 75% Completed, Quota Hit)"
   }
 }
