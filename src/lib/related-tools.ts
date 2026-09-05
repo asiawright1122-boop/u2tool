@@ -2,13 +2,14 @@ import { getPopularTools, getToolBySlug, getToolsByCategory, tools, type Tool, t
 import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './ai-tools-directory';
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
+  charts: ['candlestick-chart-generator', 'half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator'],
   converters: ['color-blender', 'file-size-calculator'],
   development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
   encoding: ['ascii-table'],
   finance: ['margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
-  image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
+  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
+  lifestyle: ['countdown-days-calculator'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator'],
   network: ['database-connection-tester'],
   office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
@@ -16,14 +17,15 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
+  charts: ['candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator'],
   converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter'],
   development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'crc32-calculator'],
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
   generators: ['fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator'],
-  image: ['aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
+  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker'],
+  lifestyle: ['countdown-days-calculator'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator'],
   office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel'],

@@ -16,7 +16,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'svg-to-image', category: 'image', icon: 'image', component: 'SvgToImage' },
   { slug: 'lorem-picsum', category: 'image', icon: 'image', component: 'LoremPicsum' },
   { slug: 'image-collage', category: 'image', icon: 'image', component: 'ImageCollage' },
-  { slug: 'image-splitter', category: 'image', icon: 'image', component: 'ImageSplitter' },
+  { slug: 'image-splitter', category: 'image', icon: 'image', component: 'ImageSplitter', popular: true },
   { slug: 'image-rounder', category: 'image', icon: 'image', component: 'ImageRounder' },
   { slug: 'image-border', category: 'image', icon: 'image', component: 'ImageBorder' },
   { slug: 'image-flip-rotate', category: 'image', icon: 'image', component: 'ImageFlipRotate' },

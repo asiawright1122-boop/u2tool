@@ -14,7 +14,7 @@ export const CHARTS_TOOLS: Tool[] = [
   { slug: 'doughnut-chart-generator', category: 'charts', icon: 'circle-dot', component: 'DoughnutChartGenerator' },
   { slug: 'sankey-chart-generator', category: 'charts', icon: 'git-branch', component: 'SankeyChartGenerator' },
   { slug: 'sunburst-chart-generator', category: 'charts', icon: 'sun', component: 'SunburstChartGenerator' },
-  { slug: 'candlestick-chart-generator', category: 'charts', icon: 'candlestick-chart', component: 'CandlestickChartGenerator' },
+  { slug: 'candlestick-chart-generator', category: 'charts', icon: 'candlestick-chart', component: 'CandlestickChartGenerator', popular: true },
   { slug: 'boxplot-chart-generator', category: 'charts', icon: 'box-select', component: 'BoxplotChartGenerator' },
   { slug: 'wordcloud-generator', category: 'charts', icon: 'bar-chart-3', component: 'WordCloudGenerator', popular: true },
   { slug: 'graph-chart-generator', category: 'charts', icon: 'network', component: 'GraphChartGenerator', popular: true },

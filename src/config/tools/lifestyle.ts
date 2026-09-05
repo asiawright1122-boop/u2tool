@@ -5,7 +5,7 @@ export const LIFESTYLE_TOOLS: Tool[] = [
   { slug: 'water-intake-calculator', category: 'lifestyle', icon: 'heart', component: 'WaterIntakeCalculator' },
   { slug: 'sleep-calculator', category: 'lifestyle', icon: 'heart', component: 'SleepCalculator' },
   { slug: 'due-date-calculator', category: 'lifestyle', icon: 'heart', component: 'DueDateCalculator' },
-  { slug: 'countdown-days-calculator', category: 'lifestyle', icon: 'heart', component: 'CountdownDaysCalculator' },
+  { slug: 'countdown-days-calculator', category: 'lifestyle', icon: 'heart', component: 'CountdownDaysCalculator', popular: true },
   { slug: 'fuel-cost-calculator', category: 'lifestyle', icon: 'heart', component: 'FuelCostCalculator' },
   { slug: 'electricity-cost-calculator', category: 'lifestyle', icon: 'heart', component: 'ElectricityCostCalculator' },
   { slug: 'pace-calculator', category: 'lifestyle', icon: 'heart', component: 'PaceCalculator' },
