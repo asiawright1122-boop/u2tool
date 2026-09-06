@@ -48,7 +48,7 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'roman-numeral-converter', category: 'converters', icon: 'arrow-left-right', component: 'RomanNumeralConverter' },
   { slug: 'text-to-pdf', category: 'converters', icon: 'arrow-left-right', component: 'TextToPdf' },
   { slug: 'json-to-proto', category: 'converters', icon: 'arrow-left-right', component: 'JsonToProto' },
-  { slug: 'html-to-pdf', category: 'converters', icon: 'arrow-left-right', component: 'HtmlToPdf' },
+  { slug: 'html-to-pdf', category: 'converters', icon: 'arrow-left-right', component: 'HtmlToPdf', popular: true },
   { slug: 'json-to-table', category: 'converters', icon: 'arrow-left-right', component: 'JsonToTable' },
   { slug: 'css-to-tailwind', category: 'converters', icon: 'arrow-left-right', component: 'CssToTailwind' },
   { slug: 'tailwind-to-css', category: 'converters', icon: 'arrow-left-right', component: 'TailwindToCss' },

@@ -22,7 +22,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'css-gradient-text', category: 'generators', icon: 'type', component: 'CssGradientText' },
   { slug: 'sitemap-generator', category: 'generators', icon: 'zap', component: 'SitemapGenerator' },
   { slug: 'css-filter-generator', category: 'generators', icon: 'zap', component: 'CssFilterGenerator' },
-  { slug: 'css-clip-path-generator', category: 'generators', icon: 'zap', component: 'CssClipPathGenerator' },
+  { slug: 'css-clip-path-generator', category: 'generators', icon: 'zap', component: 'CssClipPathGenerator', popular: true },
   { slug: 'css-animation-generator', category: 'generators', icon: 'zap', component: 'CssAnimationGenerator' },
   { slug: 'privacy-policy-generator', category: 'generators', icon: 'zap', component: 'PrivacyPolicyGenerator' },
   { slug: 'terms-generator', category: 'generators', icon: 'zap', component: 'TermsGenerator' },

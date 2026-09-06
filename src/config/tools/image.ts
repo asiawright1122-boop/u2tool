@@ -11,7 +11,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'favicon-generator', category: 'image', icon: 'image', component: 'FaviconGenerator', popular: true },
   { slug: 'image-cropper', category: 'image', icon: 'image', component: 'ImageCropper', popular: true },
   { slug: 'canvas-drawing', category: 'image', icon: 'image', component: 'CanvasDrawing' },
-  { slug: 'image-resizer', category: 'image', icon: 'image', component: 'ImageResizer' },
+  { slug: 'image-resizer', category: 'image', icon: 'image', component: 'ImageResizer', popular: true },
   { slug: 'image-watermark', category: 'image', icon: 'image', component: 'ImageWatermark' },
   { slug: 'svg-to-image', category: 'image', icon: 'image', component: 'SvgToImage' },
   { slug: 'lorem-picsum', category: 'image', icon: 'image', component: 'LoremPicsum' },

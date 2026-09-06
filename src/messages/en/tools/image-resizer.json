@@ -12,5 +12,23 @@
     "Change an uploaded image width while keeping the original aspect ratio.",
     "Create a simple thumbnail preview from one selected image.",
     "Test different pixel dimensions locally before downloading the resized PNG."
+  ],
+  "faqs": [
+    {
+      "question": "Can I keep the original aspect ratio while resizing?",
+      "answer": "Yes. The aspect ratio lock keeps width and height proportional while you edit either dimension, and you can unlock it for a custom canvas size."
+    },
+    {
+      "question": "Are my images uploaded to any server?",
+      "answer": "No. Image reading, resizing, and PNG export all happen locally in your browser using FileReader and canvas."
+    },
+    {
+      "question": "Which output format does the download use?",
+      "answer": "The resized image is exported as a PNG file."
+    },
+    {
+      "question": "Does it support batch resizing multiple images?",
+      "answer": "No. The current tool resizes one image at a time; repeat the steps for each file."
+    }
   ]
 }

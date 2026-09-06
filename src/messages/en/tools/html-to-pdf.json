@@ -13,5 +13,23 @@
     "2. Turn a short documentation snippet into a PDF for review.",
     "3. Print a resume-style HTML draft as a PDF from the browser.",
     "4. Save a simple report mockup as a PDF during layout testing."
+  ],
+  "faqs": [
+    {
+      "question": "How does the HTML to PDF conversion work?",
+      "answer": "The tool renders your sanitized HTML in a live iframe preview and then opens the browser print dialog, where you choose 'Save as PDF' to produce the file using your browser's print engine."
+    },
+    {
+      "question": "Which page sizes and orientations are supported?",
+      "answer": "You can choose common page sizes such as A4, set portrait or landscape orientation, and adjust the page margin before printing."
+    },
+    {
+      "question": "Is my HTML content uploaded to a server?",
+      "answer": "No. All rendering and printing happen locally in your browser, so your HTML content never leaves your device."
+    },
+    {
+      "question": "Why does the output differ from the preview slightly?",
+      "answer": "The final PDF depends on your browser's print engine and dialog settings, such as headers, footers, and scale options."
+    }
   ]
 }

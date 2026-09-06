@@ -11,5 +11,23 @@
     "Show how a company budget breaks down from department to team to project level.",
     "Visualize a content taxonomy so stakeholders can see the distribution of topics and subtopics.",
     "Present a catalog structure with category, subcategory, and item-level share."
+  ],
+  "faqs": [
+    {
+      "question": "What is a sunburst chart best used for?",
+      "answer": "A sunburst chart shows hierarchical parent-child relationships in concentric rings, ideal for budget trees, taxonomies, and category structures where both grouping and share matter."
+    },
+    {
+      "question": "What data format does the chart accept?",
+      "answer": "The chart accepts hierarchical JSON with name, value, and children fields, so you can paste nested structures directly into the editor."
+    },
+    {
+      "question": "Can I adjust the ring thickness?",
+      "answer": "Yes. You can tune the inner and outer radius settings to make the rings thicker or thinner and keep the chart readable."
+    },
+    {
+      "question": "Which export formats are available?",
+      "answer": "You can export the rendered sunburst chart as high-resolution PNG or scalable vector SVG."
+    }
   ]
 }
