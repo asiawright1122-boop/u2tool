@@ -17,7 +17,7 @@ export const ENCODING_TOOLS: Tool[] = [
   { slug: 'html-entity', category: 'encoding', icon: 'binary', component: 'HtmlEntityConverter' },
   { slug: 'json-minifier', category: 'encoding', icon: 'binary', component: 'JsonMinifier' },
   { slug: 'base58', category: 'encoding', icon: 'hash', component: 'Base58' },
-  { slug: 'json-flattener', category: 'encoding', icon: 'binary', component: 'JsonFlattener' },
+  { slug: 'json-flattener', category: 'encoding', icon: 'binary', component: 'JsonFlattener', popular: true },
   { slug: 'base85', category: 'encoding', icon: 'hash', component: 'Base85' },
   { slug: 'json-viewer', category: 'encoding', icon: 'binary', component: 'JsonViewer' },
   { slug: 'encoding-detector', category: 'encoding', icon: 'binary', component: 'EncodingDetector' },

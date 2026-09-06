@@ -13,5 +13,23 @@
     "Strip markup from a saved HTML snippet to paste into a note-taking app",
     "Keep links as 'text (url)' to make a plain-text reference list out of an article",
     "Quickly turn HTML lists into bullet lines for a meeting summary"
+  ],
+  "faqs": [
+    {
+      "question": "How does HTML to Text handle links and lists?",
+      "answer": "With Preserve Links enabled, anchors are rewritten as 'text (url)'; with Preserve Lists enabled, <li> items become bullet lines. Both toggles can be combined with Preserve Line Breaks."
+    },
+    {
+      "question": "Does it keep script and style content?",
+      "answer": "No. Script and style blocks are dropped automatically, so only the visible text content remains in the output."
+    },
+    {
+      "question": "Are HTML entities decoded?",
+      "answer": "Yes. Common named entities (such as &amp; and &nbsp;) and numeric entities are decoded to their characters."
+    },
+    {
+      "question": "Is my HTML uploaded to a server?",
+      "answer": "No. The conversion runs locally in your browser using regular expressions, and your content never leaves the page."
+    }
   ]
 }

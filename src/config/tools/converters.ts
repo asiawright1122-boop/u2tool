@@ -53,7 +53,7 @@ export const CONVERTERS_TOOLS: Tool[] = [
   { slug: 'css-to-tailwind', category: 'converters', icon: 'arrow-left-right', component: 'CssToTailwind' },
   { slug: 'tailwind-to-css', category: 'converters', icon: 'arrow-left-right', component: 'TailwindToCss' },
   { slug: 'json-to-zod', category: 'converters', icon: 'arrow-left-right', component: 'JsonToZod' },
-  { slug: 'typescript-to-json', category: 'converters', icon: 'arrow-left-right', component: 'TypescriptToJson' },
+  { slug: 'typescript-to-json', category: 'converters', icon: 'arrow-left-right', component: 'TypescriptToJson', popular: true },
   { slug: 'markdown-to-slides', category: 'converters', icon: 'arrow-left-right', component: 'MarkdownToSlides' },
   { slug: 'ical-parser', category: 'converters', icon: 'arrow-left-right', component: 'IcalParser', popular: true },
   { slug: 'vcard-parser', category: 'converters', icon: 'arrow-left-right', component: 'VcardParser' },

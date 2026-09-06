@@ -3,9 +3,9 @@ import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './a
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['candlestick-chart-generator', 'half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator', 'sunburst-chart-generator'],
-  converters: ['color-blender', 'file-size-calculator', 'html-to-pdf'],
+  converters: ['color-blender', 'file-size-calculator', 'html-to-pdf', 'typescript-to-json'],
   development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
-  encoding: ['ascii-table'],
+  encoding: ['ascii-table', 'json-flattener'],
   finance: ['credit-card-validator', 'margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
   generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
@@ -13,15 +13,15 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   lifestyle: ['countdown-days-calculator'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator', 'typing-time-calculator'],
   network: ['database-connection-tester'],
-  office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
-  text: ['typing-speed-test', 'char-frequency', 'strikethrough-text'],
+  office: ['excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
+  text: ['typing-speed-test', 'char-frequency', 'strikethrough-text', 'text-cleaner', 'html-to-text'],
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['heatmap-chart-generator', 'venn-diagram-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator', 'sunburst-chart-generator'],
-  converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter', 'html-to-pdf'],
+  converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter', 'html-to-pdf', 'typescript-to-json'],
   development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crc32-calculator'],
-  encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
+  encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor', 'json-flattener'],
   finance: ['credit-card-validator', 'margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
   generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
@@ -29,9 +29,9 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   lifestyle: ['countdown-days-calculator'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator', 'typing-time-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator', 'cors-tester'],
-  office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel', 'world-clock'],
+  office: ['excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   security: ['totp-generator'],
-  text: ['typing-speed-test', 'char-frequency', 'strikethrough-text'],
+  text: ['typing-speed-test', 'char-frequency', 'strikethrough-text', 'text-cleaner', 'html-to-text'],
 };
 
 export const crawledNotIndexedContentRefreshToolSlugs = Object.freeze(

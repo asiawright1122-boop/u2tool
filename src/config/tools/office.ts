@@ -25,7 +25,7 @@ export const OFFICE_TOOLS: Tool[] = [
   { slug: 'pdf-to-text', category: 'office', icon: 'file-text', component: 'PdfToText' },
   { slug: 'word-to-txt', category: 'office', icon: 'file-text', component: 'WordToTxt' },
   { slug: 'word-to-html', category: 'office', icon: 'file-text', component: 'WordToHtml' },
-  { slug: 'excel-to-csv', category: 'office', icon: 'file-text', component: 'ExcelToCsv' },
+  { slug: 'excel-to-csv', category: 'office', icon: 'file-text', component: 'ExcelToCsv', popular: true },
   { slug: 'csv-to-excel', category: 'office', icon: 'file-text', component: 'CsvToExcel' },
   { slug: 'markdown-to-pdf', category: 'office', icon: 'file-text', component: 'MarkdownToPdf' },
   { slug: 'speech-timer', category: 'office', icon: 'file-text', component: 'SpeechTimer' },
