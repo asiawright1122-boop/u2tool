@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-09-04T04:00:00.000Z",
+  "batch": "batch-15",
+  "submissions": [
+    {
+      "url": "https://www.u2tool.com/es/tools/time-calculator/",
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/bra-size-calculator/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/roman-numeral-converter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/ical-parser/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/csv-to-vcard-converter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/vcard-to-csv-converter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/regex-tester/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/code-minifier/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/sql-formatter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/color-picker/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/html-preview/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/json-schema-validator/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/json-diff/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/gitignore-generator/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/go-formatter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/websocket-tester/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/sql-query-optimizer/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/database-schema-visualizer/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/merge-conflict-resolver/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    },
+    {
+      "url": "https://www.u2tool.com/es/tools/docker-run-to-docker-compose-converter/",
+      "status": "PENDING",
+      "detail": "待下一轮配额恢复后提交"
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "submitted": 1,
+    "pending": 19,
+    "currentBatch": "batch-15",
+    "quotaHit": false,
+    "completedBatch": "batch-15 (1/20 - 5% Completed)",
+    "offListBonus": [
+      {
+        "url": "https://www.u2tool.com/es/tools/url-shortener-preview/",
+        "status": "SUCCESS",
+        "detail": "2026-09-04 提交成功 (批次外附加提交，不计入本批次进度)"
+      }
+    ]
+  }
+}
