@@ -69,8 +69,8 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/json-to-csv/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (旧 noindex 残留 -> 已请求重新评估与编入索引)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/unit-converter/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 13,
-    "pending": 7,
+    "submitted": 14,
+    "pending": 6,
     "currentBatch": "batch-14",
     "quotaHit": true,
     "quotaHitAt": "2026-09-04T19:00:00.000Z",
-    "completedBatch": "batch-14 (13/20 - 65% Completed, Quota Hit)"
+    "completedBatch": "batch-14 (14/20 - 70% Completed, Quota Hit)"
   }
 }
