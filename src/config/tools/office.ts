@@ -18,7 +18,7 @@ export const OFFICE_TOOLS: Tool[] = [
   { slug: 'pdf-splitter', category: 'office', icon: 'file-text', component: 'PdfSplitter' },
   { slug: 'pdf-compressor', category: 'office', icon: 'file-text', component: 'PdfCompressor' },
   { slug: 'pdf-rotator', category: 'office', icon: 'file-text', component: 'PdfRotator' },
-  { slug: 'world-clock', category: 'office', icon: 'file-text', component: 'WorldClock' },
+  { slug: 'world-clock', category: 'office', icon: 'file-text', component: 'WorldClock', popular: true },
   { slug: 'stopwatch', category: 'office', icon: 'file-text', component: 'Stopwatch' },
   { slug: 'countdown-timer', category: 'office', icon: 'file-text', component: 'CountdownTimer', popular: true },
   { slug: 'note-pad', category: 'office', icon: 'file-text', component: 'NotePad' },

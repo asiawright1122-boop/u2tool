@@ -14,7 +14,7 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'iban-validator', category: 'finance', icon: 'wallet', component: 'IbanValidator', popular: true },
   { slug: 'vat-calculator', category: 'finance', icon: 'wallet', component: 'VatCalculator' },
   { slug: 'bic-swift-lookup', category: 'finance', icon: 'wallet', component: 'BicSwiftLookup' },
-  { slug: 'credit-card-validator', category: 'finance', icon: 'wallet', component: 'CreditCardValidator' },
+  { slug: 'credit-card-validator', category: 'finance', icon: 'wallet', component: 'CreditCardValidator', popular: true },
   { slug: 'inflation-calculator', category: 'finance', icon: 'wallet', component: 'InflationCalculator' },
   { slug: 'break-even-calculator', category: 'finance', icon: 'wallet', component: 'BreakEvenCalculator' },
   { slug: 'margin-calculator', category: 'finance', icon: 'wallet', component: 'MarginCalculator', popular: true },
