@@ -89,27 +89,26 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/json-to-yaml/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (旧 noindex 残留 -> 已请求重新评估与编入索引)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/timezone-converter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/file-size-calculator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 17,
-    "pending": 3,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-14",
-    "quotaHit": true,
-    "quotaHitAt": "2026-09-04T19:00:00.000Z",
-    "completedBatch": "batch-14 (17/20 - 85% Completed, Quota Hit)"
+    "quotaHit": false,
+    "completedBatch": "batch-14 (20/20 - 100% Completed)"
   }
 }
