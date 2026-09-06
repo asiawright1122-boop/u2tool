@@ -13,5 +13,23 @@
     "Compare the share of vowels and consonants in a sample of writing",
     "Spot an unexpected character (for example a stray punctuation mark) inside a pasted snippet",
     "See which glyphs are most common in a short UI string before designing an icon font sample"
+  ],
+  "faqs": [
+    {
+      "question": "What can I use a character frequency analysis for?",
+      "answer": "Common uses include solving substitution ciphers, comparing letter distribution in writing samples, spotting stray characters in pasted snippets, and checking glyph usage before font design."
+    },
+    {
+      "question": "What do the Ignore Spaces and Case Sensitive options do?",
+      "answer": "Ignore Spaces excludes whitespace from the count, and Case Sensitive treats uppercase and lowercase letters as different characters. Both are off by default."
+    },
+    {
+      "question": "How are the percentages calculated?",
+      "answer": "Each character's percentage is its count divided by the total counted characters, shown to one decimal place. Bars are sized relative to the most frequent character."
+    },
+    {
+      "question": "Is my text sent anywhere?",
+      "answer": "No. The frequency analysis runs locally in your browser, and your text never leaves the page."
+    }
   ]
 }

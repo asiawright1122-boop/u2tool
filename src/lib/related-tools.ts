@@ -8,13 +8,13 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   encoding: ['ascii-table'],
   finance: ['credit-card-validator', 'margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
-  generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator'],
-  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker'],
+  generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
+  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker', 'image-collage', 'pixel-density-calculator'],
   lifestyle: ['countdown-days-calculator'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator', 'typing-time-calculator'],
   network: ['database-connection-tester'],
   office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
-  text: ['typing-speed-test'],
+  text: ['typing-speed-test', 'char-frequency', 'strikethrough-text'],
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
@@ -24,14 +24,14 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor'],
   finance: ['credit-card-validator', 'margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
-  generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator'],
-  image: ['image-cropper', 'image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker', 'image-resizer'],
+  generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
+  image: ['image-cropper', 'image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker', 'image-resizer', 'image-collage', 'pixel-density-calculator'],
   lifestyle: ['countdown-days-calculator'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator', 'typing-time-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator', 'cors-tester'],
   office: ['excel-merger', 'excel-viewer', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   security: ['totp-generator'],
-  text: ['typing-speed-test'],
+  text: ['typing-speed-test', 'char-frequency', 'strikethrough-text'],
 };
 
 export const crawledNotIndexedContentRefreshToolSlugs = Object.freeze(

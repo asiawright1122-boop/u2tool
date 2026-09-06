@@ -11,5 +11,19 @@
     "Example 2: Stack before-and-after images vertically with a small gap between them.",
     "Example 3: Set a white or colored background behind images that have transparent areas.",
     "Example 4: Reorder uploaded photos and generate a simple contact-sheet style image."
+  ],
+  "faqs": [
+    {
+      "question": "How do I combine multiple images into one collage?",
+      "answer": "Upload two or more images, choose a horizontal or vertical layout, adjust the spacing and background color, reorder the images if needed, then click Create Collage and download the PNG."
+    },
+    {
+      "question": "Can I set a custom background color?",
+      "answer": "Yes. The background color picker controls the solid color behind the images, which is useful for transparent PNGs."
+    },
+    {
+      "question": "Are my images uploaded to a server?",
+      "answer": "No. All image loading, canvas compositing, and PNG export happen locally in your browser."
+    }
   ]
 }

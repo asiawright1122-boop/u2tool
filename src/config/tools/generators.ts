@@ -40,7 +40,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'changelog-generator', category: 'generators', icon: 'zap', component: 'ChangelogGenerator' },
   { slug: 'license-generator', category: 'generators', icon: 'zap', component: 'LicenseGenerator' },
   { slug: 'hashtag-generator', category: 'generators', icon: 'zap', component: 'HashtagGenerator' },
-  { slug: 'email-signature-generator', category: 'generators', icon: 'zap', component: 'EmailSignatureGenerator' },
+  { slug: 'email-signature-generator', category: 'generators', icon: 'zap', component: 'EmailSignatureGenerator', popular: true },
   { slug: 'glassmorphism-generator', category: 'generators', icon: 'zap', component: 'GlassmorphismGenerator' },
   { slug: 'neumorphism-generator', category: 'generators', icon: 'zap', component: 'NeumorphismGenerator' },
   { slug: 'blob-generator', category: 'generators', icon: 'zap', component: 'BlobGenerator' },

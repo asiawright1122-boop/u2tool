@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Strikethrough Text Generator creates various text decoration styles including strikethrough (t̶e̶x̶t̶), underline, crosshatch, and slash effects. Works on most social media platforms and messaging apps.",
+  "detailed_description": "The Strikethrough Text Generator creates various text decoration styles including strikethrough (t̶e̶x̶t̶), underline, crosshatch, and slash effects by combining your characters with Unicode combining-stroke marks, so the styling travels with the text as plain characters. The results work on most social media platforms and messaging apps, including X, Discord, WhatsApp, and Instagram, without needing rich-text formatting. You can compare all generated variations side by side, copy the style you prefer with one click, and paste it into posts, profiles, documents, or chat messages for corrections, emphasis, or decorative effect.",
   "usage_steps": [
     "Enter your text in the input field",
     "View all strikethrough variations",
@@ -11,5 +11,19 @@
     "Show corrections in documents",
     "Create emphasis in social posts",
     "Make decorative text for profiles"
+  ],
+  "faqs": [
+    {
+      "question": "How does the strikethrough effect work on social media?",
+      "answer": "The generator combines each character with Unicode combining-stroke marks (U+0335 family), so the strikethrough travels with the text and works on most platforms, including X, Discord, WhatsApp, and Instagram."
+    },
+    {
+      "question": "Which text styles are generated?",
+      "answer": "The tool produces several variations, including strikethrough, underline, crosshatch, and slash-through effects, all as copyable plain text."
+    },
+    {
+      "question": "Will the styled text work everywhere?",
+      "answer": "Most modern platforms render the combining characters correctly, but some older apps or limited fonts may display them imperfectly, so preview before posting."
+    }
   ]
 }

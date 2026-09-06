@@ -14,5 +14,23 @@
     "Design a signature with social links",
     "Make a minimalist email signature",
     "Generate signatures for team members"
+  ],
+  "faqs": [
+    {
+      "question": "Which email clients work with the generated signature?",
+      "answer": "The HTML signature works in Gmail, Outlook, Apple Mail, Thunderbird, and most clients that accept rich HTML signatures. The plain text version covers text-only clients."
+    },
+    {
+      "question": "How do I add the signature to Gmail or Outlook?",
+      "answer": "Copy the HTML version, then paste it into your email client's signature settings (Gmail: Settings > Signature; Outlook: Signature options). The formatting is preserved on paste."
+    },
+    {
+      "question": "Are the design templates customizable?",
+      "answer": "Yes. You can choose from multiple templates and customize accent colors to match your brand."
+    },
+    {
+      "question": "Is my contact information stored anywhere?",
+      "answer": "No. The signature is generated locally in your browser, and your details never leave the page."
+    }
   ]
 }
