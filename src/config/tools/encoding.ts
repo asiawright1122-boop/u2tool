@@ -13,7 +13,7 @@ export const ENCODING_TOOLS: Tool[] = [
   { slug: 'text-to-binary', category: 'encoding', icon: 'binary', component: 'TextToBinary' },
   { slug: 'base32', category: 'encoding', icon: 'hash', component: 'Base32' },
   { slug: 'hex-editor', category: 'encoding', icon: 'binary', component: 'HexEditor' },
-  { slug: 'data-uri', category: 'encoding', icon: 'binary', component: 'DataUri' },
+  { slug: 'data-uri', category: 'encoding', icon: 'binary', component: 'DataUri', popular: true },
   { slug: 'html-entity', category: 'encoding', icon: 'binary', component: 'HtmlEntityConverter' },
   { slug: 'json-minifier', category: 'encoding', icon: 'binary', component: 'JsonMinifier' },
   { slug: 'base58', category: 'encoding', icon: 'hash', component: 'Base58' },

@@ -12,7 +12,7 @@ export const FINANCE_TOOLS: Tool[] = [
   { slug: 'mortgage-calculator', category: 'finance', icon: 'wallet', component: 'MortgageCalculator' },
   { slug: 'tax-calculator', category: 'finance', icon: 'wallet', component: 'TaxCalculator' },
   { slug: 'iban-validator', category: 'finance', icon: 'wallet', component: 'IbanValidator', popular: true },
-  { slug: 'vat-calculator', category: 'finance', icon: 'wallet', component: 'VatCalculator' },
+  { slug: 'vat-calculator', category: 'finance', icon: 'wallet', component: 'VatCalculator', popular: true },
   { slug: 'bic-swift-lookup', category: 'finance', icon: 'wallet', component: 'BicSwiftLookup' },
   { slug: 'credit-card-validator', category: 'finance', icon: 'wallet', component: 'CreditCardValidator', popular: true },
   { slug: 'inflation-calculator', category: 'finance', icon: 'wallet', component: 'InflationCalculator' },

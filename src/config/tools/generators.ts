@@ -38,7 +38,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'json-to-form', category: 'generators', icon: 'zap', component: 'JsonToForm' },
   { slug: 'github-readme-generator', category: 'generators', icon: 'zap', component: 'GithubReadmeGenerator' },
   { slug: 'changelog-generator', category: 'generators', icon: 'zap', component: 'ChangelogGenerator' },
-  { slug: 'license-generator', category: 'generators', icon: 'zap', component: 'LicenseGenerator' },
+  { slug: 'license-generator', category: 'generators', icon: 'zap', component: 'LicenseGenerator', popular: true },
   { slug: 'hashtag-generator', category: 'generators', icon: 'zap', component: 'HashtagGenerator' },
   { slug: 'email-signature-generator', category: 'generators', icon: 'zap', component: 'EmailSignatureGenerator', popular: true },
   { slug: 'glassmorphism-generator', category: 'generators', icon: 'zap', component: 'GlassmorphismGenerator' },

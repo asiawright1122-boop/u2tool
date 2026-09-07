@@ -1,15 +1,30 @@
 {
-  "detailed_description": "VAT Calculator is a comprehensive tool for calculating Value Added Tax across European countries. It supports standard, reduced, and super-reduced VAT rates for all EU member states. You can add VAT to a net amount, remove VAT from a gross amount, or calculate the VAT portion only.",
+  "detailed_description": "The VAT Calculator computes Value Added Tax (VAT) across European countries and custom tax rates directly in your browser. It supports standard, reduced, and super-reduced rates for EU member states, allowing you to add VAT to a net amount, exclude VAT from a gross price, or calculate the standalone tax portion. Built-in country presets provide updated tax rates, while custom rate overrides let you test specific B2B pricing scenarios, invoice calculations, and international cross-border sales.",
   "usage_steps": [
-    "Enter the amount you want to calculate VAT for",
-    "Select the calculation mode (add VAT, remove VAT, or VAT only)",
-    "Choose a country or enter a custom VAT rate",
-    "Select the rate type (standard, reduced, or super-reduced)",
-    "View the calculated net amount, VAT amount, and gross amount"
+    "Enter the base monetary amount in the input field",
+    "Choose whether to add VAT to net amount or remove VAT from gross amount",
+    "Select an EU country preset or check 'Custom Rate' to enter an exact percentage",
+    "Pick standard, reduced, or zero rate categories where applicable",
+    "Review the calculated net, VAT tax, and gross total figures instantly"
   ],
   "usage_examples": [
-    "Calculate VAT for invoices and business transactions",
-    "Determine net price from VAT-inclusive prices",
-    "Compare VAT rates across different EU countries"
+    "Calculate VAT for invoices and business transactions across European partners",
+    "Determine net price from VAT-inclusive retail prices for bookkeeping",
+    "Compare VAT rates across different EU member countries before pricing products",
+    "Compute custom local tax percentages for international freelance invoices"
+  ],
+  "faqs": [
+    {
+      "question": "How do I calculate VAT?",
+      "answer": "To add VAT: Gross = Net × (1 + Rate/100). To remove VAT from a gross price: Net = Gross / (1 + Rate/100). The calculator handles both formulas automatically."
+    },
+    {
+      "question": "Which EU countries and VAT rates are supported?",
+      "answer": "It includes standard and reduced VAT presets for EU member states (such as Germany 19%/7%, France 20%/10%/5.5%, Spain 21%/10%/4%), as well as custom rate inputs."
+    },
+    {
+      "question": "Does this tool store financial figures or send them to a server?",
+      "answer": "No. All calculations run strictly in your browser session without storing or transmitting monetary data."
+    }
   ]
 }

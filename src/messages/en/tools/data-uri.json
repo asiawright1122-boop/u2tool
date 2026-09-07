@@ -11,5 +11,19 @@
     "Copy a generated data URI for a quick HTML or CSS experiment.",
     "Check the browser-reported MIME type and file size before copying the output.",
     "Clear the current selection and generate a data URI for another file."
+  ],
+  "faqs": [
+    {
+      "question": "What is a Data URI?",
+      "answer": "A Data URI embeds small files directly into HTML, CSS, or JSON as base64-encoded strings (data:mime;base64,...), eliminating the need for separate HTTP requests."
+    },
+    {
+      "question": "Which file types can I convert to a Data URI?",
+      "answer": "You can convert any local file (PNG, JPEG, SVG, WebP, GIF, fonts, etc.). For image formats, an inline preview is shown automatically."
+    },
+    {
+      "question": "Are my files uploaded to a remote server?",
+      "answer": "No. The file is read and encoded locally in your browser using the HTML5 FileReader API without being transmitted over the network."
+    }
   ]
 }

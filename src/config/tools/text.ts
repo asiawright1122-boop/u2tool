@@ -10,7 +10,7 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'pinyin-converter', category: 'text', icon: 'languages', component: 'PinyinConverter' },
   { slug: 'text-reverser', category: 'text', icon: 'refresh-cw', component: 'TextReverser' },
   { slug: 'line-counter', category: 'text', icon: 'list-ordered', component: 'LineCounter' },
-  { slug: 'text-deduplicator', category: 'text', icon: 'filter', component: 'TextDeduplicator' },
+  { slug: 'text-deduplicator', category: 'text', icon: 'filter', component: 'TextDeduplicator', popular: true },
   { slug: 'byte-counter', category: 'text', icon: 'ruler', component: 'ByteCounter' },
   { slug: 'text-statistics', category: 'text', icon: 'bar-chart-2', component: 'TextStatistics', popular: true },
   { slug: 'text-compare', category: 'text', icon: 'type', component: 'TextCompare' },

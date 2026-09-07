@@ -12,5 +12,19 @@
     "Remove repeated names from a pasted attendee or contributor list.",
     "Deduplicate copied log lines while keeping the first occurrence.",
     "Compare case-sensitive and case-insensitive cleanup for a list of tags."
+  ],
+  "faqs": [
+    {
+      "question": "How does Text Deduplicator identify duplicates?",
+      "answer": "It checks each line in order, keeps the first occurrence, and drops subsequent identical lines. You can toggle Case Sensitive and Trim Lines to adjust the comparison rules."
+    },
+    {
+      "question": "Does it preserve the original line order?",
+      "answer": "Yes. Unique lines appear in the exact order they were first seen in your input text."
+    },
+    {
+      "question": "Is my text uploaded to a server?",
+      "answer": "No. All line processing and deduplication run locally in your browser without any network requests."
+    }
   ]
 }
