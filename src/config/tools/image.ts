@@ -21,7 +21,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'image-border', category: 'image', icon: 'image', component: 'ImageBorder' },
   { slug: 'image-flip-rotate', category: 'image', icon: 'image', component: 'ImageFlipRotate' },
   { slug: 'image-adjustment', category: 'image', icon: 'image', component: 'ImageAdjustment' },
-  { slug: 'image-frosted-glass', category: 'image', icon: 'image', component: 'ImageFrostedGlass' },
+  { slug: 'image-frosted-glass', category: 'image', icon: 'image', component: 'ImageFrostedGlass', popular: true },
   { slug: 'image-to-ico', category: 'image', icon: 'image', component: 'ImageToIco' },
   { slug: 'youtube-thumbnail-generator', category: 'image', icon: 'image', component: 'YoutubeThumbnailGenerator', popular: true },
   { slug: 'gif-maker', category: 'image', icon: 'image', component: 'GifMaker', popular: true },

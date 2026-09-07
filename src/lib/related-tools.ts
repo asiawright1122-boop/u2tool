@@ -2,34 +2,34 @@ import { getPopularTools, getToolBySlug, getToolsByCategory, tools, type Tool, t
 import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './ai-tools-directory';
 
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['candlestick-chart-generator', 'half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator', 'sunburst-chart-generator'],
+  charts: ['boxplot-chart-generator', 'percentage-stacked-bar-chart-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator', 'sunburst-chart-generator'],
   converters: ['color-blender', 'file-size-calculator', 'html-to-pdf', 'typescript-to-json'],
-  development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter'],
+  development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crontab-calendar'],
   encoding: ['ascii-table', 'json-flattener'],
   finance: ['credit-card-validator', 'margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
   generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
-  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker', 'image-collage', 'pixel-density-calculator'],
+  image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker', 'image-collage', 'pixel-density-calculator', 'image-frosted-glass'],
   lifestyle: ['countdown-days-calculator'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator', 'typing-time-calculator'],
   network: ['database-connection-tester'],
-  office: ['excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
+  office: ['screen-recorder', 'excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   text: ['typing-speed-test', 'char-frequency', 'strikethrough-text', 'text-cleaner', 'html-to-text'],
 };
 
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
-  charts: ['heatmap-chart-generator', 'venn-diagram-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator', 'sunburst-chart-generator'],
+  charts: ['boxplot-chart-generator', 'percentage-stacked-bar-chart-generator', 'heatmap-chart-generator', 'venn-diagram-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator', 'sunburst-chart-generator'],
   converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter', 'html-to-pdf', 'typescript-to-json'],
-  development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crc32-calculator'],
+  development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crc32-calculator', 'crontab-calendar'],
   encoding: ['video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor', 'json-flattener'],
   finance: ['credit-card-validator', 'margin-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator'],
   generators: ['random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
-  image: ['image-cropper', 'image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker', 'image-resizer', 'image-collage', 'pixel-density-calculator'],
+  image: ['image-cropper', 'image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker', 'image-resizer', 'image-collage', 'pixel-density-calculator', 'image-frosted-glass'],
   lifestyle: ['countdown-days-calculator'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator', 'typing-time-calculator'],
   network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator', 'cors-tester'],
-  office: ['excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel', 'world-clock'],
+  office: ['screen-recorder', 'excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   security: ['totp-generator'],
   text: ['typing-speed-test', 'char-frequency', 'strikethrough-text', 'text-cleaner', 'html-to-text'],
 };

@@ -11,5 +11,19 @@
     "Compare exam score distributions across several classes in an education report.",
     "Show delivery time variation between warehouses or shipping methods.",
     "Review differences in response time ranges across product versions or support queues."
+  ],
+  "faqs": [
+    {
+      "question": "What is a boxplot chart used for?",
+      "answer": "A boxplot (box and whisker plot) summarizes a dataset's distribution through five key numbers: minimum, first quartile (Q1), median, third quartile (Q3), and maximum, making group comparisons and outlier detection clear."
+    },
+    {
+      "question": "Can I toggle horizontal and vertical orientation?",
+      "answer": "Yes. You can switch between vertical and horizontal orientations depending on group label lengths and available dashboard space."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can export the rendered boxplot chart as a high-resolution PNG image or scalable vector SVG suitable for reports and papers."
+    }
   ]
 }

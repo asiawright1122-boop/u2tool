@@ -37,7 +37,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'env-parser', category: 'development', icon: 'binary', component: 'EnvParser' },
   { slug: 'json-schema-generator', category: 'development', icon: 'braces', component: 'JsonSchemaGenerator' },
   { slug: 'regex-visualizer', category: 'development', icon: 'eye', component: 'RegexVisualizer' },
-  { slug: 'crontab-calendar', category: 'development', icon: 'calendar-days', component: 'CrontabCalendar' },
+  { slug: 'crontab-calendar', category: 'development', icon: 'calendar-days', component: 'CrontabCalendar', popular: true },
   { slug: 'screen-resolution-tester', category: 'development', icon: 'monitor', component: 'ScreenResolutionTester' },
   { slug: 'keyboard-tester', category: 'development', icon: 'keyboard', component: 'KeyboardTester' },
   { slug: 'graphql-formatter', category: 'development', icon: 'code-2', component: 'GraphqlFormatter' },
