@@ -64,59 +64,58 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/json-diff/",
-      "status": "QUOTA_EXHAUSTED",
-      "detail": "2026-09-04 GSC 每日配额上限冷却中 (检查状态: NOT_INDEXED)"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/gitignore-generator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/go-formatter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/websocket-tester/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/sql-query-optimizer/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/database-schema-visualizer/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/merge-conflict-resolver/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/docker-run-to-docker-compose-converter/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-04 提交成功 (检查状态: NOT_INDEXED)"
     }
   ],
   "summary": {
     "total": 20,
-    "submitted": 12,
-    "pending": 8,
+    "submitted": 20,
+    "pending": 0,
     "currentBatch": "batch-15",
-    "quotaHit": true,
-    "completedBatch": "batch-15 (12/20 - 60% Completed, Quota Hit)",
+    "quotaHit": false,
+    "completedBatch": "batch-15 (20/20 - 100% Completed)",
     "offListBonus": [
       {
         "url": "https://www.u2tool.com/es/tools/url-shortener-preview/",
         "status": "SUCCESS",
         "detail": "2026-09-04 提交成功 (批次外附加提交，不计入本批次进度)"
       }
-    ],
-    "quotaHitAt": "2026-09-04T21:00:00.000Z"
+    ]
   }
 }
