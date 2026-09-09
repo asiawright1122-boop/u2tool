@@ -12,7 +12,7 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
   image: ['image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'image-resizer', 'image-cropper', 'gif-maker', 'image-collage', 'pixel-density-calculator', 'image-frosted-glass'],
   lifestyle: ['countdown-days-calculator'],
   math: ['gpa-calculator', 'compound-interest-calculator', 'tile-calculator', 'typing-time-calculator'],
-  network: ['database-connection-tester'],
+  network: ['database-connection-tester', 'url-parser'],
   office: ['screen-recorder', 'excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   text: ['typing-speed-test', 'text-compare', 'char-frequency', 'strikethrough-text', 'text-cleaner', 'html-to-text', 'text-deduplicator'],
 };
@@ -28,7 +28,7 @@ export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, re
   image: ['image-cropper', 'image-splitter', 'aspect-ratio-resizer', 'text-to-handwriting', 'barcode-generator', 'dpi-calculator', 'gif-maker', 'image-resizer', 'image-collage', 'pixel-density-calculator', 'image-frosted-glass'],
   lifestyle: ['countdown-days-calculator'],
   math: ['screen-time-calculator', 'download-time-calculator', 'gpa-calculator', 'compound-interest-calculator', 'typing-time-calculator'],
-  network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator', 'cors-tester'],
+  network: ['ip-lookup', 'ip-validator', 'database-connection-tester', 'ip-subnet-calculator', 'cors-tester', 'url-parser'],
   office: ['screen-recorder', 'excel-merger', 'excel-viewer', 'excel-to-csv', 'countdown-timer', 'calendar-availability-finder', 'image-to-pdf', 'json-to-excel', 'world-clock'],
   security: ['totp-generator'],
   text: ['typing-speed-test', 'text-compare', 'char-frequency', 'strikethrough-text', 'text-cleaner', 'html-to-text', 'text-deduplicator'],

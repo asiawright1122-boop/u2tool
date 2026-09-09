@@ -139,6 +139,7 @@ const DEFAULT_INTENT_DICTIONARY: IntentDictionary = {
     'boxplot-chart-generator': ['boxplot chart generator', 'box plot online', 'box and whisker plot', 'quartile chart maker'],
     'image-frosted-glass': ['frosted glass image effect', 'glassmorphism photo', 'blur image background', 'frosted glass generator'],
     'screen-recorder': ['screen recorder online', 'record screen in browser', 'free screen recorder no watermark', 'grabador de pantalla'],
+    'url-parser': ['url parser', 'parse url online', 'extract url parameters', 'query string parser'],
     'choose-text-tool': ['choose text tool', 'word counter vs text cleaner', 'text tool comparison'],
     'choose-jwt-tool': ['jwt decoder vs debugger', 'choose jwt tool', 'decode jwt token'],
     'choose-chart-type': ['bar vs line chart', 'choose chart type', 'pie chart or bar chart'],

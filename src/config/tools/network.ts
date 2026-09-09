@@ -4,7 +4,7 @@ export const NETWORK_TOOLS: Tool[] = [
   { slug: 'url-encoder', category: 'network', icon: 'link', component: 'UrlEncoder', popular: true },
   { slug: 'ip-lookup', category: 'network', icon: 'globe', component: 'IpLookup', popular: true },
   { slug: 'http-status', category: 'network', icon: 'server', component: 'HttpStatus' },
-  { slug: 'url-parser', category: 'network', icon: 'globe', component: 'UrlParser' },
+  { slug: 'url-parser', category: 'network', icon: 'globe', component: 'UrlParser', popular: true },
   { slug: 'user-agent-parser', category: 'network', icon: 'globe', component: 'UserAgentParser' },
   { slug: 'cidr-calculator', category: 'network', icon: 'globe', component: 'CidrCalculator', popular: true },
   { slug: 'http-header-parser', category: 'network', icon: 'globe', component: 'HttpHeaderParser' },

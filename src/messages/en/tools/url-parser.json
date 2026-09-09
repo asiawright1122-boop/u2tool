@@ -11,5 +11,19 @@
     "Check whether a URL includes an explicit port, path, search string, or hash fragment.",
     "Copy the hostname or origin from a long URL while preparing notes.",
     "Compare a few edited URL variants by changing the input field."
+  ],
+  "faqs": [
+    {
+      "question": "Which URL components does this parser extract?",
+      "answer": "It parses the URL into standard components using the browser's native URL API: protocol, hostname, port, pathname, search query, hash fragment, origin, host, and individual key-value query parameters."
+    },
+    {
+      "question": "Does it validate or follow redirects?",
+      "answer": "No. The tool inspects URL string syntax client-side only; it does not ping the server, check DNS records, or follow HTTP redirects."
+    },
+    {
+      "question": "Are parsed URLs logged or sent to external servers?",
+      "answer": "No. All parsing runs completely in your local browser session, so sensitive tokens or parameters remain strictly private."
+    }
   ]
 }
