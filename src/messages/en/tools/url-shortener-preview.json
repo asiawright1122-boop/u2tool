@@ -12,5 +12,19 @@
     "Check whether a note contains URLs from known shortener services.",
     "Copy a list of detected short links for manual follow-up elsewhere.",
     "Confirm that pasted text does not include any supported shortener domains."
+  ],
+  "faqs": [
+    {
+      "question": "Which shortened URL services does this tool recognize?",
+      "answer": "It identifies popular shortener domains including bit.ly, tinyurl.com, t.co, is.gd, buff.ly, ow.ly, lnkd.in, goo.gl, and rebrand.ly."
+    },
+    {
+      "question": "Does this tool send network requests to expand short links?",
+      "answer": "No. The analyzer extracts short links using browser-side pattern matching without making outbound HTTP calls, keeping your browsing anonymous."
+    },
+    {
+      "question": "Can I copy the detected short links?",
+      "answer": "Yes. You can copy individual detected links or use the copy button to export all extracted shortened URLs at once."
+    }
   ]
 }

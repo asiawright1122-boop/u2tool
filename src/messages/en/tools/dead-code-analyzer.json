@@ -1,15 +1,30 @@
 {
-  "detailed_description": "Dead Code Analyzer identifies code that is never executed or referenced in your codebase.",
+  "detailed_description": "The Dead Code Analyzer inspects JavaScript and TypeScript code snippets in your browser to detect unreachable statements, unused variable declarations, and dead branches. It parses input code locally into an AST, walks execution control paths to identify code positioned after unconditional return, throw, or break statements, and highlights candidate unused functions. Use it to quickly review code quality, prepare pull requests, clean up legacy utility files, or explore control-flow logic before running full compile-time linters. All code parsing runs strictly in your local browser session without uploading files or secrets.",
   "usage_steps": [
-    "Paste your code",
-    "Select language",
-    "Click Analyze",
-    "View unreachable code",
-    "Get removal suggestions"
+    "Paste your JavaScript or TypeScript code snippet into the editor",
+    "Optionally click Load Example to view a sample with deliberate dead code branches",
+    "Click Analyze to trigger local AST and control-flow evaluation",
+    "Review detected dead code warnings, unreachable lines, and severity badges",
+    "Copy or refine the cleaned code directly in your development environment"
   ],
   "usage_examples": [
-    "Find uncalled functions",
-    "Identify code after return",
-    "Clean legacy code"
+    "Identify statements placed after an unconditional return in complex conditional branches",
+    "Spot declared helper functions that are never referenced within an isolated module",
+    "Clean up commented-out or obsolete debugging logic in legacy utility files",
+    "Verify control flow integrity before submitting changes to a code review"
+  ],
+  "faqs": [
+    {
+      "question": "How does Dead Code Analyzer detect unreachable code?",
+      "answer": "It parses your snippet into an abstract syntax tree (AST) and traces control flow to flag code that cannot be reached (such as statements following an unconditional return, break, or throw)."
+    },
+    {
+      "question": "Does this tool upload my source code?",
+      "answer": "No. The AST traversal and static analysis execute 100% locally in your browser; your code is never transmitted over the network."
+    },
+    {
+      "question": "Which programming languages are supported?",
+      "answer": "The analyzer is designed for JavaScript and TypeScript syntax, including modern ES6+ features and standard function declarations."
+    }
   ]
 }

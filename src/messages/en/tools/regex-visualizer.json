@@ -13,5 +13,19 @@
     "Check which parts of a sample log line match a JavaScript regex.",
     "Export a small regex diagram for documentation or a code review comment.",
     "Clear and compare a few alternative patterns while learning regex syntax."
+  ],
+  "faqs": [
+    {
+      "question": "What is a railroad diagram in regex visualization?",
+      "answer": "A railroad diagram represents regular expression grammar visually as branching tracks and nodes, showing how match paths, optional groups, and repeat loops connect from start to end."
+    },
+    {
+      "question": "Can I test matching strings in real time alongside the visual?",
+      "answer": "Yes. You can enter an optional test string to immediately see highlighted matched ranges and captured group offsets below the visual diagram."
+    },
+    {
+      "question": "Which regex flavor does this visualizer support?",
+      "answer": "It uses ECMAScript standard JavaScript RegExp syntax supported natively across all modern web browsers."
+    }
   ]
 }

@@ -30,7 +30,7 @@ export const IMAGE_TOOLS: Tool[] = [
   { slug: 'image-to-webp', category: 'image', icon: 'image', component: 'ImageToWebp' },
   { slug: 'exif-viewer', category: 'image', icon: 'image', component: 'ExifViewer' },
   { slug: 'color-extractor', category: 'image', icon: 'image', component: 'ColorExtractor' },
-  { slug: 'text-to-image', category: 'image', icon: 'image', component: 'TextToImage' },
+  { slug: 'text-to-image', category: 'image', icon: 'image', component: 'TextToImage', popular: true },
   { slug: 'text-to-handwriting', category: 'image', icon: 'image', component: 'TextToHandwriting', popular: true },
   { slug: 'social-media-size-guide', category: 'image', icon: 'image', component: 'SocialMediaSizeGuide' },
   { slug: 'aspect-ratio-resizer', category: 'image', icon: 'image', component: 'AspectRatioResizer', popular: true },

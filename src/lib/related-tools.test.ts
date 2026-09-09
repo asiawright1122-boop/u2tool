@@ -45,7 +45,7 @@ describe('related tools recovery ordering', () => {
       'crc32-calculator',
       'database-schema-visualizer',
       'curl-to-code-generator',
-      'sql-query-optimizer',
+      'dead-code-analyzer',
     ]);
   });
 

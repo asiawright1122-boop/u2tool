@@ -12,5 +12,19 @@
     "Create a quick brief from a long draft before rewriting it.",
     "Extract the central points from a product description or support message.",
     "Turn a long email into a shorter review note without leaving the browser."
+  ],
+  "faqs": [
+    {
+      "question": "How does this Text Summarizer work?",
+      "answer": "It performs extractive summarization by scoring sentences based on keyword frequency, sentence position, and length, extracting the most informative sentences without generative rewriting."
+    },
+    {
+      "question": "What summary length options are available?",
+      "answer": "You can select Short (approx 20% compression), Medium (approx 40% compression), or Long (approx 60% compression) to fit different reading requirements."
+    },
+    {
+      "question": "Is my text sent to any third-party AI or server?",
+      "answer": "No. The linguistic scoring and extractive sentence ranking run entirely on your device using client-side JavaScript, ensuring 100% privacy."
+    }
   ]
 }

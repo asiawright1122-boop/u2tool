@@ -13,5 +13,19 @@
     "A cybersecurity analyst transforms hexadecimal memory dump segments into Base64 to search for ASCII artifacts.",
     "An embedded systems engineer encodes firmware binary (in hex) to Base64 for OTA transmission via a text-based protocol.",
     "A QA engineer validates that a PNG file's hexadecimal signature remains consistent after Base64 encoding/decoding cycles."
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between Hex and Base64 representations?",
+      "answer": "Hexadecimal represents each byte with 2 hex digits (0-9, a-f) resulting in 100% overhead, while Base64 encodes 3 bytes into 4 printable ASCII characters with only 33% overhead."
+    },
+    {
+      "question": "Can I convert bidirectionally between Hex and Base64?",
+      "answer": "Yes. You can switch modes between 'Hex to Base64' and 'Base64 to Hex', and the tool validates character integrity in both directions."
+    },
+    {
+      "question": "Does this tool upload binary data or keys?",
+      "answer": "No. All byte manipulation and encoding happen entirely client-side in your browser using local typed arrays."
+    }
   ]
 }

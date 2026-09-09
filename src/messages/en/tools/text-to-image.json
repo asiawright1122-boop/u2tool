@@ -1,15 +1,30 @@
 {
-  "detailed_description": "Text to Image converter transforms your text into downloadable PNG images. Customize font family, size, color, background, and alignment to create perfect text graphics. Ideal for creating social media posts, banners, and text-based graphics.",
+  "detailed_description": "The Text to Image converter renders custom text into downloadable high-resolution PNG image graphics directly in your browser. You can configure font family, font size, bold and italic styles, text color, background color (including transparency), canvas padding, text alignment, and line height. The live canvas preview updates instantly with every change, making it ideal for creating social media quote posts, typography banners, watermarks, presentation slides, and code cards without needing heavyweight graphic design software. All image generation runs locally on your device with complete privacy.",
   "usage_steps": [
-    "Enter your text",
-    "Choose font family and size",
-    "Set text and background colors",
-    "Adjust text alignment and padding",
-    "Preview and download as PNG"
+    "Type or paste your text into the main input area",
+    "Choose a font family, font size, and style (bold, italic)",
+    "Customize text and background colors or enable a transparent canvas",
+    "Adjust alignment (left, center, right), padding, and line spacing",
+    "Preview the rendered graphic and download it directly as a crisp PNG"
   ],
   "usage_examples": [
-    "Create text graphics for social media",
-    "Generate quote images",
-    "Make text-based banners"
+    "Create motivational quote cards with custom typography for Instagram and X",
+    "Generate transparent PNG text watermarks for marketing assets and banners",
+    "Design clean heading and title graphics for presentations and newsletters",
+    "Turn code snippets or status notices into shareable image previews"
+  ],
+  "faqs": [
+    {
+      "question": "Can I download images with a transparent background?",
+      "answer": "Yes. You can select a transparent background color so your text graphic can be cleanly overlaid onto other designs, websites, or videos."
+    },
+    {
+      "question": "Which fonts and styles are supported?",
+      "answer": "The tool supports clean sans-serif, serif, monospace, and display font families with customizable sizes, bold/italic weights, and line heights."
+    },
+    {
+      "question": "Are my text inputs or images uploaded to a server?",
+      "answer": "No. The text is drawn directly onto an HTML5 canvas element inside your browser, so your images are generated 100% locally."
+    }
   ]
 }

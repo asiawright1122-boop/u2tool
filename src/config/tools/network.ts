@@ -8,7 +8,7 @@ export const NETWORK_TOOLS: Tool[] = [
   { slug: 'user-agent-parser', category: 'network', icon: 'globe', component: 'UserAgentParser' },
   { slug: 'cidr-calculator', category: 'network', icon: 'globe', component: 'CidrCalculator', popular: true },
   { slug: 'http-header-parser', category: 'network', icon: 'globe', component: 'HttpHeaderParser' },
-  { slug: 'url-shortener-preview', category: 'network', icon: 'globe', component: 'UrlShortenerPreview' },
+  { slug: 'url-shortener-preview', category: 'network', icon: 'globe', component: 'UrlShortenerPreview', popular: true },
   { slug: 'ip-address-generator', category: 'network', icon: 'globe', component: 'IpAddressGenerator' },
   { slug: 'dns-lookup', category: 'network', icon: 'globe', component: 'DnsLookup' },
   { slug: 'ssl-checker', category: 'network', icon: 'globe', component: 'SslChecker', popular: true },

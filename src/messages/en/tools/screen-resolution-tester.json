@@ -13,5 +13,19 @@
     "Identifying layout shifts caused by browser chrome hiding on mobile devices through viewport dimension comparisons",
     "Validating that 2x/3x image src-sets activate correctly based on reported device pixel density",
     "Testing responsive navigation collapse points across portrait/landscape orientations on hybrid devices"
+  ],
+  "faqs": [
+    {
+      "question": "What is the difference between physical screen resolution and viewport size?",
+      "answer": "Physical resolution is the total pixel count of the hardware display monitor, whereas viewport size refers to the active CSS pixel dimensions of the browser window minus browser chrome and toolbars."
+    },
+    {
+      "question": "What does Device Pixel Ratio (DPR) mean?",
+      "answer": "DPR represents the ratio between physical display pixels and logical CSS pixels (e.g. 2.0 on Apple Retina or 3.0 on high-density mobile screens), dictating image sharpness and media query scaling."
+    },
+    {
+      "question": "Does this tool support opening test popups in custom resolutions?",
+      "answer": "Yes. You can test common presets (HD, Full HD, 4K, Mobile) or enter custom width and height dimensions to spawn responsive testing windows."
+    }
   ]
 }

@@ -22,7 +22,7 @@ export const ENCODING_TOOLS: Tool[] = [
   { slug: 'json-viewer', category: 'encoding', icon: 'binary', component: 'JsonViewer' },
   { slug: 'encoding-detector', category: 'encoding', icon: 'binary', component: 'EncodingDetector' },
   { slug: 'json-escape', category: 'encoding', icon: 'binary', component: 'JsonEscape' },
-  { slug: 'hex-base64-converter', category: 'encoding', icon: 'binary', component: 'HexBase64Converter' },
+  { slug: 'hex-base64-converter', category: 'encoding', icon: 'binary', component: 'HexBase64Converter', popular: true },
   { slug: 'pdf-to-base64', category: 'encoding', icon: 'binary', component: 'PdfToBase64', popular: true },
   { slug: 'audio-to-base64', category: 'encoding', icon: 'binary', component: 'AudioToBase64' },
   { slug: 'video-to-base64', category: 'encoding', icon: 'binary', component: 'VideoToBase64', popular: true },

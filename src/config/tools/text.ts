@@ -37,7 +37,7 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'ai-prompt-optimizer', category: 'text', icon: 'sparkle', component: 'AiPromptOptimizer', popular: true },
   { slug: 'ai-prompt-template-generator', category: 'text', icon: 'sparkle', component: 'AiPromptTemplateGenerator', popular: true },
   { slug: 'title-capitalization-tool', category: 'text', icon: 'type', component: 'TitleCapitalizationTool' },
-  { slug: 'text-summarizer', category: 'text', icon: 'type', component: 'TextSummarizer' },
+  { slug: 'text-summarizer', category: 'text', icon: 'type', component: 'TextSummarizer', popular: true },
   { slug: 'paraphrase-tool', category: 'text', icon: 'type', component: 'ParaphraseTool' },
   { slug: 'phone-formatter', category: 'text', icon: 'type', component: 'PhoneFormatter' },
   { slug: 'flip-text', category: 'text', icon: 'type', component: 'FlipText' },

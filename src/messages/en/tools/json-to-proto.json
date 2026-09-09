@@ -12,5 +12,19 @@
     "Create nested message fields from representative object data before manual cleanup.",
     "Turn an array of similar objects into repeated fields based on the first item.",
     "Copy a quick proto draft and review field types and numbering manually."
+  ],
+  "faqs": [
+    {
+      "question": "Which Protocol Buffers syntax version does this generator produce?",
+      "answer": "It generates modern syntax = 'proto3' definitions, mapping primitive JSON types to int32, int64, double, bool, and string scalar fields with sequential numbering."
+    },
+    {
+      "question": "How are nested objects and arrays represented in the output .proto?",
+      "answer": "Nested JSON objects are converted into nested message declarations, and JSON arrays are typed with the repeated modifier."
+    },
+    {
+      "question": "Can I customize the package name and root message identifier?",
+      "answer": "Yes. You can edit both the package name and root message name fields before converting."
+    }
   ]
 }

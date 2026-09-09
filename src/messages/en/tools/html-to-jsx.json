@@ -12,5 +12,19 @@
     "Prepare a simple form snippet by changing for attributes to htmlFor.",
     "Self-close img or input tags before pasting a snippet into a React component.",
     "Use the output as a starting point for manual JSX cleanup."
+  ],
+  "faqs": [
+    {
+      "question": "Which HTML attributes are automatically converted to JSX?",
+      "answer": "Common attributes like class becomes className, for becomes htmlFor, tabindex becomes tabIndex, and void elements (like <img>, <input>, <br>, <hr>) are self-closed."
+    },
+    {
+      "question": "Can I convert inline style attributes directly?",
+      "answer": "Simple inline styles are recognized and transformed into React-compatible JavaScript object literals (e.g. style={{ margin: '10px' }})."
+    },
+    {
+      "question": "Is my HTML snippet sent to any external server?",
+      "answer": "No. The AST transformation and regex replacements run completely in your browser, keeping your UI code private."
+    }
   ]
 }

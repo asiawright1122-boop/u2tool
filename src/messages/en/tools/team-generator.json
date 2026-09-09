@@ -13,5 +13,19 @@
     "Example 2: Corporate HR team creating 5 cross-functional project groups with enforced departmental diversity constraints",
     "Example 3: Physical education instructor assigning 24 students to 4 sports teams with balanced gender and skill level distribution",
     "Example 4: Academic research coordinator forming 6 thesis groups with required pairing of senior/junior students and equipment sharing constraints"
+  ],
+  "faqs": [
+    {
+      "question": "How does the Team Generator distribute members evenly?",
+      "answer": "It uses unbiased Fisher-Yates array randomization combined with balanced chunk partitioning to ensure equal team sizes without favoritism."
+    },
+    {
+      "question": "Can I specify the exact number of teams or members per team?",
+      "answer": "Yes. You can select whether to group participants by total number of teams or by target team size (e.g. 3 people per team)."
+    },
+    {
+      "question": "Is my participant list uploaded to any server?",
+      "answer": "No. The entire team generation algorithm runs locally in your browser session without transmitting participant names over the internet."
+    }
   ]
 }
