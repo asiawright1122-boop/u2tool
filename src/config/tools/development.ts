@@ -57,7 +57,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'go-formatter', category: 'development', icon: 'code-2', component: 'GoFormatter', popular: true },
   { slug: 'rust-formatter', category: 'development', icon: 'code-2', component: 'RustFormatter' },
   { slug: 'yaml-formatter', category: 'development', icon: 'code-2', component: 'YamlFormatter' },
-  { slug: 'curl-to-code-generator', category: 'development', icon: 'terminal', component: 'CurlToCodeGenerator' },
+  { slug: 'curl-to-code-generator', category: 'development', icon: 'terminal', component: 'CurlToCodeGenerator', popular: true },
   { slug: 'request-header-builder', category: 'development', icon: 'list-plus', component: 'RequestHeaderBuilder' },
   { slug: 'webhook-tester', category: 'development', icon: 'webhook', component: 'WebhookTester' },
   { slug: 'websocket-tester', category: 'development', icon: 'radio', component: 'WebSocketTester', popular: true },

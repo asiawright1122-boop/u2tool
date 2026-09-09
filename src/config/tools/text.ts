@@ -19,7 +19,7 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'text-sorter', category: 'text', icon: 'type', component: 'TextSorter' },
   { slug: 'text-extractor', category: 'text', icon: 'type', component: 'TextExtractor' },
   { slug: 'emoji-picker', category: 'text', icon: 'type', component: 'EmojiPicker' },
-  { slug: 'text-to-ascii-art', category: 'text', icon: 'type', component: 'TextToAsciiArt' },
+  { slug: 'text-to-ascii-art', category: 'text', icon: 'type', component: 'TextToAsciiArt', popular: true },
   { slug: 'text-diff-patch', category: 'text', icon: 'type', component: 'TextDiffPatch' },
   { slug: 'text-case-counter', category: 'text', icon: 'type', component: 'TextCaseCounter' },
   { slug: 'reading-time-calculator', category: 'text', icon: 'type', component: 'ReadingTimeCalculator' },

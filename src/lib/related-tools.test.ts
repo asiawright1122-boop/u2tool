@@ -44,8 +44,8 @@ describe('related tools recovery ordering', () => {
       'tsconfig-generator',
       'crc32-calculator',
       'database-schema-visualizer',
+      'curl-to-code-generator',
       'sql-query-optimizer',
-      'merge-conflict-resolver',
     ]);
   });
 

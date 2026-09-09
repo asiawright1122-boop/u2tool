@@ -18,7 +18,7 @@ export const MATH_TOOLS: Tool[] = [
   { slug: 'compound-interest-calculator', category: 'math', icon: 'calculator', component: 'CompoundInterestCalculator', popular: true },
   { slug: 'binary-calculator', category: 'math', icon: 'calculator', component: 'BinaryCalculator' },
   { slug: 'hex-calculator', category: 'math', icon: 'calculator', component: 'HexCalculator' },
-  { slug: 'aspect-ratio-calculator-enhanced', category: 'math', icon: 'calculator', component: 'AspectRatioCalculatorEnhanced' },
+  { slug: 'aspect-ratio-calculator-enhanced', category: 'math', icon: 'calculator', component: 'AspectRatioCalculatorEnhanced', popular: true },
   { slug: 'gpa-calculator', category: 'math', icon: 'calculator', component: 'GpaCalculator', popular: true },
   { slug: 'concrete-calculator', category: 'math', icon: 'calculator', component: 'ConcreteCalculator' },
   { slug: 'paint-calculator', category: 'math', icon: 'calculator', component: 'PaintCalculator' },
