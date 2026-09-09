@@ -14,43 +14,43 @@
     },
     {
       "url": "https://www.u2tool.com/es/tools/json-to-prompt/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/rag-chunk-size-calculator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/llms-txt-validator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/mcp-json-validator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/json-repair/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/jsonl-validator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/har-file-viewer/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/password-generator/",
-      "status": "PENDING",
-      "detail": "待下一轮配额恢复后提交"
+      "status": "SUCCESS",
+      "detail": "2026-09-09 提交成功 (检查状态: NOT_INDEXED)"
     },
     {
       "url": "https://www.u2tool.com/es/tools/hash-generator/",
@@ -105,11 +105,11 @@
   ],
   "summary": {
     "total": 20,
-    "submitted": 1,
-    "pending": 19,
+    "submitted": 9,
+    "pending": 11,
     "currentBatch": "batch-16",
     "quotaHit": true,
     "quotaHitAt": "2026-09-08T00:00:00.000Z",
-    "completedBatch": "batch-16 (1/20 - 5% Completed, Quota Hit)"
+    "completedBatch": "batch-16 (9/20 - 45% Completed)"
   }
 }
