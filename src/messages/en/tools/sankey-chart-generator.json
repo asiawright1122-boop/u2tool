@@ -12,6 +12,20 @@
     "Visualize budget allocation from top-level departments into programs and projects.",
     "Map user journeys from landing pages into feature areas and conversion steps."
   ],
+  "faqs": [
+    {
+      "question": "What is a Sankey diagram used for?",
+      "answer": "A Sankey diagram visualizes flows, transfers, and proportions between interconnected stages, where link widths are proportional to flow quantities (ideal for energy balances, user funnels, and supply chains)."
+    },
+    {
+      "question": "Can I customize the orientation and node spacing?",
+      "answer": "Yes. You can switch between horizontal and vertical layouts and adjust node widths and vertical gaps to optimize visual clarity."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can download the generated Sankey diagram directly as a high-resolution PNG image or scalable vector SVG."
+    }
+  ],
   "seo_title": "Sankey Diagram Generator Online | U2Tool",
   "seo_description": "Create Sankey diagrams free in your browser to visualize flows between nodes. Customize colors, labels, and layout, then export as image or data."
 }

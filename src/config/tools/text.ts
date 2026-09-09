@@ -13,7 +13,7 @@ export const TEXT_TOOLS: Tool[] = [
   { slug: 'text-deduplicator', category: 'text', icon: 'filter', component: 'TextDeduplicator', popular: true },
   { slug: 'byte-counter', category: 'text', icon: 'ruler', component: 'ByteCounter' },
   { slug: 'text-statistics', category: 'text', icon: 'bar-chart-2', component: 'TextStatistics', popular: true },
-  { slug: 'text-compare', category: 'text', icon: 'type', component: 'TextCompare' },
+  { slug: 'text-compare', category: 'text', icon: 'type', component: 'TextCompare', popular: true },
   { slug: 'text-to-speech', category: 'text', icon: 'type', component: 'TextToSpeech' },
   { slug: 'text-wrapper', category: 'text', icon: 'type', component: 'TextWrapper' },
   { slug: 'text-sorter', category: 'text', icon: 'type', component: 'TextSorter' },

@@ -12,5 +12,19 @@
     "Draft a simple product or feature matrix before styling it in your own CSS.",
     "Generate starter table markup with a header row and body rows.",
     "Copy plain HTML table code for a prototype or content page."
+  ],
+  "faqs": [
+    {
+      "question": "How do I create a table with a header row?",
+      "answer": "Keep the 'Header row' checkbox enabled. The tool will output a <thead> element with <th> cells for the first row, and <tbody> with <td> cells for the remaining rows."
+    },
+    {
+      "question": "Can I dynamically add or remove rows and columns?",
+      "answer": "Yes. Adjust the row and column number inputs to resize the grid; existing cell data is preserved when expanding."
+    },
+    {
+      "question": "Is the generated HTML ready to use in any project?",
+      "answer": "Yes. The tool outputs clean, semantic HTML markup without inline styles, making it easy to drop into markdown files, CMS editors, or custom stylesheets."
+    }
   ]
 }

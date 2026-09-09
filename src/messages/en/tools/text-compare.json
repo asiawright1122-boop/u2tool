@@ -11,5 +11,19 @@
     "Check how many lowercase word tokens are shared between two pasted paragraphs.",
     "Use the edit distance card as a simple indicator of how much two strings differ.",
     "Compare draft wording variations without importing files or choosing algorithms."
+  ],
+  "faqs": [
+    {
+      "question": "How is the similarity percentage calculated?",
+      "answer": "The tool computes character similarity using normalized Levenshtein edit distance and word similarity by measuring shared unique lowercase word tokens between both texts."
+    },
+    {
+      "question": "Does this tool detect plagiarism or semantic meaning?",
+      "answer": "No. It is a lightweight string and token comparison utility for draft editing, not a semantic AI model or plagiarism detector."
+    },
+    {
+      "question": "Is my text uploaded or stored?",
+      "answer": "No. All string metric calculations run entirely in your local browser session; your text is never transmitted over the network."
+    }
   ]
 }

@@ -22,7 +22,7 @@ export const MATH_TOOLS: Tool[] = [
   { slug: 'gpa-calculator', category: 'math', icon: 'calculator', component: 'GpaCalculator', popular: true },
   { slug: 'concrete-calculator', category: 'math', icon: 'calculator', component: 'ConcreteCalculator' },
   { slug: 'paint-calculator', category: 'math', icon: 'calculator', component: 'PaintCalculator' },
-  { slug: 'tile-calculator', category: 'math', icon: 'calculator', component: 'TileCalculator' },
+  { slug: 'tile-calculator', category: 'math', icon: 'calculator', component: 'TileCalculator', popular: true },
   { slug: 'fraction-calculator', category: 'math', icon: 'calculator', component: 'FractionCalculator' },
   { slug: 'percentage-change-calculator', category: 'math', icon: 'calculator', component: 'PercentageChangeCalculator' },
   { slug: 'unit-price-calculator', category: 'math', icon: 'calculator', component: 'UnitPriceCalculator' },

@@ -76,7 +76,7 @@ export const DEVELOPMENT_TOOLS: Tool[] = [
   { slug: 'unused-imports-finder', category: 'development', icon: 'code-2', component: 'UnusedImportsFinder' },
   { slug: 'dead-code-analyzer', category: 'development', icon: 'code-2', component: 'DeadCodeAnalyzer' },
   { slug: 'sql-query-optimizer', category: 'development', icon: 'database-zap', component: 'SqlQueryOptimizer', popular: true },
-  { slug: 'database-schema-visualizer', category: 'development', icon: 'layout', component: 'DatabaseSchemaVisualizer' },
+  { slug: 'database-schema-visualizer', category: 'development', icon: 'layout', component: 'DatabaseSchemaVisualizer', popular: true },
   { slug: 'query-execution-planner', category: 'development', icon: 'code-2', component: 'QueryExecutionPlanner' },
   { slug: 'database-backup-scheduler', category: 'development', icon: 'code-2', component: 'DatabaseBackupScheduler' },
   { slug: 'git-commit-message-generator', category: 'development', icon: 'git-commit', component: 'GitCommitMessageGenerator' },

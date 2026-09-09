@@ -12,7 +12,7 @@ export const CHARTS_TOOLS: Tool[] = [
   { slug: 'heatmap-chart-generator', category: 'charts', icon: 'grid-3x3', component: 'HeatmapChartGenerator', popular: true },
   { slug: 'treemap-chart-generator', category: 'charts', icon: 'layout-grid', component: 'TreemapChartGenerator' },
   { slug: 'doughnut-chart-generator', category: 'charts', icon: 'circle-dot', component: 'DoughnutChartGenerator' },
-  { slug: 'sankey-chart-generator', category: 'charts', icon: 'git-branch', component: 'SankeyChartGenerator' },
+  { slug: 'sankey-chart-generator', category: 'charts', icon: 'git-branch', component: 'SankeyChartGenerator', popular: true },
   { slug: 'sunburst-chart-generator', category: 'charts', icon: 'sun', component: 'SunburstChartGenerator', popular: true },
   { slug: 'candlestick-chart-generator', category: 'charts', icon: 'candlestick-chart', component: 'CandlestickChartGenerator', popular: true },
   { slug: 'boxplot-chart-generator', category: 'charts', icon: 'box-select', component: 'BoxplotChartGenerator', popular: true },

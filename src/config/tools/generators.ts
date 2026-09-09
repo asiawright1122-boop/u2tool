@@ -6,7 +6,7 @@ export const GENERATORS_TOOLS: Tool[] = [
   { slug: 'cron-generator', category: 'generators', icon: 'clock', component: 'CronGenerator' },
   { slug: 'gradient-generator', category: 'generators', icon: 'palette', component: 'GradientGenerator', popular: true },
   { slug: 'random-generator', category: 'generators', icon: 'dice-5', component: 'RandomGenerator' },
-  { slug: 'html-table-generator', category: 'generators', icon: 'table', component: 'HtmlTableGenerator' },
+  { slug: 'html-table-generator', category: 'generators', icon: 'table', component: 'HtmlTableGenerator', popular: true },
   { slug: 'color-palette', category: 'generators', icon: 'paintbrush', component: 'ColorPalette', popular: true },
   { slug: 'markdown-table-generator', category: 'generators', icon: 'zap', component: 'MarkdownTableGenerator' },
   { slug: 'meta-tag-generator', category: 'generators', icon: 'zap', component: 'MetaTagGenerator' },
