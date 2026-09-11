@@ -4,30 +4,41 @@
 > 这是「让 Google 开始展示 96% 零展示页面」的唯一根本手段。
 > 频率建议：每周提交 5-10 个，质量优先；提交前确认站点仍接受收录。
 
-## 提交文案模板（可复用，按语言替换）
+## 2026-09-11 外链资产盘点（Bing Backlinks 实测）
+
+- **当前引用域仅 3 个**（ysmentohshin.site / aisubtools.xyz / saashub.com），引用页 4 个 —— 与本清单目标差距大。
+- ⚠️ **历史资产已失效，勿再引用**：
+  - `u2tool-csv-vcard`、`u2tool-ical-parser` 两个 OSS 仓库**已从 GitHub 删除**（账号下已不存在）；
+  - awesome-free-tools PR #131 已于 2026-08-09 自行关闭（未合并）。
+- ⚠️ **SaaSHub 收录页描述错误**：saashub.com/u2tool 把 U2Tool 描述成"YouTube 视频下载器"——
+  需登录 SaaSHub 后 Claim/编辑修正为工具集定位（Cloudflare 校验，需人工浏览器操作）。
+- ✅ 重建路径（可自动化）：从主仓抽取独立工具重建 OSS 仓库矩阵（候选：ical-parser、chart-kit、hex-editor），
+  每个仓库 README 回链对应 u2tool.com 工具页。
+
+## 提交文案模板（可复用，按语言替换；工具数以 564 为准，2026-09-11）
 
 **English（通用提交描述）：**
-> U2Tool — 570+ free online tools that run entirely in your browser. No signup,
+> U2Tool — 564+ free online tools that run entirely in your browser. No signup,
 > no uploads: text, encoding, conversion, chart, image, calculator and AI helpers
 > for developers, creators and everyday tasks. https://www.u2tool.com/
 
 **Español：**
-> U2Tool — más de 570 herramientas gratuitas que funcionan en tu navegador. Sin
+> U2Tool — más de 564 herramientas gratuitas que funcionan en tu navegador. Sin
 > registro ni subidas: texto, codificación, conversión, gráficos, imágenes,
 > calculadoras y asistentes de IA. https://www.u2tool.com/es/
 
 **Deutsch：**
-> U2Tool — über 570 kostenlose Online-Tools, die komplett im Browser laufen.
+> U2Tool — über 564 kostenlose Online-Tools, die komplett im Browser laufen.
 > Keine Anmeldung, kein Upload: Text, Encoding, Konvertierung, Diagramme,
 > Bildbearbeitung, Rechner und KI-Helfer. https://www.u2tool.com/de/
 
 **Русский：**
-> U2Tool — более 570 бесплатных онлайн-инструментов, работающих прямо в
+> U2Tool — более 564 бесплатных онлайн-инструментов, работающих прямо в
 > браузере. Без регистрации и загрузок: текст, кодирование, конвертация,
 > диаграммы, изображения, калькуляторы и ИИ-помощники. https://www.u2tool.com/ru/
 
 **日本語：**
-> U2Tool — ブラウザだけで動く 570 以上の無料オンラインツール。登録も
+> U2Tool — ブラウザだけで動く 564 以上の無料オンラインツール。登録も
 > アップロードも不要：テキスト、エンコード、変換、チャート、画像、
 > 計算、AI ヘルパー。https://www.u2tool.com/ja/
 
@@ -52,7 +63,7 @@
 | BetaList | betalist.com | betalist.com/submit（已验证 200） | 邮箱 | 同上 |
 | Hacker News | news.ycombinator.com | 社区 | Show HN：开源部分工具 + 说明 |
 | Indie Hackers | indiehackers.com | 社区 | 产品进展帖 |
-| dev.to | dev.to | 开发者博客 | 写「我用 Astro 做了 570 个工具」类技术文 |
+| dev.to | dev.to | 开发者博客 | 写「我用 Astro 做了 564 个工具」类技术文 |
 | Reddit r/InternetIsBeautiful | reddit.com/r/InternetIsBeautiful | 社区 | 提交单个亮点工具 |
 | Reddit r/webdev / r/selfhosted | reddit.com | 社区 | 注意自推规则，先贡献再分享 |
 | GitHunt / GitHub Topics | github.com/topics | 开源 | 开源工具仓库加 topics |
@@ -96,25 +107,35 @@
 
 ---
 
-# 自动化部分（2026-08-05 已完成）
+## 自动化部分（部分已失效，2026-09-11 复核）
 
-## ✅ 已自动完成
+## ⚠️ 状态修正（2026-09-11 复核）
+
+| 项目 | 状态 | 说明 |
+|---|---|---|
+| IndexNow 提交 | ✅ 持续有效 | 2159 URL POST api.indexnow.org → HTTP 200（key 已验证：u2tool2026indexnowkey）；2026-09 起改为小批量变更通知模式 |
+| awesome-free-tools PR | ❌ 已关闭 | PR #131 于 2026-08-09 自行关闭（未合并）；如重试需先阅读该仓库近期 merge 标准 |
+| 主仓库开源 | ✅ 仍有效 | github.com/asiawright1122-boop/u2tool（PUBLIC，MIT，现 564 工具 + 10 语言） |
+| 自建开源仓库 ×2 | ❌ 已删除 | u2tool-csv-vcard 与 u2tool-ical-parser 已不在账号下；如需重建见上文「重建路径」 |
+
+## ✅ 历史已完成（供追溯）
 
 | 项目 | 状态 | 说明 |
 |---|---|---|
 | IndexNow 提交 | ✅ | 2159 URL POST api.indexnow.org → HTTP 200（Bing 收录加速，key 已验证：u2tool2026indexnowkey） |
 | sitemap ping | ⚠️ 已废弃 | Google/Bing 的 ping 端点已下线（404/410）；现代靠 sitemap 自动发现 + IndexNow |
-| awesome-free-tools PR | ✅ | github.com/mathewlewallen/awesome-free-tools/pull/131（Design 分类） |
-| 主仓库全部开源 | ✅ | github.com/asiawright1122-boop/u2tool（PUBLIC，MIT，570 工具 + 10 语言 + SEO 基建全公开，CI 部署正常） |
-| 自建开源仓库 ×2 | ✅ | github.com/asiawright1122-boop/u2tool-csv-vcard + u2tool-ical-parser（均 public/MIT/Pages 200/topics） |
+| awesome-free-tools PR | ❌ 已关闭 | github.com/mathewlewallen/awesome-free-tools/pull/131（2026-08-09 关闭，未合并） |
+| 主仓库全部开源 | ✅ | github.com/asiawright1122-boop/u2tool（PUBLIC，MIT，564 工具 + 10 语言 + SEO 基建全公开，CI 部署正常） |
+| 自建开源仓库 ×2 | ❌ 已删除 | 曾为 github.com/asiawright1122-boop/u2tool-csv-vcard + u2tool-ical-parser（均已下架） |
 
 ## 📌 只能人工的部分（无法自动化）
 
-目录站表单提交（Toolfolio、Futurepedia 等）、社区发帖（HN/Reddit/PH）、媒体联系——
+目录站表单提交（AlternativeTo、Toolify、Futurepedia、TAAFT、SaaSHub 纠错等）、社区发帖（HN/Reddit/PH）、媒体联系——
 都需要账号注册/人工审核/社区规则，自动发帖会触发 spam 惩罚。执行清单见本文件上文。
 
-## 外链仓库后续
+## 外链仓库后续（2026-09-11 修订）
 
-- 仓库矩阵已有 2 个：csv-vcard（联系人）+ ical-parser（日历）；可继续抽 chart 生成器、base64 工具等
-- 每个仓库 README 均回链 u2tool.com 对应工具页
-- 仓库可作为 E-E-A-T 证据用于所有目录提交
+- 原 2 个仓库矩阵（csv-vcard + ical-parser）已删除，**当前外链引用域仅 3 个**，需重建；
+- 重建候选（从主仓抽取独立可运行版本）：ical-parser（此前验证过 Pages 部署可行）、chart-kit（boxplot/sankey/wordcloud 三合一）、hex-editor；
+- 每个仓库 README 均回链 u2tool.com 对应工具页；
+- 仓库可作为 E-E-A-T 证据用于所有目录提交。
