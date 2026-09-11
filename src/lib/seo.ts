@@ -256,7 +256,7 @@ export function withBrand(title: string, brand = 'U2Tool'): string {
   return `${cut}${brandSuffix}`;
 }
 
-const LATIN_TITLE_LIMIT = 70;
+const LATIN_TITLE_LIMIT = 60;
 const CJK_TITLE_LIMIT = 35;
 
 function isCjkTitle(title: string): boolean {
