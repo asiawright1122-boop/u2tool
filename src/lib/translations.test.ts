@@ -104,13 +104,13 @@ describe('translations module', () => {
     it('should prepend prefix to key if prefix is provided', () => {
       const scopedTranslations = {
         tools: {
-          'world-cup-timezone-planner': {
+          'sample-timezone-planner': {
             name: 'Planner Name',
             detailed_description: 'Planner Desc'
           }
         }
       };
-      const scopedT = createTranslator(scopedTranslations, 'en', 'tools.world-cup-timezone-planner');
+      const scopedT = createTranslator(scopedTranslations, 'en', 'tools.sample-timezone-planner');
       expect(scopedT('name')).toBe('Planner Name');
       expect(scopedT('detailed_description')).toBe('Planner Desc');
       expect(scopedT('missing')).toBe('MISSING: missing');

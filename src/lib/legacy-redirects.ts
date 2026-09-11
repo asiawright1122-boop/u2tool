@@ -167,6 +167,22 @@ export function isDecommissionedLegacyRoute(pathname: string): boolean {
     return true;
   }
 
+  // Case 3: decommissioned world-cup tools (both localized and unlocalized)
+  const decommissionedToolSlugs = new Set([
+    'world-cup-simulator',
+    'world-cup-budget-calculator',
+    'world-cup-timezone-planner',
+    'world-cup-visa-assistant',
+    'world-cup-group-calculator',
+    'world-cup-2026-bracket-predictor',
+  ]);
+  if (first === 'tools' && second && decommissionedToolSlugs.has(second)) {
+    return true;
+  }
+  if (isValidLocale(first) && second === 'tools' && third && decommissionedToolSlugs.has(third)) {
+    return true;
+  }
+
   return false;
 }
 

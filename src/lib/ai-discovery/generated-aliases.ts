@@ -49,11 +49,5 @@ export const GENERATED_DISCOVERY_ALIASES: Record<string, string[]> = {
     "cursor mcp json generator",
     "mcp config generator",
     "mcp server config generator"
-  ],
-  "world-cup-2026-bracket-predictor": [
-    "2026 world cup bracket",
-    "fifa world cup 2026 predictor",
-    "world cup 2026 bracket predictor",
-    "world cup bracket maker"
   ]
 };

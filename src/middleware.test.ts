@@ -568,6 +568,20 @@ describe('html edge cache middleware', () => {
       expect(res.response.headers.get('cache-control')).toBe('public, max-age=86400, s-maxage=86400');
       expect(res.next).not.toHaveBeenCalled();
     }
+
+    const wcUnloc = await runMiddleware(
+      new Request('https://www.u2tool.com/tools/world-cup-simulator/'),
+      next
+    );
+    const wcLoc = await runMiddleware(
+      new Request('https://www.u2tool.com/zh/tools/world-cup-group-calculator/'),
+      next
+    );
+    for (const res of [wcUnloc, wcLoc]) {
+      expect(res.response.status).toBe(410);
+      expect(res.response.headers.get('x-robots-tag')).toBe('noindex, nofollow');
+      expect(res.next).not.toHaveBeenCalled();
+    }
   });
 
   describe('root route redirection and loopback guard', () => {

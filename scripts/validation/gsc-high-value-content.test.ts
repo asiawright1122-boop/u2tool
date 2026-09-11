@@ -60,7 +60,6 @@ const highValueCandidates = [
   { locale: 'es', slug: 'project-estimation-calculator' },
   { locale: 'en', slug: 'text-to-slug' },
   { locale: 'en', slug: 'json-flattener' },
-  { locale: 'de', slug: 'world-cup-budget-calculator' },
 ] as const;
 
 interface ToolMessages {

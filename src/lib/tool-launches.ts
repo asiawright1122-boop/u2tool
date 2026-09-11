@@ -11,7 +11,6 @@ export const recentLongTailToolSlugs = [
   'json-repair',
   'jsonl-validator',
   'har-file-viewer',
-  'world-cup-2026-bracket-predictor',
   'llms-txt-generator',
   'instagram-bio-generator',
   'youtube-description-generator',

@@ -26,6 +26,14 @@
     {
       "question": "¿Se guardan los nombres ingresados en algún servidor?",
       "answer": "No. Todo el procesamiento se realiza exclusivamente en tu navegador de forma privada e instantánea."
+    },
+    {
+      "question": "¿Influye el orden de los nombres en el resultado final?",
+      "answer": "El algoritmo evalúa el conjunto combinado de letras de ambos nombres, por lo que introducir 'Ana y Carlos' o 'Carlos y Ana' produce una puntuación coherente."
+    },
+    {
+      "question": "¿Puedo usar apodos o nombres con tildes y caracteres especiales?",
+      "answer": "Sí, puedes ingresar cualquier combinación de caracteres, apodos o nombres completos en español para obtener el porcentaje correspondiente."
     }
   ]
 }

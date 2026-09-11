@@ -143,14 +143,14 @@ describe('validateSplitFile', () => {
   });
 
   it('accepts custom-layout tools that omit all standard keys (no escape-hatch false positive)', () => {
-    // world-cup-group-calculator style: tournament bracket with its own keys.
+    // custom-standalone-layout style: custom tool with its own keys.
     const record = {
-      title: 'World Cup',
+      title: 'Tournament Bracket',
       group: 'Group A',
       team: 'Team',
       knockout_stage: 'Knockout',
     };
-    const findings = validateSplitFile(record, 'en', 'world-cup-group-calculator');
+    const findings = validateSplitFile(record, 'en', 'custom-standalone-tool');
     expect(findings).toEqual([]);
   });
 

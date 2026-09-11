@@ -15,7 +15,6 @@ const highOpportunityToolSlugs = [
   'json-repair',
   'jsonl-validator',
   'har-file-viewer',
-  'world-cup-2026-bracket-predictor',
 ] as const;
 
 const baseSeoKeys = ['name', 'description', 'seo_title', 'seo_description'] as const;
@@ -57,14 +56,6 @@ const customToolUiKeys: Record<string, readonly string[]> = {
     'file',
     'emptyError',
     'localNote',
-  ],
-  'world-cup-2026-bracket-predictor': [
-    'champion',
-    'copy',
-    'copied',
-    'reset',
-    'note',
-    'rounds',
   ],
 };
 

@@ -60,7 +60,7 @@ const STUB_DETAILED_DESCRIPTION_LENGTH = 20;
  * usage steps, and usage examples sections (`[slug].astro:138-140`). When a
  * tool declares ANY of these, it follows the standard layout and the others
  * become required. Tools that declare none use a custom layout (e.g.
- * `world-cup-group-calculator`, a tournament bracket with its own key set) and
+ * a standalone custom utility with its own key set) and
  * are validated only for `faqs` + forbidden tokens.
  */
 const STANDARD_LAYOUT_KEYS = ['detailed_description', 'usage_steps', 'usage_examples'] as const;
@@ -172,8 +172,8 @@ export interface CorpusReport {
  *   - **Standard-layout tools** (the vast majority) declare at least one of
  *     `detailed_description` / `usage_steps` / `usage_examples`. For these, all
  *     three are required (the tool page renders all three sections from them).
- *   - **Custom-layout tools** (e.g. `world-cup-group-calculator`, a tournament
- *     bracket) declare none of the three and use their own tool-specific keys.
+ *   - **Custom-layout tools** (e.g. specialized utilities with dedicated layouts)
+ *     declare none of the three and use their own tool-specific keys.
  *     They are validated only for `faqs` structure + forbidden tokens.
  *   - `faqs` (OPTIONAL): present in ~34% — each item must use ONE consistent
  *     key pair: `{question, answer}` (canonical, renders correctly) or `{q, a}`
