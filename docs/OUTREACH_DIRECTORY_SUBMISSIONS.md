@@ -13,8 +13,11 @@
     线上 demo：asiawright1122-boop.github.io/u2tool-ical-parser/，README 含 3 条 u2tool.com 回链；
     `u2tool-csv-vcard` 仍缺失（主仓 README 死链已同步清理）。
   - awesome-free-tools PR #131 已于 2026-08-09 自行关闭（未合并）。
-- ⚠️ **SaaSHub 收录页描述错误**：saashub.com/u2tool 把 U2Tool 描述成"YouTube 视频下载器"——
-  需登录 SaaSHub 后 Claim/编辑修正为工具集定位（Cloudflare 校验，需人工浏览器操作）。
+- ✅ **SaaSHub 描述错误已提交纠错（2026-09-12，匿名编辑表单，无需登录）**：
+  修正了 Tagline 与 Description（564+ 工具集定位），Open Source = Yes 并附 GitHub 主仓地址；
+  Changes Note 明确指出原 Features & Specs（YouTube/MP4 下载器）系错误内容。
+  官方确认："Your suggested changes will be applied as soon as they are approved."（审核制，预计数日内生效）。
+  生效后需复查 saashub.com/u2tool 页面 Features & Specs 是否已替换。
 - ✅ 重建路径（可自动化）：从主仓抽取独立工具重建 OSS 仓库矩阵（候选：ical-parser、chart-kit、hex-editor），
   每个仓库 README 回链对应 u2tool.com 工具页。
 
