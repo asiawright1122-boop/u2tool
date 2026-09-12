@@ -1,6 +1,6 @@
 import { categories, getPopularTools, getToolsByCategory, type ToolCategory } from '@/config/tools';
 import { getLocalizedPath, type Locale } from './i18n';
-import { filterIndexableTools } from './index-suppression';
+import { filterIndexableTools, isIndexSuppressed } from './index-suppression';
 import { crawledNotIndexedContentRefreshToolSlugsByCategory } from './related-tools';
 
 export interface DiscoverySpotlightTool {
@@ -61,7 +61,7 @@ const recoveryRepresentativeToolSlugsByCategory: Partial<Record<ToolCategory, st
   text: ['grammar-checker', 'document-word-counter'],
 };
 
-function getRepresentativeToolSlugs(category: ToolCategory): string[] {
+function getRepresentativeToolSlugs(locale: Locale, category: ToolCategory): string[] {
   const categoryTools = getToolsByCategory(category);
   const categoryToolSlugs = new Set(categoryTools.map((tool) => tool.slug));
   const recoverySlugs = (recoveryRepresentativeToolSlugsByCategory[category] ?? []).filter((slug) =>
@@ -72,7 +72,11 @@ function getRepresentativeToolSlugs(category: ToolCategory): string[] {
     .map((tool) => tool.slug);
   const fallbackSlugs = categoryTools.map((tool) => tool.slug);
 
-  return [...new Set([...recoverySlugs, ...popularSlugs, ...fallbackSlugs])].slice(0, representativeToolLimit);
+  // Filter suppressed (noindex) tools BEFORE trimming so they never consume
+  // spotlight slots that indexable recovery tools should fill.
+  return [...new Set([...recoverySlugs, ...popularSlugs, ...fallbackSlugs])]
+    .filter((slug) => !isIndexSuppressed(locale, slug))
+    .slice(0, representativeToolLimit);
 }
 
 export function buildCategoryDiscoverySpotlights(
@@ -93,7 +97,7 @@ export function buildCategoryDiscoverySpotlights(
     .slice(0, limit)
     .map((category) => {
       const categoryTools = getToolsByCategory(category.id);
-      const representativeSlugs = getRepresentativeToolSlugs(category.id);
+      const representativeSlugs = getRepresentativeToolSlugs(locale, category.id);
 
       return {
         category: category.id,

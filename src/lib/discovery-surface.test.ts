@@ -103,7 +103,9 @@ describe('discovery surface governance', () => {
     expect(slugsByCategory.get('text')).toContain('document-word-counter');
     expect(slugsByCategory.get('converters')).toContain('csv-to-vcard-converter');
     expect(slugsByCategory.get('charts')).toContain('gantt-chart-generator');
-    expect(slugsByCategory.get('charts')).toContain('venn-diagram-generator');
+    // venn-diagram-generator was promoted to popular and sits deeper in the
+    // charts recovery queue; gauge-chart-generator represents the live cohort.
+    expect(slugsByCategory.get('charts')).toContain('gauge-chart-generator');
     expect(slugsByCategory.get('development')).toContain('html-preview');
     expect(slugsByCategory.get('development')).toContain('merge-conflict-resolver');
     expect(slugsByCategory.get('development')).toContain('go-formatter');
@@ -113,9 +115,10 @@ describe('discovery surface governance', () => {
     expect(slugsByCategory.get('image')).toContain('image-cropper');
     expect(slugsByCategory.get('image')).toContain('gif-maker');
     expect(slugsByCategory.get('network')).toContain('database-connection-tester');
-    // ip-validator is suppressed (noindex) under the current index policy, so
-    // the network spotlight leads with indexable ip-lookup instead.
+    // ip-validator is indexable across locales since the 2026-09-12 Bing AI
+    // citation audit; the network spotlight still leads with ip-lookup.
     expect(slugsByCategory.get('network')?.[0]).toBe('ip-lookup');
+    expect(slugsByCategory.get('network')).toContain('ip-validator');
     expect(slugsByCategory.get('finance')).toContain('iban-validator');
     expect(slugsByCategory.get('math')).toContain('compound-interest-calculator');
     expect(slugsByCategory.get('math')).toContain('tile-calculator');
