@@ -46,6 +46,14 @@
 - **IndexNow 使用边界（2026-08-24）**：IndexNow 是"实时变更通知"协议，只推**近期真实变更/新增**的页，不符"批量收录"语义，勿全量推 1724（有滥用限流风险）。2026-08-04 已推 620 个 priority URL；2026-08-24 追加推送"近期变更通知"20 条（P0-1 恢复的旗舰工具 jwt-decoder/jwt-debugger/hex-editor 等 + 8-17 维护页），Bing 200 / Yandex 202 均接受，线上抽查均 `index, follow`。变更清单可复用 `exports/seo/indexnow-change-notify-*.txt`，命令：
   `npm run submit:indexnow:dry -- --urls-file=<file>`（预览）/ `npm run submit:indexnow -- --urls-file=<file>`（推送，发往 Bing + Yandex）
 
+## Bing 恢复行动台账（2026-09-12 复盘）
+
+- **noindex 误杀全量清零**：9 月审计共解除 18 个工具 / 46 行抑制规则——14 个 zh 高流量工具（桑基图/箱线图/编码检测等，Bing 断崖主因）→ keyboard-tester + api-response-formatter（Bing SEO Reports 最后 2 项）→ byte-counter / curl-converter / ip-validator / character-map 全语种（Bing AI 引用审计，合计 3.5K+ Copilot 引用指向 noindex 页）。至此抑制表中已无任何有搜索/AI 需求证据的 slug。
+- **Request Indexing 战果**：桑基图/箱线图/词云/hex-editor/audio-to-base64/encoding-detector 已确认翻转为 Indexed；其余在 24-72h 审核窗口。
+- **附带修复**：discovery spotlight 先截取后过滤导致 noindex 工具占用坑位的排序 bug（filter-before-slice）；拉丁标题上限 70→60；de/ko markdown-to-html 描述裸 `<h1>` 转义；6 款世界杯工具 410 下线。
+- **全站体检**：Full Health Scan 999 页 → Warnings 25→0、Errors 为部署窗口瞬时 5xx（已自愈）。
+- **外链矩阵**：4 个 OSS 仓库重建（ical-parser / chart-kit / csv-vcard / hex-editor，合计 15 条回链）；SaaSHub 错误描述已提交纠错；Futurepedia/TAAFT/Toolify 已付费化（跳过），AlternativeTo 待人工注册提交。
+
 ## 2-4 周节奏（数据反馈循环）
 
 每 2-4 周执行一次（脚本全部就绪）：
