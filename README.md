@@ -62,6 +62,7 @@ excluded from the tools sitemap — the shelf is reversible and data-driven.
 ## Companion open-source tools
 
 - [u2tool-csv-vcard](https://github.com/asiawright1122-boop/u2tool-csv-vcard) — CSV contacts → vCard (.vcf), RFC 4180 parsing, vCard 3.0/4.0, [live demo](https://asiawright1122-boop.github.io/u2tool-csv-vcard/)
+- [u2tool-hex-editor](https://github.com/asiawright1122-boop/u2tool-hex-editor) — online hex editor: byte editing, KMP hex/ASCII search, text⇄hex, [live demo](https://asiawright1122-boop.github.io/u2tool-hex-editor/)
 - [u2tool-ical-parser](https://github.com/asiawright1122-boop/u2tool-ical-parser) — iCal (.ics) events → readable list + JSON export, zero dependencies, [live demo](https://asiawright1122-boop.github.io/u2tool-ical-parser/)
 - [u2tool-chart-kit](https://github.com/asiawright1122-boop/u2tool-chart-kit) — boxplot, sankey & word cloud generators (ECharts), live preview + PNG/SVG export, [live demo](https://asiawright1122-boop.github.io/u2tool-chart-kit/)
 
