@@ -61,8 +61,7 @@ excluded from the tools sitemap — the shelf is reversible and data-driven.
 
 ## Companion open-source tools
 
-- [u2tool-csv-vcard](https://github.com/asiawright1122-boop/u2tool-csv-vcard) — CSV contacts → vCard (.vcf), single file, browser-only
-- [u2tool-ical-parser](https://github.com/asiawright1122-boop/u2tool-ical-parser) — iCal (.ics) events → readable list, single file, browser-only
+- [u2tool-ical-parser](https://github.com/asiawright1122-boop/u2tool-ical-parser) — iCal (.ics) events → readable list + JSON export, zero dependencies, [live demo](https://asiawright1122-boop.github.io/u2tool-ical-parser/)
 
 ## License
 
