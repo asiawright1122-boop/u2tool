@@ -51,13 +51,21 @@
 
 ## 目录提交（按优先级）
 
-### A 级：高权重、接受工具站收录（本周）
-| 站点 | URL | 提交入口 | 账号 | 备注 |
-|---|---|---|---|---|
-| AlternativeTo | alternativeto.net | 登录后右上角 Add product | 邮箱注册 | 提交 U2Tool 为「工具集」，可关联同类工具 |
-| Toolify.ai | toolify.ai | toolify.ai/submit | 邮箱/Google | AI 工具子集（ai-token-calculator 等）；403 为反爬，浏览器打开即可 |
-| There's An AI For That | theresanaiforthat.com | theresanaiforthat.com/submit-tool/ | 邮箱 | 同上；403 为反爬 |
-| Futurepedia | futurepedia.io | futurepedia.io/submit-tool（已验证 200） | 邮箱 | 同上 |
+### A 级：目录收录（2026-09-12 复核：格局已变）
+| 站点 | 现状 | 行动 |
+|---|---|---|
+| SaaSHub | ✅ 已收录 | 描述纠错已于 2026-09-12 提交（匿名表单，审核中）；生效后建议 Claim 站点 |
+| AlternativeTo | 需登录 | **用户待办**：注册账号 → Add product「U2Tool」（免费，社区已确认无此条目） |
+| Futurepedia | ❌ 已付费化 | Basic $247（售罄）/ Verified $497；免费通道已关闭，**跳过** |
+| There's An AI For That | ❌ 已付费化 | 改为 Launch 付费模式；**跳过** |
+| Toolify.ai | ❌ 已付费化 | 提交按钮为 Pay $99；**跳过**（403 为反爬） |
+
+> 结论：主流 AI/产品目录已全部转向付费或登录制。免费外链重心应放在：
+> GitHub 仓库矩阵（✅ 已重建 2 个）、dev.to 技术文、Reddit 社区帖、中文导航站。
+
+**用户待办（需账号，10 分钟）**：
+1. alternativeto.net 注册（邮箱即可）→ 搜索确认无 U2Tool → Add product，描述用上文英文模板；
+2. saashub.com/u2tool 审核生效后回来 Claim（可绑定 GitHub 验证开源属性）。
 | Free-for.dev (GitHub) | github.com/ripienaar/free-for-dev | ❌ 已排除 | — | CONTRIBUTING 明确不收 toolbox/转换器/计算器类，提交会被拒 |
 | Awesome Selfhosted | github.com/awesome-selfhosted | ❌ 已排除 | — | 仅收自托管软件，u2tool 是托管服务 |
 | SaaSHub | saashub.com | saashub.com/submit | 邮箱 | 免费工具可收录；403 为反爬 |
