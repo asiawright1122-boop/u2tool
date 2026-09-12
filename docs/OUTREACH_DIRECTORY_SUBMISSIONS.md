@@ -12,7 +12,9 @@
     1. `u2tool-ical-parser`（public/MIT/Pages 200/6 topics），README 3 条回链；
     2. `u2tool-chart-kit`（public/MIT/Pages 200/6 topics，boxplot+sankey+wordcloud 三合一），
        Pages demo 回链 u2tool.com 首页/工具列表/三个对应工具页（共 5 条回链）；
-    `u2tool-csv-vcard` 仍缺失（主仓 README 死链已同步清理）。
+    3. **2026-09-12 补齐 `u2tool-csv-vcard`**（public/MIT/Pages 200/6 topics，含 13 个单测的 test.js），
+       Pages demo 回链 u2tool.com 首页/工具列表/两个转换工具页（4 条回链）。
+       主仓 README 仓库矩阵已恢复为完整 3 个。
   - awesome-free-tools PR #131 已于 2026-08-09 自行关闭（未合并）。
 - ✅ **SaaSHub 描述错误已提交纠错（2026-09-12，匿名编辑表单，无需登录）**：
   修正了 Tagline 与 Description（564+ 工具集定位），Open Source = Yes 并附 GitHub 主仓地址；
@@ -131,7 +133,7 @@
 | IndexNow 提交 | ✅ 持续有效 | 2159 URL POST api.indexnow.org → HTTP 200（key 已验证：u2tool2026indexnowkey）；2026-09 起改为小批量变更通知模式 |
 | awesome-free-tools PR | ❌ 已关闭 | PR #131 于 2026-08-09 自行关闭（未合并）；如重试需先阅读该仓库近期 merge 标准 |
 | 主仓库开源 | ✅ 仍有效 | github.com/asiawright1122-boop/u2tool（PUBLIC，MIT，现 564 工具 + 10 语言） |
-| 自建开源仓库 | ✅ 已重建 ×2（新增 chart-kit） | u2tool-ical-parser + u2tool-chart-kit 均已上线（Pages 200，合计 8 条 u2tool.com 回链）；u2tool-csv-vcard 仍缺失 |
+| 自建开源仓库 | ✅ 全部重建完成 ×3 | ical-parser + chart-kit + csv-vcard 均 Pages 200，合计 12 条 u2tool.com 回链 |
 
 ## ✅ 历史已完成（供追溯）
 
@@ -151,6 +153,6 @@
 ## 外链仓库后续（2026-09-11 修订）
 
 - 原 2 个仓库矩阵（csv-vcard + ical-parser）已删除，**当前外链引用域仅 3 个**，需重建；
-- 重建候选：~~ical-parser~~（✅ 已完成）、~~chart-kit~~（✅ 2026-09-12 已完成）、hex-editor；
+- 重建状态：~~ical-parser~~（✅）、~~chart-kit~~（✅）、~~csv-vcard~~（✅ 2026-09-12 完成）；候选：hex-editor；
 - 每个仓库 README 均回链 u2tool.com 对应工具页；
 - 仓库可作为 E-E-A-T 证据用于所有目录提交。
