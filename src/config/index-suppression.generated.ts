@@ -3709,7 +3709,6 @@ export const INDEX_SUPPRESSION: Record<string, boolean> = {
   'zh/neumorphism-generator': true,
   'zh/nginx-config-generator': true,
   'zh/noise-texture-generator': true,
-  'zh/note-pad': true,
   'zh/number-formatter': true,
   'zh/number-system-converter': true,
   'zh/octal-converter': true,
