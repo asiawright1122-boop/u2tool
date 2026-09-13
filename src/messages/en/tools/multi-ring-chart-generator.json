@@ -17,5 +17,27 @@
     "expenses": "Expenses",
     "profit": "Profit",
     "growth": "Growth"
-  }
+  },
+  "faqs": [
+    {
+      "question": "Is the Multi Ring Chart Generator free?",
+      "answer": "Yes. It is completely free with no signup, and you can generate and export as many charts as you need."
+    },
+    {
+      "question": "When should I choose a multi-ring chart over separate pie charts?",
+      "answer": "Use it when several related breakdowns — such as periods, teams or goal areas — benefit from a compact side-by-side circular comparison instead of multiple separate charts."
+    },
+    {
+      "question": "Which export formats are supported?",
+      "answer": "You can download the finished chart as a high-resolution PNG image or as scalable vector SVG for print-quality output."
+    },
+    {
+      "question": "Can I customize the colors of each ring?",
+      "answer": "Yes. The tool offers built-in color themes and lets you adjust segment values per ring, with live preview as you edit."
+    },
+    {
+      "question": "Is my data uploaded anywhere?",
+      "answer": "No. Chart rendering and export happen entirely in your browser; your data never leaves your device."
+    }
+  ]
 }

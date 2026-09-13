@@ -12,5 +12,27 @@
     "Paste a raw HTTP response and inspect its status, headers, and formatted body.",
     "Apply simple indentation to a compact XML response.",
     "Sort JSON keys alphabetically before copying the formatted body."
+  ],
+  "faqs": [
+    {
+      "question": "Is the API Response Formatter free?",
+      "answer": "Yes. It is completely free with no signup, and there is no limit on how many responses you format."
+    },
+    {
+      "question": "Which input formats does it accept?",
+      "answer": "It formats pasted JSON, raw HTTP responses (with status line and headers), and XML text."
+    },
+    {
+      "question": "Can it sort JSON keys?",
+      "answer": "Yes. You can optionally sort JSON object keys alphabetically, and choose 2-space, 4-space or minified indentation."
+    },
+    {
+      "question": "Is it safe to paste API responses here?",
+      "answer": "Yes. Formatting runs entirely in your browser, so responses containing sensitive data never leave your device."
+    },
+    {
+      "question": "Does it show HTTP status and headers?",
+      "answer": "Yes. When the pasted response includes a status line and headers, they are parsed and displayed alongside the formatted body."
+    }
   ]
 }

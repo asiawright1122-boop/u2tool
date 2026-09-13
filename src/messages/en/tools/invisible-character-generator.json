@@ -12,5 +12,27 @@
     "Generate several repeated invisible characters for a browser UI experiment.",
     "Paste text into the detector to see whether supported zero-width characters are present.",
     "Copy one bundled invisible character from the character grid."
+  ],
+  "faqs": [
+    {
+      "question": "What are invisible characters?",
+      "answer": "They are Unicode characters with zero width or no visible glyph, such as the zero-width space (U+200B) and zero-width joiner (U+200D), commonly used as placeholders, separators or in specialized text processing."
+    },
+    {
+      "question": "Where can I paste the generated characters?",
+      "answer": "They are plain Unicode text, so they paste into documents, code editors, social media and most inputs that accept Unicode."
+    },
+    {
+      "question": "How many characters can I generate at once?",
+      "answer": "You can set a repeat count from 1 to 100, or copy single characters one at a time from the character grid."
+    },
+    {
+      "question": "How do I detect these characters in existing text?",
+      "answer": "The page includes a small detector textarea — paste text into it and it counts how many of the bundled invisible characters the text contains."
+    },
+    {
+      "question": "Is anything uploaded when I use the tool?",
+      "answer": "No. The character set ships with the page, and generation, copying and detection all run locally in your browser."
+    }
   ]
 }

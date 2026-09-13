@@ -25,6 +25,10 @@
     {
       "question": "Which export formats are supported?",
       "answer": "You can export the rendered gauge visual directly as high-resolution PNG or vector SVG format."
+    },
+    {
+      "question": "Can I show multiple values on one gauge?",
+      "answer": "A single gauge shows one value; create additional gauges or use the multi-ring chart for layered comparisons."
     }
   ]
 }

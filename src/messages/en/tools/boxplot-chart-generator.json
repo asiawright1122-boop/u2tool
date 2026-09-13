@@ -24,6 +24,14 @@
     {
       "question": "Which export formats are supported?",
       "answer": "You can export the rendered boxplot chart as a high-resolution PNG image or scalable vector SVG suitable for reports and papers."
+    },
+    {
+      "question": "Can I edit the underlying quartile values?",
+      "answer": "No. The box values are always computed from your raw data using the standard quartile method, which keeps the chart consistent with the numbers you enter."
+    },
+    {
+      "question": "How are outliers determined?",
+      "answer": "Values outside 1.5 × IQR beyond the first and third quartiles are drawn as individual scatter points when the outlier toggle is on."
     }
   ]
 }

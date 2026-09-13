@@ -24,6 +24,14 @@
     {
       "question": "Which export formats are supported?",
       "answer": "You can download the generated Sankey diagram directly as a high-resolution PNG image or scalable vector SVG."
+    },
+    {
+      "question": "Does renaming a node update existing links?",
+      "answer": "Yes. Renaming a node automatically syncs every source and target reference, so you never need to rewire links by hand."
+    },
+    {
+      "question": "Is my flow data uploaded anywhere?",
+      "answer": "No. Rendering and export happen entirely in your browser; business data stays on your device."
     }
   ],
   "seo_title": "Sankey Diagram Generator Online | U2Tool",

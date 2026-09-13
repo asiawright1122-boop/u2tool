@@ -13,5 +13,27 @@
     "A refinancing homeowner inputs current mortgage balance ($180k), new APR (4.5%), and remaining 25 years to assess monthly savings against existing $1,450 payments.",
     "Real estate investor calculates cash flow for a $450k rental property with 4.75% APR, 30-year loan, $3k/year taxes, and $1k insurance to determine breakeven rent at $2,600/month.",
     "Homeowner explores overpayment impact: Adding $200/month to a $220k, 4% APR, 30-year loan reduces total interest by $34k and shortens the term by 6 years."
+  ],
+  "faqs": [
+    {
+      "question": "Is the Mortgage Calculator free?",
+      "answer": "Yes. It is completely free with no signup, and you can adjust the inputs as many times as you like."
+    },
+    {
+      "question": "How is the monthly payment calculated?",
+      "answer": "It uses the standard amortization formula M = P[r(1+r)^n]/[(1+r)^n−1], where P is the principal, r the monthly rate (APR/12) and n the number of monthly payments."
+    },
+    {
+      "question": "Are property taxes, insurance and HOA fees included?",
+      "answer": "Yes. On top of the principal-and-interest payment the tool adds taxes, insurance and HOA fees to show the total monthly cost."
+    },
+    {
+      "question": "Is my financial information uploaded anywhere?",
+      "answer": "No. All calculations run locally in your browser — the amounts and rates you enter never leave your device."
+    },
+    {
+      "question": "Can I rely on the result for a lending decision?",
+      "answer": "Treat it as an estimate. Actual rates, fees and payment schedules come from your lender, so use the numbers for comparison and planning only."
+    }
   ]
 }

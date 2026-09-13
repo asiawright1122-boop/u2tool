@@ -12,5 +12,27 @@
     "Inspect a small text file for a UTF-8 or UTF-16 byte order mark.",
     "Confirm that a file with garbled characters is not being recognized as valid UTF-8.",
     "Use the confidence and detail text as a quick browser-side diagnostic before trying a dedicated encoding library."
+  ],
+  "faqs": [
+    {
+      "question": "Is the Encoding Detector free?",
+      "answer": "Yes. It is completely free with no signup, and you can analyze as much text or as many files as you need."
+    },
+    {
+      "question": "Which encodings can it detect?",
+      "answer": "It detects UTF-8 with BOM, UTF-16 LE/BE, UTF-32 LE/BE byte order marks, checks whether bytes form valid UTF-8, identifies all-ASCII input, and falls back to ISO-8859-1 when nothing else matches."
+    },
+    {
+      "question": "Is my text or file uploaded anywhere?",
+      "answer": "No. Byte-pattern analysis runs locally in your browser — neither pasted text nor selected files are sent to any server."
+    },
+    {
+      "question": "Why does detection sometimes return ISO-8859-1?",
+      "answer": "When no BOM is present and the bytes are not valid UTF-8, ISO-8859-1 is used as a permissive fallback because it accepts any byte sequence."
+    },
+    {
+      "question": "Can it detect encodings like GBK or Shift-JIS?",
+      "answer": "No. The detector focuses on Unicode family encodings and ASCII. For East Asian multi-byte encodings, specialized tools are required."
+    }
   ]
 }
