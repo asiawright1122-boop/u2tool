@@ -13,5 +13,31 @@
     "Un desarrollador de aplicaciones móviles valida que las direcciones IP introducidas por usuarios en un formulario (10.0.0.300) sean inválidas por exceder rangos octetos.",
     "Un analista de seguridad examina una dirección IPv4 (172.31.255.192/24) para confirmar si pertenece a una subred privada y detectar posibles fugas de información.",
     "Un ingeniero de redes evalúa una dirección IPv6 con notación CIDR (2001:db8::/32) para verificar su conformidad con estándares de documentación RFC 3849."
+  ],
+  "faqs": [
+    {
+      "question": "¿El Validador de Direcciones IP es gratuito?",
+      "answer": "Sí. Es completamente gratuito, sin registro, y puedes validar tantas direcciones como necesites."
+    },
+    {
+      "question": "¿Las direcciones IP que introduzco se envían a algún servidor?",
+      "answer": "No. La validación se ejecuta localmente en tu navegador: las direcciones que escribes nunca salen de tu dispositivo."
+    },
+    {
+      "question": "¿Qué formatos de dirección reconoce?",
+      "answer": "Reconoce direcciones IPv4 e IPv6 válidas y marca como inválidas las que presenten octetos fuera del rango 0-255, caracteres no hexadecimales en IPv6 o errores en la representación comprimida con ::."
+    },
+    {
+      "question": "¿Qué información muestra para una dirección válida?",
+      "answer": "Para IPv4 muestra la clase de red e indicadores de dirección privada, de loopback y multicast; para IPv6 señala el indicador de loopback cuando corresponde."
+    },
+    {
+      "question": "¿Sirve para depurar configuraciones de firewall?",
+      "answer": "Sí, es útil para verificar rápidamente si una dirección de una regla de firewall o de un formulario está bien formada y si pertenece a un rango privado o reservado."
+    },
+    {
+      "question": "¿Muestra geolocalización o el propietario de la IP?",
+      "answer": "No. Esta herramienta valida el formato y la clasificación. Para consultar ubicación y datos de red, usa la herramienta IP Lookup de U2Tool."
+    }
   ]
 }
