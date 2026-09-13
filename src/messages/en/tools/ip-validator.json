@@ -11,5 +11,27 @@
     "Test 8.8.8.8 and review its basic IPv4 classification details.",
     "Validate ::1 and confirm it is treated as an IPv6 loopback address.",
     "Paste a suspected malformed address and see whether the validator marks it invalid."
+  ],
+  "faqs": [
+    {
+      "question": "Is the IP Address Validator free?",
+      "answer": "Yes. The validator is completely free with no signup, and you can validate as many addresses as you need."
+    },
+    {
+      "question": "Are the IP addresses I enter sent anywhere?",
+      "answer": "No. Validation logic runs locally in your browser, so the addresses you type never leave your device."
+    },
+    {
+      "question": "Does it support both IPv4 and IPv6?",
+      "answer": "Yes. The validator recognizes IPv4 and IPv6 formats and marks malformed addresses as invalid."
+    },
+    {
+      "question": "What details are shown for a valid address?",
+      "answer": "For IPv4 you get the address class plus private, loopback and multicast flags; for IPv6 the loopback flag is shown when applicable."
+    },
+    {
+      "question": "Does it show geolocation or ownership information?",
+      "answer": "No. This tool validates format and classification only. For location and network details, use the IP Lookup tool on U2Tool."
+    }
   ]
 }

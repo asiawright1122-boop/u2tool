@@ -13,5 +13,27 @@
     "Compare UTF-8 and approximate UTF-16 byte counts for the same string while writing notes about encodings",
     "Estimate whether a configuration value fits a small text field by reading the UTF-8 size in bytes or KB",
     "Quickly count characters and lines of pasted text without opening another editor"
+  ],
+  "faqs": [
+    {
+      "question": "Is the Byte Counter free to use?",
+      "answer": "Yes. The Byte Counter is completely free with no signup or login, and every feature is available without limits."
+    },
+    {
+      "question": "Is my text safe when I use this tool?",
+      "answer": "Absolutely. All counting runs locally in your browser with the built-in TextEncoder, so your text is never uploaded to any server."
+    },
+    {
+      "question": "Do I need to install anything?",
+      "answer": "No. The Byte Counter is a browser-based tool — open the page and start typing, with no software or plugins required."
+    },
+    {
+      "question": "Why are the UTF-8 and UTF-16 byte counts different?",
+      "answer": "UTF-8 uses one byte for ASCII characters but two to four bytes for accented letters, CJK text and emoji. The UTF-16 card is an approximation that assumes two bytes per JavaScript code unit, which is why the two counts usually differ for non-ASCII text."
+    },
+    {
+      "question": "How fast is the counting?",
+      "answer": "Counting happens reactively in your browser as you type, typically finishing within milliseconds even for large texts."
+    }
   ]
 }

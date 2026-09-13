@@ -1,15 +1,43 @@
 {
-  "detailed_description": "Character Map provides easy access to thousands of special characters, symbols, and emoji. Browse by category or search to find the perfect character, then click to copy.",
+  "detailed_description": "Character Map provides easy access to thousands of special characters, symbols, and emoji organized by category. Browse groups such as arrows, math symbols, punctuation, currency, Greek letters, and emoji, or search directly for a character, then click any cell to copy it to your clipboard. The page also keeps a list of your recently used characters so repeated symbols are one click away. Everything runs locally in your browser — the character library ships with the page and no input is sent anywhere.",
   "usage_steps": [
-    "Browse character categories",
-    "Or search for specific characters",
-    "Click any character to copy",
-    "Paste wherever you need",
-    "View recently used characters"
+    "Browse character categories to explore the available symbol groups",
+    "Or type in the search box to find a specific character",
+    "Click any character to copy it to your clipboard",
+    "Paste the character wherever you need it",
+    "Reuse the recently used row for symbols you copy often"
   ],
   "usage_examples": [
-    "Add symbols to documents",
-    "Insert emoji in text",
-    "Find mathematical symbols"
+    "Add arrows and check marks to documents and slide decks",
+    "Insert emoji in social posts, chat messages, or commit messages",
+    "Find mathematical symbols such as ∑, √, and ∞ for homework or papers",
+    "Copy currency symbols like €, ¥, and £ for pricing tables",
+    "Grab typographic quotes and dashes for polished copywriting"
+  ],
+  "faqs": [
+    {
+      "question": "Is Character Map free to use?",
+      "answer": "Yes. Character Map is completely free with no signup, and you can copy as many characters as you need."
+    },
+    {
+      "question": "How do I copy a character?",
+      "answer": "Click any character cell and it is copied to your clipboard instantly — a recent-use row also appears so you can grab it again quickly."
+    },
+    {
+      "question": "Can I search for a specific character?",
+      "answer": "Yes. Type in the search box to filter the library, or browse by category when you are exploring what is available."
+    },
+    {
+      "question": "Where do the characters work after copying?",
+      "answer": "Copied characters are plain Unicode text, so they paste into documents, emails, code editors, social media, and design tools that support the character in your chosen font."
+    },
+    {
+      "question": "Why does a pasted character show as a box on some devices?",
+      "answer": "The character was copied correctly, but the target app or font may not include a glyph for it. Try a different font or use a more common variation of the symbol."
+    },
+    {
+      "question": "Is anything uploaded when I use the tool?",
+      "answer": "No. The character library is bundled with the page and all searching and copying happen locally in your browser."
+    }
   ]
 }

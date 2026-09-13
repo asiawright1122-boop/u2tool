@@ -12,5 +12,27 @@
     "Generate a Python `requests` call from a curl command with a Bearer authorization header.",
     "Translate a GET request with custom headers into a Go `net/http` example.",
     "Produce a Java `HttpClient` snippet from a curl POST as a starting point before manual edits."
+  ],
+  "faqs": [
+    {
+      "question": "Is the cURL Converter free?",
+      "answer": "Yes. The converter is completely free with no signup, and there is no limit on how many commands you can convert."
+    },
+    {
+      "question": "Is it safe to paste curl commands here?",
+      "answer": "Yes. Parsing and code generation run entirely in your browser — the command is never uploaded to any server, so tokens in Authorization headers stay on your device."
+    },
+    {
+      "question": "Which curl flags are supported?",
+      "answer": "The parser reads the request URL, the `-X` method flag, `-H` headers, and `-d` or `--data` bodies. Cookies, file uploads, multipart forms, basic auth and redirect flags are outside the current scope."
+    },
+    {
+      "question": "Which output languages can I choose?",
+      "answer": "You can convert a curl command into JavaScript (fetch), Python (requests), PHP (curl_setopt), Go (net/http), or Java (java.net.http) snippets."
+    },
+    {
+      "question": "Can I use the generated code directly in production?",
+      "answer": "Treat the output as a starting template. It covers the basic request shape — review timeouts, error handling and authentication for your environment before shipping."
+    }
   ]
 }
