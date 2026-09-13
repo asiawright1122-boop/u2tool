@@ -4,8 +4,8 @@ import { getAiToolsDirectoryRelatedSlugs, isAiToolsDirectoryToolSlug } from './a
 export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['boxplot-chart-generator', 'percentage-stacked-bar-chart-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'nested-pie-chart-generator', 'graph-chart-generator', 'sankey-chart-generator', 'venn-diagram-generator', 'sunburst-chart-generator'],
   converters: ['color-blender', 'file-size-calculator', 'html-to-pdf', 'typescript-to-json', 'html-to-jsx', 'json-to-proto'],
-  development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crontab-calendar'],
-  encoding: ['pdf-to-base64', 'ascii-table', 'json-flattener', 'data-uri', 'hex-base64-converter'],
+  development: ['sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crontab-calendar', 'curl-converter'],
+  encoding: ['pdf-to-base64', 'ascii-table', 'json-flattener', 'data-uri', 'hex-base64-converter', 'encoding-detector'],
   finance: ['credit-card-validator', 'margin-calculator', 'vat-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator', 'team-generator'],
   generators: ['changelog-generator-advanced', 'random-generator', 'html-table-generator', 'license-generator', 'random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
@@ -20,8 +20,8 @@ export const crawledNotIndexedContentRefreshToolSlugsByCategory: Partial<Record<
 export const organicRecoveryToolSlugsByCategory: Partial<Record<ToolCategory, readonly string[]>> = {
   charts: ['boxplot-chart-generator', 'percentage-stacked-bar-chart-generator', 'heatmap-chart-generator', 'venn-diagram-generator', 'candlestick-chart-generator', 'half-doughnut-chart-generator', 'line-chart-generator', 'pie-chart-generator', 'funnel-chart-generator', 'tree-chart-generator', 'gauge-chart-generator', 'scatter-chart-generator', 'wordcloud-generator', 'timeline-chart-generator', 'gantt-chart-generator', 'sunburst-chart-generator'],
   converters: ['color-blender', 'bra-size-calculator', 'ical-parser', 'file-size-calculator', 'csv-to-vcard-converter', 'html-to-pdf', 'typescript-to-json', 'html-to-jsx', 'json-to-proto'],
-  development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crc32-calculator', 'crontab-calendar', 'database-schema-visualizer', 'curl-to-code-generator', 'dead-code-analyzer', 'regex-visualizer', 'screen-resolution-tester'],
-  encoding: ['pdf-to-base64', 'video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor', 'json-flattener', 'data-uri', 'hex-base64-converter'],
+  development: ['api-tester', 'tsconfig-generator', 'sql-query-optimizer', 'merge-conflict-resolver', 'go-formatter', 'crc32-calculator', 'crontab-calendar', 'database-schema-visualizer', 'curl-to-code-generator', 'dead-code-analyzer', 'regex-visualizer', 'screen-resolution-tester', 'curl-converter'],
+  encoding: ['pdf-to-base64', 'video-to-base64', 'ascii-table', 'morse-code-player', 'hex-editor', 'json-flattener', 'data-uri', 'hex-base64-converter', 'encoding-detector'],
   finance: ['credit-card-validator', 'margin-calculator', 'vat-calculator'],
   fun: ['decision-wheel', 'dice-roller', 'love-calculator', 'team-generator'],
   generators: ['changelog-generator-advanced', 'random-generator', 'html-table-generator', 'license-generator', 'random-color-generator', 'wave-generator', 'css-clip-path-generator', 'table-of-contents-generator', 'fake-name-generator', 'css-grid-generator', 'mesh-gradient-generator', 'email-signature-generator'],
