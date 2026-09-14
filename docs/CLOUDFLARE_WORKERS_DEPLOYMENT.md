@@ -54,7 +54,7 @@
 
 所以下面这个坑**当前不成立**——公网访问到的是 Worker 的新站，不是旧 Pages 页面。判断服务方的方法：看响应头有没有 `x-u2tool-html-cache`，那是 `src/middleware.ts` 设的，Pages 产不出来。
 
-保留这一节是因为 Pages 绑定尚未解除，一旦 Worker route 失效，Pages 会静默接管这两个域名并对整站返回 404。
+保留这一节是因为 Pages 绑定**永久不能解除**：`u2tool.com` 与 `www.u2tool.com` 两条 DNS 记录本身就是 Pages 自定义域记录（`CNAME → u2tool.pages.dev`，已代理），也是该 zone apex 与 www 的唯一解析来源，解绑即整站解析失败。因此「Worker route 失效后 Pages 接管并整站 404」是一个永久存在的失败模式，只能靠部署后校验兜住，不能靠移除 Pages 消除。详见 `CURRENT_ARCHITECTURE.md` 同一节。
 
 ## 推荐上线方式
 
@@ -110,4 +110,4 @@ npx wrangler deploy
 当前最常见的不是“部署命令失败”，而是下面两类：
 
 - 本地改动很多，但没有新的远端提交，所以不会触发自动部署
-- GitHub Action 已经部署了 Worker，但域名还绑在旧 Pages 项目上，因此你看到的依然是旧站
+- Worker route 失效后流量回落到旧 Pages 项目，整站返回 404（不会显示旧站内容，因为 Pages 那边本身就是全 404）。`deploy-cloudflare.yml` 的 `Verify Worker serves production` 步骤会在部署后检查这一点并让部署失败
