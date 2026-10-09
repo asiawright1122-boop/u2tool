@@ -40,6 +40,7 @@ jobs:
             docs/SEO_ALIGNMENT_PRIORITY_REPORT.md
             .planning/TRACEABILITY.md
             artifacts/validation/postbuild-results.json
+            artifacts/validation/seo-alignment.md
           retention-days: 30
       
       - name: Comment on issues if problems found

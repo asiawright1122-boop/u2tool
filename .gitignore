@@ -48,6 +48,7 @@ scripts/validation/*
 !scripts/validation/validate-html-links.ts
 !scripts/validation/run-tool-page-render-contract.mjs
 !scripts/validation/run-with-preview.mjs
+!scripts/validation/preview-lifecycle.test.ts
 !scripts/validation/gsc-high-value-content.test.ts
 !scripts/validation/validate-robots-txt.ts
 !scripts/validation/validate-decommissioned-routes.ts
