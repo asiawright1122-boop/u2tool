@@ -71,4 +71,4 @@ plans in `.planning/`.
 | [0002](0002-no-internal-reasoning-in-frontend.md) | No internal reasoning trace in frontend | Accepted | 2026-06-08 |
 | [0003](0003-preserve-authored-meta-descriptions.md) | Preserve authored meta descriptions | Accepted; deployment pending | 2026-10-09 |
 | [0004](0004-scoped-chart-svg-export.md) | Scoped chart SVG export | Accepted; deployment pending | 2026-10-09 |
-| [0005](0005-owned-production-preview.md) | One owned preview for production verification | Accepted; local verification pending | 2026-10-09 |
+| [0005](0005-owned-production-preview.md) | One owned preview for production verification | Accepted; Node 22 / macOS verified | 2026-10-09 |

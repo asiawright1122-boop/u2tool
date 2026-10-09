@@ -1,6 +1,6 @@
 # 0005. One owned preview for production verification
 
-**Status:** Accepted; local verification pending
+**Status:** Accepted; clean-checkout Node 22 / macOS verification passed
 **Date:** 2026-10-09
 **Owner:** production verification
 
@@ -60,3 +60,7 @@ Keep existing `qa:production` behavior for callers that only need postbuild
 checks. Route `verify:production` through the shared preview tail, retain every
 existing checker, and archive the local SEO alignment report with other CI
 artifacts. Verify the exact one-command entrypoint from a fresh local clone.
+
+Local acceptance completed at code commit `96d7f57f`: the exact full entrypoint
+exited 0 under Node 22.23.3 on macOS. Linux CI remains pending. See
+[verification report](../SEO_OWNED_PREVIEW_VERIFICATION_2026-10-09.md).
