@@ -1,5 +1,5 @@
 {
-  "detailed_description": "cURL Converter 将粘贴的 curl 命令转换为 JavaScript（fetch）、Python（requests）、PHP（curl_setopt）、Go（net/http）或 Java（java.net.http）的等效请求代码。一个小型基于正则的解析器从命令中读取 `-X` 方法、`-H` 头部和 `-d` 或 `--data` 请求体，然后为所选语言输出模板代码片段，你可以从输出区域复制。本工具仅涵盖基本 HTTP 请求，不处理 cookies、`--cookie-jar`、文件上传、multipart 表单、`-u` 基本认证、客户端证书、`-L` 跟随重定向、`-G` 等查询字符串标志、Ruby 或 Node Axios 输出，也不提供语法高亮和可下载文件。",
+  "detailed_description": "cURL Converter 将简单 curl 命令解析为请求信息，生成 JavaScript（fetch）、Python（requests）、PHP（cURL）、Go（net/http）或 Java（HttpClient）代码模板。常用输入为 URL、-X 方法、-H 请求头及 -d/--data 请求体；省略 -X 且有请求体时使用 POST。解析会保留引号内的连续空格，生成器分别处理 JSON 与普通文本请求体。转换在浏览器内完成，不会执行命令或发送生成的 API 请求。它不是完整 shell 或 curl 仿真器；cookies、文件上传、multipart、基本认证、证书、重定向和 -G 查询参数等复杂选项不属于已验证范围，可能被忽略。生成代码必须人工核对，不应假定与任意原命令等效。",
   "usage_steps": [
     "将 curl 命令粘贴到文本区域，包括 URL 以及任何 `-X`、`-H` 或 `-d` 标志。",
     "从下拉菜单选择输出语言：JavaScript、Python、PHP、Go 或 Java。",
@@ -15,24 +15,24 @@
   ],
   "faqs": [
     {
-      "question": "Curl Converter 是免费的吗？",
-      "answer": "是的，Curl Converter 完全免费使用，无需注册或登录。所有功能都可以免费使用，没有任何限制。"
+      "question": "支持哪些输出语言？",
+      "answer": "JavaScript fetch、Python requests、PHP cURL、Go net/http 和 Java HttpClient；不提供 Ruby 或 Axios 输出选项。"
     },
     {
-      "question": "使用 Curl Converter 安全吗？",
-      "answer": "绝对安全。所有数据处理都在您的浏览器本地完成，数据不会上传到任何服务器。您的隐私和数据安全得到完全保障。"
+      "question": "转换时会访问请求 URL 吗？",
+      "answer": "不会。工具在浏览器中解析命令并生成文本，不执行 curl 或生成的请求。分享生成代码前请删除令牌和其他敏感信息。"
     },
     {
-      "question": "支持哪些格式转换？",
-      "answer": "Curl Converter 支持多种格式之间的转换。您可以在工具页面查看支持的输入和输出格式。"
+      "question": "为什么没有 -X 也会生成 POST？",
+      "answer": "简单 curl 请求使用 -d/--data 携带请求体时，未显式指定方法会使用 POST；-X 指定的方法则保留。"
     },
     {
-      "question": "需要安装软件吗？",
-      "answer": "不需要。Curl Converter 是完全基于浏览器的在线工具，无需安装任何软件或插件。只需打开网页即可使用。"
+      "question": "支持完整 curl 语法吗？",
+      "answer": "不支持。文件、认证、重定向、代理、查询参数变换、shell 变量和复杂转义等需要手动核对，不能把忽略的参数视为已转换。"
     },
     {
-      "question": "处理速度如何？",
-      "answer": "由于所有处理都在浏览器本地完成，Curl Converter 的处理速度非常快，通常可以在几毫秒内完成。"
+      "question": "可以直接用于生产吗？",
+      "answer": "请先人工检查请求方法、头部、请求体和目标语言语法，并补充超时、异常处理和环境所需配置。"
     }
   ]
 }

@@ -1,3 +1,5 @@
+import * as cheerio from 'cheerio';
+import { getAiToolsDirectoryCopy } from '../../src/lib/ai-tools-directory';
 import {
   buildIndexableToolsSitemapEntries,
   buildPagesSitemapEntries,
@@ -26,6 +28,7 @@ interface HtmlCheck {
   canonicalPath?: string;
   isNoIndex?: boolean;
   maxTitleLength?: number;
+  authoredDescription?: string;
   requiredSchema: string[];
   requiredBody: Array<string | RegExp>;
 }
@@ -54,6 +57,7 @@ const htmlChecks: HtmlCheck[] = [
   {
     name: 'AI discovery fallback',
     path: '/en/ai/',
+    authoredDescription: getAiToolsDirectoryCopy('en').seoDescription,
     maxTitleLength: 75,
     requiredSchema: ['Organization', 'WebSite'],
     requiredBody: ['AI Tools Directory', 'Text Tools', 'Choose the Right Text Tool'],
@@ -252,7 +256,7 @@ async function validateHtml(check: HtmlCheck): Promise<void> {
   assertNoLeaks(check.name, html);
 
   const title = getTagContent(html, 'title');
-  const description = getTagContent(html, 'description');
+  const description = cheerio.load(html)('meta[name="description"]').attr('content')?.trim() || '';
   const canonical = getTagContent(html, 'canonical');
   const robots = getTagContent(html, 'robots');
   const h1 = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim() || '';
@@ -260,7 +264,15 @@ async function validateHtml(check: HtmlCheck): Promise<void> {
 
   const maxTitleLength = check.maxTitleLength || 70;
   assert(title.length >= 10 && title.length <= maxTitleLength, `${check.name}: title length ${title.length} outside safe range`);
-  assert(description.length >= 50 && description.length <= 180, `${check.name}: description length ${description.length} outside safe range`);
+  assert(description.length > 0, `${check.name}: missing description`);
+  if (check.authoredDescription !== undefined) {
+    const authored = check.authoredDescription.replace(/\s+/g, ' ').trim();
+    assert(description === authored, `${check.name}: rendered description differs from authored copy`);
+  }
+  // Length is an editorial hint, not a reason to pad/truncate authored copy (ADR 0003).
+  if (description.length < 50 || description.length > 180) {
+    console.warn(`${check.name}: editorial review hint: description has ${description.length} characters; preserved as authored`);
+  }
   assert(canonical === expectedCanonical, `${check.name}: canonical "${canonical}" does not match "${expectedCanonical}"`);
   
   if (check.isNoIndex) {

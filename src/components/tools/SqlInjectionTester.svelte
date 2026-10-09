@@ -1,5 +1,6 @@
 <script lang="ts">
   import { EXAMPLE_CODE, testForInjection } from '@/lib/tool-stubs';
+  import { describeInjectionResult } from '@/lib/sql-injection-presentation';
 
   interface Props {
     locale: string;
@@ -37,6 +38,7 @@
     if (!code.trim()) return null;
     return testForInjection(code);
   });
+  let assessment = $derived(result ? describeInjectionResult(result) : null);
 
   function handleClear() { return code = ''; }
 
@@ -59,16 +61,16 @@
 
       {#if result}
 <div class="space-y-6">
-          <div class={`p-6 rounded-lg text-center ${result.vulnerable ? 'bg-red-50 dark:bg-red-900/20' : 'bg-green-50 dark:bg-green-900/20'}`}>
-            <div class={`text-4xl font-bold ${result.vulnerable ? 'text-red-600' : 'text-green-600'}`}>
-              {@html result.vulnerable ? '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> VULNERABLE' : '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg> SAFE'}
+          <div class="p-6 rounded-lg text-center bg-amber-50 dark:bg-amber-900/20">
+            <div class="text-2xl font-bold text-amber-800 dark:text-amber-200">
+              {assessment?.label}
             </div>
-            <div class="text-sm text-gray-500 mt-2">Security Score: {result.score}/100</div>
+            <p class="text-sm text-gray-600 dark:text-gray-300 mt-2">{assessment?.caution}</p>
           </div>
 
           {#if result.issues.length > 0}
 <div class="space-y-3">
-              <h3 class="text-lg font-medium text-gray-900 dark:text-white">Vulnerabilities Found</h3>
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white">Patterns to Review</h3>
               {#each result.issues as issue, idx (idx)}
 <div  class={`p-4 rounded-lg border-l-4 ${
                   issue.severity === 'high' ? 'border-red-500 bg-red-50 dark:bg-red-900/20' :
@@ -91,7 +93,7 @@
 {/if}
 
           <div class="p-4 bg-amber-50 dark:bg-amber-900/20 rounded-lg">
-            <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">Safe Query Examples</h4>
+            <h4 class="text-sm font-medium text-amber-800 dark:text-amber-300 mb-2">Parameter Binding Examples — Verify Driver Syntax</h4>
             <pre class="text-xs font-mono text-amber-700 dark:text-amber-400 whitespace-pre-wrap">
 {`// Parameterized query (Node.js)
 db.query('SELECT * FROM users WHERE id = ?', [userId]);

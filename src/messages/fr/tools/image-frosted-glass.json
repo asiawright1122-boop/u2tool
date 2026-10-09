@@ -1,17 +1,31 @@
 {
-  "detailed_description": "L'outil Frosted Glass Effect permet d'appliquer un flou de type 'verre dépoli' à des images numériques, en combinant des techniques de convolution gaussienne et de superposition semi-transparente. Contrairement aux effets de flou standard, ce processus simule la diffusion de la lumière à travers une surface rugueuse en ajoutant un masque de transparence (alpha blending) après application d'un noyau de flou adaptatif. Cet outil est particulièrement utile pour les développeurs et designers créant des interfaces utilisateur modernes (comme des fenêtres modales avec fond flou, menus vitrés ou widgets superposés) ou souhaitant ajouter un effet visuel subtil à des compositions graphiques. Techniquement, l'algorithme utilise une convolution gaussienne paramétrable avec un sigma ajustable, combinée à un contrôle de luminosité locale pour préserver les détails structurels de l'image originale. Une fonction de bruitage aléatoire peut également être activée pour imiter la texture du verre sablé, ce qui évite l'aspect artificiel des surfaces uniformément floues.",
+  "detailed_description": "Cet outil applique un flou à toute l’image sélectionnée dans votre navigateur. Réglez l’intensité de 0 à 50 pixels ou choisissez un préréglage de 5, 15 ou 30 pixels. L’aperçu utilise le filtre de flou du canvas ; le téléchargement produit une image PNG. Il peut servir à préparer un fond pour une maquette ou une présentation. Il ne propose ni masque local, ni réglage d’opacité, ni ajout de bruit, ni animation. Le rendu dépend de la prise en charge du filtre canvas par le navigateur. Un flou décoratif ne garantit pas la suppression d’informations sensibles.",
   "usage_steps": [
-    "Glissez-déposez votre image dans la zone de téléchargement ou sélectionnez-la via le bouton 'Parcourir les fichiers'",
-    "Ajustez l'intensité du flou à l'aide du curseur 'Rayon de flou' (valeurs de 1 à 50 pixels)",
-    "Modifiez le facteur de transparence avec le champ numérique 'Opacité' (valeurs entre 20% et 80%)",
-    "Activez la case à cocher 'Ajouter du bruit' pour appliquer un motif de granularité aléatoire",
-    "Prévisualisez l'effet en temps réel dans la fenêtre d'aperçu à droite de l'interface",
-    "Téléchargez le résultat au format PNG optimisé en cliquant sur le bouton 'Exporter l'image'"
+    "Sélectionnez une image avec le champ de fichier.",
+    "Choisissez un préréglage ou réglez le curseur entre 0 et 50 pixels.",
+    "Examinez le flou appliqué à toute l’image dans l’aperçu.",
+    "Téléchargez le résultat au format PNG."
   ],
   "usage_examples": [
-    "Créer un fond d'écran dynamique pour une application mobile avec effet vitré sur les icônes",
-    "Générer des vignettes de galerie photo où les images floues se transforment en pleine définition au survol",
-    "Concevoir un interface de dashboard avec panneaux superposés semi-transparents pour une hiérarchie visuelle claire",
-    "Réaliser un effet de transition entre deux calques d'image dans une animation CSS sans altérer la profondeur des couleurs"
+    "Préparer un fond flou pour une diapositive.",
+    "Créer une image d’arrière-plan pour une maquette, puis ajouter le texte dans votre logiciel de conception."
+  ],
+  "faqs": [
+    {
+      "question": "Peut-on flouter seulement une zone ?",
+      "answer": "Non. Le filtre s’applique à toute l’image ; aucun masque de sélection n’est disponible."
+    },
+    {
+      "question": "Quels réglages sont disponibles ?",
+      "answer": "Le curseur va de 0 à 50 pixels. Les trois préréglages correspondent à 5, 15 et 30 pixels, sans contrôle d’opacité ni ajout de bruit."
+    },
+    {
+      "question": "Quel format est exporté ?",
+      "answer": "Le bouton de téléchargement produit un fichier PNG à partir du canvas."
+    },
+    {
+      "question": "L’image est-elle envoyée à un serveur pour cet effet ?",
+      "answer": "Le traitement de l’image se fait dans le navigateur avec FileReader et canvas. Le résultat dépend de la prise en charge du filtre de flou."
+    }
   ]
 }

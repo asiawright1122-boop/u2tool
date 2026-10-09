@@ -2,8 +2,8 @@
 /**
  * HreflangTags.astro
  *
- * Generates <link rel="alternate" hreflang="..."> tags for all 10 supported locales
- * plus x-default pointing to the English version.
+ * Generates the same eligible language alternate set used by sitemap XML.
+ * x-default prefers English when available; an empty set emits no tags.
  * Uses absolute URLs with the production base URL.
  *
  * Requirements: 5.2, 5.3
@@ -12,14 +12,14 @@
 import { locales as allLocales } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl, getHreflang } from '@/lib/seo';
+import { buildLocalizedAlternates } from '@/lib/seo';
 
 interface Props {
   /** Path without locale prefix, e.g. `/tools/json-formatter` */
   path: string;
   /** Optional limited locale set for pages that are not published in every language. */
   locales?: readonly Locale[];
-  /** Locale used for the x-default alternate. */
+  /** Preferred x-default locale, only used when included in the locale set. */
   xDefaultLocale?: Locale;
 }
 
@@ -30,18 +30,14 @@ const {
 } = Astro.props as Props;
 
 const BASE_URL = getPublicSiteUrl();
+const alternates = buildLocalizedAlternates(BASE_URL, path, locales, xDefaultLocale);
 
 ---
 
-{locales.map((locale) => (
+{alternates.map(({ hreflang, href }) => (
   <link
     rel="alternate"
-    hreflang={getHreflang(locale)}
-    href={buildLocalizedPageUrl(BASE_URL, locale, path)}
+    hreflang={hreflang}
+    href={href}
   />
 ))}
-<link
-  rel="alternate"
-  hreflang="x-default"
-  href={buildLocalizedPageUrl(BASE_URL, xDefaultLocale, path)}
-/>

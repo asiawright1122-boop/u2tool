@@ -41,11 +41,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: SEO recovery source gate
+        run: npm run qa:seo-recovery
+
       - name: Prepare public messages
         run: node scripts/prepare-public-messages.mjs
 
       - name: Build project
         run: npm run build
+
+      - name: SEO recovery local SSR gate
+        run: node scripts/validation/run-with-preview.mjs -- npm run validate:seo-recovery-rendered
 
       - name: Cleanup public messages
         if: always()

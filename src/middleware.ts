@@ -1,5 +1,6 @@
 import type { MiddlewareHandler } from 'astro';
 import { isValidLocale } from './lib/i18n';
+import { categories } from './config/tools/categories';
 import { env } from 'cloudflare:workers';
 import { resolveGscRecoveryRedirect } from './lib/gsc-recovery-redirects';
 import {
@@ -193,10 +194,11 @@ function resolveCanonicalRedirect(request: Request): string | null {
     return withCanonicalHtmlSearch(dedupedPath, url.search);
   }
 
-  const isToolsRoute = first === 'tools' || (isValidLocale(first || '') && second === 'tools');
-  if (isToolsRoute && url.searchParams.has('category')) {
+  const isToolsDirectory = (first === 'tools' && segments.length === 1)
+    || (isValidLocale(first || '') && second === 'tools' && segments.length === 2);
+  if (isToolsDirectory && url.searchParams.has('category')) {
     const category = url.searchParams.get('category')?.trim();
-    if (category) {
+    if (category && categories.some(candidate => candidate.id === category)) {
       const targetLocale = isValidLocale(first || '') ? first : 'en';
       const nextSearch = new URLSearchParams(url.searchParams);
       nextSearch.delete('category');
@@ -246,7 +248,8 @@ function resolveCanonicalRedirect(request: Request): string | null {
   }
 
   if (first === 'tools') {
-    return segments.length > 1 ? `/en/tools/${segments.slice(1).join('/')}/` : '/en/tools/';
+    const localizedPath = segments.length > 1 ? `/en/tools/${segments.slice(1).join('/')}/` : '/en/tools/';
+    return `${localizedPath}${url.search}`;
   }
 
   if (first === 'categories') {

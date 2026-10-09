@@ -1,9 +1,9 @@
 {
-  "detailed_description": "The Color Picker lets you choose a color, view its HEX, RGB, and HSL values, and copy each format. It also keeps a short list of recently selected colors and includes preset swatches for quick selection. The page is useful when moving colors between a design, CSS, documentation, or a code snippet. It focuses on standard opaque colors and simple conversion. It does not include alpha channels, eyedropper capture from the screen, contrast scoring, or color-profile conversion.",
+  "detailed_description": "The Color Picker lets you choose a color, view its HEX, RGB, RGBA, and HSL values, and copy each format. It also keeps a short list of recently selected colors and includes preset swatches for quick selection. The page is useful when moving colors between a design, CSS, documentation, or a code snippet. It focuses on standard opaque colors and simple conversion, with RGBA alpha fixed at 1. It does not include adjustable transparency, eyedropper capture from the screen, contrast scoring, or color-profile conversion.",
   "usage_steps": [
     "Choose a color with the color input or type a HEX value.",
     "Use preset swatches if you want a quick starting point.",
-    "Review the generated HEX, RGB, and HSL values.",
+    "Review the generated HEX, RGB, RGBA, and HSL values.",
     "Click Copy beside the format you need.",
     "Use recent colors to return to earlier selections.",
     "Check accessibility separately when the color will be used for text."
@@ -17,7 +17,7 @@
   "faqs": [
     {
       "question": "Which formats does the Color Picker show?",
-      "answer": "It shows HEX, RGB, and HSL values for the selected color."
+      "answer": "It shows HEX, RGB, RGBA, and HSL values for the selected color."
     },
     {
       "question": "Can I copy values from the page?",
@@ -25,7 +25,7 @@
     },
     {
       "question": "Does it support transparency?",
-      "answer": "No. The current picker works with opaque colors and does not output RGBA or HSLA."
+      "answer": "Transparency is not adjustable. RGBA output has alpha fixed at 1 (fully opaque); HSLA output is not provided."
     },
     {
       "question": "Can it sample colors from my screen?",

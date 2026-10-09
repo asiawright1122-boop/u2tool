@@ -13,6 +13,11 @@ const RENDERED_SEO_CHECK_FILTER = process.env.RENDERED_SEO_CHECK?.trim().toLower
 
 // Shared probe helpers — single source of truth (src/lib/seo-probe.ts)
 import { fetchHtmlWithRetry, getTagContent } from '../../src/lib/seo-probe';
+import { load } from 'cheerio';
+import { getToolBySlug } from '../../src/config/tools';
+import { buildLocalizedAlternates } from '../../src/lib/seo';
+import { getIndexableToolLocales } from '../../src/lib/tool-indexability';
+import { isValidLocale } from '../../src/lib/i18n';
 
 interface RenderedSeoCheck {
   name: string;
@@ -5352,7 +5357,19 @@ async function validateCheck(check: RenderedSeoCheck): Promise<void> {
   } else {
     assert(robots.includes('index') && robots.includes('follow') && !robots.includes('noindex'), `${check.name}: robots meta is not indexable`);
   }
-  assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
+  const toolPath = new URL(canonicalUrl).pathname.match(/^\/([a-z]{2})\/tools\/([^/]+)\/$/);
+  if (toolPath && isValidLocale(toolPath[1]) && getToolBySlug(toolPath[2])) {
+    const eligible = getIndexableToolLocales(toolPath[2]);
+    const expected = buildLocalizedAlternates(CANONICAL_BASE_URL, `/tools/${toolPath[2]}`,
+      eligible.includes(toolPath[1]) ? eligible : []);
+    const $ = load(html);
+    const actual = $('head link[rel="alternate"][hreflang]').map((_, el) =>
+      `${$(el).attr('hreflang')}|${$(el).attr('href')}`).get().sort();
+    assert(JSON.stringify(actual) === JSON.stringify(expected.map(link => `${link.hreflang}|${link.href}`).sort()),
+      `${check.name}: hreflang/x-default does not match eligible tool variants`);
+  } else {
+    assert((html.match(/rel=["']alternate["']\s+hreflang=/g) || []).length >= 10, `${check.name}: missing hreflang alternates`);
+  }
 
   for (const [attributeName, attributeValue] of requiredSocialMeta) {
     assert(

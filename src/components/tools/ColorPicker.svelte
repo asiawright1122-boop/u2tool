@@ -53,14 +53,14 @@
     }
     return { h: Math.round(h * 360), s: Math.round(s * 100), l: Math.round(l * 100) };
   }
-  const rgb = hexToRgb(color);
-  const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
-  const colorFormats = [
+  const rgb = $derived(hexToRgb(color));
+  const hsl = $derived(rgbToHsl(rgb.r, rgb.g, rgb.b));
+  const colorFormats = $derived([
     { label: 'HEX', value: color.toUpperCase() },
     { label: 'RGB', value: `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})` },
     { label: 'RGBA', value: `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 1)` },
     { label: 'HSL', value: `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)` },
-  ];
+  ]);
   async function copyValue(label: string, value: string) {
     await navigator.clipboard.writeText(value);
     copied = label;
@@ -88,11 +88,11 @@
 
     <div class="space-y-6">
       <!-- Main Color Display -->
-      <div class="flex gap-6 items-start">
+      <div class="flex flex-col gap-6 items-start sm:flex-row">
         <div
           class="w-48 h-48 rounded-xl border-4 border-gray-300 dark:border-gray-700 shadow-lg"
           style="background-color: {color}"></div>
-        <div class="flex-1 space-y-4">
+        <div class="w-full min-w-0 flex-1 space-y-4">
           <div>
             <label for="color-picker-input" class="block text-sm font-medium mb-2">{t('colorPicker.selectColor')}</label>
             <input
@@ -123,7 +123,7 @@
       </div>
 
       <!-- Color Values -->
-      <div class="grid grid-cols-2 gap-3">
+      <div class="grid grid-cols-1 gap-3 sm:grid-cols-2" data-color-formats>
         {#each colorFormats as { label, value } (label)}
 <div  class="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg">
             <div class="flex justify-between items-center mb-1">
@@ -135,7 +135,7 @@
                 {copied === label ? t('copied') : t('copy')}
               </button>
             </div>
-            <div class="font-mono text-sm truncate">{value}</div>
+            <div class="font-mono text-sm break-all">{value}</div>
           </div>
 {/each}
       </div>

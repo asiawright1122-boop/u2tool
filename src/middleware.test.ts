@@ -507,6 +507,33 @@ describe('html edge cache middleware', () => {
     expect(next).not.toHaveBeenCalled();
   });
 
+  it.each([
+    '/en/tools/json-formatter/?category=math',
+    '/zh/tools/hex-editor/?category=encoding',
+    '/en/tools/does-not-exist-seo-audit/?category=math',
+    '/en/tools/chart-generators/?category=math',
+  ])('does not redirect a tool or cluster to an unrelated category: %s', async (pathname) => {
+    const { response, next } = await runMiddleware(new Request(`https://www.u2tool.com${pathname}`));
+    expect(response.status).toBe(200);
+    expect(response.headers.get('location')).toBeNull();
+    expect(next).toHaveBeenCalledOnce();
+  });
+
+  it.each(['missing-category', '../tools/json-formatter', 'math?x=1', 'math#section'])
+    ('does not create category redirects from invalid parameter values: %s', async (category) => {
+      const url = new URL('https://www.u2tool.com/en/tools/');
+      url.searchParams.set('category', category);
+      const { response, next } = await runMiddleware(new Request(url));
+      expect(response.headers.get('location')).toBeNull();
+      expect(next).toHaveBeenCalledOnce();
+    });
+
+  it('preserves query parameters when localizing legacy tool URLs', async () => {
+    const { response } = await runMiddleware(new Request('https://www.u2tool.com/tools/json-formatter/?category=math&utm_source=audit'));
+    expect(response.status).toBe(301);
+    expect(response.headers.get('location')).toBe('/en/tools/json-formatter/?category=math&utm_source=audit');
+  });
+
   it('excludes static translation bundles (/messages/*) from trailing slash redirection', async () => {
     const next = vi.fn(async () => new Response('{"welcome":"Welcome"}', {
       headers: { 'content-type': 'application/json' }

@@ -68,3 +68,6 @@ plans in `.planning/`.
 | # | Title | Status | Date |
 |---|---|---|---|
 | [0001](0001-v2-message-namespace-retirement.md) | v2 message namespace retirement | Accepted | 2026-05-07 |
+| [0002](0002-no-internal-reasoning-in-frontend.md) | No internal reasoning trace in frontend | Accepted | 2026-06-08 |
+| [0003](0003-preserve-authored-meta-descriptions.md) | Preserve authored meta descriptions | Accepted; deployment pending | 2026-10-09 |
+| [0004](0004-scoped-chart-svg-export.md) | Scoped chart SVG export | Accepted; deployment pending | 2026-10-09 |

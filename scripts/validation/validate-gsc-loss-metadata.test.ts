@@ -20,6 +20,13 @@ function collectReferencedValidationFiles(entrypoint: string): string[] {
       visit(match[1]);
     }
 
+    // The independent runner receives npm script names as arguments, without
+    // repeating "npm run". Keep their transitive file-coverage check intact.
+    const independentPrefix = 'node scripts/validation/run-independent-checks.mjs ';
+    if (command.startsWith(independentPrefix)) {
+      for (const name of command.slice(independentPrefix.length).trim().split(/\s+/)) visit(name);
+    }
+
     for (const match of command.matchAll(/\b(scripts\/[\w./-]+\.(?:[cm]?[jt]sx?|sh|py))\b/g)) {
       referencedFiles.add(match[1]);
     }

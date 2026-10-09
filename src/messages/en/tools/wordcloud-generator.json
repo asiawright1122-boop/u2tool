@@ -1,5 +1,5 @@
 {
-  "detailed_description": "Word Cloud Generator turns a short list of weighted terms, or text pasted into the Text Input box, into an ECharts word-cloud preview. You can edit individual words and weights, load sample data, change the title, choose Default, Ocean, Sunset, or Rainbow colors, pick a shape such as Circle, Cardioid, Diamond, Triangle, or Star, adjust font-size and rotation ranges, then download the chart as PNG or SVG. The text parser performs simple browser-side word-frequency counting; it does not accept document imports, evaluate sentiment, or choose typefaces.",
+  "detailed_description": "Word Cloud Generator renders manually weighted terms or simple counts from pasted text. Edit words and weights, load a sample, set the title, choose one of four color themes and five shapes, adjust font sizes and rotation, then export the current preview as PNG or vector SVG. Text generation lowercases input, removes punctuation, splits on whitespace, ignores single-character terms, and keeps up to 100 terms with weights equal to counts multiplied by 10. Separate Chinese words with spaces or edit rows manually: there is no automatic Chinese segmentation, sentiment analysis, document import, batch generation, typeface picker, or custom background-color control.",
   "usage_steps": [
     "Start from the sample data or edit the word and weight rows manually.",
     "Optionally paste text into Text Input and click Generate from Text to create weighted terms.",
@@ -20,11 +20,11 @@
     },
     {
       "question": "How does Generate from Text work?",
-      "answer": "It lowercases the pasted text, removes punctuation, counts repeated terms, and uses the counts as chart weights."
+      "answer": "It lowercases text, removes punctuation, splits on whitespace and ignores single-character terms. It keeps up to 100 terms and multiplies each frequency by 10 for the weight. The filter mainly retains English letters, digits, underscores and basic Chinese characters; use manual rows for other scripts. Chinese requires spaces between words."
     },
     {
       "question": "Which export formats are available?",
-      "answer": "The visible export buttons download PNG or SVG from the chart preview."
+      "answer": "PNG is a bitmap. SVG preserves the current shapes and text as vectors rather than embedding a PNG; its text appearance can depend on fonts available on the receiving device."
     }
   ]
 }

@@ -39,6 +39,7 @@ jobs:
             docs/PROJECT_HEALTH_REPORT.md
             docs/SEO_ALIGNMENT_PRIORITY_REPORT.md
             .planning/TRACEABILITY.md
+            artifacts/validation/postbuild-results.json
           retention-days: 30
       
       - name: Comment on issues if problems found
@@ -47,7 +48,10 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const report = fs.readFileSync('docs/PROJECT_HEALTH_REPORT.md', 'utf8');
+            const checkResults = 'artifacts/validation/postbuild-results.json';
+            const report = fs.existsSync(checkResults)
+              ? `本次逐项验证结果：\n\n\`\`\`json\n${fs.readFileSync(checkResults, 'utf8')}\n\`\`\``
+              : '本次验证在逐项检查前中止，后续检查未执行。请查看 Actions 日志；不引用仓库中可能过期的健康报告。';
 
             const requiredLabels = [
               { name: 'production-verification', color: 'D93F0B', description: 'Automated production verification failures' },

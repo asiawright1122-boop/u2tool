@@ -10,7 +10,7 @@ import {
   type SitemapLastmodBucket,
 } from '@/lib/sitemap-lastmod';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { buildLocalizedPageUrl, getHreflang, withPageUrlTrailingSlash } from '@/lib/seo';
+import { buildLocalizedAlternates, withPageUrlTrailingSlash } from '@/lib/seo';
 
 const BASE_URL = getPublicSiteUrl();
 
@@ -34,10 +34,9 @@ function renderUrlXml(
     ? `/${pathSegmentsAfterLocale.join('/')}`
     : '';
 
-  const alternates = publishedLocales.map((locale) => {
-    const hreflang = getHreflang(locale);
-    return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(buildLocalizedPageUrl(BASE_URL, locale, pathAfterLocale || '/'))}" />`;
-  }).join('\n');
+  const alternates = buildLocalizedAlternates(BASE_URL, pathAfterLocale || '/', publishedLocales)
+    .map(({ hreflang, href }) => `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${esc(href)}" />`)
+    .join('\n');
 
   return `  <url>
     <loc>${loc}</loc>
@@ -45,7 +44,6 @@ function renderUrlXml(
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
 ${alternates}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${esc(buildLocalizedPageUrl(BASE_URL, 'en', pathAfterLocale || '/'))}" />
   </url>`;
 }
 

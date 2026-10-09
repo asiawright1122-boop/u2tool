@@ -1,0 +1,1169 @@
+{
+  "version": 1,
+  "recordedOn": "2026-10-09",
+  "entries": [
+    {
+      "key": "ar/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/credit-card-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ar/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/decision-wheel",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ar/image-splitter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ar/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "ar/love-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ar/screen-resolution-tester",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ar/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/text-to-handwriting",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "de/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "de/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "de/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "de/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "de/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "de/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "de/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "de/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "de/text-to-handwriting",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/api-response-formatter",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 682-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/ascii-table",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/bra-size-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "en/calendar-availability-finder",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/candlestick-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "en/compound-interest-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/countdown-days-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/crc32-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/credit-card-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/crontab-calendar",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/css-clip-path-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/csv-to-json",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 425-char description). Reverse of already-visible json-to-csv. Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "en/database-connection-tester",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/dice-roller",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/excel-to-csv",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/gantt-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/gif-maker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/go-formatter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/gpa-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/hex-base64-converter",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1149-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/hex-editor",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/html-entity",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1279-char description). Complement of already-visible html-encoder. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/html-preview",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/iban-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/ical-parser",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "en/js-beautifier",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 662-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-flattener",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 594-char description, 5 FAQ). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-minifier",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 672-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-path-finder",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 975-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-schema-generator",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 687-char description). Complement of already-visible json-schema-validator. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-to-csharp",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 642-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-to-java",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 546-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-to-python",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 746-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/json-to-zod",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 710-char description). Frequent search sibling of already-visible json-to-typescript. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "en/merge-conflict-resolver",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/morse-code-player",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/percentage-stacked-bar-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/python-formatter",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 866-char description, 5 FAQ). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/random-color-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/regex-escape",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1035-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/roman-numeral-converter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/screen-recorder",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "en/sql-query-optimizer",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/string-escape",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1349-char description). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/table-of-contents-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/text-to-hex",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 1004-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "en/text-to-image",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "en/tile-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/timeline-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/typescript-to-json",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/typing-speed-test",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/typing-time-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/wave-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "en/yaml-formatter",
+      "reason": "Developer-data cluster tool demoted to catalog tier by the 2026-07-13 checkpoint despite content-rich health signals (independent locale copy, 504-char description). Batch 2 of the priority-annotation-gap recovery. Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-15"
+    },
+    {
+      "key": "es/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "es/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "es/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "es/credit-card-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "es/gantt-chart-generator",
+      "reason": "Spanish chart recovery comparison cohort increased from 14 to 26 impressions; preserve through the active GSC gate.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-08-24"
+    },
+    {
+      "key": "es/gif-maker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/graph-chart-generator",
+      "reason": "Spanish chart recovery comparison cohort increased from 11 to 81 impressions; preserve through the active GSC gate.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-08-24"
+    },
+    {
+      "key": "es/heatmap-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/html-preview",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/image-cropper",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "es/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "es/license-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/love-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/sankey-chart-generator",
+      "reason": "Spanish chart recovery comparison cohort increased from 0 to 14 impressions; preserve through the active GSC gate.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-08-24"
+    },
+    {
+      "key": "es/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "es/text-summarizer",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/text-to-handwriting",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/timeline-chart-generator",
+      "reason": "Spanish chart recovery comparison cohort increased from 20 to 146 impressions; preserve through the active GSC gate.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-08-24"
+    },
+    {
+      "key": "es/tree-chart-generator",
+      "reason": "Spanish chart recovery comparison cohort increased from 14 to 25 impressions; preserve through the active GSC gate.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-08-24"
+    },
+    {
+      "key": "es/venn-diagram-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/word-counter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "es/world-clock",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "fr/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "fr/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "fr/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "fr/file-size-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/html-to-pdf",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/image-resizer",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "fr/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "fr/pie-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "fr/table-of-contents-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "fr/world-clock",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ja/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ja/cors-tester",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ja/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ja/gif-maker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/half-doughnut-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/image-collage",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/image-splitter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ja/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ja/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "ja/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ko/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ko/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ko/chinese-converter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ko/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ko/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ko/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ko/hex-base64-converter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ko/html-preview",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ko/html-table-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ko/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ko/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "ko/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/barcode-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "pt/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/excel-viewer",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "pt/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "pt/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "pt/random-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "pt/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "pt/tile-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "pt/vat-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "pt/vcard-parser",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/barcode-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/boxplot-chart-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/char-frequency",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/color-blender",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/countdown-timer",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/credit-card-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/css-clip-path-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/email-signature-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/excel-merger",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/excel-viewer",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/hex-editor",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/image-frosted-glass",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/image-splitter",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/ip-lookup",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/ip-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "ru/love-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/pdf-to-base64",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/pixel-density-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/scientific-calculator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/screen-recorder",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/sql-injection-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/svg-pattern-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ru/team-generator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/text-to-ascii-art",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "ru/video-to-base64",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "zh/api-response-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/audio-to-base64",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/boxplot-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/byte-counter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/candlestick-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/character-map",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/crc32-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/credit-card-validator",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "zh/curl-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/encoding-detector",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/exif-viewer",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/gauge-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/grammar-checker",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "zh/graph-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/hex-base64-converter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/image-splitter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/invisible-character-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/ip-validator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/jwt-debugger",
+      "reason": "Product flagship tool mislabeled as catalog tier in the 2026-07-13 checkpoint (priority annotation gap). Null GSC demand is missing evidence, not zero demand; keep indexable pending next checkpoint review.",
+      "evidence": "index-readiness-overrides.ts at 0780739f",
+      "reviewAfter": "2026-10-01"
+    },
+    {
+      "key": "zh/keyboard-tester",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/mixed-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/mortgage-calculator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/multi-ring-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/note-pad",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/sankey-chart-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/signature-pad",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/sql-injection-tester",
+      "reason": "Migrate lastmod-based retention independently of content dates.",
+      "evidence": "sitemap-lastmod.json at 0780739f"
+    },
+    {
+      "key": "zh/text-cleaner",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/text-compare",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/text-to-speech",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/vcard-parser",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/video-to-base64",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "zh/wordcloud-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    }
+  ]
+}
