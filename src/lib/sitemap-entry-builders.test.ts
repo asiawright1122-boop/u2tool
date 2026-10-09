@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
+import { tools } from '@/config/tools';
+import { locales } from '@/lib/i18n';
 import {
   buildIndexableToolsSitemapEntries,
   buildPagesSitemapEntries,
@@ -9,6 +11,47 @@ import {
 import { newestEntryLastmod } from './sitemap-utils';
 
 describe('sitemap entry builders', () => {
+  it('preserves the exact main URL set and reciprocal language links across the published catalog', () => {
+    const entries = buildIndexableToolsSitemapEntries();
+    const expectedPaths = locales.flatMap(locale => tools
+      .filter(tool => !INDEX_SUPPRESSION[`${locale}/${tool.slug}`])
+      .map(tool => `/${locale}/tools/${tool.slug}/`)).sort();
+    expect(entries.map(entry => entry.path).sort()).toEqual(expectedPaths);
+    const byPath = new Map(entries.map(entry => [entry.path, entry]));
+    const signature = (xml: string) => [...xml.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)]
+      .map(([, lang, href]) => `${lang}|${href}`).sort();
+    for (const entry of entries) {
+      const links = [...entry.xml.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)];
+      const localized = links.filter(([, lang]) => lang !== 'x-default');
+      expect(localized.some(([, , href]) => new URL(href).pathname === entry.path), entry.path).toBe(true);
+      expect(links.filter(([, lang]) => lang === 'x-default')).toHaveLength(1);
+      for (const [, , href] of links) {
+        const sibling = byPath.get(new URL(href).pathname);
+        expect(sibling, `${entry.path} → ${href}`).toBeDefined();
+        expect(signature(sibling!.xml)).toEqual(signature(entry.xml));
+      }
+    }
+  });
+
+  it('keeps the internal readiness inventory independent of current suppression', () => {
+    const entries = buildToolsSitemapEntries();
+    expect(entries).toHaveLength(tools.length * locales.length);
+    expect(entries.some(entry => entry.path === '/en/tools/encoding-detector/')).toBe(true);
+    expect(INDEX_SUPPRESSION['en/encoding-detector']).toBe(true);
+  });
+  it.each([
+    ['tools', buildIndexableToolsSitemapEntries],
+    ['priority', buildPrioritySitemapEntries],
+  ] as const)('never advertises noindex targets through %s sitemap hreflang or x-default', (_, buildEntries) => {
+    const invalidTargets = new Set<string>();
+    for (const entry of buildEntries()) {
+      for (const [, locale, slug] of entry.xml.matchAll(/href="https:\/\/www\.u2tool\.com\/([a-z]{2})\/tools\/([^/]+)\//g)) {
+        const key = `${locale}/${slug}`;
+        if (INDEX_SUPPRESSION[key]) invalidTargets.add(key);
+      }
+    }
+    expect(invalidTargets.size, [...invalidTargets].slice(0, 5).join(', ')).toBe(0);
+  });
   it('publishes only non-suppressed localized tool URLs (M2 index hygiene)', () => {
     const entries = buildIndexableToolsSitemapEntries();
     // M2: sitemap is intentionally slimmed from ~5700 tool URLs to the
@@ -68,9 +111,10 @@ describe('sitemap entry builders', () => {
     expect(entries.some((entry) => entry.path === '/en/tools/json-formatter/')).toBe(true);
     // base64 is a priority tool that is no longer suppressed and must publish.
     expect(entries.some((entry) => entry.path === '/en/tools/base64/')).toBe(true);
-    // The only remaining suppressed priority tool (en) stays out of the
-    // priority sitemap.
-    expect(entries.some((entry) => entry.path === '/en/tools/ip-validator/')).toBe(false);
+    // This URL was already restored before this change; the old assertion
+    // incorrectly expected it to remain suppressed.
+    expect(INDEX_SUPPRESSION['en/ip-validator']).toBeFalsy();
+    expect(entries.some((entry) => entry.path === '/en/tools/ip-validator/')).toBe(true);
   });
 
   // Batch 2 of the priority-annotation-gap recovery: 10 content-rich

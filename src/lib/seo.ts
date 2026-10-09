@@ -1,5 +1,5 @@
 import type { ToolCategory } from '@/config/tools';
-import { ensurePagePath, getLocalizedPath, type Locale } from './i18n';
+import { ensurePagePath, getLocalizedPath, locales as allLocales, type Locale } from './i18n';
 
 export interface SeoMetadata {
   title: string;
@@ -19,70 +19,7 @@ export interface CanonicalUrlInput {
   canonicalPath?: string;
 }
 
-export const META_DESCRIPTION_MIN_LENGTH = 150;
-export const META_DESCRIPTION_MAX_LENGTH = 180;
-
 const META_DESCRIPTION_DEFAULT_TITLE = 'U2Tool online tools';
-
-const META_DESCRIPTION_BOOSTERS: Record<string, string[]> = {
-  zh: [
-    '所有工具可免费使用，无需注册，直接在浏览器中完成。',
-    '适合快速处理、调试、转换、生成与日常工作流。',
-    '帮助开发者、创作者和团队更高效地完成任务。',
-    '支持多语言界面和清晰结果输出，方便从页面直接复制、复用或继续下一步操作。',
-    '页面保留核心任务关键词、输入场景和结果用途，便于搜索引擎与用户快速判断是否匹配需求。',
-  ],
-  ja: [
-    '登録不要で無料利用でき、ブラウザ上で安全に処理できます。',
-    '日常の作業、確認、変換、生成、共有前の見直しに使えます。',
-    '開発者、クリエイター、チームの作業効率を高めます。',
-    '多言語インターフェースと分かりやすい結果表示で、コピー、共有、次の作業へ進みやすくします。',
-    '検索結果で用途、入力内容、出力の流れが伝わるように、主要な作業意図を明確にまとめます。',
-  ],
-  ko: [
-    '가입 없이 무료로 사용할 수 있으며 브라우저에서 바로 처리됩니다.',
-    '빠른 확인, 변환, 생성 및 일상 업무 흐름에 적합합니다.',
-    '개발자, 크리에이터, 팀이 더 효율적으로 작업하도록 돕습니다.',
-    '다국어 화면과 명확한 결과 출력으로 복사, 공유, 다음 작업 진행이 쉽습니다.',
-    '검색 결과에서 핵심 작업, 입력 방식, 결과 활용 목적을 더 명확하게 판단할 수 있게 합니다.',
-  ],
-  ar: [
-    'استخدمها مجانًا دون تسجيل، مع تنفيذ سريع داخل المتصفح.',
-    'مناسبة للفحص والتحويل والإنشاء ومهام العمل اليومية.',
-    'تساعد المطورين والمبدعين والفرق على إنجاز العمل بكفاءة أعلى.',
-    'توضح الوصف مهمة الصفحة ومدخلاتها ومخرجاتها حتى يفهم المستخدم ومحرك البحث قيمة الأداة بسرعة.',
-  ],
-  de: [
-    'Kostenlos ohne Registrierung direkt im Browser nutzbar.',
-    'Ideal für schnelle Prüfungen, Konvertierungen, Generierung und tägliche Arbeitsabläufe.',
-    'Hilft Entwicklern, Kreativen und Teams, Aufgaben effizienter zu erledigen.',
-  ],
-  es: [
-    'Úsala gratis sin registro, directamente en el navegador.',
-    'Sirve para revisar, convertir, generar y optimizar tareas diarias con rapidez.',
-    'Ayuda a desarrolladores, creadores y equipos a trabajar con más eficiencia.',
-  ],
-  fr: [
-    'Utilisez-la gratuitement sans inscription, directement dans le navigateur.',
-    'Pratique pour vérifier, convertir, générer et accélérer les tâches quotidiennes.',
-    'Aide les développeurs, créateurs et équipes à travailler plus efficacement.',
-  ],
-  pt: [
-    'Use grátis sem cadastro, diretamente no navegador.',
-    'Ideal para verificar, converter, gerar e acelerar tarefas do dia a dia.',
-    'Ajuda desenvolvedores, criadores e equipes a trabalhar com mais eficiência.',
-  ],
-  ru: [
-    'Используйте бесплатно без регистрации прямо в браузере.',
-    'Подходит для быстрых проверок, преобразований, генерации и повседневных задач.',
-    'Помогает разработчикам, авторам и командам работать эффективнее.',
-  ],
-  default: [
-    'Use it free with no signup, directly in your browser.',
-    'Built for fast checks, conversions, generation, and everyday productivity workflows.',
-    'Helps developers, creators, and teams finish practical tasks more efficiently.',
-  ],
-};
 
 export interface OrganizationSchema {
   '@context': 'https://schema.org';
@@ -144,50 +81,13 @@ function normalizeMetaDescriptionWhitespace(value: string): string {
   return value.replace(/\s+/g, ' ').trim();
 }
 
-function appendSentence(base: string, sentence: string): string {
-  const normalizedBase = normalizeMetaDescriptionWhitespace(base);
-  const normalizedSentence = normalizeMetaDescriptionWhitespace(sentence);
-
-  if (!normalizedBase) {
-    return normalizedSentence;
-  }
-
-  return `${normalizedBase}${/[.!?。！？]$/.test(normalizedBase) ? '' : '.'} ${normalizedSentence}`;
-}
-
-function truncateMetaDescription(value: string, maxLength = META_DESCRIPTION_MAX_LENGTH): string {
-  const normalized = normalizeMetaDescriptionWhitespace(value);
-  if ([...normalized].length <= maxLength) {
-    return normalized;
-  }
-
-  const chars = [...normalized].slice(0, Math.max(0, maxLength - 1));
-  const candidate = chars.join('').replace(/[\s,;:，、；：。.!?！？-]+$/u, '');
-  return `${candidate}…`;
-}
-
-function getMetaDescriptionBoosters(locale: string | undefined): string[] {
-  return META_DESCRIPTION_BOOSTERS[locale ?? ''] ?? META_DESCRIPTION_BOOSTERS.default;
-}
-
-function expandMetaDescription(baseDescription: string, locale: string | undefined): string {
-  return getMetaDescriptionBoosters(locale).reduce(
-    (current, booster) => [...current].length >= META_DESCRIPTION_MIN_LENGTH
-      ? current
-      : appendSentence(current, booster),
-    baseDescription
-  );
-}
-
 export function resolveMetaDescription(input: MetaDescriptionInput): string {
   const normalizedDescription = normalizeMetaDescriptionWhitespace(input.description ?? '');
   const fallbackDescription = normalizeMetaDescriptionWhitespace(input.title ?? '') || META_DESCRIPTION_DEFAULT_TITLE;
-  const baseDescription = normalizedDescription || fallbackDescription;
-  const expandedDescription = [...baseDescription].length >= META_DESCRIPTION_MIN_LENGTH
-    ? baseDescription
-    : expandMetaDescription(baseDescription, input.locale);
-
-  return truncateMetaDescription(expandedDescription);
+  // Rendering must preserve authored meaning, including limitations at the end.
+  // Length is an editorial review concern, not a reason to invent capabilities
+  // or cut text. Search engines choose their own display snippet length.
+  return normalizedDescription || fallbackDescription;
 }
 
 function readSeoNamespace(
@@ -230,6 +130,26 @@ function normalizeEncodingCategorySeo(metadata: SeoMetadata): SeoMetadata {
 
 export function getHreflang(locale: Locale): string {
   return hreflangMap[locale];
+}
+
+/** One alternate set for HTML and XML. Never point x-default outside that set. */
+export function buildLocalizedAlternates(
+  baseUrl: string,
+  path: string,
+  publishedLocales: readonly Locale[] = allLocales,
+  preferredDefault: Locale = 'en',
+): { hreflang: string; href: string }[] {
+  // Site locale order makes the fallback identical on every sibling page.
+  const available = allLocales.filter(locale => publishedLocales.includes(locale));
+  if (!available.length) return [];
+  const defaultLocale = available.includes(preferredDefault) ? preferredDefault : available[0];
+  return [
+    ...available.map(locale => ({
+      hreflang: getHreflang(locale),
+      href: buildLocalizedPageUrl(baseUrl, locale, path),
+    })),
+    { hreflang: 'x-default', href: buildLocalizedPageUrl(baseUrl, defaultLocale, path) },
+  ];
 }
 
 export function withBrand(title: string, brand = 'U2Tool'): string {

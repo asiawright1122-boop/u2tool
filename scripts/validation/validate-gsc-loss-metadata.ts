@@ -1,18 +1,12 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import {
-  META_DESCRIPTION_MAX_LENGTH,
-  META_DESCRIPTION_MIN_LENGTH,
-  resolveMetaDescription,
-} from '../../src/lib/seo';
+import { resolveMetaDescription } from '../../src/lib/seo';
 
 type RequiredIntentTerm = string | readonly string[];
 
 interface LossMetadataCheck {
   locale: string;
   slug: string;
-  minDescriptionLength?: number;
-  maxDescriptionLength?: number;
   maxTitleLength?: number;
   requiredTerms: RequiredIntentTerm[];
   forbiddenFragments?: string[];
@@ -364,14 +358,13 @@ export async function validateGscLossMetadata(): Promise<LossMetadataIssue[]> {
       pushIssue(issues, check, `seo_title length ${titleLength} exceeds ${maxTitleLength}: ${title}`);
     }
 
-    const minDescriptionLength = check.minDescriptionLength ?? META_DESCRIPTION_MIN_LENGTH;
-    const maxDescriptionLength = check.maxDescriptionLength ?? META_DESCRIPTION_MAX_LENGTH;
-    const renderedDescriptionLength = characterCount(renderedDescription);
-    if (renderedDescriptionLength < minDescriptionLength || renderedDescriptionLength > maxDescriptionLength) {
+    // Missing copy, intent and forbidden claims remain blocking. Rendering must
+    // not hide editorial problems by padding or chopping text to a fixed length.
+    if (renderedDescription !== description.replace(/\s+/g, ' ').trim()) {
       pushIssue(
         issues,
         check,
-        `rendered seo_description length ${renderedDescriptionLength} outside ${minDescriptionLength}-${maxDescriptionLength}: ${renderedDescription}`
+        'rendered seo_description differs from authored copy beyond whitespace normalization'
       );
     }
 

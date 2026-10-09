@@ -21,6 +21,7 @@ import { siteInfoPageSlugs } from '@/lib/site-info-pages';
 import { textWritingToolClusterPath } from '@/lib/text-writing-tool-cluster';
 import { buildUrl, buildUrlForLocales, type SitemapUrlEntry } from '@/lib/sitemap-utils';
 import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
+import { getIndexableToolLocales } from '@/lib/tool-indexability';
 
 /**
  * Full tool sitemap (pre-M2 view): every discoverable tool in every locale.
@@ -42,9 +43,8 @@ export function buildToolsSitemapEntries(): SitemapUrlEntry[] {
 }
 
 /**
- * M2 index-hygiene view of the tool sitemap: suppressed (zero GSC demand,
- * unprotected) pages stay live but are excluded so crawl budget concentrates
- * on demand-bearing pages. This is what sitemap-tools.xml publishes.
+ * Public tool sitemap: only approved indexable variants and their eligible
+ * language alternates. Suppression is a governance state, not proof of zero demand.
  */
 export function buildIndexableToolsSitemapEntries(): SitemapUrlEntry[] {
   const entries: SitemapUrlEntry[] = [];
@@ -55,7 +55,7 @@ export function buildIndexableToolsSitemapEntries(): SitemapUrlEntry[] {
       if (INDEX_SUPPRESSION[`${locale}/${tool.slug}`] === true) {
         continue;
       }
-      entries.push(buildUrl(`/${locale}/tools/${tool.slug}`, '0.7', 'weekly', 'tools'));
+      entries.push(buildUrlForLocales(`/${locale}/tools/${tool.slug}`, '0.7', 'weekly', getIndexableToolLocales(tool.slug), 'tools'));
     }
   }
 
@@ -95,7 +95,7 @@ export function buildPrioritySitemapEntries(): SitemapUrlEntry[] {
       if (INDEX_SUPPRESSION[`${locale}/${tool.slug}`] === true) {
         continue;
       }
-      entries.push(buildUrl(`/${locale}/tools/${tool.slug}`, '0.9', 'daily', 'tools'));
+      entries.push(buildUrlForLocales(`/${locale}/tools/${tool.slug}`, '0.9', 'daily', getIndexableToolLocales(tool.slug), 'tools'));
     }
   }
 

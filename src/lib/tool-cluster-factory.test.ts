@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest';
 import { tools } from '@/config/tools';
-import { META_DESCRIPTION_MIN_LENGTH } from './seo';
 
 import {
   buildClusterCollectionData,
@@ -250,7 +249,7 @@ describe('tool-cluster-factory structured-data builders', () => {
     expect(data.hasPart.map((part) => part.name)).toEqual(['Group A', 'Group B']);
   });
 
-  it('buildClusterCollectionData expands short localized SEO descriptions', () => {
+  it('buildClusterCollectionData preserves authored localized SEO descriptions', () => {
     const data = buildClusterCollectionData(
       'https://example.com',
       'zh',
@@ -261,7 +260,6 @@ describe('tool-cluster-factory structured-data builders', () => {
       description: string;
     };
 
-    expect([...data.description].length).toBeGreaterThanOrEqual(META_DESCRIPTION_MIN_LENGTH);
-    expect(data.description).toContain(copyByLocale.zh.seoDescription);
+    expect(data.description).toBe(copyByLocale.zh.seoDescription);
   });
 });

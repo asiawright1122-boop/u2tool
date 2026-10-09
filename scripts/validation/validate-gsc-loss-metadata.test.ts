@@ -20,6 +20,13 @@ function collectReferencedValidationFiles(entrypoint: string): string[] {
       visit(match[1]);
     }
 
+    // The independent runner receives npm script names as arguments, without
+    // repeating "npm run". Keep their transitive file-coverage check intact.
+    const independentPrefix = 'node scripts/validation/run-independent-checks.mjs ';
+    if (command.startsWith(independentPrefix)) {
+      for (const name of command.slice(independentPrefix.length).trim().split(/\s+/)) visit(name);
+    }
+
     for (const match of command.matchAll(/\b(scripts\/[\w./-]+\.(?:[cm]?[jt]sx?|sh|py))\b/g)) {
       referencedFiles.add(match[1]);
     }
@@ -58,11 +65,20 @@ describe('Production Verification failure reporting', () => {
     expect(packageJson.scripts['validate:tool-page-render-contract'])
       .toBe('node scripts/validation/run-tool-page-render-contract.mjs');
     expect(packageJson.scripts['qa:production']).toContain('run-with-preview.mjs -- npm run qa:production:postbuild');
-    expect(runner).toContain("spawn('npm', ['run', 'preview'");
+    expect(runner).toContain("'node_modules/astro/bin/astro.mjs'");
+    expect(runner).toContain("'--host', '127.0.0.1'");
     expect(runner).toContain('FETCH_BASE_URL: previewBaseUrl');
-    expect(runner).toContain('CANONICAL_BASE_URL: canonicalBaseUrl');
+    expect(runner).toContain("CANONICAL_BASE_URL: env.CANONICAL_BASE_URL || 'https://www.u2tool.com'");
     expect(runner).toContain("SKIP_SOURCE_RENDERED_CHECKS: '1'");
-    expect(runner).toContain('preview.kill');
+    expect(runner).toContain('stop(preview,');
+  });
+
+  it('keeps all HTTP verification inside one owned preview after building', () => {
+    const scripts = JSON.parse(fs.readFileSync('package.json', 'utf8')).scripts;
+    expect(scripts['verify:production']).toBe('npm run qa:production:prebuild && npm run build && node scripts/validation/run-with-preview.mjs -- npm run verify:production:preview && npm run planning:traceability && npm run health:check');
+    expect(scripts['verify:production:preview']).toBe('npm run qa:production:postbuild && npm run qa:smoke:checks && npm run report:seo-alignment');
+    expect(scripts['qa:smoke']).toBe('node scripts/validation/run-with-preview.mjs -- npm run qa:smoke:checks');
+    expect(scripts['qa:smoke:checks']).toContain('smoke-e2e.ts && npm run validate:sitemap-urls -- --online');
   });
 });
 
@@ -88,12 +104,14 @@ describe('Production Verification repository contract', () => {
     }
   });
 
-  it('shuts down the smoke-test preview without shelling out to kill port owners', () => {
-    const smokeRunner = fs.readFileSync('scripts/validation/smoke-e2e.ts', 'utf8');
-
-    expect(smokeRunner).toContain("detached: process.platform !== 'win32'");
-    expect(smokeRunner).toContain('process.kill(-serverProcess.pid, signal)');
-    expect(smokeRunner).not.toContain('lsof -t');
-    expect(smokeRunner).not.toContain('execSync(`kill');
+  it('delegates service ownership rather than probing, spawning or killing arbitrary port owners', () => {
+    for (const name of ['smoke-e2e.ts', 'validate-sitemap-urls.ts']) {
+      const consumer = fs.readFileSync(`scripts/validation/${name}`, 'utf8');
+      expect(consumer).toContain('getManagedPreviewUrl()');
+      expect(consumer).not.toContain('checkServerActive');
+      expect(consumer).not.toContain('spawn(');
+      expect(consumer).not.toContain('process.kill');
+      expect(consumer).not.toContain('lsof -t');
+    }
   });
 });

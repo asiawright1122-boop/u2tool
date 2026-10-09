@@ -52,7 +52,7 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
-import { INDEX_SUPPRESSION } from '@/config/index-suppression.generated';
+import { getIndexableToolLocales } from '@/lib/tool-indexability';
 import { filterIndexableTools } from '@/lib/index-suppression';
 import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, resolveMetaDescription, withBrand } from '@/lib/seo';
 import { sanitizeHtml } from '@/lib/sanitize';
@@ -118,24 +118,25 @@ export const prerender = false;
 // Page data loading
 // ---------------------------------------------------------------------------
 const localeCandidate = Astro.params.locale;
-if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
-  return Astro.redirect('/en/tools/', 302);
-}
-
-const locale: Locale = localeCandidate;
-
 const slugCandidate = Astro.params.slug;
 const tool = typeof slugCandidate === 'string'
   ? tools.find((candidate) => candidate.slug === slugCandidate)
   : undefined;
-if (!tool) {
-  return Astro.redirect(`/${locale}/tools/`, 302);
+if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate) || !tool) {
+  // Use the existing SSR catch-all's error view. The prerendered /404 page has
+  // no runtime module in the Cloudflare build and cannot be an SSR rewrite target.
+  // This internal fallback path leaves the requested browser URL unchanged.
+  const response = await Astro.rewrite('/404/not-found/');
+  const headers = new Headers(response.headers);
+  headers.set('x-robots-tag', 'noindex, nofollow');
+  return new Response(response.body, { status: 404, headers });
 }
+const locale: Locale = localeCandidate;
 
-// M2 index hygiene: pages with zero GSC demand and no rendered contract are
-// soft-suppressed (robots=noindex) while staying live and reversible.
-const isIndexSuppressed =
-  INDEX_SUPPRESSION[`${locale}/${tool.slug}`] === true;
+// Robots and language discovery share the same approved indexability state.
+// A suppressed variant remains usable but does not join the search alternate set.
+const indexableLocales = getIndexableToolLocales(tool.slug);
+const isIndexSuppressed = !indexableLocales.includes(locale);
 
 const capabilityProfile = getToolCapabilityProfile(tool.slug);
 const publicCapabilityProfile = capabilityProfile?.enforcement === 'release-blocking'
@@ -493,8 +494,8 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
   siteDescription={siteMessages.description}
   robots={isIndexSuppressed ? 'noindex, nofollow' : undefined}
 >
-  {/* SEO: Hreflang tags for all 10 locales + x-default */}
-  <HreflangTags path={`/tools/${tool.slug}`} slot="head" />
+  {/* SEO: Only approved indexable variants participate in reciprocal alternates. */}
+  <HreflangTags path={`/tools/${tool.slug}`} locales={isIndexSuppressed ? [] : indexableLocales} slot="head" />
 
   {/* SEO: LLM-readable full site text */}
   <link rel="alternate" type="text/plain" title="LLM full version" href={`${BASE_URL}/llms-full.txt`} slot="head" />

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onDestroy } from 'svelte';
+  import { onDestroy, onMount } from 'svelte';
 
   interface Props {
     locale: string;
@@ -65,7 +65,8 @@
 
   function getTimezones(): string[] {
     if (typeof Intl.supportedValuesOf === 'function') {
-      return Intl.supportedValuesOf('timeZone');
+      // UTC is valid for Intl formatting but omitted from supportedValuesOf.
+      return [...new Set(['UTC', ...Intl.supportedValuesOf('timeZone')])];
     }
 
     return FALLBACK_TIMEZONES;
@@ -141,13 +142,7 @@
   let timerRef = $state<ReturnType<typeof setTimeout> | null>(null);
   let currentTime = $state(new Date());
 
-  $effect(() => {
-    if (!inputDate || !inputTime) {
-      const now = new Date();
-      inputDate = now.toISOString().slice(0, 10);
-      inputTime = now.toTimeString().slice(0, 5);
-    }
-  });
+  onMount(useNow);
 
   $effect(() => {
     const interval = setInterval(() => {
@@ -195,9 +190,16 @@
   });
 
   function useNow() {
-    const now = new Date();
-    inputDate = now.toISOString().slice(0, 10);
-    inputTime = now.toTimeString().slice(0, 5);
+    // Date and time must describe the same instant in the selected source zone,
+    // regardless of the browser's own zone or a date boundary.
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: sourceTimezone,
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+    }).formatToParts(new Date());
+    const fields = Object.fromEntries(parts.map(part => [part.type, part.value]));
+    inputDate = `${fields.year}-${fields.month}-${fields.day}`;
+    inputTime = `${fields.hour}:${fields.minute}`;
   }
 
   function swapTimezones() {

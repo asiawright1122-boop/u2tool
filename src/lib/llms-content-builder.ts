@@ -306,10 +306,8 @@ export function buildLlmsContentFromMessages(
       }
 
       if (!isFull) {
-        const descText = isZh
-          ? `（精简模式下已隐藏 ${spotlight.toolCount} 个具体工具列表，获取该分类下所有工具，请访问全量字典：${baseUrl}/llms-full.txt 或中文版全量字典 ${baseUrl}/llms-zh-full.txt ）`
-          : `(Tool details omitted in compact mode. To explore all ${spotlight.toolCount} tools in this category, please query the full catalog at ${baseUrl}/llms-full.txt )`;
-        return `### ${spotlight.name}\n- Category URL: ${canonicalUrl(baseUrl, spotlight.href)}\n- Coverage: ${spotlight.toolCount} tools\n- ${descText}`;
+        // One navigable category entry; the full-catalog link is already below.
+        return `- **${spotlight.name}**: ${canonicalUrl(baseUrl, spotlight.href)} (${spotlight.toolCount} ${isZh ? '个工具' : 'tools'})`;
       }
 
       const categoryTools = getToolsByCategory(spotlight.category);

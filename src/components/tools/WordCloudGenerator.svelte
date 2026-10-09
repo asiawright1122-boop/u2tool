@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { getChartExportUrl } from '@/lib/chart-export';
 
   interface Props {
     locale: string;
@@ -79,13 +80,13 @@
 
     // 简单的词频统计
     const wordMap = new Map<string, number>();
-    let words = textInput
+    const tokens = textInput
       .toLowerCase()
       .replace(/[^\w\s\u4e00-\u9fa5]/g, ' ')
       .split(/\s+/)
       .filter(w => w.length > 1);
 
-    words.forEach(word => {
+    tokens.forEach(word => {
       wordMap.set(word, (wordMap.get(word) || 0) + 1);
     });
 
@@ -174,11 +175,7 @@
       return;
     }
     
-    const url = echartInstance.getDataURL({
-      type: format === 'svg' ? 'svg' : 'png',
-      pixelRatio: 2,
-      backgroundColor: chartTheme.backgroundColor,
-    });
+    const url = getChartExportUrl(echartInstance, format, chartTheme.backgroundColor);
 
     const link = document.createElement('a');
     link.download = `wordcloud-${Date.now()}.${format}`;
@@ -350,19 +347,19 @@
             </div>
             <div class="space-y-2 max-h-48 overflow-y-auto p-2 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg">
               {#each words as word, index (index)}
-<div  class="flex gap-2 items-center">
+<div  class="grid grid-cols-[minmax(0,1fr)_5rem_auto] gap-2 items-center">
                   <input
                     type="text"
                     value={word.name}
                     onchange={(e) => updateWordItem(index, 'name', e.target.value)}
-                    class="tool-input flex-[2] min-w-[100px]"
+                    class="tool-input min-w-0"
                     placeholder={t('word')}
                   />
                   <input
                     type="number"
                     value={word.value}
                     onchange={(e) => updateWordItem(index, 'value', e.target.value)}
-                    class="tool-input w-20 shrink-0"
+                    class="tool-input min-w-0"
                     placeholder={t('weight')}
                   />
                   <button

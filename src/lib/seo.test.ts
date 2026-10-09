@@ -3,8 +3,6 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import {
-  META_DESCRIPTION_MAX_LENGTH,
-  META_DESCRIPTION_MIN_LENGTH,
   buildWebsiteSearchUrlTemplate,
   buildCanonicalUrl,
   getCategoryPageSeo,
@@ -17,6 +15,9 @@ import {
 } from './seo';
 import { buildPriorityIndexNowUrls } from './seo-discovery';
 import { isIndexSuppressed } from './index-suppression';
+import { tools } from '@/config/tools';
+import { locales } from './i18n';
+import { loadToolPageMessages } from './translations';
 
 describe('seo helpers', () => {
   it('normalizes stale tool counts in the shared site description', () => {
@@ -145,51 +146,73 @@ describe('seo helpers', () => {
     expect(seo.description).toContain('hex');
   });
 
-  it('expands short localized meta descriptions into the safe SEO range', () => {
+  it('preserves short localized descriptions without generic claims or filler', () => {
     const description = resolveMetaDescription({
       description: '快速编辑十六进制。',
       locale: 'zh',
       title: 'Hex Editor',
     });
 
-    expect([...description].length).toBeGreaterThanOrEqual(META_DESCRIPTION_MIN_LENGTH);
-    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
-    expect(description).toContain('快速编辑十六进制');
-    expect(description).toContain('无需注册');
+    expect(description).toBe('快速编辑十六进制。');
   });
 
-  it('uses a Bing-safe minimum length for short CJK meta descriptions', () => {
+  it('does not impose a Latin character target on CJK descriptions', () => {
     const description = resolveMetaDescription({
       description: '将联系人 CSV 行转换为适用于通讯录和 CRM 导入的 vCard 文本。',
       locale: 'zh',
       title: '免费在线CSV 转 vCard 转换器',
     });
 
-    expect([...description].length).toBeGreaterThanOrEqual(150);
-    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
+    expect(description).toBe('将联系人 CSV 行转换为适用于通讯录和 CRM 导入的 vCard 文本。');
   });
 
-  it('uses a Bing-safe minimum length for short RTL meta descriptions', () => {
+  it('preserves authored RTL descriptions', () => {
     const description = resolveMetaDescription({
       description: 'قارن أدوات النص قبل فتح صفحة واحدة.',
       locale: 'ar',
       title: 'دليل أدوات النص',
     });
 
-    expect([...description].length).toBeGreaterThanOrEqual(150);
-    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
+    expect(description).toBe('قارن أدوات النص قبل فتح صفحة واحدة.');
   });
 
-  it('truncates overlong meta descriptions without exceeding the shared max', () => {
+  it('does not silently truncate authored descriptions or their capability limitations', () => {
+    const authored = 'Review SQL text for common patterns, compare the matched expressions, and use the results as a starting point for manual review of application code, input validation and parameterized queries. This does not connect to databases or prove that an application is secure.';
     const description = resolveMetaDescription({
-      description: 'Free online developer utility for testing metadata, converting content, validating structured data, generating copy, reviewing SEO output, and preparing browser-based workflows without signup or server uploads.',
+      description: authored,
       locale: 'en',
       title: 'Developer Utility',
     });
 
-    expect([...description].length).toBeLessThanOrEqual(META_DESCRIPTION_MAX_LENGTH);
-    expect(description.endsWith('…')).toBe(true);
+    expect(description).toBe(authored);
   });
+
+  it('only normalizes whitespace and is idempotent across page and layout rendering', () => {
+    const input = { description: '  Check\n SQL\tpatterns.  ', locale: 'en' };
+    const once = resolveMetaDescription(input);
+    expect(once).toBe('Check SQL patterns.');
+    expect(resolveMetaDescription({ ...input, description: once })).toBe(once);
+  });
+
+  it('falls back to the title without inventing tool capabilities', () => {
+    expect(resolveMetaDescription({ description: ' ', title: '  Network Lookup ', locale: 'en' }))
+      .toBe('Network Lookup');
+    expect(resolveMetaDescription({})).toBe('U2Tool online tools');
+  });
+
+  it('preserves the full authored description corpus through page and layout formatting', async () => {
+    for (const locale of locales) {
+      for (const tool of tools) {
+        const messages = await loadToolPageMessages(locale, tool.slug);
+        const description = String(messages.seo_description || messages.description || '');
+        const title = String(messages.name || tool.slug);
+        const expected = (description.trim() ? description : title).replace(/\s+/g, ' ').trim();
+        const page = resolveMetaDescription({ description, title, locale });
+        expect(page, `${locale}/${tool.slug}`).toBe(expected);
+        expect(resolveMetaDescription({ description: page, title, locale })).toBe(expected);
+      }
+    }
+  }, 30_000);
 
   it('does not duplicate the brand in titles', () => {
     expect(withBrand('Free Tools | U2Tool')).toBe('Free Tools | U2Tool');

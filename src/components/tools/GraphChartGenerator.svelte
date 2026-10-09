@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onDestroy } from 'svelte';
+  import { getChartExportUrl } from '@/lib/chart-export';
 
   interface Props {
     locale: string;
@@ -179,11 +180,7 @@
       return;
     }
     
-    const url = echartInstance.getDataURL({
-      type: format,
-      pixelRatio: 2,
-      backgroundColor: chartTheme.backgroundColor,
-    });
+    const url = getChartExportUrl(echartInstance, format, chartTheme.backgroundColor);
     
     const link = document.createElement('a');
     link.href = url;
@@ -191,7 +188,7 @@
     link.click();
   }
   function addNode() {
-    const newId = String(nodes.length + 1);
+    const newId = String(nodes.reduce((maxId, node) => Math.max(maxId, Number(node.id)), 0) + 1);
     nodes = [...nodes, { 
       id: newId, 
       name: `${t('node')} ${newId}`, 
@@ -371,25 +368,25 @@
             </div>
             <div class="space-y-2 max-h-40 overflow-y-auto p-2 bg-gray-100 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg">
               {#each nodes as node, index (index)}
-<div  class="flex gap-1 items-center text-sm">
+<div  class="grid grid-cols-[5rem_minmax(0,1fr)_auto] gap-1 items-center text-sm sm:grid-cols-[minmax(0,1fr)_5rem_6rem_auto]">
                   <input
                     type="text"
                     value={node.name}
                     onchange={(e) => updateNode(index, 'name', (e.target as HTMLInputElement).value)}
-                    class="tool-input flex-1 min-w-[120px]"
+                    class="tool-input min-w-0 col-span-3 sm:col-span-1"
                     placeholder={t('nodeName')}
                   />
                   <input
                     type="number"
                     value={node.symbolSize}
                     onchange={(e) => updateNode(index, 'symbolSize', (e.target as HTMLInputElement).value)}
-                    class="tool-input w-20"
+                    class="tool-input min-w-0"
                     placeholder={t('nodeSize')}
                   />
                   <select
                     value={node.category}
                     onchange={(e) => updateNode(index, 'category', (e.target as HTMLInputElement).value)}
-                    class="tool-input w-24"
+                    class="tool-input min-w-0"
                   >
                     {#each categories as c, i (i)}
 <option  value={i}>{c.name}</option>

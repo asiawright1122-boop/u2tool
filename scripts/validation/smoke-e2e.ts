@@ -1,27 +1,5 @@
 import puppeteer from 'puppeteer';
-import http from 'node:http';
-import { spawn, type ChildProcess } from 'node:child_process';
-
-const PORT = 4321;
-const BASE_URL = `http://localhost:${PORT}`;
-
-function checkServerActive(port: number): Promise<boolean> {
-  return new Promise((resolve) => {
-    const req = http.get(`http://localhost:${port}/`, { timeout: 1500 }, (res) => {
-      resolve(true);
-      res.resume();
-    });
-
-    req.on('error', () => {
-      resolve(false);
-    });
-
-    req.on('timeout', () => {
-      req.destroy();
-      resolve(false);
-    });
-  });
-}
+import { getManagedPreviewUrl } from './run-with-preview.mjs';
 
 interface TestPageSpec {
   path: string;
@@ -47,82 +25,10 @@ const PAGES_TO_TEST: TestPageSpec[] = [
   },
 ];
 
-async function waitForServer(port: number, maxAttempts = 15, delay = 1000): Promise<boolean> {
-  for (let i = 0; i < maxAttempts; i++) {
-    const active = await checkServerActive(port);
-    if (active) {
-      return true;
-    }
-    await new Promise((resolve) => setTimeout(resolve, delay));
-  }
-  return false;
-}
-
-async function stopTemporaryServer(serverProcess: ChildProcess, port: number): Promise<void> {
-  const stopProcessTree = (signal: NodeJS.Signals) => {
-    try {
-      if (process.platform !== 'win32' && serverProcess.pid) {
-        process.kill(-serverProcess.pid, signal);
-      } else {
-        serverProcess.kill(signal);
-      }
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== 'ESRCH') {
-        throw error;
-      }
-    }
-  };
-
-  stopProcessTree('SIGTERM');
-  for (let attempts = 0; attempts < 10 && await checkServerActive(port); attempts++) {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-  }
-
-  if (await checkServerActive(port)) {
-    console.warn(`⚠️ Temporary preview process group still owns port ${port}. Forcing shutdown...`);
-    stopProcessTree('SIGKILL');
-    for (let attempts = 0; attempts < 10 && await checkServerActive(port); attempts++) {
-      await new Promise((resolve) => setTimeout(resolve, 200));
-    }
-  }
-
-  if (await checkServerActive(port)) {
-    throw new Error(`Temporary preview server did not release port ${port}.`);
-  }
-}
-
 async function main(): Promise<void> {
   console.log('🏁 Starting E2E Puppeteer client-side smoke tests...');
-
-  let serverProcess: ChildProcess | null = null;
-  let isTempServer = false;
-
-  // 1. Check if the local Astro server is active
-  const isServerActive = await checkServerActive(PORT);
-  if (!isServerActive) {
-    console.log(`📡 Local Astro server is not running on port ${PORT}. Spawning a temporary server...`);
-    
-    // Launch preview server directly using npx to prevent nested npm process wrappers
-    serverProcess = spawn('npx', ['astro', 'preview'], {
-      stdio: 'ignore',
-      detached: process.platform !== 'win32',
-    });
-    isTempServer = true;
-
-    // Wait for the server to spin up and bind the port
-    const ready = await waitForServer(PORT);
-    if (!ready) {
-      console.error(`❌ Failed to start temporary Astro preview server on port ${PORT} within timeout.`);
-      if (serverProcess) {
-        await stopTemporaryServer(serverProcess, PORT);
-      }
-      process.exitCode = 1;
-      return;
-    }
-    console.log(`📡 Temporary Astro preview server successfully launched on ${BASE_URL}.`);
-  } else {
-    console.log(`📡 Existing local server detected active at ${BASE_URL}. Reusing it.`);
-  }
+  const BASE_URL = getManagedPreviewUrl();
+  console.log(`📡 Testing this build's managed preview at ${BASE_URL}.`);
 
   console.log(`📡 Launching Headless Chromium for smoke testing...`);
 
@@ -370,12 +276,6 @@ async function main(): Promise<void> {
     await browser.close();
     console.log('🚪 Headless Chromium closed.');
 
-    // Cleanup temporary server if it was spawned by this run
-    if (isTempServer && serverProcess) {
-      console.log('🛑 Terminating temporary Astro preview server...');
-      await stopTemporaryServer(serverProcess, PORT);
-      console.log('✅ Temporary server stopped successfully.');
-    }
   }
 }
 
