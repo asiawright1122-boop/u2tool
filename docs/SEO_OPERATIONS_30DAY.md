@@ -46,9 +46,7 @@
 - **IndexNow 使用边界（2026-08-24）**：IndexNow 是"实时变更通知"协议，只推**近期真实变更/新增**的页，不符"批量收录"语义，勿全量推 1724（有滥用限流风险）。2026-08-04 已推 620 个 priority URL；2026-08-24 追加推送"近期变更通知"20 条（P0-1 恢复的旗舰工具 jwt-decoder/jwt-debugger/hex-editor 等 + 8-17 维护页），Bing 200 / Yandex 202 均接受，线上抽查均 `index, follow`。变更清单可复用 `exports/seo/indexnow-change-notify-*.txt`，命令：
   `npm run submit:indexnow:dry -- --urls-file=<file>`（预览）/ `npm run submit:indexnow -- --urls-file=<file>`（推送，发往 Bing + Yandex）
 
-## Bing 恢复行动台账（2026-09-12 复盘）
-
-- **noindex 误杀全量清零**：9 月审计共解除 18 个工具 / 46 行抑制规则——14 个 zh 高流量工具（桑基图/箱线图/编码检测等，Bing 断崖主因）→ keyboard-tester + api-response-formatter（Bing SEO Reports 最后 2 项）→ byte-counter / curl-converter / ip-validator / character-map 全语种（Bing AI 引用审计，合计 3.5K+ Copilot 引用指向 noindex 页）。至此抑制表中已无任何有搜索/AI 需求证据的 slug。
+## Bing 恢复行动台账（2026-09-12 复盘）- **noindex 误杀全量清零**：9 月审计共解除 18 个工具 / 46 行抑制规则——14 个 zh 高流量工具（桑基图/箱线图/编码检测等，Bing 断崖主因）→ keyboard-tester + api-response-formatter（Bing SEO Reports 最后 2 项）→ byte-counter / curl-converter / ip-validator / character-map 全语种（Bing AI 引用审计，合计 3.5K+ Copilot 引用指向 noindex 页）。至此抑制表中已无任何有搜索/AI 需求证据的 slug。
 - **Request Indexing 战果**：桑基图/箱线图/词云/hex-editor/audio-to-base64/encoding-detector 已确认翻转为 Indexed；其余在 24-72h 审核窗口。
 - **附带修复**：discovery spotlight 先截取后过滤导致 noindex 工具占用坑位的排序 bug（filter-before-slice）；拉丁标题上限 70→60；de/ko markdown-to-html 描述裸 `<h1>` 转义；6 款世界杯工具 410 下线。
 - **全站体检**：Full Health Scan 999 页 → Warnings 25→0、Errors 为部署窗口瞬时 5xx（已自愈）。
@@ -99,3 +97,12 @@ T3 候选方向（见 docs/M3_CONTENT_REWRITE_LIST.md §3-T3）：
 2. **不改被抑制页**：当前 3976 页的内容改动成本高、无展示可验证，除非进入 T3 明确选页
 3. **保持 lastmod 诚实**：只有真实更新才更新 sitemap-lastmod overrides
 4. **不要重新放开抑制**：除非新 checkpoint 显示该页出现真实需求
+
+## 9-12 解禁后 4 周复盘（2026-10-10，详见 GSC_BING_RECOVERY_REVIEW_2026-10-10）
+
+- **Bing 端恢复成功**：解禁后 30 天点击 856→1.4K（**+63%**）、曝光 26.9K→38.1K（+42%）、CTR 3.18%→3.80%。增长直接归因解禁页：zh/词云 +158 点击、zh/hex-editor +157、桑基图在线制作新获 21 点击。AI 引用 3 个月 48.6K（日均被引页面 55 个）。
+- **Google 端未恢复**：解禁后日均展示 1-10（解禁前 30）；索引仅 159 页，sitemap-tools 视图 90/1795 已收录；zh/桑基图索引仍是 8-18 旧 noindex 记录（实时测试通过）；抓取目的 97% 刷新仅 3% 发现；生成式 AI 3 个月曝光仅 9 次。
+- **已执行**：GSC Request Indexing 提交 10 条（配额按太平洋时间午夜重置，北京时间约 15:00 恢复，剩余 13 条当日可续）；zh/boxplot 描述 214B→148B 修复已上线（PR #52）+ IndexNow 推送（Bing 200/Yandex 202）。
+- **观察名单（无充分解禁证据，勿放开）**：zh/totp-generator（8 次 AI 引用，远低于 3.5K 门槛）、zh/line-chart-generator、zh/text-to-binary、zh/aspect-ratio、zh/text-to-image、ja/wordcloud-generator（后 5 页 AI 引用为 0）。
+- **下批内容债**：boxplot 描述 ja 315B（病句）/ko 274B（混越南语）/ar 246B/ru 228B 需逐语言重写；en/unicode-converter 描述 193/180 超限为既有警告。
+- **T3 启动条件对照**：Bing 端已满足"CTR>1% 稳定点击"（桑基图在线制作 14.89%）与"展示 +30%"（+42%）；Google 端均未满足。是否启动 T3 建议在下个 checkpoint（10-24）结合两端数据决策。
