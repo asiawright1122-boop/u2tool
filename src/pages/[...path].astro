@@ -7,6 +7,11 @@ import {
   resolveUnlocalizedSiteInfoRedirect,
 } from '@/lib/legacy-redirects';
 import { isValidLocale } from '@/lib/i18n';
+import { prefersJson, prefersMarkdown } from '@/lib/content-negotiation';
+import {
+  createJsonErrorResponse,
+  createMarkdownNotFoundResponse,
+} from '@/lib/agent-error-response';
 
 export const prerender = false;
 
@@ -22,11 +27,24 @@ function isFileLikePath(pathname: string): boolean {
 }
 
 if (isFileLikePath(normalizedPath)) {
+  if (prefersMarkdown(Astro.request.headers.get('accept'))) {
+    return createMarkdownNotFoundResponse();
+  }
+  if (prefersJson(Astro.request.headers.get('accept')) || normalizedPath === '/api' || normalizedPath.startsWith('/api/')) {
+    return createJsonErrorResponse(
+      404,
+      'NOT_FOUND',
+      `The file or resource '${normalizedPath}' was not found.`,
+      'Check /openapi.json or /llms.txt for available tools and endpoints.'
+    );
+  }
+
   return new Response('Not Found', {
     status: 404,
     headers: {
       'content-type': 'text/plain; charset=utf-8',
       'x-robots-tag': 'noindex, nofollow',
+      'vary': 'Accept',
     },
   });
 }
@@ -133,7 +151,25 @@ if (isValidLocale(first) && second === 'tools' && third === 'ranking') {
   return Astro.redirect(`/${first}/tools/`, 301);
 }
 
+if (prefersMarkdown(Astro.request.headers.get('accept'))) {
+  return createMarkdownNotFoundResponse();
+}
+
+if (
+  prefersJson(Astro.request.headers.get('accept')) ||
+  normalizedPath === '/api' ||
+  normalizedPath.startsWith('/api/')
+) {
+  return createJsonErrorResponse(
+    404,
+    'NOT_FOUND',
+    `The requested path '${normalizedPath}' was not found.`,
+    'Explore our tools catalog at /en/tools/, view sitemap at /sitemap.xml, or check /openapi.json.'
+  );
+}
+
 Astro.response.status = 404;
+Astro.response.headers.set('Vary', 'Accept');
 ---
 <!DOCTYPE html>
 <html lang="en">

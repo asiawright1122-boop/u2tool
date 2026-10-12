@@ -30,14 +30,32 @@ import { buildRecentToolLaunches, buildToolLaunchItemList } from '@/lib/tool-lau
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
 import { buildLocalizedPageUrl, getHomePageSeo } from '@/lib/seo';
+import { prefersMarkdown } from '@/lib/content-negotiation';
+import { buildLlmsContent } from '@/lib/llms-content';
+import { createNotFoundResponse } from '@/lib/agent-error-response';
 
 export const prerender = false;
 
 const localeCandidate = Astro.params.locale ?? (Astro.props as { locale?: Locale }).locale;
 if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate)) {
-  return Astro.redirect('/en/', 302);
+  return createNotFoundResponse(Astro.request);
 }
 const locale: Locale = localeCandidate;
+
+if (prefersMarkdown(Astro.request.headers.get('accept'))) {
+  const markdownContent = await buildLlmsContent(locale, Astro.url, { isFull: false });
+  return new Response(markdownContent, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+      'Cache-Control': 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800',
+    },
+  });
+}
+
+Astro.response.headers.set('Vary', 'Accept');
+
 const baseMessages = await loadBaseUiMessages(locale, Astro.url);
 const toolsObj = (baseMessages.tools as Record<string, unknown>) ?? {};
 const categoryMessages = (baseMessages.categories as Record<string, string>) ?? {};
@@ -193,10 +211,10 @@ const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
             <div class="lg:col-span-1 glass-card p-6 flex flex-col relative overflow-hidden group">
               <div class="absolute inset-0 bg-gradient-to-br from-transparent to-amber-500/5 dark:to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div class="relative z-10">
-                <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 uppercase tracking-widest">
+                <h2 class="text-sm font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 uppercase tracking-widest">
                   <span class="text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.5)]" set:html={getIconSvg('history', 18)} />
                   {(homeMessages.recentTools as string) || 'Recent Tools'}
-                </h3>
+                </h2>
                 <div class="flex-1 space-y-2">
                   {recentTools.map((tool) => (
                     <a
@@ -205,9 +223,9 @@ const toolsMessages = (baseMessages.tools as Record<string, string>) ?? {};
                     >
                       <span class="text-slate-400 dark:text-slate-500 flex-shrink-0 transition-all duration-500 group-hover/item:text-amber-500 group-hover/item:scale-110" set:html={getIconSvg(tool.icon, 22)} />
                       <div class="flex-1 min-w-0">
-                        <h4 class="text-sm font-bold text-slate-900 dark:text-white truncate group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400 transition-colors">
+                        <h3 class="text-sm font-bold text-slate-900 dark:text-white truncate group-hover/item:text-amber-600 dark:group-hover/item:text-amber-400 transition-colors">
                           {getToolName(tool.slug)}
-                        </h4>
+                        </h3>
                         <p class="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-1 mt-1 leading-relaxed">
                           {getToolDescription(tool.slug)}
                         </p>

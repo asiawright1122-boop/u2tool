@@ -939,4 +939,110 @@ describe('html edge cache middleware', () => {
       expect(mockKv.get).toHaveBeenCalledWith('gsc-recovery-rules');
     });
   });
+
+  describe('agent readiness & content negotiation', () => {
+    it('serves Markdown on homepage when Accept: text/markdown is sent', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>', {
+        headers: { 'content-type': 'text/html; charset=utf-8' },
+      }));
+
+      const { response, text } = await runMiddleware(
+        new Request('https://www.u2tool.com/', {
+          headers: { accept: 'text/markdown' },
+        }),
+        next
+      );
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get('content-type')).toContain('text/markdown');
+      expect(response.headers.get('vary')).toContain('Accept');
+      expect(text.length).toBeGreaterThan(100);
+      expect(text).toContain('# U2Tool');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('redirects to /en/ with Vary: Accept when Accept: text/html is sent to root', async () => {
+      const next = vi.fn();
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/', {
+          headers: { accept: 'text/html' },
+        }),
+        next
+      );
+
+      expect(response.status).toBe(301);
+      expect(response.headers.get('location')).toBe('/en/');
+      expect(response.headers.get('vary')).toContain('Accept');
+      expect(next).not.toHaveBeenCalled();
+    });
+
+    it('returns Markdown 404 response when client requests text/markdown for unknown path', async () => {
+      const next = vi.fn(async () => new Response('Not Found', { status: 404 }));
+
+      const { response, text } = await runMiddleware(
+        new Request('https://www.u2tool.com/some-nonexistent-path/', {
+          headers: { accept: 'text/markdown' },
+        }),
+        next
+      );
+
+      expect(response.status).toBe(404);
+      expect(response.headers.get('content-type')).toContain('text/markdown');
+      expect(response.headers.get('vary')).toContain('Accept');
+      expect(text).toContain('# 404 Not Found');
+      expect(text).toContain('llms.txt');
+      expect(text).toContain('sitemap.xml');
+      expect(text.length).toBeGreaterThan(20);
+    });
+
+    it('returns JSON 404 response when client requests application/json for unknown path', async () => {
+      const next = vi.fn(async () => new Response('Not Found', { status: 404 }));
+
+      const { response, text } = await runMiddleware(
+        new Request('https://www.u2tool.com/some-nonexistent-path/', {
+          headers: { accept: 'application/json' },
+        }),
+        next
+      );
+
+      expect(response.status).toBe(404);
+      expect(response.headers.get('content-type')).toContain('application/json');
+      expect(response.headers.get('vary')).toContain('Accept');
+      const json = JSON.parse(text);
+      expect(json.error).toBe('NOT_FOUND');
+      expect(json.message).toBeTruthy();
+      expect(json.resolution).toBeTruthy();
+    });
+
+    it('returns structured JSON 404 for unknown /api/* routes even without JSON accept', async () => {
+      const next = vi.fn(async () => new Response('Not Found', { status: 404 }));
+
+      const { response, text } = await runMiddleware(
+        new Request('https://www.u2tool.com/api/unknown-endpoint'),
+        next
+      );
+
+      expect(response.status).toBe(404);
+      expect(response.headers.get('content-type')).toContain('application/json');
+      expect(response.headers.get('vary')).toContain('Accept');
+      const json = JSON.parse(text);
+      expect(json.error).toBe('NOT_FOUND');
+      expect(json.resolution).toContain('/openapi.json');
+    });
+
+    it('adds Vary: Accept to HTML responses', async () => {
+      const next = vi.fn(async () => new Response('<html>ok</html>', {
+        headers: { 'content-type': 'text/html; charset=utf-8' },
+      }));
+
+      const { response } = await runMiddleware(
+        new Request('https://www.u2tool.com/en/tools/json-formatter/'),
+        next
+      );
+
+      expect(response.status).toBe(200);
+      expect(response.headers.get('vary')).toContain('Accept');
+    });
+  });
 });

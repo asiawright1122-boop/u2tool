@@ -52,6 +52,7 @@ scripts/validation/*
 !scripts/validation/gsc-high-value-content.test.ts
 !scripts/validation/validate-robots-txt.ts
 !scripts/validation/validate-decommissioned-routes.ts
+!scripts/validation/verify-agent-readiness.mjs
 !scripts/validation/validate-echarts-plugin-runtime.ts
 !scripts/validation/seo-recovery-copy.test.ts
 !scripts/validation/seo-release-gate.test.ts

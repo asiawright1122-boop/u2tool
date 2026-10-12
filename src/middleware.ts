@@ -19,6 +19,16 @@ import {
   createLegacyBuildAssetGoneResponse,
   isLegacyBuildAssetRequest,
 } from './lib/legacy-build-assets';
+import {
+  appendVaryHeader,
+  prefersJson,
+  prefersMarkdown,
+} from './lib/content-negotiation';
+import {
+  createJsonErrorResponse,
+  createMarkdownNotFoundResponse,
+} from './lib/agent-error-response';
+import { buildLlmsContent } from './lib/llms-content';
 
 const HTML_EDGE_CACHE_CONTROL = 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800';
 const HTML_EDGE_CACHE_VERSION = typeof __U2TOOL_HTML_CACHE_VERSION__ === 'string'
@@ -65,6 +75,11 @@ function getDefaultCache(): Cache | null {
 
 function isCacheableHtmlRequest(request: Request): boolean {
   if (request.method !== 'GET' && request.method !== 'HEAD') {
+    return false;
+  }
+
+  const accept = request.headers.get('accept');
+  if (prefersMarkdown(accept) || prefersJson(accept)) {
     return false;
   }
 
@@ -139,10 +154,12 @@ function isFileLikePath(pathname: string): boolean {
 }
 
 function redirect(location: string, status = 301): Response {
-  return withSecurityHeaders(new Response(null, {
+  const response = new Response(null, {
     status,
     headers: { location },
-  }));
+  });
+  appendVaryHeader(response.headers, 'Accept');
+  return withSecurityHeaders(response);
 }
 
 function withSecurityHeaders(response: Response): Response {
@@ -349,6 +366,23 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
     return redirectForRequest(`${recoveryTarget}${url.search}`, context.request);
   }
 
+  if (url.pathname === '/' && prefersMarkdown(context.request.headers.get('accept'))) {
+    const originRedirect = resolveProductionOriginRedirect(context.request);
+    if (originRedirect) {
+      return redirect(originRedirect);
+    }
+    const markdownBody = await buildLlmsContent('en', url, { isFull: false });
+    const mdResponse = new Response(context.request.method === 'HEAD' ? null : markdownBody, {
+      status: 200,
+      headers: {
+        'content-type': 'text/markdown; charset=utf-8',
+        'cache-control': HTML_EDGE_CACHE_CONTROL,
+        'vary': 'Accept',
+      },
+    });
+    return withSecurityHeaders(mdResponse);
+  }
+
   const canonicalRedirect = resolveCanonicalRedirect(context.request);
   if (canonicalRedirect) {
     return redirectForRequest(canonicalRedirect, context.request);
@@ -378,20 +412,47 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
 
   const response = await next();
 
-  if (response.status === 404 && isFileLikePath(url.pathname)) {
-    const textResponse = new Response(context.request.method === 'HEAD' ? null : 'Not Found', {
-      status: 404,
-      headers: {
-        'content-type': 'text/plain; charset=utf-8',
-        'x-robots-tag': 'noindex, nofollow',
-      },
-    });
-    return withSecurityHeaders(textResponse);
+  if (response.status === 404) {
+    if (prefersMarkdown(context.request.headers.get('accept'))) {
+      const mdResponse = createMarkdownNotFoundResponse();
+      return withSecurityHeaders(
+        context.request.method === 'HEAD' ? toHeadResponse(mdResponse) : mdResponse
+      );
+    }
+
+    if (
+      prefersJson(context.request.headers.get('accept')) ||
+      url.pathname === '/api' ||
+      url.pathname.startsWith('/api/')
+    ) {
+      const jsonResponse = createJsonErrorResponse(
+        404,
+        'NOT_FOUND',
+        `The requested resource '${url.pathname}' was not found.`,
+        'Check available endpoints in /openapi.json or catalog in /llms.txt.'
+      );
+      return withSecurityHeaders(
+        context.request.method === 'HEAD' ? toHeadResponse(jsonResponse) : jsonResponse
+      );
+    }
+
+    if (isFileLikePath(url.pathname)) {
+      const textResponse = new Response(context.request.method === 'HEAD' ? null : 'Not Found', {
+        status: 404,
+        headers: {
+          'content-type': 'text/plain; charset=utf-8',
+          'x-robots-tag': 'noindex, nofollow',
+          'vary': 'Accept',
+        },
+      });
+      return withSecurityHeaders(textResponse);
+    }
   }
 
   const contentType = response.headers.get('content-type') || '';
 
   if (contentType.includes('text/html')) {
+    appendVaryHeader(response.headers, 'Accept');
     response.headers.set('cache-control', HTML_EDGE_CACHE_CONTROL);
     response.headers.set('x-u2tool-html-cache', shouldUseHtmlCache ? 'MISS' : 'BYPASS');
 
@@ -420,6 +481,8 @@ export const onRequest: MiddlewareHandler = async (context, next) => {
         await putPromise;
       }
     }
+  } else if (contentType.includes('text/markdown') || contentType.includes('application/json')) {
+    appendVaryHeader(response.headers, 'Accept');
   }
 
   return withSecurityHeaders(context.request.method === 'HEAD' ? toHeadResponse(response) : response);

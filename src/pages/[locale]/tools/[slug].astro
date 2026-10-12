@@ -52,6 +52,11 @@ import type { Locale } from '@/lib/i18n';
 import { loadBaseUiMessages, loadToolPageMessages } from '@/lib/translations';
 import { buildHeaderTranslations, buildMobileNavMessages } from '@/lib/layout-translations';
 import { getPublicSiteUrl } from '@/lib/public-env';
+import { prefersJson, prefersMarkdown } from '@/lib/content-negotiation';
+import {
+  createJsonErrorResponse,
+  createMarkdownNotFoundResponse,
+} from '@/lib/agent-error-response';
 import { getIndexableToolLocales } from '@/lib/tool-indexability';
 import { filterIndexableTools } from '@/lib/index-suppression';
 import { buildLocalizedPagePath, buildLocalizedPageUrl, getHreflang, resolveMetaDescription, withBrand } from '@/lib/seo';
@@ -123,12 +128,24 @@ const tool = typeof slugCandidate === 'string'
   ? tools.find((candidate) => candidate.slug === slugCandidate)
   : undefined;
 if (typeof localeCandidate !== 'string' || !isValidLocale(localeCandidate) || !tool) {
+  if (prefersMarkdown(Astro.request.headers.get('accept'))) {
+    return createMarkdownNotFoundResponse();
+  }
+  if (prefersJson(Astro.request.headers.get('accept'))) {
+    return createJsonErrorResponse(
+      404,
+      'NOT_FOUND',
+      `Tool '${slugCandidate}' was not found for locale '${localeCandidate}'.`,
+      'Check available tools in our catalog at /en/tools/, view /openapi.json, or see /llms.txt.'
+    );
+  }
   // Use the existing SSR catch-all's error view. The prerendered /404 page has
   // no runtime module in the Cloudflare build and cannot be an SSR rewrite target.
   // This internal fallback path leaves the requested browser URL unchanged.
   const response = await Astro.rewrite('/404/not-found/');
   const headers = new Headers(response.headers);
   headers.set('x-robots-tag', 'noindex, nofollow');
+  headers.set('vary', 'Accept');
   return new Response(response.body, { status: 404, headers });
 }
 const locale: Locale = localeCandidate;
@@ -214,6 +231,53 @@ const breadcrumbItems = [
 // Structured data: SoftwareApplication
 // ---------------------------------------------------------------------------
 const BASE_URL = getPublicSiteUrl();
+
+if (prefersMarkdown(Astro.request.headers.get('accept'))) {
+  const canonicalUrl = buildLocalizedPageUrl(BASE_URL, locale, `/tools/${tool.slug}/`);
+  const sections: string[] = [
+    `# ${toolName}`,
+    '',
+    `> ${toolDescription}`,
+    '',
+    `- **Category**: ${categoryName} (${buildLocalizedPageUrl(BASE_URL, locale, `/categories/${tool.category}/`)})`,
+    `- **Canonical URL**: ${canonicalUrl}`,
+    `- **Tool Web App**: ${canonicalUrl}`,
+  ];
+
+  if (rawDetailedDescription) {
+    sections.push('', '## Overview', '', rawDetailedDescription);
+  }
+
+  if (Array.isArray(rawUsageSteps) && rawUsageSteps.length > 0) {
+    sections.push(
+      '',
+      `## ${usageInstructionsLabel}`,
+      '',
+      ...rawUsageSteps.map((step, idx) => `${idx + 1}. ${step}`)
+    );
+  }
+
+  if (Array.isArray(rawUsageExamples) && rawUsageExamples.length > 0) {
+    sections.push(
+      '',
+      `## ${usageExamplesLabel}`,
+      '',
+      ...rawUsageExamples.map((ex) => `- ${ex}`)
+    );
+  }
+
+  return new Response(sections.join('\n') + '\n', {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+      'Cache-Control': 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800',
+    },
+  });
+}
+
+Astro.response.headers.set('Vary', 'Accept');
+
 const schemaLanguage = getHreflang(locale);
 
 const softwareAppData = {

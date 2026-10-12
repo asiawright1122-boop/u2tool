@@ -1,4 +1,19 @@
 ---
+import { prefersMarkdown } from '@/lib/content-negotiation';
+import { buildLlmsContent } from '@/lib/llms-content';
+
+if (prefersMarkdown(Astro.request.headers.get('accept'))) {
+  const markdownBody = await buildLlmsContent('en', Astro.url, { isFull: false });
+  return new Response(markdownBody, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/markdown; charset=utf-8',
+      'Vary': 'Accept',
+      'Cache-Control': 'public, max-age=300, s-maxage=86400, stale-while-revalidate=604800',
+    },
+  });
+}
+
 // Redirect root to English homepage (static fallback)
 return Astro.redirect('/en/');
 ---
