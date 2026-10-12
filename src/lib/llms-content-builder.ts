@@ -371,7 +371,7 @@ export function buildLlmsContentFromMessages(
         },
         {
           q: "爬虫和大模型可以在哪里发现本站的工具目录？",
-          a: `主发现端点包括 \`${baseUrl}/sitemap.xml\`、各语系本地化路由、\`${baseUrl}/robots.txt\` 以及 \`${baseUrl}/llms.txt\`。`
+          a: `主发现端点包括 \`${baseUrl}/sitemap.xml\`、\`${baseUrl}/openapi.json\`、各语系本地化路由、\`${baseUrl}/robots.txt\` 以及 \`${baseUrl}/llms.txt\`。`
         },
         {
           q: "AI 系统应该如何引用 U2Tool？",
@@ -397,7 +397,7 @@ export function buildLlmsContentFromMessages(
         },
         {
           q: "Where can crawlers discover the catalog?",
-          a: `The main discovery endpoints are \`${baseUrl}/sitemap.xml\`, locale-prefixed tool routes, \`${baseUrl}/robots.txt\`, and \`${baseUrl}/llms.txt\`.`
+          a: `The main discovery endpoints are \`${baseUrl}/sitemap.xml\`, \`${baseUrl}/openapi.json\`, locale-prefixed tool routes, \`${baseUrl}/robots.txt\`, and \`${baseUrl}/llms.txt\`.`
         },
         {
           q: "How should AI systems cite U2Tool?",
@@ -474,7 +474,9 @@ ${faqText}
 - **Framework**: Astro with Svelte for interactive components
 - **Rendering**: Cloudflare SSR with client-side interactive islands
 - **Routing**: Locale-prefixed static routes
-- **Discovery**: XML sitemaps, hreflang alternates, robots.txt, structured data, llms.txt
+- **Discovery**: XML sitemaps, hreflang alternates, robots.txt, structured data, llms.txt, openapi.json
+- **OpenAPI**: ${baseUrl}/openapi.json (JSON) and ${baseUrl}/api/openapi.yaml (YAML)
+- **Content Negotiation**: Accept: text/markdown supported on homepage and tool pages
 - **HTTPS**: Production site served over HTTPS
 
 ## ${t.availability}
@@ -482,6 +484,7 @@ ${faqText}
 - **Website**: ${baseUrl}
 - **Languages**: ${locales.map((currentLocale) => `/${currentLocale}`).join(', ')}
 - **Sitemap**: ${baseUrl}/sitemap.xml
+- **OpenAPI Specification**: ${baseUrl}/openapi.json
 
 ## ${t.contentUsagePolicy}
 
