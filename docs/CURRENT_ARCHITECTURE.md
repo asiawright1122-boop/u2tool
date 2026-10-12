@@ -40,11 +40,14 @@ A Cloudflare Pages project named `u2tool` still exists in the account and is bou
 | --- | --- |
 | Bound domains | `u2tool.pages.dev`, `u2tool.com`, `www.u2tool.com` |
 | Deploy trigger | Git integration, not any file in `.github/workflows/` |
+| `deployments_enabled` | `false` — builds paused 2026-08-13 |
 | `pages_build_output_dir` | `dist` |
 | Pages response | 404 at `/` and `/en/tools/` |
 | Actual production server | Worker |
 
-Two consequences. Every push builds twice, since the Git integration fires independently of `deploy-cloudflare.yml`. And the project is broken rather than merely idle: `pages_build_output_dir` is `dist`, but Astro `output: 'server'` emits `dist/client` and `dist/server`, so the directory Pages serves contains no `index.html` and no `_redirects`.
+The project is broken rather than merely idle: `pages_build_output_dir` is `dist`, but Astro `output: 'server'` emits `dist/client` and `dist/server`, so the directory Pages serves contains no `index.html` and no `_redirects`.
+
+Until 2026-08-13 every push also built twice, because the Git integration fired independently of `deploy-cloudflare.yml` and `preview_deployment_setting` is `all`, so branch pushes built too. That is now stopped: `deployments_enabled` was set to `false` through the Pages REST API. The Git connection itself is intact, so re-enabling is a single field flip and needs no GitHub re-authorization. Disconnecting Git would also have stopped the builds, but it removes the `source` config irreversibly and recovery then requires a human to re-authorize GitHub.
 
 To confirm which side serves a request, check the `x-u2tool-html-cache` response header. `src/middleware.ts` sets it; Pages cannot produce it.
 
