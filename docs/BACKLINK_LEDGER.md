@@ -12,7 +12,7 @@
 
 ## 已获得外链
 
-### OSS 配套仓库矩阵(2026-10-24 扩至 5 仓 / 21 链)
+### OSS 配套仓库矩阵(2026-10-24 扩至 6 仓 / 27 链)
 
 | 仓库 | 外链数 | 落点 |
 |---|---|---|
@@ -20,7 +20,8 @@
 | asiawright1122-boop/u2tool-csv-vcard | 4 | demo 页 → 首页/工具列表/2 个转换工具 |
 | asiawright1122-boop/u2tool-ical-parser | 3 | README |
 | asiawright1122-boop/u2tool-hex-editor | 3 | 首页/工具列表/hex-editor 工具页 |
-| asiawright1122-boop/u2tool-wordcloud | 6 | README + demo 页页脚 → 首页/zh 词云工具页/工具目录(2026-10-24 上线,[live demo](https://asiawright1122-boop.github.io/u2tool-wordcloud/) 200) |
+| asiawright1122-boop/u2tool-wordcloud | 6 | README + demo 页页脚 → 首页/zh 词云工具页/工具目录(2026-10-24,[demo](https://asiawright1122-boop.github.io/u2tool-wordcloud/) 200) |
+| asiawright1122-boop/u2tool-curl-converter | 6 | README + demo 页页脚 → 首页/curl-converter 工具页/工具目录(2026-10-24,[demo](https://asiawright1122-boop.github.io/u2tool-curl-converter/) 200,CI 绿,零依赖 9KB bundle) |
 
 ### 目录/平台
 
@@ -35,7 +36,7 @@
 2. Product Hunt 发布(物料已于 2026-10-24 重写,见 PRODUCT_HUNT_SUBMISSION.md)
 3. Show HN + BetaList 协同发布周
 4. dev.to 技术文章 × 3(llms.txt/AI 代理友好改造为主题)
-5. ~~OSS 矩阵扩容:u2tool-wordcloud~~ ✅ 2026-10-24 完成(第 5 仓上线)
+5. ~~OSS 矩阵扩容~~ ✅ 2026-10-24 完成:u2tool-wordcloud(第 5 仓)+ u2tool-curl-converter(第 6 仓)
 6. ru→Habr、ja→Qiita、zh→导航站(多语种)
 7. 数据资产页外展:en 指南 social-media-image-sizes-2026(2026-10-24 上线)
 
