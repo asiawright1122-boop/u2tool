@@ -3,11 +3,16 @@
 本文件是 u2tool.com 外链的**唯一真实台账**。`data/directory-backlinks.csv` 是
 2026-02 的提交目标清单(36 行全 pending),不是外链记录,不再维护。
 
-## 当前状态(基线:2026-09-11 Bing Webmaster 导出)
+## 当前状态(2026-10-24 Bing Webmaster 导出,自动化快照)
 
-- **引用域(referring domains):3** —— ysmentohshin.site / aisubtools.xyz / saashub.com
-- 引用页面:4
-- 目标(90 天,至 2027-01):引用域 15–20
+- **引用域:5 / 引用页:9 / 锚文本:7**(9-11 基线:3 域 / 4 页 → +2 域 / +5 页)
+- **github.io:4 条 —— OSS 配套仓库的 GitHub Pages demo 页已被 Bing 外链索引计入**,
+  4 仓打法的直接验证(wordcloud/curl-converter 亦在其中)
+- ysmentohshin.site:2(既有)
+- freshtilecare.com:1(新;利雅得大理石护理阿语 WordPress 站,pingback 暴露,
+  判定为低质量未署名链接——不庆祝、不 disavow,持续观察)
+- aisubtools.xyz:1 / saashub.com:1(既有)
+- 目标(90 天,至 2027-01):引用域 15–20(当前 5)
 - Bing SEO 报告遗留 Moderate 项:"缺乏高质量域名外链"(唯一非外链类 Moderate 项已清零)
 
 ## 已获得外链
@@ -53,3 +58,4 @@
 
 快照文件:
 - `docs/backlink-snapshots/2026-09-11-bing.csv`(基线,3 域/4 页,手工转录)
+- `docs/backlink-snapshots/2026-10-24-bing.csv`(5 域/9 页,Bing "Download all" 自动导出)
