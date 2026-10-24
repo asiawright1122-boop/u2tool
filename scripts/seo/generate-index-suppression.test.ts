@@ -150,13 +150,16 @@ it.skipIf(!localCheckpointAvailable).each(['2026-10-09', '2026-10-16'])('replays
   expect(result.status, result.stderr).toBe(0);
   const plan = JSON.parse(result.stdout);
   expect(plan.changes).toEqual([]);
-  expect(plan.suppressed).toBe(3845);
-  expect(plan.retained).toBe(1795);
+  // 2026-10-24 AI-citation unsuppression (>=100 Copilot citations on
+  // noindex pages): -37 suppression lines, retained 1795 -> 1832. Evidence
+  // in docs/SEO_AI_CITATION_CHECKPOINT_2026-10-24.md.
+  expect(plan.suppressed).toBe(3808);
+  expect(plan.retained).toBe(1832);
   expect(plan.blockers).toContain('stale-checkpoint');
   expect(plan.reviewRequired).toContain('en/jwt-debugger');
 });
 
-it.each(['2026-10-09', '2026-10-16'])('protects all 226 migrated URLs even with fresh zero-demand candidates on %s', asOf => {
+it.each(['2026-10-09', '2026-10-16'])('protects all migrated URLs (263 after the 2026-10-24 AI-citation unsuppression) even with fresh zero-demand candidates on %s', asOf => {
   const input = fixture();
   input.asOf = asOf;
   input.catalogKeys = retention.entries.map(entry => entry.key);
@@ -169,7 +172,11 @@ it.each(['2026-10-09', '2026-10-16'])('protects all 226 migrated URLs even with 
   const plan = planIndexSuppression(input);
   expect(plan.blockers).toEqual([]);
   expect(plan.changes).toEqual([]);
-  expect(plan.retained).toBe(226);
+  // 226 migrated URLs at the 2026-10-09 baseline + 37 retention approvals
+  // added with the 2026-10-24 AI-citation unsuppression (>=100 Copilot
+  // citations on noindex pages; evidence in
+  // docs/SEO_AI_CITATION_CHECKPOINT_2026-10-24.md).
+  expect(plan.retained).toBe(263);
 });
 
 it('CLI preview never overwrites the approved suppression baseline', () => {
