@@ -130,3 +130,8 @@ T3 候选方向（见 docs/M3_CONTENT_REWRITE_LIST.md §3-T3）：
   release-gate set hash)依次更新,#66-#68 三个 PR;IndexNow 40 URL 已推。
 - **下一内容批次清单**(引用 ≥100 无本地 FAQ,12 页)已录入 checkpoint 文档,
   头部:zh/calendar-availability-finder 622、ja/unicode-converter 360。
+- **批次已执行(Pull #70)**:12 页 FAQ 全部落地(zh×5/de×2/es×1/fr×1 自审,
+  ja×2/ar×1 带显式母语审核标记);IndexNow 12 URL 推送成功,部署后 zh 抽查
+  FAQPage schema 已输出。Request Indexing 另完成 4/5 高引用解禁页
+  (python-formatter/image-frosted-glass/word-to-html/ip-address-generator;
+  string-escape 因提交端点持续超时未完成,列入明日队列)。
