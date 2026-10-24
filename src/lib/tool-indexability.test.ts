@@ -47,6 +47,11 @@ describe('shared tool language discovery', () => {
       expect(eligible).toEqual(locales.filter(locale => !INDEX_SUPPRESSION[`${locale}/${tool.slug}`]));
       retained += eligible.length;
     }
-    expect(retained).toBe(1795);
+    // Pinned retained-URL count. 1795 = 2026-10-10 checkpoint; 1832 = 2026-10-24
+    // AI-citation unsuppression of python-formatter, image-frosted-glass,
+    // ip-address-generator and word-to-html across locales (+37; evidence:
+    // exports/seo/ai-performance-pages-2026-10-24.csv, all >=100 Copilot
+    // citations on noindex pages). Update deliberately with evidence.
+    expect(retained).toBe(1832);
   });
 });

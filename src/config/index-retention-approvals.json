@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "recordedOn": "2026-10-09",
+  "recordedOn": "2026-10-24",
   "entries": [
     {
       "key": "ar/byte-counter",
@@ -1164,6 +1164,191 @@
       "key": "zh/wordcloud-generator",
       "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
       "evidence": "0780739f baseline and July 13 generator replay; recovery review 2026-10-09"
+    },
+    {
+      "key": "ar/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ar/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ar/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ar/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "de/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "de/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "de/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "en/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "en/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "en/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "es/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "es/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "es/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "es/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "fr/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "fr/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "fr/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "fr/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ja/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ja/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ja/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ja/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ko/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ko/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ko/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ko/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "pt/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "pt/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "pt/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "pt/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ru/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ru/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "ru/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "zh/image-frosted-glass",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "zh/ip-address-generator",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "zh/python-formatter",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
+    },
+    {
+      "key": "zh/word-to-html",
+      "reason": "Preserve reviewed retained state; legacy regeneration would regress this restored URL.",
+      "evidence": "AI Performance export 2026-10-24 (exports/seo/ai-performance-pages-2026-10-24.csv): >=100 Copilot citations on a noindex page; unsuppression per 9-12 precedent"
     }
   ]
 }
