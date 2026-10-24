@@ -389,6 +389,11 @@ const usageExamples = supportContentTrust.blockSupportContent || !hasSupportList
 const faqs = supportContentTrust.blockSupportContent || rawFaqs.length === 0
   ? supportContentFallback?.faqs ?? []
   : rawFaqs;
+// FAQPage structured data is emitted only for authored FAQs. Generic fallback
+// FAQs may still render on the page for usability, but claiming FAQ rich
+// results for template content across thousands of pages is a scaled-content
+// spam signal for Google and dilutes genuine FAQ eligibility.
+const faqSchemaEligible = !supportContentTrust.blockSupportContent && rawFaqs.length > 0;
 
 const howToUseTemplates: Record<string, string> = {
   ar: 'كيفية استخدام {name}',
@@ -572,8 +577,8 @@ const CLUSTER_BLOCKS: ToolClusterBlock[] = [
     <StructuredData type="HowTo" data={howToData} slot="head" />
   )}
 
-  {/* SEO: FAQPage structured data */}
-  {faqs && faqs.length > 0 && (
+  {/* SEO: FAQPage structured data (authored FAQs only, never fallback templates) */}
+  {faqSchemaEligible && faqs && faqs.length > 0 && (
     <StructuredData type="FAQPage" data={{
       mainEntity: faqs.map((faq) => ({
         '@type': 'Question',
