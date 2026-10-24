@@ -8,6 +8,13 @@
     "global_fetch_strictly_public"
   ],
   "workers_dev": true,
+  // Runtime vars. PUBLIC_AI_DISCOVERY_ENABLED surfaces in process.env via
+  // nodejs_compat, enabling the /api/ai-discovery/search endpoint that
+  // openapi.json and llms.txt advertise to AI agents. Keep in sync with the
+  // deploy workflow's build-time env.
+  "vars": {
+    "PUBLIC_AI_DISCOVERY_ENABLED": "true"
+  },
   "routes": [
     {
       "pattern": "u2tool.com/*",
