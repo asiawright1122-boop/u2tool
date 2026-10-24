@@ -13,5 +13,27 @@
     "An online course instructor converts PDF quizzes to JPEG images for embedding in LMS platforms that block PDF uploads",
     "An office worker converts selected PDF pages into images for quick sharing in a chat or document",
     "A developer converts PDF invoices to optimized JPEGs for a legacy CMS that lacks PDF rendering capabilities"
+  ],
+  "faqs": [
+    {
+      "question": "How does the PDF to Image converter work?",
+      "answer": "It loads your PDF with PDF.js directly in the browser, renders each selected page to a canvas, and saves the rasterized page as a PNG or JPEG file. The PDF never leaves your device."
+    },
+    {
+      "question": "Which output formats and resolutions are available?",
+      "answer": "You can export PNG for lossless quality or JPEG for smaller files, at 72, 150, or 300 DPI. Use 300 DPI when the image will be printed and 72 or 150 DPI for screen use."
+    },
+    {
+      "question": "Can I convert only specific pages?",
+      "answer": "Yes. After the PDF loads, page previews let you pick exactly the pages you want to export, so a 50-page document does not have to be rasterized in full."
+    },
+    {
+      "question": "Is there a file size or page limit?",
+      "answer": "There is no server-side limit because nothing is uploaded. Very large PDFs are constrained only by your browser's available memory, so very long documents are best converted in page batches."
+    },
+    {
+      "question": "Will scanned or image-based PDFs convert cleanly?",
+      "answer": "Image-based pages rasterize faithfully because each page is rendered as it appears. Text-based pages stay crisp at higher DPI settings; scanned pages depend on the quality of the original scan."
+    }
   ]
 }

@@ -44,6 +44,20 @@ User-agent: PerplexityBot
 Allow: /
 Disallow: /api/
 
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: CCBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 

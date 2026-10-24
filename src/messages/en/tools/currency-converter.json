@@ -12,5 +12,27 @@
     "Swap two selected currencies to compare the direct and inverse rate display.",
     "Check quick conversion rows for common amounts like 10, 100, or 1000.",
     "Format a BTC or ETH conversion with eight decimal places for rough reference."
+  ],
+  "faqs": [
+    {
+      "question": "Where do the exchange rates come from?",
+      "answer": "The converter requests the latest reference rates from the free Frankfurter API when your browser is online. If the request cannot be completed, it falls back to a bundled rate snapshot so the tool keeps working offline."
+    },
+    {
+      "question": "Are the rates real-time market rates?",
+      "answer": "No. They are reference rates suitable for estimates, budgeting, and price comparisons. Banks and payment providers apply their own spreads, so confirm the exact rate with your provider before making a transaction."
+    },
+    {
+      "question": "How do I convert an amount?",
+      "answer": "Enter a non-negative amount, pick a source and a target currency from the grouped dropdowns, and the converted amount, exchange rate, and inverse rate update immediately. Use the swap button to reverse the pair."
+    },
+    {
+      "question": "How many currencies are supported?",
+      "answer": "Major world currencies plus a broad set of secondary currencies are grouped in the dropdowns so you can find a pair quickly. Search or scroll the list by currency code or name."
+    },
+    {
+      "question": "Is my input sent to a server?",
+      "answer": "Conversion math runs locally in your browser. The only network request is the public rate fetch, which contains no personal data; nothing you type is stored or uploaded."
+    }
   ]
 }

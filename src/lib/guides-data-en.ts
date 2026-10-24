@@ -552,6 +552,73 @@ export const guidesEn: Guide[] = [
       "compound-interest-calculator",
       "excel-viewer"
     ]
+  },
+  {
+    slug: 'social-media-image-sizes-2026',
+    title: 'Social Media Image Sizes in 2026: The Complete Cheat Sheet',
+    description: 'Correct image sizes for Instagram, Facebook, X, LinkedIn, YouTube, TikTok and more in 2026, with aspect ratios and export tips that avoid blurry uploads.',
+    eyebrow: 'Reference guide',
+    updated: 'Updated October 24, 2026',
+    sections: [
+      {
+        title: 'Instagram sizes in 2026',
+        paragraphs: [
+          'Instagram posts render best at 1080 pixels wide. Square posts are 1080 x 1080 (1:1), portrait posts 1080 x 1350 (4:5) — portrait gets the most screen area in the feed — and landscape posts 1080 x 566 (1.91:1).',
+          'Stories and Reels use 1080 x 1920 (9:16). Profile photos upload at 320 x 320 but display as a small circle, so keep logos centered. Carousels use the square or portrait post size for every card.',
+        ],
+      },
+      {
+        title: 'Facebook, X, and LinkedIn sizes',
+        paragraphs: [
+          'Facebook shared images and link previews are 1200 x 630 (1.91:1); cover photos are 820 x 312 on desktop. Keep text inside the safe center zone because mobile crops the sides.',
+          'X (Twitter) header photos are 1500 x 500 (3:1) and in-stream photos 1600 x 900 or 1200 x 675 (16:9). LinkedIn shared images are 1200 x 627, personal background photos 1584 x 396, and company covers 1128 x 191.',
+        ],
+      },
+      {
+        title: 'YouTube and TikTok sizes',
+        paragraphs: [
+          'YouTube video thumbnails are 1280 x 720 (16:9) and must stay under 2MB; Shorts take 1080 x 1920 (9:16). The channel banner is uploaded at 2560 x 1440 but only a narrow 1546 x 423 band is visible on most devices.',
+          'TikTok videos and covers are 1080 x 1920 (9:16); profile photos display at 200 x 200. For both platforms, keep captions and logos away from the bottom quarter of the frame where UI elements overlap.',
+        ],
+      },
+      {
+        title: 'How to resize without losing quality',
+        paragraphs: [
+          'Start from the largest original you have and scale down — never upscale a small image to a larger canvas, which produces blur. Export as PNG for graphics with sharp text or logos, and JPEG at 80-90% quality for photos.',
+          'A browser-based image resizer handles the crop-and-scale step locally without uploading your file, and an image cropper lets you reframe to the exact aspect ratio first. For YouTube thumbnails specifically, a thumbnail generator applies the 1280 x 720 frame with safe-area guides.',
+        ],
+      },
+      {
+        title: 'Why exact sizes still matter in 2026',
+        paragraphs: [
+          'Platforms re-encode every upload. When your image already matches the target size and ratio, the platform applies minimal recompression and the result stays sharp; wrong-sized uploads get cropped, letterboxed, or softened by aggressive downscaling.',
+          'Sizes do change occasionally. This sheet tracks the values the platforms currently document; re-check cover/header art each quarter, since those placements change most often.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: 'What is the best Instagram post size in 2026?',
+        answer: '1080 x 1350 pixels (4:5 portrait) gets the largest feed footprint. 1080 x 1080 square also performs well; 1080 x 566 is the landscape option.',
+      },
+      {
+        question: 'What happens if I upload the wrong image size?',
+        answer: 'The platform crops or pads the image automatically. Covers and banners suffer most because visible area differs by device, so key content can be cut off entirely.',
+      },
+      {
+        question: 'Should I export PNG or JPEG for social media?',
+        answer: 'PNG for screenshots, logos, and images with text; JPEG at 80-90% quality for photographs. Both survive platform recompression better than exotic formats.',
+      },
+      {
+        question: 'Do social media image sizes change often?',
+        answer: 'Feed sizes have been stable for years; headers, covers, and story placements change more often. Re-check this sheet quarterly before a campaign.',
+      },
+      {
+        question: 'Can I resize images without uploading them anywhere?',
+        answer: 'Yes. Browser-based tools like the image resizer and image cropper process files locally on your device, so nothing is uploaded to a server.',
+      },
+    ],
+    relatedTools: ['image-resizer', 'image-cropper', 'youtube-thumbnail-generator', 'image-compressor', 'favicon-generator'],
   }
 
 ];

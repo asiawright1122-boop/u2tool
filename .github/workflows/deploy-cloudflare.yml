@@ -21,6 +21,9 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       PUBLIC_CF_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CF_ANALYTICS_TOKEN }}
+      # Build-time parity with wrangler.jsonc vars: enables the AI discovery
+      # search API advertised in openapi.json and llms.txt.
+      PUBLIC_AI_DISCOVERY_ENABLED: 'true'
 
     steps:
       - name: Checkout code

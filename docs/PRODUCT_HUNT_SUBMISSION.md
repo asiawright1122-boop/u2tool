@@ -1,179 +1,113 @@
-# Product Hunt 提交材料
+# Product Hunt 提交材料(2026-10-24 重写)
+
+> 2026-01 版本基于"200+ tools / Next.js / Vercel / 5 语言"撰写,已全面过期。
+> 本版对齐当前事实:**564 个工具 × 10 语言,Astro SSR + Cloudflare Workers,
+> 隐私优先(纯浏览器端处理),4 个配套开源仓库**。发布前再核对一次数字。
 
 ## 基本信息
 
 ### 产品名称
-**U2Tool - Free Online Developer Tools**
 
-### Tagline (60字符以内)
-200+ free developer tools in your browser. No signup required.
+U2Tool — Free Private Online Tools
 
-### 简短描述 (260字符以内)
-U2Tool is a free, open-source collection of 200+ developer tools. JSON formatter, Base64 encoder, UUID generator, QR code maker, and more. All processing happens locally in your browser - your data never leaves your device. Multi-language support included.
+### Tagline(60 字符以内)
+
+- 主推:**564 free tools that run 100% in your browser**(49 字符)
+- 备选:No sign-up. No uploads. Just tools.(34 字符)
+
+### 简短描述(260 字符以内)
+
+564 free browser tools across 10 languages — convert, format, generate,
+validate and visualize without sign-up. Everything runs locally: no uploads,
+no tracking. Built for humans and AI agents alike (llms.txt + markdown
+friendly). (226 字符)
 
 ### 详细描述
-U2Tool is a comprehensive, SEO-optimized developer toolbox built with Next.js 14. It offers over 200 essential tools that developers use daily, all running directly in your browser for maximum privacy and speed.
 
-**Key Features:**
-- 🛠️ **200+ Tools**: JSON, encoding, generators, text processing, converters, formatters, image tools, network utilities, CSS generators, and security tools
-- 🔒 **Privacy First**: All processing happens client-side. Your data never touches our servers
-- 🌍 **Multi-language**: Available in English, Chinese, Spanish, Portuguese, and Japanese
-- ⚡ **Lightning Fast**: Static generation, edge deployment, optimized Core Web Vitals
-- 💰 **100% Free**: No registration, no limits, no hidden costs
-- 📱 **Mobile Friendly**: Responsive design works on any device
-- 🎨 **Modern UI**: Clean interface with dark mode support
+U2Tool is a dense, practical toolbox: JSON/CSV/PDF converters, chart
+generators (ECharts), developers' utilities (hex editor, SQL optimizer,
+HAR viewer), text tools, calculators, image utilities, security checkers —
+564 tools in total, each fully localized in 10 languages including RTL
+Arabic.
 
-**Popular Tools:**
-- JSON Formatter & Validator
-- Base64 Encoder/Decoder
-- UUID Generator (v1/v4/v7)
-- QR Code Generator
-- Password Generator
-- Hash Generator (MD5/SHA)
-- JWT Decoder
-- Regex Tester
-- Color Converter
-- Timestamp Converter
+Three things we did differently:
 
-**Why U2Tool?**
-Unlike other tool sites, U2Tool is completely open-source and privacy-focused. We don't track your data, show intrusive ads, or require registration. Just bookmark and use whenever you need.
+1. **Privacy by architecture.** Processing happens in your browser with
+   client-side libraries. There is no upload endpoint to leak data through.
+2. **Honest SEO.** A data-driven index governance system soft-shelves
+   pages without search demand (reversible noindex, never 404) instead of
+   hosting 5,600 dead pages.
+3. **AI-agent friendly.** llms.txt catalogs, markdown content negotiation
+   on every tool page, and an OpenAPI 3.1 spec so AI agents can discover
+   and cite the tools. Bing/Copilot cites our pages 48K+ times per quarter.
+
+The engine room is open: four companion OSS repos (hex editor, CSV→vCard,
+iCal parser, chart kit) with live GitHub Pages demos link back to the site.
 
 ### 分类建议
-- Developer Tools
-- Productivity
-- Open Source
 
----
+- 主:Developer Tools
+- 备:Productivity
+
+### 话题标签
+
+#DevTools #OpenSource #Privacy #WebTools #NoCode
 
 ## 视觉素材清单
 
-### Logo
-- [ ] 240x240 PNG (Product Hunt 要求)
-- [ ] 透明背景版本
-
-### Gallery 图片 (最多5张)
-1. **首页截图** - 展示工具分类和搜索功能
-2. **JSON Formatter** - 最受欢迎的工具演示
-3. **多语言支持** - 展示语言切换功能
-4. **移动端适配** - 手机端使用效果
-5. **暗色主题** - Dark mode 效果展示
-
-### 推荐尺寸
-- Gallery: 1270x760 px
-- GIF 动图: 展示工具使用流程
-
----
+- Logo:使用站点 favicon.svg 矢量版
+- Gallery 5 张(重新截图,旧图含 Next.js 时代 UI):
+  1. 首页 hero + 分类导航(英文)
+  2. 工具页特写:hex-editor(暗色主题)
+  3. 图表工具特写:箱线图/桑基图并排
+  4. 10 语言切换 + 阿拉伯语 RTL 页面
+  5. llms.txt / AI agent markdown 视角(差异化卖点)
+- 尺寸:1270×760(Gallery),240×240(Logo)
 
 ## 发布策略
 
-### 最佳发布时间
-- **日期**: 周二至周四
-- **时间**: 太平洋时间 00:01 (北京时间 16:01)
-
-### 发布前准备
-- [ ] 准备好所有视觉素材
-- [ ] 邀请 5-10 位 Hunter 关注
-- [ ] 准备社交媒体宣传文案
-- [ ] 通知现有用户投票支持
-
-### 发布当天
-- [ ] 00:01 PT 准时发布
-- [ ] 在 Twitter/X 发布公告
-- [ ] 在相关社区分享（Reddit, Hacker News, Dev.to）
-- [ ] 及时回复所有评论
-
----
+- 时间:周二或周三 00:01 PT(PH 新周期),避开美国节假日
+- 前置:确认当天无巨头产品发布(PH 首页侦察)
+- Maker 前排:提前准备好前 3 条评论的回复模板
+- 协同:与 BetaList / Show HN 同周但不同日,错峰 48h
+- 站内配合:发布周开启 en 首页轻量 "As seen on Product Hunt" 徽标(可选)
 
 ## 社交媒体文案
 
-### Twitter/X 发布文案
-```
-🚀 Just launched U2Tool on @ProductHunt!
+### X/Twitter
 
-200+ free developer tools in your browser:
-✅ JSON Formatter
-✅ Base64 Encoder
-✅ UUID Generator
-✅ QR Code Maker
-✅ And 196 more...
+564 free tools. Zero uploads. 10 languages.
+Convert, format, chart, validate — all in your browser.
+Today on @ProductHunt 🧰
 
-All client-side. No signup. No tracking.
+#DevTools #Privacy
 
-Check it out 👇
-[Product Hunt Link]
+### Reddit(r/InternetIsBeautiful,r/tools;避免 r/programming 硬广规则)
 
-#DevTools #OpenSource #WebDev
-```
+标题:I built a no-signup toolbox of 564 browser tools — everything runs
+locally, nothing uploads
 
-### Reddit 发布文案 (r/webdev, r/programming)
-```
-Title: I built a free collection of 200+ developer tools that run entirely in your browser
+正文要点:为什么做(厌倦了假"免费"工具墙)、隐私架构、AI 友好层、
+开源配套仓库、欢迎挑刺(列出你想要但没有的工具)。
 
-Hey everyone! I've been working on U2Tool, a comprehensive developer toolbox with 200+ tools.
+### Hacker News(Show HN)
 
-What makes it different:
-- All processing happens in your browser (privacy first)
-- No registration required
-- Multi-language support (EN, ZH, ES, PT, JA)
-- Open source
-- Mobile friendly
+Show HN: U2Tool – 564 free in-browser tools, no sign-up, no uploads
+(https://www.u2tool.com)
 
-Popular tools include JSON formatter, Base64 encoder, UUID generator, QR code maker, hash generator, and many more.
+评论策略:首条评论讲索引治理的反直觉决策(主动 noindex 3,800 个无需求页),
+这是 HN 受众喜欢的工程细节。
 
-Would love to hear your feedback!
+## Maker 评论模板(发布后自顶楼)
 
-Link: https://www.u2tool.com
-```
+Hi, maker here. Quick context on three design choices people ask about:
 
----
+1. Why 564 tools? Demand-data driven — we launch tools people search for
+   and shelve (reversibly) the ones they don't.
+2. "Free" really means free: no account wall, no upload step, no export
+   watermark.
+3. For the AI-curious: try `curl -H "Accept: text/markdown"
+   https://www.u2tool.com/en/tools/hex-editor/` — every tool page speaks
+   markdown for agents.
 
-## Maker 评论模板
-
-### 首条评论 (发布后立即发)
-```
-Hi Product Hunt! 👋
-
-I'm excited to share U2Tool - a project I've been working on to make developers' lives easier.
-
-**The Problem:**
-As developers, we constantly need small utilities - encoding a string, formatting JSON, generating UUIDs. Most online tools are cluttered with ads, require signups, or send your data to servers.
-
-**The Solution:**
-U2Tool provides 200+ essential tools that:
-- Run 100% in your browser
-- Never upload your data
-- Work offline after first load
-- Support multiple languages
-
-**Tech Stack:**
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Deployed on Vercel
-
-I'd love to hear your feedback and suggestions for new tools!
-
-🔗 https://www.u2tool.com
-```
-
----
-
-## 常见问题准备
-
-**Q: Is it really free?**
-A: Yes, 100% free. No premium tiers, no hidden costs.
-
-**Q: Is my data safe?**
-A: All processing happens in your browser. We don't collect or store any of your data.
-
-**Q: Can I use it offline?**
-A: Most tools work offline after the initial page load since they run client-side.
-
-**Q: Is it open source?**
-A: Yes! Check out our GitHub repository.
-
-**Q: How can I contribute?**
-A: We welcome contributions! Check our CONTRIBUTING.md for guidelines.
-
-**Q: Will you add more tools?**
-A: Absolutely! We're constantly adding new tools based on user feedback.
+Ask me anything — including which tool you'd want added next.
