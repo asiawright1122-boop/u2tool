@@ -28,7 +28,7 @@
       "utf8TextConverter": "La conversión de texto usa UTF-8"
     }
   },
-  "detailed_description": "Abre un archivo binario local de hasta 2 MiB en una cuadrícula paginada de 16 bytes con desplazamientos rellenados con ceros. Edita bytes hexadecimales, consulta la vista previa ASCII imprimible de solo lectura, busca en todo el archivo, restablece cambios y descarga una copia modificada. Todo el procesamiento permanece en el navegador; el convertidor de texto usa UTF-8.",
+  "detailed_description": "Abre un archivo binario local de hasta 2 MiB en una cuadrícula paginada de 16 bytes con desplazamientos rellenados con ceros. Edita bytes hexadecimales, consulta la vista previa ASCII imprimible de solo lectura y restablece los cambios con un clic si una edición sale mal, antes de descargar la copia modificada. La búsqueda recorre todo el archivo tanto en hexadecimal como en texto ASCII, usando el algoritmo KMP para mantenerse rápida incluso en archivos grandes: útil para localizar una firma de formato, una constante incrustada o una secuencia concreta en un volcado binario. El conversor de texto integrado convierte un bloque entre hexadecimal y texto UTF-8 para inspeccionar cadenas legibles. Casos de uso típicos: verificar cabeceras de archivo, depurar un formato binario propio, revisar una exportación o corregir bytes sueltos. Todo el procesamiento permanece en el navegador y nada se envía a ningún servidor.",
   "usage_steps": [
     "1. Selecciona un archivo local de hasta 2 MiB.",
     "2. Edita un byte hexadecimal de dos dígitos y revisa la vista previa ASCII derivada.",

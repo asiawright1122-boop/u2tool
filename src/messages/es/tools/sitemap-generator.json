@@ -10,5 +10,27 @@
   "usage_examples": [
     "Usa el Generador de Sitemaps para procesar tus datos",
     "Obtén rápidamente los resultados del procesamiento sin esperar"
+  ],
+  "faqs": [
+    {
+      "question": "¿El generador de sitemas rastrea mi sitio web?",
+      "answer": "No. Es un constructor manual de sitemas XML: introduces las URL o rutas que quieres incluir y la página da formato a esas filas como XML de sitemap."
+    },
+    {
+      "question": "¿Qué campos puedo configurar para cada URL?",
+      "answer": "Cada fila admite loc, lastmod, changefreq y priority, los campos habituales de un sitemap XML para describir la URL y su frecuencia de actualización."
+    },
+    {
+      "question": "¿Puedo descargar el archivo sitemap.xml?",
+      "answer": "Sí. Tras generar el XML puedes copiar el texto o descargarlo directamente como sitemap.xml desde el navegador."
+    },
+    {
+      "question": "¿Es adecuado para sitios grandes?",
+      "answer": "Funciona mejor para sitemas pequeños y borradores manuales. No rastrea miles de páginas ni crea índices de sitemas ni divide archivos grandes automáticamente."
+    },
+    {
+      "question": "¿Envía el sitemap a los buscadores?",
+      "answer": "No. Solo genera el XML y la descarga del archivo. La entrega final se hace desde tu hosting o desde las herramientas para webmasters, tras revisar las URL."
+    }
   ]
 }

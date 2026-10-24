@@ -28,7 +28,7 @@
       "utf8TextConverter": "La conversion de texte utilise UTF-8"
     }
   },
-  "detailed_description": "Ouvrez un fichier binaire local jusqu’à 2 MiB dans une grille paginée de 16 octets avec des décalages complétés par des zéros. Modifiez les octets hexadécimaux, consultez l’aperçu ASCII imprimable en lecture seule, recherchez dans tout le fichier, réinitialisez les changements et téléchargez une copie modifiée. Tout le traitement reste dans le navigateur.",
+  "detailed_description": "Ouvrez un fichier binaire local jusqu'à 2 MiB dans une grille paginée de 16 octets avec des décalages complétés par des zéros. Éditez les octets hexadécimaux, consultez l'aperçu ASCII imprimable en lecture seule, et réinitialisez les changements d'un clic si une manipulation tourne mal avant de télécharger la copie modifiée. La recherche parcourt tout le fichier en hexadécimal comme en texte ASCII, avec l'algorithme KMP pour rester rapide même sur de gros fichiers : idéal pour repérer une signature de format, une constante embarquée ou une séquence précise dans un dump. Le convertisseur texte intégré bascule un bloc entre hexadécimal et texte UTF-8 pour inspecter des chaînes lisibles. Cas d'usage typiques : vérifier des en-têtes de fichier, déboguer un format binaire propriétaire, contrôler un export ou nettoyer des octets isolés. Tout le traitement reste dans le navigateur, rien n'est envoyé à un serveur.",
   "usage_steps": [
     "1. Choisissez un fichier local de 2 MiB au maximum.",
     "2. Modifiez un octet hexadécimal à deux chiffres et vérifiez l’aperçu ASCII dérivé.",

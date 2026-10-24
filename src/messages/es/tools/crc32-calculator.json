@@ -13,5 +13,27 @@
     "Un ingeniero de redes valida paquetes Ethernet descartados al comprobar coincidencias en el FCS (Frame Check Sequence) usando CRC32 calculado en headers.",
     "Un arquitecto de software compara hashes CRC32 de archivos ZIP generados en diferentes servidores para asegurar consistencia en despliegues automatizados.",
     "Un fabricante de hardware prueba la fiabilidad de una FPGA en transmisiones SPI verificando coincidencias de CRC32 en datos enviados y recibidos bajo condiciones de ruido."
+  ],
+  "faqs": [
+    {
+      "question": "¿El archivo subido sale de mi navegador?",
+      "answer": "No. El archivo se lee localmente en el navegador y el checksum se calcula con los bytes de tu propio dispositivo."
+    },
+    {
+      "question": "¿Qué variante de CRC utiliza?",
+      "answer": "Usa el cálculo CRC-32 reflejado habitual con la tabla de búsqueda estándar, y devuelve un valor en hexadecimal y otro en decimal."
+    },
+    {
+      "question": "¿Puede procesar varios archivos a la vez?",
+      "answer": "No. La interfaz actual calcula un texto o un archivo cada vez."
+    },
+    {
+      "question": "¿Es CRC32 un hash de seguridad?",
+      "answer": "No. CRC32 sirve para detección de errores y comparaciones rápidas, pero no es un hash criptográfico."
+    },
+    {
+      "question": "¿Qué debo revisar antes de usar el resultado?",
+      "answer": "Revisa el código, la configuración, el análisis de los datos y cualquier supuesto antes de usar el valor en un repositorio, script o flujo de despliegue."
+    }
   ]
 }
