@@ -115,3 +115,18 @@ T3 候选方向（见 docs/M3_CONTENT_REWRITE_LIST.md §3-T3）：
 - **PR #55 已合并上线**:AI 搜索 API 生产启用(实测返回结果)、robots.txt 补 4 个 AI 爬虫、FAQPage schema 仅对 authored FAQ、boxplot 四语言 TDK 修复、llms 恢复路由 config 化、社媒尺寸指南(链接诱饵)、外链台账。
 - **第 5 个 OSS 外链仓库上线**:u2tool-wordcloud(Pages demo 200),矩阵 5 仓/21 链。
 - **网页-previous.csv 缺口**:手工导出不产生该文件(API 拉取专用格式),readiness 报告需服务账号(Option B)才能跑;10-10 手工检查点同样无此文件。建议尽快配置 GSC_SERVICE_ACCOUNT_JSON 以解锁 `gsc:api-pull` 全自动化。
+
+### 2026-10-24 晚间:AI 引用数据首次自动化拉取 + 第二轮解禁
+
+- **数据源升级**:Bing Webmaster → AI Performance 报告自动导出(91 天日序列 +
+  644 页明细 + 374 查询),取代手工抽查。恢复曲线:解禁后日均引用 648,
+  **超过抑制前峰值 527**;8 月 4 日大 noindex 曾使被引页腰斩(77→36)。
+  详见 [AI 引用 checkpoint](./SEO_AI_CITATION_CHECKPOINT_2026-10-24.md)。
+- **观察名单复核(10-10 遗留 6 页)**:引用全部 <20(7/8/4/18/1/0),维持抑制,
+  证据闭环。
+- **第二轮解禁**:python-formatter(326 引用)、image-frosted-glass(288)、
+  ip-address-generator(114)、word-to-html(100)全语种解禁,+37 URL
+  (1,795→1,832)。三层治理 pin(tool-indexability / generator replay /
+  release-gate set hash)依次更新,#66-#68 三个 PR;IndexNow 40 URL 已推。
+- **下一内容批次清单**(引用 ≥100 无本地 FAQ,12 页)已录入 checkpoint 文档,
+  头部:zh/calendar-availability-finder 622、ja/unicode-converter 360。
