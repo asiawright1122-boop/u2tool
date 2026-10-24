@@ -13,5 +13,27 @@
     "Ein Datenbankadministrator migriert historische Datensätze von MySQL (DATETIME) zu PostgreSQL und nutzt den Converter, um Unix-Zeitstempel in TIMESTAMP WITH TIME ZONE Werte umzuwandeln.",
     "Ein IoT-Ingenieur berechnet für ein Gerät einen zukünftigen Aktivierungszeitstempel durch Eingabe eines Lesezeichens '2025-01-01 00:00:00' mit Zeitzone und wandelt es in 1735675200 um.",
     "Ein Frontend-Entwickler passt einen JavaScript-Date.now()-Timestamp (mit 13 Stellen) an Python's time.time()-Format (Sekunden mit Dezimalstellen) an, indem er die Präzision auf 3 Stellen reduziert."
+  ],
+  "faqs": [
+    {
+      "question": "Was konvertiert dieses Werkzeug?",
+      "answer": "Es rechnet in beide Richtungen: Unix-Zeitstempel (Sekunden) in ein lesbares Datum und ein Datum in einen Unix-Zeitstempel, inklusive aktuellem Zeitstempel per Jetzt-Button."
+    },
+    {
+      "question": "Welche Zeitzone verwendet die Ausgabe?",
+      "answer": "Die Anzeige folgt der Zeitzone deines Browsers. Prüfe bei serverseitigen Werten, ob diese in UTC gespeichert sind, und rechne entsprechend um."
+    },
+    {
+      "question": "Was ist der Unterschied zwischen Sekunden und Millisekunden?",
+      "answer": "Unix-Zeitstempel kommen in beiden Einheiten vor. Ergibt die Umrechnung ein Datum weit in der Zukunft oder Vergangenheit, liegt wahrscheinlich ein Millisekunden-Wert vor — teile ihn durch 1000."
+    },
+    {
+      "question": "Kann ich Werte kopieren?",
+      "answer": "Ja, jedes Ergebnisfeld lässt sich per Kopier-Button direkt in die Zwischenablage übernehmen."
+    },
+    {
+      "question": "Werden meine Eingaben gespeichert?",
+      "answer": "Nein. Die Umrechnung läuft vollständig lokal im Browser; es werden keine Eingaben übertragen oder gespeichert."
+    }
   ]
 }

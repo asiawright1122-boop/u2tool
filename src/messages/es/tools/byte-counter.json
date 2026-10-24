@@ -13,5 +13,27 @@
     "Un ingeniero de bases de datos confirma que una cadena Unicode con caracteres circilos y emojis no sobrepase el límite de 512 bytes de un campo VARCHAR.",
     "Un especialista en redes analiza el tamaño exacto de un mensaje codificado en UTF-16LE para protocolos binarios como MQTT.",
     "Un docente demuestra visualmente cómo el carácter '€' ocupa 3 bytes en UTF-8 pero 2 bytes en UTF-16 cuando se activa la opción de visualización hexadecimal."
+  ],
+  "faqs": [
+    {
+      "question": "¿Qué cuenta exactamente esta herramienta?",
+      "answer": "Cuenta los bytes UTF-8 del texto: los caracteres ASCII pesan 1 byte y los caracteres acentuados, emojis u otros símbolos pueden pesar 2-4 bytes."
+    },
+    {
+      "question": "¿Por qué bytes y no solo caracteres?",
+      "answer": "Los bytes son lo que importa en límites de bases de datos (VARCHAR), tamaños de mensajes y campos de formularios; el recuento de caracteres puede engañar con texto multilingüe."
+    },
+    {
+      "question": "¿Se actualiza el recuento mientras escribo?",
+      "answer": "Sí. El recuento se recalcula localmente con cada cambio, sin pasos intermedios."
+    },
+    {
+      "question": "¿Se envía mi texto a algún servidor?",
+      "answer": "No. Todo el cálculo ocurre en tu navegador; el texto nunca sale de tu dispositivo."
+    },
+    {
+      "question": "¿Sirve para límites de SMS o publicaciones?",
+      "answer": "Como referencia rápida sí; recuerda que los SMS usan codificación GSM-7 con reglas propias, así que verifica el límite específico de cada plataforma."
+    }
   ]
 }
