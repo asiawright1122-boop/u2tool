@@ -42,6 +42,9 @@
 ## 月度快照流程
 
 1. Bing Webmaster → SEO Report → Backlinks → 导出 CSV。
+   - 2026-10-24 首次自动化尝试:**被 Microsoft 登录阻断**(IAB 无微软会话,
+     Sign In 不走 SSO)。需手动登录后导出;wordcloud 仓库链接上线仅数小时,
+     Bing 外链索引滞后数周,10 月快照本就不必包含。
 2. 存为 `docs/backlink-snapshots/<YYYY-MM-DD>-bing.csv`。
 3. 更新本文件"当前状态"小节的引用域/页面数与日期。
 4. Google Search Console → 链接数量(仅参考,数据滞后)。
