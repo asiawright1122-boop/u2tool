@@ -106,3 +106,12 @@ T3 候选方向（见 docs/M3_CONTENT_REWRITE_LIST.md §3-T3）：
 - **观察名单（无充分解禁证据，勿放开）**：zh/totp-generator（8 次 AI 引用，远低于 3.5K 门槛）、zh/line-chart-generator、zh/text-to-binary、zh/aspect-ratio、zh/text-to-image、ja/wordcloud-generator（后 5 页 AI 引用为 0）。
 - **下批内容债**：boxplot 描述 ja 315B（病句）/ko 274B（混越南语）/ar 246B/ru 228B 需逐语言重写；en/unicode-converter 描述 193/180 超限为既有警告。
 - **T3 启动条件对照**：Bing 端已满足"CTR>1% 稳定点击"（桑基图在线制作 14.89%）与"展示 +30%"（+42%）；Google 端均未满足。是否启动 T3 建议在下个 checkpoint（10-24）结合两端数据决策。
+
+## 2026-10-24 执行台账(T3 决策日)
+
+- **T3 门槛正式开启**(详见 [T3_GATE_DECISION_2026-10-24](./SEO_T3_GATE_DECISION_2026-10-24.md)):Bing 侧三条件全满足;Google 侧内容重写收窄至 GEO 矩阵 139 个 P0/P1 页。
+- **GSC 检查点 2026-10-24 落盘**(手工导出,近 3 个月):837 页有展示 / 10 点击 / 5,142 曝光 / 平均排名 54.2。**比较模式读数:上一期(4/22–7/22)29 点击 / 8,603 曝光 → 当前期 10 点击——Google 仍在下滑**,与"索引滞后、恢复未落地"判断一致。Drilldown:[GSC_DRILLDOWN_URL_REPORT_2026-10-24](./GSC_DRILLDOWN_URL_REPORT_2026-10-24.md)。
+- **Request Indexing 自动化提交 8/10**(浏览器自动化,账号 kakawah1122):note-pad、keyboard-tester、api-response-formatter、byte-counter(zh)、curl-converter(zh)、ip-validator(zh)、character-map(zh)、crc32-calculator 全部确认入队;第 9-10 条触发 GSC 错误页(软限流),与 10-10 台账现象一致。**明日队列 5 条**:zh/sql-injection-tester、en/byte-counter、en/curl-converter、en/ip-validator、en/character-map。台账:`exports/seo/gsc-request-indexing-2026-10-24/session-ledger.md`(含可复用的自动化配方)。
+- **PR #55 已合并上线**:AI 搜索 API 生产启用(实测返回结果)、robots.txt 补 4 个 AI 爬虫、FAQPage schema 仅对 authored FAQ、boxplot 四语言 TDK 修复、llms 恢复路由 config 化、社媒尺寸指南(链接诱饵)、外链台账。
+- **第 5 个 OSS 外链仓库上线**:u2tool-wordcloud(Pages demo 200),矩阵 5 仓/21 链。
+- **网页-previous.csv 缺口**:手工导出不产生该文件(API 拉取专用格式),readiness 报告需服务账号(Option B)才能跑;10-10 手工检查点同样无此文件。建议尽快配置 GSC_SERVICE_ACCOUNT_JSON 以解锁 `gsc:api-pull` 全自动化。
