@@ -11,5 +11,27 @@
     "Finden Sie den ASCII-Code für den Zeilenumbruch (Dezimal 10, Hexadezimal 0A)",
     "Nachschlagen des Hexadezimalwerts für den Großbuchstaben 'A' (Dezimal 65, Hexadezimal 41)",
     "Steuerzeichencodes überprüfen für die Analyse von Textdateien und Protokollen"
+  ],
+  "faqs": [
+    {
+      "question": "Was zeigt die ASCII-Tabelle?",
+      "answer": "Die vollständige ASCII-Zeichentabelle mit Dezimal-, Hex- und Zeichendarstellung — vom Steuerbereich bis zu den druckbaren Zeichen."
+    },
+    {
+      "question": "Wofür brauche ich Dezimal- und Hex-Werte?",
+      "answer": "Dezimal- und Hexadezimalcodes braucht man beim Debuggen von Protokollen, beim Escape von Zeichen in Strings und beim Lesen von Byte-Dumps."
+    },
+    {
+      "question": "Kann ich Zeichen kopieren?",
+      "answer": "Ja, jedes Zeichen lässt sich per Klick in die Zwischenablage kopieren."
+    },
+    {
+      "question": "Enthält die Tabelle auch Unicode?",
+      "answer": "Die klassische Tabelle deckt 128 ASCII-Zeichen ab; erweiterte Zeichen wie Umlaute gehören zu Unicode und sind hier nicht enthalten."
+    },
+    {
+      "question": "Werden Daten gesendet?",
+      "answer": "Nein. Die Tabelle ist statisch im Browser vorhanden — es gibt keinerlei Übertragung."
+    }
   ]
 }

@@ -8,5 +8,27 @@
   "usage_examples": [
     "Afficher les exportations de calendrier",
     "Extraire les données d'événement"
+  ],
+  "faqs": [
+    {
+      "question": "Comment saisir mon agenda ?",
+      "answer": "Collez directement le texte .ics dans la zone de saisie ou téléversez un fichier .ics ; l'outil analyse les champs VEVENT et affiche une liste d'événements lisibles."
+    },
+    {
+      "question": "Quel format d'export est disponible ?",
+      "answer": "Le résultat d'analyse peut être exporté en JSON pour un traitement ultérieur dans un script ou un tableur."
+    },
+    {
+      "question": "Mon fichier quitte-t-il mon navigateur ?",
+      "answer": "Non. L'analyse s'exécute localement : le contenu du fichier n'est envoyé à aucun serveur."
+    },
+    {
+      "question": "Les événements récurrents (RRULE) sont-ils développés ?",
+      "answer": "Non. Les champs sont affichés tels quels, y compris la règle de récurrence en texte ; utilisez une application calendaire pour déplier les occurrences."
+    },
+    {
+      "question": "Pourquoi l'analyse échoue-t-elle ?",
+      "answer": "Le plus souvent : fichier tronqué, blocs BEGIN/END manquants ou champs non standard. Réessayez avec le fichier .ics d'origine et vérifiez son intégrité."
+    }
   ]
 }
